@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CS Web Checklist</title>
+  <meta name="description" content="Computer Science revision checklist for IGCSE 0478, AS 9618 and A2 9618">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+  <div id="app">Loading...</div>
+
+  <script>
+    window.$docsify = {
+      name: 'CS Web Checklist',
+      repo: '',
+      loadSidebar: true,
+      coverpage: true,
+      onlyCover: false,
+      subMaxLevel: 3,
+      auto2top: true,
+
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search keywords...',
+        noData: 'No results found.',
+        depth: 4
+      },
+
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true
+      }
+    };
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default'
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+:root {
+  --theme-color: #2563eb;
+  --text-color-base: #1f2937;
+  --heading-color: #111827;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #ffffff;
+}
+
+.markdown-section {
+  max-width: 1050px;
+  padding-top: 24px;
+}
+
+.markdown-section h1 {
+  font-size: 2.25rem;
+  color: #111827;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-section h2 {
+  margin-top: 2.2rem;
+  padding-left: 0.65rem;
+  border-left: 5px solid #2563eb;
+  color: #1e3a8a;
+}
+
+.markdown-section h3 {
+  color: #1d4ed8;
+  margin-top: 1.6rem;
+}
+
+.markdown-section p {
+  line-height: 1.75;
+}
+
+.markdown-section table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+}
+
+.markdown-section table th {
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.markdown-section table th,
+.markdown-section table td {
+  border: 1px solid #dbeafe;
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+.markdown-section blockquote {
+  border-left: 5px solid #60a5fa;
+  background: #eff6ff;
+  padding: 0.85rem 1rem;
+  color: #1e3a8a;
+  border-radius: 0 10px 10px 0;
+}
+
+.markdown-section code {
+  background: #f1f5f9;
+  color: #be123c;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.markdown-section pre {
+  border-radius: 12px;
+}
+
+/* Course cards */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.course-card {
+  display: block;
+  min-height: 170px;
+  text-decoration: none !important;
+  color: #111827 !important;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid #dbeafe;
+  background: linear-gradient(135deg, #ffffff, #eff6ff);
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.10);
+  transition: all 0.22s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(37, 99, 235, 0.18);
+  border-color: #60a5fa;
+}
+
+.course-card h2 {
+  border-left: none;
+  padding-left: 0;
+  margin: 14px 0 10px;
+  color: #1d4ed8;
+  font-size: 1.35rem;
+}
+
+.course-card p {
+  color: #4b5563;
+  margin-bottom: 0;
+}
+
+.course-tag {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.as-card .course-tag {
+  background: #7c3aed;
+}
+
+.a2-card .course-tag {
+  background: #dc2626;
+}
+
+/* Chapter cards */
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.chapter-card {
+  display: block;
+  text-decoration: none !important;
+  color: #111827 !important;
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+  transition: all 0.2s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.16);
+  border-color: #60a5fa;
+}
+
+.chapter-card h2 {
+  border-left: none;
+  padding-left: 0;
+  margin: 10px 0 0;
+  color: #1d4ed8;
+  font-size: 1.15rem;
+}
+
+.chapter-number {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  font-size: 0.82rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  background: #f8fafc;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar-nav a {
+  font-weight: 500;
+}
+
+.sidebar-nav a:hover {
+  color: #2563eb;
+}
+
+.app-name-link {
+  font-weight: 700;
+  color: #1d4ed8 !important;
+}
+
+/* Cover page */
+
+.cover-main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cover-main h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.cover-main h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.cover-subtitle {
+  display: inline-block;
+  margin: 10px auto 24px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: #1e40af;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.cover-description {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 30px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.12);
+  color: #1f2937;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.cover-course-list {
+  max-width: 760px;
+  margin: 30px auto 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.cover-course-list span {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  color: #1e3a8a;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.06);
+}
+
+.cover-note {
+  margin-top: 26px;
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+/* Mermaid */
+
+.mermaid {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 18px 0;
+  overflow-x: auto;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+  .markdown-section {
+    padding: 18px 16px;
+  }
+
+  .markdown-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .course-grid,
+  .chapter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card,
+  .chapter-card {
+    padding: 18px;
+  }
+
+  .cover-main h1 {
+    font-size: 2.1rem;
+  }
+}
