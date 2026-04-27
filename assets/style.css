@@ -9,8 +9,10 @@ body {
   background: #ffffff;
 }
 
+/* Main content */
+
 .markdown-section {
-  max-width: 1050px;
+  max-width: 1080px;
   padding-top: 24px;
 }
 
@@ -36,6 +38,10 @@ body {
 
 .markdown-section p {
   line-height: 1.75;
+}
+
+.markdown-section strong {
+  color: #111827;
 }
 
 .markdown-section table {
@@ -106,12 +112,12 @@ body {
   border-color: #60a5fa;
 }
 
-.course-card h2 {
-  border-left: none;
-  padding-left: 0;
+.course-title {
   margin: 14px 0 10px;
   color: #1d4ed8;
   font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.35;
 }
 
 .course-card p {
@@ -129,6 +135,10 @@ body {
   font-weight: 700;
 }
 
+.ig-card .course-tag {
+  background: #2563eb;
+}
+
 .as-card .course-tag {
   background: #7c3aed;
 }
@@ -141,13 +151,14 @@ body {
 
 .chapter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
   margin-top: 22px;
 }
 
 .chapter-card {
   display: block;
+  min-height: 145px;
   text-decoration: none !important;
   color: #111827 !important;
   border: 1px solid #dbeafe;
@@ -164,14 +175,6 @@ body {
   border-color: #60a5fa;
 }
 
-.chapter-card h2 {
-  border-left: none;
-  padding-left: 0;
-  margin: 10px 0 0;
-  color: #1d4ed8;
-  font-size: 1.15rem;
-}
-
 .chapter-number {
   display: inline-block;
   background: #2563eb;
@@ -179,6 +182,22 @@ body {
   font-size: 0.82rem;
   padding: 4px 10px;
   border-radius: 999px;
+  font-weight: 700;
+}
+
+.card-title {
+  margin: 14px 0 8px;
+  color: #1d4ed8;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.chapter-card p {
+  color: #4b5563;
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 /* Sidebar */
@@ -275,7 +294,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Mermaid */
+/* Mermaid diagrams */
 
 .mermaid {
   background: #ffffff;
@@ -309,5 +328,13 @@ body {
 
   .cover-main h1 {
     font-size: 2.1rem;
+  }
+
+  .cover-main h2 {
+    font-size: 1.1rem;
+  }
+
+  .cover-description {
+    padding: 20px;
   }
 }
