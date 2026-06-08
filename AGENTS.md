@@ -73,7 +73,7 @@ When adding or renaming pages, update `_sidebar.md` and any links in `README.md`
 
 ## Maturity And Improvement Priorities
 
-This repository is useful as a revision checklist, but it should not be presented as a complete Cambridge Computer Science course until coverage gaps are fixed.
+This repository is useful as a revision checklist. The main chapter map is now covered at checklist level, but it should not be presented as a full textbook, full lesson sequence, or complete past-paper practice system until the newer shorter chapters are deepened.
 
 Already addressed in the current baseline:
 
@@ -87,9 +87,10 @@ Already addressed in the current baseline:
 Remaining highest-priority improvements:
 
 1. Deepen the newly added IGCSE Paper 2, AS Paper 2 and A2 Paper 4 chapters with more worked examples and mixed practice sets.
-2. Add end-of-section review pages for IGCSE, AS and A2.
-3. Add a lightweight link/checklist verification workflow before publishing, even if the site remains a no-build Docsify project.
-4. Keep recent-paper references as supporting evidence, but do not make them the main page title or site positioning.
+2. Bring shorter new chapters closer to the depth of the older 0478/9618 theory chapters before calling the site mature.
+3. Add end-of-section review pages for IGCSE, AS and A2.
+4. Add a lightweight link/checklist verification workflow before publishing, even if the site remains a no-build Docsify project.
+5. Keep recent-paper references as supporting evidence, but do not make them the main page title or site positioning.
 
 ## Content Style
 
