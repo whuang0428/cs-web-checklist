@@ -46,7 +46,7 @@ Use the completed pages for targeted revision:
 4. Check common mistakes.
 5. Practise the exam-style questions.
 
-Use this site as a structured revision checklist, then practise with your teacher's syllabus checklist, class notes and past-paper-style practice.
+Use this site as a structured revision checklist, then practise with the official syllabus, class notes and past-paper-style practice.
 
 ## Maintenance Priorities
 

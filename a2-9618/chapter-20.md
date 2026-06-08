@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618 A2  
 > **Chapter:** 20 Further programming  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English programming keywords
 
 ---
@@ -287,15 +286,4 @@ Testing larger programs:
 5. Write pseudocode for pushing an item onto a stack stored in an array.
 
 ---
-
-# 12. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 12.1 Suggested teaching order
-
-1. Teach OOP using one running scenario across multiple lessons.
-2. Require private attributes and public methods in class design practice.
-3. Pair every ADT implementation with pointer trace tables.
-4. Assess exception handling through scenario explanations and small code snippets.
 

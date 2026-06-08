@@ -5,7 +5,6 @@
 > **Target:** Cambridge IGCSE Computer Science 0478  
 > **Chapter:** 7 Algorithm design and problem-solving  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English pseudocode keywords
 
 ---
@@ -255,16 +254,4 @@ Good test data includes expected results. Do not only list inputs.
 5. Write a linear search for a product code in an array of 100 codes.
 
 ---
-
-# 11. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 11.1 Suggested teaching order
-
-1. Start with trace tables before asking students to write long algorithms.
-2. Teach selection and loops using short scenarios first.
-3. Introduce arrays only after students can handle loop counters.
-4. Use one recurring example, such as marks or temperatures, to connect total, average, max, search and validation.
-5. End each lesson with one small handwritten pseudocode question.
 

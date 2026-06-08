@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 16 System Software  
 > **Main audience:** A2 students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English mark scheme keywords  
 > **Docsify:** ready  
 >
@@ -440,7 +439,7 @@ If RAM is full and a required page is not in RAM, the OS must remove / replace a
 | FIFO | replace the page that has been in memory the longest |
 | least recently used idea | replace a page that has not been used recently |
 
-Do not over-learn advanced algorithms unless your teacher requires them.
+Do not over-learn advanced algorithms unless your course specifically requires them.
 
 ---
 
@@ -963,118 +962,3 @@ Description example: lexical analysis breaks code into tokens / syntax analysis 
 (d) Stack. [1]
 
 ---
-
-# 17. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 17.1 Suggested teaching order
-
-1. Start with **process states** using real examples: opening file, waiting for input, CPU running.
-2. Teach **scheduling** with a queue diagram, not just definitions.
-3. Teach **interrupt handling** as a save-service-restore sequence.
-4. Teach **virtual memory** using physical cards: pages moving between RAM and disk.
-5. Compare **paging vs segmentation** in a table.
-6. Teach **disk thrashing** as an effect of too many page faults.
-7. Teach **interpreter and compiler** using a small pseudocode program.
-8. Practise **BNF / syntax diagrams** every lesson for 5 minutes.
-9. Practise **RPN stack tables** because students lose marks when they skip working.
-
-## 17.2 What to remove from old lesson focus
-
-+ Do not spend too long on OS brand names.
-+ Do not teach advanced page replacement algorithms beyond the concept unless needed.
-+ Do not over-focus on assembler in this chapter; compiler/interpreter and grammar are more central.
-+ Do not teach BNF as pure theory only; students must validate strings and write rules.
-+ Do not teach RPN only as conversion; students must also evaluate with stack.
-
-## 17.3 High-value classroom activities
-
-| Activity | Purpose |
-| --- | --- |
-| Process-state roleplay | students physically move between ready/running/blocked |
-| Scheduling queue cards | compare FCFS, round robin, SJF and SRT |
-| Interrupt save-restore diagram | make ISR sequence memorable |
-| Page-frame card swap | visualise virtual memory and disk thrashing |
-| BNF validity race | improve syntax-rule accuracy |
-| RPN stack table drill | prepare for 4-mark stack-evaluation questions |
-
-## 17.4 Marking guidance for students
-
-Train students to write:
-
-+ not just **"OS controls computer"**, but **"OS manages resources and hides hardware complexity"**
-+ not just **"ready means ready"**, but **"ready means waiting for CPU time"**
-+ not just **"blocked means stopped"**, but **"blocked means waiting for an event / I/O"**
-+ not just **"virtual memory uses disk"**, but **"secondary storage is used as an extension of RAM"**
-+ not just **"disk thrashing is slow"**, but **"more time is spent swapping pages than processing data"**
-+ not just **"interpreter reads code"**, but **"translates and executes one line at a time without stored executable"**
-
----
-
-# 18. Final One-Page Exam Sheet
-
-## OS purpose
-+ manages resources
-+ provides user interface
-+ hides hardware complexity
-+ manages processes, memory, files, I/O and security
-
-## Process states
-+ **Running** = has CPU
-+ **Ready** = can run, waiting for CPU
-+ **Blocked** = waiting for event / I/O
-
-## Scheduling
-+ **FCFS**: executes in arrival order
-+ **Round robin**: fixed time slice; pre-empt and move to back
-+ **SJF**: shortest estimated job first; may starve long jobs
-+ **SRT**: shortest remaining time; pre-emptive
-
-## Interrupt handling
-1. interrupt detected
-2. current process paused
-3. registers / status stored
-4. ISR executed
-5. registers / status restored
-
-## Virtual memory
-+ secondary storage used as extension of RAM
-+ pages moved between RAM and disk
-+ allows large / many programs to run
-+ too much swapping causes disk thrashing
-
-## Paging vs segmentation
-+ Paging = fixed-size pages and frames
-+ Segmentation = variable-sized logical segments
-
-## Disk thrashing
-+ frequent page swapping
-+ high disk activity
-+ more time swapping than processing
-+ system slows down
-
-## Interpreter
-+ translates one line at a time
-+ executes if syntax error free
-+ no stored executable
-+ stops with error message
-+ slower because repeated translation
-
-## Compiler stages
-+ lexical analysis = tokens
-+ syntax analysis = grammar
-+ code generation = object code
-+ optimisation = faster / fewer resources
-
-## BNF
-+ `::=` means is defined as
-+ `|` means OR
-+ `<digit>` is a non-terminal
-
-## RPN
-+ operator after operands
-+ use stack
-+ push operands
-+ pop two operands when operator found
-+ push result back

@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 10 Data types and structures  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English pseudocode keywords
 
 ---
@@ -198,15 +197,4 @@ Drawback:
 5. Choose a data structure for storing 30 student marks and justify it.
 
 ---
-
-# 10. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 10.1 Suggested teaching order
-
-1. Teach arrays and records together through the same scenario.
-2. Use physical cards for stack and queue operations.
-3. Ask students to justify a data structure choice, not just name it.
-4. Keep linked lists conceptual unless your class is ready for pointer dry runs.
 

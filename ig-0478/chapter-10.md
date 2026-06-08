@@ -5,7 +5,6 @@
 > **Target:** Cambridge IGCSE Computer Science 0478  
 > **Chapter:** 10 Boolean logic  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English logic keywords
 
 ---
@@ -146,15 +145,4 @@ Exam tip: draw intermediate gate outputs clearly. Avoid crossing lines when poss
 5. Write the expression for a NAND gate using AND and NOT.
 
 ---
-
-# 8. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 8.1 Suggested teaching order
-
-1. Start with AND, OR and NOT using real switches.
-2. Add NAND, NOR and XOR only after core gates are secure.
-3. Require intermediate truth-table columns for every compound expression.
-4. Use scenario-to-expression tasks before drawing circuits.
 

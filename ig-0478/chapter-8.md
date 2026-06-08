@@ -5,7 +5,6 @@
 > **Target:** Cambridge IGCSE Computer Science 0478  
 > **Chapter:** 8 Programming  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English programming keywords
 
 ---
@@ -242,15 +241,4 @@ Bad style:
 5. Write pseudocode to read all numbers from a file and output the total.
 
 ---
-
-# 11. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 11.1 Suggested teaching order
-
-1. Teach data types and operators through tiny trace tasks.
-2. Teach functions only after students can write a clear `IF`.
-3. Use file handling as a pattern students practise repeatedly.
-4. Mark pseudocode for clarity and correctness, not for matching one exact style.
 

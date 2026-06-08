@@ -4,7 +4,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
 > **Syllabus chapter:** 14 Communication and internet technologies  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords / phrases  
 >
 
@@ -685,75 +684,4 @@ A student sends a large file across the internet.
 (c) Router reads destination IP address and forwards packet to next hop / best available route using routing table. [1]
 
 ---
-
-# 16. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-## 16.1 Suggested teaching order
-1. Start with **protocol = rules**. Make students repeat the phrase “standard set of rules for communication”.  
-2. Teach TCP/IP stack using the exact order: **Application → Transport → Internet → Link**.  
-3. Use one email/webpage example to show data moving down the stack when sent and up the stack when received.  
-4. Drill protocol purposes: SMTP sends; POP3/IMAP receive; HTTP web; FTP files; BitTorrent peer-to-peer.  
-5. Teach circuit switching as “reserved road” and packet switching as “many parcels through different roads”.  
-6. End with scenario comparisons. Students should justify, not only name the method.
-
-## 16.2 What to emphasise for 2024–2025 papers
-+ Layer-specific wording matters. “Transport moves data” is too weak.
-+ Packet switching process is a common 3–4 mark explanation.
-+ Circuit switching advantages/disadvantages often need exact reason, not general “fast/slow”.
-+ Protocol questions are often low-mark but easy to lose through mixing SMTP, POP3 and IMAP.
-+ Router answers must include **destination IP address** and **routing table / next hop**.
-
-## 16.3 Recommended classroom activities
-| Activity | Purpose |
-| --- | --- |
-| Layer card sorting | Memorise TCP/IP order and functions |
-| Protocol matching quiz | Avoid SMTP/POP3/IMAP confusion |
-| Packet route simulation | Understand packets taking different routes |
-| Circuit vs packet debate | Practise scenario justification |
-| 4-mark answer writing | Build mark scheme language |
-
----
-
-# 17. One-page Exam Sheet
-## Must Know Definitions
-+ **Protocol:** standard set of rules for communication / data transfer.
-+ **Protocol suite:** collection of related protocols used together.
-+ **Packet switching:** data split into packets; packets sent independently and reassembled at destination.
-+ **Circuit switching:** dedicated path established before data transmission and used for whole communication.
-+ **Router:** device that forwards packets by using destination IP address and routing table.
-
-## TCP/IP Layers
-| Layer | Key function |
-| --- | --- |
-| Application | services/protocols for applications; web/email/file transfer |
-| Transport | end-to-end delivery; segmentation; sequencing; reassembly; error recovery |
-| Internet | IP addressing and routing packets |
-| Link | local network transmission; interface with physical network |
-
-## Protocol Purposes
-| Protocol | Purpose |
-| --- | --- |
-| HTTP(S) | web pages / hypertext documents |
-| FTP | file transfer between client and server |
-| SMTP | sending email |
-| POP3 | receiving/downloading email |
-| IMAP | accessing/synchronising email across devices |
-| BitTorrent | peer-to-peer file sharing |
-
-## Packet Switching Answer Formula
-1. Data split into packets.  
-2. Header added with destination IP / sequence number.  
-3. Packets sent independently, may take different routes.  
-4. Packets reassembled at destination.  
-5. Missing/damaged packets resent.
-
-## Circuit Switching Answer Formula
-1. Dedicated path established before transmission.  
-2. Same route used for whole communication.  
-3. Whole bandwidth available / steady data rate.  
-4. Drawback: setup delay / bandwidth wasted / no alternative route.
-
-## Best 4-mark Comparison
-> Circuit switching establishes a dedicated path before transmission, whereas packet switching splits data into packets and sends them without a dedicated path. In circuit switching all data follows the same route, while in packet switching packets may take different routes. Circuit switching reserves the whole bandwidth, but packet switching shares bandwidth. Packet switching may need reassembly at the destination.
 

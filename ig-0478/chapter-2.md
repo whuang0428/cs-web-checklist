@@ -1,7 +1,7 @@
 # IGCSE 0478 Computer Science — Chapter 2 Data Transmission
-## Syllabus-Aligned Student Revision Notes + Teacher Appendix
+## Syllabus-Aligned Student Revision Notes
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-**Use:** Student revision handout / teacher quick teaching guide  
+**Use:** Student revision handout
 **Style:** 中文解释 + English mark scheme keywords  
 **Core aim:** 不是背大段定义，而是学会写出 **mark scheme 得分点**
 >
@@ -778,83 +778,6 @@ Any two:
 + Data encrypted with the public key cannot be decrypted with the public key.
 + Only the receiver’s private key can decrypt the data.
 + The private key is not shared.
-
----
-
-# 8. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-## Teaching priority
-| Lesson focus | Suggested time | Reason |
-| --- | ---: | --- |
-| Packet structure + packet switching | 1 lesson | 2025 high frequency, good for flowchart-style answers |
-| Serial / parallel / simplex / duplex suitability | 1 lesson | Students often know definitions but cannot link to scenario |
-| Parity + checksum + echo check + ARQ | 2 lessons | Highest mark potential and highest mistake rate |
-| Check digit | 0.5 lesson | Easy marks if distinction from checksum is clear |
-| Encryption | 1 lesson | Must add because original CH2 notes were incomplete and 2025 tested it |
-| USB | 0.5 lesson | Keep concise; not worth over-teaching |
-
-
-## Suggested teaching sequence
-1. Start with a real example: sending an image/video file.  
-2. Draw packet = header + payload + trailer.  
-3. Use string cards to show packets arriving out of order.  
-4. Compare serial vs parallel using “one bridge vs many bridges”.  
-5. Teach parity using quick counting of 1s.  
-6. Teach checksum as “calculated value → sent → recalculated → compared”.  
-7. Teach ARQ as “send → wait → acknowledge → timeout → resend”.  
-8. Finish with encryption: plain text → cipher text → public/private key.
-
-## Most important student correction
-Students must stop writing vague answers such as:
-
-+ “It checks if data is correct.”
-+ “It makes data safe.”
-+ “It sends data through the internet.”
-
-They need to write **mechanism + keyword + scenario link**.
-
----
-
-# 9. One-page Exam Sheet
-## Packet
-+ **Header:** destination address, originator address, packet number  
-+ **Payload:** actual data  
-+ **Trailer:** end of packet, error checking method
-
-## Packet switching
-+ Data split into packets  
-+ Each packet may take different route  
-+ Router controls route  
-+ Packets may arrive out of order  
-+ Reordered/reassembled at destination
-
-## Transmission
-+ **Serial:** one bit at a time, single wire, long distance, less skew  
-+ **Parallel:** multiple bits at once, multiple wires, faster, short distance  
-+ **Simplex:** one direction only  
-+ **Half-duplex:** both directions, not at same time  
-+ **Full-duplex:** both directions, same time
-
-## Error causes
-+ interference  
-+ crosstalk  
-+ skew  
-+ data loss / data gain / data change  
-+ packets arrive in wrong order
-
-## Error detection
-+ **Parity:** parity bit added, count 1s, odd/even rule  
-+ **Checksum:** calculate → send → recalculate → compare → resend  
-+ **Echo check:** receiver sends copy back, sender compares  
-+ **Check digit:** data entry error, barcode/ISBN  
-+ **ARQ:** acknowledgement + timeout + resend
-
-## Encryption
-+ **Plain text:** original readable data  
-+ **Cipher text:** encrypted meaningless data  
-+ **Symmetric:** same key encrypts/decrypts  
-+ **Asymmetric:** public key encrypts, private key decrypts
 
 ---
 

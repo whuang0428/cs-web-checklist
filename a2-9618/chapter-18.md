@@ -4,7 +4,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
 > **Chapter:** 18 Artificial Intelligence (AI)  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 > **Docsify:** ready  
 >
@@ -821,7 +820,7 @@ Regression is used to predict a continuous numeric value.
 | graph = chart | Wrong meaning in CS | graph = nodes and edges |
 | edge = node | Confuses graph structure | node = entity, edge = connection |
 | A* and Dijkstra are sorting algorithms | Wrong topic | They find shortest / optimal routes in graphs |
-| supervised learning = teacher teaches computer | Too vague | supervised learning uses labelled data |
+| supervised learning = someone gives the computer answers | Too vague | supervised learning uses labelled data |
 | unsupervised learning = no training | Wrong | it uses unlabelled data and finds hidden patterns |
 | reinforcement learning = repeating practice | Too vague | trial and error with rewards/penalties |
 | deep learning = AI learns deeply | Not technical | neural network with multiple hidden layers |
@@ -1033,149 +1032,3 @@ A hospital uses an AI system to analyse medical images.
 + weights are adjusted to reduce future error / improve accuracy [1]  
 
 ---
-
-# 21. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 21.1 Suggested teaching order
-1. Start with graph vocabulary: **node, edge, weight, path**.  
-2. Use a map example to explain why A* and Dijkstra are AI search tools.  
-3. Teach supervised, unsupervised and reinforcement learning with three clear scenarios.  
-4. Teach ANN using a simple input-hidden-output diagram.  
-5. Teach deep learning as “ANN + multiple hidden layers + complex features”.  
-6. End with back propagation and regression because these are often misunderstood.
-
----
-
-## 21.2 What to remove from old lesson focus
-+ Do not teach full A* or Dijkstra code unless students need enrichment.
-+ Do not spend too long on AI history.
-+ Do not teach advanced neural network mathematics.
-+ Do not over-focus on ChatGPT / generative AI unless used as a brief example.
-+ Do not turn Chapter 18 into an ethics essay chapter.
-
----
-
-## 21.3 High-value classroom activities
-
-| Activity | Purpose |
-| --- | --- |
-| Map-to-graph conversion | students identify nodes, edges and weights |
-| ML category sorting cards | students classify supervised / unsupervised / reinforcement scenarios |
-| ANN role-play | students act as nodes passing values forward |
-| Error correction simulation | show back propagation as error feedback |
-| Scenario answer drill | train mark scheme wording |
-| One-minute keyword challenge | students say exact phrases: labelled data, hidden patterns, reward/penalty |
-
-
----
-
-## 21.4 Marking guidance for students
-
-Students should be trained to write:
-
-+ not just **"graph is a diagram"**, but **"nodes represent entities and edges represent relationships"**
-+ not just **"A* finds a route"**, but **"finds shortest / optimal / lowest-cost route between nodes in a graph"**
-+ not just **"supervised has teacher"**, but **"uses labelled data with known outcomes"**
-+ not just **"unsupervised has no teacher"**, but **"uses unlabelled data to find hidden patterns / clusters"**
-+ not just **"reinforcement learns by itself"**, but **"learns by trial and error using rewards and penalties"**
-+ not just **"deep learning uses AI"**, but **"uses neural networks with multiple hidden layers"**
-+ not just **"back propagation improves it"**, but **"passes error backwards and adjusts weights"**
-
----
-
-# 22. Final One-Page Exam Sheet
-
-## Graphs
-+ Graph = nodes / vertices + edges  
-+ Node = entity / location / object  
-+ Edge = connection / relationship  
-+ Weight = cost / distance / time  
-+ Graphs help AI represent routes and relationships  
-
-## A* and Dijkstra
-+ Both find shortest / optimal / lowest-cost route between nodes  
-+ Dijkstra uses known edge costs  
-+ A* uses known cost + heuristic estimate  
-+ No need to write full algorithm in 9618  
-
-## Machine Learning
-+ ML = AI learns from data  
-+ Used when rules are complex or patterns are hidden  
-+ Model improves through training  
-
-## Supervised Learning
-+ Uses labelled data  
-+ Known outcomes  
-+ Learns input-output mapping  
-+ Example: spam / not spam, disease type, house price if labelled examples exist  
-
-## Unsupervised Learning
-+ Uses unlabelled data  
-+ No known outcomes  
-+ Finds hidden patterns / clusters  
-+ Example: customer groups  
-
-## Reinforcement Learning
-+ Learns by trial and error  
-+ Interactive environment  
-+ Uses reward / penalty  
-+ Goal is to maximise reward  
-
-## Artificial Neural Networks
-+ Inspired by human brain  
-+ Connected nodes / neurons  
-+ Input layer, hidden layer(s), output layer  
-+ Connections have weights  
-+ Weights adjusted during training  
-
-## Deep Learning
-+ Type of machine learning  
-+ Uses ANN with multiple hidden layers  
-+ Extracts complex features  
-+ Makes predictions from large datasets  
-
-## Back Propagation
-+ Compares predicted output with expected output  
-+ Calculates error  
-+ Passes error backwards  
-+ Adjusts weights to reduce future error  
-
-## Regression
-+ Predicts continuous numeric value  
-+ Models relationship between variables  
-+ Examples: price, score, demand, temperature  
-
----
-
-# 23. Last-Minute Exam Phrases
-
-Use these sentence starters:
-
-+ **A graph is used because...**  
-  > entities can be represented as nodes and relationships as edges.
-
-+ **A weighted edge can represent...**  
-  > distance, cost, time or another value used to compare routes.
-
-+ **A* / Dijkstra is used to...**  
-  > find the shortest / optimal / lowest-cost route between nodes in a graph.
-
-+ **Supervised learning uses...**  
-  > labelled data with known outcomes.
-
-+ **Unsupervised learning uses...**  
-  > unlabelled data to find hidden patterns or clusters.
-
-+ **Reinforcement learning uses...**  
-  > trial and error in an interactive environment with rewards and penalties.
-
-+ **Deep learning uses...**  
-  > artificial neural networks with multiple hidden layers to extract complex features.
-
-+ **Back propagation...**  
-  > passes the error backwards through the network and adjusts weights to reduce the error.
-
-+ **Regression...**  
-  > predicts a continuous numerical value by modelling relationships between variables.

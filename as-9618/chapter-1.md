@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 1 Information representation  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English keywords / mark scheme style phrases  
 > **Docsify:** ready for static webpage display  
 > **File:** `chapter-1.md`
@@ -86,7 +85,7 @@ E --> F[1.3 Compression<br/>lossy / lossless / RLE / streaming scenario]
 
 ## 2.3 Delete / Avoid
 
-| Avoid teaching as exam fact | Better version |
+| Avoid learning as exam fact | Better version |
 | --- | --- |
 | “Unicode is always 16-bit” | Unicode may use more bits than ASCII; syllabus examples often use 16/32 bits |
 | “compression always improves quality” | Compression reduces file size; lossy may reduce quality |
@@ -1135,162 +1134,3 @@ A school uses live video conferencing. The video is compressed before being tran
 + some data can be removed without noticeably affecting user experience / resolution or audio sample rate can be reduced [1]
 
 ---
-
-# 15. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 15.1 Suggested teaching order
-
-1. Start with **binary prefix vs decimal prefix** because this was directly tested in 2024.  
-2. Teach **binary / hex / denary conversion** using 8-bit and 12-bit examples.  
-3. Teach **two's complement** before binary subtraction; students need range and sign-bit understanding.  
-4. Teach **BCD** as “each denary digit separately”, not as normal binary.  
-5. Teach **Unicode / ASCII / extended ASCII** together with small conversion drills.  
-6. Teach **bitmap file size** and **bit depth effect** as a calculation + explanation pair.  
-7. Teach **sound sampling** with the three core terms: sampling rate, sampling resolution, analogue.  
-8. Teach **compression** using scenario sorting: video call, program code, medical image, web photo.  
-9. Use 2024–2025 mark scheme phrasing in every short-answer practice.
-
-## 15.2 What to emphasise for recent exam patterns
-
-| Teaching focus | Why |
-| --- | --- |
-| conversion speed | Many 1-mark questions; careless errors lose easy marks |
-| exact unit interpretation | KB/KiB and MB/MiB difference is a common trap |
-| bit depth effect | 2025 asked explanation, not just calculation |
-| BCD applications | 2025 required application + justification |
-| compression for streaming | 2025 linked compression with bandwidth and buffering |
-| concise mark scheme language | Cambridge rewards specific phrases, not long vague descriptions |
-
-## 15.3 What to reduce
-
-+ Do not spend too much time on every possible Unicode encoding standard.
-+ Do not teach JPEG / MP3 internal algorithms in too much depth.
-+ Do not make students memorise units beyond tera/tebi unless your school requires it.
-+ Do not over-teach one's complement calculation; know the idea, but two's complement is more important.
-+ Do not make vector graphics more complex than object + property + drawing list + scaling.
-
-## 15.4 Common marking guidance
-
-Train students to write:
-
-+ **“uses powers of 2 / 1024”**, not just “binary is bigger”
-+ **“each character has a unique binary code”**, not just “computer stores letters”
-+ **“fewer bits per pixel, so file size is reduced”**, not just “smaller image”
-+ **“less bandwidth and less buffering”**, not just “faster”
-+ **“original can be restored exactly”**, not just “better quality”
-+ **“repeated adjacent data stored as value and count”**, not just “removes repeats”
-
----
-
-# 16. Final One-Page Exam Sheet
-
-## 1.1 Data Representation
-
-### Units
-
-+ KB = 1000 bytes  
-+ KiB = 1024 bytes  
-+ MB = 1 000 000 bytes  
-+ MiB = 1 048 576 bytes  
-+ Decimal prefix = powers of 10  
-+ Binary prefix = powers of 2  
-
-### Number systems
-
-+ Binary = base 2  
-+ Denary = base 10  
-+ Hexadecimal = base 16  
-+ 1 hex digit = 4 bits  
-+ BCD = 4 bits per denary digit  
-
-### Two's complement
-
-+ 8-bit range = -128 to +127  
-+ Smallest = `10000000`  
-+ Largest = `01111111`  
-+ Column values = `-128 64 32 16 8 4 2 1`  
-+ Negative conversion = invert bits + add 1  
-
-### Overflow
-
-+ Result cannot be represented using available bits  
-+ Not just “there is a carry”  
-
-### Character sets
-
-+ ASCII = 7-bit, 128 characters  
-+ Extended ASCII = 8-bit, 256 characters  
-+ Unicode = wider range, more languages, symbols, emojis  
-+ Text stored as unique binary code for each character  
-
-## 1.2 Multimedia
-
-### Bitmap
-
-+ Pixel = smallest element of image  
-+ Image resolution = number of pixels  
-+ Screen resolution = pixels displayed / dpi context  
-+ Bit depth / colour depth = bits per pixel  
-+ Colours = `2 ^ bit depth`  
-
-### Image file size
-
-```text
-bits = number of pixels × bit depth
-bits = width × height × bit depth
-bytes = bits / 8
-MB = bytes / 1 000 000
-MiB = bytes / 1 048 576
-```
-
-### Bit depth effect
-
-+ lower bit depth = fewer colours / shades  
-+ less detail / worse match to original  
-+ fewer bits per pixel  
-+ smaller file size  
-
-### Vector
-
-+ made from objects / shapes  
-+ property = attribute such as colour, position, thickness  
-+ drawing list = commands + properties needed to draw objects  
-+ scales without quality loss  
-
-### Sound
-
-+ sound is analogue before recording  
-+ sampling rate = amplitude measurements per second  
-+ sampling resolution = bits per amplitude measurement  
-+ higher rate/resolution = better accuracy + larger file  
-
-## 1.3 Compression
-
-### Lossless
-
-+ no permanent data loss  
-+ original restored exactly  
-+ suitable for text, code, important data  
-
-### Lossy
-
-+ permanently removes data  
-+ original cannot be fully restored  
-+ smaller file than lossless  
-+ suitable for video/audio streaming  
-
-### RLE
-
-+ stores repeated adjacent data as value + count  
-+ works well with long runs  
-+ can increase file size if few repeats  
-
-### Streaming compression phrase
-
-+ video is data-intensive  
-+ compression reduces file size  
-+ less bandwidth needed  
-+ less buffering  
-+ real-time communication is smoother  

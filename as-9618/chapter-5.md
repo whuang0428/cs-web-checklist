@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 5 System Software  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 > **Docsify:** no local image dependency; Mermaid supported  
 >
@@ -876,7 +875,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## Scenario 2: Program code is emailed to a teacher
+## Scenario 2: Program code is emailed as an attachment
 
 **Question:** Explain benefits of compressing the file.
 
@@ -1122,126 +1121,3 @@ Award 1 mark each:
 + Source code is compiled into bytecode, then bytecode is interpreted/executed by a virtual machine.
 
 ---
-
-# 17. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 17.1 Teaching focus
-
-This chapter should be taught as **scenario-answer training**, not as isolated vocabulary. Students often know the words “compiler”, “interpreter”, “backup” and “breakpoint”, but lose marks because they do not connect them to a situation.
-
-Recommended teaching order:
-
-1. Start with OS as **interface + resource manager**.
-2. Use a table to separate five OS management tasks.
-3. Use 2024-style scenario: student writes program, compresses file, uses library, uses IDE.
-4. Drill “feature + description” for IDE questions.
-5. Finish with translator comparison and justification.
-
-## 17.2 What to downweight in class
-
-Avoid spending too much time on:
-
-+ history of OS
-+ deep GUI/CLI comparison
-+ low-level compiler phases
-+ detailed virtual memory paging algorithms
-+ brand-specific examples
-+ detailed Java virtual machine internals
-
-## 17.3 What to drill repeatedly
-
-+ **OS purpose** answer must include interface/resources/applications.
-+ **File management** must not become backup.
-+ **Backup** must include restore after loss/corruption.
-+ **Library** answer must include reuse/tested/save time.
-+ **IDE feature** must include both name and description.
-+ **Compiler vs interpreter** must compare translation method and use case.
-
-## 17.4 Marking advice
-
-When marking student answers, look for:
-
-+ correct technical keyword
-+ functional explanation
-+ scenario link
-+ no brand names
-+ no vague answer like “makes it easier”
-
-A strong 3-mark answer normally has:
-
-1. named feature/concept  
-2. clear description  
-3. benefit or scenario application  
-
----
-
-# 18. One-page Exam Sheet
-
-## 18.1 OS Core Answer
-
-> An OS provides an interface between the user/application software and hardware, manages system resources, and provides an environment for applications to run.
-
-## 18.2 OS Management Tasks
-
-| Task | Keywords |
-| --- | --- |
-| Memory management | allocate RAM, deallocate, track memory, memory protection |
-| File management | create, save, copy, move, rename, delete, folders, permissions |
-| Security management | user accounts, passwords, access rights, unauthorised access |
-| Hardware management | device drivers, buffers, interrupts, input/output |
-| Process management | scheduling, CPU time, multitasking, process states |
-
-## 18.3 Utility Software
-
-| Utility | Purpose |
-| --- | --- |
-| Backup | copy and restore data after loss/corruption |
-| File compression | reduce file size, less storage/bandwidth, faster transfer |
-| Virus checker | scan/quarantine/delete malware |
-| Defragmenter | rearrange file fragments contiguously on HDD |
-| Disk formatter | prepare disk and create file system |
-| Disk repair | check/fix disk or file system errors |
-
-## 18.4 Program Libraries
-
-> Program libraries contain existing routines that can be reused. They save development time, reduce errors because code may already be tested, support modular development, and can be shared/updated using DLL files.
-
-## 18.5 Translators
-
-| Translator | Meaning |
-| --- | --- |
-| Assembler | assembly language → machine code |
-| Compiler | whole high-level program → object/executable code |
-| Interpreter | translate and execute one statement at a time |
-
-## 18.6 Compiler vs Interpreter
-
-| Compiler | Interpreter |
-| --- | --- |
-| whole program translated first | one statement at a time |
-| produces executable/object code | no separate executable usually |
-| faster after translation | slower during execution |
-| good for final program | good for development/debugging |
-
-## 18.7 Java
-
-> Source code is compiled into bytecode. Bytecode is then interpreted/executed by a virtual machine.
-
-## 18.8 IDE Features
-
-| Category | Features |
-| --- | --- |
-| Coding | context-sensitive prompts, auto-completion |
-| Error detection | dynamic syntax checks |
-| Presentation | prettyprint, expand/collapse blocks, line numbering |
-| Debugging | single stepping, breakpoints, watch/report window |
-
-## 18.9 Final Exam Reminder
-
-Do not just name the feature. Always write:
-
-```text
-Feature + what it does + why it helps in this scenario
-```

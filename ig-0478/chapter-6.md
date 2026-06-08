@@ -562,7 +562,3 @@ Before the exam, students should be able to answer:
 
 ---
 
-## Teacher Note
-This version is deliberately more exam-focused than textbook-focused.  
-The main change is moving away from broad memorisation lists and towards **mark scheme wording + scenario transfer**, because recent questions reward applying the same core concept to new situations.
-

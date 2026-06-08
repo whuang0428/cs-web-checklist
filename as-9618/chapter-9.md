@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 9 Algorithm design and problem-solving  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English pseudocode keywords
 
 ---
@@ -187,15 +186,4 @@ For every test, include:
 5. Give normal, boundary and abnormal test data for a ticket price input.
 
 ---
-
-# 9. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 9.1 Suggested teaching order
-
-1. Revisit IGCSE algorithms but demand cleaner modular structure.
-2. Teach trace tables weekly; they are the bridge between reading and writing code.
-3. Pair every algorithm-writing task with a test-data task.
-4. Do not teach search and sort as memorised prose only; make students trace them.
 

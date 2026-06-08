@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618 A2  
 > **Chapter:** 19 Computational thinking and problem-solving  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English algorithm keywords
 
 ---
@@ -253,15 +252,4 @@ Refinement means improving the design after testing or review:
 5. Give test data for inserting into an empty linked list and a full array-based list.
 
 ---
-
-# 11. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 11.1 Suggested teaching order
-
-1. Start with AS search/sort and raise the depth through efficiency and edge cases.
-2. Teach recursion by drawing call stacks before coding.
-3. Use array-based ADT implementations because they map well to exam pseudocode.
-4. Make students justify algorithm choices in one precise paragraph.
 

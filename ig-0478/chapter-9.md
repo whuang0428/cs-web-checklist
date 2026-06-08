@@ -5,7 +5,6 @@
 > **Target:** Cambridge IGCSE Computer Science 0478  
 > **Chapter:** 9 Databases  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English database keywords
 
 ---
@@ -165,15 +164,4 @@ Exam phrasing:
 5. Give two validation checks for an email address field.
 
 ---
-
-# 9. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 9.1 Suggested teaching order
-
-1. Use spreadsheet-style tables to teach field/record/table first.
-2. Ask students to identify a bad primary key before they design their own table.
-3. Practise query conditions with cards before writing SQL.
-4. Keep SQL examples simple and focused on `SELECT`, `FROM`, `WHERE`, `ORDER BY`.
 

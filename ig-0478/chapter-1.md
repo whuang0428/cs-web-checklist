@@ -3,7 +3,6 @@
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 **Target:** Cambridge IGCSE Computer Science 0478  
 **Main audience:** Students  
-**Teacher Appendix:** optional; kept at the end for teachers  
 **Style:** Chinese explanation + English mark scheme keywords  
 >
 
@@ -855,88 +854,4 @@ Award up to [3] for correct formula, substitution and final bytes.
 (c) Unicode represents more characters/languages/symbols/emojis than ASCII / Unicode uses more bits per character [1].
 
 ---
-
-# 14. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-## 14.1 Suggested teaching order
-1. Start with **binary/hex conversion drills** every lesson for 5 minutes.  
-2. Teach **binary addition + overflow** together because 2025 mark schemes reward working and overflow reasoning.  
-3. Teach **logical shift** as both a binary operation and denary effect.  
-4. Teach **two's complement** with the `flip + add 1` method, then practise binary-to-denary using the `-128` column.  
-5. Teach **image and sound file size** after students are confident with units.  
-6. Finish with **compression decision questions**, because students often know definitions but fail to justify choices.
-
-## 14.2 What to remove from old lesson focus
-+ Do not spend too long on very detailed memory dumps.
-+ Do not over-teach lossy video algorithms such as temporal redundancy.
-+ Do not force students to memorise every storage unit up to EiB unless required by your own school material.
-+ Avoid saying Unicode is always exactly 16 bits; teach it as a larger character set that requires more bits than ASCII.
-
-## 14.3 High-value classroom activities
-| Activity | Purpose |
-| --- | --- |
-| Daily 5 conversion drill | improve speed and reduce careless errors |
-| Binary addition with carry boxes | prepare for 3–4 mark calculation questions |
-| File size relay race | practise formula + unit conversion |
-| Compression scenario sorting | help students justify lossy/lossless choices |
-| Common mistakes correction task | train mark scheme language |
-
-
-## 14.4 Marking guidance for students
-Students should be trained to write:
-
-+ not just **"larger file"**, but **"larger file because more bits are used"**
-+ not just **"lossless keeps quality"**, but **"without permanently removing data; original can be restored"**
-+ not just **"overflow because carry"**, but **"result cannot be stored in 8 bits / greater than 255"**
-+ not just **"Unicode has more characters"**, but **"more languages, symbols and emojis; uses more bits per character"**
-
----
-
-# 15. Final One-Page Exam Sheet
-## Number systems
-+ Binary = base 2, digits 0 and 1  
-+ Denary = base 10, digits 0–9  
-+ Hexadecimal = base 16, digits 0–9 and A–F  
-+ 1 hex digit = 4 bits  
-+ 8-bit unsigned range = 0–255
-
-## Binary operations
-+ `1 + 1 = 10`
-+ Overflow = result too large for available bits
-+ Left shift = ×2 each shift
-+ Right shift = ÷2 each shift
-+ Two's complement 8-bit range = -128 to +127
-
-## Text
-+ ASCII = smaller character set
-+ Unicode = more characters/languages/symbols/emojis, more bits per character
-
-## Sound
-+ Sample rate = samples per second
-+ Sample resolution = bits per sample
-+ Higher sample rate/resolution = better accuracy + larger file size
-
-## Image
-+ Resolution = number of pixels
-+ Colour depth = bits per pixel / colour
-+ Higher resolution/colour depth = larger file size
-
-## File size
-```latex
-Image bits = width × height × colour depth
-
-Sound bits = sample rate × sample resolution × duration × channels
-
-Bytes = bits ÷ 8
-KiB = bytes ÷ 1024
-MiB = KiB ÷ 1024
-```
-
-## Compression
-+ Compression = reduces file size
-+ Benefits = less storage, less bandwidth, faster transmission
-+ Lossless = no permanent data loss, original restored
-+ Lossy = permanent data loss, smaller file
-+ RLE = stores repeated data as value + count
 

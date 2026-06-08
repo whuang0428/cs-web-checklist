@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 11 Programming  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English programming keywords
 
 ---
@@ -181,15 +180,4 @@ Strong: "It loops through every mark, counts marks greater than or equal to 50, 
 5. Explain one benefit of encapsulation.
 
 ---
-
-# 9. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 9.1 Suggested teaching order
-
-1. Revisit subroutines before teaching scope.
-2. Teach recursion with a call stack diagram.
-3. Teach OOP vocabulary with a simple class students can implement.
-4. Require students to write "purpose of code" sentences, not only trace output.
 

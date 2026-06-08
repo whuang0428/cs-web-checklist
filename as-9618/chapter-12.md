@@ -5,7 +5,6 @@
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 12 Software development  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English software development keywords
 
 ---
@@ -183,15 +182,4 @@ Disadvantages:
 5. State two items found in technical documentation.
 
 ---
-
-# 10. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 10.1 Suggested teaching order
-
-1. Teach SDLC with one school-system scenario across the whole chapter.
-2. Make students classify examples into analysis/design/testing/maintenance.
-3. Require every testing answer to include test data and expected result.
-4. Use comparison tables for waterfall vs iterative development.
 

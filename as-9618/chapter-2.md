@@ -6,7 +6,6 @@
 > **Chapter:** 2 Communication  
 > **Syllabus section:** 2.1 Networks including the internet  
 > **Main audience:** Students  
-> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 
 ---
@@ -773,7 +772,7 @@ A collision happens when two devices transmit on the same shared medium at the s
 
 ### Downweight warning
 
-Do not spend too long on Ethernet frame fields unless your teacher specifically requires it. For AS Paper 1, the high-value answer is usually about **checking medium, detecting collision, random wait, retransmission**.
+Do not spend too long on Ethernet frame fields unless your course specifically requires it. For AS Paper 1, the high-value answer is usually about **checking medium, detecting collision, random wait, retransmission**.
 
 ---
 
@@ -1275,138 +1274,3 @@ Award up to 3 marks:
 + Quality reduction is acceptable for video conference.
 
 ---
-
-# 22. Teacher Appendix
-
-> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
-
-## 22.1 Suggested teaching order
-
-1. Start with **LAN vs WAN** and networking benefits.
-2. Teach **client-server vs peer-to-peer** using school/home examples.
-3. Teach **topologies** with simple diagrams first, then scenario justification.
-4. Teach **switch vs router vs modem** as separate roles; students confuse these heavily.
-5. Teach **IPv4/IPv6/public/private/static/dynamic** with fill-in drills.
-6. Teach **bit streaming** using video conference scenario.
-7. Finish with **DNS/URL/WWW vs internet** and short mark scheme phrases.
-
-## 22.2 What recent papers suggest teachers should emphasise
-
-| Topic | Classroom focus |
-| --- | --- |
-| Star topology drawing | Make students label all devices and central switch |
-| Switch role | Drill MAC address + direct forwarding |
-| WAN vs LAN | Do not accept “WAN is wireless”; force geographical/ownership wording |
-| IP address | Use repeated fill-in questions for IPv4/IPv6/static/dynamic/private |
-| Real-time streaming | Connect compression, bandwidth, buffering and delay |
-| Cell phone network | Teach cells/towers/radio signals; this is easy but often forgotten |
-
-## 22.3 What to reduce
-
-+ Do not over-teach advanced routing algorithms.
-+ Do not spend too much time on MAN/PAN unless needed as background.
-+ Do not require students to memorise every wireless standard.
-+ Avoid deep DNS record types; AS questions usually need role/process.
-+ Avoid detailed Ethernet frame structure.
-
-## 22.4 High-value classroom activities
-
-| Activity | Purpose |
-| --- | --- |
-| Topology sorting cards | students match statements to bus/star/mesh |
-| Draw a LAN in 3 minutes | practise Recent exam-style labelled topology diagram |
-| Hardware role quiz | separate switch/router/modem/WAP/NIC |
-| IPv4/IPv6 fill-in race | memorise exact format facts |
-| Streaming scenario answer | connect compression + bandwidth + buffer |
-| Common mistakes correction | improve mark scheme wording |
-
-## 22.5 Marking guidance for students
-
-Train students to write:
-
-+ not just **"WAN is bigger"**, but **"WAN covers a larger geographical area and may use external transmission media"**
-+ not just **"switch sends data"**, but **"switch stores MAC addresses and forwards packets to the intended recipient"**
-+ not just **"router gives WiFi"**, but **"router connects networks and forwards packets using IP addresses"**
-+ not just **"DNS finds website"**, but **"DNS translates domain name to IP address"**
-+ not just **"buffer stores video"**, but **"buffer temporarily stores streamed data to smooth playback when transmission and receiving speeds differ"**
-+ not just **"lossy is smaller"**, but **"lossy reduces file size more, so less bandwidth is needed and buffering is reduced"**
-
----
-
-# 23. Final One-Page Exam Sheet
-
-## LAN / WAN
-
-+ **LAN**: small geographical area, one site/building, usually dedicated/company-owned hardware/media.
-+ **WAN**: large geographical area, connects LANs, may use external/non-company-owned media.
-
-## Network models
-
-+ **Client-server**: clients request services from central server.
-+ Benefits: centralised backup, security, management.
-+ Drawbacks: server cost, server failure, bottleneck.
-+ **Peer-to-peer**: no central server; each device can act as client/server.
-+ Benefits: cheap, simple.
-+ Drawbacks: weak central security/backup.
-
-## Thin / thick client
-
-+ **Thin client**: relies on server for processing/storage.
-+ **Thick client**: performs more processing locally.
-
-## Topologies
-
-+ **Bus**: central cable/backbone; cheap; collisions likely.
-+ **Star**: central switch; easy fault isolation; switch failure affects network.
-+ **Mesh**: multiple paths; robust; expensive/complex.
-+ **Hybrid**: combination of topologies.
-
-## Hardware
-
-+ **Switch**: stores MAC addresses; forwards packets to intended device.
-+ **Router**: connects networks; forwards packets using IP addresses.
-+ **Modem**: converts digital ↔ analogue signals for transmission.
-+ **Dedicated line**: direct/private connection; faster/reliable.
-+ **WAP**: allows wireless devices to connect to network.
-+ **NIC/WNIC**: wired/wireless network interface.
-+ **Repeater**: regenerates signal.
-+ **Bridge**: connects LAN segments.
-
-## Transmission media
-
-+ **Copper**: cheaper, but more interference and shorter distance.
-+ **Fibre optic**: high bandwidth, long distance, less interference, expensive.
-+ **WiFi/radio**: wireless convenience, but interference/security issues.
-+ **Microwave/satellite**: long-distance/remote communication; line-of-sight/latency issues.
-
-## Cell phone network
-
-+ Area split into **cells**.
-+ Each cell has tower/base station/antenna.
-+ Phone uses **low-power radio signals**.
-+ Tower connects phone to wider network.
-
-## IP addresses
-
-+ **IPv4**: 32 bits, four 8-bit groups, full stops.
-+ **IPv6**: 128 bits, eight groups of 4 hexadecimal digits, colons, `::` can replace consecutive zeros once.
-+ **Public IP**: visible/accessible on internet.
-+ **Private IP**: only accessible within LAN, assigned by router.
-+ **Static IP**: does not change.
-+ **Dynamic IP**: can change when reconnecting.
-
-## DNS / URL / WWW
-
-+ **Internet**: global network infrastructure.
-+ **WWW**: web pages/resources accessed using internet.
-+ **URL**: locates a resource on WWW.
-+ **DNS**: translates domain name to IP address.
-
-## Bit streaming
-
-+ **Real-time**: live, continuous stream, low delay needed.
-+ **On-demand**: stored media requested by user.
-+ **Buffer**: temporary storage for smooth playback.
-+ **Compression**: reduces data size, bandwidth use and buffering.
-+ **Lossy**: usually suitable for real-time video because it reduces file size more.
-
