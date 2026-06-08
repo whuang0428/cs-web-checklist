@@ -79,7 +79,7 @@ Already addressed in the current baseline:
 
 - The home page, cover page, and sidebar link to `coverage.md`.
 - Student-facing chapter headings use syllabus-aligned wording instead of `Trend-Based` or `Past Paper Focus` entry titles.
-- Teacher-only sections are labelled as `Teacher Appendix` and marked optional for students.
+- Teacher-only sections have been removed from student-facing pages.
 - IGCSE 0478 checklist coverage now includes Chapters 1-10.
 - AS 9618 checklist coverage now includes Chapters 1-12.
 - A2 9618 checklist coverage now includes Chapters 13-20.
@@ -91,6 +91,7 @@ Remaining highest-priority improvements:
 3. Add end-of-section review pages for IGCSE, AS and A2.
 4. Add a lightweight link/checklist verification workflow before publishing, even if the site remains a no-build Docsify project.
 5. Keep recent-paper references as supporting evidence, but do not make them the main page title or site positioning.
+6. Do not add teacher notes, teaching guides, classroom-management advice, or teacher-only appendices to public pages.
 
 ## Content Style
 
