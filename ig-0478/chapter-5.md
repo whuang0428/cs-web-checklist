@@ -1,5 +1,5 @@
 # IGCSE 0478 Chapter 5 Updated Checklist
-## The Internet and Its Uses｜2025 Past Paper Focus Edition
+## The Internet and Its Uses｜Syllabus-Aligned Revision Edition
 > **适用范围**：Cambridge IGCSE Computer Science 0478  
 **章节范围**：5.1 The Internet and the World Wide Web｜5.2 Digital Currency｜5.3 Cyber Security  
 **更新依据**：2026–2028 syllabus + 2025 Paper 1 mark scheme trend + 原 2023–2024 WHBC checklist  
@@ -9,8 +9,8 @@
 
 ---
 
-## 0. 2025 更新结论：这一章现在怎么考？
-| 考点 | 2025 出题趋势 | 学生最容易丢分的地方 | 更新处理 |
+## 0. Syllabus 更新结论：这一章现在怎么考？
+| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
 | --- | --- | --- | --- |
 | **URL / HTTP / HTTPS / SSL/TLS** | 常考 URL 部分、HTML/DNS/IP/SSL/TLS/Browser 定义；HTTPS 要写出安全机制 | 只写 “HTTPS is secure”，没有写 **SSL/TLS / encryption / digital certificate / public-private key** | 加入 HTTPS 高分模板和 URL 拆分图 |
 | **DNS + webpage retrieval** | 重点考 DNS 的作用、浏览器如何定位并显示网页 | 忘记写 **DNS returns IP address**；把 DNS 写成 “finds website” 太泛 | 固定为 `URL → DNS → IP → web server → HTML → browser renders` |
@@ -695,7 +695,9 @@ Any five from:
 
 ---
 
-# 11. Teacher Notes｜教学建议
+# 11. Teacher Appendix｜教学建议
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 ## 11.1 Priority Ranking
 | Priority | Content | Teaching action |
 | --- | --- | --- |
@@ -720,7 +722,7 @@ Any five from:
 | 6 | Past paper style practice | 20 marks timed quiz + mark scheme correction |
 
 
-## 11.3 2025 风格提醒
+## 11.3 Recent exam-style 提醒
 + 2025 试卷更喜欢 **context-based short structured answers**，不是纯背定义。
 + 学生必须学会把知识点写成 **具体动作 + 结果**。
 + 对 security solution，必须要求学生写：

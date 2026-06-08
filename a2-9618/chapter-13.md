@@ -1,11 +1,11 @@
 # A2 9618 Computer Science — Chapter 13 Updated Notes
-## Data Representation｜2024–2025 Paper 3 Trend-Based Student Revision Sheet
+## Data Representation｜Syllabus-Aligned Paper 3 Revision Sheet
 
-> **Version:** Regenerated using 2024 + 2025 Paper 3 trend review  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618 A2  
 > **Chapter:** 13 Data Representation  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords / pseudocode phrases  
 > **Important update:** 本版不再使用 2023 past paper 作为趋势依据；趋势判断以 **2024 Paper 3 + 2025 May/June and Oct/Nov Paper 3** 为主。
 
@@ -32,9 +32,9 @@ E --> F[Exam calculations<br/>denary to FP / FP to denary]
 
 ---
 
-# 1. 2024–2025 Paper 3 Trend Map
+# 1. Recent Paper 3 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Floating-point conversion | Very high frequency | Convert denary ↔ normalised binary floating-point; show working; handle negative values using two's complement; 2025 May/June and Oct/Nov both reinforced this |
 | Mantissa / exponent allocation | High frequency | More mantissa bits = more precision; more exponent bits = greater range |
@@ -896,7 +896,9 @@ Convert to binary [1], correct normalisation / exponent 5 [1], correct mantissa 
 
 ---
 
-# 13. Teacher Notes
+# 13. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 13.1 Suggested teaching order
 
@@ -917,7 +919,7 @@ Convert to binary [1], correct normalisation / exponent 5 [1], correct mantissa 
 | Floating-point box practice | train mantissa/exponent bit-count discipline |
 | Error correction task | students fix wrong `SET`, record and floating-point answers |
 
-## 13.3 What to emphasise for 2024–2025 trend
+## 13.3 What to emphasise for recent exam patterns
 
 + Floating-point has appeared repeatedly in 2024 and 2025, including both May/June and Oct/Nov 2025, and should be treated as a **core calculation skill**.
 + UDT pseudocode is very mark-scheme-driven: small syntax mistakes can lose easy marks.

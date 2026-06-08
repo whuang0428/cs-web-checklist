@@ -1,9 +1,9 @@
 # IGCSE 0478 Computer Science — Chapter 1 Updated Notes
-## Data Representation｜2025 Paper 1 Trend-Based Student Revision Sheet
-> **Version:** Updated after 2025 Paper 1 trend review  
+## Data Representation｜Syllabus-Aligned Paper 1 Revision Sheet
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 **Target:** Cambridge IGCSE Computer Science 0478  
 **Main audience:** Students  
-**Teacher Notes:** included at the end  
+**Teacher Appendix:** optional; kept at the end for teachers  
 **Style:** Chinese explanation + English mark scheme keywords  
 >
 
@@ -29,8 +29,8 @@ D --> E[Compression<br/>lossy / lossless / RLE]
 
 ---
 
-# 1. 2025 Paper 1 Trend Map
-| Area | 2025 Trend | What students must practise |
+# 1. Recent Paper 1 Pattern Map
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Binary / denary / hexadecimal | Very high frequency | Base 2 / base 10 / base 16, binary ↔ denary, hex ↔ binary, hex ↔ denary |
 | Binary addition | High frequency | Show carries, add two 8-bit numbers, identify overflow |
@@ -137,7 +137,7 @@ This is too vague. It does not explain **why**.
 | Hexadecimal | 16 | 0–9 and A–F | shorter representation of binary |
 
 
-### 2025-style facts
+### Recent exam-style facts
 + 8-bit unsigned binary range: **0 to 255**
 + 1 hexadecimal digit = **4 bits**
 + A in hexadecimal = **10**
@@ -856,7 +856,9 @@ Award up to [3] for correct formula, substitution and final bytes.
 
 ---
 
-# 14. Teacher Notes
+# 14. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 ## 14.1 Suggested teaching order
 1. Start with **binary/hex conversion drills** every lesson for 5 minutes.  
 2. Teach **binary addition + overflow** together because 2025 mark schemes reward working and overflow reasoning.  

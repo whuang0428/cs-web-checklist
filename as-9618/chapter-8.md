@@ -1,11 +1,11 @@
 # AS 9618 Computer Science — Chapter 8 Updated Notes
-## Databases｜2024–2025 Paper 1 Trend-Based Student Revision Sheet
+## Databases｜Syllabus-Aligned Paper 1 Revision Sheet
 
-> **Version:** Updated with 2024 + 2025 Paper 1 trend focus  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 8 Databases  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 > **Docsify:** ready for static webpage display  
 > **Important:** 本章只覆盖 AS Paper 1 理论部分的数据库要求，不加入 A2 / 大学数据库中过深内容。
@@ -35,9 +35,9 @@ E --> F[SQL<br/>DDL + DML]
 
 ---
 
-# 1. 2024–2025 Paper 1 Trend Map
+# 1. Recent Paper 1 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | File-based approach vs relational database | High | limitation + how relational database solves it |
 | Primary key / foreign key | Very high | identify keys from table design and explain purpose |
@@ -1271,7 +1271,9 @@ Example answer:
 
 ---
 
-# 15. Teacher Notes
+# 15. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## Teaching focus
 

@@ -1,11 +1,11 @@
 # AS 9618 Computer Science — Chapter 6 Updated Notes
-## Security, Privacy and Data Integrity｜2024–2025 Paper 1 Trend-Based Student Revision Sheet
+## Security, Privacy and Data Integrity｜Syllabus-Aligned Paper 1 Revision Sheet
 
-> **Version:** Regenerated with 2024 + 2025 Paper 1 trend review  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 6 Security, Privacy and Data Integrity  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 > **Docsify:** ready  
 > **No local image dependency**
@@ -36,9 +36,9 @@ E --> F[Transfer Checks<br/>parity / checksum]
 
 ---
 
-# 1. 2024–2025 Paper 1 Trend Map
+# 1. Recent Paper 1 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Security / privacy / integrity definitions | Medium-high | 区分三者，不要混写 |
 | Firewall | High | Explain filtering, blocking unauthorised access, rules, packet/source/destination checking |
@@ -1069,7 +1069,9 @@ A website lets users create accounts and play quizzes. A user must enter:
 
 ---
 
-# 16. Teacher Notes
+# 16. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 16.1 Suggested teaching order
 
@@ -1102,7 +1104,7 @@ A website lets users create accounts and play quizzes. A user must enter:
 | Threat → protection matching | trains scenario answers |
 | Validation check sorting | strengthens exact keyword selection |
 | Parity bit mini-drills | improves confidence with byte parity |
-| Checksum process sequencing | prepares for 2025-style question |
+| Checksum process sequencing | prepares for Recent exam-style question |
 | Weak answer repair | trains mark scheme wording |
 
 ## 16.4 Marking guidance for students

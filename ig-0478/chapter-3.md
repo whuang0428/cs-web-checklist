@@ -1,5 +1,5 @@
 # IGCSE 0478 Chapter 3 Updated Checklist
-## Hardware｜2025 Past Paper Focus Edition
+## Hardware｜Syllabus-Aligned Revision Edition
 > **适用范围**：Cambridge IGCSE Computer Science 0478  
 **章节范围**：3.1 Computer Architecture｜3.2 Input and Output Devices｜3.3 Data Storage｜3.4 Network Hardware  
 **更新依据**：2026–2028 syllabus + 全部 2025 Paper 1 / Mark Scheme 趋势 + 原 2023–2024 WHBC checklist  
@@ -9,8 +9,8 @@
 
 ---
 
-## 0. 2025 更新结论：这一章现在怎么考？
-| 考点 | 2025 出题趋势 | 学生最容易丢分的地方 | 更新处理 |
+## 0. Syllabus 更新结论：这一章现在怎么考？
+| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
 | --- | --- | --- | --- |
 | **CPU components** | 高频：CU / ALU / cache / PC / MDR / clock / ACC 的功能匹配 | 只写缩写，不写 function；MDR/MAR 混淆 | 加入 “component + one-line function” 表格 |
 | **Fetch–Decode–Execute cycle** | 高频：填空题、流程题、图示题；常考 PC → MAR → RAM → MDR → CIR → CU | 只写 fetch/decode/execute 三个词，没有寄存器流向 | 加入 6-mark FDE 模板和 Mermaid 流程图 |
@@ -883,7 +883,9 @@ Sensor → ADC → microprocessor → compare with stored value → output warni
 
 ---
 
-# 9. Teacher Notes｜教学建议
+# 9. Teacher Appendix｜教学建议
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 ## A. 推荐教学顺序
 1. Start with **CPU component matching** because this supports FDE.  
 2. Teach **FDE cycle** as a fixed flow: PC → MAR → RAM → MDR → CIR → CU.  

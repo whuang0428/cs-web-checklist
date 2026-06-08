@@ -1,10 +1,10 @@
 # A2 9618 Computer Science — Chapter 15 Updated Notes
-## Hardware and Virtual Machines｜2024–2025 Paper 3 Trend-Based Student Revision Sheet
-> **Version:** Updated after 2024 + 2025 Paper 3 trend review  
+## Hardware and Virtual Machines｜Syllabus-Aligned Paper 3 Revision Sheet
+> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
 > **Chapter:** 15 Hardware and Virtual Machines  
 > **Main audience:** Students preparing for Paper 3 Advanced Theory  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 >
 
@@ -34,9 +34,9 @@ F --> G[K-map<br/>grouping / simplified expression]
 
 ---
 
-# 1. 2024–2025 Paper 3 Trend Map
+# 1. Recent Paper 3 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | RISC features | High | few/simple instructions, fixed length, single-cycle, registers, pipelining |
 | CISC vs RISC | Medium-high | compare instruction set, cycles, hardware/software emphasis |
@@ -1286,7 +1286,9 @@ Z = C
 
 ---
 
-# 19. Teacher Notes
+# 19. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 19.1 Suggested teaching order
 

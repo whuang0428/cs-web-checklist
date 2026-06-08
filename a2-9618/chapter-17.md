@@ -1,11 +1,11 @@
 # A2 9618 Computer Science — Chapter 17 Updated Notes
-## Security｜2024–2025 Paper 3 Trend-Based Student Revision Sheet
+## Security｜Syllabus-Aligned Paper 3 Revision Sheet
 
-> **Version:** Updated after 2024–2025 Paper 3 trend review  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 17 Security  
 > **Main audience:** A2 students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English mark scheme keywords  
 > **Docsify:** ready  
 >
@@ -40,9 +40,9 @@ G --> I[Digital Signature<br/>authentication + integrity]
 
 ---
 
-# 1. 2024–2025 Paper 3 Trend Map
+# 1. Recent Paper 3 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Symmetric cryptography | High | one shared key, encrypt and decrypt, fast but key distribution risk |
 | Asymmetric cryptography | Very high | public/private key pair, one key encrypts and matching key decrypts |
@@ -349,7 +349,7 @@ sequenceDiagram
 | Main use | bulk data encryption / session data | key exchange, digital signatures, secure initial communication |
 | Risk | if shared key is intercepted, messages can be read | if private key is stolen, identity/security is compromised |
 
-### 2024–2025 exam-style comparison
+### Recent exam-style comparison
 
 > Symmetric cryptography uses a single shared key to encrypt and decrypt data, while asymmetric cryptography uses a public/private key pair. Symmetric cryptography is faster, but the shared key must be distributed securely. Asymmetric cryptography avoids sending a shared secret key first, but it is slower and requires more processing.
 
@@ -884,7 +884,9 @@ Drawbacks, one mark each:
 
 ---
 
-# 17. Teacher Notes
+# 17. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 17.1 Teaching order recommendation
 
@@ -919,7 +921,7 @@ Use this memory rule:
 
 ---
 
-## 17.3 2024–2025 exam emphasis
+## 17.3 Recent exam emphasis
 
 For 2024–2025, students should be able to answer short structured questions such as:
 

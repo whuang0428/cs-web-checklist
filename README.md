@@ -5,6 +5,8 @@
 Welcome to the CS Web Checklist.  
 Choose a course below to start learning.
 
+> **Coverage note:** The main chapter map is now covered at revision-checklist level. Check [Coverage Status](coverage.md) for what is complete and what still needs deeper practice expansion.
+
 ---
 
 ## Choose Your Course
@@ -14,19 +16,19 @@ Choose a course below to start learning.
 <a class="course-card ig-card" href="#/ig-0478/chapter-1">
   <span class="course-tag">IGCSE</span>
   <div class="course-title">IG Computer Science 0478</div>
-  <p>Paper 1 Computer Systems · Chapters 1–6</p>
+  <p>Paper 1 and Paper 2 revision · Chapters 1-10</p>
 </a>
 
 <a class="course-card as-card" href="#/as-9618/chapter-1">
   <span class="course-tag">AS Level</span>
   <div class="course-title">AS Computer Science 9618</div>
-  <p>AS theory checklist · Chapters 1–8</p>
+  <p>AS Paper 1 and Paper 2 revision · Chapters 1-12</p>
 </a>
 
 <a class="course-card a2-card" href="#/a2-9618/chapter-13">
   <span class="course-tag">A2 Level</span>
   <div class="course-title">A2 Computer Science 9618</div>
-  <p>A2 theory checklist · Chapters 13–18</p>
+  <p>A2 Paper 3 and Paper 4 revision · Chapters 13-20</p>
 </a>
 
 </div>
@@ -71,6 +73,30 @@ Choose a course below to start learning.
   <span class="chapter-number">Chapter 6</span>
   <div class="card-title">Automated and Emerging Technologies</div>
   <p>Automated systems, robotics, artificial intelligence and machine learning.</p>
+</a>
+
+<a class="chapter-card" href="#/ig-0478/chapter-7">
+  <span class="chapter-number">Chapter 7</span>
+  <div class="card-title">Algorithm Design and Problem-Solving</div>
+  <p>Decomposition, pseudocode, trace tables, validation, arrays and testing.</p>
+</a>
+
+<a class="chapter-card" href="#/ig-0478/chapter-8">
+  <span class="chapter-number">Chapter 8</span>
+  <div class="card-title">Programming</div>
+  <p>Data types, operators, subroutines, parameters, file handling and errors.</p>
+</a>
+
+<a class="chapter-card" href="#/ig-0478/chapter-9">
+  <span class="chapter-number">Chapter 9</span>
+  <div class="card-title">Databases</div>
+  <p>Tables, records, fields, primary keys, validation, queries and reports.</p>
+</a>
+
+<a class="chapter-card" href="#/ig-0478/chapter-10">
+  <span class="chapter-number">Chapter 10</span>
+  <div class="card-title">Boolean Logic</div>
+  <p>Logic gates, Boolean expressions, truth tables and circuit design.</p>
 </a>
 
 </div>
@@ -129,6 +155,30 @@ Choose a course below to start learning.
   <p>Database concepts, relational databases, SQL, keys, normalisation and data modelling.</p>
 </a>
 
+<a class="chapter-card" href="#/as-9618/chapter-9">
+  <span class="chapter-number">Chapter 9</span>
+  <div class="card-title">Algorithm Design and Problem-Solving</div>
+  <p>Computational thinking, structure charts, trace tables, searching, sorting and testing.</p>
+</a>
+
+<a class="chapter-card" href="#/as-9618/chapter-10">
+  <span class="chapter-number">Chapter 10</span>
+  <div class="card-title">Data Types and Structures</div>
+  <p>Arrays, records, files, stacks, queues, linked lists and structure choice.</p>
+</a>
+
+<a class="chapter-card" href="#/as-9618/chapter-11">
+  <span class="chapter-number">Chapter 11</span>
+  <div class="card-title">Programming</div>
+  <p>Subroutines, parameters, scope, recursion, OOP basics and code reading.</p>
+</a>
+
+<a class="chapter-card" href="#/as-9618/chapter-12">
+  <span class="chapter-number">Chapter 12</span>
+  <div class="card-title">Software Development</div>
+  <p>SDLC, analysis, design, testing, documentation, maintenance and methods.</p>
+</a>
+
 </div>
 
 ---
@@ -173,14 +223,27 @@ Choose a course below to start learning.
   <p>AI, machine learning, expert systems, neural networks and real-world applications.</p>
 </a>
 
+<a class="chapter-card" href="#/a2-9618/chapter-19">
+  <span class="chapter-number">Chapter 19</span>
+  <div class="card-title">Computational Thinking and Problem-Solving</div>
+  <p>Advanced algorithms, recursion, search, sort, ADTs, efficiency and testing.</p>
+</a>
+
+<a class="chapter-card" href="#/a2-9618/chapter-20">
+  <span class="chapter-number">Chapter 20</span>
+  <div class="card-title">Further Programming</div>
+  <p>Modular programming, OOP, recursion, files, exceptions, ADTs and debugging.</p>
+</a>
+
 </div>
 
 ---
 
 ## How to Use This Website
 
-1. Choose the course you are studying.
-2. Open the chapter you want to revise.
-3. Focus on syllabus points and mark scheme keywords.
-4. Review the common mistakes before practising questions.
-5. Use the search bar to quickly find important terms.
+1. Check [Coverage Status](coverage.md) so you know which topics are currently included.
+2. Choose the course you are studying.
+3. Open the chapter you want to revise.
+4. Focus on syllabus points and mark scheme keywords.
+5. Review the common mistakes before practising questions.
+6. Use the search bar to quickly find important terms.

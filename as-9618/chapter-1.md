@@ -1,11 +1,11 @@
 # AS 9618 Computer Science — Chapter 1 Updated Notes
-## Information Representation｜2024–2025 Paper 1 Trend-Based Student Revision Sheet
+## Information Representation｜Syllabus-Aligned Paper 1 Revision Sheet
 
-> **Version:** Regenerated using 2024 + 2025 Paper 1 trends  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 1 Information representation  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English keywords / mark scheme style phrases  
 > **Docsify:** ready for static webpage display  
 > **File:** `chapter-1.md`
@@ -38,9 +38,9 @@ E --> F[1.3 Compression<br/>lossy / lossless / RLE / streaming scenario]
 
 ---
 
-# 1. 2024–2025 Paper 1 Trend Map
+# 1. Recent Paper 1 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Binary prefixes vs decimal prefixes | High | kibi/kilo, mebi/mega, gibi/giga, tebi/tera; 1024 vs 1000 |
 | Binary ↔ denary ↔ hexadecimal | Very high | 8-bit and 12-bit conversion, hex grouping into nibbles |
@@ -239,7 +239,7 @@ Convert 558 to 12-bit binary.
 Answer = 0010 0010 1110
 ```
 
-### 2025-style note
+### Recent exam-style note
 
 AS Paper 1 may ask for **12-bit binary**, not only 8-bit. Always count the required number of bits.
 
@@ -583,7 +583,7 @@ Examples:
 | 16 bits | 65 536 |
 | 24 bits | 16 777 216 |
 
-### 2025-style answer: effect of decreasing bit depth
+### Recent exam-style answer: effect of decreasing bit depth
 
 | Effect on image | Effect on file |
 | --- | --- |
@@ -619,7 +619,7 @@ KB or MB = divide by 1000
 KiB or MiB = divide by 1024
 ```
 
-### 2025-style example
+### Recent exam-style example
 
 A camera creates an image with **2 million pixels** and **16-bit depth**. Calculate the file size in MB.
 
@@ -1136,7 +1136,9 @@ A school uses live video conferencing. The video is compressed before being tran
 
 ---
 
-# 15. Teacher Notes
+# 15. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 15.1 Suggested teaching order
 
@@ -1150,7 +1152,7 @@ A school uses live video conferencing. The video is compressed before being tran
 8. Teach **compression** using scenario sorting: video call, program code, medical image, web photo.  
 9. Use 2024–2025 mark scheme phrasing in every short-answer practice.
 
-## 15.2 What to emphasise for 2024–2025 trend
+## 15.2 What to emphasise for recent exam patterns
 
 | Teaching focus | Why |
 | --- | --- |

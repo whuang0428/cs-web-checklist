@@ -1,11 +1,11 @@
 # AS 9618 Computer Science — Chapter 5 Updated Notes
-## System Software｜2024–2025 Paper 1 Trend-Based Student Revision Sheet
+## System Software｜Syllabus-Aligned Paper 1 Revision Sheet
 
-> **Version:** Regenerated using 2024 + 2025 Paper 1 trend focus  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns focus  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 5 System Software  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 > **Docsify:** no local image dependency; Mermaid supported  
 >
@@ -37,9 +37,9 @@ G --> H[IDE features]
 
 ---
 
-# 1. 2024–2025 Paper 1 Trend Map
+# 1. Recent Paper 1 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Purpose of OS | High | OS provides interface, manages hardware/resources, allows applications to run |
 | File management | High | create / delete / move / rename / organise / store / retrieve files and directories |
@@ -1123,7 +1123,9 @@ Award 1 mark each:
 
 ---
 
-# 17. Teacher Notes
+# 17. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 17.1 Teaching focus
 

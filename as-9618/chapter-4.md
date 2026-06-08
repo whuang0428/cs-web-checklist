@@ -1,7 +1,7 @@
 # AS 9618 Computer Science — Chapter 4 Updated Notes
-## Processor Fundamentals｜2024–2025 Paper 1 Trend-Based Student Revision Sheet
+## Processor Fundamentals｜Syllabus-Aligned Paper 1 Revision Sheet
 
-> **Version:** Regenerated using 2024 + 2025 Paper 1 trend review  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Main audience:** AS students preparing for Paper 1 Theory Fundamentals  
 > **Style:** 中文解释 + English keywords / mark scheme phrases  
@@ -36,9 +36,9 @@ F --> G[Bit manipulation<br/>AND OR XOR shifts masks]
 
 ---
 
-# 1. 2024–2025 Paper 1 Trend Map
+# 1. Recent Paper 1 Pattern Map
 
-| Area | 2024–2025 trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Assembly trace table | Very high | Follow instruction addresses, update ACC / memory after each instruction, handle jumps correctly |
 | Bit manipulation instructions | Very high in 2025 | Use OR to set bits, AND to clear/test bits, XOR to toggle bits, LSL/LSR shifts |
@@ -1514,7 +1514,9 @@ Explain how the system can test whether the door is open. [2]
 
 ---
 
-# 21. Teacher Notes
+# 21. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 21.1 Suggested teaching order
 

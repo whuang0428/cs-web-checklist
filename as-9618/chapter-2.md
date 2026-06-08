@@ -1,12 +1,12 @@
 # AS 9618 Computer Science — Chapter 2 Updated Notes
-## Communication｜2024–2025 Paper 1 Trend-Based Student Revision Sheet
+## Communication｜Syllabus-Aligned Paper 1 Revision Sheet
 
-> **Version:** Regenerated with 2024 + 2025 Paper 1 trend focus  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 2 Communication  
 > **Syllabus section:** 2.1 Networks including the internet  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 
 ---
@@ -29,9 +29,9 @@ F --> G[Bit streaming<br/>real-time / on-demand<br/>buffer / bitrate]
 
 ---
 
-# 1. 2024–2025 Paper 1 Trend Map
+# 1. Recent Paper 1 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Topologies | Very high | Identify bus / star / mesh; justify choice; draw labelled star topology |
 | LAN vs WAN | High | Compare geographical area, ownership of hardware/media, private/external infrastructure |
@@ -223,7 +223,7 @@ A network connects computers and devices so that they can communicate and share 
 | Speed/latency | usually faster/lower latency | may be slower/higher latency |
 | Example | school network | company network across cities |
 
-### 2025-style answer
+### Recent exam-style answer
 
 > A WAN covers a larger geographical area than a LAN. A WAN may use external or non-company-owned transmission media, while a LAN usually uses dedicated hardware and media owned by the organisation.
 
@@ -724,7 +724,7 @@ A dedicated line is a private/direct connection between sites.
 + not shared with general public traffic in the same way
 + can improve security/control
 
-### 2025-style answer
+### Recent exam-style answer
 
 > A dedicated line provides a direct/private connection, which can provide faster and more reliable transmission.
 
@@ -940,7 +940,7 @@ An IP address identifies a device/interface on a network so packets can be route
 
 > A public IP address allows the router to be visible and accessible by other devices on the internet.
 
-### 2025-style answer
+### Recent exam-style answer
 
 > A private IP address can only be accessed by devices in the same LAN and is assigned by the router within the LAN.
 
@@ -1276,7 +1276,9 @@ Award up to 3 marks:
 
 ---
 
-# 22. Teacher Notes
+# 22. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 22.1 Suggested teaching order
 
@@ -1288,7 +1290,7 @@ Award up to 3 marks:
 6. Teach **bit streaming** using video conference scenario.
 7. Finish with **DNS/URL/WWW vs internet** and short mark scheme phrases.
 
-## 22.2 What 2024–2025 suggests teachers should emphasise
+## 22.2 What recent papers suggest teachers should emphasise
 
 | Topic | Classroom focus |
 | --- | --- |
@@ -1312,7 +1314,7 @@ Award up to 3 marks:
 | Activity | Purpose |
 | --- | --- |
 | Topology sorting cards | students match statements to bus/star/mesh |
-| Draw a LAN in 3 minutes | practise 2025-style labelled topology diagram |
+| Draw a LAN in 3 minutes | practise Recent exam-style labelled topology diagram |
 | Hardware role quiz | separate switch/router/modem/WAP/NIC |
 | IPv4/IPv6 fill-in race | memorise exact format facts |
 | Streaming scenario answer | connect compression + bandwidth + buffer |

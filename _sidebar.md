@@ -1,4 +1,5 @@
 * [Home](README.md)
+* [Coverage Status](coverage.md)
 
 * IGCSE 0478
   * [Chapter 1: Data Representation](ig-0478/chapter-1.md)
@@ -7,6 +8,10 @@
   * [Chapter 4: Software](ig-0478/chapter-4.md)
   * [Chapter 5: The Internet and Its Uses](ig-0478/chapter-5.md)
   * [Chapter 6: Automated and Emerging Technologies](ig-0478/chapter-6.md)
+  * [Chapter 7: Algorithm Design and Problem-Solving](ig-0478/chapter-7.md)
+  * [Chapter 8: Programming](ig-0478/chapter-8.md)
+  * [Chapter 9: Databases](ig-0478/chapter-9.md)
+  * [Chapter 10: Boolean Logic](ig-0478/chapter-10.md)
 
 * AS 9618
   * [Chapter 1](as-9618/chapter-1.md)
@@ -17,6 +22,10 @@
   * [Chapter 6](as-9618/chapter-6.md)
   * [Chapter 7](as-9618/chapter-7.md)
   * [Chapter 8](as-9618/chapter-8.md)
+  * [Chapter 9](as-9618/chapter-9.md)
+  * [Chapter 10](as-9618/chapter-10.md)
+  * [Chapter 11](as-9618/chapter-11.md)
+  * [Chapter 12](as-9618/chapter-12.md)
 
 * A2 9618
   * [Chapter 13](a2-9618/chapter-13.md)
@@ -25,3 +34,5 @@
   * [Chapter 16](a2-9618/chapter-16.md)
   * [Chapter 17](a2-9618/chapter-17.md)
   * [Chapter 18](a2-9618/chapter-18.md)
+  * [Chapter 19](a2-9618/chapter-19.md)
+  * [Chapter 20](a2-9618/chapter-20.md)

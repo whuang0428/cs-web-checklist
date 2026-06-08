@@ -1,6 +1,6 @@
 # IGCSE 0478 Computer Science — Chapter 2 Data Transmission
-## 2025 Updated Student Revision Notes + Teacher Notes
-> **Version:** Updated with 2025 Paper 1 trend  
+## Syllabus-Aligned Student Revision Notes + Teacher Appendix
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 **Use:** Student revision handout / teacher quick teaching guide  
 **Style:** 中文解释 + English mark scheme keywords  
 **Core aim:** 不是背大段定义，而是学会写出 **mark scheme 得分点**
@@ -69,7 +69,7 @@ mindmap
 
 ---
 
-## 1. 2025 出题趋势总结
+## 1. 近期出题方向总结
 | Priority | Topic | 2025 考法 | 学生必须会写的关键词 |
 | --- | --- | --- | --- |
 | ⭐⭐⭐⭐⭐ | Packet structure & packet switching | 描述 packet 分成什么；packet switching 流程 | **header / payload / trailer / router / different route / arrive out of order / reordered** |
@@ -781,7 +781,9 @@ Any two:
 
 ---
 
-# 8. Teacher Notes
+# 8. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 ## Teaching priority
 | Lesson focus | Suggested time | Reason |
 | --- | ---: | --- |

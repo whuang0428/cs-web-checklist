@@ -1,11 +1,11 @@
 # A2 9618 Computer Science — Chapter 16 Updated Notes
-## System Software｜2024–2025 Paper 3 Trend-Based Student Revision Sheet
+## System Software｜Syllabus-Aligned Paper 3 Revision Sheet
 
-> **Version:** Updated after 2024–2025 Paper 3 trend review  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 16 System Software  
 > **Main audience:** A2 students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** Chinese explanation + English mark scheme keywords  
 > **Docsify:** ready  
 >
@@ -35,9 +35,9 @@ F --> G[RPN<br/>stack evaluation]
 
 ---
 
-# 1. 2024–2025 Paper 3 Trend Map
+# 1. Recent Paper 3 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Process states | Medium-high | running / ready / blocked, reason for transition |
 | Scheduling routines | High | FCFS, round robin, shortest job first, shortest remaining time |
@@ -518,7 +518,7 @@ F --> G[System performance becomes very slow]
 > An interpreter translates and executes a high-level language program one statement / line at a time without producing a stored executable file.
 >
 
-### 2025-style mark scheme answer
+### Recent exam-style mark scheme answer
 > The interpreter translates the source code one line at a time. If the line is syntax error free, it is executed. The translated code is not stored in executable format. If an error is found, the program halts with an error message. Each line must be translated every time it is run.
 >
 
@@ -964,7 +964,9 @@ Description example: lexical analysis breaks code into tokens / syntax analysis 
 
 ---
 
-# 17. Teacher Notes
+# 17. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 17.1 Suggested teaching order
 

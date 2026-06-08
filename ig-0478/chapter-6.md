@@ -1,5 +1,5 @@
 # IGCSE 0478 Chapter 6 Updated Checklist
-## Automated Systems and Emerging Technologies｜2025 Past Paper Focus Edition
+## Automated Systems and Emerging Technologies｜Syllabus-Aligned Revision Edition
 > **适用范围**：Cambridge IGCSE Computer Science 0478  
 **更新依据**：2026–2028 syllabus + 2025 Paper 1 mark scheme trend  
 **目标**：删掉低频/过时内容，保留最容易出现在 `State / Describe / Explain / Suggest` 题里的得分点。  
@@ -8,8 +8,8 @@
 
 ---
 
-## 0. 2025 更新结论：这一章现在怎么考？
-| 考点 | 2025 出题趋势 | 学生最容易丢分的地方 | 更新处理 |
+## 0. Syllabus 更新结论：这一章现在怎么考？
+| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
 | --- | --- | --- | --- |
 | **Automated systems** | 不再只问定义，常放进具体场景：ATM 欢迎屏、天气报警系统、农业/工厂系统 | 只写“sensor collects data”，没有写 **microprocessor compares with stored/preset value** | 增加“传感器 → 微处理器 → 比较 → 输出/执行器”的固定模板 |
 | **Robotics** | 重点转向“是否是 robot”“robot 的特征”“场景优缺点” | 把所有智能设备都说成 robot；忽略 **mechanical structure / actuator / movement** | 删除过多 independent/dependent 分类，突出 robot 判断标准 |
@@ -431,7 +431,7 @@ Use these points:
 
 ---
 
-# 8. 2025-Style Mini Question Bank
+# 8. Recent Exam-Style Mini Question Bank
 ## Q1. Automated weather alert system [3]
 A weather station sends an alert when a sensor value is greater than 40.  
 Describe how the sensor and microprocessor are used.

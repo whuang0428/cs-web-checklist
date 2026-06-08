@@ -1,5 +1,5 @@
 # IGCSE 0478 Chapter 4 Updated Checklist
-## Software｜2025 Past Paper Focus Edition
+## Software｜Syllabus-Aligned Revision Edition
 > **适用范围**：Cambridge IGCSE Computer Science 0478  
 **章节范围**：4.1 Types of Software and Interrupts｜4.2 Programming Languages, Translators and IDEs  
 **更新依据**：2026–2028 syllabus + 全部 2025 Paper 1 / Mark Scheme 趋势 + 原 2023–2024 WHBC checklist  
@@ -9,8 +9,8 @@
 
 ---
 
-## 0. 2025 更新结论：这一章现在怎么考？
-| 考点 | 2025 出题趋势 | 学生最容易丢分的地方 | 更新处理 |
+## 0. Syllabus 更新结论：这一章现在怎么考？
+| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
 | --- | --- | --- | --- |
 | **System vs application software** | 常以 1–4 marks 出现，要求区别 + example | 只写 “software used by computer/user”，没有写 **services computer requires / services user requires** | 保留核心定义，减少过长例子 |
 | **Utility software** | 常作为 system software example 出现 | 把 utility software 写成 application software | 明确：utility software is system software |
@@ -663,7 +663,9 @@ One mark for function + one mark for matching role description, max four:
 
 ---
 
-# 8. Teacher Notes｜教学建议
+# 8. Teacher Appendix｜教学建议
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 ## 8.1 本章教学重点排序
 | Priority | Topic | Teaching advice |
 | --- | --- | --- |
@@ -685,7 +687,7 @@ One mark for function + one mark for matching role description, max four:
 4. **Common mistake correction**：把 “OS controls computer” 改成可得分答案。  
 5. **IDE matching exercise**：function 和 description 配对。
 
-## 8.3 2025-style Teaching Reminder
+## 8.3 Recent exam-style Teaching Reminder
 + 现在题目越来越喜欢考 **specific role description**，不是只考定义。
 + 学生必须学会写 **named function + effect / purpose**。
 + 对比题不要只写一边，要写 “whereas / while”。

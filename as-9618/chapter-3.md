@@ -1,11 +1,11 @@
 # AS 9618 Computer Science — Chapter 3 Updated Notes
-## Hardware｜2024–2025 Paper 1 Trend-Based Student Revision Sheet
+## Hardware｜Syllabus-Aligned Paper 1 Revision Sheet
 
-> **Version:** Updated using 2024 + 2025 Paper 1 trend review  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 3 Hardware  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English keywords / mark scheme style phrases  
 > **Docsify:** ready  
 > **File name:** `chapter-3.md`
@@ -30,9 +30,9 @@ E --> F[Logic gates and circuits<br/>expression / circuit / truth table]
 
 ---
 
-# 1. 2024–2025 Paper 1 Trend Map
+# 1. Recent Paper 1 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Logic gates / circuits | Very high | Write expressions from circuits, complete truth tables, recognise NOT / AND / OR / NAND / NOR / XOR |
 | Embedded systems | High | Explain why a device is embedded; describe drawbacks, firmware update difficulty, limited function |
@@ -595,7 +595,7 @@ Better:
 | Address bus | wider address bus allows more memory locations to be directly addressed |
 | Control bus | carries control signals |
 
-### 2025-style answer
+### Recent exam-style answer
 
 > A wider data bus means more data can be transferred between components at one time, reducing delay. A wider address bus means more memory locations can be addressed directly.
 
@@ -1040,7 +1040,9 @@ Award [2] for first four rows correct and [2] for second four rows correct.
 
 ---
 
-# 18. Teacher Notes
+# 18. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 18.1 Suggested teaching order
 
@@ -1052,7 +1054,7 @@ Award [2] for first four rows correct and [2] for second four rows correct.
 6. Teach buffers with slow-output examples: printer, disc writer, streaming video.  
 7. Practise logic gates every lesson for 5 minutes until truth tables become automatic.  
 
-## 18.2 2024–2025 Paper 1 teaching emphasis
+## 18.2 Recent Paper 1 teaching emphasis
 
 | Exam trend | Classroom action |
 | --- | --- |

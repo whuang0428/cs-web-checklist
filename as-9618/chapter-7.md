@@ -1,12 +1,12 @@
 # AS 9618 Computer Science — Chapter 7 Updated Notes
-## Ethics and Ownership｜2024–2025 Paper 1 Trend-Based Student Revision Sheet
+## Ethics and Ownership｜Syllabus-Aligned Paper 1 Revision Sheet
 
-> **Version:** Regenerated with 2024 + 2025 Paper 1 trend review  
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
 > **Chapter:** 7 Ethics and Ownership  
 > **Syllabus area:** 7.1 Ethics and Ownership  
 > **Main audience:** Students preparing for Paper 1  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 > **Docsify:** ready  
 > **No local image dependency**
@@ -45,9 +45,9 @@ E --> F[AI<br/>applications + impacts]
 
 ---
 
-# 1. 2024–2025 Paper 1 Trend Map
+# 1. Recent Paper 1 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Acting ethically as a programmer | Very high in 2024 | Explain impact on **colleagues** and **the public**, not just define ethics |
 | Professional bodies: BCS / IEEE | Medium | Know purpose: code of conduct, standards, guidance, accountability |
@@ -1007,7 +1007,9 @@ Need at least one social and one economic point for full marks.
 
 ---
 
-# 16. Teacher Notes
+# 16. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 16.1 Suggested teaching order
 

@@ -1,10 +1,10 @@
 # A2 9618 Computer Science — Chapter 18 Updated Notes
-## Artificial Intelligence (AI)｜2024–2025 Paper 3 Trend-Based Student Revision Sheet
-> **Version:** Updated using 2024 + 2025 Paper 3 trend review  
+## Artificial Intelligence (AI)｜Syllabus-Aligned Paper 3 Revision Sheet
+> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
 > **Chapter:** 18 Artificial Intelligence (AI)  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords  
 > **Docsify:** ready  
 >
@@ -34,9 +34,9 @@ E --> F[Training methods<br/>back propagation / regression]
 
 ---
 
-# 1. 2024–2025 Paper 3 Trend Map
+# 1. Recent Paper 3 Pattern Map
 
-| Area | 2024–2025 Trend | What students must practise |
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Graph structure | High | nodes / vertices, edges, weights, relationships between entities |
 | Graph use in AI | High | maps, route finding, shortest route, cost / distance / time |
@@ -62,7 +62,7 @@ E --> F[Training methods<br/>back propagation / regression]
 | purpose and structure of graphs | Direct syllabus item and tested in 2025 |
 | nodes / vertices / edges / weights | Required mark scheme keywords |
 | A* and Dijkstra route-search purpose | Often tested as short-answer |
-| supervised vs unsupervised comparison | 2025-style explain/compare question |
+| supervised vs unsupervised comparison | Recent exam-style explain/compare question |
 | reinforcement learning definition | 2024-style direct short-answer |
 | deep learning definition | 2024 and 2025 high-frequency short-answer |
 | artificial neural network structure | 2025 mark schemes reward nodes, layers, weights |
@@ -1034,7 +1034,9 @@ A hospital uses an AI system to analyse medical images.
 
 ---
 
-# 21. Teacher Notes
+# 21. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 
 ## 21.1 Suggested teaching order
 1. Start with graph vocabulary: **node, edge, weight, path**.  

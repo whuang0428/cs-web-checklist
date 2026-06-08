@@ -1,10 +1,10 @@
 # A2 9618 Computer Science — Chapter 14 Updated Notes
-## Communication and Internet Technologies｜2024–2025 Paper 3 Trend-Based Student Revision Sheet
-> **Version:** Updated using 2024 + 2025 Paper 3 / Mark Scheme trend review  
+## Communication and Internet Technologies｜Syllabus-Aligned Paper 3 Revision Sheet
+> **Version:** Syllabus-aligned revision; informed by recent Paper 3 mark-scheme patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
 > **Syllabus chapter:** 14 Communication and internet technologies  
 > **Main audience:** Students  
-> **Teacher Notes:** included at the end  
+> **Teacher Appendix:** optional; kept at the end for teachers  
 > **Style:** 中文解释 + English mark scheme keywords / phrases  
 >
 
@@ -34,8 +34,8 @@ F --> G[Scenario comparison<br/>which method is suitable?]
 
 ---
 
-# 1. 2024–2025 Paper 3 Trend Map
-| Area | 2024–2025 trend | What students must practise |
+# 1. Recent Paper 3 Pattern Map
+| Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Why protocols are needed | High | standard set of rules, successful data transfer, compatibility between devices/platforms |
 | TCP/IP four layers | Very high | Application, Transport, Internet, Link; correct order and role of each layer |
@@ -147,7 +147,7 @@ mindmap
 ### Why protocols are essential
 没有 protocol，不同设备可能会用不同格式、不同顺序、不同错误检查方法传数据。这样接收方就无法正确解释数据。
 
-### 2025-style answer
+### Recent exam-style answer
 > Protocols establish a standard set of rules for communication, so devices from different manufacturers or platforms can send and receive data successfully.
 
 ### Common weak answer
@@ -269,7 +269,7 @@ Link Layer 负责数据在本地网络中的传输，和实际 network hardware 
 ---
 
 ## 5.5 How the layers interact
-### 2025-style answer
+### Recent exam-style answer
 > The TCP/IP suite can be viewed as layers within a stack. Each layer accepts input from the layer above or below it. When a message is sent, it passes from the Application Layer down to the Link Layer. When received, it passes from the Link Layer up to the Application Layer.
 
 ### Diagram
@@ -686,7 +686,9 @@ A student sends a large file across the internet.
 
 ---
 
-# 16. Teacher Notes
+# 16. Teacher Appendix
+
+> Optional teacher-facing planning notes. Students can skip this appendix during normal revision.
 ## 16.1 Suggested teaching order
 1. Start with **protocol = rules**. Make students repeat the phrase “standard set of rules for communication”.  
 2. Teach TCP/IP stack using the exact order: **Application → Transport → Internet → Link**.  
