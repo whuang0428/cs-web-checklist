@@ -1,4 +1,4 @@
-# AS 9618 Computer Science — Chapter 3 Updated Notes
+# AS 9618 Chapter 3: Hardware
 ## Hardware｜Syllabus-Aligned Paper 1 Revision Sheet
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
@@ -1038,4 +1038,3 @@ X = (A AND NOT B) OR (B XOR C)
 Award [2] for first four rows correct and [2] for second four rows correct.
 
 ---
-

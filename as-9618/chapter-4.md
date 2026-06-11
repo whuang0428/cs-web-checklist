@@ -1,4 +1,4 @@
-# AS 9618 Computer Science — Chapter 4 Updated Notes
+# AS 9618 Chapter 4: Processor Fundamentals
 ## Processor Fundamentals｜Syllabus-Aligned Paper 1 Revision Sheet
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  

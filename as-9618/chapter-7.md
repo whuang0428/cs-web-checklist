@@ -1,4 +1,4 @@
-# AS 9618 Computer Science — Chapter 7 Updated Notes
+# AS 9618 Chapter 7: Ethics and Ownership
 ## Ethics and Ownership｜Syllabus-Aligned Paper 1 Revision Sheet
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
@@ -1005,4 +1005,3 @@ Economic impact:
 Need at least one social and one economic point for full marks.
 
 ---
-

@@ -5,8 +5,6 @@
 Welcome to the CS Web Checklist.  
 Choose a course below to start learning.
 
-> **Coverage note:** The main chapter map is now covered at revision-checklist level. Check [Coverage Status](coverage.md) for what is complete and what still needs deeper practice expansion.
-
 ---
 
 ## Choose Your Course
@@ -241,9 +239,8 @@ Choose a course below to start learning.
 
 ## How to Use This Website
 
-1. Check [Coverage Status](coverage.md) so you know which topics are currently included.
-2. Choose the course you are studying.
-3. Open the chapter you want to revise.
-4. Focus on syllabus points and mark scheme keywords.
-5. Review the common mistakes before practising questions.
-6. Use the search bar to quickly find important terms.
+1. Choose the course you are studying.
+2. Open the chapter you want to revise.
+3. Focus on syllabus points and mark scheme keywords.
+4. Review the common mistakes before practising questions.
+5. Use the search bar to quickly find important terms.

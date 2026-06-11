@@ -1,4 +1,4 @@
-# AS 9618 Computer Science - Chapter 12 Updated Checklist
+# AS 9618 Chapter 12: Software Development
 ## Software Development｜Syllabus-Aligned Paper 2 Revision Sheet
 
 > **Version:** Syllabus-aligned revision for AS Paper 2  
@@ -182,4 +182,3 @@ Disadvantages:
 5. State two items found in technical documentation.
 
 ---
-

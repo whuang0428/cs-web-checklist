@@ -1,4 +1,4 @@
-# AS 9618 Computer Science — Chapter 1 Updated Notes
+# AS 9618 Chapter 1: Information Representation
 ## Information Representation｜Syllabus-Aligned Paper 1 Revision Sheet
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  

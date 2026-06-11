@@ -1,4 +1,4 @@
-# AS 9618 Computer Science — Chapter 8 Updated Notes
+# AS 9618 Chapter 8: Database
 ## Databases｜Syllabus-Aligned Paper 1 Revision Sheet
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
@@ -1269,4 +1269,3 @@ Example answer:
 > A data dictionary stores metadata about the database, such as table names, field names, data types, primary keys, foreign keys and validation rules.
 
 ---
-

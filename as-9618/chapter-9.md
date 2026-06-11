@@ -1,4 +1,4 @@
-# AS 9618 Computer Science - Chapter 9 Updated Checklist
+# AS 9618 Chapter 9: Algorithm Design and Problem-Solving
 ## Algorithm Design and Problem-Solving｜Syllabus-Aligned Paper 2 Revision Sheet
 
 > **Version:** Syllabus-aligned revision for AS Paper 2  
@@ -186,4 +186,3 @@ For every test, include:
 5. Give normal, boundary and abnormal test data for a ticket price input.
 
 ---
-

@@ -1,4 +1,4 @@
-# AS 9618 Computer Science - Chapter 11 Updated Checklist
+# AS 9618 Chapter 11: Programming
 ## Programming｜Syllabus-Aligned Paper 2 Revision Sheet
 
 > **Version:** Syllabus-aligned revision for AS Paper 2  
@@ -180,4 +180,3 @@ Strong: "It loops through every mark, counts marks greater than or equal to 50, 
 5. Explain one benefit of encapsulation.
 
 ---
-

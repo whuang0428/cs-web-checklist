@@ -1,4 +1,4 @@
-# AS 9618 Computer Science — Chapter 6 Updated Notes
+# AS 9618 Chapter 6: Security, Privacy and Data Integrity
 ## Security, Privacy and Data Integrity｜Syllabus-Aligned Paper 1 Revision Sheet
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
@@ -1067,4 +1067,3 @@ A website lets users create accounts and play quizzes. A user must enter:
 - Users/staff can only access data/functions they are authorised to use. [1]
 
 ---
-

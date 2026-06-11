@@ -1,4 +1,4 @@
-# AS 9618 Computer Science - Chapter 10 Updated Checklist
+# AS 9618 Chapter 10: Data Types and Structures
 ## Data Types and Structures｜Syllabus-Aligned Paper 2 Revision Sheet
 
 > **Version:** Syllabus-aligned revision for AS Paper 2  
@@ -197,4 +197,3 @@ Drawback:
 5. Choose a data structure for storing 30 student marks and justify it.
 
 ---
-
