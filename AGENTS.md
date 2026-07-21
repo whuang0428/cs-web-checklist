@@ -6,11 +6,7 @@ This file is for AI coding agents and maintainers working in this repository. Re
 
 `cs-web-checklist` is a Docsify-style static revision website for Computer Science checklist content.
 
-Local path:
-
-```bash
-/Users/kw/Projects/cs-web-checklist
-```
+Repository root: the directory containing this `AGENTS.md` file. Do not rely on a machine-specific absolute path.
 
 The site covers:
 
