@@ -33,8 +33,12 @@ There is no npm package, build step, React app, or Vite config in this repositor
 - `_sidebar.md`: navigation structure.
 - `assets/style.css`: custom styling.
 - `ig-0478/chapter-*.md`: IGCSE 0478 chapters.
+- `ig-0478/paper-2-review*.md`: two original 75-mark IGCSE Paper 2 mixed reviews.
 - `as-9618/chapter-*.md`: AS 9618 chapters.
+- `as-9618/paper-2-review*.md`: two original 75-mark AS 9618 Paper 2 mixed reviews.
 - `a2-9618/chapter-*.md`: A2 9618 chapters.
+- `a2-9618/paper-3-review.md`: original 75-mark A2 9618 Advanced Theory review.
+- `a2-9618/paper-4-review*.md`: two original 75-mark A2 9618 Python practical reviews.
 
 Do not edit `.git`, generated browser caches, or temporary files.
 
@@ -60,34 +64,48 @@ Current sidebar sections:
 
 - `IGCSE 0478`
   - `ig-0478/chapter-1.md` through `chapter-10.md`
+  - `ig-0478/paper-2-review.md`
+  - `ig-0478/paper-2-review-2.md`
 - `AS 9618`
   - `as-9618/chapter-1.md` through `chapter-12.md`
+  - `as-9618/paper-2-review.md`
+  - `as-9618/paper-2-review-2.md`
 - `A2 9618`
   - `a2-9618/chapter-13.md` through `chapter-20.md`
+  - `a2-9618/paper-3-review.md`
+  - `a2-9618/paper-4-review.md`
+  - `a2-9618/paper-4-review-2.md`
 
 When adding or renaming pages, update `_sidebar.md` and any links in `README.md`.
 
 ## Maturity And Improvement Priorities
 
-This repository is useful as a revision checklist. The main chapter map is now covered at checklist level, but it should not be presented as a full textbook, full lesson sequence, or complete past-paper practice system until the newer shorter chapters are deepened.
+This repository is a revision checklist and marked-practice hub. It should not be presented as a full textbook, full lesson sequence or complete past-paper archive.
 
 Already addressed in the current baseline:
 
 - The home page, cover page, and sidebar link to `coverage.md`.
+- A dependency-free structural checker and GitHub Actions workflow validate chapter inventory, headings, links, navigation and pinned CDN versions.
 - Student-facing chapter headings use syllabus-aligned wording instead of `Trend-Based` or `Past Paper Focus` entry titles.
 - Teacher-only sections have been removed from student-facing pages.
 - IGCSE 0478 checklist coverage now includes Chapters 1-10.
+- IGCSE Chapters 7-10 include syllabus maps, worked examples, 10-mark checks, 20-mark practice and full answers.
+- Two original 75-mark IGCSE Paper 2 mixed reviews and mark schemes cover Topics 7-10.
 - AS 9618 checklist coverage now includes Chapters 1-12.
+- AS Chapters 9-12 include syllabus maps, worked examples, 10-mark checks, 20-mark practice and full answers.
+- Two original 75-mark AS Paper 2 mixed reviews and mark schemes cover Sections 9-12.
 - A2 9618 checklist coverage now includes Chapters 13-20.
+- A2 Chapters 19-20 include syllabus maps, executable Python examples, worked examples, 10-mark checks and 20-mark practice.
+- An original 75-mark A2 Paper 3 review covers Sections 13-20.
+- Two original 75-mark A2 Paper 4 Python practicals and reference mark schemes cover Sections 19-20.
 
 Remaining highest-priority improvements:
 
-1. Deepen the newly added IGCSE Paper 2, AS Paper 2 and A2 Paper 4 chapters with more worked examples and mixed practice sets.
-2. Bring shorter new chapters closer to the depth of the older 0478/9618 theory chapters before calling the site mature.
-3. Add end-of-section review pages for IGCSE, AS and A2.
-4. Add a lightweight link/checklist verification workflow before publishing, even if the site remains a no-build Docsify project.
-5. Keep recent-paper references as supporting evidence, but do not make them the main page title or site positioning.
-6. Do not add teacher notes, teaching guides, classroom-management advice, or teacher-only appendices to public pages.
+1. Keep all practice sets independent and avoid duplicating scenarios merely to increase page count.
+2. Keep practical Python examples executable and update them if permitted Paper 4 languages change.
+3. Maintain keyboard, contrast, mobile and long-code-block accessibility.
+4. Keep recent-paper references as supporting evidence, but do not make them the main page title or site positioning.
+5. Do not add teacher notes, teaching guides, classroom-management advice, or teacher-only appendices to public pages.
 
 ## Content Style
 
@@ -116,6 +134,12 @@ Do not copy official exam questions, markschemes, textbook pages, screenshots, o
 - Keep `_sidebar.md` simple and readable.
 
 ## Verification
+
+Run the dependency-free structural checks for every change:
+
+```bash
+python3 scripts/check_site.py
+```
 
 For Markdown-only edits:
 

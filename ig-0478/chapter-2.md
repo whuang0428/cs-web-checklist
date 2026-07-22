@@ -1,5 +1,5 @@
-# IGCSE 0478 Computer Science — Chapter 2 Data Transmission
-## Syllabus-Aligned Student Revision Notes
+# IGCSE 0478 Chapter 2: Data Transmission
+> **Syllabus-Aligned Student Revision Notes**
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 **Use:** Student revision handout
 **Style:** 中文解释 + English mark scheme keywords  
@@ -69,7 +69,7 @@ mindmap
 
 ---
 
-## 1. 近期出题方向总结
+### 1. 近期出题方向总结
 | Priority | Topic | 2025 考法 | 学生必须会写的关键词 |
 | --- | --- | --- | --- |
 | ⭐⭐⭐⭐⭐ | Packet structure & packet switching | 描述 packet 分成什么；packet switching 流程 | **header / payload / trailer / router / different route / arrive out of order / reordered** |
@@ -85,14 +85,14 @@ mindmap
 
 ---
 
-## 2. 内容取舍说明
-### 重点保留并强化
+### 2. 内容取舍说明
+#### 重点保留并强化
 + Packet structure and packet switching  
 + Transmission method suitability：serial / parallel / simplex / half-duplex / full-duplex  
 + Error detection：parity, checksum, echo check, check digit, ARQ  
 + 2.3 Encryption：旧版 CH2 文件中不完整，但 syllabus 和 2025 Paper 1 都需要补回
 
-### 降权处理
+#### 降权处理
 | Old content | 处理方式 | 原因 |
 | --- | --- | --- |
 | CRC 详细算法 | 降为 trailer/error checking example | 考试更常直接问 checksum / parity / ARQ |
@@ -103,11 +103,11 @@ mindmap
 
 ---
 
-# 2.1 Types and Methods of Data Transmission
+## 2.1 Types and Methods of Data Transmission
 ---
 
-## 2.1.1 Packet Structure
-### 什么是 packet？
+### 2.1.1 Packet Structure
+#### 什么是 packet？
 当数据通过网络传输时，整段数据通常不会一次性发送，而是被分成很多小的数据包，叫 **packets**。
 
 A packet contains three main parts:
@@ -119,7 +119,7 @@ A packet contains three main parts:
 | **Trailer** | 包尾，表示 packet 结束，也可能包含错误检测信息 | **end of packet, error checking method** |
 
 
-### Exam answer template
+#### Exam answer template
 > A packet contains a **header**, **payload** and **trailer**.  
 The header stores the **destination address**, **originator address** and **packet number**.  
 The payload contains the **actual data**.  
@@ -128,8 +128,8 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 
 ---
 
-## 2.1.2 Packet Switching
-### 核心流程
+### 2.1.2 Packet Switching
+#### 核心流程
 <!-- 这是一个文本绘图，源码为：flowchart LR
     A[Original data/message] --> B[Data is split into packets]
     B --> C[Each packet has header, payload and trailer]
@@ -145,7 +145,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
     J --> K[Original message is reassembled] -->
 ![](https://cdn.nlark.com/yuque/__mermaid_v3/aaaef26ef98037cde8f83f00a0f3898b.svg)
 
-### 必背流程
+#### 必背流程
 1. Data is split into packets.  
 2. Each packet has a header, payload and trailer.  
 3. Routers control/direct the route each packet takes.  
@@ -154,7 +154,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 6. Once all packets arrive, they are reordered/reassembled using packet numbers.  
 7. If a packet is lost/corrupted, it can be requested again.
 
-### Benefits of packet switching
+#### Benefits of packet switching
 | Benefit | Exam wording |
 | --- | --- |
 | 网络线路不被一个 message 独占 | No need to tie up a single communication line |
@@ -163,7 +163,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 | 容易扩展 | Easier to expand network usage |
 
 
-### Drawbacks of packet switching
+#### Drawbacks of packet switching
 | Drawback | Exam wording |
 | --- | --- |
 | packet 可能丢失 | Packets can be lost and need to be re-sent |
@@ -174,7 +174,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 
 ---
 
-## 2.1.3 Data Transmission Directions
+### 2.1.3 Data Transmission Directions
 | Type | 中文理解 | English definition | Example |
 | --- | --- | --- | --- |
 | **Simplex** | 单向传输 | Data is transmitted in one direction only | keyboard to computer, sensor to microprocessor |
@@ -182,14 +182,14 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 | **Full-duplex** | 双向，同时 | Data can be transmitted in both directions at the same time | phone call, video call |
 
 
-### 易考表达
+#### 易考表达
 + **Simplex:** data only needs to be sent in one direction.  
 + **Half-duplex:** data needs to go both ways, but not simultaneously.  
 + **Full-duplex:** data needs to go both ways at the same time, for example to send data and receive error notifications.
 
 ---
 
-## 2.1.4 Serial vs Parallel Transmission
+### 2.1.4 Serial vs Parallel Transmission
 | Feature | Serial transmission | Parallel transmission |
 | --- | --- | --- |
 | How data is sent | **one bit at a time** | **multiple bits at the same time** |
@@ -200,7 +200,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 | Cost | cheaper | more expensive |
 
 
-### Serial transmission — mark scheme points
+#### Serial transmission — mark scheme points
 + Data is sent **one bit at a time**.  
 + Data is sent down a **single wire/channel**.  
 + Bits arrive **in sequence / in order**.  
@@ -208,7 +208,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 + There is **less crosstalk/interference**.  
 + It is more reliable over **long distances**.
 
-### Parallel transmission — mark scheme points
+#### Parallel transmission — mark scheme points
 + Multiple bits are sent **at the same time**.  
 + Multiple wires/channels are used.  
 + It can transmit data **faster**.  
@@ -217,12 +217,12 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 
 ---
 
-## 2.1.5 How to answer “suitability” questions
-### Question type
+### 2.1.5 How to answer “suitability” questions
+#### Question type
 > Explain why serial full-duplex transmission is suitable in this scenario.
 >
 
-### Answer structure
+#### Answer structure
 **Step 1: Identify method**  
 Serial transmission sends data **one bit at a time down a single wire**.
 
@@ -235,15 +235,15 @@ Full-duplex is suitable because data needs to travel **in both directions at the
 **Step 4: Link to scenario**  
 This allows the device to send data and receive **error notifications/acknowledgements** at the same time.
 
-### High-scoring template
+#### High-scoring template
 > Serial transmission is suitable because data is sent **one bit at a time down a single wire**, so bits are less likely to arrive **skewed** and there is less **crosstalk/interference**. It is also reliable over a **long distance**.  
 Full-duplex is suitable because data can be sent **in both directions at the same time**, allowing the device to send data while also receiving **error messages/acknowledgements**.
 >
 
 ---
 
-## 2.1.6 USB Interface
-### What happens when a USB device is plugged in?
+### 2.1.6 USB Interface
+#### What happens when a USB device is plugged in?
 ```mermaid
 flowchart TD
     A[USB device is plugged into USB port] --> B[Computer detects a voltage change]
@@ -255,7 +255,7 @@ flowchart TD
     G -->|Driver not available| H[User may be prompted to download/install driver]
 ```
 
-### Benefits of USB
+#### Benefits of USB
 | Benefit | Exam wording |
 | --- | --- |
 | 自动配置 | self-configuring / automatically detected |
@@ -266,7 +266,7 @@ flowchart TD
 | 可扩展 | USB hubs can add more ports |
 
 
-### Drawbacks of USB
+#### Drawbacks of USB
 | Drawback | Exam wording |
 | --- | --- |
 | 线长有限 | standard USB has limited cable length |
@@ -276,10 +276,10 @@ flowchart TD
 
 ---
 
-# 2.2 Methods of Error Detection
+## 2.2 Methods of Error Detection
 ---
 
-## 2.2.1 Why errors can occur
+### 2.2.1 Why errors can occur
 Data transmission errors may happen because of:
 
 | Cause | Meaning |
@@ -294,7 +294,7 @@ Data transmission errors may happen because of:
 | **Packets time out / reach hop count** | packet does not reach destination in time |
 
 
-### Exam template
+#### Exam template
 > Errors can occur because of **interference** or **crosstalk**.  
 This can cause data to be **lost**, **gained** or **changed**.  
 In parallel transmission, bits may become **skewed**, meaning they arrive out of synchronisation.
@@ -302,8 +302,8 @@ In parallel transmission, bits may become **skewed**, meaning they arrive out of
 
 ---
 
-## 2.2.2 Parity Check
-### Basic idea
+### 2.2.2 Parity Check
+#### Basic idea
 Parity check uses an extra bit called a **parity bit**.  
 The parity bit is added to each byte before transmission.
 
@@ -315,42 +315,42 @@ There are two types:
 | **Odd parity** | total number of 1s must be odd |
 
 
-### Even parity example
+#### Even parity example
 | Data byte | Number of 1s | Parity bit needed | Final byte |
 | --- | ---: | ---: | --- |
 | 10110010 | 4 | 0 | 010110010 |
 | 10110011 | 5 | 1 | 110110011 |
 
 
-### Odd parity example
+#### Odd parity example
 | Data byte | Number of 1s | Parity bit needed | Final byte |
 | --- | ---: | ---: | --- |
 | 10110010 | 4 | 1 | 110110010 |
 | 10110011 | 5 | 0 | 010110011 |
 
 
-### Parity process template
+#### Parity process template
 > A **parity bit** is added to each byte before transmission.  
 It is added to make the number of 1s **odd/even**, depending on the parity rule.  
 After transmission, the receiving device counts the number of 1s in each byte.  
 If the number of 1s does not match the chosen parity rule, an **error is detected**.
 >
 
-### Limitation of parity check
+#### Limitation of parity check
 Parity check may fail if:
 
 + an **even number of bits** change
 + two bits are interchanged, e.g. `1 → 0` and `0 → 1`
 + the total number of 1s still matches the parity rule
 
-### Exam sentence
+#### Exam sentence
 > A parity check may not detect an error if an **even number of bits** are changed, because the total number of 1s may still match the parity rule.
 >
 
 ---
 
-## 2.2.3 Parity Block / Parity Byte
-### What is parity block?
+### 2.2.3 Parity Block / Parity Byte
+#### What is parity block?
 A block of data is checked both:
 
 + horizontally across each byte
@@ -358,7 +358,7 @@ A block of data is checked both:
 
 A **parity byte** is added at the end for the vertical check.
 
-### Why it matters
+#### Why it matters
 Parity block check can sometimes identify an error that a single parity byte check misses, because it checks both rows and columns.
 
 ```mermaid
@@ -374,12 +374,12 @@ flowchart TD
 
 ---
 
-## 2.2.4 Checksum
-### What is checksum?
+### 2.2.4 Checksum
+#### What is checksum?
 A checksum is a calculated value that is sent with the data.  
 The receiver recalculates the value and compares it with the received checksum.
 
-### Full mark process
+#### Full mark process
 ```mermaid
 flowchart TD
     A[Sender has block of data] --> B[Checksum is calculated from the data]
@@ -393,7 +393,7 @@ flowchart TD
     I --> J[Request data to be resent]
 ```
 
-### 5-mark answer template
+#### 5-mark answer template
 > The checksum is **calculated from the data** using an **algorithm**.  
 The checksum value is **transmitted with the data**.  
 After transmission, the receiver **recalculates** the checksum from the received data using the same algorithm.  
@@ -403,8 +403,8 @@ If the values do not match, an **error is detected** and the data is **resent**.
 
 ---
 
-## 2.2.5 Echo Check
-### Basic idea
+### 2.2.5 Echo Check
+#### Basic idea
 Echo check sends data to the receiver, then the receiver sends a copy back to the sender.
 
 ```mermaid
@@ -421,7 +421,7 @@ sequenceDiagram
     end
 ```
 
-### Exam template
+#### Exam template
 > A copy of the data is sent back to the sender by the receiver.  
 The sender compares the returned data with the original data.  
 If the data is different, an error has occurred.
@@ -429,8 +429,8 @@ If the data is different, an error has occurred.
 
 ---
 
-## 2.2.6 Check Digit
-### Important distinction
+### 2.2.6 Check Digit
+#### Important distinction
 **Check digit is for data entry errors, not data transmission errors.**
 
 A check digit is an extra digit added to the end of a number/code.
@@ -441,7 +441,7 @@ Used in:
 + ISBN
 + identification numbers
 
-### Errors detected by check digit
+#### Errors detected by check digit
 | Error type | Example |
 | --- | --- |
 | incorrect digit | 5327 instead of 5307 |
@@ -451,7 +451,7 @@ Used in:
 | phonetic error | 13 instead of 30 |
 
 
-### Process template
+#### Process template
 > A calculation is performed using the digits in the identification number.  
 The result is added as the **check digit**.  
 When the number is entered, the same calculation is repeated.  
@@ -461,15 +461,15 @@ If they match, the number is accepted; if not, an error is detected.
 
 ---
 
-## 2.2.7 Automatic Repeat Query / Request (ARQ)
-### What ARQ uses
+### 2.2.7 Automatic Repeat Query / Request (ARQ)
+#### What ARQ uses
 ARQ uses:
 
 + **acknowledgement**
 + **timeout**
 + **resend / retransmission**
 
-### Positive ARQ process
+#### Positive ARQ process
 ```mermaid
 flowchart TD
     A[Sender sends data packet] --> B[Timer starts]
@@ -483,7 +483,7 @@ flowchart TD
     H -->|No| J[Sender keeps waiting]
 ```
 
-### Full mark ARQ template
+#### Full mark ARQ template
 > The sender sends the data and starts a **timer**.  
 The receiver checks the data for errors.  
 If no error is detected, the receiver sends a **positive acknowledgement**.  
@@ -494,28 +494,28 @@ If no acknowledgement is received before **timeout**, the sender automatically *
 
 ---
 
-# 2.3 Encryption
+## 2.3 Encryption
 > 旧版 CH2 文件没有完整覆盖 2.3，但 2025 Paper 1 已经明显考到 encryption，必须补回。
 >
 
 ---
 
-## 2.3.1 Why encryption is needed
+### 2.3.1 Why encryption is needed
 Encryption is used to protect data during transmission.
 
-### Key points
+#### Key points
 + Data may be intercepted during transmission.
 + Encryption makes data **meaningless** to anyone without the decryption key.
 + It keeps sensitive/confidential data secure.
 
-### Exam template
+#### Exam template
 > Encryption is used to make data **meaningless** if it is intercepted.  
 It helps keep transmitted data **secure/confidential** because only someone with the correct key can decrypt it.
 >
 
 ---
 
-## 2.3.2 Key terms
+### 2.3.2 Key terms
 | Term | Meaning |
 | --- | --- |
 | **Plain text** | original readable data before encryption |
@@ -535,27 +535,27 @@ flowchart LR
 
 ---
 
-## 2.3.3 Symmetric Encryption
-### Meaning
+### 2.3.3 Symmetric Encryption
+#### Meaning
 Symmetric encryption uses the **same key** to encrypt and decrypt data.
 
-### Advantages
+#### Advantages
 + Faster than asymmetric encryption.
 + Simpler process.
 
-### Drawback
+#### Drawback
 + The key must be shared between sender and receiver.
 + If the key is intercepted, the data can be decrypted.
 
-### Exam template
+#### Exam template
 > Symmetric encryption uses the **same key** to encrypt and decrypt the data.  
 The main issue is that the key must be shared, so if the key is intercepted, the data may be decrypted.
 >
 
 ---
 
-## 2.3.4 Asymmetric Encryption
-### Meaning
+### 2.3.4 Asymmetric Encryption
+#### Meaning
 Asymmetric encryption uses two keys:
 
 | Key | Use |
@@ -564,7 +564,7 @@ Asymmetric encryption uses two keys:
 | **Private key** | kept secret; used to decrypt data |
 
 
-### Process
+#### Process
 ```mermaid
 sequenceDiagram
     participant Sender
@@ -575,7 +575,7 @@ sequenceDiagram
     Receiver->>Receiver: Decrypts cipher text using private key
 ```
 
-### Exam template
+#### Exam template
 > The data is encrypted using the receiver’s **public key**.  
 The public key cannot decrypt the data.  
 The data can only be decrypted using the receiver’s **private key**.  
@@ -584,10 +584,10 @@ This makes the data secure because only the receiver has the private key.
 
 ---
 
-# 3. High-score Answer Templates
+## 3. High-score Answer Templates
 ---
 
-## Template 1 — Packet structure
+### Template 1 — Packet structure
 > A packet contains a **header**, **payload** and **trailer**.  
 The header contains the **destination address**, **originator address** and **packet number**.  
 The payload contains the **actual data**.  
@@ -596,7 +596,7 @@ The trailer identifies the **end of the packet** and contains an **error checkin
 
 ---
 
-## Template 2 — Packet switching
+### Template 2 — Packet switching
 > The data is split into **packets**.  
 Each packet can take a **different route** through the network.  
 A **router** controls/directs the route each packet takes.  
@@ -606,7 +606,7 @@ When the last packet arrives, the packets are **reordered** and the message is r
 
 ---
 
-## Template 3 — Serial vs parallel
+### Template 3 — Serial vs parallel
 > Serial transmission sends data **one bit at a time** down a **single wire/channel**.  
 It is more suitable over long distances because there is less **skew**, **crosstalk** and **interference**.  
 Parallel transmission sends **multiple bits at the same time** using **multiple wires/channels**.  
@@ -615,7 +615,7 @@ It is faster over short distances, but more likely to suffer from skew over long
 
 ---
 
-## Template 4 — Checksum
+### Template 4 — Checksum
 > The checksum is calculated from the data using an algorithm.  
 The checksum is transmitted with the data.  
 The receiver recalculates the checksum using the received data.  
@@ -625,7 +625,7 @@ If they do not match, an error is detected and the data is requested again.
 
 ---
 
-## Template 5 — ARQ
+### Template 5 — ARQ
 > The sender sends data and starts a timer.  
 The receiver checks the data for errors.  
 If no error is found, a positive acknowledgement is sent.  
@@ -635,7 +635,7 @@ If no acknowledgement is received before timeout, the sender resends the data.
 
 ---
 
-## Template 6 — Asymmetric encryption
+### Template 6 — Asymmetric encryption
 > Plain text is encrypted into cipher text using an algorithm and a key.  
 The receiver’s public key is used to encrypt the data.  
 The public key cannot decrypt the data.  
@@ -644,7 +644,7 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-# 4. Common Mistakes 易错点
+## 4. Common Mistakes 易错点
 | Mistake | Why it loses marks | Better answer |
 | --- | --- | --- |
 | “Packet has address.” | 太泛，没有结构 | packet has **header, payload and trailer** |
@@ -664,7 +664,7 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-# 5. Scenario Answer Bank 场景迁移表
+## 5. Scenario Answer Bank 场景迁移表
 | Scenario | Best points to use |
 | --- | --- |
 | Data sent over long distance | serial, less skew, less crosstalk, reliable |
@@ -680,8 +680,8 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-# 6. 10 Marks Quick Check
-## Questions
+## 6. 10 Marks Quick Check
+### Questions
 1. State the three parts of a packet. `[3]`  
 2. Give two items stored in a packet header. `[2]`  
 3. State one reason why packets may arrive out of order. `[1]`  
@@ -689,7 +689,7 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 5. What two things are used in ARQ? `[2]`  
 6. State what is meant by cipher text. `[1]`
 
-## Answers
+### Answers
 1. Header, payload, trailer.  
 2. Destination address, originator address, packet number.  
 3. Each packet can take a different route.  
@@ -699,15 +699,15 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-# 7. 20 Marks Exam-style Practice
+## 7. 20 Marks Exam-style Practice
 ---
 
-## Question 1 — Packet switching `[5]`
+### Question 1 — Packet switching `[5]`
 A student sends a large video file to a friend over the internet.
 
 Describe how packet switching is used to send the file.
 
-### Mark scheme
+#### Mark scheme
 Any five:
 
 + Data is split into packets.
@@ -722,12 +722,12 @@ Any five:
 
 ---
 
-## Question 2 — Transmission method `[4]`
+### Question 2 — Transmission method `[4]`
 A sensor sends temperature readings to a microprocessor in an automated greenhouse. The microprocessor does not need to send data back to the sensor.
 
 Explain why serial simplex transmission is suitable.
 
-### Mark scheme
+#### Mark scheme
 Any four:
 
 + Serial sends data one bit at a time.
@@ -739,10 +739,10 @@ Any four:
 
 ---
 
-## Question 3 — Checksum `[5]`
+### Question 3 — Checksum `[5]`
 Describe how checksum is used to detect errors after data transmission.
 
-### Mark scheme
+#### Mark scheme
 + Checksum is calculated from the data.
 + An algorithm is used.
 + Checksum value is transmitted with the data.
@@ -755,12 +755,12 @@ Max 5.
 
 ---
 
-## Question 4 — Parity check `[4]`
+### Question 4 — Parity check `[4]`
 A data transmission uses even parity.
 
 Describe how parity check works.
 
-### Mark scheme
+#### Mark scheme
 + A parity bit is added to each byte.
 + It makes the number of 1s even.
 + The receiver counts/checks the number of 1s in each byte.
@@ -768,10 +768,10 @@ Describe how parity check works.
 
 ---
 
-## Question 5 — Encryption `[2]`
+### Question 5 — Encryption `[2]`
 Explain why asymmetric encryption is secure.
 
-### Mark scheme
+#### Mark scheme
 Any two:
 
 + It uses a public key and a private key.

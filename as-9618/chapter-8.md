@@ -1,5 +1,5 @@
 # AS 9618 Chapter 8: Database
-## Databases｜Syllabus-Aligned Paper 1 Revision Sheet
+> **Databases｜Syllabus-Aligned Paper 1 Revision Sheet**
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
@@ -11,7 +11,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 
 本章不是单纯背定义。2024 和 2025 的题目趋势非常明显：
 
@@ -34,7 +34,7 @@ E --> F[SQL<br/>DDL + DML]
 
 ---
 
-# 1. Recent Paper 1 Pattern Map
+## 1. Recent Paper 1 Pattern Map
 
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
@@ -51,9 +51,9 @@ E --> F[SQL<br/>DDL + DML]
 
 ---
 
-# 2. Content Update Decision
+## 2. Content Update Decision
 
-## 2.1 Keep and Strengthen
+### 2.1 Keep and Strengthen
 
 | Kept content | Reason |
 | --- | --- |
@@ -69,7 +69,7 @@ E --> F[SQL<br/>DDL + DML]
 | normalisation to 3NF | syllabus requirement and scenario question topic |
 | DBMS features | can appear as explain/describe questions |
 
-## 2.2 Downweight
+### 2.2 Downweight
 
 | Downweighted content | Why |
 | --- | --- |
@@ -80,7 +80,7 @@ E --> F[SQL<br/>DDL + DML]
 | entity-attribute modelling theory beyond E-R diagrams | too abstract for Paper 1 |
 | full commercial DBMS architecture | only developer interface and query processor are needed |
 
-## 2.3 Delete / Avoid
+### 2.3 Delete / Avoid
 
 | Avoided content | Reason |
 | --- | --- |
@@ -91,7 +91,7 @@ E --> F[SQL<br/>DDL + DML]
 
 ---
 
-# 3. Syllabus Scope
+## 3. Syllabus Scope
 
 Chapter 8 contains three syllabus sections:
 
@@ -103,7 +103,7 @@ Chapter 8 contains three syllabus sections:
 
 ---
 
-# 4. One-Page Mind Map
+## 4. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -157,18 +157,18 @@ mindmap
 
 ---
 
-# 5. 8.1 Database Concepts
+## 5. 8.1 Database Concepts
 
-## 5.1 File-based approach
+### 5.1 File-based approach
 
-### Meaning
+#### Meaning
 
 A **file-based approach** stores data in separate files, usually created for one specific application.
 
 中文理解：  
 就是每个程序自己管自己的文件。比如 repair data 一个文件，customer data 一个文件，invoice data 又一个文件。这样简单，但容易重复、难维护。
 
-### Limitations
+#### Limitations
 
 | Limitation | 中文解释 | Mark scheme phrase |
 | --- | --- | --- |
@@ -180,22 +180,22 @@ A **file-based approach** stores data in separate files, usually created for one
 | Poor security | 权限不好统一控制 | difficult to control access rights |
 | Poor integrity | 不容易统一验证数据正确性 | difficult to maintain data integrity |
 
-### 2024-style answer
+#### 2024-style answer
 
 > A file-based approach can cause data redundancy because the same customer data may be stored in several files. A relational database reduces redundancy by storing customer data once in a CUSTOMER table and linking it to other tables using a foreign key.
 
 ---
 
-## 5.2 Relational database
+### 5.2 Relational database
 
-### Definition
+#### Definition
 
 > A relational database stores data in tables. Tables are linked using primary keys and foreign keys.
 
 中文理解：  
 relational database 的核心就是 **分表 + 关联**。不是把所有数据塞进一个大表，而是把 customer、repair、part、invoice 等分开放，再用 key 连接。
 
-### Core terms
+#### Core terms
 
 | Term | Meaning | 中文解释 |
 | --- | --- | --- |
@@ -211,20 +211,20 @@ relational database 的核心就是 **分表 + 关联**。不是把所有数据�
 
 ---
 
-## 5.3 Primary key
+### 5.3 Primary key
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > A primary key is an attribute or set of attributes that uniquely identifies each record in a table.
 
-### Important points
+#### Important points
 
 + must be **unique**
 + cannot normally be **NULL**
 + each table should have a primary key
 + can be one field or a **composite key**
 
-### Example
+#### Example
 
 ```sql
 CUSTOMER(CustomerID, FirstName, LastName, ContactNumber)
@@ -234,13 +234,13 @@ CUSTOMER(CustomerID, FirstName, LastName, ContactNumber)
 
 ---
 
-## 5.4 Candidate key
+### 5.4 Candidate key
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > A candidate key is an attribute or set of attributes that could be used as the primary key because it uniquely identifies each record.
 
-### Example
+#### Example
 
 In a table:
 
@@ -258,13 +258,13 @@ Only one is chosen as the **primary key**, but all three could uniquely identify
 
 ---
 
-## 5.5 Foreign key
+### 5.5 Foreign key
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > A foreign key is an attribute in one table that refers to the primary key in another table.
 
-### Example
+#### Example
 
 ```text
 REPAIR(RepairNumber, StartDate, EndDate, CustomerID, Device)
@@ -273,7 +273,7 @@ CUSTOMER(CustomerID, FirstName, LastName, ContactNumber)
 
 `CustomerID` in `REPAIR` is a foreign key because it references `CustomerID` in `CUSTOMER`.
 
-### Common 2024-style task
+#### Common 2024-style task
 
 Given:
 
@@ -292,18 +292,18 @@ Foreign keys in `SALE`:
 
 ---
 
-## 5.6 Referential integrity
+### 5.6 Referential integrity
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > Referential integrity ensures that a foreign key value in one table must match an existing primary key value in the referenced table.
 
-### 中文解释
+#### 中文解释
 
 如果 `REPAIR.CustomerID = "C102"`，那么 `CUSTOMER` 表里必须真的有 `CustomerID = "C102"`。  
 不能出现 repair 记录属于一个不存在的 customer。
 
-### Why it matters
+#### Why it matters
 
 + prevents orphan records
 + keeps relationships valid
@@ -312,9 +312,9 @@ Foreign keys in `SALE`:
 
 ---
 
-## 5.7 Relationships
+### 5.7 Relationships
 
-### One-to-one
+#### One-to-one
 
 One record in table A links to one record in table B.
 
@@ -326,7 +326,7 @@ EMPLOYEE ---- LOGIN_DATA
 
 Each employee has one login record; each login record belongs to one employee.
 
-### One-to-many
+#### One-to-many
 
 One record in table A links to many records in table B.
 
@@ -338,7 +338,7 @@ CUSTOMER ---- REPAIR
 
 One customer can have many repairs, but each repair belongs to one customer.
 
-### Many-to-many
+#### Many-to-many
 
 Many records in table A link to many records in table B.
 
@@ -357,15 +357,15 @@ This is implemented using a **linking table**:
 REPAIR_PART(PartID, RepairNumber, Quantity)
 ```
 
-### Mark scheme style
+#### Mark scheme style
 
 > A many-to-many relationship is implemented by creating a linking table that contains the primary keys from both tables as foreign keys.
 
 ---
 
-## 5.8 E-R diagrams
+### 5.8 E-R diagrams
 
-### What to show
+#### What to show
 
 An E-R diagram normally shows:
 
@@ -374,7 +374,7 @@ An E-R diagram normally shows:
 + one-to-many / many-to-many relationships
 + linking tables where needed
 
-### Example
+#### Example
 
 ```mermaid
 erDiagram
@@ -383,7 +383,7 @@ erDiagram
     PART ||--o{ REPAIR_PART : included_in
 ```
 
-### Exam advice
+#### Exam advice
 
 If you see a table like:
 
@@ -395,18 +395,18 @@ that usually means it is a **linking table** between `REPAIR` and `PART`.
 
 ---
 
-# 6. Normalisation
+## 6. Normalisation
 
-## 6.1 Why normalise?
+### 6.1 Why normalise?
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > Normalisation reduces data redundancy and helps avoid update, insert and delete anomalies.
 
 中文理解：  
 normalisation 就是把“乱的大表”拆成“结构清楚的小表”，减少重复，避免数据改一处漏一处。
 
-### Benefits
+#### Benefits
 
 | Benefit | 中文解释 | Mark scheme phrase |
 | --- | --- | --- |
@@ -419,16 +419,16 @@ normalisation 就是把“乱的大表”拆成“结构清楚的小表”，减
 
 ---
 
-## 6.2 First Normal Form: 1NF
+### 6.2 First Normal Form: 1NF
 
-### Rule
+#### Rule
 
 > A table is in 1NF if it has no repeating groups and each field contains atomic values.
 
 中文理解：  
 一格里面只能放一个值，不能放列表。
 
-### Bad example
+#### Bad example
 
 | StudentID | Name | Subjects |
 | --- | --- | --- |
@@ -436,7 +436,7 @@ normalisation 就是把“乱的大表”拆成“结构清楚的小表”，减
 
 Problem: `Subjects` contains a repeating group.
 
-### Better design
+#### Better design
 
 | StudentID | Name |
 | --- | --- |
@@ -450,16 +450,16 @@ Problem: `Subjects` contains a repeating group.
 
 ---
 
-## 6.3 Second Normal Form: 2NF
+### 6.3 Second Normal Form: 2NF
 
-### Rule
+#### Rule
 
 > A table is in 2NF if it is in 1NF and every non-key attribute is fully dependent on the whole primary key.
 
 中文理解：  
 如果主键是 composite key，那么非主键字段必须依赖整个主键，而不能只依赖其中一部分。
 
-### Example
+#### Example
 
 ```text
 ORDER_ITEM(OrderID, ProductID, ProductName, Quantity)
@@ -476,16 +476,16 @@ So `ProductName` should be moved to `PRODUCT`.
 
 ---
 
-## 6.4 Third Normal Form: 3NF
+### 6.4 Third Normal Form: 3NF
 
-### Rule
+#### Rule
 
 > A table is in 3NF if it is in 2NF and has no non-key attribute depending on another non-key attribute.
 
 中文理解：  
 非主键字段不能依赖另一个非主键字段。
 
-### Example
+#### Example
 
 ```text
 STUDENT(StudentID, Name, TutorID, TutorName)
@@ -505,7 +505,7 @@ TUTOR(TutorID, TutorName)
 
 ---
 
-## 6.5 Normalisation quick exam wording
+### 6.5 Normalisation quick exam wording
 
 | Question asks | Best answer structure |
 | --- | --- |
@@ -517,11 +517,11 @@ TUTOR(TutorID, TutorName)
 
 ---
 
-# 7. 8.2 Database Management Systems DBMS
+## 7. 8.2 Database Management Systems DBMS
 
-## 7.1 DBMS definition
+### 7.1 DBMS definition
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > A DBMS is software used to define, create, maintain and control access to a database.
 
@@ -530,7 +530,7 @@ DBMS 就是管理数据库的软件层。它不是数据本身，而是用来创
 
 ---
 
-## 7.2 DBMS features
+### 7.2 DBMS features
 
 | Feature | What it does | Mark scheme phrase |
 | --- | --- | --- |
@@ -546,13 +546,13 @@ DBMS 就是管理数据库的软件层。它不是数据本身，而是用来创
 
 ---
 
-## 7.3 Data dictionary
+### 7.3 Data dictionary
 
-### Definition
+#### Definition
 
 > A data dictionary stores metadata about the database, such as table names, field names, data types, relationships and validation rules.
 
-### Examples of metadata
+#### Examples of metadata
 
 + table names
 + field / attribute names
@@ -564,7 +564,7 @@ DBMS 就是管理数据库的软件层。它不是数据本身，而是用来创
 + validation rules
 + access rights
 
-### Common weak answer
+#### Common weak answer
 
 > A data dictionary stores data.
 
@@ -572,7 +572,7 @@ Too vague. It stores **data about data**, not normal user records.
 
 ---
 
-## 7.4 Data integrity in DBMS
+### 7.4 Data integrity in DBMS
 
 DBMS can improve integrity by:
 
@@ -583,13 +583,13 @@ DBMS can improve integrity by:
 + using constraints such as `NOT NULL`
 + controlling concurrent updates
 
-### Mark scheme phrase
+#### Mark scheme phrase
 
 > The DBMS can enforce validation rules and referential integrity to ensure data remains accurate, complete and consistent.
 
 ---
 
-## 7.5 Data security in DBMS
+### 7.5 Data security in DBMS
 
 DBMS can improve security by:
 
@@ -601,27 +601,27 @@ DBMS can improve security by:
 + audit logs
 + backup procedures
 
-### Example answer
+#### Example answer
 
 > A DBMS can use access rights so that different users can only view or modify the data they are authorised to access.
 
 ---
 
-## 7.6 Developer interface
+### 7.6 Developer interface
 
-### Meaning
+#### Meaning
 
 A developer interface lets developers create and modify database structures and write SQL queries.
 
-### Mark scheme style
+#### Mark scheme style
 
 > The developer interface allows a developer to write SQL commands to define, query and maintain the database.
 
 ---
 
-## 7.7 Query processor
+### 7.7 Query processor
 
-### Meaning
+#### Meaning
 
 A query processor deals with SQL queries.
 
@@ -633,28 +633,28 @@ It may:
 + execute the query
 + return results
 
-### Mark scheme style
+#### Mark scheme style
 
 > The query processor interprets and executes SQL queries and may optimise them before execution.
 
 ---
 
-# 8. 8.3 DDL and DML
+## 8. 8.3 DDL and DML
 
-## 8.1 DDL vs DML
+### 8.1 DDL vs DML
 
 | Type | Full name | Purpose | Examples |
 | --- | --- | --- | --- |
 | DDL | Data Definition Language | create / change database structure | `CREATE DATABASE`, `CREATE TABLE`, `ALTER TABLE` |
 | DML | Data Manipulation Language | query / insert / update / delete data | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > DDL is used to define or modify the structure of a database. DML is used to query and maintain the data stored in the database.
 
 ---
 
-## 8.2 SQL data types
+### 8.2 SQL data types
 
 | Data type | Use | Example |
 | --- | --- | --- |
@@ -666,7 +666,7 @@ It may:
 | `DATE` | date value | start date |
 | `TIME` | time value | appointment time |
 
-### Exam advice
+#### Exam advice
 
 Use sensible types:
 
@@ -683,9 +683,9 @@ Contact numbers should not be `INTEGER` because they may start with `0` and are 
 
 ---
 
-## 8.3 SQL DDL: `CREATE TABLE`
+### 8.3 SQL DDL: `CREATE TABLE`
 
-### General structure
+#### General structure
 
 ```sql
 CREATE TABLE TableName (
@@ -695,7 +695,7 @@ CREATE TABLE TableName (
 );
 ```
 
-### With foreign key
+#### With foreign key
 
 ```sql
 CREATE TABLE REPAIR (
@@ -711,7 +711,7 @@ CREATE TABLE REPAIR (
 
 ---
 
-## 8.4 2024-style DDL example: linking table
+### 8.4 2024-style DDL example: linking table
 
 Given:
 
@@ -732,7 +732,7 @@ CREATE TABLE REPAIR_PART (
 );
 ```
 
-### Why this is strong
+#### Why this is strong
 
 | Part | Why it gets marks |
 | --- | --- |
@@ -745,9 +745,9 @@ CREATE TABLE REPAIR_PART (
 
 ---
 
-## 8.5 SQL DML: `SELECT`
+### 8.5 SQL DML: `SELECT`
 
-### Basic structure
+#### Basic structure
 
 ```sql
 SELECT FieldName
@@ -755,7 +755,7 @@ FROM TableName
 WHERE condition;
 ```
 
-### Example
+#### Example
 
 ```sql
 SELECT FirstName, LastName
@@ -765,7 +765,7 @@ WHERE CustomerID = 'C102';
 
 ---
 
-## 8.6 `SUM`, `COUNT`, `AVG`
+### 8.6 `SUM`, `COUNT`, `AVG`
 
 | Function | Purpose | Example use |
 | --- | --- | --- |
@@ -773,7 +773,7 @@ WHERE CustomerID = 'C102';
 | `COUNT` | number of records | number of customers |
 | `AVG` | average of numeric values | average price |
 
-### Example: total unpaid invoices
+#### Example: total unpaid invoices
 
 ```sql
 SELECT SUM(AmountDue)
@@ -786,7 +786,7 @@ This is a very common Paper 1 style: **aggregate function + WHERE condition**.
 
 ---
 
-## 8.7 Date conditions
+### 8.7 Date conditions
 
 Different SQL systems format dates slightly differently. In Cambridge answers, focus on logic.
 
@@ -806,17 +806,17 @@ Alternative accepted style may use:
 AND Date BETWEEN '2023-01-01' AND '2023-12-31'
 ```
 
-### Exam warning
+#### Exam warning
 
 If the field is called `Date`, keep it exactly as shown in the question unless the question uses another name such as `DateSent`.
 
 ---
 
-## 8.8 `GROUP BY`
+### 8.8 `GROUP BY`
 
 Use `GROUP BY` when the question asks for totals/counts **for each group**.
 
-### Example
+#### Example
 
 Show number of birds for each size:
 
@@ -826,18 +826,18 @@ FROM BIRD_TYPE
 GROUP BY Size;
 ```
 
-### Common mistake
+#### Common mistake
 
 Writing `COUNT(Size)` when the question wants count of records.  
 Usually safer: `COUNT(*)` or `COUNT(PrimaryKey)`.
 
 ---
 
-## 8.9 `INNER JOIN`
+### 8.9 `INNER JOIN`
 
 Use `INNER JOIN` when data is needed from two tables.
 
-### Example
+#### Example
 
 ```sql
 SELECT CUSTOMER.FirstName, REPAIR.Device
@@ -846,7 +846,7 @@ INNER JOIN REPAIR
 ON CUSTOMER.CustomerID = REPAIR.CustomerID;
 ```
 
-### Mark scheme style
+#### Mark scheme style
 
 You can also see comma-style join:
 
@@ -860,16 +860,16 @@ Both express the same basic relationship.
 
 ---
 
-## 8.10 DML maintenance commands
+### 8.10 DML maintenance commands
 
-### `INSERT INTO`
+#### `INSERT INTO`
 
 ```sql
 INSERT INTO CUSTOMER(CustomerID, FirstName, LastName)
 VALUES('C105', 'Amy', 'Chen');
 ```
 
-### `UPDATE`
+#### `UPDATE`
 
 ```sql
 UPDATE INVOICE
@@ -877,14 +877,14 @@ SET Paid = TRUE
 WHERE InvoiceID = '000002';
 ```
 
-### `DELETE FROM`
+#### `DELETE FROM`
 
 ```sql
 DELETE FROM INVOICE
 WHERE InvoiceID = '000003';
 ```
 
-### Exam warning
+#### Exam warning
 
 Never write:
 
@@ -896,9 +896,9 @@ unless you want to delete every row.
 
 ---
 
-# 9. Mark Scheme Keywords
+## 9. Mark Scheme Keywords
 
-## 9.1 Database concept keywords
+### 9.1 Database concept keywords
 
 | Concept | Must-have keywords |
 | --- | --- |
@@ -920,7 +920,7 @@ unless you want to delete every row.
 | Query processor | processes / optimises / executes SQL |
 | Developer interface | allows developer to write SQL commands |
 
-## 9.2 SQL keywords
+### 9.2 SQL keywords
 
 | SQL task | Keywords to include |
 | --- | --- |
@@ -941,7 +941,7 @@ unless you want to delete every row.
 
 ---
 
-# 10. Common Mistakes 易错表
+## 10. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -960,9 +960,9 @@ unless you want to delete every row.
 
 ---
 
-# 11. Scenario Answer Bank 场景迁移答题模板
+## 11. Scenario Answer Bank 场景迁移答题模板
 
-## Scenario 1: File-based approach limitation
+### Scenario 1: File-based approach limitation
 
 **Question:**  
 A shop stores repair data using separate files. Give one limitation and explain how a relational database addresses it.
@@ -973,7 +973,7 @@ A shop stores repair data using separate files. Give one limitation and explain 
 
 ---
 
-## Scenario 2: Identify foreign keys
+### Scenario 2: Identify foreign keys
 
 **Question:**  
 Given:
@@ -991,7 +991,7 @@ CUSTOMER(CustomerID, CompanyName)
 
 ---
 
-## Scenario 3: Many-to-many relationship
+### Scenario 3: Many-to-many relationship
 
 **Question:**  
 A repair can use many parts. A part can be used in many repairs. Explain how this relationship is implemented.
@@ -1002,7 +1002,7 @@ A repair can use many parts. A part can be used in many repairs. Explain how thi
 
 ---
 
-## Scenario 4: Normalisation benefit
+### Scenario 4: Normalisation benefit
 
 **Question:**  
 Explain one benefit of normalisation.
@@ -1013,7 +1013,7 @@ Explain one benefit of normalisation.
 
 ---
 
-## Scenario 5: Write total SQL query
+### Scenario 5: Write total SQL query
 
 **Question:**  
 Return the total amount due for supplier `JK675` for unpaid invoices.
@@ -1029,7 +1029,7 @@ AND Paid = FALSE;
 
 ---
 
-## Scenario 6: Create linking table SQL
+### Scenario 6: Create linking table SQL
 
 **Question:**  
 Write SQL to create `REPAIR_PART(PartID, RepairNumber, Quantity)`.
@@ -1049,7 +1049,7 @@ CREATE TABLE REPAIR_PART (
 
 ---
 
-## Scenario 7: DBMS security
+### Scenario 7: DBMS security
 
 **Question:**  
 Explain how a DBMS can protect data.
@@ -1060,7 +1060,7 @@ Explain how a DBMS can protect data.
 
 ---
 
-## Scenario 8: Data dictionary
+### Scenario 8: Data dictionary
 
 **Question:**  
 Describe the purpose of a data dictionary.
@@ -1071,7 +1071,7 @@ Describe the purpose of a data dictionary.
 
 ---
 
-# 12. Mermaid Process Diagram: From Scenario to SQL
+## 12. Mermaid Process Diagram: From Scenario to SQL
 
 ```mermaid
 flowchart TD
@@ -1090,9 +1090,9 @@ J --> K[Check field names, types, conditions]
 
 ---
 
-# 13. 10 Marks Quick Check
+## 13. 10 Marks Quick Check
 
-## Questions
+### Questions
 
 1. Define **primary key**. `[1]`
 2. Define **foreign key**. `[1]`
@@ -1105,7 +1105,7 @@ J --> K[Check field names, types, conditions]
 9. Write the SQL aggregate function used to total values. `[1]`
 10. State what `DML` is used for. `[1]`
 
-## Answers
+### Answers
 
 1. An attribute / set of attributes that uniquely identifies each record.
 2. An attribute in one table that references the primary key in another table.
@@ -1120,9 +1120,9 @@ J --> K[Check field names, types, conditions]
 
 ---
 
-# 14. 20 Marks Exam-Style Practice
+## 14. 20 Marks Exam-Style Practice
 
-## Question
+### Question
 
 A sports centre uses a relational database to store data about members, classes and class bookings.
 
@@ -1136,25 +1136,25 @@ CLASS(ClassID, ClassName, Instructor, Fee)
 BOOKING(MemberID, ClassID, BookingDate, Paid)
 ```
 
-### (a) Define the term **primary key**. `[1]`
+#### (a) Define the term **primary key**. `[1]`
 
-### (b) Identify the foreign keys in `BOOKING` and state which table each one references. `[2]`
+#### (b) Identify the foreign keys in `BOOKING` and state which table each one references. `[2]`
 
-### (c) Explain why `BOOKING` is needed in this database design. `[3]`
+#### (c) Explain why `BOOKING` is needed in this database design. `[3]`
 
-### (d) Write an SQL script to create the table `BOOKING`. Include suitable data types and constraints. `[5]`
+#### (d) Write an SQL script to create the table `BOOKING`. Include suitable data types and constraints. `[5]`
 
-### (e) Write an SQL script to return the number of unpaid bookings for the class with `ClassID = 'YOGA01'`. `[3]`
+#### (e) Write an SQL script to return the number of unpaid bookings for the class with `ClassID = 'YOGA01'`. `[3]`
 
-### (f) Explain two benefits of using a relational database instead of a file-based approach. `[4]`
+#### (f) Explain two benefits of using a relational database instead of a file-based approach. `[4]`
 
-### (g) Describe the purpose of a data dictionary in a DBMS. `[2]`
+#### (g) Describe the purpose of a data dictionary in a DBMS. `[2]`
 
 ---
 
-## Mark Scheme
+### Mark Scheme
 
-### (a) `[1]`
+#### (a) `[1]`
 
 One mark:
 
@@ -1162,7 +1162,7 @@ One mark:
 
 ---
 
-### (b) `[2]`
+#### (b) `[2]`
 
 | Foreign key | References |
 | --- | --- |
@@ -1173,7 +1173,7 @@ One mark for each correct foreign key + referenced table.
 
 ---
 
-### (c) `[3]`
+#### (c) `[3]`
 
 Award up to 3 marks:
 
@@ -1189,7 +1189,7 @@ Example answer:
 
 ---
 
-### (d) `[5]`
+#### (d) `[5]`
 
 Example answer:
 
@@ -1217,7 +1217,7 @@ Award marks:
 
 ---
 
-### (e) `[3]`
+#### (e) `[3]`
 
 Example answer:
 
@@ -1238,7 +1238,7 @@ Award marks:
 
 ---
 
-### (f) `[4]`
+#### (f) `[4]`
 
 Award up to 4 marks:
 
@@ -1257,7 +1257,7 @@ Example answer:
 
 ---
 
-### (g) `[2]`
+#### (g) `[2]`
 
 Award up to 2 marks:
 

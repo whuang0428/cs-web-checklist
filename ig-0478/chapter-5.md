@@ -1,5 +1,5 @@
-# IGCSE 0478 Chapter 5 Updated Checklist
-## The Internet and Its Uses｜Syllabus-Aligned Revision Edition
+# IGCSE 0478 Chapter 5: The Internet and Its Uses
+> **The Internet and Its Uses｜Syllabus-Aligned Revision Edition**
 > **适用范围**：Cambridge IGCSE Computer Science 0478  
 **章节范围**：5.1 The Internet and the World Wide Web｜5.2 Digital Currency｜5.3 Cyber Security  
 **更新依据**：2026–2028 syllabus + 2025 Paper 1 mark scheme trend + 原 2023–2024 WHBC checklist  
@@ -25,8 +25,8 @@
 
 ---
 
-## 1. 内容取舍：哪些内容要删？哪些保留？
-### ✅ 必须保留并重点训练
+### 1. 内容取舍：哪些内容要删？哪些保留？
+#### ✅ 必须保留并重点训练
 | 内容 | 原因 |
 | --- | --- |
 | Internet vs World Wide Web | syllabus 明确要求，常以 1–2 marks 出现 |
@@ -40,7 +40,7 @@
 | Security solutions | 2025 强调 “措施 + 解释”，特别是 password, 2FA, biometrics, firewall, anti-spyware, proxy |
 
 
-### ⚠️ 降权或删除
+#### ⚠️ 降权或删除
 | 原内容 | 处理方式 | 原因 |
 | --- | --- | --- |
 | 过长的 biometric 优缺点表 | **压缩** | 2025 更常考 biometric 为什么安全，而不是四种技术长表 |
@@ -54,8 +54,8 @@
 
 ---
 
-# 5.1 The Internet and the World Wide Web
-## 5.1.1 Internet vs World Wide Web
+## 5.1 The Internet and the World Wide Web
+### 5.1.1 Internet vs World Wide Web
 **<font style="background-color:#f8fbff;">Internet</font>**<font style="background-color:#f8fbff;">  
 </font><font style="background-color:#f8fbff;">A worldwide collection of interconnected networks.  
   
@@ -66,7 +66,7 @@
   
 </font>**<font style="background-color:#fffaf2;">Key idea:</font>**<font style="background-color:#fffaf2;"> one service that uses the internet. </font>
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + The **internet** is the physical / network infrastructure.
 + The **World Wide Web** is a collection of websites and web pages.
 + The WWW is accessed using a **web browser**.
@@ -78,7 +78,7 @@
 
 ---
 
-## 5.1.2 URL｜Uniform Resource Locator
+### 5.1.2 URL｜Uniform Resource Locator
 A **URL** is a **text-based address for a web page**. It can contain:
 
 | Part | Meaning | Example |
@@ -98,7 +98,7 @@ https://www.example.com/shop/index.html
 └────────────────────────────── protocol
 ```
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + A URL is a **text-based address** used to locate a web page.
 + The **domain name** identifies the website.
 + The **web page name / file name** identifies the specific page or file.
@@ -106,7 +106,7 @@ https://www.example.com/shop/index.html
 
 ---
 
-## 5.1.3 HTTP vs HTTPS
+### 5.1.3 HTTP vs HTTPS
 | Feature | HTTP | HTTPS |
 | --- | --- | --- |
 | Full name | Hypertext Transfer Protocol | Hypertext Transfer Protocol Secure |
@@ -116,7 +116,7 @@ https://www.example.com/shop/index.html
 | Typical clue | `http://` | `https://`, padlock / certificate |
 
 
-### HTTPS / SSL / TLS 高分模板
+#### HTTPS / SSL / TLS 高分模板
 > **Explain how HTTPS helps keep data secure.**
 >
 
@@ -145,14 +145,14 @@ sequenceDiagram
 
 ---
 
-## 5.1.4 Web Browser
+### 5.1.4 Web Browser
 A **web browser** is software used to **retrieve, render and display web pages**.
 
-### Main Purpose
+#### Main Purpose
 > The main purpose of a web browser is to **render HTML** and **display web pages**.
 >
 
-### Functions of a Web Browser
+#### Functions of a Web Browser
 | Function | Mark scheme wording |
 | --- | --- |
 | Display web pages | renders HTML and displays web pages |
@@ -174,8 +174,8 @@ A browser displays web pages. A search engine finds web pages based on keywords.
 
 ---
 
-## 5.1.5 How a Web Page Is Located, Retrieved and Displayed
-### Golden Process Template
+### 5.1.5 How a Web Page Is Located, Retrieved and Displayed
+#### Golden Process Template
 1. User enters a **URL** into the web browser.
 2. The browser sends the URL / domain name to a **DNS**.
 3. The DNS searches for the matching **IP address**.
@@ -196,16 +196,16 @@ F --> G[Browser renders HTML]
 G --> H[Web page displayed]
 ```
 
-### DNS Role in One Sentence
+#### DNS Role in One Sentence
 > A DNS stores domain names / URLs and their matching IP addresses, then returns the matching IP address to the web browser.
 >
 
 ---
 
-## 5.1.6 Cookies
+### 5.1.6 Cookies
 A **cookie** is a small text file / piece of data that is sent by a web server and stored / managed by the web browser.
 
-### What Cookies Are Used For
+#### What Cookies Are Used For
 | Use | Exam wording |
 | --- | --- |
 | Login details | stores a user’s login details |
@@ -216,7 +216,7 @@ A **cookie** is a small text file / piece of data that is sent by a web server a
 | Personal details | stores personal details such as address |
 
 
-### Session Cookies vs Persistent Cookies
+#### Session Cookies vs Persistent Cookies
 | Feature | Session Cookie | Persistent Cookie |
 | --- | --- | --- |
 | Storage time | temporary | permanent until deleted / expires |
@@ -225,7 +225,7 @@ A **cookie** is a small text file / piece of data that is sent by a web server a
 | Common use | shopping cart during one visit | remember login details / preferences |
 
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + Cookies are **stored and managed by the web browser**.
 + Session cookies are **temporary** and are deleted when the browser is closed.
 + Persistent cookies remain after the browser is closed and are deleted by the user or after they expire.
@@ -235,16 +235,16 @@ A **cookie** is a small text file / piece of data that is sent by a web server a
 
 ---
 
-# 5.2 Digital Currency and Blockchain
-## 5.2.1 Digital Currency
+## 5.2 Digital Currency and Blockchain
+### 5.2.1 Digital Currency
 A **digital currency** is a currency that **only exists electronically**.
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + It does not exist as physical coins or notes.
 + It is stored and transferred electronically.
 + It can be used for online payments or electronic transactions.
 
-### Digital Currency vs Cryptocurrency
+#### Digital Currency vs Cryptocurrency
 | Digital Currency | Cryptocurrency |
 | --- | --- |
 | Exists electronically | Exists electronically |
@@ -258,10 +258,10 @@ A **digital currency** is a currency that **only exists electronically**.
 
 ---
 
-## 5.2.2 Blockchain
+### 5.2.2 Blockchain
 A **blockchain** is a digital ledger: a time-stamped series of records that cannot easily be altered.
 
-### Blockchain Transaction Process
+#### Blockchain Transaction Process
 ```mermaid
 flowchart TD
 A[User makes a digital currency transaction] --> B[Transaction data is grouped into a block]
@@ -272,7 +272,7 @@ E --> F[Time-stamped record is stored]
 F --> G[Copies of the ledger are distributed]
 ```
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + Blockchain acts as a **digital ledger**.
 + It records transactions in **blocks**.
 + Each record is **time-stamped**.
@@ -282,8 +282,8 @@ F --> G[Copies of the ledger are distributed]
 
 ---
 
-# 5.3 Cyber Security
-## 5.3.1 Threat Overview Mind Map
+## 5.3 Cyber Security
+### 5.3.1 Threat Overview Mind Map
 ```mermaid
 mindmap
   root((Cyber Security Threats))
@@ -316,7 +316,7 @@ mindmap
 
 ---
 
-## 5.3.2 Threats：Process + Aim + Effects
+### 5.3.2 Threats：Process + Aim + Effects
 | Threat | Process / How it works | Aim / Effect | High-value keywords |
 | --- | --- | --- | --- |
 | **Brute-force attack** | Tries many password combinations systematically | Finds password / gains access | repeated guesses, combinations, password, lockout |
@@ -336,7 +336,7 @@ mindmap
 
 ---
 
-## 5.3.3 DDoS / Botnet Diagram Template
+### 5.3.3 DDoS / Botnet Diagram Template
 > **Describe / draw how a DDoS attack is carried out.**
 >
 
@@ -351,7 +351,7 @@ F --> G[Web server cannot handle requests]
 G --> H[Server slows down / crashes / website unavailable]
 ```
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + A third party sends malware to many computers.
 + The malware turns the computers into **bots**.
 + The bots form a **botnet**.
@@ -360,7 +360,7 @@ G --> H[Server slows down / crashes / website unavailable]
 
 ---
 
-## 5.3.4 Phishing vs Pharming
+### 5.3.4 Phishing vs Pharming
 | Feature | Phishing | Pharming |
 | --- | --- | --- |
 | Main method | Fake email / message | Malicious code / DNS redirection |
@@ -370,19 +370,19 @@ G --> H[Server slows down / crashes / website unavailable]
 | Common exam phrase | legitimate-looking email, fake link | redirects user without consent |
 
 
-### Similarities
+#### Similarities
 + Both are designed to steal personal data.
 + Both can use fake websites.
 + Both may pretend to be a real company or trusted organisation.
 
 ---
 
-## 5.3.5 Social Engineering
-### Definition
+### 5.3.5 Social Engineering
+#### Definition
 > Social engineering involves **manipulating or deceiving people** with the aim of obtaining **confidential / personal / valuable data**.
 >
 
-### Common examples
+#### Common examples
 | Example | How it works |
 | --- | --- |
 | Phishing | fake email/message tricks user into entering details |
@@ -397,8 +397,8 @@ G --> H[Server slows down / crashes / website unavailable]
 
 ---
 
-# 5.3.6 Keeping Data Safe｜Security Solutions
-## Solution Overview
+## 5.3.6 Keeping Data Safe｜Security Solutions
+### Solution Overview
 | Solution | What it does | Good exam expansion |
 | --- | --- | --- |
 | **Access levels** | Controls which users can access specific data | Users only access data needed for their role |
@@ -419,7 +419,7 @@ G --> H[Server slows down / crashes / website unavailable]
 
 ---
 
-## 5.3.7 Authentication
+### 5.3.7 Authentication
 Authentication means proving that a user is who they claim to be.
 
 | Type | Example | Strength |
@@ -429,7 +429,7 @@ Authentication means proving that a user is who they claim to be.
 | Something you are | fingerprint / face / voice / retina | unique to the person, difficult to fake |
 
 
-### Password Exam Points
+#### Password Exam Points
 A strong password should:
 
 + contain uppercase and lowercase letters
@@ -438,13 +438,13 @@ A strong password should:
 + be difficult to guess
 + be changed when compromised
 
-### Two-step Verification Template
+#### Two-step Verification Template
 + The user first enters a username and password.
 + A code / extra data is sent to the user’s registered device/account.
 + The user must enter this code into the system.
 + A hacker would need both the password and the registered device/account.
 
-### Biometric Template
+#### Biometric Template
 + A biometric device captures a physical feature, such as a fingerprint or face.
 + The captured data is compared with stored biometric data.
 + If the data matches, access is allowed.
@@ -453,8 +453,8 @@ A strong password should:
 
 ---
 
-## 5.3.8 Anti-malware
-### Anti-virus
+### 5.3.8 Anti-malware
+#### Anti-virus
 | Function | Mark scheme wording |
 | --- | --- |
 | Scans files/system | scans the computer system for viruses |
@@ -464,7 +464,7 @@ A strong password should:
 | Needs updates | must be kept up to date to detect new threats |
 
 
-### Anti-spyware
+#### Anti-spyware
 | Function | Mark scheme wording |
 | --- | --- |
 | Detects spyware | scans the system for spyware |
@@ -475,11 +475,11 @@ A strong password should:
 
 ---
 
-## 5.3.9 Firewall vs Proxy Server
-### Firewall
+### 5.3.9 Firewall vs Proxy Server
+#### Firewall
 A **firewall** is hardware and/or software that monitors traffic entering and leaving a system or network.
 
-#### Firewall Core Sentences
+##### Firewall Core Sentences
 + It examines incoming and outgoing traffic.
 + It checks traffic against a set of rules / criteria.
 + It can use a blacklist or whitelist.
@@ -487,10 +487,10 @@ A **firewall** is hardware and/or software that monitors traffic entering and le
 + It can warn the user / network manager.
 + It can block specific IP addresses, ports or applications.
 
-### Proxy Server
+#### Proxy Server
 A **proxy server** sits between the user/client and the web server.
 
-#### Proxy Server Core Sentences
+##### Proxy Server Core Sentences
 + It examines each request / incoming transmission.
 + It can limit the number/rate of requests sent to a server.
 + It can stop requests from certain IP addresses.
@@ -498,7 +498,7 @@ A **proxy server** sits between the user/client and the web server.
 + It can hide the user’s public IP address.
 + It can reduce the impact of a DDoS attack because requests hit the proxy server instead of the web server.
 
-### Firewall vs Proxy Server Comparison
+#### Firewall vs Proxy Server Comparison
 | Point | Firewall | Proxy Server |
 | --- | --- | --- |
 | Main role | filters traffic based on rules | acts as an intermediary between client and server |
@@ -513,8 +513,8 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-## 5.3.10 Checking Emails and URLs
-### Before clicking a link / opening an attachment, check:
+### 5.3.10 Checking Emails and URLs
+#### Before clicking a link / opening an attachment, check:
 | Check | Why it matters |
 | --- | --- |
 | Sender email address | fake addresses may imitate real companies |
@@ -530,7 +530,7 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-# 6. Common Mistakes｜最容易丢分的答案
+## 6. Common Mistakes｜最容易丢分的答案
 | Topic | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | Internet vs WWW | “They are the same.” | 完全错误 | The internet is the infrastructure; the WWW is a collection of web pages accessed using the internet. |
@@ -556,7 +556,7 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-# 7. Command Word Strategy
+## 7. Command Word Strategy
 | Command word | What to do | Example answer style |
 | --- | --- | --- |
 | **State / Give / Identify** | 短答案，给名称即可 | `Proxy server`, `persistent cookie`, `DNS` |
@@ -568,39 +568,39 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-# 8. Mark Scheme Style Templates
-## Template A｜Webpage retrieval
+## 8. Mark Scheme Style Templates
+### Template A｜Webpage retrieval
 > When a user enters a URL, the browser sends the domain name to a DNS. The DNS searches for the matching IP address and returns it to the browser. The browser sends a request to the web server at that IP address. The web server sends the web page files back. The browser renders the HTML and displays the web page.
 >
 
-## Template B｜HTTPS / SSL/TLS
+### Template B｜HTTPS / SSL/TLS
 > HTTPS uses SSL/TLS to encrypt data before transmission. If the data is intercepted, it cannot be understood. A digital certificate can authenticate the web server. The browser can use the web server’s public key to encrypt data, and the web server uses its private key to decrypt it.
 >
 
-## Template C｜DDoS attack
+### Template C｜DDoS attack
 > The attacker sends malware to many computers. These computers become bots and form a botnet. The attacker instructs the botnet to send many requests to a web server at the same time. The server cannot respond to all the requests and may slow down, time out or crash.
 >
 
-## Template D｜Firewall
+### Template D｜Firewall
 > A firewall monitors incoming and outgoing traffic. It checks the traffic against rules or criteria. Traffic that does not meet the criteria can be blocked, and the user or network manager may be warned.
 >
 
-## Template E｜Proxy server
+### Template E｜Proxy server
 > A proxy server sits between the user and the web server. It examines requests and can block requests from certain IP addresses. It can use caching to respond to requests without forwarding them to the web server. It can also hide the user’s public IP address and reduce the impact of DDoS attacks.
 >
 
-## Template F｜Phishing
+### Template F｜Phishing
 > A legitimate-looking email or message is sent to the user. It contains a link to a fake website. The user clicks the link and enters personal details. These details are sent to the attacker.
 >
 
-## Template G｜Two-step verification
+### Template G｜Two-step verification
 > The user enters a username and password. A code is sent to the user’s registered device or account. The user must enter this code into the system. This makes unauthorised access harder because the hacker also needs the registered device/account.
 >
 
 ---
 
-# 9. Quick Check｜10 Marks
-## Questions
+## 9. Quick Check｜10 Marks
+### Questions
 1. State one difference between the internet and the World Wide Web. `[1]`  
 2. Identify two parts of a URL. `[2]`  
 3. Give one function of a web browser. `[1]`  
@@ -610,7 +610,7 @@ A **proxy server** sits between the user/client and the web server.
 7. State what is meant by social engineering. `[2]`  
 8. Give one benefit of a proxy server. `[1]`
 
-## Mark Scheme
+### Mark Scheme
 1. Internet is the infrastructure; WWW is a collection of web pages accessed using the internet.  
 2. Protocol / domain name / path / web page name / file name.  
 3. Renders HTML / displays web pages / stores bookmarks / records history / manages cookies / provides address bar.  
@@ -622,13 +622,13 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-# 10. Exam-style Practice｜20 Marks
-## Question 1｜Webpage retrieval `[5]`
+## 10. Exam-style Practice｜20 Marks
+### Question 1｜Webpage retrieval `[5]`
 A user enters a URL into a web browser to visit a website.
 
 Describe how the web page is located, retrieved and displayed on the user’s device.
 
-### Mark Scheme
+#### Mark Scheme
 Any five from:
 
 + Browser sends URL/domain name to DNS.
@@ -642,12 +642,12 @@ Any five from:
 
 ---
 
-## Question 2｜Cookies `[4]`
+### Question 2｜Cookies `[4]`
 A shopping website uses both session cookies and persistent cookies.
 
 Explain how these two types of cookies may be used.
 
-### Mark Scheme
+#### Mark Scheme
 Any four from:
 
 + Session cookies can store items in a shopping cart during one visit.
@@ -659,12 +659,12 @@ Any four from:
 
 ---
 
-## Question 3｜Cyber security solutions `[6]`
+### Question 3｜Cyber security solutions `[6]`
 A school wants to protect student records from unauthorised access.
 
 Suggest three security solutions and explain how each one helps protect the records.
 
-### Mark Scheme
+#### Mark Scheme
 One mark for solution + one mark for matching explanation, up to 6:
 
 + Strong password: uses letters/numbers/symbols, making it difficult to guess.
@@ -678,10 +678,10 @@ One mark for solution + one mark for matching explanation, up to 6:
 
 ---
 
-## Question 4｜DDoS attack `[5]`
+### Question 4｜DDoS attack `[5]`
 Describe how a DDoS attack can cause a web server to fail.
 
-### Mark Scheme
+#### Mark Scheme
 Any five from:
 
 + Attacker sends malware to many computers.

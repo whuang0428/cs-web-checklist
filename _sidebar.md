@@ -1,4 +1,5 @@
 * [Home](README.md)
+* [Coverage Status](coverage.md)
 
 * IGCSE 0478
   * [Chapter 1: Data Representation](ig-0478/chapter-1.md)
@@ -11,6 +12,8 @@
   * [Chapter 8: Programming](ig-0478/chapter-8.md)
   * [Chapter 9: Databases](ig-0478/chapter-9.md)
   * [Chapter 10: Boolean Logic](ig-0478/chapter-10.md)
+  * [Paper 2 Mixed Review — Set A](ig-0478/paper-2-review.md)
+  * [Paper 2 Mixed Review — Set B](ig-0478/paper-2-review-2.md)
 
 * AS 9618
   * [Chapter 1: Information Representation](as-9618/chapter-1.md)
@@ -25,6 +28,8 @@
   * [Chapter 10: Data Types and Structures](as-9618/chapter-10.md)
   * [Chapter 11: Programming](as-9618/chapter-11.md)
   * [Chapter 12: Software Development](as-9618/chapter-12.md)
+  * [Paper 2 Mixed Review — Set A](as-9618/paper-2-review.md)
+  * [Paper 2 Mixed Review — Set B](as-9618/paper-2-review-2.md)
 
 * A2 9618
   * [Chapter 13: Data Representation](a2-9618/chapter-13.md)
@@ -35,3 +40,6 @@
   * [Chapter 18: Artificial Intelligence](a2-9618/chapter-18.md)
   * [Chapter 19: Computational Thinking and Problem-Solving](a2-9618/chapter-19.md)
   * [Chapter 20: Further Programming](a2-9618/chapter-20.md)
+  * [Paper 3 Advanced Theory Review](a2-9618/paper-3-review.md)
+  * [Paper 4 Practical Review — Set A](a2-9618/paper-4-review.md)
+  * [Paper 4 Practical Review — Set B](a2-9618/paper-4-review-2.md)

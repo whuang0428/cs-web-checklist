@@ -1,5 +1,5 @@
 # AS 9618 Chapter 5: System Software
-## System Software｜Syllabus-Aligned Paper 1 Revision Sheet
+> **System Software｜Syllabus-Aligned Paper 1 Revision Sheet**
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns focus  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
@@ -11,7 +11,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 
 Chapter 5 不是单纯背定义的章节。2024–2025 的趋势更喜欢把 **Operating System / utility software / libraries / IDE / translators** 放进真实场景中问：
 
@@ -36,7 +36,7 @@ G --> H[IDE features]
 
 ---
 
-# 1. Recent Paper 1 Pattern Map
+## 1. Recent Paper 1 Pattern Map
 
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
@@ -56,9 +56,9 @@ G --> H[IDE features]
 
 ---
 
-# 2. Content Update Decision
+## 2. Content Update Decision
 
-## 2.1 Keep and Strengthen
+### 2.1 Keep and Strengthen
 
 | Kept content | Reason |
 | --- | --- |
@@ -71,7 +71,7 @@ G --> H[IDE features]
 | Java partial compilation and interpretation | Explicit syllabus point and easy 2–3 mark answer |
 | scenario wording | Mark schemes reward applied answers, not vague textbook phrases |
 
-## 2.2 Downweight
+### 2.2 Downweight
 
 | Downweighted content | Why |
 | --- | --- |
@@ -82,7 +82,7 @@ G --> H[IDE features]
 | low-level compiler phases | Lexical/syntax/semantic analysis detail is more than needed for AS Chapter 5 |
 | detailed JVM implementation | Only need source code → bytecode → virtual machine/interpreter idea |
 
-## 2.3 Delete / Avoid
+### 2.3 Delete / Avoid
 
 | Avoid | Reason |
 | --- | --- |
@@ -94,7 +94,7 @@ G --> H[IDE features]
 
 ---
 
-# 3. One-Page Mind Map
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -139,19 +139,19 @@ mindmap
 
 ---
 
-# 4. 5.1 Operating Systems
+## 4. 5.1 Operating Systems
 
-## 4.1 Why a computer system requires an OS
+### 4.1 Why a computer system requires an OS
 
-### Student-friendly explanation
+#### Student-friendly explanation
 
 Operating System 就像电脑的“总管”。没有 OS，普通用户和 application software 很难直接控制硬件。OS 提供一个环境，让程序可以运行，也帮用户和硬件之间进行沟通。
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > An operating system is needed to provide an interface between the user/application software and the hardware, to manage hardware and system resources, and to provide an environment in which applications can run.
 
-### Must-have keywords
+#### Must-have keywords
 
 + **interface**
 + **user**
@@ -162,7 +162,7 @@ Operating System 就像电脑的“总管”。没有 OS，普通用户和 appli
 + **environment**
 + **run applications**
 
-### Common weak answer
+#### Common weak answer
 
 > The OS controls the computer.
 
@@ -170,9 +170,9 @@ This is too vague. You need to say **what it controls / manages** and **why it i
 
 ---
 
-## 4.2 Key OS management tasks
+### 4.2 Key OS management tasks
 
-### Exam structure
+#### Exam structure
 
 If the question asks “Describe management tasks carried out by the OS”, use this structure:
 
@@ -185,20 +185,20 @@ C --> D[Apply to device / user / program]
 
 ---
 
-## 4.3 Memory management
+### 4.3 Memory management
 
-### Meaning
+#### Meaning
 
 Memory management 是 OS 管理 main memory / RAM 的过程。它决定哪些 programs 和 data 放进 RAM，分配多少 memory，并防止程序互相破坏数据。
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > The OS allocates memory to programs and data.  
 > It keeps track of which memory locations are in use.  
 > It prevents one process from accessing memory allocated to another process.  
 > It may use virtual memory when RAM is insufficient.
 
-### What to remember
+#### What to remember
 
 | Point | Student explanation |
 | --- | --- |
@@ -208,7 +208,7 @@ Memory management 是 OS 管理 main memory / RAM 的过程。它决定哪些 pr
 | Memory protection | 防止一个 program 改到另一个 program 的 memory |
 | Virtual memory | RAM 不够时，用 secondary storage 的一部分临时代替 |
 
-### Common mistake
+#### Common mistake
 
 | Mistake | Correction |
 | --- | --- |
@@ -218,17 +218,17 @@ Memory management 是 OS 管理 main memory / RAM 的过程。它决定哪些 pr
 
 ---
 
-## 4.4 File management
+### 4.4 File management
 
-### Meaning
+#### Meaning
 
 File management 是 OS 管理 files 和 folders/directories 的功能。2024 Paper 1 特别喜欢问这个。
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > The OS manages files and directories by allowing files to be created, named, opened, saved, copied, moved, deleted and organised. It keeps track of file locations and controls access permissions.
 
-### Keywords
+#### Keywords
 
 + **create**
 + **open**
@@ -241,7 +241,7 @@ File management 是 OS 管理 files 和 folders/directories 的功能。2024 Pap
 + **file location**
 + **permissions / access rights**
 
-### 2024-style answer bank
+#### 2024-style answer bank
 
 | Question wording | Strong answer |
 | --- | --- |
@@ -249,7 +249,7 @@ File management 是 OS 管理 files 和 folders/directories 的功能。2024 Pap
 | How does OS help user organise files? | Allows directories/folders and paths to group related files |
 | How can OS protect files? | Uses permissions/access rights so only authorised users can read/write/delete files |
 
-### Common mistake
+#### Common mistake
 
 > “File management backs up files.”
 
@@ -257,20 +257,20 @@ Backup is usually **utility software**, not the core meaning of file management.
 
 ---
 
-## 4.5 Security management
+### 4.5 Security management
 
-### Meaning
+#### Meaning
 
 Security management 是 OS 防止 unauthorised access，保护 data 和 resources。
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > The OS manages user accounts and passwords.  
 > It controls access rights / permissions.  
 > It prevents unauthorised access to files and resources.  
 > It may support security updates and system protection.
 
-### Examples
+#### Examples
 
 | Method | How it protects |
 | --- | --- |
@@ -280,7 +280,7 @@ Security management 是 OS 防止 unauthorised access，保护 data 和 resource
 | Automatic updates | Fixes security vulnerabilities |
 | Lock screen / timeout | Stops unauthorised access when user leaves device |
 
-### Weak vs strong answer
+#### Weak vs strong answer
 
 | Weak | Strong |
 | --- | --- |
@@ -288,20 +288,20 @@ Security management 是 OS 防止 unauthorised access，保护 data 和 resource
 
 ---
 
-## 4.6 Hardware / peripheral management
+### 4.6 Hardware / peripheral management
 
-### Meaning
+#### Meaning
 
 The OS manages input/output devices and peripherals. It allows communication between hardware and software.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > The OS uses device drivers to allow communication with peripheral devices.  
 > It sends data to output devices and receives data from input devices.  
 > It uses buffers to manage different data transfer speeds.  
 > It handles interrupts from devices.
 
-### Important terms
+#### Important terms
 
 | Term | Meaning |
 | --- | --- |
@@ -310,7 +310,7 @@ The OS manages input/output devices and peripherals. It allows communication bet
 | Interrupt | Signal sent to CPU/OS when a device needs attention |
 | Spooling | Storing print jobs in a queue before sending them to printer |
 
-### Scenario example
+#### Scenario example
 
 A printer is much slower than the CPU.
 
@@ -318,17 +318,17 @@ A printer is much slower than the CPU.
 
 ---
 
-## 4.7 Process management
+### 4.7 Process management
 
-### Meaning
+#### Meaning
 
 Process management 是 OS 管理正在运行的 programs/processes。它决定哪个 process 使用 CPU，什么时候运行，以及如何切换。
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > The OS schedules processes, allocates processor time, manages multitasking, changes process states and ensures that processes do not interfere with each other.
 
-### Key ideas
+#### Key ideas
 
 | Concept | Explanation |
 | --- | --- |
@@ -339,7 +339,7 @@ Process management 是 OS 管理正在运行的 programs/processes。它决定�
 | Process state | ready / running / blocked / waiting |
 | Context switching | Saving one process state and loading another |
 
-### Common mistake
+#### Common mistake
 
 > “Process management means writing programs.”
 
@@ -347,17 +347,17 @@ No. It means managing **running programs**.
 
 ---
 
-# 5. Utility Software
+## 5. Utility Software
 
-## 5.1 What is utility software?
+### 5.1 What is utility software?
 
 Utility software 是 system software 的一种，用来维护、保护、优化或管理 computer system。
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > Utility software is system software used to maintain, protect, analyse or improve the operation of a computer system.
 
-### Syllabus examples
+#### Syllabus examples
 
 + **disk formatter**
 + **virus checker**
@@ -368,22 +368,22 @@ Utility software 是 system software 的一种，用来维护、保护、优化�
 
 ---
 
-## 5.2 Back-up software
+### 5.2 Back-up software
 
-### Meaning
+#### Meaning
 
 Back-up software creates copies of files/data so they can be restored if the original is lost or damaged.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > It creates a copy of data/files.  
 > The copy can be used to restore data after accidental deletion, corruption, hardware failure or malware attack.
 
-### 2024-style answer
+#### 2024-style answer
 
 > Back-up software is needed because the file may be accidentally deleted, corrupted or lost due to hardware failure. A backup copy can be restored so the user does not need to recreate the file.
 
-### Common mistake
+#### Common mistake
 
 | Mistake | Correction |
 | --- | --- |
@@ -393,13 +393,13 @@ Back-up software creates copies of files/data so they can be restored if the ori
 
 ---
 
-## 5.3 File compression utility
+### 5.3 File compression utility
 
-### Meaning
+#### Meaning
 
 File compression software reduces file size.
 
-### Benefits
+#### Benefits
 
 | Benefit | Explanation |
 | --- | --- |
@@ -408,30 +408,30 @@ File compression software reduces file size.
 | Less bandwidth | Useful when emailing/transmitting files |
 | Easier to send as attachment | May fit within file size limit |
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > Compression reduces the file size, so the file needs less storage space and can be transmitted/downloaded faster using less bandwidth.
 
-### Exam warning
+#### Exam warning
 
 Do not say “compression makes the file better quality”. It usually reduces size, not improve quality.
 
 ---
 
-## 5.4 Virus checker / anti-virus utility
+### 5.4 Virus checker / anti-virus utility
 
-### Meaning
+#### Meaning
 
 A virus checker scans files/programs for malware.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > It scans files for known malware signatures.  
 > It can quarantine/delete infected files.  
 > It can prevent malware from running.  
 > It needs regular updates to detect new threats.
 
-### Common mistake
+#### Common mistake
 
 > “A virus checker guarantees no virus.”
 
@@ -439,30 +439,30 @@ No. It reduces risk but cannot guarantee perfect protection.
 
 ---
 
-## 5.5 Defragmentation software
+### 5.5 Defragmentation software
 
-### Meaning
+#### Meaning
 
 Defragmentation reorganises file fragments on a magnetic hard disk so parts of a file are stored contiguously.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > It rearranges file fragments so each file is stored in contiguous blocks.  
 > This reduces disk head movement and can improve access speed on an HDD.
 
-### Important limitation
+#### Important limitation
 
 Defragmentation is mainly relevant to **magnetic hard disks**, not SSDs.
 
 ---
 
-## 5.6 Disk formatter
+### 5.6 Disk formatter
 
-### Meaning
+#### Meaning
 
 Disk formatter prepares a storage device for use.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > It prepares the disk for storing files.  
 > It creates a file system / directory structure.  
@@ -470,13 +470,13 @@ Disk formatter prepares a storage device for use.
 
 ---
 
-## 5.7 Disk contents analysis / disk repair
+### 5.7 Disk contents analysis / disk repair
 
-### Meaning
+#### Meaning
 
 Disk analysis checks storage usage and errors. Disk repair attempts to fix file system errors or mark bad sectors.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > It analyses how storage space is used.  
 > It checks the disk for errors.  
@@ -484,17 +484,17 @@ Disk analysis checks storage usage and errors. Disk repair attempts to fix file 
 
 ---
 
-# 6. Program Libraries and DLL Files
+## 6. Program Libraries and DLL Files
 
-## 6.1 What is a program library?
+### 6.1 What is a program library?
 
 A program library is a collection of pre-written routines/modules that programmers can use in their own software.
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > A program library contains existing code/routines that can be reused by programmers when developing software.
 
-### Benefits to developer
+#### Benefits to developer
 
 | Benefit | Explanation |
 | --- | --- |
@@ -505,26 +505,26 @@ A program library is a collection of pre-written routines/modules that programme
 | Specialist functions | Developer can use complex functions written by experts |
 | Easier maintenance | Library routine can be updated instead of rewriting every program |
 
-### 2024-style answer
+#### 2024-style answer
 
 > Using library files saves development time because the student can reuse existing routines. The routines may already have been tested, so there are fewer errors. It also allows the program to be developed in modules.
 
 ---
 
-## 6.2 Dynamic Link Library (DLL)
+### 6.2 Dynamic Link Library (DLL)
 
-### Meaning
+#### Meaning
 
 A DLL is a library file that is linked/loaded when the program runs, not permanently copied into every executable.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > A DLL can be shared by several programs.  
 > It is loaded at run time when required.  
 > It reduces memory/storage use because the same library code is not copied into every program.  
 > Updating the DLL can update the shared routine for programs that use it.
 
-### Common mistake
+#### Common mistake
 
 | Mistake | Correction |
 | --- | --- |
@@ -534,48 +534,48 @@ A DLL is a library file that is linked/loaded when the program runs, not permane
 
 ---
 
-# 7. 5.2 Language Translators
+## 7. 5.2 Language Translators
 
-## 7.1 Why translators are needed
+### 7.1 Why translators are needed
 
 Computers execute machine code. Programmers usually write high-level language or assembly language. Translators convert code into a form the processor can execute.
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > A translator converts a program written in assembly language or a high-level language into machine code/object code so it can be executed by the processor.
 
 ---
 
-## 7.2 Assembler
+### 7.2 Assembler
 
-### Meaning
+#### Meaning
 
 Assembler translates assembly language into machine code.
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > An assembler translates assembly language instructions into machine code.
 
-### Exam warning
+#### Exam warning
 
 Do not say assembler translates Java/Python/C++ high-level code. It translates **assembly language**.
 
 ---
 
-## 7.3 Compiler
+### 7.3 Compiler
 
-### Meaning
+#### Meaning
 
 Compiler translates the whole high-level language program into object code / executable code before it is run.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > Translates the whole program before execution.  
 > Produces object code / executable code.  
 > The executable can be run without translating the source code again.  
 > Lists errors after compilation.
 
-### Benefits
+#### Benefits
 
 | Benefit | Explanation |
 | --- | --- |
@@ -584,7 +584,7 @@ Compiler translates the whole high-level language program into object code / exe
 | Errors can be listed together | Developer can fix many errors |
 | Program can be distributed as executable | End user does not need compiler/source |
 
-### Drawbacks
+#### Drawbacks
 
 | Drawback | Explanation |
 | --- | --- |
@@ -594,20 +594,20 @@ Compiler translates the whole high-level language program into object code / exe
 
 ---
 
-## 7.4 Interpreter
+### 7.4 Interpreter
 
-### Meaning
+#### Meaning
 
 Interpreter translates and executes high-level language instructions one statement at a time.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > Translates and executes one line/statement at a time.  
 > Stops when it finds an error.  
 > No separate executable/object code is produced.  
 > Useful during development and debugging.
 
-### Benefits
+#### Benefits
 
 | Benefit | Explanation |
 | --- | --- |
@@ -615,7 +615,7 @@ Interpreter translates and executes high-level language instructions one stateme
 | Good for testing | Program can be run quickly during development |
 | More portable if interpreter exists | Source can run on any system with suitable interpreter |
 
-### Drawbacks
+#### Drawbacks
 
 | Drawback | Explanation |
 | --- | --- |
@@ -625,7 +625,7 @@ Interpreter translates and executes high-level language instructions one stateme
 
 ---
 
-## 7.5 Compiler vs interpreter exam comparison
+### 7.5 Compiler vs interpreter exam comparison
 
 | Feature | Compiler | Interpreter |
 | --- | --- | --- |
@@ -636,15 +636,15 @@ Interpreter translates and executes high-level language instructions one stateme
 | Source code needed to run | Not usually | Usually yes |
 | Good for | Final distributed program | Development/testing/debugging |
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > A compiler is suitable for a finished program because it produces executable code that runs faster and can be distributed without source code. An interpreter is suitable during development because it executes code statement by statement and stops at the line where an error occurs, making debugging easier.
 
 ---
 
-## 7.6 Java partial compilation and interpretation
+### 7.6 Java partial compilation and interpretation
 
-### What AS students need
+#### What AS students need
 
 Java-style execution is often described as partly compiled and partly interpreted.
 
@@ -656,11 +656,11 @@ C --> D[Virtual Machine]
 D --> E[Interpreted / executed on target computer]
 ```
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > A Java program may be compiled into bytecode. The bytecode is then interpreted/executed by a virtual machine on the target computer.
 
-### Benefits
+#### Benefits
 
 | Benefit | Explanation |
 | --- | --- |
@@ -668,7 +668,7 @@ D --> E[Interpreted / executed on target computer]
 | Some speed benefit | Bytecode is partly translated before execution |
 | Easier distribution | Bytecode can be distributed instead of source code |
 
-### Common mistake
+#### Common mistake
 
 > “Java is only compiled” or “Java is only interpreted.”
 
@@ -676,48 +676,48 @@ For AS 9618, remember: **partially compiled and partially interpreted**.
 
 ---
 
-# 8. Integrated Development Environment (IDE)
+## 8. Integrated Development Environment (IDE)
 
-## 8.1 What is an IDE?
+### 8.1 What is an IDE?
 
 An IDE is software that provides tools to help programmers write, test, debug and maintain programs.
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > An IDE provides tools for coding, error detection, presentation and debugging when developing programs.
 
 ---
 
-## 8.2 Coding feature: context-sensitive prompts
+### 8.2 Coding feature: context-sensitive prompts
 
-### Meaning
+#### Meaning
 
 Context-sensitive prompts suggest possible commands, variables, functions or parameters depending on where the programmer is typing.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > Suggests valid keywords/functions/variables while code is being typed.  
 > Reduces typing errors and speeds up coding.
 
-### Example
+#### Example
 
 If a programmer types `print`, the IDE may suggest the correct function syntax or available variables.
 
 ---
 
-## 8.3 Initial error detection: dynamic syntax checks
+### 8.3 Initial error detection: dynamic syntax checks
 
-### Meaning
+#### Meaning
 
 Dynamic syntax checking checks code while it is being typed or before full execution.
 
-### Mark scheme phrases
+#### Mark scheme phrases
 
 > Highlights syntax errors as code is typed.  
 > Identifies missing brackets, incorrect keywords or invalid punctuation.  
 > Allows programmer to correct errors earlier.
 
-### Common mistake
+#### Common mistake
 
 > “Dynamic syntax check finds all logic errors.”
 
@@ -725,7 +725,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 8.4 Presentation features
+### 8.4 Presentation features
 
 2024 Paper 1 asked students to identify and describe presentation features. You need **feature + description**.
 
@@ -736,14 +736,14 @@ No. It mainly finds **syntax errors**, not all logical errors.
 | Line numbering | Displays line numbers to help locate code/errors |
 | Colour coding / syntax highlighting | Shows keywords, strings, comments in different colours/styles |
 
-### Mark scheme style
+#### Mark scheme style
 
 > Prettyprint formats code with indentation and spacing so the program is easier to read.  
 > Collapse code blocks hides sections of code so the programmer can focus on one part of the program.
 
 ---
 
-## 8.5 Debugging features
+### 8.5 Debugging features
 
 2024 Paper 1 also asked students to identify and describe debugging features.
 
@@ -755,12 +755,12 @@ No. It mainly finds **syntax errors**, not all logical errors.
 | Error report window | Displays error messages and sometimes line numbers |
 | Trace | Shows sequence of statements executed |
 
-### Mark scheme style
+#### Mark scheme style
 
 > A breakpoint stops the program at a chosen line so the programmer can inspect variable values at that point.  
 > A watch window displays the value of selected variables or expressions while the program is running.
 
-### Common mistake
+#### Common mistake
 
 | Mistake | Correction |
 | --- | --- |
@@ -771,9 +771,9 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-# 9. Mark Scheme Keywords
+## 9. Mark Scheme Keywords
 
-## 9.1 Operating System
+### 9.1 Operating System
 
 + **interface between user/application and hardware**
 + **manages resources**
@@ -789,7 +789,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **allocates processor time**
 + **schedules processes**
 
-## 9.2 Utility Software
+### 9.2 Utility Software
 
 + **maintain / protect / optimise**
 + **backup copy**
@@ -805,7 +805,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **defragment / contiguous blocks**
 + **disk formatter / file system**
 
-## 9.3 Program Libraries
+### 9.3 Program Libraries
 
 + **existing code**
 + **pre-written routines**
@@ -818,7 +818,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **loaded at runtime**
 + **shared by multiple programs**
 
-## 9.4 Language Translators
+### 9.4 Language Translators
 
 + **source code**
 + **object code**
@@ -833,7 +833,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **bytecode**
 + **virtual machine**
 
-## 9.5 IDE
+### 9.5 IDE
 
 + **context-sensitive prompts**
 + **dynamic syntax checks**
@@ -846,7 +846,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-# 10. Common Mistakes 易错表
+## 10. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -863,9 +863,9 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-# 11. Scenario Answer Bank
+## 11. Scenario Answer Bank
 
-## Scenario 1: Student writes a program in an IDE
+### Scenario 1: Student writes a program in an IDE
 
 **Question:** Explain how IDE debugging features help the student.
 
@@ -875,7 +875,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## Scenario 2: Program code is emailed as an attachment
+### Scenario 2: Program code is emailed as an attachment
 
 **Question:** Explain benefits of compressing the file.
 
@@ -885,7 +885,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## Scenario 3: Laptop stores important coursework
+### Scenario 3: Laptop stores important coursework
 
 **Question:** Explain need for backup software.
 
@@ -895,7 +895,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## Scenario 4: Team creates a program library
+### Scenario 4: Team creates a program library
 
 **Question:** Explain benefits to programmers.
 
@@ -905,7 +905,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## Scenario 5: Finished commercial program
+### Scenario 5: Finished commercial program
 
 **Question:** Justify compiler rather than interpreter.
 
@@ -915,7 +915,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## Scenario 6: Program is still being developed
+### Scenario 6: Program is still being developed
 
 **Question:** Justify interpreter rather than compiler.
 
@@ -925,7 +925,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-# 12. Process Diagram: OS + Application + Hardware
+## 12. Process Diagram: OS + Application + Hardware
 
 ```mermaid
 flowchart TD
@@ -944,7 +944,7 @@ OS --> HW[Hardware]
 
 ---
 
-# 13. Process Diagram: Translator Choice
+## 13. Process Diagram: Translator Choice
 
 ```mermaid
 flowchart TD
@@ -961,9 +961,9 @@ I --> J[Virtual machine interprets / executes bytecode]
 
 ---
 
-# 14. 10 Marks Quick Check
+## 14. 10 Marks Quick Check
 
-## Questions
+### Questions
 
 1. State two reasons why a computer system requires an OS. **[2]**
 2. Give two file management tasks carried out by an OS. **[2]**
@@ -972,7 +972,7 @@ I --> J[Virtual machine interprets / executes bytecode]
 5. Identify one presentation feature of an IDE and describe it. **[2]**
 6. State the purpose of an assembler. **[1]**
 
-## Mark Scheme
+### Mark Scheme
 
 1. Any two:
    + provides interface between user/application and hardware
@@ -994,49 +994,49 @@ I --> J[Virtual machine interprets / executes bytecode]
 
 ---
 
-# 15. 20 Marks Exam-Style Practice
+## 15. 20 Marks Exam-Style Practice
 
-## Question 1: Operating System and Utility Software **[8]**
+### Question 1: Operating System and Utility Software **[8]**
 
 A student uses a laptop to write a program. The laptop has an Operating System and several utility programs.
 
-### (a) Explain why the laptop requires an Operating System. **[3]**
+#### (a) Explain why the laptop requires an Operating System. **[3]**
 
-### (b) Describe two file management tasks carried out by the Operating System. **[2]**
+#### (b) Describe two file management tasks carried out by the Operating System. **[2]**
 
-### (c) The student uses backup software. Explain why backup software is needed. **[3]**
+#### (c) The student uses backup software. Explain why backup software is needed. **[3]**
 
 ---
 
-## Question 2: Program Libraries and IDE **[7]**
+### Question 2: Program Libraries and IDE **[7]**
 
 A team of programmers is developing a large program using an IDE. They decide to create and use program libraries.
 
-### (a) Explain three benefits of using program libraries. **[3]**
+#### (a) Explain three benefits of using program libraries. **[3]**
 
-### (b) Identify and describe one coding feature of an IDE. **[2]**
+#### (b) Identify and describe one coding feature of an IDE. **[2]**
 
-### (c) Identify and describe one debugging feature of an IDE. **[2]**
+#### (c) Identify and describe one debugging feature of an IDE. **[2]**
 
 ---
 
-## Question 3: Language Translators **[5]**
+### Question 3: Language Translators **[5]**
 
 A programmer writes a high-level language program.
 
-### (a) Explain one benefit of using a compiler instead of an interpreter for the finished program. **[2]**
+#### (a) Explain one benefit of using a compiler instead of an interpreter for the finished program. **[2]**
 
-### (b) Explain one benefit of using an interpreter during development. **[2]**
+#### (b) Explain one benefit of using an interpreter during development. **[2]**
 
-### (c) State what is meant by Java being partially compiled and partially interpreted. **[1]**
+#### (c) State what is meant by Java being partially compiled and partially interpreted. **[1]**
 
 ---
 
-# 16. 20 Marks Practice Mark Scheme
+## 16. 20 Marks Practice Mark Scheme
 
-## Question 1 Mark Scheme **[8]**
+### Question 1 Mark Scheme **[8]**
 
-### (a) OS purpose **[3]**
+#### (a) OS purpose **[3]**
 
 Award 1 mark each:
 
@@ -1046,7 +1046,7 @@ Award 1 mark each:
 + hides hardware complexity from user/programs
 + handles input/output/peripherals
 
-### (b) File management **[2]**
+#### (b) File management **[2]**
 
 Award 1 mark each:
 
@@ -1055,7 +1055,7 @@ Award 1 mark each:
 + keep track of file locations / paths
 + manage file permissions/access rights
 
-### (c) Backup software **[3]**
+#### (c) Backup software **[3]**
 
 Award 1 mark each:
 
@@ -1065,9 +1065,9 @@ Award 1 mark each:
 
 ---
 
-## Question 2 Mark Scheme **[7]**
+### Question 2 Mark Scheme **[7]**
 
-### (a) Program libraries **[3]**
+#### (a) Program libraries **[3]**
 
 Award 1 mark each:
 
@@ -1078,14 +1078,14 @@ Award 1 mark each:
 + allows specialist routines to be used
 + easier maintenance/update of shared code
 
-### (b) IDE coding feature **[2]**
+#### (b) IDE coding feature **[2]**
 
 1 mark for feature, 1 mark for description:
 
 + context-sensitive prompts suggest valid commands/variables/functions depending on code context
 + auto-completion completes keywords/identifiers to reduce typing errors
 
-### (c) IDE debugging feature **[2]**
+#### (c) IDE debugging feature **[2]**
 
 1 mark for feature, 1 mark for description:
 
@@ -1096,9 +1096,9 @@ Award 1 mark each:
 
 ---
 
-## Question 3 Mark Scheme **[5]**
+### Question 3 Mark Scheme **[5]**
 
-### (a) Compiler benefit **[2]**
+#### (a) Compiler benefit **[2]**
 
 Award 1 mark each:
 
@@ -1107,7 +1107,7 @@ Award 1 mark each:
 + source code does not need to be distributed
 + suitable for final distribution
 
-### (b) Interpreter benefit **[2]**
+#### (b) Interpreter benefit **[2]**
 
 Award 1 mark each:
 
@@ -1116,7 +1116,7 @@ Award 1 mark each:
 + easier to debug/test during development
 + no need to compile whole program before testing
 
-### (c) Java partial compilation/interpreting **[1]**
+#### (c) Java partial compilation/interpreting **[1]**
 
 + Source code is compiled into bytecode, then bytecode is interpreted/executed by a virtual machine.
 

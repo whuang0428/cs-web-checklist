@@ -1,5 +1,5 @@
-# A2 9618 Computer Science — Chapter 15 Updated Notes
-## Hardware and Virtual Machines｜Syllabus-Aligned Paper 3 Revision Sheet
+# A2 9618 Chapter 15: Hardware and Virtual Machines
+> **Hardware and Virtual Machines｜Syllabus-Aligned Paper 3 Revision Sheet**
 > **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
 > **Chapter:** 15 Hardware and Virtual Machines  
@@ -9,7 +9,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 
 Chapter 15 看起来内容很多，但考试不是平均考所有内容。2024–2025 Paper 3 的趋势很明显：
 
@@ -33,7 +33,7 @@ F --> G[K-map<br/>grouping / simplified expression]
 
 ---
 
-# 1. Recent Paper 3 Pattern Map
+## 1. Recent Paper 3 Pattern Map
 
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
@@ -52,9 +52,9 @@ F --> G[K-map<br/>grouping / simplified expression]
 
 ---
 
-# 2. Content Update Decision
+## 2. Content Update Decision
 
-## 2.1 Keep and Strengthen
+### 2.1 Keep and Strengthen
 
 | Kept content | Reason |
 | --- | --- |
@@ -71,7 +71,7 @@ F --> G[K-map<br/>grouping / simplified expression]
 | SR/JK flip-flops | syllabus explicit; useful for data storage questions |
 | half adder / full adder | syllabus explicit; linked to truth tables and logic circuits |
 
-## 2.2 Downweight
+### 2.2 Downweight
 
 | Downweighted content | Why |
 | --- | --- |
@@ -82,7 +82,7 @@ F --> G[K-map<br/>grouping / simplified expression]
 | drawing perfect circuit diagrams for every expression | Paper 3 more often rewards truth table, expression and simplification |
 | commercial virtualisation product names | brand names are not awarded |
 
-## 2.3 Delete / Avoid
+### 2.3 Delete / Avoid
 
 | Avoid | Reason |
 | --- | --- |
@@ -95,7 +95,7 @@ F --> G[K-map<br/>grouping / simplified expression]
 
 ---
 
-# 3. One-Page Mind Map
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -147,21 +147,21 @@ mindmap
 
 ---
 
-# 4. 15.1 Processors, Parallel Processing and Virtual Machines
+## 4. 15.1 Processors, Parallel Processing and Virtual Machines
 
-## 4.1 RISC processors
+### 4.1 RISC processors
 
-### Core idea
+#### Core idea
 RISC means **Reduced Instruction Set Computer**.
 
 RISC processor 的设计思想是：  
 用较少、较简单、格式较固定的指令，让 CPU 更容易快速执行和流水线处理。
 
-### Mark scheme answer
+#### Mark scheme answer
 > A RISC processor uses a relatively small number of simple instructions, often fixed length and fixed format. Instructions usually use a single cycle, make use of general-purpose registers, and pipelining is easier to apply.
 >
 
-### Must-have keywords
+#### Must-have keywords
 + **Reduced Instruction Set Computer**
 + **few instructions**
 + **simple instructions**
@@ -171,7 +171,7 @@ RISC processor 的设计思想是：
 + **pipelining**
 + **hard-wired control unit**
 
-### 2024–2025 style features
+#### 2024–2025 style features
 | Feature | Explanation |
 | --- | --- |
 | Few instructions | instruction set is reduced |
@@ -182,7 +182,7 @@ RISC processor 的设计思想是：
 | Easier pipelining | regular instructions fit pipeline stages better |
 | Software emphasis | compiler may do more work |
 
-### Common weak answer
+#### Common weak answer
 > RISC is faster and simpler.
 >
 
@@ -190,18 +190,18 @@ This is too vague. You need features such as **fixed length instructions**, **fe
 
 ---
 
-## 4.2 CISC processors
+### 4.2 CISC processors
 
 CISC means **Complex Instruction Set Computer**.
 
 CISC processor 的设计思想是：  
 一条指令可以完成更复杂的操作，因此程序可能需要更少的指令，但 CPU 解码和执行会更复杂。
 
-### Mark scheme answer
+#### Mark scheme answer
 > A CISC processor has a larger instruction set with more complex instructions. Instructions may be variable length and may take several clock cycles to execute. The design emphasis is more on hardware.
 >
 
-### RISC vs CISC comparison
+#### RISC vs CISC comparison
 
 | Area | RISC | CISC |
 | --- | --- | --- |
@@ -215,15 +215,15 @@ CISC processor 的设计思想是：
 | Design emphasis | software / compiler | hardware |
 | Program length | may need more instructions | may need fewer instructions |
 
-### Exam sentence
+#### Exam sentence
 > RISC uses simpler fixed-length instructions, so pipelining is easier. CISC uses more complex instructions that may take several cycles, so decoding and pipelining are more complex.
 >
 
 ---
 
-## 4.3 Interrupt handling on RISC and CISC processors
+### 4.3 Interrupt handling on RISC and CISC processors
 
-### Basic interrupt sequence
+#### Basic interrupt sequence
 Interrupt handling 的核心不是“CPU stop”，而是：
 
 1. interrupt is detected  
@@ -233,18 +233,18 @@ Interrupt handling 的核心不是“CPU stop”，而是：
 5. saved register values are restored  
 6. original program continues
 
-### Mark scheme answer
+#### Mark scheme answer
 > When an interrupt is detected, the current program is temporarily stopped and the status of registers / program counter is stored on the stack. The Interrupt Service Routine is executed. After the interrupt has been serviced, the saved register values are restored and the original program continues.
 >
 
-### Pipeline issue
+#### Pipeline issue
 Pipelining 会让 interrupt handling 更复杂，因为 pipeline 里可能已经有多条 instruction 正在不同 stage 中执行。
 
-### 2024-style phrase
+#### 2024-style phrase
 > There may be a number of instructions still in the pipeline when the interrupt is received, so some instructions may need to be discarded or the processor must restart from the correct next instruction after the ISR.
 >
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | saying "CPU deletes the current program" | current state is saved, not deleted |
@@ -254,9 +254,9 @@ Pipelining 会让 interrupt handling 更复杂，因为 pipeline 里可能已经
 
 ---
 
-## 4.4 Pipelining in RISC processors
+### 4.4 Pipelining in RISC processors
 
-### Core idea
+#### Core idea
 Pipelining means different instructions can be at different stages of execution at the same time.
 
 Example stages:
@@ -269,7 +269,7 @@ C --> D[Memory access]
 D --> E[Write back]
 ```
 
-### Why RISC works well with pipelining
+#### Why RISC works well with pipelining
 RISC instructions are usually:
 
 + simple
@@ -279,25 +279,25 @@ RISC instructions are usually:
 
 This makes pipeline stages more regular.
 
-### Mark scheme answer
+#### Mark scheme answer
 > Pipelining allows several instructions to be processed at the same time, with each instruction at a different stage. RISC processors are suitable for pipelining because instructions are simple and fixed length.
 >
 
-### Benefits
+#### Benefits
 + improves instruction throughput
 + less idle time in CPU stages
 + multiple instructions are in progress at once
 
-### Limitation
+#### Limitation
 + branch / jump instructions may disrupt pipeline
 + interrupts can cause pipeline flushing
 + dependencies between instructions can create hazards
 
 ---
 
-# 5. Parallel Processing Architectures
+## 5. Parallel Processing Architectures
 
-## 5.1 Flynn's four architectures
+### 5.1 Flynn's four architectures
 
 The four basic computer architectures are:
 
@@ -311,19 +311,19 @@ The key exam skill is:
 
 ---
 
-## 5.2 SISD
+### 5.2 SISD
 
-### Full name
+#### Full name
 **Single Instruction, Single Data**
 
-### Mark scheme answer
+#### Mark scheme answer
 > SISD has one processor executing one instruction stream on one data stream. Instructions are executed sequentially.
 >
 
-### Example
+#### Example
 A traditional single-core computer running one instruction at a time.
 
-### Keywords
+#### Keywords
 + **single instruction**
 + **single data**
 + **one processor**
@@ -331,25 +331,25 @@ A traditional single-core computer running one instruction at a time.
 
 ---
 
-## 5.3 SIMD
+### 5.3 SIMD
 
-### Full name
+#### Full name
 **Single Instruction, Multiple Data**
 
-### Mark scheme answer
+#### Mark scheme answer
 > SIMD performs the same instruction on multiple data items at the same time.
 >
 
-### Example
+#### Example
 Applying the same image filter to many pixels at once.
 
-### Keywords
+#### Keywords
 + **same instruction**
 + **multiple data streams**
 + **simultaneously**
 + **parallel processing**
 
-### Common mistake
+#### Common mistake
 > SIMD means many instructions happen at once.
 >
 
@@ -357,42 +357,42 @@ Wrong. SIMD = one instruction, many data items.
 
 ---
 
-## 5.4 MISD
+### 5.4 MISD
 
-### Full name
+#### Full name
 **Multiple Instruction, Single Data**
 
-### Mark scheme answer
+#### Mark scheme answer
 > MISD performs different instructions on the same data stream.
 >
 
-### Example
+#### Example
 A fault-tolerant system where the same data is processed by different processors using different operations.
 
-### Keywords
+#### Keywords
 + **multiple instructions**
 + **single data stream**
 + **same data**
 + **independent processors**
 
-### Exam warning
+#### Exam warning
 MISD is less common in real systems, but it is still syllabus content.
 
 ---
 
-## 5.5 MIMD
+### 5.5 MIMD
 
-### Full name
+#### Full name
 **Multiple Instruction, Multiple Data**
 
-### Mark scheme answer
+#### Mark scheme answer
 > MIMD has multiple processors that can execute different instructions on different data streams independently or asynchronously.
 >
 
-### Example
+#### Example
 A multi-core computer running different tasks on different cores.
 
-### Keywords
+#### Keywords
 + **multiple instructions**
 + **multiple data streams**
 + **many processors**
@@ -400,7 +400,7 @@ A multi-core computer running different tasks on different cores.
 
 ---
 
-## 5.6 Quick comparison table
+### 5.6 Quick comparison table
 
 | Architecture | Instructions | Data | Simple exam phrase |
 | --- | --- | --- | --- |
@@ -411,16 +411,16 @@ A multi-core computer running different tasks on different cores.
 
 ---
 
-# 6. Massively Parallel Computers
+## 6. Massively Parallel Computers
 
-## 6.1 Definition
+### 6.1 Definition
 A massively parallel computer uses a large number of processors or separate computers to perform coordinated computations at the same time.
 
-### Mark scheme answer
+#### Mark scheme answer
 > A massively parallel computer contains a large number of processors / computers connected together, simultaneously performing coordinated computations and communicating using messages.
 >
 
-### Must-have keywords
+#### Must-have keywords
 + **large number of processors**
 + **separate computers connected together**
 + **simultaneously**
@@ -428,7 +428,7 @@ A massively parallel computer uses a large number of processors or separate comp
 + **message interface**
 + **network infrastructure**
 
-### Uses
+#### Uses
 | Use | Why massively parallel is suitable |
 | --- | --- |
 | weather forecasting | huge number of repeated calculations |
@@ -437,7 +437,7 @@ A massively parallel computer uses a large number of processors or separate comp
 | image/video rendering | independent frames/pixels can be processed |
 | cryptography research | many possible keys can be tested |
 
-### Common mistake
+#### Common mistake
 > It is just a very fast computer.
 >
 
@@ -445,13 +445,13 @@ Too vague. You must mention **many processors** and **parallel coordinated proce
 
 ---
 
-# 7. Virtual Machines
+## 7. Virtual Machines
 
-## 7.1 Concept of a virtual machine
+### 7.1 Concept of a virtual machine
 
 A **virtual machine (VM)** is a software-based emulation of a computer system. It runs on a physical computer but behaves like a separate computer.
 
-### Key terms
+#### Key terms
 | Term | Meaning |
 | --- | --- |
 | Host machine | physical computer that provides resources |
@@ -459,13 +459,13 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 | Hypervisor | software that creates and manages VMs |
 | Emulation / virtualisation | making software behave like hardware |
 
-### Mark scheme answer
+#### Mark scheme answer
 > A virtual machine is a software implementation / emulation of a computer system that runs on a host computer and allows a guest operating system or program to run as if it had its own hardware.
 >
 
 ---
 
-## 7.2 Roles / examples of virtual machines
+### 7.2 Roles / examples of virtual machines
 
 | Role | Example |
 | --- | --- |
@@ -476,13 +476,13 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 | cloud computing | cloud providers allocate virtual servers |
 | education | students practise OS/network setup safely |
 
-### Scenario answer
+#### Scenario answer
 > A VM allows the company to run several virtual servers on one physical server, reducing hardware cost and making better use of resources.
 >
 
 ---
 
-## 7.3 Benefits of virtual machines
+### 7.3 Benefits of virtual machines
 
 | Benefit | Explanation |
 | --- | --- |
@@ -494,13 +494,13 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 | Legacy support | old OS/software can still run |
 | Easy backup | VM image can be snapshotted or restored |
 
-### Mark scheme answer
+#### Mark scheme answer
 > Virtual machines allow several operating systems or servers to run on one physical machine. They provide isolation, make testing safer, reduce hardware costs, and allow VM images to be backed up or moved easily.
 >
 
 ---
 
-## 7.4 Limitations of virtual machines
+### 7.4 Limitations of virtual machines
 
 | Limitation | Explanation |
 | --- | --- |
@@ -511,15 +511,15 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 | Management complexity | many VMs can be hard to maintain |
 | Licensing cost | some OS/software licences may still be needed |
 
-### Mark scheme answer
+#### Mark scheme answer
 > Virtual machines can reduce performance because resources are shared and the hypervisor adds overhead. If the host machine fails, all virtual machines on that host may be affected.
 >
 
 ---
 
-# 8. 15.2 Boolean Algebra and Logic Circuits
+## 8. 15.2 Boolean Algebra and Logic Circuits
 
-## 8.1 Boolean algebra notation
+### 8.1 Boolean algebra notation
 
 | Symbol | Meaning | Logic gate |
 | --- | --- | --- |
@@ -539,13 +539,13 @@ means:
 (A AND B) OR C
 ```
 
-### Common mistake
+#### Common mistake
 `+` does not mean arithmetic addition in Boolean algebra.  
 It means **OR**.
 
 ---
 
-## 8.2 Core Boolean laws
+### 8.2 Core Boolean laws
 
 | Law | AND form | OR form |
 | --- | --- | --- |
@@ -558,7 +558,7 @@ It means **OR**.
 | Absorption | `A.(A + B) = A` | `A + A.B = A` |
 | Double complement | `(A')' = A` | — |
 
-### 2025 trend
+#### 2025 trend
 2025 mark schemes reward not only the final answer but also correct application of laws such as:
 
 + **De Morgan's laws**
@@ -570,9 +570,9 @@ So when showing working, write the law name if possible.
 
 ---
 
-## 8.3 De Morgan's laws
+### 8.3 De Morgan's laws
 
-### Law 1
+#### Law 1
 ```text
 (A.B)' = A' + B'
 ```
@@ -581,7 +581,7 @@ Meaning:
 
 > NOT(A AND B) = NOT A OR NOT B
 
-### Law 2
+#### Law 2
 ```text
 (A + B)' = A'.B'
 ```
@@ -590,21 +590,21 @@ Meaning:
 
 > NOT(A OR B) = NOT A AND NOT B
 
-### Exam method
+#### Exam method
 When applying De Morgan:
 
 1. change AND ↔ OR  
 2. complement each term  
 3. remove the outer NOT
 
-### Common mistake
+#### Common mistake
 | Wrong | Why wrong |
 | --- | --- |
 | `(A + B)' = A' + B'` | forgot to change OR to AND |
 | `(A.B)' = A'.B` | forgot to complement every term |
 | `(A + B.C)' = A'.B' + C'` | must treat grouped expression carefully |
 
-### Example
+#### Example
 Simplify:
 
 ```text
@@ -622,9 +622,9 @@ Step:
 
 ---
 
-# 9. Truth Tables
+## 9. Truth Tables
 
-## 9.1 Truth table method
+### 9.1 Truth table method
 
 For Paper 3, when a circuit or expression is given, do not jump straight to the answer. Make working columns.
 
@@ -647,7 +647,7 @@ Truth table:
 | 1 | 1 | 0 | 1 | 1 | 1 |
 | 1 | 1 | 1 | 1 | 0 | 0 |
 
-### Mark scheme advice
+#### Mark scheme advice
 2024–2025 mark schemes often award marks for:
 
 + intermediate working columns
@@ -659,18 +659,18 @@ So always show working columns.
 
 ---
 
-## 9.2 Sum-of-products
+### 9.2 Sum-of-products
 
 A **sum-of-products** expression is made by OR-ing together product terms.
 
-### Method
+#### Method
 1. Find rows where output = 1  
 2. For each row, write one AND term  
 3. If input is 1, write normal variable  
 4. If input is 0, write complemented variable  
 5. OR all terms together
 
-### Example
+#### Example
 | A | B | C | Z |
 | --- | --- | --- | --- |
 | 0 | 0 | 0 | 0 |
@@ -700,7 +700,7 @@ This simplifies to:
 Z = C
 ```
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | using rows where output = 0 | sum-of-products uses rows where output = 1 |
@@ -710,9 +710,9 @@ Z = C
 
 ---
 
-# 10. Half Adders and Full Adders
+## 10. Half Adders and Full Adders
 
-## 10.1 Half adder
+### 10.1 Half adder
 
 A half adder adds two one-bit inputs.
 
@@ -726,7 +726,7 @@ Outputs:
 + `S` = Sum
 + `C` = Carry
 
-### Truth table
+#### Truth table
 | A | B | Sum S | Carry C |
 | --- | --- | --- | --- |
 | 0 | 0 | 0 | 0 |
@@ -734,19 +734,19 @@ Outputs:
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
 
-### Expressions
+#### Expressions
 ```text
 S = A XOR B
 C = A.B
 ```
 
-### Exam phrase
+#### Exam phrase
 > A half adder adds two binary bits and produces a sum bit and a carry bit.
 >
 
 ---
 
-## 10.2 Full adder
+### 10.2 Full adder
 
 A full adder adds three one-bit inputs:
 
@@ -759,7 +759,7 @@ Outputs:
 + `S`
 + `Cout`
 
-### Truth table
+#### Truth table
 | A | B | Cin | Sum S | Carry Cout |
 | --- | --- | --- | --- | --- |
 | 0 | 0 | 0 | 0 | 0 |
@@ -771,29 +771,29 @@ Outputs:
 | 1 | 1 | 0 | 0 | 1 |
 | 1 | 1 | 1 | 1 | 1 |
 
-### Expressions
+#### Expressions
 ```text
 S = A XOR B XOR Cin
 Cout = A.B + A.Cin + B.Cin
 ```
 
-### Exam phrase
+#### Exam phrase
 > A full adder adds two input bits and an incoming carry, producing a sum output and an outgoing carry.
 >
 
 ---
 
-# 11. Flip-Flops
+## 11. Flip-Flops
 
-## 11.1 What is a flip-flop?
+### 11.1 What is a flip-flop?
 
 A flip-flop is a logic circuit that can store one bit of data.
 
-### Mark scheme answer
+#### Mark scheme answer
 > A flip-flop is a bistable circuit that can store one bit. Its output remains in the same state until the input causes it to change.
 >
 
-### Must-have keywords
+#### Must-have keywords
 + **bistable**
 + **stores one bit**
 + **data storage element**
@@ -802,14 +802,14 @@ A flip-flop is a logic circuit that can store one bit of data.
 
 ---
 
-## 11.2 SR flip-flop
+### 11.2 SR flip-flop
 
 SR means:
 
 + `S` = Set
 + `R` = Reset
 
-### Basic SR truth table
+#### Basic SR truth table
 | S | R | Q next | Meaning |
 | --- | --- | --- | --- |
 | 0 | 0 | Q | no change |
@@ -817,16 +817,16 @@ SR means:
 | 1 | 0 | 1 | set |
 | 1 | 1 | invalid / not allowed | undefined |
 
-### Key point
+#### Key point
 SR flip-flop can store a bit because when `S = 0` and `R = 0`, the output stays the same.
 
 ---
 
-## 11.3 JK flip-flop
+### 11.3 JK flip-flop
 
 JK flip-flop solves the invalid state problem of SR.
 
-### JK truth table
+#### JK truth table
 | J | K | Q next | Meaning |
 | --- | --- | --- | --- |
 | 0 | 0 | Q | no change |
@@ -834,23 +834,23 @@ JK flip-flop solves the invalid state problem of SR.
 | 1 | 0 | 1 | set |
 | 1 | 1 | Q' | toggle |
 
-### Exam phrase
+#### Exam phrase
 > A JK flip-flop has no invalid state; when both inputs are 1, the output toggles.
 >
 
 ---
 
-# 12. Karnaugh Maps
+## 12. Karnaugh Maps
 
-## 12.1 What is a K-map?
+### 12.1 What is a K-map?
 
 A Karnaugh map is a visual method for simplifying Boolean expressions.
 
-### Mark scheme answer
+#### Mark scheme answer
 > A Karnaugh map represents a truth table in a grid so adjacent 1s can be grouped to produce a simplified Boolean expression.
 >
 
-### Benefit
+#### Benefit
 + reduces errors compared with long Boolean algebra
 + makes simplification easier
 + visually groups adjacent minterms
@@ -858,7 +858,7 @@ A Karnaugh map is a visual method for simplifying Boolean expressions.
 
 ---
 
-## 12.2 K-map order
+### 12.2 K-map order
 
 For two variables:
 
@@ -883,7 +883,7 @@ For four variables:
 | 11 |  |  |  |  |
 | 10 |  |  |  |  |
 
-### Important
+#### Important
 K-map order is **Gray code**:
 
 ```text
@@ -898,7 +898,7 @@ Not:
 
 ---
 
-## 12.3 Grouping rules
+### 12.3 Grouping rules
 
 | Rule | Explanation |
 | --- | --- |
@@ -909,7 +909,7 @@ Not:
 | wrap-around is allowed | left/right and top/bottom edges are adjacent |
 | no groups of 3, 5, 6 | not powers of 2 |
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | grouping three 1s | group 2 or 4, not 3 |
@@ -920,7 +920,7 @@ Not:
 
 ---
 
-## 12.4 Reading a group
+### 12.4 Reading a group
 
 When reading a group:
 
@@ -948,9 +948,9 @@ Z = C
 
 ---
 
-# 13. Mark Scheme Keywords
+## 13. Mark Scheme Keywords
 
-## 13.1 RISC / CISC
+### 13.1 RISC / CISC
 + **Reduced Instruction Set Computer**
 + **Complex Instruction Set Computer**
 + **few instructions**
@@ -963,7 +963,7 @@ Z = C
 + **variable length instructions**
 + **several clock cycles**
 
-## 13.2 Interrupts
+### 13.2 Interrupts
 + **interrupt detected**
 + **fetch-execute cycle**
 + **temporarily stopped**
@@ -974,7 +974,7 @@ Z = C
 + **registers restored**
 + **pipeline flushed / discarded instructions**
 
-## 13.3 Parallel processing
+### 13.3 Parallel processing
 + **SISD**
 + **SIMD**
 + **MISD**
@@ -987,7 +987,7 @@ Z = C
 + **coordinated computations**
 + **message interface**
 
-## 13.4 Virtual machines
+### 13.4 Virtual machines
 + **software emulation**
 + **host**
 + **guest**
@@ -998,7 +998,7 @@ Z = C
 + **performance overhead**
 + **single point of failure**
 
-## 13.5 Boolean / K-map
+### 13.5 Boolean / K-map
 + **truth table**
 + **intermediate columns**
 + **sum-of-products**
@@ -1014,7 +1014,7 @@ Z = C
 + **wrap-around**
 + **simplified expression**
 
-## 13.6 Flip-flops and adders
+### 13.6 Flip-flops and adders
 + **half adder**
 + **full adder**
 + **sum**
@@ -1028,7 +1028,7 @@ Z = C
 
 ---
 
-# 14. Common Mistakes 易错表
+## 14. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -1047,48 +1047,48 @@ Z = C
 
 ---
 
-# 15. Scenario Answer Bank
+## 15. Scenario Answer Bank
 
-## Scenario 1: A CPU designer chooses RISC for a new embedded processor.
-### Answer template
+### Scenario 1: A CPU designer chooses RISC for a new embedded processor.
+#### Answer template
 > RISC is suitable because it uses fewer and simpler instructions. These instructions are often fixed length and can be executed in a single cycle, making pipelining easier. This can improve instruction throughput and reduce hardware complexity.
 >
 
-## Scenario 2: A graphics program applies the same filter to many pixels.
-### Answer template
+### Scenario 2: A graphics program applies the same filter to many pixels.
+#### Answer template
 > SIMD is suitable because the same instruction can be applied to multiple data items at the same time. Each pixel is a separate data item, so the operation can be parallelised.
 >
 
-## Scenario 3: A cloud provider hosts many servers on one physical machine.
-### Answer template
+### Scenario 3: A cloud provider hosts many servers on one physical machine.
+#### Answer template
 > Virtual machines are suitable because several guest operating systems can run on one host machine. This reduces hardware cost, allows resources to be shared, and provides isolation between servers.
 >
 
-## Scenario 4: A student is asked why a VM may be slower than a physical machine.
-### Answer template
+### Scenario 4: A student is asked why a VM may be slower than a physical machine.
+#### Answer template
 > A VM may be slower because the hypervisor adds overhead and the VM shares CPU, memory and storage with other VMs on the same host.
 >
 
-## Scenario 5: A truth table has many output 1s.
-### Answer template
+### Scenario 5: A truth table has many output 1s.
+#### Answer template
 > A K-map can be used to group adjacent 1s and produce a simplified Boolean expression. This is faster and less error-prone than simplifying a long sum-of-products expression manually.
 >
 
-## Scenario 6: A circuit must store one binary digit.
-### Answer template
+### Scenario 6: A circuit must store one binary digit.
+#### Answer template
 > A flip-flop can be used because it is a bistable circuit that stores one bit. Its output remains in the same state until the inputs cause it to change.
 >
 
-## Scenario 7: An interrupt occurs during pipelining.
-### Answer template
+### Scenario 7: An interrupt occurs during pipelining.
+#### Answer template
 > Interrupt handling is more complex because several instructions may already be in different pipeline stages. Some instructions may need to be discarded, the current state saved, the ISR executed, and the processor restarted from the correct instruction.
 >
 
 ---
 
-# 16. Mermaid Process Diagrams
+## 16. Mermaid Process Diagrams
 
-## 16.1 Interrupt handling process
+### 16.1 Interrupt handling process
 
 ```mermaid
 flowchart TD
@@ -1099,7 +1099,7 @@ D --> E[Restore saved state]
 E --> F[Continue original program]
 ```
 
-## 16.2 VM structure
+### 16.2 VM structure
 
 ```mermaid
 flowchart TD
@@ -1110,7 +1110,7 @@ C --> E[Guest VM 2<br/>OS + Apps]
 C --> F[Guest VM 3<br/>OS + Apps]
 ```
 
-## 16.3 K-map simplification process
+### 16.3 K-map simplification process
 
 ```mermaid
 flowchart LR
@@ -1123,9 +1123,9 @@ E --> F[Write simplified expression]
 
 ---
 
-# 17. 10 Marks Quick Check
+## 17. 10 Marks Quick Check
 
-## Questions
+### Questions
 
 1. State two features of a RISC processor. `[2]`  
 2. Give one difference between RISC and CISC. `[1]`  
@@ -1136,7 +1136,7 @@ E --> F[Write simplified expression]
 7. Write De Morgan's law for `(A + B)'`. `[1]`  
 8. In a K-map, why is the order `00, 01, 11, 10` used? `[1]`
 
-## Answers
+### Answers
 
 1. Any two: few/simple instructions; fixed length instructions; single-cycle instructions; many registers; easier pipelining.  
 2. RISC has fewer/simple instructions, while CISC has more/complex instructions.  
@@ -1149,14 +1149,14 @@ E --> F[Write simplified expression]
 
 ---
 
-# 18. 20 Marks Exam-Style Practice with Mark Scheme
+## 18. 20 Marks Exam-Style Practice with Mark Scheme
 
-## Question 1: RISC, interrupts and pipelining `[6]`
+### Question 1: RISC, interrupts and pipelining `[6]`
 
 (a) Identify four features of a RISC processor. `[4]`  
 (b) Explain why interrupt handling can be more complex when pipelining is used. `[2]`
 
-### Mark scheme
+#### Mark scheme
 (a) One mark each, max 4:
 
 + uses few instructions  
@@ -1175,7 +1175,7 @@ E --> F[Write simplified expression]
 
 ---
 
-## Question 2: Parallel architectures `[4]`
+### Question 2: Parallel architectures `[4]`
 
 Complete the table.
 
@@ -1186,7 +1186,7 @@ Complete the table.
 | MISD |  |  |
 | MIMD |  |  |
 
-### Mark scheme
+#### Mark scheme
 One mark per correct row, max 4:
 
 + SISD = Single Instruction, Single Data; one instruction stream on one data stream / sequential execution  
@@ -1196,13 +1196,13 @@ One mark per correct row, max 4:
 
 ---
 
-## Question 3: Virtual machines `[4]`
+### Question 3: Virtual machines `[4]`
 
 A school wants students to test different operating systems without changing the computers in the classroom.
 
 Explain two benefits and two limitations of using virtual machines. `[4]`
 
-### Mark scheme
+#### Mark scheme
 Benefits, max 2:
 
 + different operating systems can run on one host machine  
@@ -1221,7 +1221,7 @@ Limitations, max 2:
 
 ---
 
-## Question 4: Boolean algebra `[3]`
+### Question 4: Boolean algebra `[3]`
 
 Simplify the expression:
 
@@ -1231,7 +1231,7 @@ Simplify the expression:
 
 Show working.
 
-### Mark scheme
+#### Mark scheme
 
 ```text
 (A + B)'.B + A.B
@@ -1249,7 +1249,7 @@ Marks:
 
 ---
 
-## Question 5: K-map and sum-of-products `[3]`
+### Question 5: K-map and sum-of-products `[3]`
 
 A logic function has output 1 for:
 
@@ -1264,7 +1264,7 @@ A B C
 (a) Write the full sum-of-products expression. `[2]`  
 (b) Simplify the expression. `[1]`
 
-### Mark scheme
+#### Mark scheme
 
 (a)
 

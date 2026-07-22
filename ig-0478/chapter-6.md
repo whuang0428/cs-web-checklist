@@ -1,5 +1,5 @@
-# IGCSE 0478 Chapter 6 Updated Checklist
-## Automated Systems and Emerging Technologies｜Syllabus-Aligned Revision Edition
+# IGCSE 0478 Chapter 6: Automated and Emerging Technologies
+> **Automated Systems and Emerging Technologies｜Syllabus-Aligned Revision Edition**
 > **适用范围**：Cambridge IGCSE Computer Science 0478  
 **更新依据**：2026–2028 syllabus + 2025 Paper 1 mark scheme trend  
 **目标**：删掉低频/过时内容，保留最容易出现在 `State / Describe / Explain / Suggest` 题里的得分点。  
@@ -20,8 +20,8 @@
 
 ---
 
-## 1. 内容取舍：哪些内容要删？哪些保留？
-### ✅ 必须保留并重点训练
+### 1. 内容取舍：哪些内容要删？哪些保留？
+#### ✅ 必须保留并重点训练
 | 内容 | 原因 |
 | --- | --- |
 | sensors, microprocessors and actuators collaboration | syllabus 明确要求；2025 直接考过多次 |
@@ -33,7 +33,7 @@
 | machine learning meaning and improvement | 2025 高频场景题 |
 
 
-### ⚠️ 降权或删除
+#### ⚠️ 降权或删除
 | 原内容 | 处理方式 | 原因 |
 | --- | --- | --- |
 | Narrow AI / General AI / Strong AI 三分类 | **删除主表，只可作为拓展** | 新 syllabus 明确把 AI 限定在 expert systems 和 machine learning，三分类不是核心得分点 |
@@ -45,8 +45,8 @@
 
 ---
 
-# 6.1 Automated Systems
-## 6.1.1 Core Definition
+## 6.1 Automated Systems
+### 6.1.1 Core Definition
 An **automated system** is a system that can perform actions **without human intervention**, usually by using:
 
 **<font style="background-color:#f8fbff;">1. Sensor</font>**<font style="background-color:#f8fbff;">  
@@ -60,7 +60,7 @@ An **automated system** is a system that can perform actions **without human int
 
 ---
 
-## 6.1.2 The Golden Answer Template
+### 6.1.2 The Golden Answer Template
 > **Describe how sensors, microprocessors and actuators are used in an automated system.**
 >
 
@@ -87,8 +87,8 @@ G --> A
 
 ---
 
-## 6.1.3 Mark Scheme Style Sentences
-### Example A: Automatic weather alert system
+### 6.1.3 Mark Scheme Style Sentences
+#### Example A: Automatic weather alert system
 > **Describe how the system uses a sensor and microprocessor to trigger an alert.**
 >
 
@@ -99,7 +99,7 @@ High-scoring answer:
 + The microprocessor compares the data with a **preset value**, for example 40.
 + If the value is greater than 40, the microprocessor sends a signal to **trigger the alert**.
 
-### Example B: Automatic welcome message on an ATM
+#### Example B: Automatic welcome message on an ATM
 + An **infra-red / proximity sensor** detects that a person is nearby.
 + The sensor sends data continuously to the microprocessor.
 + The microprocessor calculates / checks the distance.
@@ -107,8 +107,8 @@ High-scoring answer:
 
 ---
 
-## 6.1.4 Advantages and Disadvantages of Automated Systems
-### General Advantages
+### 6.1.4 Advantages and Disadvantages of Automated Systems
+#### General Advantages
 | Advantage | Mark scheme expansion |
 | --- | --- |
 | Faster response | The system can react more quickly than a human. |
@@ -119,7 +119,7 @@ High-scoring answer:
 | Long-term cost saving | Fewer workers may be needed after setup. |
 
 
-### General Disadvantages
+#### General Disadvantages
 | Disadvantage | Mark scheme expansion |
 | --- | --- |
 | Expensive setup | Sensors, microprocessors, actuators and software cost money. |
@@ -132,7 +132,7 @@ High-scoring answer:
 
 ---
 
-## 6.1.5 Scenario Transfer Table
+### 6.1.5 Scenario Transfer Table
 | Scenario | Possible sensor | Action / actuator | Strong answer idea |
 | --- | --- | --- | --- |
 | **Agriculture irrigation** | moisture sensor | valve / water pump | If soil moisture is below preset value, pump turns on. |
@@ -146,13 +146,13 @@ High-scoring answer:
 
 ---
 
-# 6.2 Robotics
-## 6.2.1 Definition
+## 6.2 Robotics
+### 6.2.1 Definition
 **Robotics** is a branch of computer science that includes the **design, construction and operation of robots**.
 
 ---
 
-## 6.2.2 What Makes Something a Robot?
+### 6.2.2 What Makes Something a Robot?
 A robot should usually have several of these features:
 
 | Robot characteristic | How to write it in exam |
@@ -171,7 +171,7 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 
 ---
 
-## 6.2.3 Common Robot Roles
+### 6.2.3 Common Robot Roles
 | Area | Example | What the robot does |
 | --- | --- | --- |
 | Industry | factory robot arm | lifts, welds, assembles or moves parts |
@@ -184,8 +184,8 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 
 ---
 
-## 6.2.4 Robot Advantages by Scenario
-### Industry / Factory
+### 6.2.4 Robot Advantages by Scenario
+#### Industry / Factory
 | Benefit | Expansion |
 | --- | --- |
 | Safer for workers | Workers do not need to lift heavy machinery or work in dangerous areas. |
@@ -194,7 +194,7 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 | Maintenance jobs created | Some workers may be trained to repair and maintain the robots. |
 
 
-### Remote Surgery Robot
+#### Remote Surgery Robot
 | Benefit | Expansion |
 | --- | --- |
 | Specialist can operate remotely | A doctor does not need to travel to the hospital. |
@@ -204,7 +204,7 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 | Safer / more hygienic | The doctor may not need to be near an infectious patient. |
 
 
-### Delivery Robot for Elderly Customers
+#### Delivery Robot for Elderly Customers
 | Benefit | Expansion |
 | --- | --- |
 | Supermarket gains more customers | Elderly people who cannot visit the store can still shop. |
@@ -214,7 +214,7 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 
 ---
 
-## 6.2.5 Robot Disadvantages by Scenario
+### 6.2.5 Robot Disadvantages by Scenario
 | Drawback | Expansion |
 | --- | --- |
 | Expensive to buy and maintain | The cost may be too high for smaller organisations. |
@@ -228,8 +228,8 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 
 ---
 
-## 6.2.6 Exam Templates for Robotics
-### Q1. Give one reason why a self-driving tractor is a robot.
+### 6.2.6 Exam Templates for Robotics
+#### Q1. Give one reason why a self-driving tractor is a robot.
 Good answers:
 
 + It has **electrical components**, such as sensors and actuators.
@@ -237,14 +237,14 @@ Good answers:
 + It can **move**.
 + It can sense its surroundings.
 
-### Q2. Explain why a smart speaker may not be a robot.
+#### Q2. Explain why a smart speaker may not be a robot.
 Good answer:
 
 + It does not have a **mechanical structure**.
 + It does not have **actuators**.
 + It cannot **move itself**.
 
-### Q3. Explain one benefit of using robots in a factory.
+#### Q3. Explain one benefit of using robots in a factory.
 Good answer:
 
 + Workers do not need to lift heavy machinery, so they are less likely to injure themselves.
@@ -252,8 +252,8 @@ Good answer:
 
 ---
 
-# 6.3 Artificial Intelligence
-## 6.3.1 Definition
+## 6.3 Artificial Intelligence
+### 6.3.1 Definition
 **Artificial intelligence (AI)** is the simulation of intelligent behaviour by computers.
 
 In IGCSE 0478, AI is mainly limited to:
@@ -266,7 +266,7 @@ In IGCSE 0478, AI is mainly limited to:
 
 ---
 
-## 6.3.2 Main Characteristics of AI
+### 6.3.2 Main Characteristics of AI
 A strong answer should include any of these:
 
 | Characteristic | Exam wording |
@@ -279,7 +279,7 @@ A strong answer should include any of these:
 | Analyse patterns | AI can identify patterns and make predictions. |
 
 
-### 3-mark AI definition template
+#### 3-mark AI definition template
 > AI is the simulation of intelligent behaviour by computers.  
 It uses a collection of data and rules for using that data.  
 It can reason or make decisions, and may learn/adapt from previous results.
@@ -287,8 +287,8 @@ It can reason or make decisions, and may learn/adapt from previous results.
 
 ---
 
-# 6.3.3 Expert Systems
-## Core idea
+## 6.3.3 Expert Systems
+### Core idea
 An **expert system** is a form of AI that mimics the knowledge and decision-making of a human expert in a specific area.
 
 Common scenarios:
@@ -301,7 +301,7 @@ Common scenarios:
 
 ---
 
-## Expert System Components
+### Expert System Components
 | Component | Role |
 | --- | --- |
 | **User interface / interface** | Allows the user to enter data and receive output. |
@@ -317,7 +317,7 @@ It may appear in textbooks, but the core IGCSE syllabus components are:
 
 ---
 
-## Expert System Operation Flow
+### Expert System Operation Flow
 ```mermaid
 flowchart TD
 A[User enters symptoms / data] --> B[Interface]
@@ -329,7 +329,7 @@ F --> G[Diagnosis / recommendation]
 G --> H[Output shown on interface]
 ```
 
-### Mark Scheme Style Answer: Doctor diagnosis
+#### Mark Scheme Style Answer: Doctor diagnosis
 > The doctor enters data about the patient’s symptoms into the **interface**.  
 The **inference engine** decides which questions to ask based on the previous answers.  
 It compares the symptoms with facts in the **knowledge base**.  
@@ -339,8 +339,8 @@ The diagnosis is output through the **interface**.
 
 ---
 
-# 6.3.4 Machine Learning
-## Definition
+## 6.3.4 Machine Learning
+### Definition
 **Machine learning** is when a program can automatically adapt its own processes and/or data.
 
 A simple exam-friendly explanation:
@@ -350,7 +350,7 @@ A simple exam-friendly explanation:
 
 ---
 
-## Machine Learning Universal Flow
+### Machine Learning Universal Flow
 ```mermaid
 flowchart LR
 A[Collect data] --> B[Store data]
@@ -363,8 +363,8 @@ F --> G[Make better prediction / decision]
 
 ---
 
-## Machine Learning Answer Bank
-### 1. Weather prediction AI
+### Machine Learning Answer Bank
+#### 1. Weather prediction AI
 Use these points:
 
 + It collects weather data over time.
@@ -374,7 +374,7 @@ Use these points:
 + It changes future predictions based on this feedback.
 + It can learn what weather occurs at certain times of year.
 
-### 2. Game enemy / gaming AI
+#### 2. Game enemy / gaming AI
 Use these points:
 
 + It collects data about the player’s actions.
@@ -385,7 +385,7 @@ Use these points:
 + It stores successful and unsuccessful moves.
 + It learns the most efficient / optimal movement against the player.
 
-### 3. Smart speaker voice recognition
+#### 3. Smart speaker voice recognition
 Use these points:
 
 + It gathers data from many different voices.
@@ -395,7 +395,7 @@ Use these points:
 + It learns different ways of making the same request.
 + It learns to ignore background noise.
 
-### 4. Delivery robot / farming robot
+#### 4. Delivery robot / farming robot
 Use these points:
 
 + It collects route / field / obstacle data.
@@ -407,7 +407,7 @@ Use these points:
 
 ---
 
-## 6.3.5 Expert System vs Machine Learning
+### 6.3.5 Expert System vs Machine Learning
 | Feature | Expert system | Machine learning |
 | --- | --- | --- |
 | Main basis | Human expert knowledge | Data and training examples |
@@ -419,7 +419,7 @@ Use these points:
 
 ---
 
-# 7. High-Frequency Exam Command Words
+## 7. High-Frequency Exam Command Words
 | Command word | What students should do | Example |
 | --- | --- | --- |
 | **State / Give / Identify** | One short point only | “Microprocessor.” |
@@ -431,8 +431,8 @@ Use these points:
 
 ---
 
-# 8. Recent Exam-Style Mini Question Bank
-## Q1. Automated weather alert system [3]
+## 8. Recent Exam-Style Mini Question Bank
+### Q1. Automated weather alert system [3]
 A weather station sends an alert when a sensor value is greater than 40.  
 Describe how the sensor and microprocessor are used.
 
@@ -442,7 +442,7 @@ Answer
 
 ---
 
-## Q2. Robot judgement [3]
+### Q2. Robot judgement [3]
 Explain why a smart speaker is not normally considered a robot.
 
 Answer
@@ -451,7 +451,7 @@ Answer
 
 ---
 
-## Q3. Medical expert system [4]
+### Q3. Medical expert system [4]
 Describe how an expert system can help a doctor diagnose an illness.
 
 Answer
@@ -460,7 +460,7 @@ Answer
 
 ---
 
-## Q4. Machine learning in gaming [3]
+### Q4. Machine learning in gaming [3]
 Explain how machine learning can improve the movement of a game enemy.
 
 Answer
@@ -469,7 +469,7 @@ Answer
 
 ---
 
-## Q5. Remote surgery robot [4]
+### Q5. Remote surgery robot [4]
 Explain two benefits of using a robot for remote surgery.
 
 Answer
@@ -478,7 +478,7 @@ Answer
 
 ---
 
-# 9. Final One-Page Revision Map
+## 9. Final One-Page Revision Map
 ```mermaid
 mindmap
   root((Chapter 6))
@@ -545,7 +545,7 @@ mindmap
 
 ---
 
-# 10. Ultra-Short Student Checklist
+## 10. Ultra-Short Student Checklist
 Before the exam, students should be able to answer:
 
 - [ ] Can I describe the sensor → microprocessor → actuator cycle?

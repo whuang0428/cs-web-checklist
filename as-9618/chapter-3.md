@@ -1,5 +1,5 @@
 # AS 9618 Chapter 3: Hardware
-## Hardware｜Syllabus-Aligned Paper 1 Revision Sheet
+> **Hardware｜Syllabus-Aligned Paper 1 Revision Sheet**
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
@@ -11,7 +11,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 
 本章是 AS Paper 1 里面非常容易“看起来会，写出来不给分”的章节。  
 2024 和 2025 的考法都说明：Chapter 3 不是只背硬件名字，而是要会把硬件知识放进 **scenario 场景题** 里解释。
@@ -29,7 +29,7 @@ E --> F[Logic gates and circuits<br/>expression / circuit / truth table]
 
 ---
 
-# 1. Recent Paper 1 Pattern Map
+## 1. Recent Paper 1 Pattern Map
 
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
@@ -48,9 +48,9 @@ E --> F[Logic gates and circuits<br/>expression / circuit / truth table]
 
 ---
 
-# 2. Content Update Decision
+## 2. Content Update Decision
 
-## 2.1 Keep and Strengthen
+### 2.1 Keep and Strengthen
 
 | Kept content | Reason |
 | --- | --- |
@@ -64,7 +64,7 @@ E --> F[Logic gates and circuits<br/>expression / circuit / truth table]
 | Logic gates, expressions, circuits, truth tables | 2025 Paper 1 opened with logic expressions/truth tables; very high frequency |
 | Port examples: USB, HDMI | 2024/2025 tested automatic connection and HDMI/peripheral connection |
 
-## 2.2 Downweight
+### 2.2 Downweight
 
 | Downweighted content | Why |
 | --- | --- |
@@ -74,7 +74,7 @@ E --> F[Logic gates and circuits<br/>expression / circuit / truth table]
 | Multi-input gate theory | AS usually uses two-input logic gates and drawn circuits |
 | Deep Boolean algebra simplification | More relevant to A2 Boolean algebra; AS focuses expression/circuit/truth table |
 
-## 2.3 Remove / Avoid
+### 2.3 Remove / Avoid
 
 | Avoid this | Reason |
 | --- | --- |
@@ -86,7 +86,7 @@ E --> F[Logic gates and circuits<br/>expression / circuit / truth table]
 
 ---
 
-# 3. One-Page Mind Map
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -139,7 +139,7 @@ mindmap
 
 ---
 
-# 4. Syllabus Checklist
+## 4. Syllabus Checklist
 
 | Syllabus area | What to know | Revision priority |
 | --- | --- | --- |
@@ -148,18 +148,18 @@ mindmap
 
 ---
 
-# 5. 3.1 Computers and Their Components
+## 5. 3.1 Computers and Their Components
 
-## 5.1 Embedded systems
+### 5.1 Embedded systems
 
-### Definition
+#### Definition
 
 > An embedded system is a computer system built into a larger device, designed to perform a specific / dedicated task.
 
 中文理解：  
 嵌入式系统不是一台“通用电脑”，而是放在某个设备里面，只负责几个固定任务。比如 smart doorbell、washing machine、car braking system、microwave controller。
 
-### Mark scheme keywords
+#### Mark scheme keywords
 
 + **built into a larger device**
 + **specific task**
@@ -168,11 +168,11 @@ mindmap
 + **limited processing requirements**
 + **limited functionality**
 
-### Good answer structure
+#### Good answer structure
 
 > The device is an embedded system because the processor, memory and software are built into the device and are dedicated to a specific task, such as detecting motion / recording video / controlling the device.
 
-### Drawbacks of embedded systems
+#### Drawbacks of embedded systems
 
 | Drawback | Mark scheme style explanation |
 | --- | --- |
@@ -182,7 +182,7 @@ mindmap
 | may become e-waste | faulty/outdated devices are often thrown away |
 | security issue | if not updated, vulnerabilities may remain |
 
-### Common weak answer
+#### Common weak answer
 
 > It is small and cheap.
 
@@ -190,9 +190,9 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-## 5.2 Input, output and storage devices
+### 5.2 Input, output and storage devices
 
-### Input devices
+#### Input devices
 
 | Device | Data captured |
 | --- | --- |
@@ -203,7 +203,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 | Scanner | image of a document |
 | Sensor | physical measurement from environment |
 
-### Output devices
+#### Output devices
 
 | Device | Output |
 | --- | --- |
@@ -213,7 +213,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 | Actuator | physical movement / action |
 | Light / LED | visual signal |
 
-### Storage devices
+#### Storage devices
 
 | Device type | Examples | Main idea |
 | --- | --- | --- |
@@ -223,9 +223,9 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-## 5.3 Sensors
+### 5.3 Sensors
 
-### Common sensors and uses
+#### Common sensors and uses
 
 | Scenario | Suitable sensor | Why |
 | --- | --- | --- |
@@ -237,34 +237,34 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 | Temperature changes | temperature sensor | measures heat / temperature |
 | Sound level too high | sound sensor / microphone | detects sound amplitude |
 
-### Exam answer pattern
+#### Exam answer pattern
 
 > A **pressure sensor** can be used because when the item is removed, the pressure / weight on the shelf decreases. The system can use this change to identify that an item has been taken.
 
 ---
 
-## 5.4 Monitoring systems vs control systems
+### 5.4 Monitoring systems vs control systems
 
-### Monitoring system
+#### Monitoring system
 
 > A monitoring system collects data from sensors and may store, display or transmit the data, but it does not automatically change the environment being measured.
 
-### Control system
+#### Control system
 
 > A control system collects data from sensors, processes it, and sends a signal to an actuator / output device to change the environment or system.
 
-### Key difference
+#### Key difference
 
 | Type | What happens |
 | --- | --- |
 | Monitoring | sensor data is observed / stored / transmitted |
 | Control | sensor data causes an action that changes something |
 
-### Mark scheme style
+#### Mark scheme style
 
 > This is a control system because the sensor data is processed and used to send a signal to an output device / actuator, such as turning on a light or sounding an alarm.
 
-### Common mistake
+#### Common mistake
 
 | Student writes | Why weak |
 | --- | --- |
@@ -274,13 +274,13 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-## 5.5 Actuators
+### 5.5 Actuators
 
-### Definition
+#### Definition
 
 > An actuator is an output device that converts a control signal into physical movement or action.
 
-### Examples
+#### Examples
 
 | Actuator / output | Action |
 | --- | --- |
@@ -292,13 +292,13 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-## 5.6 Buffers
+### 5.6 Buffers
 
-### Definition
+#### Definition
 
 > A buffer is an area of memory used to temporarily store data while it is being transferred between devices or processes.
 
-### Why buffers are used
+#### Why buffers are used
 
 Buffers are used when:
 
@@ -307,11 +307,11 @@ Buffers are used when:
 + data must be written in blocks
 + streaming needs temporary data before playback
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > The buffer temporarily stores data because the sending device and receiving device work at different speeds. Data can be stored in the buffer until the receiving device is ready to process / write / display it.
 
-### Examples
+#### Examples
 
 | Scenario | Buffer use |
 | --- | --- |
@@ -320,7 +320,7 @@ Buffers are used when:
 | Sensor system | stores readings until processor can process them |
 | Printer | stores print data while printer prints slowly |
 
-### Common mistake
+#### Common mistake
 
 > A buffer stores data permanently.
 
@@ -328,9 +328,9 @@ Wrong. A buffer is **temporary storage**.
 
 ---
 
-# 6. Memory
+## 6. Memory
 
-## 6.1 RAM and ROM
+### 6.1 RAM and ROM
 
 | Feature | RAM | ROM |
 | --- | --- | --- |
@@ -340,7 +340,7 @@ Wrong. A buffer is **temporary storage**.
 | Can be changed? | read/write | normally read-only / difficult to change |
 | Used for | active processing | start-up and fixed instructions |
 
-### RAM mark scheme phrases
+#### RAM mark scheme phrases
 
 + **currently running data and instructions**
 + **programs in use**
@@ -348,7 +348,7 @@ Wrong. A buffer is **temporary storage**.
 + **faster access than secondary storage**
 + **more RAM reduces need for virtual memory**
 
-### ROM mark scheme phrases
+#### ROM mark scheme phrases
 
 + **firmware**
 + **bootstrap program**
@@ -358,13 +358,13 @@ Wrong. A buffer is **temporary storage**.
 
 ---
 
-## 6.2 Effect of RAM on performance
+### 6.2 Effect of RAM on performance
 
-### Good answer
+#### Good answer
 
 > More RAM allows more currently running data and instructions to be stored in main memory. This reduces the need to use virtual memory or fetch data from slower secondary storage, so there is less delay / latency.
 
-### Weak answer
+#### Weak answer
 
 > More RAM makes the computer faster.
 
@@ -372,7 +372,7 @@ This is too vague. Say **why**.
 
 ---
 
-## 6.3 SRAM vs DRAM
+### 6.3 SRAM vs DRAM
 
 | Feature | SRAM | DRAM |
 | --- | --- | --- |
@@ -383,32 +383,32 @@ This is too vague. Say **why**.
 | Density | lower density | higher density |
 | Common use | cache memory | main memory |
 
-### DRAM advantages
+#### DRAM advantages
 
 + cheaper to manufacture
 + higher density per chip
 + can store more data per chip
 
-### DRAM disadvantages
+#### DRAM disadvantages
 
 + needs refreshing
 + slower than SRAM
 + more power may be used due to refreshing
 
-### SRAM advantages
+#### SRAM advantages
 
 + faster access
 + no refresh needed
 + suitable for cache
 
-### SRAM disadvantages
+#### SRAM disadvantages
 
 + expensive
 + lower storage density
 
 ---
 
-## 6.4 PROM, EPROM and EEPROM
+### 6.4 PROM, EPROM and EEPROM
 
 | Memory type | Meaning | Key point |
 | --- | --- | --- |
@@ -416,7 +416,7 @@ This is too vague. Say **why**.
 | EPROM | Erasable Programmable ROM | erased using ultraviolet light |
 | EEPROM | Electrically Erasable Programmable ROM | erased/written using electrical signals |
 
-### EPROM vs EEPROM
+#### EPROM vs EEPROM
 
 | EPROM | EEPROM |
 | --- | --- |
@@ -427,11 +427,11 @@ This is too vague. Say **why**.
 
 ---
 
-# 7. Secondary Storage
+## 7. Secondary Storage
 
-## 7.1 Magnetic hard disk
+### 7.1 Magnetic hard disk
 
-### Principal operation
+#### Principal operation
 
 A magnetic hard disk:
 
@@ -442,7 +442,7 @@ A magnetic hard disk:
 5. data is stored using changes in **magnetic field / magnetised areas**
 6. when reading, changes in magnetic field produce a change in electric current
 
-### Mark scheme keywords
+#### Mark scheme keywords
 
 + **platters**
 + **spindle**
@@ -451,13 +451,13 @@ A magnetic hard disk:
 + **magnetised surface**
 + **rotates at high speed**
 
-### Advantages
+#### Advantages
 
 + large capacity
 + low cost per GB
 + suitable for long-term storage of large files
 
-### Disadvantages
+#### Disadvantages
 
 + moving parts
 + slower than SSD
@@ -466,9 +466,9 @@ A magnetic hard disk:
 
 ---
 
-## 7.2 Optical storage
+### 7.2 Optical storage
 
-### Principal operation
+#### Principal operation
 
 An optical disc reader/writer:
 
@@ -478,7 +478,7 @@ An optical disc reader/writer:
 4. reflected light is detected by a sensor
 5. differences in reflection are interpreted as binary data
 
-### Mark scheme keywords
+#### Mark scheme keywords
 
 + **laser**
 + **reflected light**
@@ -486,15 +486,15 @@ An optical disc reader/writer:
 + **sensor detects reflection**
 + **binary data**
 
-### Buffer with optical disc
+#### Buffer with optical disc
 
 > A buffer stores data temporarily before it is written to the optical disc because the computer may send data faster than the disc can write it.
 
 ---
 
-## 7.3 Solid-state storage / flash memory
+### 7.3 Solid-state storage / flash memory
 
-### Key features
+#### Key features
 
 + no moving parts
 + faster access than magnetic storage
@@ -503,7 +503,7 @@ An optical disc reader/writer:
 + lower power use
 + more expensive per GB
 
-### Flash memory gate terms
+#### Flash memory gate terms
 
 | Term | Meaning |
 | --- | --- |
@@ -512,17 +512,17 @@ An optical disc reader/writer:
 | control gate | allows or stops current from passing |
 | cell | stores a bit / value |
 
-### Mark scheme style
+#### Mark scheme style
 
 > Flash memory is non-volatile because the floating gate can retain electrons even when power is removed.
 
 ---
 
-# 8. Ports and Peripheral Connection
+## 8. Ports and Peripheral Connection
 
-## 8.1 USB
+### 8.1 USB
 
-### Why USB is useful
+#### Why USB is useful
 
 + widely used for peripherals
 + supports plug-and-play
@@ -530,15 +530,15 @@ An optical disc reader/writer:
 + can transfer data
 + device can be automatically recognised
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > USB supports plug-and-play. When the device is connected, the OS detects it and loads / installs the appropriate driver so it can be used automatically.
 
 ---
 
-## 8.2 HDMI
+### 8.2 HDMI
 
-### Why HDMI may be better than VGA
+#### Why HDMI may be better than VGA
 
 | HDMI | VGA |
 | --- | --- |
@@ -548,17 +548,17 @@ An optical disc reader/writer:
 | less interference | more prone to signal degradation |
 | no need for separate audio cable | needs separate audio cable |
 
-### Mark scheme style
+#### Mark scheme style
 
 > HDMI can transmit both video and audio, so a separate sound cable is not needed. It is a digital interface, so there is no analogue conversion loss and it can support high-resolution displays.
 
 ---
 
-# 9. Processor-related Hardware Performance
+## 9. Processor-related Hardware Performance
 
 Although detailed CPU architecture is mainly Chapter 4, recent Paper 1 questions often mix hardware performance into Chapter 3-style device comparison questions.
 
-## 9.1 Number of cores
+### 9.1 Number of cores
 
 | More cores can help when... | Why |
 | --- | --- |
@@ -566,17 +566,17 @@ Although detailed CPU architecture is mainly Chapter 4, recent Paper 1 questions
 | multitasking | several processes can run at the same time |
 | suitable workload | tasks can be divided between cores |
 
-### Warning
+#### Warning
 
 More cores do not always mean faster performance if the software cannot use them.
 
 ---
 
-## 9.2 Clock speed
+### 9.2 Clock speed
 
 > Clock speed is the number of cycles per second. Higher clock speed may allow more instructions to be processed per second.
 
-### Weak answer
+#### Weak answer
 
 > Higher GHz is better.
 
@@ -586,7 +586,7 @@ Better:
 
 ---
 
-## 9.3 Bus width
+### 9.3 Bus width
 
 | Bus | Effect |
 | --- | --- |
@@ -594,15 +594,15 @@ Better:
 | Address bus | wider address bus allows more memory locations to be directly addressed |
 | Control bus | carries control signals |
 
-### Recent exam-style answer
+#### Recent exam-style answer
 
 > A wider data bus means more data can be transferred between components at one time, reducing delay. A wider address bus means more memory locations can be addressed directly.
 
 ---
 
-# 10. 3.2 Logic Gates and Logic Circuits
+## 10. 3.2 Logic Gates and Logic Circuits
 
-## 10.1 Basic gates
+### 10.1 Basic gates
 
 | Gate | Meaning | Output is 1 when... |
 | --- | --- | --- |
@@ -615,16 +615,16 @@ Better:
 
 ---
 
-## 10.2 Truth tables
+### 10.2 Truth tables
 
-### NOT
+#### NOT
 
 | A | X |
 | --- | --- |
 | 0 | 1 |
 | 1 | 0 |
 
-### AND
+#### AND
 
 | A | B | X |
 | --- | --- | --- |
@@ -633,7 +633,7 @@ Better:
 | 1 | 0 | 0 |
 | 1 | 1 | 1 |
 
-### OR
+#### OR
 
 | A | B | X |
 | --- | --- | --- |
@@ -642,7 +642,7 @@ Better:
 | 1 | 0 | 1 |
 | 1 | 1 | 1 |
 
-### NAND
+#### NAND
 
 | A | B | X |
 | --- | --- | --- |
@@ -651,7 +651,7 @@ Better:
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
 
-### NOR
+#### NOR
 
 | A | B | X |
 | --- | --- | --- |
@@ -660,7 +660,7 @@ Better:
 | 1 | 0 | 0 |
 | 1 | 1 | 0 |
 
-### XOR
+#### XOR
 
 | A | B | X |
 | --- | --- | --- |
@@ -671,9 +671,9 @@ Better:
 
 ---
 
-## 10.3 Writing logic expressions from a circuit
+### 10.3 Writing logic expressions from a circuit
 
-### Method
+#### Method
 
 1. Label each gate output.
 2. Work from left to right.
@@ -681,7 +681,7 @@ Better:
 4. Combine carefully using brackets.
 5. Do not ignore NOT bubbles.
 
-### Example
+#### Example
 
 If:
 
@@ -701,7 +701,7 @@ or in symbolic form:
 X = A . (B̅ + C)
 ```
 
-### Mark scheme style
+#### Mark scheme style
 
 Cambridge accepts word-form expressions such as:
 
@@ -711,7 +711,7 @@ Cambridge accepts word-form expressions such as:
 
 ---
 
-## 10.4 Completing truth tables for complex expressions
+### 10.4 Completing truth tables for complex expressions
 
 Example:
 
@@ -732,7 +732,7 @@ Recommended working columns:
 | 1 | 1 | 0 | 1 | 1 | 0 |
 | 1 | 1 | 1 | 1 | 1 | 0 |
 
-### Common method error
+#### Common method error
 
 Students often calculate `XOR` as normal `OR`.  
 Remember:
@@ -743,9 +743,9 @@ XOR = 1 only when inputs are different
 
 ---
 
-## 10.5 Drawing logic circuits from expressions
+### 10.5 Drawing logic circuits from expressions
 
-### Method
+#### Method
 
 For:
 
@@ -760,7 +760,7 @@ Draw:
 3. Outputs of AND and NOT into OR gate.
 4. Output is X.
 
-### Exam warning
+#### Exam warning
 
 + Use the correct gate symbol.
 + Connect all inputs.
@@ -769,9 +769,9 @@ Draw:
 
 ---
 
-# 11. Mark Scheme Keywords
+## 11. Mark Scheme Keywords
 
-## Embedded systems
+### Embedded systems
 
 + built into a larger device
 + dedicated task
@@ -781,7 +781,7 @@ Draw:
 + firmware difficult to update
 + specialist repair
 
-## Sensors and control
+### Sensors and control
 
 + sensor detects / measures
 + data is input to processor
@@ -790,7 +790,7 @@ Draw:
 + changes the environment / system
 + monitoring does not affect input/environment
 
-## Memory
+### Memory
 
 + RAM stores current data and instructions
 + volatile
@@ -799,7 +799,7 @@ Draw:
 + SRAM faster / more expensive / no refresh
 + DRAM cheaper / higher density / needs refresh
 
-## Storage
+### Storage
 
 + magnetic platters
 + spindle
@@ -812,14 +812,14 @@ Draw:
 + control gate
 + NAND / NOR
 
-## Buffers
+### Buffers
 
 + temporary storage
 + different speeds
 + stores data until device/process is ready
 + prevents data loss / reduces waiting
 
-## Logic
+### Logic
 
 + AND / OR / NOT / NAND / NOR / XOR
 + NOT means invert
@@ -830,7 +830,7 @@ Draw:
 
 ---
 
-# 12. Common Mistakes 易错表
+## 12. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -847,51 +847,51 @@ Draw:
 
 ---
 
-# 13. Scenario Answer Bank
+## 13. Scenario Answer Bank
 
-## 13.1 Embedded smart doorbell
+### 13.1 Embedded smart doorbell
 
 > This is an embedded system because the processor, memory and software are built into the doorbell and are dedicated to specific tasks such as motion detection, video recording and sending notifications. It is not a general-purpose computer.
 
-## 13.2 Security light system
+### 13.2 Security light system
 
 > This is a control system because sensor readings are processed and used to send a signal to turn on the floodlight. The output changes the environment by increasing the light level.
 
-## 13.3 Temperature monitoring system
+### 13.3 Temperature monitoring system
 
 > This is a monitoring system if it only records or displays the temperature readings. It becomes a control system if the processor uses the readings to switch on a fan/heater through an actuator.
 
-## 13.4 Buffer for optical writing
+### 13.4 Buffer for optical writing
 
 > The buffer temporarily stores data before it is written to the optical disc because the computer may send data faster than the disc writer can write it. The data remains in the buffer until the writer is ready.
 
-## 13.5 More RAM
+### 13.5 More RAM
 
 > More RAM allows more currently running programs, data and instructions to be stored in main memory. This reduces the need to use virtual memory or access slower secondary storage, reducing delay.
 
-## 13.6 Wider data bus
+### 13.6 Wider data bus
 
 > A wider data bus allows more data to be transferred between components at one time, so there may be less delay when data is fetched or transferred.
 
-## 13.7 USB automatic connection
+### 13.7 USB automatic connection
 
 > USB supports plug-and-play. When the device is connected, the OS detects it and loads the required driver, allowing the device to be used automatically.
 
-## 13.8 HDMI instead of VGA
+### 13.8 HDMI instead of VGA
 
 > HDMI is digital and can carry both video and audio. It supports high-resolution displays and does not need a separate audio cable, unlike VGA.
 
-## 13.9 Sensor on shop shelf
+### 13.9 Sensor on shop shelf
 
 > A pressure sensor can detect that the pressure/weight on the shelf has decreased when an item is removed. This data is sent to the system so it can identify the item taken.
 
-## 13.10 Logic expression answer
+### 13.10 Logic expression answer
 
 > Work from left to right. Give each gate an intermediate expression, then combine them with brackets. For example: `X = (A AND NOT B) OR C`.
 
 ---
 
-# 14. Process Diagram
+## 14. Process Diagram
 
 ```mermaid
 flowchart TD
@@ -905,7 +905,7 @@ F --> G[Actuator changes environment<br/>control behaviour]
 
 ---
 
-# 15. Logic Circuit Working Process
+## 15. Logic Circuit Working Process
 
 ```mermaid
 flowchart LR
@@ -919,9 +919,9 @@ F --> G[Check XOR and NOT carefully]
 
 ---
 
-# 16. 10 Marks Quick Check
+## 16. 10 Marks Quick Check
 
-## Questions
+### Questions
 
 1. Define an embedded system. [2]  
 2. Give one drawback of an embedded system. [1]  
@@ -933,7 +933,7 @@ F --> G[Check XOR and NOT carefully]
 8. State the output of `1 NAND 1`. [1]  
 9. Explain why HDMI can be better than VGA for a monitor with speakers. [1]
 
-## Answers
+### Answers
 
 1. Built into a larger device [1], performs a specific/dedicated task [1].  
 2. Difficult to update / limited functionality / specialist repair / e-waste [1].  
@@ -947,9 +947,9 @@ F --> G[Check XOR and NOT carefully]
 
 ---
 
-# 17. 20 Marks Exam-Style Practice with Mark Scheme
+## 17. 20 Marks Exam-Style Practice with Mark Scheme
 
-## Question 1: Embedded system and sensors [6]
+### Question 1: Embedded system and sensors [6]
 
 A smart security doorbell has a camera, motion sensor, speaker and network connection. It detects movement and sends a video notification to a user’s phone.
 
@@ -957,7 +957,7 @@ A smart security doorbell has a camera, motion sensor, speaker and network conne
 (b) Identify a suitable sensor for detecting movement near the door. [1]  
 (c) Explain whether the doorbell is a monitoring system or a control system. [3]
 
-### Mark scheme
+#### Mark scheme
 
 (a) Built into a larger device / doorbell [1], performs specific tasks such as motion detection / video recording / notification [1].  
 (b) Infrared / motion / proximity sensor [1].  
@@ -968,14 +968,14 @@ A smart security doorbell has a camera, motion sensor, speaker and network conne
 
 ---
 
-## Question 2: Memory and storage [6]
+### Question 2: Memory and storage [6]
 
 A computer has 2 GB RAM, ROM, a magnetic hard disk and a USB flash drive.
 
 (a) Explain how more RAM can improve performance. [3]  
 (b) Describe the principal operation of a magnetic hard disk. [3]
 
-### Mark scheme
+#### Mark scheme
 
 (a) Award up to [3]:  
 + more current data/instructions/programs can be stored in main memory [1]  
@@ -989,21 +989,21 @@ A computer has 2 GB RAM, ROM, a magnetic hard disk and a USB flash drive.
 
 ---
 
-## Question 3: Buffers and ports [4]
+### Question 3: Buffers and ports [4]
 
 A computer writes sensor readings to an optical disc. The computer also connects to a monitor with built-in speakers.
 
 (a) Explain why a buffer may be used when writing to the optical disc. [2]  
 (b) Explain one benefit of using HDMI to connect the monitor instead of VGA. [2]
 
-### Mark scheme
+#### Mark scheme
 
 (a) Temporary storage [1] because the computer and optical disc writer work at different speeds / data is stored until writer is ready [1].  
 (b) HDMI carries audio and video so no separate audio cable is needed [1] OR HDMI is digital / supports higher resolution [1], with a clear comparison to VGA [1].
 
 ---
 
-## Question 4: Logic gates [4]
+### Question 4: Logic gates [4]
 
 Complete the truth table for:
 
@@ -1022,7 +1022,7 @@ X = (A AND NOT B) OR (B XOR C)
 | 1 | 1 | 0 |   |
 | 1 | 1 | 1 |   |
 
-### Mark scheme
+#### Mark scheme
 
 | A | B | C | X |
 | --- | --- | --- | --- |

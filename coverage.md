@@ -1,40 +1,36 @@
 # Coverage Status
 
-This website is a revision checklist hub. The main Cambridge Computer Science chapter map is now covered at checklist level, but the site should still be improved with deeper worked examples, more practice questions and regular syllabus review.
+This website is a revision checklist and marked-practice hub. The planned chapter-deepening and independent-retest stages are complete; ongoing work should now focus on maintenance, accessibility and future syllabus changes.
 
 ## Current Coverage
 
 | Course | Current pages | Status |
 |---|---|---|
-| IGCSE 0478 | Chapters 1-10 | Checklist coverage for Paper 1 and Paper 2 |
-| AS 9618 | Chapters 1-12 | Checklist coverage for AS Paper 1 and Paper 2 |
-| A2 9618 | Chapters 13-20 | Checklist coverage for A2 Paper 3 and Paper 4 |
+| IGCSE 0478 | Chapters 1-10 + two Paper 2 reviews | Topics 7-10 deepened; two independent 75-mark retest sets |
+| AS 9618 | Chapters 1-12 + two Paper 2 reviews | Sections 9-12 deepened; two independent 75-mark retest sets |
+| A2 9618 | Chapters 13-20 + Paper 3 review + two Paper 4 practicals | Cross-chapter theory review and two independent practical sets |
 
-## Remaining Improvement Areas
+## Ongoing Improvement Areas
 
-The main chapter gaps have been filled. Before calling the site mature, these areas should be strengthened.
+The planned maturity stages are complete. These are maintenance opportunities rather than missing core deliverables.
 
 ### IGCSE 0478
 
-- expand Paper 2 programming practice tasks
-- add more trace-table drills
-- add more database query examples
-- add more Boolean logic truth-table practice
-- add end-of-section mixed Paper 2 review sets
+- refresh examples when the syllabus changes
+- continue checking accessibility and mobile layout as content grows
+- add optional topic-specific micro-quizzes if students need shorter retrieval sessions
 
 ### AS 9618
 
-- deepen Chapters 9-12 with more full Paper 2 scenarios
-- add more ADT implementation traces
-- add more OOP and recursion practice
-- add more software development case-study questions
+- refresh pseudocode examples when the official guide changes
+- continue checking accessibility and mobile layout as content grows
+- add optional topic-specific micro-quizzes if students need shorter retrieval sessions
 
 ### A2 9618
 
-- deepen Chapters 19-20 with more Paper 4-style programming scenarios
-- add more recursive algorithm traces
-- add more stack, queue and linked-list implementation practice
-- add more object-oriented design examples
+- refresh language-specific examples when permitted languages or syllabus details change
+- keep practical reference solutions compatible with supported Python versions
+- add further Paper 3 sets only when there is evidence that another full retest is needed
 
 ## How Students Should Use This Site
 
@@ -50,7 +46,7 @@ Use this site as a structured revision checklist, then practise with the officia
 
 ## Maintenance Priorities
 
-1. Add more worked examples to the newly added Paper 2 and Paper 4 chapters.
-2. Add mixed review pages for IGCSE, AS and A2.
-3. Add a lightweight link/checklist verification workflow before publishing.
-4. Review syllabus alignment annually.
+1. Run the structural/content/runtime checker before publishing and extend it when site structure changes.
+2. Review syllabus alignment, pseudocode guidance and permitted Paper 4 languages annually.
+3. Continue keyboard, contrast, mobile and long-code-block accessibility checks.
+4. Add further practice only when it remains independent and adds measurable coverage rather than duplicating existing questions.

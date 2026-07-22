@@ -1,5 +1,5 @@
 # AS 9618 Chapter 7: Ethics and Ownership
-## Ethics and Ownership｜Syllabus-Aligned Paper 1 Revision Sheet
+> **Ethics and Ownership｜Syllabus-Aligned Paper 1 Revision Sheet**
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
@@ -12,7 +12,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 
 Chapter 7 是典型的 **scenario explanation chapter（场景解释题章节）**。
 
@@ -44,7 +44,7 @@ E --> F[AI<br/>applications + impacts]
 
 ---
 
-# 1. Recent Paper 1 Pattern Map
+## 1. Recent Paper 1 Pattern Map
 
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
@@ -61,9 +61,9 @@ E --> F[AI<br/>applications + impacts]
 
 ---
 
-# 2. Content Update Decision
+## 2. Content Update Decision
 
-## 2.1 Keep and Strengthen
+### 2.1 Keep and Strengthen
 
 | Kept content | Reason |
 | --- | --- |
@@ -77,7 +77,7 @@ E --> F[AI<br/>applications + impacts]
 | AI applications | Common applied question: image recognition / OCR / autonomous systems / recommendation |
 | AI social/economic/environmental impacts | Syllabus explicitly requires these impacts |
 
-## 2.2 Downweight
+### 2.2 Downweight
 
 | Downweighted content | Why |
 | --- | --- |
@@ -87,7 +87,7 @@ E --> F[AI<br/>applications + impacts]
 | advanced machine learning mathematics | Not required in AS Chapter 7 |
 | too many licence types outside syllabus | Focus on Free Software Foundation, Open Source Initiative, shareware, commercial |
 
-## 2.3 Delete / Avoid
+### 2.3 Delete / Avoid
 
 | Avoid | Reason |
 | --- | --- |
@@ -100,7 +100,7 @@ E --> F[AI<br/>applications + impacts]
 
 ---
 
-# 3. One-Page Mind Map
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -151,7 +151,7 @@ mindmap
 
 ---
 
-# 4. Syllabus Objectives
+## 4. Syllabus Objectives
 
 By the end of this chapter, students should be able to:
 
@@ -168,19 +168,19 @@ By the end of this chapter, students should be able to:
 
 ---
 
-# 5. Ethics in Computing
+## 5. Ethics in Computing
 
-## 5.1 What is ethics?
+### 5.1 What is ethics?
 
-### Student explanation
+#### Student explanation
 
 **Ethics** means moral principles that guide people to decide what is right or wrong. In computer science, ethics is about using computing skills responsibly so that software and computer systems do not harm users, colleagues, organisations, or the public.
 
-### Mark scheme style definition
+#### Mark scheme style definition
 
 > Ethics are moral principles / a code of conduct that guide professional behaviour and help computing professionals act responsibly.
 
-### Must-have keywords
+#### Must-have keywords
 
 - **moral principles**
 - **code of conduct**
@@ -192,7 +192,7 @@ By the end of this chapter, students should be able to:
 
 ---
 
-## 5.2 Why ethics matters for computing professionals
+### 5.2 Why ethics matters for computing professionals
 
 Computing professionals often work with:
 
@@ -205,17 +205,17 @@ Computing professionals often work with:
 
 如果程序员不 ethical，后果可能很严重：data leak、unsafe software、biased AI、unfair treatment、financial loss，甚至 physical harm。
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > Computing professionals need to act ethically because their work can affect users, colleagues, organisations and the public. Ethical behaviour helps protect privacy, safety, security and trust, and reduces the risk of harm caused by software or data misuse.
 
 ---
 
-## 5.3 Ethical behaviour towards colleagues
+### 5.3 Ethical behaviour towards colleagues
 
 2024 Paper 1 的趋势是：不仅问 “what is ethics”，而是问 programmer 为什么要对 **colleagues** 和 **the public** 负责。
 
-### Good points for colleagues
+#### Good points for colleagues
 
 A programmer should:
 
@@ -228,7 +228,7 @@ A programmer should:
 - not steal code from colleagues
 - not hide mistakes that affect team work
 
-### Mark scheme style phrases
+#### Mark scheme style phrases
 
 > The programmer should treat colleagues fairly and avoid discrimination.
 
@@ -238,9 +238,9 @@ A programmer should:
 
 ---
 
-## 5.4 Ethical behaviour towards the public
+### 5.4 Ethical behaviour towards the public
 
-### Good points for the public
+#### Good points for the public
 
 A programmer should:
 
@@ -253,7 +253,7 @@ A programmer should:
 - reduce bias in systems
 - report serious security risks responsibly
 
-### Mark scheme style phrases
+#### Mark scheme style phrases
 
 > The programmer should maintain the health, safety and welfare of the public.
 
@@ -263,7 +263,7 @@ A programmer should:
 
 ---
 
-## 5.5 Ethical vs legal vs moral
+### 5.5 Ethical vs legal vs moral
 
 | Term | Meaning | Example |
 | --- | --- | --- |
@@ -273,7 +273,7 @@ A programmer should:
 | Unethical | morally wrong / irresponsible | hiding a security flaw from users |
 | Moral | personal or social idea of right/wrong | feeling that user data should not be sold without consent |
 
-### Exam warning
+#### Exam warning
 
 不要写：
 
@@ -285,9 +285,9 @@ A programmer should:
 
 ---
 
-# 6. Professional Ethical Bodies
+## 6. Professional Ethical Bodies
 
-## 6.1 BCS and IEEE
+### 6.1 BCS and IEEE
 
 The syllabus specifically names:
 
@@ -298,9 +298,9 @@ The syllabus specifically names:
 
 ---
 
-## 6.2 Why join a professional ethical body?
+### 6.2 Why join a professional ethical body?
 
-### Main purposes
+#### Main purposes
 
 Professional bodies help computing professionals by providing:
 
@@ -312,13 +312,13 @@ Professional bodies help computing professionals by providing:
 - recognition of professional status
 - public trust
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > A professional body provides a code of conduct and ethical guidance. This helps computing professionals make responsible decisions, follow professional standards, and maintain public trust.
 
 ---
 
-## 6.3 Common weak answer
+### 6.3 Common weak answer
 
 Weak:
 
@@ -330,19 +330,19 @@ Better:
 
 ---
 
-# 7. Copyright
+## 7. Copyright
 
-## 7.1 What is copyright?
+### 7.1 What is copyright?
 
-### Student explanation
+#### Student explanation
 
 **Copyright** is a legal protection for original work. In computer science, it can protect source code, software, documentation, images, music, videos and other digital content.
 
-### Mark scheme style definition
+#### Mark scheme style definition
 
 > Copyright is legal protection for original work / intellectual property, giving the owner control over copying, distribution, modification and use.
 
-### Must-have keywords
+#### Must-have keywords
 
 - **legal protection**
 - **original work**
@@ -354,7 +354,7 @@ Better:
 
 ---
 
-## 7.2 Why copyright legislation is needed
+### 7.2 Why copyright legislation is needed
 
 Copyright legislation is needed to:
 
@@ -366,13 +366,13 @@ Copyright legislation is needed to:
 - encourage creativity and software development
 - allow legal action if work is stolen
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > Copyright is needed to identify the programmer as the owner of the software and give legal protection if someone copies, steals or distributes it without permission.
 
 ---
 
-## 7.3 Copyright in software scenarios
+### 7.3 Copyright in software scenarios
 
 | Scenario | Good answer direction |
 | --- | --- |
@@ -384,7 +384,7 @@ Copyright legislation is needed to:
 
 ---
 
-## 7.4 Common mistakes
+### 7.4 Common mistakes
 
 | Weak answer | Why weak | Better answer |
 | --- | --- | --- |
@@ -395,15 +395,15 @@ Copyright legislation is needed to:
 
 ---
 
-# 8. Software Licences
+## 8. Software Licences
 
-## 8.1 What is a software licence?
+### 8.1 What is a software licence?
 
-### Definition
+#### Definition
 
 > A software licence is an agreement that states how software can be used, copied, modified and distributed.
 
-### What a licence controls
+#### What a licence controls
 
 A licence may define:
 
@@ -417,7 +417,7 @@ A licence may define:
 
 ---
 
-## 8.2 Licence comparison table
+### 8.2 Licence comparison table
 
 | Licence type | Main idea | Source code? | Payment? | Best scenario |
 | --- | --- | --- | --- | --- |
@@ -428,9 +428,9 @@ A licence may define:
 
 ---
 
-## 8.3 Free Software Foundation licence
+### 8.3 Free Software Foundation licence
 
-### Key idea
+#### Key idea
 
 Free software is about **freedom**, not always price.
 
@@ -441,13 +441,13 @@ It normally gives users the freedom to:
 - modify it
 - share copies
 
-### Mark scheme style phrases
+#### Mark scheme style phrases
 
 > Users can run, study, modify and redistribute the software.
 
 > The source code is available so that users can adapt the software.
 
-### Common mistake
+#### Common mistake
 
 Weak:
 
@@ -459,13 +459,13 @@ Better:
 
 ---
 
-## 8.4 Open Source Initiative licence
+### 8.4 Open Source Initiative licence
 
-### Key idea
+#### Key idea
 
 Open source means the **source code is available** and can be examined and modified under the licence terms.
 
-### Why it is useful
+#### Why it is useful
 
 Open source is suitable when:
 
@@ -474,15 +474,15 @@ Open source is suitable when:
 - a community can improve the software
 - the software needs to be adapted to local needs
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > An open source licence is suitable because the source code can be examined and modified, so the business can adapt the program to meet its needs.
 
 ---
 
-## 8.5 Shareware licence
+### 8.5 Shareware licence
 
-### Key idea
+#### Key idea
 
 Shareware lets users try the software before paying.
 
@@ -493,23 +493,23 @@ It may be:
 - free for non-commercial use
 - paid after trial period
 
-### Benefits to user
+#### Benefits to user
 
 - can test the software before paying
 - can check if it meets their needs
 - lower risk before purchase
 
-### Benefits to distributor / developer
+#### Benefits to distributor / developer
 
 - more users may try the software
 - users may later pay for full version
 - acts as marketing / promotion
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > Shareware is beneficial because users can try the software before paying, and the developer can still earn income if users pay for continued use or extra features.
 
-### 2024 exam warning
+#### 2024 exam warning
 
 Do not only write:
 
@@ -519,13 +519,13 @@ The question may ask for **benefits**. You must explain why that is useful.
 
 ---
 
-## 8.6 Commercial software licence
+### 8.6 Commercial software licence
 
-### Key idea
+#### Key idea
 
 Commercial software is sold for profit. Users usually pay for a licence, and there are restrictions on copying, modifying and redistributing the software.
 
-### Benefits to developer / company
+#### Benefits to developer / company
 
 - earns income / profit
 - controls copying and distribution
@@ -533,20 +533,20 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 - can fund support and updates
 - can use licence keys / subscriptions
 
-### Benefits to user / business
+#### Benefits to user / business
 
 - may receive technical support
 - may receive updates / patches
 - may have warranty / service agreement
 - clear legal right to use software
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > A commercial licence is beneficial because the developer can earn income and control distribution, while users may receive support, updates and a legal right to use the software.
 
 ---
 
-## 8.7 Licence choice scenario bank
+### 8.7 Licence choice scenario bank
 
 | Scenario | Best licence | Why |
 | --- | --- | --- |
@@ -559,19 +559,19 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-# 9. Artificial Intelligence \(AI\)
+## 9. Artificial Intelligence \(AI\)
 
-## 9.1 What is AI?
+### 9.1 What is AI?
 
-### Student explanation
+#### Student explanation
 
 **Artificial Intelligence (AI)** means computer systems performing tasks that normally need human intelligence, such as recognising images, understanding speech, making decisions, learning from data, or solving problems.
 
-### Mark scheme style definition
+#### Mark scheme style definition
 
 > AI is the ability of a computer system to perform tasks that normally require human intelligence, such as learning, recognising patterns, making decisions or solving problems.
 
-### Must-have keywords
+#### Must-have keywords
 
 - **human intelligence**
 - **learning from data**
@@ -583,7 +583,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-## 9.2 AI applications
+### 9.2 AI applications
 
 | Application | How AI is used |
 | --- | --- |
@@ -600,11 +600,11 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-## 9.3 How AI identifies a car registration number
+### 9.3 How AI identifies a car registration number
 
 This is a very important 2024-style scenario. Many students lose marks by describing only a database search.
 
-### Strong answer structure
+#### Strong answer structure
 
 1. Camera captures an image of the car / registration plate.  
 2. Image is processed to locate the number plate area.  
@@ -613,11 +613,11 @@ This is a very important 2024-style scenario. Many students lose marks by descri
 5. It outputs the most likely registration number.  
 6. The result may be checked against stored records.
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > The camera captures an image of the number plate. Image recognition / OCR is used to locate the plate and identify the characters. The AI system compares the shapes and patterns in the image with a trained model / training data and outputs the most likely registration number.
 
-### Weak answer
+#### Weak answer
 
 > The camera takes a picture and checks the database.
 
@@ -629,7 +629,7 @@ Why weak?
 
 ---
 
-## 9.4 AI recognition process diagram
+### 9.4 AI recognition process diagram
 
 ```mermaid
 flowchart TD
@@ -643,9 +643,9 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-# 10. Impacts of AI
+## 10. Impacts of AI
 
-## 10.1 Social impacts
+### 10.1 Social impacts
 
 | Positive social impact | Explanation |
 | --- | --- |
@@ -662,13 +662,13 @@ F --> G[Optional check<br/>database / human review]
 | Loss of human contact | services may replace human interaction with automated systems |
 | Over-reliance | people may trust AI decisions without checking them |
 
-### Mark scheme phrase
+#### Mark scheme phrase
 
 > A social impact of AI is that it can improve accessibility, but it may also reduce privacy if personal data or images are collected and analysed.
 
 ---
 
-## 10.2 Economic impacts
+### 10.2 Economic impacts
 
 | Positive economic impact | Explanation |
 | --- | --- |
@@ -684,13 +684,13 @@ F --> G[Optional check<br/>database / human review]
 | High setup cost | AI systems need hardware, data, software and experts |
 | Market inequality | large companies may benefit more because they can afford AI |
 
-### Mark scheme phrase
+#### Mark scheme phrase
 
 > An economic impact of AI is that it can reduce labour costs by automating tasks, but it may cause job losses and require workers to retrain.
 
 ---
 
-## 10.3 Environmental impacts
+### 10.3 Environmental impacts
 
 | Positive environmental impact | Explanation |
 | --- | --- |
@@ -705,15 +705,15 @@ F --> G[Optional check<br/>database / human review]
 | E-waste | more hardware may be replaced or discarded |
 | Carbon emissions | electricity use may increase emissions if energy source is not clean |
 
-### Mark scheme phrase
+#### Mark scheme phrase
 
 > An environmental impact of AI is that large AI systems may use a lot of electricity and require cooling, but AI can also optimise energy use and reduce waste in other systems.
 
 ---
 
-# 11. Mark Scheme Keywords
+## 11. Mark Scheme Keywords
 
-## 11.1 Ethics keywords
+### 11.1 Ethics keywords
 
 - **moral principles**
 - **code of conduct**
@@ -726,7 +726,7 @@ F --> G[Optional check<br/>database / human review]
 - **fairness**
 - **accountability**
 
-## 11.2 Copyright keywords
+### 11.2 Copyright keywords
 
 - **legal protection**
 - **intellectual property**
@@ -738,7 +738,7 @@ F --> G[Optional check<br/>database / human review]
 - **income / revenue**
 - **legal action**
 
-## 11.3 Licence keywords
+### 11.3 Licence keywords
 
 - **source code available**
 - **modify / adapt**
@@ -750,7 +750,7 @@ F --> G[Optional check<br/>database / human review]
 - **restrict copying**
 - **support and updates**
 
-## 11.4 AI keywords
+### 11.4 AI keywords
 
 - **training data**
 - **trained model**
@@ -765,7 +765,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-# 12. Common Mistakes 易错表
+## 12. Common Mistakes 易错表
 
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
@@ -783,9 +783,9 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-# 13. Scenario Answer Bank
+## 13. Scenario Answer Bank
 
-## 13.1 Programmer ethics scenarios
+### 13.1 Programmer ethics scenarios
 
 | Scenario | Answer direction |
 | --- | --- |
@@ -795,13 +795,13 @@ F --> G[Optional check<br/>database / human review]
 | Company collects user data secretly | privacy issue; unethical if no informed consent |
 | Programmer releases untested safety software | unethical; may harm public health/safety/welfare |
 
-### Template
+#### Template
 
 > The programmer should act ethically by ________. This protects ________ because ________. If they do not, it could cause ________ and reduce trust in the software/company.
 
 ---
 
-## 13.2 Copyright scenarios
+### 13.2 Copyright scenarios
 
 | Scenario | Answer direction |
 | --- | --- |
@@ -810,13 +810,13 @@ F --> G[Optional check<br/>database / human review]
 | Student uses image in project | check permission/licence; give attribution if required |
 | Employee reuses company code in own app | may be unethical/illegal; code belongs to employer |
 
-### Template
+#### Template
 
 > Copyright is needed because it identifies ________ as the owner and gives legal protection if someone ________ without permission.
 
 ---
 
-## 13.3 Licence choice scenarios
+### 13.3 Licence choice scenarios
 
 | Scenario | Suitable licence | Answer direction |
 | --- | --- | --- |
@@ -826,13 +826,13 @@ F --> G[Optional check<br/>database / human review]
 | Programmer wants community improvements | Open source / free software | others can modify and redistribute under licence |
 | Client pays for maintenance but wants modifiable code | Open source / free software style | source can be changed; programmer earns from support/updates |
 
-### Template
+#### Template
 
 > A suitable licence is ________ because ________. This matches the scenario because the user/business needs ________.
 
 ---
 
-## 13.4 AI scenarios
+### 13.4 AI scenarios
 
 | Scenario | AI application | Answer direction |
 | --- | --- | --- |
@@ -842,46 +842,46 @@ F --> G[Optional check<br/>database / human review]
 | Website suggests videos | recommendation system | uses previous user behaviour to predict interest |
 | Smart speaker responds to voice | speech recognition | converts speech to text/commands |
 
-### Template
+#### Template
 
 > AI is used by taking input data from ________. The system uses ________ recognition and compares patterns with a trained model. It then outputs ________.
 
 ---
 
-# 14. 10 Marks Quick Check
+## 14. 10 Marks Quick Check
 
-## Question 1: Ethics and professional bodies [2]
+### Question 1: Ethics and professional bodies [2]
 
 (a) Define ethics in the context of computing. [1]  
 (b) Give one reason why a programmer may join BCS or IEEE. [1]
 
-### Mark scheme
+#### Mark scheme
 
 (a) Moral principles / code of conduct guiding professional behaviour. [1]  
 (b) Provides ethical guidance / professional standards / code of conduct / accountability. [1]
 
 ---
 
-## Question 2: Copyright [2]
+### Question 2: Copyright [2]
 
 A programmer writes a new game and wants to protect the source code.
 
 Explain why copyright is useful. [2]
 
-### Mark scheme
+#### Mark scheme
 
 - Identifies programmer as owner/author / gives formal recognition of ownership. [1]
 - Allows legal action / prevents unauthorised copying or distribution / protects income. [1]
 
 ---
 
-## Question 3: Software licence [3]
+### Question 3: Software licence [3]
 
 A company wants users to try a limited version of its software before deciding whether to pay for the full version.
 
 Identify a suitable licence and justify your answer. [3]
 
-### Mark scheme
+#### Mark scheme
 
 - Shareware. [1]
 - Users can try the software before paying / limited version or trial period. [1]
@@ -889,13 +889,13 @@ Identify a suitable licence and justify your answer. [3]
 
 ---
 
-## Question 4: AI [3]
+### Question 4: AI [3]
 
 A car park system uses a camera to read vehicle registration numbers.
 
 Explain how AI can identify the registration number. [3]
 
-### Mark scheme
+#### Mark scheme
 
 - Camera captures image of registration plate. [1]
 - OCR / image recognition identifies the characters / plate area. [1]
@@ -903,9 +903,9 @@ Explain how AI can identify the registration number. [3]
 
 ---
 
-# 15. 20 Marks Exam-Style Practice with Mark Scheme
+## 15. 20 Marks Exam-Style Practice with Mark Scheme
 
-## Question 1: Ethics in software development [5]
+### Question 1: Ethics in software development [5]
 
 A programmer is developing software for a hospital. The software stores patient data and helps doctors view patient records.
 
@@ -914,7 +914,7 @@ Explain why the programmer needs to act ethically towards:
 (a) colleagues working on the project [2]  
 (b) the public / patients who use the hospital service [3]
 
-### Mark scheme
+#### Mark scheme
 
 (a) Award up to [2]:
 
@@ -933,13 +933,13 @@ Explain why the programmer needs to act ethically towards:
 
 ---
 
-## Question 2: Copyright and software ownership [4]
+### Question 2: Copyright and software ownership [4]
 
 A programmer creates an application and sells it online. Another person copies the application and offers it as a free download.
 
 Explain why copyright legislation is needed in this situation. [4]
 
-### Mark scheme
+#### Mark scheme
 
 Award up to [4]:
 
@@ -952,13 +952,13 @@ Award up to [4]:
 
 ---
 
-## Question 3: Software licence choice [5]
+### Question 3: Software licence choice [5]
 
 A small business pays a programmer to create a program for its internal use. The business wants to be able to modify the source code later. The programmer will be paid to provide maintenance and security updates.
 
 Identify a suitable type of licence and justify your choice. [5]
 
-### Mark scheme
+#### Mark scheme
 
 Award marks as follows:
 
@@ -972,14 +972,14 @@ Accept well-justified alternatives if linked clearly to the scenario.
 
 ---
 
-## Question 4: AI application and impact [6]
+### Question 4: AI application and impact [6]
 
 A city uses AI cameras to identify vehicles entering a restricted traffic zone.
 
 (a) Describe how AI can identify a vehicle registration number from a camera image. [3]  
 (b) Explain one social impact and one economic impact of using this AI system. [3]
 
-### Mark scheme
+#### Mark scheme
 
 (a) Award up to [3]:
 

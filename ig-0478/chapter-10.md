@@ -1,148 +1,388 @@
-# IGCSE 0478 Computer Science - Chapter 10 Updated Checklist
-## Boolean Logic｜Syllabus-Aligned Paper 2 Revision Sheet
+# Chapter 10: Boolean Logic
 
-> **Version:** Syllabus-aligned revision for Paper 2  
-> **Target:** Cambridge IGCSE Computer Science 0478  
-> **Chapter:** 10 Boolean logic  
-> **Main audience:** Students  
-> **Style:** Chinese explanation + English logic keywords
+> **Paper 2 focus:** move accurately between a problem statement, logic-gate circuit, Boolean expression and truth table.
 
 ---
 
-# 0. How to Use This Sheet
+## 1. Syllabus Coverage
 
-Boolean logic questions are usually skill questions. You need to:
-
-1. recognise logic gates
-2. write Boolean expressions
-3. complete truth tables
-4. build a logic circuit from an expression
-5. simplify simple ideas using careful reasoning
-
----
-
-# 1. Logic Gates
-
-| Gate | Output is 1 when... | Expression |
-| --- | --- | --- |
-| NOT | input is 0 | `NOT A` |
-| AND | all inputs are 1 | `A AND B` |
-| OR | at least one input is 1 | `A OR B` |
-| NAND | not all inputs are 1 | `NOT (A AND B)` |
-| NOR | no input is 1 | `NOT (A OR B)` |
-| XOR | inputs are different | `A XOR B` |
-
-Common mistake:
-
-- XOR is not the same as OR. XOR is false when both inputs are 1.
+| Objective | Where it is covered |
+|---|---|
+| Recognise standard symbols for NOT, AND, OR, NAND, NOR and XOR/EOR | Section 2 |
+| State the function of each gate | Sections 2–3 |
+| Create a circuit from a problem, expression or truth table | Sections 5–6 |
+| Complete a truth table from a problem, expression or circuit | Sections 4–6 |
+| Write an expression from a problem, circuit or truth table | Sections 5–6 |
+| Work with up to three inputs and one output | Worked Examples and practice sections |
 
 ---
 
-# 2. Two-Input Truth Tables
+## 2. Standard Logic Gates
 
-| A | B | A AND B | A OR B | A XOR B |
-| --- | --- | --- | --- | --- |
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 1 | 0 |
+![Standard symbols for NOT, AND, OR, NAND, NOR and XOR gates](../assets/logic-gates.svg)
 
-For NAND and NOR:
+Important symbol details:
 
-- `A NAND B` is the opposite of `A AND B`
-- `A NOR B` is the opposite of `A OR B`
+- `NOT` is a triangle with a small inversion circle at the output.
+- `NAND` is an `AND` gate with an inversion circle.
+- `NOR` is an `OR` gate with an inversion circle.
+- `XOR` or `EOR` looks like `OR` with one extra curved line at the input side.
+- `NOT` has one input; each other required gate has two inputs.
 
----
-
-# 3. Building a Truth Table
-
-Method:
-
-1. write all possible input combinations
-2. add intermediate columns for brackets
-3. calculate NOT before AND/OR when needed
-4. complete the final output column
-
-Example:
-
-Expression:
-
-```text
-(A AND B) OR (NOT C)
-```
-
-Use intermediate columns:
-
-| A | B | C | A AND B | NOT C | Output |
-| --- | --- | --- | --- | --- | --- |
-| 0 | 0 | 0 | 0 | 1 | 1 |
-| 0 | 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 1 | 1 |
-| 1 | 1 | 1 | 1 | 0 | 1 |
+In an exam, draw the standard shape rather than a rectangle containing the gate name.
 
 ---
 
-# 4. Expressions from Scenarios
+## 3. Gate Functions and Truth Tables
 
-Scenario: An alarm sounds if the door is open and the system is armed.
+### NOT
 
-```text
-Alarm = DoorOpen AND Armed
-```
+`NOT` reverses its input.
 
-Scenario: A fan turns on if temperature is high or manual override is pressed.
+| A | NOT A |
+|---:|---:|
+| 0 | 1 |
+| 1 | 0 |
 
-```text
-Fan = HighTemp OR Override
-```
+### Two-input gates
 
-Scenario: A machine starts only if the safety guard is closed and the stop button is not pressed.
+| A | B | AND | OR | NAND | NOR | XOR/EOR |
+|---:|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 |
 
-```text
-Start = GuardClosed AND NOT StopPressed
-```
+Meanings:
+
+- `AND`: 1 only when both inputs are 1
+- `OR`: 1 when at least one input is 1
+- `NAND`: the inverse of `AND`
+- `NOR`: the inverse of `OR`
+- `XOR/EOR`: 1 when the two inputs are different
+
+`OR` includes the case where both inputs are 1. `XOR` does not.
 
 ---
 
-# 5. Circuits from Expressions
+## 4. Building Truth Tables
+
+For `n` inputs, a complete truth table contains `2^n` input combinations.
+
+| Inputs | Rows |
+|---:|---:|
+| 1 | 2 |
+| 2 | 4 |
+| 3 | 8 |
+
+For three inputs, use a systematic order:
+
+| A | B | C |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 0 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+| 1 | 1 | 1 |
+
+Add an intermediate column for every gate or sub-expression. This reduces mental errors and can earn method marks.
+
+---
+
+## 5. Moving Between Representations
+
+### Expression to circuit
 
 For:
 
 ```text
-Output = (A AND B) OR (NOT C)
+Q = (A AND B) OR (NOT C)
 ```
 
-Circuit steps:
+build it in the written order:
 
-1. send `A` and `B` into an AND gate
-2. send `C` into a NOT gate
-3. send both results into an OR gate
+1. connect `A` and `B` to an `AND` gate
+2. connect `C` to a `NOT` gate
+3. connect both intermediate outputs to an `OR` gate
+4. label the final output `Q`
 
-Exam tip: draw intermediate gate outputs clearly. Avoid crossing lines when possible.
+```mermaid
+flowchart LR
+    A[A] --> G1[AND]
+    B[B] --> G1
+    C[C] --> G2[NOT]
+    G1 --> G3[OR]
+    G2 --> G3
+    G3 --> Q[Q]
+```
+
+The Mermaid diagram shows connectivity. In an exam response, replace the labelled boxes with the standard gate symbols from Section 2.
+
+### Circuit to expression
+
+Label intermediate outputs:
+
+```text
+X = A NAND B
+Y = NOT C
+Q = X OR Y
+```
+
+Then substitute only if needed:
+
+```text
+Q = (A NAND B) OR (NOT C)
+```
+
+### Problem statement to expression
+
+Translate one condition at a time.
+
+> A warning sounds when the door is open or the window is open, and the system is not in maintenance mode.
+
+Let:
+
+- `D = 1` when the door is open
+- `W = 1` when the window is open
+- `M = 1` when maintenance mode is active
+
+Then:
+
+```text
+Q = (D OR W) AND (NOT M)
+```
+
+Brackets preserve the grouping in the problem.
+
+### Truth table to circuit
+
+First identify a familiar pattern:
+
+- output 1 only for `11` suggests `AND`
+- output 1 for every row except `00` suggests `OR`
+- output 1 when inputs differ suggests `XOR`
+- the inverse patterns suggest `NAND` or `NOR`
+
+For a multi-gate table, use intermediate conditions rather than guessing from the final column.
 
 ---
 
-# 6. Common Exam Mistakes
+## 6. Worked Example 1 — Expression to Truth Table
 
-- Missing brackets when the expression has two parts.
-- Forgetting to invert the final output for NAND or NOR.
-- Writing `A AND NOT B` but drawing `NOT (A AND B)`.
-- Leaving out intermediate columns in a three-input truth table.
-- Using `1` and `0` inconsistently with TRUE and FALSE.
+Complete the truth table for:
+
+```text
+Q = (A AND (NOT B)) OR C
+```
+
+Create columns in gate order:
+
+| A | B | C | NOT B | A AND (NOT B) | Q |
+|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 1 |
+
+Check:
+
+- whenever `C = 1`, the final `OR` makes `Q = 1`
+- when `C = 0`, `Q` is 1 only for `A = 1` and `B = 0`
 
 ---
 
-# 7. Mini Practice
+## 7. Worked Example 2 — Scenario to Circuit
 
-1. Complete the truth table for `A OR (B AND C)`.
-2. Write an expression for a light that turns on when it is dark and motion is detected.
-3. Draw a circuit for `(A OR B) AND NOT C`.
-4. Explain why XOR is different from OR.
-5. Write the expression for a NAND gate using AND and NOT.
+A greenhouse fan runs when:
+
+- temperature is high, `T = 1`
+- and either humidity is high, `H = 1`, or manual override is active, `M = 1`
+
+Expression:
+
+```text
+Fan = T AND (H OR M)
+```
+
+Circuit construction:
+
+1. connect `H` and `M` to an `OR` gate
+2. connect that result and `T` to an `AND` gate
+3. label the output `Fan`
+
+```mermaid
+flowchart LR
+    H[H] --> G1[OR]
+    M[M] --> G1
+    G1 --> G2[AND]
+    T[T] --> G2
+    G2 --> F[Fan]
+```
+
+Truth table:
+
+| T | H | M | H OR M | Fan |
+|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
+
+The output cannot be 1 when `T = 0`, regardless of the other inputs.
 
 ---
 
+## 8. Worked Example 3 — Trace a NAND/NOR Network
+
+Given:
+
+```text
+X = A NAND B
+Y = B NOR C
+Q = X AND Y
+```
+
+For `A = 1`, `B = 0`, `C = 0`:
+
+1. `A AND B = 0`, so `X = 1`
+2. `B OR C = 0`, so `Y = 1`
+3. `X AND Y = 1`, so `Q = 1`
+
+Relevant rows:
+
+| A | B | C | X = A NAND B | Y = B NOR C | Q |
+|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 1 | 1 | 1 |
+| 0 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 | 0 |
+
+Do not replace the given network with a simplified alternative when the task asks you to reproduce the stated circuit. Follow each gate exactly.
+
+---
+
+## 9. Common Mistakes Checklist
+
+- [ ] I recognise the inversion circle on `NOT`, `NAND` and `NOR`.
+- [ ] I recognise the extra input-side curve on `XOR/EOR`.
+- [ ] I remember that `OR(1,1) = 1` but `XOR(1,1) = 0`.
+- [ ] I include all 4 or 8 input combinations.
+- [ ] I use intermediate columns in gate order.
+- [ ] I label every input, intermediate output and final output.
+- [ ] I use brackets to show grouping in expressions.
+- [ ] I draw standard symbols rather than labelled rectangles in exam answers.
+- [ ] I use no more than the stated inputs and one final output.
+- [ ] I do not simplify a circuit when the task says not to.
+
+---
+
+## 10. 10 Marks Quick Check
+
+1. State the output of an `AND` gate and a `NAND` gate when both inputs are 1. **[2]**
+2. State the output of an `OR` gate and an `XOR` gate when both inputs are 1. **[2]**
+3. State how the `NAND` symbol differs from the `AND` symbol, and how the `XOR` symbol differs from the `OR` symbol. **[2]**
+4. State how many rows are needed for a truth table with three inputs. **[1]**
+5. Write an expression for: “The lamp is on when switch A is on and switch B is not on.” **[2]**
+6. State why intermediate columns are useful in a truth table. **[1]**
+
+**Total: 10 marks**
+
+### Quick Check Answers
+
+1. `AND = 1`; `NAND = 0`. **[2]**
+2. `OR = 1`; `XOR = 0`. **[2]**
+3. `NAND` has an inversion circle at the output of an `AND` symbol; `XOR` has an extra curved line at the input side of an `OR` symbol. **[2]**
+4. Eight rows. **[1]**
+5. `Lamp = A AND (NOT B)`. **[2]**
+6. They separate the result of each gate/sub-expression, making the process traceable and reducing errors. **[1]**
+
+---
+
+## 11. 20 Marks Practice
+
+1. State the output condition for each gate: `NOT`, `AND`, `OR`, `NAND`, `NOR`, `XOR`. **[6]**
+2. Complete the outputs:
+
+   | A | B | A NAND B | A NOR B |
+   |---:|---:|---:|---:|
+   | 0 | 0 | ? | ? |
+   | 0 | 1 | ? | ? |
+   | 1 | 0 | ? | ? |
+   | 1 | 1 | ? | ? |
+
+   **[4]**
+3. For `Q = (A NAND B) OR (NOT C)`, find `Q` for:
+   - `A=0, B=0, C=1`
+   - `A=0, B=1, C=1`
+   - `A=1, B=1, C=0`
+   - `A=1, B=1, C=1`
+
+   **[4]**
+4. A security light turns on when motion is detected, `M=1`, and it is either dark, `D=1`, or the test switch is active, `T=1`.
+   - write the Boolean expression **[2]**
+   - state the two gates required and their connection order **[2]**
+   - find the output for `M=1, D=0, T=1` and for `M=0, D=1, T=1` **[2]**
+
+**Total: 20 marks**
+
+### 20 Marks Practice Mark Scheme
+
+1.
+   - `NOT`: output is the inverse of its one input
+   - `AND`: 1 only when both inputs are 1
+   - `OR`: 1 when at least one input is 1
+   - `NAND`: inverse of `AND`
+   - `NOR`: inverse of `OR`
+   - `XOR`: 1 when the inputs are different
+
+   One mark each. **[6]**
+
+2.
+
+   | A | B | A NAND B | A NOR B |
+   |---:|---:|---:|---:|
+   | 0 | 0 | 1 | 1 |
+   | 0 | 1 | 1 | 0 |
+   | 1 | 0 | 1 | 0 |
+   | 1 | 1 | 0 | 0 |
+
+   Award one mark per correct row. **[4]**
+
+3.
+
+   | A | B | C | A NAND B | NOT C | Q |
+   |---:|---:|---:|---:|---:|---:|
+   | 0 | 0 | 1 | 1 | 0 | 1 |
+   | 0 | 1 | 1 | 1 | 0 | 1 |
+   | 1 | 1 | 0 | 0 | 1 | 1 |
+   | 1 | 1 | 1 | 0 | 0 | 0 |
+
+   One mark per correct final output. **[4]**
+
+4.
+   - `Light = M AND (D OR T)`. **[2]**
+   - Connect `D` and `T` to an `OR` gate, then connect its output and `M` to an `AND` gate. **[2]**
+   - For `1,0,1`, output `1`; for `0,1,1`, output `0`. **[2]**
+
+---
+
+## 12. Final Self-Assessment
+
+- [ ] I can draw and identify all six standard gate symbols.
+- [ ] I can state every gate's output condition.
+- [ ] I can build complete two-input and three-input truth tables.
+- [ ] I can work from gate to gate using intermediate columns.
+- [ ] I can translate a scenario into an expression and circuit.
+- [ ] I can translate a circuit into an expression and truth table.
+- [ ] I completed both practice sets without looking at the answers first.

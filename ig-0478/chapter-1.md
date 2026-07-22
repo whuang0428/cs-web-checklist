@@ -1,5 +1,5 @@
-# IGCSE 0478 Computer Science — Chapter 1 Updated Notes
-## Data Representation｜Syllabus-Aligned Paper 1 Revision Sheet
+# IGCSE 0478 Chapter 1: Data Representation
+> **Data Representation｜Syllabus-Aligned Paper 1 Revision Sheet**
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 **Target:** Cambridge IGCSE Computer Science 0478  
 **Main audience:** Students  
@@ -8,7 +8,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 本章不是“背很多定义”就能拿高分的章节。2025 的题目明显更喜欢考：
 
 1. **conversion / calculation / working**  
@@ -28,7 +28,7 @@ D --> E[Compression<br/>lossy / lossless / RLE]
 
 ---
 
-# 1. Recent Paper 1 Pattern Map
+## 1. Recent Paper 1 Pattern Map
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
 | Binary / denary / hexadecimal | Very high frequency | Base 2 / base 10 / base 16, binary ↔ denary, hex ↔ binary, hex ↔ denary |
@@ -45,8 +45,8 @@ D --> E[Compression<br/>lossy / lossless / RLE]
 
 ---
 
-# 2. Content Update Decision
-## 2.1 Keep and Strengthen
+## 2. Content Update Decision
+### 2.1 Keep and Strengthen
 | Kept content | Reason |
 | --- | --- |
 | binary / denary / hexadecimal conversions | Always examinable and frequently tested |
@@ -59,7 +59,7 @@ D --> E[Compression<br/>lossy / lossless / RLE]
 | lossy / lossless / RLE | High-frequency 2025 topic |
 
 
-## 2.2 Downweight
+### 2.2 Downweight
 | Downweighted content | Why |
 | --- | --- |
 | very detailed memory dump explanation | Usually only needs "hex is used for error codes / memory dumps" |
@@ -71,7 +71,7 @@ D --> E[Compression<br/>lossy / lossless / RLE]
 
 ---
 
-# 3. One-Page Mind Map
+## 3. One-Page Mind Map
 ```mermaid
 mindmap
   root((Chapter 1<br/>Data Representation))
@@ -106,13 +106,13 @@ mindmap
 
 ---
 
-# 4. 1.1 Number Systems
-## 4.1 Why computers use binary
-### Mark scheme answer
+## 4. 1.1 Number Systems
+### 4.1 Why computers use binary
+#### Mark scheme answer
 > Computers use binary because computer circuits / transistors can only represent two states, such as on/off, high/low or 1/0. All data must be converted into binary so it can be processed and stored by the computer.
 >
 
-### Must-have keywords
+#### Must-have keywords
 + **transistors**
 + **logic circuits**
 + **two states**
@@ -120,7 +120,7 @@ mindmap
 + **1 and 0**
 + **processed / stored**
 
-### Common weak answer
+#### Common weak answer
 > Computers use binary because computers understand binary.
 >
 
@@ -128,7 +128,7 @@ This is too vague. It does not explain **why**.
 
 ---
 
-## 4.2 Number system definitions
+### 4.2 Number system definitions
 | Number system | Base | Digits used | Key point |
 | --- | ---: | --- | --- |
 | Denary | 10 | 0–9 | normal human number system |
@@ -136,7 +136,7 @@ This is too vague. It does not explain **why**.
 | Hexadecimal | 16 | 0–9 and A–F | shorter representation of binary |
 
 
-### Recent exam-style facts
+#### Recent exam-style facts
 + 8-bit unsigned binary range: **0 to 255**
 + 1 hexadecimal digit = **4 bits**
 + A in hexadecimal = **10**
@@ -144,8 +144,8 @@ This is too vague. It does not explain **why**.
 
 ---
 
-## 4.3 Binary ↔ denary
-### Binary to denary
+### 4.3 Binary ↔ denary
+#### Binary to denary
 Example:
 
 ```latex
@@ -158,7 +158,7 @@ Binary: 10110110
 = 182
 ```
 
-### Denary to binary
+#### Denary to binary
 Example: convert 53 to 8-bit binary.
 
 ```latex
@@ -170,7 +170,7 @@ Example: convert 53 to 8-bit binary.
 Answer = 00110101
 ```
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | writing `110101` when question asks for 8-bit | write `00110101` |
@@ -180,8 +180,8 @@ Answer = 00110101
 
 ---
 
-## 4.4 Hexadecimal ↔ binary
-### Conversion table
+### 4.4 Hexadecimal ↔ binary
+#### Conversion table
 | Binary | Hex | Denary | Binary | Hex | Denary |
 | --- | --- | ---: | --- | --- | ---: |
 | 0000 | 0 | 0 | 1000 | 8 | 8 |
@@ -194,7 +194,7 @@ Answer = 00110101
 | 0111 | 7 | 7 | 1111 | F | 15 |
 
 
-### Binary to hexadecimal
+#### Binary to hexadecimal
 Example:
 
 ```latex
@@ -211,7 +211,7 @@ Convert each nibble:
 Answer = 8A1
 ```
 
-### Hexadecimal to binary
+#### Hexadecimal to binary
 Example:
 
 ```latex
@@ -223,7 +223,7 @@ B = 1011
 Answer = 01111011
 ```
 
-### Common mistake
+#### Common mistake
 | Mistake | Why it loses marks |
 | --- | --- |
 | not grouping into 4 bits | hex conversion depends on nibbles |
@@ -233,7 +233,7 @@ Answer = 01111011
 
 ---
 
-## 4.5 Hexadecimal uses
+### 4.5 Hexadecimal uses
 | Use | Why hexadecimal is suitable |
 | --- | --- |
 | HTML colour codes | 6 hex digits represent RGB values, e.g. `#FF0000` |
@@ -244,15 +244,15 @@ Answer = 01111011
 | Assembly / machine code | shorter representation of binary instructions |
 
 
-### Mark scheme answer
+#### Mark scheme answer
 > Hexadecimal is used because it is a shorter representation of binary, easier for humans / programmers to read, and easier to convert to binary than denary.
 >
 
 ---
 
-# 5. Binary Operations
-## 5.1 Binary addition
-### Rules
+## 5. Binary Operations
+### 5.1 Binary addition
+#### Rules
 | Addition | Result |
 | --- | --- |
 | 0 + 0 | 0 |
@@ -262,14 +262,14 @@ Answer = 01111011
 | 1 + 1 + 1 | 11, write 1 carry 1 |
 
 
-### Example
+#### Example
 ```latex
    01100101
  + 01110000
  = 11010101
 ```
 
-### 2025 mark scheme focus
+#### 2025 mark scheme focus
 Marks are often awarded for:
 
 1. correct nibbles / final binary answer  
@@ -278,21 +278,21 @@ Marks are often awarded for:
 
 ---
 
-## 5.2 Overflow
-### Definition
+### 5.2 Overflow
+#### Definition
 > Overflow occurs when the result is too large to be stored in the number of bits available.
 >
 
-### For 8-bit unsigned binary
+#### For 8-bit unsigned binary
 + Maximum value = **255**
 + If result is greater than 255, overflow occurs.
 + If a 9th bit is produced in an 8-bit register, overflow occurs.
 
-### Mark scheme answer
+#### Mark scheme answer
 > Overflow occurs because the result is greater than 255 / too large to be stored in 8 bits.
 >
 
-### Common mistake
+#### Common mistake
 > Overflow happens when there is a carry.
 >
 
@@ -300,8 +300,8 @@ Not always enough. A carry inside the calculation is normal. You need to say **t
 
 ---
 
-## 5.3 Logical binary shift
-### Rules
+### 5.3 Logical binary shift
+#### Rules
 | Shift | Effect on positive binary integer |
 | --- | --- |
 | left shift 1 place | ×2 |
@@ -310,12 +310,12 @@ Not always enough. A carry inside the calculation is normal. You need to say **t
 | right shift 2 places | ÷4 |
 
 
-### Important details
+#### Important details
 + Bits shifted out of the register are **lost**.
 + Zeros are shifted in from the opposite side.
 + For right shifts, the result may be rounded down because lost bits are discarded.
 
-### Example
+#### Example
 ```latex
 Original: 01111000
 
@@ -326,21 +326,21 @@ Denary:
 16 + 8 + 4 + 2 = 30
 ```
 
-### Mark scheme answer structure
+#### Mark scheme answer structure
 1. Show the binary number after the shift.  
 2. Convert to denary if asked.  
 3. Explain ×2 / ÷2 effect if asked.
 
 ---
 
-## 5.4 Two's complement
-## 8-bit two's complement range
+### 5.4 Two's complement
+### 8-bit two's complement range
 | Bits | Range |
 | --- | --- |
 | 8-bit two's complement | -128 to +127 |
 
 
-### Positive numbers
+#### Positive numbers
 Positive numbers look like normal binary, but the leftmost bit is `0`.
 
 Example:
@@ -349,7 +349,7 @@ Example:
 +45 = 00101101
 ```
 
-### Negative denary to 8-bit two's complement
+#### Negative denary to 8-bit two's complement
 Example: convert -38 to 8-bit two's complement.
 
 Step 1: write +38 in binary.
@@ -376,7 +376,7 @@ Answer:
 -38 = 11011010
 ```
 
-### Two's complement binary to denary
+#### Two's complement binary to denary
 Example:
 
 ```latex
@@ -395,7 +395,7 @@ Use column values:
 = -22
 ```
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | treating MSB as simply "negative sign" | MSB has value `-128` in 8-bit two's complement |
@@ -405,13 +405,13 @@ Use column values:
 
 ---
 
-# 6. 1.2 Text, Sound and Images
-## 6.1 Text representation
-### Character set
+## 6. 1.2 Text, Sound and Images
+### 6.1 Text representation
+#### Character set
 > A character set is a set of characters and the codes used to represent them.
 >
 
-### How text is stored
+#### How text is stored
 > Each character is given a unique binary code. The codes are stored in sequence.
 >
 
@@ -425,7 +425,7 @@ D code stored third
 
 ---
 
-## 6.2 ASCII vs Unicode
+### 6.2 ASCII vs Unicode
 | Feature | ASCII | Unicode |
 | --- | --- | --- |
 | Character range | smaller | much larger |
@@ -435,11 +435,11 @@ D code stored third
 | File size | smaller | may be larger |
 
 
-### Mark scheme answer
+#### Mark scheme answer
 > Unicode can represent more characters, symbols, emojis and languages than ASCII, but it requires more bits per character.
 >
 
-### Common mistake
+#### Common mistake
 > Unicode is just another name for ASCII.
 >
 
@@ -447,8 +447,8 @@ Wrong. Unicode has a much larger character set.
 
 ---
 
-## 6.3 Sound representation
-### Key terms
+### 6.3 Sound representation
+#### Key terms
 | Term | Meaning |
 | --- | --- |
 | Sample rate | number of samples taken per second |
@@ -457,20 +457,20 @@ Wrong. Unicode has a much larger character set.
 | Channels | mono = 1, stereo = 2 |
 
 
-### How sound is sampled
+#### How sound is sampled
 Mark scheme style:
 
 > The amplitude / height of the sound wave is measured at regular time intervals. Each sample is converted into a binary value. The sequence of binary values gives an approximation of the original sound wave.
 >
 
-### Effect of sample rate and sample resolution
+#### Effect of sample rate and sample resolution
 | Increase in... | Effect |
 | --- | --- |
 | sample rate | more samples per second, more accurate recording, larger file size |
 | sample resolution | more bits per sample, more accurate amplitude, larger file size |
 
 
-### Common mistake
+#### Common mistake
 | Student writes | Why weak |
 | --- | --- |
 | "higher sample rate makes sound louder" | sample rate affects accuracy, not volume |
@@ -480,8 +480,8 @@ Mark scheme style:
 
 ---
 
-## 6.4 Image representation
-### Key terms
+### 6.4 Image representation
+#### Key terms
 | Term | Meaning |
 | --- | --- |
 | Pixel | smallest element / dot of an image |
@@ -489,22 +489,22 @@ Mark scheme style:
 | Colour depth | number of bits used to represent the colour of one pixel |
 
 
-### Effect of resolution and colour depth
+#### Effect of resolution and colour depth
 | Increase in... | Effect |
 | --- | --- |
 | resolution | more pixels, better detail, larger file size |
 | colour depth | more colours available, larger file size |
 
 
-### Mark scheme style
+#### Mark scheme style
 > The file size increases because more bits are needed to store the image.
 >
 
 ---
 
-# 7. 1.3 Data Storage and File Size
-## 7.1 Units
-### Binary units
+## 7. 1.3 Data Storage and File Size
+### 7.1 Units
+#### Binary units
 | Unit | Size |
 | --- | ---: |
 | bit | smallest unit, 0 or 1 |
@@ -516,15 +516,15 @@ Mark scheme style:
 | TiB | 1024 GiB |
 
 
-### Exam warning
+#### Exam warning
 Cambridge often uses **KiB / MiB / GiB** for binary calculations.
 
 Do not use 1000 unless the question specifically uses **KB / MB / GB**.
 
 ---
 
-## 7.2 Image file size
-### Formula
+### 7.2 Image file size
+#### Formula
 ```latex
 Image file size in bits = width × height × colour depth
 ```
@@ -547,7 +547,7 @@ If answer needs MiB:
 MiB = KiB ÷ 1024
 ```
 
-### Example
+#### Example
 An image is 800 pixels wide and 600 pixels high. Colour depth is 16 bits.
 
 ```latex
@@ -563,14 +563,14 @@ KiB = 960 000 ÷ 1024
 
 ---
 
-## 7.3 Sound file size
-### Formula
+### 7.3 Sound file size
+#### Formula
 ```latex
 Sound file size in bits =
 sample rate × sample resolution × duration × number of channels
 ```
 
-### Example
+#### Example
 A 10-second sound uses:
 
 + sample rate = 22 016 Hz
@@ -588,7 +588,7 @@ KiB = 220 160 ÷ 1024
     = 215 KiB
 ```
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | forgetting to divide by 8 | bits must be converted to bytes |
@@ -599,13 +599,13 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-# 8. Compression
-## 8.1 Why compression is needed
-### Mark scheme answer
+## 8. Compression
+### 8.1 Why compression is needed
+#### Mark scheme answer
 > Compression reduces file size, so less storage space is needed, less bandwidth is required, and the file can be transmitted / uploaded / downloaded faster.
 >
 
-### Keywords
+#### Keywords
 + **reduces file size**
 + **less storage**
 + **less bandwidth**
@@ -614,7 +614,7 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-## 8.2 Lossy vs lossless compression
+### 8.2 Lossy vs lossless compression
 | Feature | Lossless | Lossy |
 | --- | --- | --- |
 | Data removed? | No permanent data loss | Data permanently removed |
@@ -624,7 +624,7 @@ KiB = 220 160 ÷ 1024
 | Example | RLE | JPEG / MP3 style compression |
 
 
-### Mark scheme wording
+#### Mark scheme wording
 **Lossless:**
 
 > The file size is reduced without permanently removing any data.
@@ -637,12 +637,12 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-## 8.3 Run-length encoding (RLE)
-### What it does
+### 8.3 Run-length encoding (RLE)
+#### What it does
 > RLE identifies repeated adjacent data and stores the value with the number of times it is repeated.
 >
 
-### Example
+#### Example
 ```latex
 Original:
 AAAAABBBCC
@@ -657,13 +657,13 @@ For images, this could mean:
 5 red pixels, 3 blue pixels, 2 black pixels
 ```
 
-### Mark scheme answer
+#### Mark scheme answer
 > Repeating pixels / patterns are identified and grouped. The colour / value is stored with the number of times it is repeated.
 >
 
 ---
 
-## 8.4 Choosing compression method
+### 8.4 Choosing compression method
 | Scenario | Best choice | Why |
 | --- | --- | --- |
 | program code | lossless | code must be exactly restored or it may not run |
@@ -686,50 +686,50 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-# 9. Mark Scheme Style Answer Templates
-## 9.1 Why hexadecimal is used
+## 9. Mark Scheme Style Answer Templates
+### 9.1 Why hexadecimal is used
 > Hexadecimal is a shorter representation of binary. It is easier for humans / programmers to read and understand. It is also easy to convert between hexadecimal and binary because one hexadecimal digit represents four bits.
 >
 
 ---
 
-## 9.2 Explain overflow
+### 9.2 Explain overflow
 > Overflow occurs when the result of a calculation is too large to be stored in the available number of bits. For an 8-bit unsigned register, any result greater than 255 cannot be stored.
 >
 
 ---
 
-## 9.3 Explain logical shift
+### 9.3 Explain logical shift
 > In a logical shift, bits are moved left or right. Bits shifted out of the register are lost and zeros are shifted in. A left shift multiplies a positive binary integer by 2 for each shift, while a right shift divides it by 2 for each shift.
 >
 
 ---
 
-## 9.4 Explain Unicode vs ASCII
+### 9.4 Explain Unicode vs ASCII
 > Unicode can represent more characters than ASCII, including different languages, symbols and emojis. Unicode usually requires more bits per character than ASCII, so files may require more storage.
 >
 
 ---
 
-## 9.5 Explain sampling sound
+### 9.5 Explain sampling sound
 > The amplitude of the sound wave is measured at regular intervals. Each measurement is converted to a binary value. Increasing the sample rate or sample resolution improves the accuracy of the recording but increases the file size.
 >
 
 ---
 
-## 9.6 Explain image file size change
+### 9.6 Explain image file size change
 > The image file size increases because there are more pixels / more bits used to store each pixel. Increasing resolution increases the number of pixels, while increasing colour depth increases the number of bits used for each colour.
 >
 
 ---
 
-## 9.7 Explain lossless compression
+### 9.7 Explain lossless compression
 > Lossless compression reduces the file size without permanently removing data. The original file can be restored after decompression. For example, RLE stores repeated data as a value and the number of repetitions.
 >
 
 ---
 
-# 10. Common Mistakes — Must Read
+## 10. Common Mistakes — Must Read
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
 | Why binary? | "Computers understand binary" | "Transistors / logic circuits have two states, on/off or 1/0" |
@@ -749,7 +749,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-# 11. Scenario Answer Bank
+## 11. Scenario Answer Bank
 | Scenario | Answer direction |
 | --- | --- |
 | Artist wants image quality unchanged | use lossless; no data is permanently removed; original image can be restored |
@@ -764,8 +764,8 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-# 12. 10 Marks Quick Check
-## Questions
+## 12. 10 Marks Quick Check
+### Questions
 1. State the base of the binary number system. [1]  
 2. State the largest denary value that can be stored in an unsigned 8-bit register. [1]  
 3. Convert `10101110` to hexadecimal. [1]  
@@ -776,7 +776,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 8. State what is meant by colour depth. [1]  
 9. Give one reason why compression is used. [1]
 
-## Answers
+### Answers
 1. Base 2  
 2. 255  
 3. AE  
@@ -789,8 +789,8 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-# 13. 20 Marks Exam-Style Practice
-## Question 1: Number systems and operations [8]
+## 13. 20 Marks Exam-Style Practice
+### Question 1: Number systems and operations [8]
 (a) Convert the denary number 182 to 8-bit binary. [1]  
 (b) Convert `10110110` to hexadecimal. [1]  
 (c) Convert `9C` to binary. [1]  
@@ -803,7 +803,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 (e) State whether overflow has occurred. Give a reason. [2]
 
-### Mark scheme
+#### Mark scheme
 (a) `10110110` [1]  
 (b) `B6` [1]  
 (c) `10011100` [1]  
@@ -812,14 +812,14 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-## Question 2: Image and compression [6]
+### Question 2: Image and compression [6]
 An image has a resolution of 1024 × 768 pixels and a colour depth of 16 bits.
 
 (a) Calculate the file size in KiB. Show working. [3]  
 (b) Explain the effect of increasing the colour depth. [2]  
 (c) Name one lossless compression method. [1]
 
-### Mark scheme
+#### Mark scheme
 (a)
 
 ```latex
@@ -835,12 +835,12 @@ An image has a resolution of 1024 × 768 pixels and a colour depth of 16 bits.
 
 ---
 
-## Question 3: Sound and character sets [6]
+### Question 3: Sound and character sets [6]
 (a) A sound file has sample rate 44 100 Hz, sample resolution 16 bits, duration 20 seconds and stereo sound. Calculate the file size in bytes. [3]  
 (b) Explain why increasing the sample rate improves the accuracy of the recording. [2]  
 (c) Give one difference between ASCII and Unicode. [1]
 
-### Mark scheme
+#### Mark scheme
 (a)
 
 ```latex

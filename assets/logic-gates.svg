@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Standard logic gate symbols</title>
+  <desc id="desc">Symbols for NOT, AND, OR, NAND, NOR and XOR gates, with labelled inputs and outputs.</desc>
+  <style>
+    .gate { fill: #ffffff; stroke: #183153; stroke-width: 4; stroke-linejoin: round; }
+    .wire { fill: none; stroke: #183153; stroke-width: 4; stroke-linecap: round; }
+    .bubble { fill: #ffffff; stroke: #183153; stroke-width: 4; }
+    .label { fill: #183153; font: 700 24px system-ui, sans-serif; }
+    .io { fill: #425466; font: 18px system-ui, sans-serif; }
+    .panel { fill: #f7f9fc; stroke: #d9e2ef; stroke-width: 2; rx: 16; }
+  </style>
+
+  <rect width="960" height="620" fill="#ffffff"/>
+
+  <!-- NOT -->
+  <rect class="panel" x="25" y="25" width="440" height="170"/>
+  <text class="label" x="55" y="63">NOT</text>
+  <line class="wire" x1="90" y1="120" x2="165" y2="120"/>
+  <path class="gate" d="M165 78 L165 162 L250 120 Z"/>
+  <circle class="bubble" cx="261" cy="120" r="11"/>
+  <line class="wire" x1="272" y1="120" x2="350" y2="120"/>
+  <text class="io" x="68" y="113">A</text>
+  <text class="io" x="362" y="127">Q</text>
+
+  <!-- AND -->
+  <rect class="panel" x="495" y="25" width="440" height="170"/>
+  <text class="label" x="525" y="63">AND</text>
+  <line class="wire" x1="550" y1="98" x2="625" y2="98"/>
+  <line class="wire" x1="550" y1="142" x2="625" y2="142"/>
+  <path class="gate" d="M625 75 H680 A45 45 0 0 1 680 165 H625 Z"/>
+  <line class="wire" x1="725" y1="120" x2="820" y2="120"/>
+  <text class="io" x="528" y="92">A</text>
+  <text class="io" x="528" y="158">B</text>
+  <text class="io" x="832" y="127">Q</text>
+
+  <!-- OR -->
+  <rect class="panel" x="25" y="225" width="440" height="170"/>
+  <text class="label" x="55" y="263">OR</text>
+  <line class="wire" x1="90" y1="298" x2="164" y2="298"/>
+  <line class="wire" x1="90" y1="342" x2="164" y2="342"/>
+  <path class="gate" d="M155 275 Q185 320 155 365 Q224 365 270 320 Q224 275 155 275 Z"/>
+  <line class="wire" x1="270" y1="320" x2="350" y2="320"/>
+  <text class="io" x="68" y="292">A</text>
+  <text class="io" x="68" y="358">B</text>
+  <text class="io" x="362" y="327">Q</text>
+
+  <!-- NAND -->
+  <rect class="panel" x="495" y="225" width="440" height="170"/>
+  <text class="label" x="525" y="263">NAND</text>
+  <line class="wire" x1="550" y1="298" x2="625" y2="298"/>
+  <line class="wire" x1="550" y1="342" x2="625" y2="342"/>
+  <path class="gate" d="M625 275 H680 A45 45 0 0 1 680 365 H625 Z"/>
+  <circle class="bubble" cx="736" cy="320" r="11"/>
+  <line class="wire" x1="747" y1="320" x2="820" y2="320"/>
+  <text class="io" x="528" y="292">A</text>
+  <text class="io" x="528" y="358">B</text>
+  <text class="io" x="832" y="327">Q</text>
+
+  <!-- NOR -->
+  <rect class="panel" x="25" y="425" width="440" height="170"/>
+  <text class="label" x="55" y="463">NOR</text>
+  <line class="wire" x1="90" y1="498" x2="164" y2="498"/>
+  <line class="wire" x1="90" y1="542" x2="164" y2="542"/>
+  <path class="gate" d="M155 475 Q185 520 155 565 Q224 565 270 520 Q224 475 155 475 Z"/>
+  <circle class="bubble" cx="281" cy="520" r="11"/>
+  <line class="wire" x1="292" y1="520" x2="350" y2="520"/>
+  <text class="io" x="68" y="492">A</text>
+  <text class="io" x="68" y="558">B</text>
+  <text class="io" x="362" y="527">Q</text>
+
+  <!-- XOR -->
+  <rect class="panel" x="495" y="425" width="440" height="170"/>
+  <text class="label" x="525" y="463">XOR (EOR)</text>
+  <line class="wire" x1="550" y1="498" x2="638" y2="498"/>
+  <line class="wire" x1="550" y1="542" x2="638" y2="542"/>
+  <path class="gate" d="M630 475 Q660 520 630 565 Q699 565 745 520 Q699 475 630 475 Z"/>
+  <path class="wire" d="M617 475 Q647 520 617 565"/>
+  <line class="wire" x1="745" y1="520" x2="820" y2="520"/>
+  <text class="io" x="528" y="492">A</text>
+  <text class="io" x="528" y="558">B</text>
+  <text class="io" x="832" y="527">Q</text>
+</svg>

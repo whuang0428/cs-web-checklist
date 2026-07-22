@@ -1,5 +1,5 @@
 # AS 9618 Chapter 6: Security, Privacy and Data Integrity
-## Security, Privacy and Data Integrity｜Syllabus-Aligned Paper 1 Revision Sheet
+> **Security, Privacy and Data Integrity｜Syllabus-Aligned Paper 1 Revision Sheet**
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618  
@@ -11,7 +11,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 
 Chapter 6 不是单纯背定义的章节。2024 和 2025 的 Paper 1 更喜欢把本章放进真实场景，例如：
 
@@ -35,7 +35,7 @@ E --> F[Transfer Checks<br/>parity / checksum]
 
 ---
 
-# 1. Recent Paper 1 Pattern Map
+## 1. Recent Paper 1 Pattern Map
 
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
@@ -54,9 +54,9 @@ E --> F[Transfer Checks<br/>parity / checksum]
 
 ---
 
-# 2. Content Update Decision
+## 2. Content Update Decision
 
-## 2.1 Keep and Strengthen
+### 2.1 Keep and Strengthen
 
 | Kept content | Reason |
 | --- | --- |
@@ -71,7 +71,7 @@ E --> F[Transfer Checks<br/>parity / checksum]
 | checksum | 2025 Paper 1 directly tested checksum process |
 | access rights | Strong scenario answer for protecting data |
 
-## 2.2 Downweight
+### 2.2 Downweight
 
 | Downweighted content | Why |
 | --- | --- |
@@ -81,7 +81,7 @@ E --> F[Transfer Checks<br/>parity / checksum]
 | long legal/privacy legislation discussion | Chapter 7 handles ethics/ownership; Chapter 6 focuses technical protection |
 | complex checksum arithmetic | Paper 1 usually asks process, not advanced checksum calculation |
 
-## 2.3 Delete / Avoid
+### 2.3 Delete / Avoid
 
 | Avoid | Reason |
 | --- | --- |
@@ -93,11 +93,11 @@ E --> F[Transfer Checks<br/>parity / checksum]
 
 ---
 
-# 3. Syllabus Checklist
+## 3. Syllabus Checklist
 
 Chapter 6 contains two syllabus sections.
 
-## 6.1 Data Security
+### 6.1 Data Security
 
 Students must be able to:
 
@@ -122,7 +122,7 @@ Students must be able to:
   - **phishing**
   - **pharming**
 
-## 6.2 Data Integrity
+### 6.2 Data Integrity
 
 Students must be able to:
 
@@ -146,7 +146,7 @@ Students must be able to:
 
 ---
 
-# 4. One-Page Mind Map
+## 4. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -191,9 +191,9 @@ mindmap
 
 ---
 
-# 5. 6.1 Data Security
+## 5. 6.1 Data Security
 
-## 5.1 Security vs Privacy vs Integrity
+### 5.1 Security vs Privacy vs Integrity
 
 | Term | Meaning | Simple student version |
 | --- | --- | --- |
@@ -201,7 +201,7 @@ mindmap
 | **Privacy** | controlling who can see personal/sensitive data | 个人信息不要被不该看的人看到 |
 | **Integrity** | data remains accurate, complete and unchanged unless authorised | 数据是准确、完整、没有被乱改的 |
 
-### Mark scheme style phrases
+#### Mark scheme style phrases
 
 > **Security** protects data and computer systems from unauthorised access / damage / misuse.
 
@@ -209,7 +209,7 @@ mindmap
 
 > **Integrity** means data is accurate, complete and has not been altered accidentally or maliciously.
 
-### Common weak answer
+#### Common weak answer
 
 > Security means data is safe.
 
@@ -217,7 +217,7 @@ Too vague. You must say **safe from what**: unauthorised access, damage, alterat
 
 ---
 
-## 5.2 Why data security is needed
+### 5.2 Why data security is needed
 
 Data security protects:
 
@@ -230,7 +230,7 @@ Data security protects:
 - system files
 - network resources
 
-### High-value answer structure
+#### High-value answer structure
 
 When asked "why is data security needed?", write:
 
@@ -242,7 +242,7 @@ When asked "why is data security needed?", write:
 
 ---
 
-## 5.3 User accounts
+### 5.3 User accounts
 
 A **user account** identifies a user on a system.
 
@@ -255,24 +255,24 @@ It can store:
 - login history
 - account status
 
-### Why user accounts help security
+#### Why user accounts help security
 
 - each user can be identified
 - different users can have different access rights
 - actions can be logged / audited
 - accounts can be disabled if suspicious activity happens
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > User accounts identify individual users and allow the system to apply access rights, so users can only access the files or functions they are authorised to use.
 
 ---
 
-## 5.4 Passwords
+### 5.4 Passwords
 
 A password is a secret value used to prove a user’s identity.
 
-### Strong password features
+#### Strong password features
 
 | Feature | Example |
 | --- | --- |
@@ -283,7 +283,7 @@ A password is a secret value used to prove a user’s identity.
 | not personal | not birthday / pet name |
 | not dictionary word | not `password`, `football` |
 
-### Password security practices
+#### Password security practices
 
 - do not share passwords
 - do not reuse passwords
@@ -291,7 +291,7 @@ A password is a secret value used to prove a user’s identity.
 - store passwords as hashes, not plain text
 - use multi-factor authentication where possible
 
-### Common exam trap
+#### Common exam trap
 
 If the question gives a weak password like `John2008`, explain:
 
@@ -302,11 +302,11 @@ If the question gives a weak password like `John2008`, explain:
 
 ---
 
-## 5.5 Authentication
+### 5.5 Authentication
 
 Authentication checks that a user is who they claim to be.
 
-### Common authentication methods
+#### Common authentication methods
 
 | Method | Explanation |
 | --- | --- |
@@ -316,7 +316,7 @@ Authentication checks that a user is who they claim to be.
 | digital signature | verifies sender identity and message integrity |
 | two-factor authentication | uses two different methods |
 
-### Biometric authentication
+#### Biometric authentication
 
 Examples:
 
@@ -325,26 +325,26 @@ Examples:
 - iris scan
 - voice recognition
 
-### Advantages
+#### Advantages
 
 - difficult to guess
 - cannot easily be forgotten
 - linked to a unique physical feature
 
-### Disadvantages
+#### Disadvantages
 
 - false acceptance / false rejection
 - biometric data is sensitive
 - expensive hardware may be needed
 - if biometric data is stolen, it cannot be changed like a password
 
-### Mark scheme style phrase
+#### Mark scheme style phrase
 
 > Biometric authentication compares a captured biological feature with a stored template to verify the identity of the user.
 
 ---
 
-## 5.6 Digital signatures
+### 5.6 Digital signatures
 
 A digital signature can be used to:
 
@@ -352,24 +352,24 @@ A digital signature can be used to:
 - show that data has not been altered
 - provide non-repudiation
 
-### Student-friendly explanation
+#### Student-friendly explanation
 
 Digital signature 不等于手写签名图片。它是用加密相关方法生成的一段数据，用来证明：
 
 1. message really came from the claimed sender  
 2. message has not been changed after signing  
 
-### Mark scheme style phrase
+#### Mark scheme style phrase
 
 > A digital signature verifies the identity of the sender and can show whether the data has been altered after signing.
 
 ---
 
-## 5.7 Firewall
+### 5.7 Firewall
 
 A firewall controls traffic between a private network and external networks.
 
-### What a firewall can do
+#### What a firewall can do
 
 - monitor incoming and outgoing traffic
 - apply rules to allow or block traffic
@@ -378,22 +378,22 @@ A firewall controls traffic between a private network and external networks.
 - stop suspicious packets
 - log network activity
 
-### What a firewall cannot do
+#### What a firewall cannot do
 
 - it cannot guarantee all malware is removed
 - it cannot stop users giving passwords away
 - it cannot decrypt every encrypted threat
 - it cannot replace good authentication
 
-### Mark scheme answer for bank/customer data scenario
+#### Mark scheme answer for bank/customer data scenario
 
 > A firewall monitors traffic entering and leaving the network. It applies rules to allow or block packets based on source, destination, port or protocol. This helps prevent unauthorised access to the bank network and protects customer data from external attackers.
 
 ---
 
-## 5.8 Anti-virus and anti-spyware
+### 5.8 Anti-virus and anti-spyware
 
-### Anti-virus software
+#### Anti-virus software
 
 Used to detect, quarantine and remove viruses / malware.
 
@@ -405,7 +405,7 @@ Methods include:
 - quarantining infected files
 - updating virus definitions
 
-### Anti-spyware software
+#### Anti-spyware software
 
 Used to detect and remove spyware.
 
@@ -418,7 +418,7 @@ Spyware may:
 
 ---
 
-## 5.9 Encryption
+### 5.9 Encryption
 
 Encryption converts readable data into unreadable data.
 
@@ -429,11 +429,11 @@ Encryption converts readable data into unreadable data.
 | Encryption key | value used to encrypt data |
 | Decryption key | value used to decrypt data |
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > Encryption encodes / scrambles data so that if it is intercepted it cannot be understood without the correct key.
 
-### Important exam warning
+#### Important exam warning
 
 Encryption does **not** stop interception.
 
@@ -443,7 +443,7 @@ Better wording:
 
 ---
 
-## 5.10 Access rights
+### 5.10 Access rights
 
 Access rights control what a user can do.
 
@@ -456,22 +456,22 @@ Examples:
 - admin access
 - no access
 
-### Why access rights protect data
+#### Why access rights protect data
 
 - users only see data they need
 - prevents unauthorised modification
 - reduces damage if one account is compromised
 - supports privacy and confidentiality
 
-### Mark scheme style phrase
+#### Mark scheme style phrase
 
 > Access rights restrict users to only the files, data or functions they are authorised to access.
 
 ---
 
-# 6. Threats to Computer and Data Security
+## 6. Threats to Computer and Data Security
 
-## 6.1 Malware
+### 6.1 Malware
 
 **Malware** means malicious software.
 
@@ -487,11 +487,11 @@ For AS 9618, focus mainly on **virus** and **spyware**, because they are directl
 
 ---
 
-## 6.2 Virus
+### 6.2 Virus
 
 A virus is malware that can replicate and attach itself to files/programs.
 
-### Possible effects
+#### Possible effects
 
 - corrupt files
 - delete data
@@ -499,7 +499,7 @@ A virus is malware that can replicate and attach itself to files/programs.
 - spread to other files/devices
 - make system unstable
 
-### Mitigation
+#### Mitigation
 
 - anti-virus software
 - update virus definitions
@@ -509,11 +509,11 @@ A virus is malware that can replicate and attach itself to files/programs.
 
 ---
 
-## 6.3 Spyware
+### 6.3 Spyware
 
 Spyware secretly monitors user activity or collects data.
 
-### Possible data stolen
+#### Possible data stolen
 
 - passwords
 - browsing history
@@ -521,7 +521,7 @@ Spyware secretly monitors user activity or collects data.
 - personal information
 - login credentials
 
-### Mitigation
+#### Mitigation
 
 - anti-spyware software
 - avoid suspicious downloads
@@ -530,11 +530,11 @@ Spyware secretly monitors user activity or collects data.
 
 ---
 
-## 6.4 Hackers
+### 6.4 Hackers
 
 A hacker may try to gain unauthorised access to a system.
 
-### Risks
+#### Risks
 
 - stealing data
 - changing data
@@ -542,7 +542,7 @@ A hacker may try to gain unauthorised access to a system.
 - installing malware
 - disrupting service
 
-### Mitigation
+#### Mitigation
 
 - strong authentication
 - firewall
@@ -553,11 +553,11 @@ A hacker may try to gain unauthorised access to a system.
 
 ---
 
-## 6.5 Phishing
+### 6.5 Phishing
 
 Phishing uses fake messages to trick users into giving personal information.
 
-### Common signs
+#### Common signs
 
 - urgent language
 - suspicious link
@@ -566,32 +566,32 @@ Phishing uses fake messages to trick users into giving personal information.
 - spelling/grammar mistakes
 - unexpected attachment
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > Phishing is when a user is tricked by a fake email/message into giving confidential information such as usernames, passwords or bank details.
 
 ---
 
-## 6.6 Pharming
+### 6.6 Pharming
 
 Pharming redirects users to a fake website, often even when the correct URL is typed.
 
-### Key difference
+#### Key difference
 
 | Threat | Key idea |
 | --- | --- |
 | Phishing | fake message/link tricks user |
 | Pharming | user is redirected to fake website |
 
-### Mark scheme style phrase
+#### Mark scheme style phrase
 
 > Pharming redirects a user to a fake website so that personal data entered by the user can be captured.
 
 ---
 
-# 7. 6.2 Data Integrity
+## 7. 6.2 Data Integrity
 
-## 7.1 What is data integrity?
+### 7.1 What is data integrity?
 
 Data integrity means data is:
 
@@ -600,20 +600,20 @@ Data integrity means data is:
 - consistent
 - unchanged unless authorised
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > Data integrity means data remains accurate, complete and consistent, and has not been changed accidentally or maliciously.
 
 ---
 
-## 7.2 Validation vs Verification
+### 7.2 Validation vs Verification
 
 | Method | Main purpose | Done by | Can prove data is correct? |
 | --- | --- | --- | --- |
 | **Validation** | checks data is reasonable / follows rules | computer/software | No |
 | **Verification** | checks data was copied/transferred accurately | human or computer | Helps, but not perfect |
 
-### Must-remember line
+#### Must-remember line
 
 > Validation checks whether data is **reasonable**, not whether it is definitely **correct**.
 
@@ -623,9 +623,9 @@ If age `26` is typed as `62`, range check may accept it because `62` is still re
 
 ---
 
-# 8. Validation Methods
+## 8. Validation Methods
 
-## 8.1 Range check
+### 8.1 Range check
 
 Checks data is within a lower and upper boundary.
 
@@ -635,13 +635,13 @@ Example:
 Age must be between 16 and 100.
 ```
 
-### Mark scheme phrase
+#### Mark scheme phrase
 
 > Checks that a value lies between an upper and lower limit.
 
 ---
 
-## 8.2 Limit check
+### 8.2 Limit check
 
 Checks data does not go beyond one boundary.
 
@@ -651,7 +651,7 @@ Example:
 Score must be no more than 100.
 ```
 
-### Difference from range check
+#### Difference from range check
 
 | Check | Boundaries |
 | --- | --- |
@@ -660,7 +660,7 @@ Score must be no more than 100.
 
 ---
 
-## 8.3 Length check
+### 8.3 Length check
 
 Checks the number of characters.
 
@@ -673,7 +673,7 @@ Student ID must be exactly 6 characters.
 
 ---
 
-## 8.4 Format check
+### 8.4 Format check
 
 Checks the pattern of data.
 
@@ -687,7 +687,7 @@ Postcode must follow a required pattern.
 
 ---
 
-## 8.5 Presence check
+### 8.5 Presence check
 
 Checks that data has been entered.
 
@@ -699,7 +699,7 @@ Username field cannot be blank.
 
 ---
 
-## 8.6 Existence check
+### 8.6 Existence check
 
 Checks that data exists in a stored list/file/database.
 
@@ -711,7 +711,7 @@ CustomerID entered must already exist in CUSTOMER table.
 
 ---
 
-## 8.7 Check digit
+### 8.7 Check digit
 
 A check digit is an extra digit calculated from the other digits in a code.
 
@@ -722,22 +722,22 @@ Used for:
 - account numbers
 - product codes
 
-### What it detects
+#### What it detects
 
 - mistyped digit
 - missing digit
 - extra digit
 - transposition error in some systems
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > A check digit is calculated from the other digits and appended to the number. When the number is entered, the check digit is recalculated and compared with the entered check digit.
 
 ---
 
-# 9. Verification During Data Entry
+## 9. Verification During Data Entry
 
-## 9.1 Visual check
+### 9.1 Visual check
 
 A person compares entered data with the original source.
 
@@ -747,12 +747,12 @@ Example:
 Compare the typed passport number with the passport document.
 ```
 
-### Pros
+#### Pros
 
 - simple
 - can catch obvious typing errors
 
-### Cons
+#### Cons
 
 - human error
 - slow
@@ -760,7 +760,7 @@ Compare the typed passport number with the passport document.
 
 ---
 
-## 9.2 Double entry
+### 9.2 Double entry
 
 Data is entered twice and the two entries are compared.
 
@@ -771,19 +771,19 @@ Enter email address twice.
 Enter password twice.
 ```
 
-### Mark scheme style answer
+#### Mark scheme style answer
 
 > Data is entered twice and the two versions are compared. If they do not match, an error is flagged.
 
 ---
 
-# 10. Verification During Data Transfer
+## 10. Verification During Data Transfer
 
-## 10.1 Parity check overview
+### 10.1 Parity check overview
 
 A parity check adds a **parity bit** to make the number of `1` bits odd or even.
 
-### Even parity
+#### Even parity
 
 Total number of 1s should be even.
 
@@ -797,7 +797,7 @@ Transmitted byte = 10110001
 Total 1s = 4 even
 ```
 
-### Odd parity
+#### Odd parity
 
 Total number of 1s should be odd.
 
@@ -813,11 +813,11 @@ Total 1s = 3 odd
 
 ---
 
-## 10.2 Byte parity
+### 10.2 Byte parity
 
 Byte parity checks each byte separately.
 
-### Process
+#### Process
 
 1. Sender and receiver agree on even or odd parity.
 2. Sender counts number of 1s in each byte.
@@ -825,7 +825,7 @@ Byte parity checks each byte separately.
 4. Receiver counts number of 1s again.
 5. If parity does not match, an error is detected.
 
-### Limitation
+#### Limitation
 
 - can detect some errors
 - cannot identify exactly which bit is wrong
@@ -833,11 +833,11 @@ Byte parity checks each byte separately.
 
 ---
 
-## 10.3 Block parity
+### 10.3 Block parity
 
 Block parity checks both rows and columns.
 
-### Process
+#### Process
 
 1. Bytes are arranged in a block / grid.
 2. Horizontal parity is calculated for each row.
@@ -846,17 +846,17 @@ Block parity checks both rows and columns.
 5. Receiver recalculates parity and compares.
 6. For a single-bit error, the row and column can locate the incorrect bit.
 
-### Mark scheme style phrase
+#### Mark scheme style phrase
 
 > In block parity, parity is calculated horizontally and vertically. A parity byte is sent with the data. The receiver recalculates the parity and can identify the position of a single incorrect bit.
 
 ---
 
-## 10.4 Checksum
+### 10.4 Checksum
 
 A checksum is a value calculated from a block of data and sent with the data.
 
-### Process
+#### Process
 
 ```mermaid
 sequenceDiagram
@@ -873,15 +873,15 @@ sequenceDiagram
     end
 ```
 
-### Mark scheme answer
+#### Mark scheme answer
 
 > The sender calculates a checksum from the data and sends it with the data. The receiver performs the same calculation on the received data. The receiver compares the calculated checksum with the transmitted checksum. If they match, the data is verified; if they differ, an error is detected and the data may be retransmitted.
 
 ---
 
-# 11. Mark Scheme Keywords
+## 11. Mark Scheme Keywords
 
-## 11.1 Data security
+### 11.1 Data security
 
 | Topic | Keywords / phrases |
 | --- | --- |
@@ -897,7 +897,7 @@ sequenceDiagram
 | Phishing | fake email/message, tricks user, confidential information |
 | Pharming | redirects to fake website, captures personal data |
 
-## 11.2 Data integrity
+### 11.2 Data integrity
 
 | Topic | Keywords / phrases |
 | --- | --- |
@@ -918,7 +918,7 @@ sequenceDiagram
 
 ---
 
-# 12. Common Mistakes — Must Read
+## 12. Common Mistakes — Must Read
 
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
@@ -939,7 +939,7 @@ sequenceDiagram
 
 ---
 
-# 13. Scenario Answer Bank
+## 13. Scenario Answer Bank
 
 | Scenario | Answer direction |
 | --- | --- |
@@ -961,9 +961,9 @@ sequenceDiagram
 
 ---
 
-# 14. 10 Marks Quick Check
+## 14. 10 Marks Quick Check
 
-## Questions
+### Questions
 
 1. Define data security. [1]  
 2. Define data privacy. [1]  
@@ -975,7 +975,7 @@ sequenceDiagram
 8. Explain how double entry verification works. [1]  
 9. State what a checksum is used for. [1]
 
-## Answers
+### Answers
 
 1. Protecting data/systems from unauthorised access, damage or misuse.  
 2. Ensuring personal/sensitive data is only accessed by authorised users.  
@@ -989,9 +989,9 @@ sequenceDiagram
 
 ---
 
-# 15. 20 Marks Exam-Style Practice with Mark Scheme
+## 15. 20 Marks Exam-Style Practice with Mark Scheme
 
-## Question 1: Bank data security and integrity [10]
+### Question 1: Bank data security and integrity [10]
 
 A bank allows customers to access accounts using a mobile application. Customer data is transferred between the bank and other banks.
 
@@ -1000,7 +1000,7 @@ A bank allows customers to access accounts using a mobile application. Customer 
 (c) Explain how encryption protects customer data during transfer. [2]  
 (d) The bank verifies transferred data using a checksum. Describe how this works. [2]
 
-### Mark scheme
+#### Mark scheme
 
 (a)  
 - Security protects data/system from unauthorised access / damage / misuse. [1]  
@@ -1022,7 +1022,7 @@ A bank allows customers to access accounts using a mobile application. Customer 
 
 ---
 
-## Question 2: Validation and verification [10]
+### Question 2: Validation and verification [10]
 
 A website lets users create accounts and play quizzes. A user must enter:
 
@@ -1046,7 +1046,7 @@ A website lets users create accounts and play quizzes. A user must enter:
 (c) Describe two verification methods used during data entry. [2]  
 (d) Give one benefit of using access rights for this website database. [1]
 
-### Mark scheme
+#### Mark scheme
 
 (a)  
 - age over 16: limit check / range check. [1]  

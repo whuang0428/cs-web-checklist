@@ -1,5 +1,5 @@
-# IGCSE 0478 Chapter 4 Updated Checklist
-## Software｜Syllabus-Aligned Revision Edition
+# IGCSE 0478 Chapter 4: Software
+> **Software｜Syllabus-Aligned Revision Edition**
 > **适用范围**：Cambridge IGCSE Computer Science 0478  
 **章节范围**：4.1 Types of Software and Interrupts｜4.2 Programming Languages, Translators and IDEs  
 **更新依据**：2026–2028 syllabus + 全部 2025 Paper 1 / Mark Scheme 趋势 + 原 2023–2024 WHBC checklist  
@@ -28,8 +28,8 @@
 
 ---
 
-## 1. 内容取舍：哪些内容要删？哪些保留？
-### ✅ 必须保留并重点训练
+### 1. 内容取舍：哪些内容要删？哪些保留？
+#### ✅ 必须保留并重点训练
 | 内容 | 原因 |
 | --- | --- |
 | System software vs application software | syllabus 明确要求；2024–2025 多次出现 |
@@ -45,7 +45,7 @@
 | IDE functions with descriptions | 2025 直接考 function + role |
 
 
-### ⚠️ 降权或删除
+#### ⚠️ 降权或删除
 | 原内容 | 处理方式 | 原因 |
 | --- | --- | --- |
 | 过长 application software examples | **压缩** | 考试一般只要 example，不需要背长描述 |
@@ -59,8 +59,8 @@
 
 ---
 
-# 4.1 Types of Software and Interrupts
-## 4.1.1 Software Types｜System Software vs Application Software
+## 4.1 Types of Software and Interrupts
+### 4.1.1 Software Types｜System Software vs Application Software
 **<font style="background-color:#f8fbff;">System Software</font>**<font style="background-color:#f8fbff;">  
 </font><font style="background-color:#f8fbff;">Software that provides the services that the computer requires.  
   
@@ -71,7 +71,7 @@
   
 </font>**<font style="background-color:#fffaf2;">Key idea:</font>**<font style="background-color:#fffaf2;"> allows the user to perform tasks. </font>
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + **System software** provides the services that the computer requires.
 + System software **manages / maintains hardware and software**.
 + Examples: **operating system**, **utility software**, **device driver**.
@@ -84,7 +84,7 @@
 
 ---
 
-## 4.1.2 Utility Software｜Utility Programs
+### 4.1.2 Utility Software｜Utility Programs
 **Utility software** is software designed to **manage, maintain or protect** a computer system.
 
 | Utility software | What it does |
@@ -98,7 +98,7 @@
 | **Security software** | helps protect the system from unauthorised access |
 
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + Utility software helps to **manage, maintain and control computer resources**.
 + Utility software is a type of **system software**.
 + Anti-virus software is utility software because it helps protect the computer system.
@@ -108,10 +108,10 @@
 
 ---
 
-## 4.1.3 Operating System｜Role and Basic Functions
+### 4.1.3 Operating System｜Role and Basic Functions
 An **operating system (OS)** is system software that manages the main functions of a computer.
 
-### OS Function Table
+#### OS Function Table
 | Function | Mark scheme style role description |
 | --- | --- |
 | **Managing files** | allows users to create, store, delete, move, copy and organise files |
@@ -125,7 +125,7 @@ An **operating system (OS)** is system software that manages the main functions 
 | **Managing user accounts** | allows multiple users to log in and have separate settings/access rights |
 
 
-### OS Memory Management｜2025 高频模板
+#### OS Memory Management｜2025 高频模板
 > **Describe the role of the OS in managing memory.**
 >
 
@@ -139,7 +139,7 @@ Use these points:
 + It moves data between **RAM and secondary storage / virtual memory**.
 + It may create / manage **virtual memory** when RAM is full.
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + The OS provides a **platform for running application software**.
 + The OS manages **memory, files, peripherals, security, user accounts and multitasking**.
 + The OS handles interrupts by assigning priority and calling the **interrupt service routine**.
@@ -149,8 +149,8 @@ Use these points:
 
 ---
 
-## 4.1.4 Hardware, Firmware and OS｜How Applications Run
-### Golden Chain
+### 4.1.4 Hardware, Firmware and OS｜How Applications Run
+#### Golden Chain
 ```mermaid
 flowchart TD
 A[Hardware] --> B[Firmware / BIOS / Bootloader]
@@ -159,7 +159,7 @@ C --> D[Application Software]
 D --> E[User Task]
 ```
 
-### Explanation
+#### Explanation
 | Layer | Role |
 | --- | --- |
 | **Hardware** | physical components of the computer |
@@ -169,7 +169,7 @@ D --> E[User Task]
 | **Application software** | allows the user to perform tasks |
 
 
-### Firmware Core Sentences
+#### Firmware Core Sentences
 + Firmware is **software / instructions programmed into a hardware device**.
 + Firmware is usually stored in **ROM**.
 + Firmware can allow hardware to be **controlled / managed**.
@@ -181,17 +181,17 @@ D --> E[User Task]
 
 ---
 
-## 4.1.5 Interrupts｜Definition and Purpose
+### 4.1.5 Interrupts｜Definition and Purpose
 An **interrupt** is a signal sent from hardware or software to the processor to request attention.
 
-### Why Interrupts Are Needed
+#### Why Interrupts Are Needed
 + To show that the CPU’s attention is required.
 + To stop / pause the current process if something more urgent happens.
 + To allow **multitasking**.
 + To allow time-sensitive requests to be handled.
 + To improve efficiency because the CPU does not need to constantly poll devices.
 
-### Hardware vs Software Interrupts
+#### Hardware vs Software Interrupts
 | Type | Definition | Examples |
 | --- | --- | --- |
 | **Hardware interrupt** | generated by a hardware device | key press, mouse click, printer out of paper/ink, peripheral connected/disconnected |
@@ -205,7 +205,7 @@ Software interrupt = **division by zero** / two processes trying to access same 
 
 ---
 
-## 4.1.6 How Interrupts Are Handled｜High Mark Template
+### 4.1.6 How Interrupts Are Handled｜High Mark Template
 > **Describe how the OS / CPU handles an interrupt.**
 >
 
@@ -223,7 +223,7 @@ I --> J[Restore saved status]
 J --> K[Continue original process]
 ```
 
-### Full Mark Sentences
+#### Full Mark Sentences
 + The CPU / OS checks the **priority** of the interrupt.
 + If the interrupt has higher priority, the current process is halted.
 + The status of the current process is saved, often on a **stack**.
@@ -233,16 +233,16 @@ J --> K[Continue original process]
 + The saved status is restored.
 + The original process continues from where it stopped.
 
-### One-Minute Version
+#### One-Minute Version
 > The OS checks the priority of the interrupt. If it has higher priority, the current process is halted and its status is saved. The OS then calls the interrupt service routine to service the interrupt. Once complete, the saved status is restored and the original process continues.
 >
 
 ---
 
-## 4.1.7 Buffer｜Low Priority but Useful
+### 4.1.7 Buffer｜Low Priority but Useful
 A **buffer** is a temporary memory area used to store data while it is being transferred.
 
-### Why Buffers Are Needed
+#### Why Buffers Are Needed
 + Devices often work at a slower speed than the CPU.
 + A buffer allows the CPU to continue with other tasks instead of waiting.
 + Buffers can help smooth playback when streaming.
@@ -252,8 +252,8 @@ A **buffer** is a temporary memory area used to store data while it is being tra
 
 ---
 
-# 4.2 Programming Languages, Translators and IDEs
-## 4.2.1 High-Level Language vs Low-Level Language
+## 4.2 Programming Languages, Translators and IDEs
+### 4.2.1 High-Level Language vs Low-Level Language
 | Feature | High-Level Language | Low-Level Language |
 | --- | --- | --- |
 | Human readability | easier to read / write / understand | harder to read / write / understand |
@@ -265,7 +265,7 @@ A **buffer** is a temporary memory area used to store data while it is being tra
 | Translator | compiler or interpreter | assembler for assembly language |
 
 
-### Why Use a High-Level Language?
+#### Why Use a High-Level Language?
 + Easier for programmers to read, write and understand.
 + Easier to debug and maintain.
 + Less likely to make errors.
@@ -273,7 +273,7 @@ A **buffer** is a temporary memory area used to store data while it is being tra
 + Does not require direct knowledge of memory locations or registers.
 + Can use an IDE.
 
-### Why Use a Low-Level Language?
+#### Why Use a Low-Level Language?
 + Can directly access / manipulate memory locations and registers.
 + Can communicate directly with hardware.
 + Can be more memory efficient.
@@ -285,17 +285,17 @@ A **buffer** is a temporary memory area used to store data while it is being tra
 
 ---
 
-## 4.2.2 Assembly Language and Assembler
+### 4.2.2 Assembly Language and Assembler
 **Assembly language** is a low-level language that uses **mnemonics**.
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + Assembly language is a **low-level language**.
 + It uses **mnemonics**.
 + It is used to communicate directly with the computer hardware.
 + It is machine dependent.
 + An **assembler** translates assembly language into machine code.
 
-### Example Concept
+#### Example Concept
 ```latex
 Assembly language  --assembler-->  Machine code
 ```
@@ -305,7 +305,7 @@ Assembly language  --assembler-->  Machine code
 
 ---
 
-## 4.2.3 Translators｜Compiler, Interpreter and Assembler
+### 4.2.3 Translators｜Compiler, Interpreter and Assembler
 | Translator | Source language | How it works | Output | Common use |
 | --- | --- | --- | --- | --- |
 | **Compiler** | high-level language | translates the whole code at once before execution | executable file / machine code file | final program / distribution |
@@ -315,8 +315,8 @@ Assembly language  --assembler-->  Machine code
 
 ---
 
-## 4.2.4 Compiler vs Interpreter｜High Frequency
-### Compiler
+### 4.2.4 Compiler vs Interpreter｜High Frequency
+#### Compiler
 + Translates the **whole code** at once.
 + Translation happens **before execution**.
 + Produces an **executable file**.
@@ -324,7 +324,7 @@ Assembly language  --assembler-->  Machine code
 + Once compiled, the compiler is not needed to run the program.
 + Useful for distributing the final program without source code.
 
-### Interpreter
+#### Interpreter
 + Translates and executes code **line by line**.
 + Stops when an error is found.
 + The error can be corrected immediately.
@@ -333,7 +333,7 @@ Assembly language  --assembler-->  Machine code
 + No separate executable file is produced.
 + The interpreter is needed each time the program runs.
 
-### Compiler vs Interpreter Quick Table
+#### Compiler vs Interpreter Quick Table
 | Question type | Best answer |
 | --- | --- |
 | During development | **Interpreter**, because it stops when an error is found and helps debug line by line |
@@ -342,16 +342,16 @@ Assembly language  --assembler-->  Machine code
 | Running after translation | Compiled program can run without compiler; interpreted program needs interpreter |
 
 
-### Core Exam Template
+#### Core Exam Template
 > A programmer may use an interpreter during development because it translates and executes code line by line, stops when an error is found, and helps debug the program. The programmer may use a compiler for the final program because it translates the whole program and creates an executable file, so the program can be distributed without the source code.
 >
 
 ---
 
-## 4.2.5 IDE｜Integrated Development Environment
+### 4.2.5 IDE｜Integrated Development Environment
 An **IDE** is a suite of programs used to write, run, test and debug program code.
 
-### IDE Functions and Roles
+#### IDE Functions and Roles
 | IDE function | Mark scheme style role description |
 | --- | --- |
 | **Code editor** | allows the programmer to write / change program code |
@@ -365,7 +365,7 @@ An **IDE** is a suite of programs used to write, run, test and debug program cod
 | **Auto-documentation** | can generate documentation / comments for the code |
 
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + An IDE provides tools to help programmers write and test code.
 + A code editor allows the programmer to write or change program code.
 + A run-time environment allows the programmer to run the code and view output.
@@ -379,7 +379,7 @@ An **IDE** is a suite of programs used to write, run, test and debug program cod
 
 ---
 
-# 2. Chapter 4 Overall Mind Map
+## 2. Chapter 4 Overall Mind Map
 ```mermaid
 mindmap
   root((Chapter 4 Software))
@@ -439,50 +439,50 @@ mindmap
 
 ---
 
-# 3. Mark Scheme Style Answer Templates
-## Template A｜Difference between system software and application software
+## 3. Mark Scheme Style Answer Templates
+### Template A｜Difference between system software and application software
 > System software provides the services that the computer requires and manages / maintains the hardware and software. An example is an operating system or utility software. Application software provides the services that the user requires and allows the user to perform tasks. An example is a word processor or spreadsheet.
 >
 
 ---
 
-## Template B｜Operating system memory management
+### Template B｜Operating system memory management
 > The operating system allocates memory to processes and deallocates memory when processes are finished. It checks that processes have enough memory available and makes sure two processes do not try to access the same memory location. It can also move data between RAM and virtual memory.
 >
 
 ---
 
-## Template C｜Firmware
+### Template C｜Firmware
 > Firmware is permanent software / instructions programmed into a hardware device and usually stored in ROM. It can control hardware and provide a platform for the operating system to run on. An example is BIOS or a bootloader.
 >
 
 ---
 
-## Template D｜Interrupt handling
+### Template D｜Interrupt handling
 > The OS checks the priority of the interrupt. If it has a higher priority, the current process is halted and its status is saved, for example on a stack. The OS checks the source of the interrupt and calls the interrupt service routine / interrupt handler. Once the interrupt has been serviced, the saved status is restored and the original process continues.
 >
 
 ---
 
-## Template E｜Compiler vs interpreter
+### Template E｜Compiler vs interpreter
 > A compiler translates the whole program before execution and produces an executable file. It reports all errors in the code. An interpreter translates and executes the code line by line and stops when an error is found. This makes an interpreter useful during development, while a compiler is useful for the final program.
 >
 
 ---
 
-## Template F｜Why use high-level language?
+### Template F｜Why use high-level language?
 > A high-level language is easier for the programmer to read, write and understand. It is easier to debug and maintain. It is machine independent / portable, so the same program can be used on different types of computer after translation.
 >
 
 ---
 
-## Template G｜IDE functions
+### Template G｜IDE functions
 > A code editor allows the programmer to write and change code. A run-time environment allows the code to be run and the output to be seen. Error diagnostics help find errors in the code. Auto-completion suggests command words while the programmer is typing, and prettyprint colours / formats code to make it easier to read.
 >
 
 ---
 
-# 4. Common Mistakes｜超级重要易错点
+## 4. Common Mistakes｜超级重要易错点
 | Topic | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | System software | “It is software for computer.” | Too vague | “It provides services the computer requires and manages hardware/software.” |
@@ -509,8 +509,8 @@ mindmap
 
 ---
 
-# 5. Fast Revision Tables
-## 5.1 Must-know Definitions
+## 5. Fast Revision Tables
+### 5.1 Must-know Definitions
 | Term | Definition |
 | --- | --- |
 | **System software** | software that provides services required by the computer |
@@ -532,7 +532,7 @@ mindmap
 
 ---
 
-## 5.2 “Choose the best translator” Table
+### 5.2 “Choose the best translator” Table
 | Scenario | Best translator | Reason |
 | --- | --- | --- |
 | Debugging during development | Interpreter | stops at the line where an error is found |
@@ -545,7 +545,7 @@ mindmap
 
 ---
 
-# 6. 10 Marks Quick Check
+## 6. 10 Marks Quick Check
 Answer these in exam style.
 
 1. State one example of system software. **[1]**  
@@ -559,7 +559,7 @@ Answer these in exam style.
 9. State one function of an IDE. **[1]**  
 10. State what is meant by a buffer. **[1]**
 
-## Quick Check Answers
+### Quick Check Answers
 1. Operating system / utility software / device driver.  
 2. Word processor / spreadsheet / database / web browser / image editor.  
 3. Managing files / handling interrupts / managing memory / managing multitasking / providing interface / etc.  
@@ -573,12 +573,12 @@ Answer these in exam style.
 
 ---
 
-# 7. 20 Marks Exam-style Practice with Mark Scheme
-## Question 1｜Software Types **[4]**
+## 7. 20 Marks Exam-style Practice with Mark Scheme
+### Question 1｜Software Types **[4]**
 A student uses a computer to complete homework.  
 Describe the difference between system software and application software. Give one example of each.
 
-### Mark Scheme
+#### Mark Scheme
 Any four from:
 
 + System software provides the services the computer requires.
@@ -590,10 +590,10 @@ Any four from:
 
 ---
 
-## Question 2｜Operating System Memory Management **[3]**
+### Question 2｜Operating System Memory Management **[3]**
 Describe the role of the operating system in managing memory.
 
-### Mark Scheme
+#### Mark Scheme
 Any three from:
 
 + Allocates memory to processes.
@@ -606,14 +606,14 @@ Any three from:
 
 ---
 
-## Question 3｜Interrupts **[5]**
+### Question 3｜Interrupts **[5]**
 A key is pressed on a keyboard while a computer is running another process.
 
 (a) Give the type of interrupt generated. **[1]**  
 (b) Give the name of the program/routine used to service the interrupt. **[1]**  
 (c) Describe how the interrupt is handled. **[3]**
 
-### Mark Scheme
+#### Mark Scheme
 (a) Hardware interrupt.  
 (b) Interrupt service routine / interrupt handler.  
 (c) Any three from:
@@ -629,10 +629,10 @@ A key is pressed on a keyboard while a computer is running another process.
 
 ---
 
-## Question 4｜Compiler and Interpreter **[4]**
+### Question 4｜Compiler and Interpreter **[4]**
 Explain why a programmer may use an interpreter during development but a compiler for the final program.
 
-### Mark Scheme
+#### Mark Scheme
 Any four from:
 
 + Interpreter translates and executes code line by line.
@@ -646,11 +646,11 @@ Any four from:
 
 ---
 
-## Question 5｜IDE Functions **[4]**
+### Question 5｜IDE Functions **[4]**
 A programmer uses an IDE to create a program.  
 Describe two functions of an IDE and explain how each helps the programmer.
 
-### Mark Scheme
+#### Mark Scheme
 One mark for function + one mark for matching role description, max four:
 
 + Code editor: allows the programmer to write/change code.

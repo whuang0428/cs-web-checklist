@@ -1,5 +1,5 @@
-# A2 9618 Computer Science — Chapter 13 Updated Notes
-## Data Representation｜Syllabus-Aligned Paper 3 Revision Sheet
+# A2 9618 Chapter 13: Data Representation
+> **Data Representation｜Syllabus-Aligned Paper 3 Revision Sheet**
 
 > **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618 A2  
@@ -10,7 +10,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 
 Chapter 13 不是普通的“背定义”章节。2024 和 2025 的 Paper 3 很明显喜欢把本章拆成三种题型：
 
@@ -31,7 +31,7 @@ E --> F[Exam calculations<br/>denary to FP / FP to denary]
 
 ---
 
-# 1. Recent Paper 3 Pattern Map
+## 1. Recent Paper 3 Pattern Map
 
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
@@ -48,9 +48,9 @@ E --> F[Exam calculations<br/>denary to FP / FP to denary]
 
 ---
 
-# 2. Content Update Decision
+## 2. Content Update Decision
 
-## 2.1 Keep and Strengthen
+### 2.1 Keep and Strengthen
 
 | Kept / strengthened content | Why |
 | --- | --- |
@@ -64,7 +64,7 @@ E --> F[Exam calculations<br/>denary to FP / FP to denary]
 | Negative floating-point using two's complement | High-risk calculation area; many students lose working marks |
 | Precision / range / rounding / overflow / underflow | Common explanation marks around floating-point representation |
 
-## 2.2 Downweight
+### 2.2 Downweight
 
 | Downweighted content | Why |
 | --- | --- |
@@ -73,7 +73,7 @@ E --> F[Exam calculations<br/>denary to FP / FP to denary]
 | Detailed alternative hashing algorithms not named in syllabus | Students mainly need hashing, collisions, linear search/probing, overflow area, chaining |
 | Excessive mathematical proof of floating-point precision | Cambridge expects practical explanation: fixed number of bits, truncation, rounding error |
 
-## 2.3 Remove / Avoid
+### 2.3 Remove / Avoid
 
 | Avoid | Reason |
 | --- | --- |
@@ -85,7 +85,7 @@ E --> F[Exam calculations<br/>denary to FP / FP to denary]
 
 ---
 
-# 3. One-Page Mind Map
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -130,14 +130,14 @@ mindmap
 
 ---
 
-# 4. 13.1 User-Defined Data Types
+## 4. 13.1 User-Defined Data Types
 
-## 4.1 Why user-defined data types are necessary
+### 4.1 Why user-defined data types are necessary
 
-### Mark scheme answer
+#### Mark scheme answer
 > User-defined data types allow the programmer to create data types that match the needs of a specific problem. They make the program easier to understand, less error-prone and allow related data items to be grouped together under one identifier.
 
-### Must-have keywords
+#### Must-have keywords
 + **user-defined**
 + **specific problem**
 + **group related data**
@@ -145,24 +145,24 @@ mindmap
 + **easier to understand**
 + **less error-prone**
 
-### Common weak answer
+#### Common weak answer
 > They are used because the programmer wants a new type.
 
 Too vague. You need to explain **why** a built-in type is not enough.
 
 ---
 
-## 4.2 Composite vs non-composite data types
+### 4.2 Composite vs non-composite data types
 
 | Type | Meaning | Examples |
 | --- | --- | --- |
 | Non-composite data type | Defined without referencing another data type / contains one data type | enumerated, pointer |
 | Composite data type | Refers to other data types in its definition / contains multiple elements | record, set, class/object |
 
-### Mark scheme style
+#### Mark scheme style
 > A non-composite data type can be defined without referencing another data type. A composite data type is a collection of data that may contain multiple elements of the same or different data types, grouped under one identifier.
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | saying composite means “harder data type” | composite means it is made from / refers to other type(s) |
@@ -171,33 +171,33 @@ Too vague. You need to explain **why** a built-in type is not enough.
 
 ---
 
-## 4.3 Enumerated type
+### 4.3 Enumerated type
 
-### Definition
+#### Definition
 > An enumerated data type is a user-defined non-composite data type with a fixed list of possible values.
 
-### Important exam points
+#### Important exam points
 + Values are chosen from a **fixed list**.
 + It is useful when a field has a **limited range of possible values**.
 + The values should usually be written as identifiers, not strings.
 
-### Pseudocode pattern
+#### Pseudocode pattern
 ```text
 TYPE <TypeName> = (<Value1>, <Value2>, <Value3>)
 ```
 
-### Example 1: vehicle type
+#### Example 1: vehicle type
 ```text
 TYPE Vehicle = (M100, M230, T101, T102, T120, T150)
 ```
 
-### Example 2: gate type
+#### Example 2: gate type
 ```text
 TYPE GateID = (N01, N02, N03, W01, W02, W03, W04)
 DECLARE Gate : GateID
 ```
 
-### When to choose enumerated type
+#### When to choose enumerated type
 | Scenario | Good enumerated field? | Why |
 | --- | --- | --- |
 | video format: DVD, BluRay, MP4, FourK | Yes | fixed range of possible values |
@@ -207,24 +207,24 @@ DECLARE Gate : GateID
 
 ---
 
-## 4.4 Pointer type
+### 4.4 Pointer type
 
-### Definition
+#### Definition
 > A pointer data type is a user-defined non-composite data type that stores a memory address and indicates the type of data stored at that location.
 
-### Pseudocode pattern
+#### Pseudocode pattern
 ```text
 TYPE <PointerType> = ^<DataType>
 DECLARE <PointerVariable> : <PointerType>
 ```
 
-### Example
+#### Example
 ```text
 TYPE TNamePointer = ^STRING
 DECLARE CurrentName : TNamePointer
 ```
 
-### Mark scheme keywords
+#### Mark scheme keywords
 + **stores address / memory location**
 + **points to data**
 + **indicates type of data stored at the memory location**
@@ -232,12 +232,12 @@ DECLARE CurrentName : TNamePointer
 
 ---
 
-## 4.5 Record type
+### 4.5 Record type
 
-### Definition
+#### Definition
 > A record is a user-defined composite data type that contains a fixed number of fields, where the fields may be of different data types.
 
-### Pseudocode pattern
+#### Pseudocode pattern
 ```text
 TYPE <RecordName>
     DECLARE <Field1> : <DataType>
@@ -245,7 +245,7 @@ TYPE <RecordName>
 ENDTYPE
 ```
 
-### Example: booking record
+#### Example: booking record
 ```text
 TYPE Booking
     DECLARE BookingNumber : STRING
@@ -258,7 +258,7 @@ TYPE Booking
 ENDTYPE
 ```
 
-### Example: video library record
+#### Example: video library record
 ```text
 TYPE VideoLibrary
     DECLARE VideoID : STRING
@@ -270,7 +270,7 @@ TYPE VideoLibrary
 ENDTYPE
 ```
 
-### Field assignment pattern
+#### Field assignment pattern
 ```text
 Flight1.FlightNumber ← "SB2789"
 Flight1.Destination ← "Dublin"
@@ -279,7 +279,7 @@ Flight1.Gate ← "N03"
 Flight1.Airline ← "Cambridge Airways"
 ```
 
-### Exam warning
+#### Exam warning
 | Field | Better data type | Reason |
 | --- | --- | --- |
 | telephone number | STRING | may contain leading zero / spaces / + symbol; not used for arithmetic |
@@ -290,31 +290,31 @@ Flight1.Airline ← "Cambridge Airways"
 
 ---
 
-## 4.6 Set type
+### 4.6 Set type
 
-### Definition
+#### Definition
 > A set is a user-defined composite data type that contains an unordered list of elements. Set theory operations such as union and intersection can be applied. All elements are of the same data type.
 
-### Must-have keywords
+#### Must-have keywords
 + **composite data type**
 + **unordered elements**
 + **same data type**
 + **set theory operations**
 + **union / intersection / difference**
 
-### Pseudocode pattern
+#### Pseudocode pattern
 ```text
 TYPE <SetType> = SET OF <DataType>
 DEFINE <VariableName> (<values>) : <SetType>
 ```
 
-### Example: mathematical operators
+#### Example: mathematical operators
 ```text
 TYPE SymbolSet = SET OF CHAR
 DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 ```
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | writing `TYPE SymbolSet = ('+', '-', '*')` | that looks like an enumerated type, not a set |
@@ -324,9 +324,9 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ---
 
-# 5. 13.2 File Organisation and Access
+## 5. 13.2 File Organisation and Access
 
-## 5.1 File organisation overview
+### 5.1 File organisation overview
 
 | File organisation | How records are stored | Common access method | Good for |
 | --- | --- | --- | --- |
@@ -336,36 +336,36 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ---
 
-## 5.2 Serial file organisation
+### 5.2 Serial file organisation
 
-### Mark scheme answer
+#### Mark scheme answer
 > In a serial file, records are stored in the order they are added, often chronological order. There is no ordering by key field, so records must be checked one after another until the required record is found or all records have been checked.
 
-### Suitable uses
+#### Suitable uses
 + transaction file
 + log file
 + backup file
 + data collected before sorting
 
-### Common mistake
+#### Common mistake
 > Serial means one record only.
 
 Wrong. Serial means records are stored **without key order**.
 
 ---
 
-## 5.3 Sequential file organisation
+### 5.3 Sequential file organisation
 
-### Mark scheme answer
+#### Mark scheme answer
 > In a sequential file, records are stored in order of a key field. The key field is compared as the file is searched, and the search can stop when the required key is found or when the current key is greater than the target key.
 
-### Key points
+#### Key points
 + Records are **ordered**.
 + Order is based on a **key field**.
 + Sequential access reads records from the start.
 + Updating may require creating a **new version of the file**.
 
-### Serial vs sequential
+#### Serial vs sequential
 | Point | Serial file | Sequential file |
 | --- | --- | --- |
 | Order | order of arrival / chronological | order of key field |
@@ -375,12 +375,12 @@ Wrong. Serial means records are stored **without key order**.
 
 ---
 
-## 5.4 Random file organisation
+### 5.4 Random file organisation
 
-### Mark scheme answer
+#### Mark scheme answer
 > In a random file, records are stored in no particular sequence. There is a relationship between the record key and its location in the file, often using a hashing algorithm, so records can be accessed directly.
 
-### Suitable uses
+#### Suitable uses
 + fast account lookup
 + stock item lookup
 + updating individual records
@@ -388,12 +388,12 @@ Wrong. Serial means records are stored **without key order**.
 
 ---
 
-## 5.5 Sequential access
+### 5.5 Sequential access
 
-### Mark scheme answer
+#### Mark scheme answer
 > Sequential access searches records one after another from the physical start of the file until the record is found or the end of file is reached.
 
-### Pseudocode idea
+#### Pseudocode idea
 ```text
 OPENFILE "Customer.dat" FOR READ
 WHILE NOT EOF("Customer.dat") AND Found = FALSE
@@ -407,12 +407,12 @@ CLOSEFILE "Customer.dat"
 
 ---
 
-## 5.6 Direct access
+### 5.6 Direct access
 
-### Mark scheme answer
+#### Mark scheme answer
 > Direct access allows a record to be accessed without reading every previous record. A calculation or index can be used to identify the likely record location.
 
-### Typical pseudocode keywords
+#### Typical pseudocode keywords
 ```text
 OPENFILE "AccountRecords.dat" FOR RANDOM
 Location ← Hash(AccountNumber)
@@ -422,17 +422,17 @@ GETRECORD "AccountRecords.dat", Customer
 
 ---
 
-## 5.7 Hashing algorithm
+### 5.7 Hashing algorithm
 
-### Definition
+#### Definition
 > A hashing algorithm takes a record key as input and calculates the storage location / address for that record in the file.
 
-### Example
+#### Example
 ```text
 Location ← AccountNumber MOD 1000
 ```
 
-### Mark scheme keywords
+#### Mark scheme keywords
 + **record key**
 + **hash value**
 + **storage location**
@@ -441,19 +441,19 @@ Location ← AccountNumber MOD 1000
 
 ---
 
-## 5.8 Collision and collision resolution
+### 5.8 Collision and collision resolution
 
-### Definition
+#### Definition
 > A collision occurs when two different record keys are processed by the hashing algorithm and produce the same hash value / storage location.
 
-### Methods of overcoming collisions
+#### Methods of overcoming collisions
 | Method | How it works |
 | --- | --- |
 | Linear probing / closed hashing | Start at original hash location, then check following locations until a free slot is found |
 | Overflow area / open hashing | Store collided records in a separate overflow area and search it linearly |
 | Chaining | Each storage location holds a reference to a chain / collection of records with the same hash value |
 
-### Common mistake
+#### Common mistake
 | Weak answer | Better answer |
 | --- | --- |
 | collision means the file crashes | collision means two keys produce the same storage location |
@@ -462,9 +462,9 @@ Location ← AccountNumber MOD 1000
 
 ---
 
-# 6. 13.3 Floating-Point Numbers
+## 6. 13.3 Floating-Point Numbers
 
-## 6.1 Format of floating-point representation
+### 6.1 Format of floating-point representation
 
 A binary floating-point number is stored using:
 
@@ -472,12 +472,12 @@ A binary floating-point number is stored using:
 2. **Exponent**: stores how far the binary point is moved.  
 3. **Two's complement**: used for both mantissa and exponent in this syllabus.
 
-### General idea
+#### General idea
 ```text
 Number = Mantissa × 2^Exponent
 ```
 
-### Important assumption
+#### Important assumption
 The binary point is normally placed immediately after the sign bit in the mantissa.
 
 Example mantissa:
@@ -487,9 +487,9 @@ Example mantissa:
 
 ---
 
-## 6.2 Normalisation
+### 6.2 Normalisation
 
-### Rule
+#### Rule
 A normalised mantissa uses the available bits efficiently.
 
 | Number type | Normalised mantissa starts with |
@@ -497,10 +497,10 @@ A normalised mantissa uses the available bits efficiently.
 | Positive | `01` |
 | Negative | `10` |
 
-### Why normalise?
+#### Why normalise?
 > Normalisation gives the maximum precision for the number of bits available in the mantissa.
 
-### Mark scheme keywords
+#### Mark scheme keywords
 + **maximum precision**
 + **full use of mantissa bits**
 + **two most significant bits are different**
@@ -509,9 +509,9 @@ A normalised mantissa uses the available bits efficiently.
 
 ---
 
-## 6.3 Positive denary to floating-point
+### 6.3 Positive denary to floating-point
 
-### Example: +54.8125 using 12-bit mantissa and 4-bit exponent
+#### Example: +54.8125 using 12-bit mantissa and 4-bit exponent
 
 Step 1: Convert to binary.
 
@@ -534,20 +534,20 @@ Mantissa: 011011011010
 Exponent: 0110
 ```
 
-### Exam warning
+#### Exam warning
 If the question gives 10 mantissa bits, write 10 bits. If it gives 12 mantissa bits, write 12 bits.
 
 ---
 
-## 6.4 Negative denary to floating-point
+### 6.4 Negative denary to floating-point
 
-### Method
+#### Method
 1. Convert the positive version to binary.  
 2. Convert to negative using two's complement.  
 3. Normalise.  
 4. Write mantissa and exponent with the required number of bits.
 
-### Example: –25.3125 using 10-bit mantissa and 6-bit exponent
+#### Example: –25.3125 using 10-bit mantissa and 6-bit exponent
 
 Step 1: Positive version.
 
@@ -574,7 +574,7 @@ Mantissa: 1001101011
 Exponent: 000101
 ```
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | normalising negative number as `01...` | negative normalised mantissa starts `10...` |
@@ -583,15 +583,15 @@ Exponent: 000101
 
 ---
 
-## 6.5 Floating-point to denary
+### 6.5 Floating-point to denary
 
-### Method
+#### Method
 1. Read the exponent. If MSB is 1, convert from two's complement.  
 2. Move the binary point by the exponent value.  
 3. Convert the mantissa value to denary.  
 4. If mantissa starts with 1, treat it as negative two's complement.
 
-### Example: 12-bit mantissa, 4-bit exponent
+#### Example: 12-bit mantissa, 4-bit exponent
 
 ```text
 Mantissa: 101000101011
@@ -614,7 +614,7 @@ Convert as two's complement:
 = -46.65625
 ```
 
-### Mark scheme answer structure
+#### Mark scheme answer structure
 1. Show exponent conversion.  
 2. Show binary point movement.  
 3. Show denary calculation.  
@@ -622,7 +622,7 @@ Convert as two's complement:
 
 ---
 
-## 6.6 Precision, range, rounding, overflow and underflow
+### 6.6 Precision, range, rounding, overflow and underflow
 
 | Concept | Meaning | Exam phrase |
 | --- | --- | --- |
@@ -632,10 +632,10 @@ Convert as two's complement:
 | Overflow | Number too large to be represented | exponent / storage range not enough |
 | Underflow | Number too close to zero to be represented | very small value cannot be stored |
 
-### Mark scheme style
+#### Mark scheme style
 > If the number of bits in the mantissa is increased, precision increases. If the number of bits in the exponent is increased, the range of possible numbers increases.
 
-### Common mistake
+#### Common mistake
 | Student writes | Why weak |
 | --- | --- |
 | more exponent bits means more accurate | exponent affects range, not precision |
@@ -645,9 +645,9 @@ Convert as two's complement:
 
 ---
 
-# 7. Mark Scheme Keywords
+## 7. Mark Scheme Keywords
 
-## 7.1 User-defined data types
+### 7.1 User-defined data types
 + **user-defined data type**
 + **non-composite**
 + **composite**
@@ -662,7 +662,7 @@ Convert as two's complement:
 + **set is unordered**
 + **set theory operations**
 
-## 7.2 File organisation and access
+### 7.2 File organisation and access
 + **records stored in chronological order**
 + **records stored in order of a key field**
 + **sequential access searches records one after another**
@@ -677,7 +677,7 @@ Convert as two's complement:
 + **overflow area**
 + **chaining**
 
-## 7.3 Floating-point
+### 7.3 Floating-point
 + **mantissa**
 + **exponent**
 + **two's complement**
@@ -693,7 +693,7 @@ Convert as two's complement:
 
 ---
 
-# 8. Common Mistakes
+## 8. Common Mistakes
 
 | Topic | Common mistake | Correction |
 | --- | --- | --- |
@@ -712,12 +712,12 @@ Convert as two's complement:
 
 ---
 
-# 9. Scenario Answer Bank
+## 9. Scenario Answer Bank
 
-## 9.1 Describe a record data type
+### 9.1 Describe a record data type
 > A record is a user-defined composite data type. It contains a fixed number of fields, and the fields can be of different data types. The fields are grouped under one identifier.
 
-## 9.2 Declare a record
+### 9.2 Declare a record
 ```text
 TYPE Order
     DECLARE AccountNumber : STRING
@@ -727,35 +727,35 @@ TYPE Order
 ENDTYPE
 ```
 
-## 9.3 Explain why a field should be enumerated
+### 9.3 Explain why a field should be enumerated
 > This field has a fixed range of possible values, so an enumerated type would restrict the values to valid options and make the program less error-prone.
 
-## 9.4 Describe a set
+### 9.4 Describe a set
 > A set is a user-defined composite data type containing unordered elements of the same data type. Set theory operations such as union, intersection and difference can be applied.
 
-## 9.5 Describe sequential access
+### 9.5 Describe sequential access
 > Sequential access searches records one after another from the physical start of the file until the required record is found or the end of file is reached.
 
-## 9.6 Explain serial vs sequential file search
+### 9.6 Explain serial vs sequential file search
 > In a serial file, records are stored in chronological order, so every record may need to be checked. In a sequential file, records are stored in order of a key field, so the key can be compared and the search can stop when the current key exceeds the target key.
 
-## 9.7 Explain hashing
+### 9.7 Explain hashing
 > A hashing algorithm takes a record key and calculates a hash value that gives the storage location of the record. It is used to provide direct access to records in a random or sequential file.
 
-## 9.8 Explain collision resolution
+### 9.8 Explain collision resolution
 > A collision occurs when two record keys generate the same hash value. It can be resolved by linear probing, by searching an overflow area, or by using a chain of records from the hashed location.
 
-## 9.9 Explain precision and range
+### 9.9 Explain precision and range
 > Increasing the number of bits in the mantissa increases precision. Increasing the number of bits in the exponent increases the range of numbers that can be represented.
 
-## 9.10 Explain rounding error
+### 9.10 Explain rounding error
 > Some denary fractions cannot be represented exactly in binary. Because the number of bits is fixed, the value may be rounded or truncated, causing a loss of precision.
 
 ---
 
-# 10. Process Diagrams
+## 10. Process Diagrams
 
-## 10.1 Choosing a user-defined type
+### 10.1 Choosing a user-defined type
 
 ```mermaid
 flowchart TD
@@ -767,7 +767,7 @@ B -->|Unordered same-type collection| F[Set]
 B -->|Object with attributes and methods| G[Class/Object]
 ```
 
-## 10.2 Floating-point conversion process
+### 10.2 Floating-point conversion process
 
 ```mermaid
 flowchart TD
@@ -783,9 +783,9 @@ G --> H[Fill mantissa and exponent boxes]
 
 ---
 
-# 11. 10 Marks Quick Check
+## 11. 10 Marks Quick Check
 
-## Questions
+### Questions
 
 1. State the difference between composite and non-composite data types. [2]  
 2. Write an enumerated type called `Day` for Monday, Tuesday and Wednesday. [2]  
@@ -795,7 +795,7 @@ G --> H[Fill mantissa and exponent boxes]
 6. In floating-point representation, what is the effect of increasing mantissa bits? [1]  
 7. What should the first two bits of a normalised positive mantissa be? [1]
 
-## Answers
+### Answers
 
 1. Composite data type refers to other data types / contains multiple elements [1]; non-composite does not refer to another data type / contains one type [1].  
 2. `TYPE Day = (Monday, Tuesday, Wednesday)` [2].  
@@ -807,9 +807,9 @@ G --> H[Fill mantissa and exponent boxes]
 
 ---
 
-# 12. 20 Marks Exam-Style Practice
+## 12. 20 Marks Exam-Style Practice
 
-## Question 1: User-defined data types [8]
+### Question 1: User-defined data types [8]
 
 A travel company stores booking data. Each booking has:
 
@@ -824,7 +824,7 @@ A travel company stores booking data. Each booking has:
 (b) Define a record type `Booking` for the booking data. [4]  
 (c) Explain why `Vehicle` is suitable as an enumerated type. [2]
 
-### Mark scheme
+#### Mark scheme
 
 (a)
 ```text
@@ -849,7 +849,7 @@ ENDTYPE
 
 ---
 
-## Question 2: File organisation and hashing [6]
+### Question 2: File organisation and hashing [6]
 
 A stock file stores 100 000 records. Each stock item has a unique stock code. The system often needs to find and update one individual record.
 
@@ -857,7 +857,7 @@ A stock file stores 100 000 records. Each stock item has a unique stock code. Th
 (b) Explain how a hashing algorithm can be used to access a stock record. [3]  
 (c) Describe one way to deal with a collision. [2]
 
-### Mark scheme
+#### Mark scheme
 
 (a) Random file organisation / direct access file [1]
 
@@ -869,7 +869,7 @@ Alternative: overflow area / chaining accepted with correct explanation.
 
 ---
 
-## Question 3: Floating-point representation [6]
+### Question 3: Floating-point representation [6]
 
 A number is stored using:
 
@@ -880,7 +880,7 @@ A number is stored using:
 (a) Convert `+26.5` into normalised floating-point representation. Show working. [4]  
 (b) Explain the effect of using fewer mantissa bits. [2]
 
-### Mark scheme
+#### Mark scheme
 
 (a)
 ```text

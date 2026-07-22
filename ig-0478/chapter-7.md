@@ -1,257 +1,508 @@
-# IGCSE 0478 Computer Science - Chapter 7 Updated Checklist
-## Algorithm Design and Problem-Solving｜Syllabus-Aligned Paper 2 Revision Sheet
+# Chapter 7: Algorithm Design and Problem-Solving
 
-> **Version:** Syllabus-aligned revision for Paper 2  
-> **Target:** Cambridge IGCSE Computer Science 0478  
-> **Chapter:** 7 Algorithm design and problem-solving  
-> **Main audience:** Students  
-> **Style:** Chinese explanation + English pseudocode keywords
+> **Paper 2 focus:** turn a problem into a precise algorithm, test it systematically, trace it accurately, and correct errors.
 
 ---
 
-# 0. How to Use This Sheet
+## 1. Syllabus Coverage
 
-Chapter 7 是 Paper 2 的核心。复习目标不是背定义，而是能把题目场景变成清晰的 algorithm。
+Use this chapter to check every Topic 7 objective.
 
-Use this order:
-
-1. understand the problem and identify inputs, processing and outputs
-2. decompose the task into smaller steps
-3. write or trace pseudocode
-4. test with normal, boundary and abnormal data
-5. improve the algorithm when a trace table shows an error
-
----
-
-# 1. Core Problem-Solving Ideas
-
-| Idea | What it means | Exam phrase |
-| --- | --- | --- |
-| decomposition | split a large problem into smaller sub-problems | break down the problem |
-| abstraction | keep important details and ignore irrelevant detail | remove unnecessary detail |
-| algorithm | finite sequence of steps to solve a problem | ordered steps |
-| input | data entered into the algorithm | value supplied by user/sensor/file |
-| output | result produced by the algorithm | display, store or print result |
-| validation | check data is reasonable before processing | range, type, length, presence, format |
-| verification | check data has been entered accurately | double entry, visual check |
-
-Common mistake:
-
-- Writing a program in natural language only, with no clear sequence.
-- Using validation to mean "checking the answer is correct". Validation only checks whether input is acceptable.
+| Objective | Where it is covered |
+|---|---|
+| Program development life cycle | Section 2 |
+| Decomposition and subsystem design | Sections 2–3 |
+| Structure diagrams, flowcharts and pseudocode | Section 3 |
+| Algorithm purpose and input-process-output-storage | Section 3 |
+| Linear search, bubble sort, totalling, counting, maximum, minimum and average | Section 4 |
+| Validation and verification | Section 5 |
+| Normal, abnormal, extreme and boundary test data | Section 6 |
+| Trace tables | Section 7 |
+| Find and correct algorithm errors | Section 8 |
+| Write and amend algorithms | Worked Examples and practice sections |
 
 ---
 
-# 2. Standard Pseudocode Building Blocks
+## 2. Program Development Life Cycle
 
-## 2.1 Input and Output
+A reliable program is developed in four broad stages.
+
+| Stage | Main questions | Typical evidence |
+|---|---|---|
+| Analysis | What problem must be solved? What are the inputs, outputs and constraints? | Requirements, input/output list, validation rules |
+| Design | How will the solution work? How can it be divided into smaller parts? | Structure diagram, flowchart, pseudocode, data design |
+| Coding | How is the design translated into a programming language? | Source code with meaningful identifiers and comments |
+| Testing | Does every part work for valid and invalid cases? | Test plan, expected results, actual results, corrections |
+
+### Decomposition
+
+**Decomposition** breaks a complex problem into smaller subsystems. Each subsystem should have one clear purpose and defined inputs and outputs.
+
+For a school event booking system, possible subsystems are:
+
+- enter attendee details
+- validate ticket quantity
+- calculate price
+- save booking
+- display confirmation
+
+This makes the design easier to understand, code and test.
+
+---
+
+## 3. Describing an Algorithm
+
+An **algorithm** is a finite sequence of unambiguous steps that solves a problem.
+
+Before writing pseudocode, identify:
+
+| Element | Question |
+|---|---|
+| Input | What data enters the system? |
+| Process | What calculations, decisions or repetitions occur? |
+| Output | What information is produced? |
+| Storage | What data must be kept for later use? |
+
+### Structure diagrams
+
+A structure diagram shows how a problem is decomposed.
 
 ```text
-INPUT name
-OUTPUT "Enter mark"
-OUTPUT total
+Event booking
+├── Enter booking
+├── Validate quantity
+├── Calculate total
+├── Save booking
+└── Display confirmation
 ```
 
-Use meaningful variable names:
+It shows the parts of a solution, not the detailed order of every instruction.
 
-- good: `studentMark`, `total`, `highestScore`
-- weak: `x`, `thing`, `number1` when the context is clear
+### Flowchart symbols
 
-## 2.2 Assignment
+| Symbol shape | Purpose |
+|---|---|
+| Oval / rounded rectangle | Start or stop |
+| Parallelogram | Input or output |
+| Rectangle | Process or assignment |
+| Diamond | Decision with labelled branches |
+| Arrow | Direction of control flow |
 
-```text
-total <- total + mark
-count <- count + 1
-average <- total / count
+```mermaid
+flowchart TD
+    A([Start]) --> B[/INPUT Score/]
+    B --> C{Score >= 50?}
+    C -- Yes --> D[/OUTPUT "Pass"/]
+    C -- No --> E[/OUTPUT "Retry"/]
+    D --> F([Stop])
+    E --> F
 ```
 
-Important: `=` compares values in conditions, while `<-` assigns a new value.
-
----
-
-# 3. Selection
-
-## 3.1 IF Statement
+### Pseudocode essentials
 
 ```text
-IF mark >= 50 THEN
-    OUTPUT "Pass"
+INPUT Age
+NextAge <- Age + 1
+
+IF NextAge >= 18 THEN
+    OUTPUT "Adult"
 ELSE
-    OUTPUT "Fail"
+    OUTPUT "Under 18"
 ENDIF
 ```
 
-## 3.2 Nested Selection
+Use indentation to make the logic visible. Every selection and loop must have a clear ending.
+
+---
+
+## 4. Standard Algorithm Methods
+
+### Linear search
+
+Check each element in order until the target is found or the array ends.
 
 ```text
-IF mark >= 80 THEN
-    grade <- "A"
-ELSE
-    IF mark >= 60 THEN
-        grade <- "B"
+Found <- FALSE
+Index <- 1
+
+WHILE Index <= 6 AND Found = FALSE DO
+    IF Names[Index] = Target THEN
+        Found <- TRUE
     ELSE
-        grade <- "C"
+        Index <- Index + 1
     ENDIF
-ENDIF
-```
-
-Common mistake: using several separate `IF` statements when the categories are mutually exclusive. Use `ELSE IF` logic or nested selection.
-
----
-
-# 4. Iteration
-
-| Loop | When to use it | Example |
-| --- | --- | --- |
-| `FOR` | fixed number of repetitions | process 30 students |
-| `WHILE` | may run zero times | repeat while input is invalid |
-| `REPEAT ... UNTIL` | must run at least once | keep asking until valid |
-
-## 4.1 Count-Controlled Loop
-
-```text
-FOR i <- 1 TO 10
-    INPUT score
-    total <- total + score
-NEXT i
-```
-
-## 4.2 Pre-Condition Loop
-
-```text
-WHILE password <> "CS2028" DO
-    INPUT password
 ENDWHILE
 ```
 
-## 4.3 Post-Condition Loop
+### Bubble sort
+
+Compare adjacent elements and swap them when they are in the wrong order. Repeat passes until the array is sorted.
+
+```text
+FOR Pass <- 1 TO 5
+    FOR Index <- 1 TO 6 - Pass
+        IF Scores[Index] > Scores[Index + 1] THEN
+            Temp <- Scores[Index]
+            Scores[Index] <- Scores[Index + 1]
+            Scores[Index + 1] <- Temp
+        ENDIF
+    NEXT Index
+NEXT Pass
+```
+
+The largest unsorted value moves to the right after each ascending pass.
+
+### Totalling, counting and average
+
+```text
+Total <- 0
+Count <- 0
+
+FOR Index <- 1 TO 8
+    Total <- Total + Values[Index]
+    IF Values[Index] >= 50 THEN
+        Count <- Count + 1
+    ENDIF
+NEXT Index
+
+Average <- Total / 8
+```
+
+### Maximum and minimum
+
+Initialise from the first real data item, not from an assumed value such as zero.
+
+```text
+Maximum <- Values[1]
+Minimum <- Values[1]
+
+FOR Index <- 2 TO 8
+    IF Values[Index] > Maximum THEN
+        Maximum <- Values[Index]
+    ENDIF
+    IF Values[Index] < Minimum THEN
+        Minimum <- Values[Index]
+    ENDIF
+NEXT Index
+```
+
+This still works when all values are negative.
+
+---
+
+## 5. Validation and Verification
+
+**Validation** checks whether input is sensible and follows rules. It does not prove that the value is factually correct.
+
+| Validation check | Example |
+|---|---|
+| Range | Mark must be from 0 to 100 inclusive |
+| Length | Product code must contain 8 characters |
+| Type | Quantity must be an integer |
+| Presence | Name must not be empty |
+| Format | Date must follow DD/MM/YYYY |
+| Check digit | Recalculate and compare the final digit of an identification code |
+
+**Verification** checks that data has been copied or entered accurately.
+
+- **visual check:** the user compares the entered value with the source
+- **double entry:** the same data is entered twice and the two versions are compared
+
+### A robust validation loop
 
 ```text
 REPEAT
-    INPUT age
-UNTIL age >= 11 AND age <= 19
+    INPUT Mark
+UNTIL Mark >= 0 AND Mark <= 100
 ```
+
+The condition after `UNTIL` describes valid data because the loop stops when that condition is true.
 
 ---
 
-# 5. Arrays
+## 6. Test Data
 
-Arrays store multiple values under one name.
+| Test type | Meaning | Example for valid range 1–120 |
+|---|---|---|
+| Normal | Valid, ordinary value away from limits | 45 |
+| Abnormal | Invalid value that should be rejected | 0, 121 or "ten" |
+| Extreme | Valid value at the lowest or highest permitted limit | 1 or 120 |
+| Boundary | Values on and immediately around a limit | 0, 1, 2 and 119, 120, 121 |
 
-```text
-DECLARE names : ARRAY[1:30] OF STRING
-DECLARE scores : ARRAY[1:30] OF INTEGER
+The key distinction is:
 
-FOR i <- 1 TO 30
-    INPUT names[i]
-    INPUT scores[i]
-NEXT i
-```
+- extreme values are valid endpoints
+- boundary testing includes endpoints and nearby values on both sides
 
-Exam skills:
-
-- choose a suitable array size
-- use the index correctly
-- search through an array
-- find total, average, highest and lowest values
-- update one element
+A useful test plan states the input, test type, expected outcome, actual outcome and pass/fail result.
 
 ---
 
-# 6. Searching and Counting Patterns
+## 7. Trace Tables
 
-## 6.1 Linear Search
+A trace table records how variables and outputs change after each relevant instruction.
+
+For the algorithm:
 
 ```text
-found <- FALSE
-position <- 0
-
-FOR i <- 1 TO 30
-    IF names[i] = searchName THEN
-        found <- TRUE
-        position <- i
+Total <- 0
+FOR Index <- 1 TO 4
+    Total <- Total + Numbers[Index]
+    IF Numbers[Index] MOD 2 = 0 THEN
+        OUTPUT Numbers[Index]
     ENDIF
-NEXT i
-
-IF found = TRUE THEN
-    OUTPUT position
-ELSE
-    OUTPUT "Not found"
-ENDIF
+NEXT Index
+OUTPUT Total
 ```
 
-## 6.2 Counting Matches
+and `Numbers = [5, 2, 7, 4]`:
+
+| Index | Numbers[Index] | Total | Output |
+|---:|---:|---:|---:|
+| 1 | 5 | 5 | |
+| 2 | 2 | 7 | 2 |
+| 3 | 7 | 14 | |
+| 4 | 4 | 18 | 4 |
+| after loop | | 18 | 18 |
+
+Write a new row only when a relevant value changes or output occurs. Include prompts if the question asks for all output.
+
+---
+
+## 8. Finding and Correcting Errors
+
+Three useful error categories are:
+
+- **syntax error:** an instruction breaks the language rules
+- **logic error:** the algorithm runs but produces the wrong result
+- **runtime error:** execution fails, for example because an array index is outside its bounds
+
+Use this correction method:
+
+1. state the intended result
+2. trace a small input
+3. identify the first row where actual state differs from expected state
+4. change only the faulty instruction
+5. retest normal, boundary and abnormal cases where relevant
+
+Example error:
 
 ```text
-count <- 0
-FOR i <- 1 TO 30
-    IF scores[i] >= 50 THEN
-        count <- count + 1
+Maximum <- 0
+```
+
+If all readings are negative, the reported maximum is incorrectly zero. Correct it by using the first reading:
+
+```text
+Maximum <- Readings[1]
+```
+
+---
+
+## 9. Worked Example 1 — From Requirements to Design
+
+A cinema sells up to six tickets in one booking. Each ticket costs $8. A booking code and ticket quantity are entered. The quantity must be from 1 to 6. The system displays the total and stores the booking.
+
+### Analysis
+
+- input: booking code, ticket quantity
+- process: validate quantity; multiply by 8
+- output: total charge
+- storage: booking code, quantity and total
+
+### Decomposition
+
+```text
+Cinema booking
+├── Input booking data
+├── Validate ticket quantity
+├── Calculate total
+├── Store booking
+└── Display total
+```
+
+### Pseudocode design
+
+Assume `BookingCount` and three matching booking arrays have already been declared.
+
+```text
+INPUT BookingCode
+
+REPEAT
+    INPUT Quantity
+UNTIL Quantity >= 1 AND Quantity <= 6
+
+Total <- Quantity * 8
+BookingCount <- BookingCount + 1
+BookingCodes[BookingCount] <- BookingCode
+TicketQuantities[BookingCount] <- Quantity
+BookingTotals[BookingCount] <- Total
+OUTPUT Total
+```
+
+### Test selection
+
+| Input quantity | Type | Expected result |
+|---:|---|---|
+| 3 | normal | accepted; total 24 |
+| 1 | extreme and boundary | accepted; total 8 |
+| 0 | boundary and abnormal | rejected |
+| 6 | extreme and boundary | accepted; total 48 |
+| 7 | boundary and abnormal | rejected |
+
+---
+
+## 10. Worked Example 2 — Trace a Search and Total
+
+`Codes = ["B4", "A2", "C7", "D1"]` and `Prices = [12, 9, 15, 6]`. The target is `"C7"`.
+
+```text
+Index <- 1
+Found <- FALSE
+Total <- 0
+
+WHILE Index <= 4 AND Found = FALSE DO
+    Total <- Total + Prices[Index]
+    IF Codes[Index] = "C7" THEN
+        Found <- TRUE
+    ELSE
+        Index <- Index + 1
     ENDIF
-NEXT i
+ENDWHILE
 ```
 
-Common mistake: resetting `count` or `total` inside the loop. Initialise before the loop.
+| Index | Codes[Index] | Total | Found |
+|---:|---|---:|---|
+| 1 | B4 | 12 | FALSE |
+| 2 | A2 | 21 | FALSE |
+| 3 | C7 | 36 | TRUE |
+
+Final state: `Index = 3`, `Total = 36`, `Found = TRUE`. The total includes only the prices inspected before the search stops.
 
 ---
 
-# 7. Trace Tables
+## 11. Worked Example 3 — One Bubble-Sort Pass
 
-A trace table shows how variable values change when an algorithm runs.
+Sort `[7, 3, 5, 2]` into ascending order. One pass compares positions 1–2, 2–3 and 3–4.
 
-Checklist:
+| Comparison | Action | Array after action |
+|---|---|---|
+| 7 and 3 | swap | [3, 7, 5, 2] |
+| 7 and 5 | swap | [3, 5, 7, 2] |
+| 7 and 2 | swap | [3, 5, 2, 7] |
 
-1. make one column for each variable
-2. update values only when an assignment happens
-3. include loop counter changes
-4. record output separately
-5. stop exactly when the loop condition becomes false
+After one pass, the largest value is in its final position. The array is not fully sorted, so more passes are required.
 
-Example:
+A common faulty swap is:
 
 ```text
-total <- 0
-FOR i <- 1 TO 3
-    INPUT mark
-    total <- total + mark
-NEXT i
-OUTPUT total
+Values[Index] <- Values[Index + 1]
+Values[Index + 1] <- Values[Index]
 ```
 
-If the inputs are `5, 7, 4`, the final output is `16`.
+The original first value is lost. A temporary variable is necessary.
 
 ---
 
-# 8. Testing and Dry Runs
+## 12. Common Mistakes Checklist
 
-| Test type | Meaning | Example for age 11 to 19 |
-| --- | --- | --- |
-| normal | accepted value in the middle | 15 |
-| boundary | value at or just around the limit | 11, 19, 10, 20 |
-| abnormal | wrong type or impossible value | "abc", -5 |
-
-Good test data includes expected results. Do not only list inputs.
-
----
-
-# 9. Common Exam Mistakes
-
-- No initialisation before using `total`, `count`, `highest` or `found`.
-- Loop runs one time too many or one time too few.
-- Validation checks are written after the invalid data has already been used.
-- Array index starts at the wrong value.
-- Boolean flag is set but never tested.
-- Output is inside the loop when the question expects one final result.
+- [ ] I do not confuse validation with verification.
+- [ ] I distinguish extreme data from the wider set of boundary data.
+- [ ] I initialise totals and counters before a loop.
+- [ ] I initialise maximum and minimum from real data.
+- [ ] I update the loop control variable when using a `WHILE` loop.
+- [ ] I use a temporary variable when swapping.
+- [ ] I check array bounds and use one indexing convention consistently.
+- [ ] I label flowchart decision branches.
+- [ ] I trace prompts and outputs as well as variables when required.
+- [ ] I answer the actual scenario instead of reproducing a memorised algorithm.
 
 ---
 
-# 10. Mini Practice
+## 13. 10 Marks Quick Check
 
-1. Write pseudocode to input 20 temperatures and output the highest temperature.
-2. Write validation for a mark from 0 to 100 inclusive.
-3. Trace an algorithm that counts how many numbers in an array are greater than 50.
-4. Explain the difference between validation and verification.
-5. Write a linear search for a product code in an array of 100 codes.
+1. Name the four stages of the program development life cycle. **[4]**
+2. State one difference between validation and verification. **[2]**
+3. A valid age is from 1 to 120 inclusive. Give one lower-boundary invalid value and one upper extreme value. **[2]**
+4. State the purpose of a linear search and the purpose of a bubble sort. **[2]**
+
+**Total: 10 marks**
+
+### Quick Check Answers
+
+1. Analysis, design, coding and testing. Award one mark for each. **[4]**
+2. Validation checks that data is sensible or follows rules; verification checks that data was entered/copied accurately. **[2]**
+3. Lower-boundary invalid value: `0`; upper extreme value: `120`. **[2]**
+4. Linear search finds a target by checking items in sequence; bubble sort repeatedly compares and swaps adjacent items to place data in order. **[2]**
 
 ---
 
+## 14. 20 Marks Practice
+
+A running club records eight lap times in seconds in the array `LapTime[1:8]`. Every time must be from 30 to 180 inclusive.
+
+1. Identify one input, one process and one output for this system. **[3]**
+2. Give one normal value, both extreme values and one abnormal value for testing a lap-time input. **[4]**
+3. Explain why double entry is verification rather than validation. **[2]**
+4. The following algorithm is intended to find the fastest time:
+
+   ```text
+   Fastest <- 0
+   FOR Index <- 1 TO 8
+       IF LapTime[Index] > Fastest THEN
+           Fastest <- LapTime[Index]
+       ENDIF
+   NEXT Index
+   ```
+
+   Identify two logic errors and state a correction for each. **[4]**
+5. Write pseudocode to:
+   - input and validate eight lap times
+   - calculate their total and average
+   - count how many are below 60 seconds
+   - output the average and count. **[7]**
+
+**Total: 20 marks**
+
+### 20 Marks Practice Mark Scheme
+
+1. Any suitable input such as a lap time; process such as calculate average/count values below 60; output such as the average or count. One mark each. **[3]**
+2. Normal: any integer clearly within the range, such as 75; extremes: 30 and 180; abnormal: any value outside the range or wrong type, such as 181. **[4]**
+3. Double entry compares two versions to check accurate entry **[1]**; it does not check whether the value satisfies a sensible rule **[1]**. **[2]**
+4. `Fastest` should be initialised to `LapTime[1]`, not zero **[2]**; a faster time is smaller, so the comparison should use `<`, not `>` **[2]**. **[4]**
+5. Example solution:
+
+   ```text
+   Total <- 0
+   Under60 <- 0
+
+   FOR Index <- 1 TO 8
+       REPEAT
+           INPUT LapTime[Index]
+       UNTIL LapTime[Index] >= 30 AND LapTime[Index] <= 180
+
+       Total <- Total + LapTime[Index]
+       IF LapTime[Index] < 60 THEN
+           Under60 <- Under60 + 1
+       ENDIF
+   NEXT Index
+
+   Average <- Total / 8
+   OUTPUT Average
+   OUTPUT Under60
+   ```
+
+   Award for: initialising total and counter **[1]**; correct eight-item loop **[1]**; valid range loop **[1]**; storing each input **[1]**; correct total **[1]**; correct conditional count **[1]**; correct average and both outputs **[1]**. **[7]**
+
+---
+
+## 15. Final Self-Assessment
+
+- [ ] I can move from requirements to input-process-output-storage.
+- [ ] I can decompose a solution before coding.
+- [ ] I can read and write structure diagrams, flowcharts and pseudocode.
+- [ ] I can apply all seven standard algorithm methods.
+- [ ] I can choose validation, verification and test data precisely.
+- [ ] I can complete trace tables without skipping state changes.
+- [ ] I can identify, explain and correct algorithm errors.
+- [ ] I completed both practice sets without looking at the answers first.

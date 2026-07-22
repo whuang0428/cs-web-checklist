@@ -5,6 +5,8 @@
 Welcome to the CS Web Checklist.  
 Choose a course below to start learning.
 
+[View syllabus coverage and current maturity](coverage.md)
+
 ---
 
 ## Choose Your Course
@@ -76,25 +78,37 @@ Choose a course below to start learning.
 <a class="chapter-card" href="#/ig-0478/chapter-7">
   <span class="chapter-number">Chapter 7</span>
   <div class="card-title">Algorithm Design and Problem-Solving</div>
-  <p>Decomposition, pseudocode, trace tables, validation, arrays and testing.</p>
+  <p>Development life cycle, decomposition, standard algorithms, trace tables and testing.</p>
 </a>
 
 <a class="chapter-card" href="#/ig-0478/chapter-8">
   <span class="chapter-number">Chapter 8</span>
   <div class="card-title">Programming</div>
-  <p>Data types, operators, subroutines, parameters, file handling and errors.</p>
+  <p>Control structures, strings, arrays, subroutines, scope and file handling.</p>
 </a>
 
 <a class="chapter-card" href="#/ig-0478/chapter-9">
   <span class="chapter-number">Chapter 9</span>
   <div class="card-title">Databases</div>
-  <p>Tables, records, fields, primary keys, validation, queries and reports.</p>
+  <p>Single-table design, data types, primary keys, SQL and query output.</p>
 </a>
 
 <a class="chapter-card" href="#/ig-0478/chapter-10">
   <span class="chapter-number">Chapter 10</span>
   <div class="card-title">Boolean Logic</div>
   <p>Logic gates, Boolean expressions, truth tables and circuit design.</p>
+</a>
+
+<a class="chapter-card" href="#/ig-0478/paper-2-review">
+  <span class="chapter-number">Paper 2 Review A</span>
+  <div class="card-title">75-Mark Mixed Practice — Set A</div>
+  <p>A timed original paper covering Topics 7-10 with a complete mark scheme.</p>
+</a>
+
+<a class="chapter-card" href="#/ig-0478/paper-2-review-2">
+  <span class="chapter-number">Paper 2 Review B</span>
+  <div class="card-title">75-Mark Independent Retest</div>
+  <p>A second original paper covering Topics 7-10 with new scenarios and full answers.</p>
 </a>
 
 </div>
@@ -156,25 +170,37 @@ Choose a course below to start learning.
 <a class="chapter-card" href="#/as-9618/chapter-9">
   <span class="chapter-number">Chapter 9</span>
   <div class="card-title">Algorithm Design and Problem-Solving</div>
-  <p>Computational thinking, structure charts, trace tables, searching, sorting and testing.</p>
+  <p>Abstraction, decomposition, identifier tables, algorithm representations and refinement.</p>
 </a>
 
 <a class="chapter-card" href="#/as-9618/chapter-10">
   <span class="chapter-number">Chapter 10</span>
   <div class="card-title">Data Types and Structures</div>
-  <p>Arrays, records, files, stacks, queues, linked lists and structure choice.</p>
+  <p>Records, arrays, text files, searching, sorting and abstract data types.</p>
 </a>
 
 <a class="chapter-card" href="#/as-9618/chapter-11">
   <span class="chapter-number">Chapter 11</span>
   <div class="card-title">Programming</div>
-  <p>Subroutines, parameters, scope, recursion, OOP basics and code reading.</p>
+  <p>Declarations, constructs, loop choice, procedures, functions and parameter passing.</p>
 </a>
 
 <a class="chapter-card" href="#/as-9618/chapter-12">
   <span class="chapter-number">Chapter 12</span>
   <div class="card-title">Software Development</div>
-  <p>SDLC, analysis, design, testing, documentation, maintenance and methods.</p>
+  <p>Development life cycles, structure charts, state transitions, testing and maintenance.</p>
+</a>
+
+<a class="chapter-card" href="#/as-9618/paper-2-review">
+  <span class="chapter-number">Paper 2 Review A</span>
+  <div class="card-title">75-Mark Mixed Practice — Set A</div>
+  <p>A two-hour original paper covering Sections 9-12 with a complete mark scheme.</p>
+</a>
+
+<a class="chapter-card" href="#/as-9618/paper-2-review-2">
+  <span class="chapter-number">Paper 2 Review B</span>
+  <div class="card-title">75-Mark Independent Retest</div>
+  <p>A second two-hour paper covering Sections 9-12 with new problems and full answers.</p>
 </a>
 
 </div>
@@ -224,13 +250,31 @@ Choose a course below to start learning.
 <a class="chapter-card" href="#/a2-9618/chapter-19">
   <span class="chapter-number">Chapter 19</span>
   <div class="card-title">Computational Thinking and Problem-Solving</div>
-  <p>Advanced algorithms, recursion, search, sort, ADTs, efficiency and testing.</p>
+  <p>Searches, sorts, ADT implementation, Big O, recursion, call stacks and testing.</p>
 </a>
 
 <a class="chapter-card" href="#/a2-9618/chapter-20">
   <span class="chapter-number">Chapter 20</span>
   <div class="card-title">Further Programming</div>
-  <p>Modular programming, OOP, recursion, files, exceptions, ADTs and debugging.</p>
+  <p>Programming paradigms, OOP, serial/sequential/random files and exception handling.</p>
+</a>
+
+<a class="chapter-card" href="#/a2-9618/paper-3-review">
+  <span class="chapter-number">Paper 3 Review</span>
+  <div class="card-title">75-Mark Advanced Theory</div>
+  <p>A 90-minute cross-chapter paper covering Sections 13-20 with a complete mark scheme.</p>
+</a>
+
+<a class="chapter-card" href="#/a2-9618/paper-4-review">
+  <span class="chapter-number">Paper 4 Review A</span>
+  <div class="card-title">75-Mark Practical — Set A</div>
+  <p>An original 2.5-hour Python practical covering Sections 19-20 with complete reference solutions.</p>
+</a>
+
+<a class="chapter-card" href="#/a2-9618/paper-4-review-2">
+  <span class="chapter-number">Paper 4 Review B</span>
+  <div class="card-title">75-Mark Independent Retest</div>
+  <p>A second Python practical with new algorithm, OOP, file and tree scenarios.</p>
 </a>
 
 </div>

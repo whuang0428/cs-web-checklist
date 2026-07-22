@@ -1,5 +1,5 @@
-# IGCSE 0478 Chapter 3 Updated Checklist
-## Hardware｜Syllabus-Aligned Revision Edition
+# IGCSE 0478 Chapter 3: Hardware
+> **Hardware｜Syllabus-Aligned Revision Edition**
 > **适用范围**：Cambridge IGCSE Computer Science 0478  
 **章节范围**：3.1 Computer Architecture｜3.2 Input and Output Devices｜3.3 Data Storage｜3.4 Network Hardware  
 **更新依据**：2026–2028 syllabus + 全部 2025 Paper 1 / Mark Scheme 趋势 + 原 2023–2024 WHBC checklist  
@@ -30,8 +30,8 @@
 
 ---
 
-## 1. 内容取舍：哪些内容要删？哪些保留？
-### ✅ 必须保留并重点训练
+### 1. 内容取舍：哪些内容要删？哪些保留？
+#### ✅ 必须保留并重点训练
 | 内容 | 原因 |
 | --- | --- |
 | CPU role, microprocessor definition | syllabus 明确要求，常以 1 mark 出现 |
@@ -50,7 +50,7 @@
 | NIC / MAC / IP / router | 2025 网络硬件高频 |
 
 
-### ⚠️ 降权或删除
+#### ⚠️ 降权或删除
 | 原内容 | 处理方式 | 原因 |
 | --- | --- | --- |
 | 过长 device examples | **压缩** | 考试更常考选择与作用，不考百科式清单 |
@@ -64,15 +64,15 @@
 
 ---
 
-# 3.1 Computer Architecture
-## 3.1.1 CPU and Microprocessor
+## 3.1 Computer Architecture
+### 3.1.1 CPU and Microprocessor
 **<font style="background-color:#f8fbff;">CPU</font>**<font style="background-color:#f8fbff;">  
 </font><font style="background-color:#f8fbff;">Processes instructions and data that are input into the computer so that results can be output. </font>
 
 **<font style="background-color:#fffaf2;">Microprocessor</font>**<font style="background-color:#fffaf2;">  
 </font><font style="background-color:#fffaf2;">A type of integrated circuit on a single chip. </font>
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + The CPU **processes instructions and data**.
 + The CPU performs the **fetch–decode–execute cycle**.
 + A microprocessor is **an integrated circuit on a single chip**.
@@ -80,8 +80,8 @@
 
 ---
 
-## 3.1.2 CPU Components｜CU, ALU, Registers and Buses
-### CPU Units
+### 3.1.2 CPU Components｜CU, ALU, Registers and Buses
+#### CPU Units
 | Component | Full name | Exam function |
 | --- | --- | --- |
 | **CU** | Control Unit | sends control signals and manages the flow of data through the CPU |
@@ -89,7 +89,7 @@
 | **Clock** | System clock | controls the timing / number of FDE cycles performed per second |
 
 
-### CPU Registers
+#### CPU Registers
 | Register | Full name | Mark scheme style function |
 | --- | --- | --- |
 | **PC** | Program Counter | stores the address of the next instruction to be fetched |
@@ -99,7 +99,7 @@
 | **ACC** | Accumulator | stores interim results / data used by the ALU |
 
 
-### Buses
+#### Buses
 | Bus | Function | Direction |
 | --- | --- | --- |
 | **Address bus** | carries memory addresses from CPU to memory / I/O devices | usually one-way |
@@ -112,7 +112,7 @@
 
 ---
 
-## 3.1.3 Fetch–Decode–Execute Cycle｜6-mark Core Template
+### 3.1.3 Fetch–Decode–Execute Cycle｜6-mark Core Template
 ```mermaid
 flowchart TD
 A[PC stores address of next instruction] --> B[Address copied from PC to MAR]
@@ -127,7 +127,7 @@ I --> J[ALU / relevant component executes instruction]
 J --> K[Result may be stored in ACC / memory]
 ```
 
-### Fetch Stage
+#### Fetch Stage
 1. The **PC** stores the address of the next instruction.
 2. The address is copied from **PC to MAR**.
 3. The instruction is fetched from **RAM** at the address stored in MAR.
@@ -135,18 +135,18 @@ J --> K[Result may be stored in ACC / memory]
 5. The instruction is copied from **MDR to CIR**.
 6. The **PC is incremented** to point to the next instruction.
 
-### Decode Stage
+#### Decode Stage
 + The **CU decodes** the instruction stored in the **CIR**.
 + The instruction is decoded using an **instruction set**.
 + The instruction may be separated into **opcode** and **operand**.
 
-### Execute Stage
+#### Execute Stage
 + The CU sends control signals to the relevant CPU component.
 + The **ALU** performs arithmetic / logic operations if required.
 + The **ACC** stores data or interim results.
 + The result may be written back to memory.
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + The instruction is retrieved from RAM and stored in the MDR.
 + The instruction is then sent to the CIR.
 + The CU decodes the instruction using the instruction set.
@@ -156,7 +156,7 @@ J --> K[Result may be stored in ACC / memory]
 
 ---
 
-## 3.1.4 Decode + Execute Diagram Focus｜CIR / CU / ALU / ACC
+### 3.1.4 Decode + Execute Diagram Focus｜CIR / CU / ALU / ACC
 ```mermaid
 flowchart LR
 CIR[CIR stores instruction] --> CU[CU decodes instruction]
@@ -167,7 +167,7 @@ ACC[ACC stores data / interim results] --> ALU
 ALU --> ACC2[ACC stores result]
 ```
 
-### What the diagram should show
+#### What the diagram should show
 + **CIR is built into / associated with the CU**.
 + **CIR stores the instruction**.
 + **CU decodes the instruction**.
@@ -180,7 +180,7 @@ ALU --> ACC2[ACC stores result]
 
 ---
 
-## 3.1.5 Core, Cache and Clock｜CPU Performance
+### 3.1.5 Core, Cache and Clock｜CPU Performance
 | Factor | Definition | How it affects performance |
 | --- | --- | --- |
 | **Core** | independent processing unit in the CPU that can perform FDE cycle | more cores can process more instructions simultaneously |
@@ -188,7 +188,7 @@ ALU --> ACC2[ACC stores result]
 | **Clock speed** | number of FDE cycles / clock pulses per second | higher clock speed means more instructions can be processed per second |
 
 
-### Core Exam Template
+#### Core Exam Template
 > **Explain how the performance of a CPU can be improved.**
 >
 
@@ -203,7 +203,7 @@ Use paired points:
 
 ---
 
-## 3.1.6 Instruction Set, Opcode and Operand
+### 3.1.6 Instruction Set, Opcode and Operand
 | Term | Meaning |
 | --- | --- |
 | **Instruction set** | a list of all the machine code commands that can be processed by a CPU |
@@ -211,17 +211,17 @@ Use paired points:
 | **Operand** | part of an instruction that tells the CPU what data / address to use |
 
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + An instruction set is a **list of machine code commands** that can be processed by a CPU.
 + The **opcode** identifies the operation.
 + The **operand** identifies the data or address used by the instruction.
 
 ---
 
-## 3.1.7 Embedded Systems
+### 3.1.7 Embedded Systems
 An **embedded system** is a computer system built into a larger device to perform a **dedicated / limited / single function**.
 
-### Characteristics of Embedded Systems
+#### Characteristics of Embedded Systems
 | Scoring point | Mark scheme phrase |
 | --- | --- |
 | Function | has a single / limited / dedicated function |
@@ -231,7 +231,7 @@ An **embedded system** is a computer system built into a larger device to perfor
 | Device relation | built into / part of a larger device |
 
 
-### Examples
+#### Examples
 + Washing machine
 + Vending machine
 + Security system
@@ -240,7 +240,7 @@ An **embedded system** is a computer system built into a larger device to perfor
 + ATM
 + Car engine / ABS system
 
-### Embedded System vs General Purpose Computer
+#### Embedded System vs General Purpose Computer
 | Embedded system | General purpose computer |
 | --- | --- |
 | performs one dedicated function | performs many different functions |
@@ -255,15 +255,15 @@ An **embedded system** is a computer system built into a larger device to perfor
 
 ---
 
-# 3.2 Input and Output Devices
-## 3.2.1 Input and Output Devices
+## 3.2 Input and Output Devices
+### 3.2.1 Input and Output Devices
 | Type | Meaning | Examples |
 | --- | --- | --- |
 | **Input device** | hardware used to enter data into a computer system | keyboard, microphone, camera, sensor, scanner, touchscreen |
 | **Output device** | hardware used to output data from a computer system | screen, speaker, printer, actuator, projector, LED |
 
 
-### High-frequency device notes
+#### High-frequency device notes
 | Device | Typical use / exam point |
 | --- | --- |
 | **Keyboard** | enter text / data |
@@ -279,7 +279,7 @@ An **embedded system** is a computer system built into a larger device to perfor
 
 ---
 
-## 3.2.2 Sensors｜How to Choose the Correct Sensor
+### 3.2.2 Sensors｜How to Choose the Correct Sensor
 A **sensor** is an input device that measures physical properties from the environment.
 
 | Sensor | Measures / detects | Common exam scenarios |
@@ -297,12 +297,12 @@ A **sensor** is an input device that measures physical properties from the envir
 | **Level** | liquid / powder level | tank, water bowl, production process |
 
 
-### Core Exam Sentence
+#### Core Exam Sentence
 + A sensor **collects physical data** from the environment and sends it to the microprocessor.
 
 ---
 
-## 3.2.3 Analogue Data, Digital Data, ADC and DAC
+### 3.2.3 Analogue Data, Digital Data, ADC and DAC
 | Term | Meaning / use |
 | --- | --- |
 | **Analogue data** | continuously changing physical data, e.g. temperature or light level |
@@ -311,7 +311,7 @@ A **sensor** is an input device that measures physical properties from the envir
 | **DAC** | digital-to-analogue converter; converts computer output into analogue signals for an actuator |
 
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + Most sensor readings are **analogue** because physical properties vary continuously.
 + The microprocessor can only process **digital data**.
 + An **ADC** converts analogue sensor readings into digital data.
@@ -319,7 +319,7 @@ A **sensor** is an input device that measures physical properties from the envir
 
 ---
 
-## 3.2.4 Monitoring Systems vs Control Systems
+### 3.2.4 Monitoring Systems vs Control Systems
 | System type | Meaning | Key difference |
 | --- | --- | --- |
 | **Monitoring system** | measures / records data and may output warning | does **not** change the physical condition directly |
@@ -340,7 +340,7 @@ I --> A
 F --> A
 ```
 
-### Monitoring System Template
+#### Monitoring System Template
 Use this for **hospital patient**, **pollution**, **car engine**, **burglar alarm**.
 
 1. The sensor constantly measures the physical property.
@@ -351,7 +351,7 @@ Use this for **hospital patient**, **pollution**, **car engine**, **burglar alar
 6. If the value is within range, the system continues monitoring.
 7. The process repeats continuously.
 
-### Control System Template
+#### Control System Template
 Use this for **greenhouse**, **street light**, **air conditioning**, **water bowl**, **automatic door**.
 
 1. The sensor constantly measures the physical property.
@@ -364,15 +364,15 @@ Use this for **greenhouse**, **street light**, **air conditioning**, **water bow
 
 ---
 
-## 3.2.5 Scenario Templates
-### A. Proximity / Infra-red Sensor Welcome Screen
+### 3.2.5 Scenario Templates
+#### A. Proximity / Infra-red Sensor Welcome Screen
 + A proximity / infra-red sensor detects a person near the screen.
 + The sensor continually sends data to the microprocessor.
 + The microprocessor uses the sensor data to calculate distance.
 + The microprocessor compares the data with the stored value, e.g. 1 metre.
 + If the person is within range, the microprocessor sends a signal to display the welcome message.
 
-### B. Street Lighting System
+#### B. Street Lighting System
 + A light sensor measures the light level.
 + The analogue reading is converted to digital using an ADC.
 + The microprocessor compares the light level with the preset value.
@@ -380,7 +380,7 @@ Use this for **greenhouse**, **street light**, **air conditioning**, **water bow
 + If the light level is above or equal to the preset value, a signal is sent to switch the lamp off.
 + The process repeats continuously.
 
-### C. Greenhouse Temperature Control
+#### C. Greenhouse Temperature Control
 + A temperature sensor measures the temperature.
 + The data is converted using an ADC.
 + The microprocessor compares the data with the stored range.
@@ -389,7 +389,7 @@ Use this for **greenhouse**, **street light**, **air conditioning**, **water bow
 + Actuators operate the window / heater.
 + The process repeats continuously.
 
-### D. Animal Water Bowl / Tank Level Control
+#### D. Animal Water Bowl / Tank Level Control
 + A level / pressure / moisture sensor measures the water level.
 + Sensor data is sent to the microprocessor.
 + Data is converted to digital using an ADC.
@@ -400,8 +400,8 @@ Use this for **greenhouse**, **street light**, **air conditioning**, **water bow
 
 ---
 
-## 3.2.6 Output Devices｜Printers, Screens and Actuators
-### Actuator
+### 3.2.6 Output Devices｜Printers, Screens and Actuators
+#### Actuator
 An **actuator** is an output device that receives a signal and causes a physical action.
 
 Examples:
@@ -413,7 +413,7 @@ Examples:
 + light
 + pump
 
-### Inkjet vs Laser Printer
+#### Inkjet vs Laser Printer
 | Feature | Inkjet printer | Laser printer |
 | --- | --- | --- |
 | Best use | small number of high-quality colour prints / photos | high-volume document printing |
@@ -424,21 +424,21 @@ Examples:
 | Drawback | ink can run out / smudge | toner cartridge expensive; larger footprint; warm-up time |
 
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + A laser printer is suitable for high-volume printing because it prints quickly and one toner cartridge can print many pages.
 + An inkjet printer is suitable for one-off colour photographs because it can produce high quality colour prints.
 
 ---
 
-# 3.3 Data Storage
-## 3.3.1 Primary Storage vs Secondary Storage
+## 3.3 Data Storage
+### 3.3.1 Primary Storage vs Secondary Storage
 | Storage type | Meaning | Examples |
 | --- | --- | --- |
 | **Primary storage** | directly accessible by the CPU | RAM, ROM, cache, registers |
 | **Secondary storage** | not directly accessible by the CPU; usually non-volatile | HDD, SSD, optical disk, USB flash drive |
 
 
-### RAM vs ROM
+#### RAM vs ROM
 | RAM | ROM |
 | --- | --- |
 | volatile | non-volatile |
@@ -448,13 +448,13 @@ Examples:
 | directly accessed by CPU | directly accessed during start-up / stores permanent instructions |
 
 
-### RAM Purpose｜Core Exam Sentences
+#### RAM Purpose｜Core Exam Sentences
 + RAM stores data and instructions that are **currently in use**.
 + RAM stores software / programs that are **currently running**.
 + RAM is **volatile** and stores data temporarily.
 + RAM allows data to be accessed directly by the CPU.
 
-### ROM Purpose｜Core Exam Sentences
+#### ROM Purpose｜Core Exam Sentences
 + ROM stores the **BIOS**.
 + ROM stores the **bootloader / bootstrap**.
 + ROM stores **start-up instructions**.
@@ -466,8 +466,8 @@ Examples:
 
 ---
 
-## 3.3.2 Magnetic, Optical and Solid-state Storage
-### Magnetic Storage｜HDD
+### 3.3.2 Magnetic, Optical and Solid-state Storage
+#### Magnetic Storage｜HDD
 How it works:
 
 + The device has spinning **platters**.
@@ -476,7 +476,7 @@ How it works:
 + Data is read/written using **magnetic fields**.
 + Magnetic orientation represents binary values.
 
-### Optical Storage｜CD / DVD / Blu-ray
+#### Optical Storage｜CD / DVD / Blu-ray
 How data is read/written:
 
 + The disk is spun.
@@ -486,7 +486,7 @@ How data is read/written:
 + The optical drive detects the reflected light and determines binary values.
 + When writing data, pits are burnt into a spiral track.
 
-### Solid-state Storage｜SSD / flash memory
+#### Solid-state Storage｜SSD / flash memory
 How it works:
 
 + Solid-state storage has **no moving parts**.
@@ -498,7 +498,7 @@ How it works:
 
 ---
 
-## 3.3.3 HDD vs SSD｜Choosing Suitable Storage
+### 3.3.3 HDD vs SSD｜Choosing Suitable Storage
 | HDD | SSD |
 | --- | --- |
 | magnetic storage | flash / solid-state storage |
@@ -511,14 +511,14 @@ How it works:
 | can have more read/write cycles | may have limited write cycles |
 
 
-### Choose SSD when...
+#### Choose SSD when...
 + device needs to be portable / light
 + low power consumption is important
 + fast access speed is needed
 + reliability is important because there are no moving parts
 + less heat/noise is desired
 
-### Choose HDD when...
+#### Choose HDD when...
 + very large capacity is needed at lower cost
 + the device is not portable, e.g. server / desktop storage
 + many read/write cycles are expected
@@ -529,7 +529,7 @@ How it works:
 
 ---
 
-## 3.3.4 Virtual Memory
+### 3.3.4 Virtual Memory
 Virtual memory is an area of **secondary storage** used as an extension of RAM when RAM is full.
 
 ```mermaid
@@ -540,7 +540,7 @@ C --> D[Pages not currently needed are moved from RAM to virtual memory]
 D --> E[When needed again, pages are moved back to RAM]
 ```
 
-### Core Exam Template
+#### Core Exam Template
 > **Describe how virtual memory is created and used.**
 >
 
@@ -550,7 +550,7 @@ D --> E[When needed again, pages are moved back to RAM]
 + When the data is needed again, the pages are transferred back to RAM.
 + It allows programs to run even when there is not enough physical RAM.
 
-### Why virtual memory is needed
+#### Why virtual memory is needed
 + To extend the capacity of RAM.
 + To allow large programs to run.
 + To stop software from freezing / crashing when physical RAM is full.
@@ -561,10 +561,10 @@ D --> E[When needed again, pages are moved back to RAM]
 
 ---
 
-## 3.3.5 Cloud Storage
+### 3.3.5 Cloud Storage
 Cloud storage is storage where data is stored on **remote servers** and accessed using a network, often the internet.
 
-### Benefits
+#### Benefits
 + Files can be accessed from any device with internet access.
 + No need to carry an external storage device.
 + Data can be backed up remotely.
@@ -572,23 +572,23 @@ Cloud storage is storage where data is stored on **remote servers** and accessed
 + Storage capacity can be increased easily.
 + The user may not need to maintain storage hardware.
 
-### Drawbacks
+#### Drawbacks
 + Internet connection is required.
 + Slow / unstable internet can make access difficult.
 + Large storage capacity may cost money.
 + Data security depends on the cloud provider.
 + If the cloud provider fails, data may become unavailable.
 
-### Core Exam Sentence
+#### Core Exam Sentence
 + Cloud storage uses remote servers that are usually accessed through the internet.
 
 ---
 
-# 3.4 Network Hardware
-## 3.4.1 Network Interface Card｜NIC / WNIC
+## 3.4 Network Hardware
+### 3.4.1 Network Interface Card｜NIC / WNIC
 A **network interface card / controller (NIC)** allows a device to connect to a network.
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + A NIC allows a device to send data to and receive data from a network.
 + It allows a physical / wireless connection to a network.
 + It converts data from the computer into a form suitable for transmission over the network.
@@ -597,10 +597,10 @@ A **network interface card / controller (NIC)** allows a device to connect to a 
 
 ---
 
-## 3.4.2 MAC Address
+### 3.4.2 MAC Address
 A **MAC address** is a unique hardware address assigned to a network interface card at manufacture.
 
-### Characteristics
+#### Characteristics
 + It is usually represented in **hexadecimal**.
 + It is normally **48 bits** / 12 hexadecimal digits.
 + It is often written in **six groups** of two hexadecimal digits.
@@ -608,7 +608,7 @@ A **MAC address** is a unique hardware address assigned to a network interface c
 + It contains a **manufacturer ID** and a **unique device serial number**.
 + It is usually static / does not normally change.
 
-### Example format
+#### Example format
 ```latex
 00-1C-B3-4F-25-FE
 00:1C:B3:4F:25:FE
@@ -616,10 +616,10 @@ A **MAC address** is a unique hardware address assigned to a network interface c
 
 ---
 
-## 3.4.3 IP Address
+### 3.4.3 IP Address
 An **IP address** identifies where a device is connected on a network / internet.
 
-### IPv4 vs IPv6
+#### IPv4 vs IPv6
 | IPv4 | IPv6 |
 | --- | --- |
 | 32-bit address | 128-bit address |
@@ -628,7 +628,7 @@ An **IP address** identifies where a device is connected on a network / internet
 | each value usually 0–255 | consecutive groups of 0s can be replaced by `::` once |
 
 
-### Static vs Dynamic IP Address
+#### Static vs Dynamic IP Address
 | Static IP address | Dynamic IP address |
 | --- | --- |
 | does not change | can change each time device connects |
@@ -637,7 +637,7 @@ An **IP address** identifies where a device is connected on a network / internet
 | consistent location | temporary address |
 
 
-### MAC vs IP Address
+#### MAC vs IP Address
 | MAC address | IP address |
 | --- | --- |
 | identifies the physical network interface | identifies the location of a device on a network |
@@ -652,10 +652,10 @@ An **IP address** identifies where a device is connected on a network / internet
 
 ---
 
-## 3.4.4 Router
+### 3.4.4 Router
 A **router** sends data packets between different networks and directs packets to their destination using IP addresses.
 
-### Core Exam Sentences
+#### Core Exam Sentences
 + A router connects a local network to another network / the internet.
 + A router sends data packets towards their destination.
 + A router uses the IP address to decide where to send packets.
@@ -672,8 +672,8 @@ D --> E[Destination network]
 
 ---
 
-# 4. Mark Scheme Style Answer Templates
-## Template 1｜Describe the FDE cycle
+## 4. Mark Scheme Style Answer Templates
+### Template 1｜Describe the FDE cycle
 + The PC stores the address of the next instruction.
 + The address is copied to the MAR.
 + The instruction is fetched from RAM and stored in the MDR.
@@ -683,12 +683,12 @@ D --> E[Destination network]
 + The instruction is split into opcode and operand.
 + The relevant component / ALU executes the instruction.
 
-## Template 2｜Explain how CPU performance can be improved
+### Template 2｜Explain how CPU performance can be improved
 + Increase the number of cores so more instructions can be processed simultaneously.
 + Increase the clock speed so more FDE cycles can be performed per second.
 + Increase the cache size so more frequently used data/instructions can be accessed faster than RAM.
 
-## Template 3｜Describe how sensors are used in a control system
+### Template 3｜Describe how sensors are used in a control system
 + Sensor takes readings from the environment.
 + Analogue readings are converted to digital using an ADC.
 + The microprocessor compares the readings with stored / preset values.
@@ -696,13 +696,13 @@ D --> E[Destination network]
 + The actuator changes the physical condition.
 + The process repeats continuously.
 
-## Template 4｜Describe how virtual memory is used
+### Template 4｜Describe how virtual memory is used
 + Secondary storage is partitioned to create virtual memory.
 + Virtual memory acts as an extension to RAM.
 + When RAM is full, pages not currently needed are transferred from RAM to virtual memory.
 + When needed again, pages are transferred back to RAM.
 
-## Template 5｜Describe how an SSD stores data
+### Template 5｜Describe how an SSD stores data
 + It has no moving parts.
 + It uses semiconductor chips / flash memory.
 + It uses NAND/NOR technology.
@@ -710,7 +710,7 @@ D --> E[Destination network]
 + It uses control gates and floating gates.
 + Data is stored as electrical charges / by controlling the flow of electrons.
 
-## Template 6｜Describe the role of a NIC
+### Template 6｜Describe the role of a NIC
 + It allows a device to connect to a network.
 + It sends data to and receives data from the network.
 + It converts computer data into a format suitable for network transmission.
@@ -719,7 +719,7 @@ D --> E[Destination network]
 
 ---
 
-# 5. Common Mistakes｜学生最容易丢分的答案
+## 5. Common Mistakes｜学生最容易丢分的答案
 | Question type | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | CPU role | “CPU runs the computer” | too vague | CPU processes instructions and data and performs the FDE cycle |
@@ -747,7 +747,7 @@ D --> E[Destination network]
 
 ---
 
-# 6. Quick Check｜10 marks
+## 6. Quick Check｜10 marks
 1. State the purpose of the **program counter**. `[1]`  
 2. State the purpose of the **memory data register**. `[1]`  
 3. Define **instruction set**. `[1]`  
@@ -758,7 +758,7 @@ D --> E[Destination network]
 8. State the purpose of a NIC. `[1]`  
 9. State one characteristic of an IPv6 address. `[1]`
 
-## Quick Check Answers
+### Quick Check Answers
 1. Stores the address of the next instruction to be fetched.  
 2. Stores data immediately before it is written to RAM or immediately after it is read from RAM.  
 3. A list of machine code commands that can be processed by a CPU.  
@@ -771,11 +771,11 @@ D --> E[Destination network]
 
 ---
 
-# 7. Exam-style Practice｜20 marks
-## Question 1｜CPU and FDE `[6]`
+## 7. Exam-style Practice｜20 marks
+### Question 1｜CPU and FDE `[6]`
 A CPU uses a Von Neumann architecture. Describe how the CPU fetches and decodes an instruction.
 
-### Mark Scheme
+#### Mark Scheme
 Any six from:
 
 + PC stores the address of the next instruction.
@@ -790,10 +790,10 @@ Any six from:
 
 ---
 
-## Question 2｜CPU Performance `[4]`
+### Question 2｜CPU Performance `[4]`
 Explain how increasing the number of cores and increasing the cache size can improve CPU performance.
 
-### Mark Scheme
+#### Mark Scheme
 + Increasing the number of cores can improve performance. `[1]`
 + More instructions can be processed simultaneously. `[1]`
 + Increasing cache size can improve performance. `[1]`
@@ -801,10 +801,10 @@ Explain how increasing the number of cores and increasing the cache size can imp
 
 ---
 
-## Question 3｜Control System `[5]`
+### Question 3｜Control System `[5]`
 A greenhouse uses a temperature sensor and a microprocessor to keep the temperature between 20°C and 28°C. Describe how this system works.
 
-### Mark Scheme
+#### Mark Scheme
 Any five from:
 
 + Temperature sensor measures the temperature.
@@ -818,10 +818,10 @@ Any five from:
 
 ---
 
-## Question 4｜Virtual Memory `[3]`
+### Question 4｜Virtual Memory `[3]`
 Describe how virtual memory is created and used.
 
-### Mark Scheme
+#### Mark Scheme
 Any three from:
 
 + Secondary storage is partitioned to create virtual memory.
@@ -831,10 +831,10 @@ Any three from:
 
 ---
 
-## Question 5｜Network Hardware `[2]`
+### Question 5｜Network Hardware `[2]`
 Describe two features of a MAC address.
 
-### Mark Scheme
+#### Mark Scheme
 Any two from:
 
 + It is represented in hexadecimal.
@@ -846,8 +846,8 @@ Any two from:
 
 ---
 
-# 8. One-page Exam Sheet｜考前最后一页
-## CPU
+## 8. One-page Exam Sheet｜考前最后一页
+### CPU
 + CPU processes instructions and data.
 + CU sends control signals and manages data flow.
 + ALU performs arithmetic and logic operations.
@@ -857,25 +857,25 @@ Any two from:
 + CIR → current instruction being decoded/executed.
 + ACC → interim results.
 
-## FDE
+### FDE
 PC → MAR → RAM → MDR → CIR → PC+1 → CU decodes → opcode/operand → ALU executes → ACC stores result.
 
-## CPU Performance
+### CPU Performance
 + More cores → more instructions simultaneously.
 + Higher clock speed → more FDE cycles per second.
 + Larger cache → more frequently used data accessed faster than RAM.
 
-## Sensors
+### Sensors
 Sensor → ADC → microprocessor → compare with stored value → output warning / actuator → repeat.
 
-## Storage
+### Storage
 + RAM: volatile, current data/instructions/software, directly accessed by CPU.
 + ROM: non-volatile, BIOS/bootloader/firmware/start-up instructions.
 + SSD: no moving parts, flash memory, transistors, NAND/NOR, control/floating gates.
 + Optical: laser reads pits and lands.
 + Virtual memory: secondary storage used as extension to RAM.
 
-## Network Hardware
+### Network Hardware
 + NIC connects device to network.
 + MAC identifies NIC/device; usually 48-bit hexadecimal.
 + IP identifies network location; IPv4 = 32-bit, IPv6 = 128-bit.

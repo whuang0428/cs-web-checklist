@@ -1,5 +1,5 @@
-# A2 9618 Computer Science — Chapter 18 Updated Notes
-## Artificial Intelligence (AI)｜Syllabus-Aligned Paper 3 Revision Sheet
+# A2 9618 Chapter 18: Artificial Intelligence
+> **Artificial Intelligence (AI)｜Syllabus-Aligned Paper 3 Revision Sheet**
 > **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
 > **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
 > **Chapter:** 18 Artificial Intelligence (AI)  
@@ -10,7 +10,7 @@
 
 ---
 
-# 0. How to Use This Sheet
+## 0. How to Use This Sheet
 
 本章是 A2 Paper 3 中比较新的章节，但近年考试已经形成明显规律：
 
@@ -33,7 +33,7 @@ E --> F[Training methods<br/>back propagation / regression]
 
 ---
 
-# 1. Recent Paper 3 Pattern Map
+## 1. Recent Paper 3 Pattern Map
 
 | Area | Recent exam pattern | What students must practise |
 | --- | --- | --- |
@@ -52,9 +52,9 @@ E --> F[Training methods<br/>back propagation / regression]
 
 ---
 
-# 2. Content Update Decision
+## 2. Content Update Decision
 
-## 2.1 Keep and Strengthen
+### 2.1 Keep and Strengthen
 
 | Kept content | Reason |
 | --- | --- |
@@ -69,7 +69,7 @@ E --> F[Training methods<br/>back propagation / regression]
 | regression methods | Syllabus item; likely short-answer / application-based |
 
 
-## 2.2 Downweight
+### 2.2 Downweight
 
 | Downweighted content | Why |
 | --- | --- |
@@ -83,7 +83,7 @@ E --> F[Training methods<br/>back propagation / regression]
 
 ---
 
-# 3. One-Page Mind Map
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -129,18 +129,18 @@ mindmap
 
 ---
 
-# 4. 18.1 Artificial Intelligence Overview
+## 4. 18.1 Artificial Intelligence Overview
 
-## 4.1 What is Artificial Intelligence?
+### 4.1 What is Artificial Intelligence?
 
-### Student-friendly explanation
+#### Student-friendly explanation
 Artificial Intelligence means using computer systems to carry out tasks that normally need human intelligence.  
 For example, recognising patterns, making decisions, finding routes, making predictions, or learning from data.
 
-### Mark scheme style answer
+#### Mark scheme style answer
 > Artificial intelligence is the use of computer systems to perform tasks that normally require human intelligence, such as learning, reasoning, recognising patterns, making predictions, or making decisions.
 
-### Must-have keywords
+#### Must-have keywords
 + **learning**
 + **reasoning**
 + **decision-making**
@@ -148,14 +148,14 @@ For example, recognising patterns, making decisions, finding routes, making pred
 + **prediction**
 + **data**
 
-### Common weak answer
+#### Common weak answer
 > AI means computers are smart.
 
 This is too vague. You need to explain **what the computer does**.
 
 ---
 
-## 4.2 AI vs Machine Learning vs Deep Learning
+### 4.2 AI vs Machine Learning vs Deep Learning
 
 | Term | Meaning | Exam focus |
 | --- | --- | --- |
@@ -164,7 +164,7 @@ This is too vague. You need to explain **what the computer does**.
 | Deep Learning | type of machine learning using neural networks with many hidden layers | layers, features, predictions |
 
 
-### Simple relationship
+#### Simple relationship
 
 ```mermaid
 flowchart TD
@@ -172,14 +172,14 @@ A[Artificial Intelligence<br/>broad field] --> B[Machine Learning<br/>learns fro
 B --> C[Deep Learning<br/>many hidden layers in neural networks]
 ```
 
-### Mark scheme style phrase
+#### Mark scheme style phrase
 > Machine learning is a subset of AI where the system improves by learning from data. Deep learning is a subset of machine learning that uses artificial neural networks with multiple hidden layers.
 
 ---
 
-# 5. Graphs in Artificial Intelligence
+## 5. Graphs in Artificial Intelligence
 
-## 5.1 What is a graph?
+### 5.1 What is a graph?
 
 A graph is a data structure used to show relationships between items.
 
@@ -192,10 +192,10 @@ A graph is a data structure used to show relationships between items.
 | Cycle | a path that returns to the starting node | A → B → C → A |
 
 
-### Mark scheme answer
+#### Mark scheme answer
 > A graph uses vertices / nodes to represent entities and edges to represent connections or relationships between them. Edges can be weighted to represent cost, distance, time, or another value.
 
-### Must-have keywords
+#### Must-have keywords
 + **nodes / vertices**
 + **edges**
 + **relationships**
@@ -204,7 +204,7 @@ A graph is a data structure used to show relationships between items.
 
 ---
 
-## 5.2 Why graphs are useful in AI
+### 5.2 Why graphs are useful in AI
 
 Graphs help AI represent a problem as connected possibilities.
 
@@ -219,12 +219,12 @@ Examples:
 | recommendation system | users / items | similarity | similarity score |
 
 
-### Mark scheme style answer
+#### Mark scheme style answer
 > Graphs are used in AI to record relationships between entities using nodes and edges. For example, places on a map can be represented as nodes, with edges showing routes and weights showing distance or cost.
 
 ---
 
-## 5.3 Directed and undirected graphs
+### 5.3 Directed and undirected graphs
 
 | Type | Meaning | Example |
 | --- | --- | --- |
@@ -232,12 +232,12 @@ Examples:
 | Directed graph | edge has direction | one-way road / hyperlink |
 
 
-### Exam tip
+#### Exam tip
 如果题目没有特别强调 directed graph，不要主动写太复杂。通常写 **nodes, edges, weights, shortest route** 已经足够。
 
 ---
 
-## 5.4 Weighted graph
+### 5.4 Weighted graph
 
 A weighted graph has values on edges.
 
@@ -258,22 +258,22 @@ In this graph:
 + A to C to B costs 2 + 1 = 3
 + Therefore A → C → B is cheaper than A → B
 
-### Mark scheme phrase
+#### Mark scheme phrase
 > A weight on an edge can represent the cost of travelling between two nodes.
 
 ---
 
-# 6. A* and Dijkstra's Algorithms
+## 6. A* and Dijkstra's Algorithms
 
-## 6.1 What these algorithms are used for
+### 6.1 What these algorithms are used for
 
 A* and Dijkstra's algorithm are graph search algorithms.  
 They are used to find the best route through a graph.
 
-### Mark scheme answer
+#### Mark scheme answer
 > A* and Dijkstra's algorithms are used to find the shortest / optimal / lowest-cost route between two nodes in a graph, based on distance, cost, or time.
 
-### Must-have keywords
+#### Must-have keywords
 + **shortest route**
 + **optimal route**
 + **lowest cost**
@@ -283,26 +283,26 @@ They are used to find the best route through a graph.
 
 ---
 
-## 6.2 Dijkstra's algorithm
+### 6.2 Dijkstra's algorithm
 
-### Student-friendly explanation
+#### Student-friendly explanation
 Dijkstra looks for the shortest path from a starting node by repeatedly choosing the unvisited node with the smallest known cost so far.
 
-### What students need to know
+#### What students need to know
 + It finds the shortest path in a weighted graph.
 + It uses known edge weights.
 + It does not use a heuristic.
 + It guarantees the shortest path when edge weights are non-negative.
 + In 9618, you normally need to **use / describe purpose**, not write full code.
 
-### Mark scheme style answer
+#### Mark scheme style answer
 > Dijkstra's algorithm finds the shortest path from a start node to other nodes in a weighted graph by using the known cost / distance of edges.
 
 ---
 
-## 6.3 A* algorithm
+### 6.3 A* algorithm
 
-### Student-friendly explanation
+#### Student-friendly explanation
 A* also finds a route, but it uses both:
 
 1. the cost already travelled  
@@ -310,18 +310,18 @@ A* also finds a route, but it uses both:
 
 This estimate is called a **heuristic**.
 
-### What students need to know
+#### What students need to know
 + It is used to find an optimal route.
 + It uses a heuristic estimate.
 + It can be faster than Dijkstra when a good heuristic is used.
 + It is common in game AI and route planning.
 
-### Mark scheme style answer
+#### Mark scheme style answer
 > A* is used to find the optimal path between nodes in a graph. It uses the cost so far and a heuristic estimate of the remaining cost to guide the search.
 
 ---
 
-## 6.4 Dijkstra vs A*
+### 6.4 Dijkstra vs A*
 
 | Feature | Dijkstra | A* |
 | --- | --- | --- |
@@ -332,7 +332,7 @@ This estimate is called a **heuristic**.
 | Exam wording | shortest / lowest-cost route | optimal route using heuristic |
 
 
-### Common mistake
+#### Common mistake
 | Mistake | Correction |
 | --- | --- |
 | saying A* is only for games | It can be used for any suitable graph pathfinding problem |
@@ -342,17 +342,17 @@ This estimate is called a **heuristic**.
 
 ---
 
-# 7. Machine Learning
+## 7. Machine Learning
 
-## 7.1 What is machine learning?
+### 7.1 What is machine learning?
 
-### Student-friendly explanation
+#### Student-friendly explanation
 Machine learning means the computer learns from data. Instead of manually programming every rule, the system finds patterns and improves its predictions or decisions.
 
-### Mark scheme answer
+#### Mark scheme answer
 > Machine learning is a component of AI where a system learns from data and improves its performance or predictions without being explicitly programmed for every rule.
 
-### Must-have keywords
+#### Must-have keywords
 + **learns from data**
 + **patterns**
 + **training**
@@ -362,7 +362,7 @@ Machine learning means the computer learns from data. Instead of manually progra
 
 ---
 
-## 7.2 Why use machine learning?
+### 7.2 Why use machine learning?
 
 Machine learning is useful when:
 
@@ -372,20 +372,20 @@ Machine learning is useful when:
 + the system needs to improve from experience
 + predictions are needed from previous examples
 
-### Scenario answer
+#### Scenario answer
 > Machine learning is suitable because the system can learn patterns from large amounts of data and use these patterns to make predictions or decisions.
 
 ---
 
-# 8. Supervised Learning
+## 8. Supervised Learning
 
-## 8.1 Definition
+### 8.1 Definition
 
 Supervised learning uses labelled training data.
 
 A label is the correct answer already attached to an example.
 
-### Example
+#### Example
 | Input data | Label |
 | --- | --- |
 | email text | spam / not spam |
@@ -394,10 +394,10 @@ A label is the correct answer already attached to an example.
 | symptoms | disease type |
 
 
-### Mark scheme answer
+#### Mark scheme answer
 > Supervised learning uses labelled data, where known outcomes are applied to specific inputs so that the AI can learn to predict outcomes for new data.
 
-### Must-have keywords
+#### Must-have keywords
 + **labelled data**
 + **known outcomes**
 + **input-output pairs**
@@ -406,7 +406,7 @@ A label is the correct answer already attached to an example.
 
 ---
 
-## 8.2 When to use supervised learning
+### 8.2 When to use supervised learning
 
 Use supervised learning when:
 
@@ -414,19 +414,19 @@ Use supervised learning when:
 + the task is classification or prediction
 + the system should learn the mapping from input to output
 
-### Example answer
+#### Example answer
 > Supervised learning would be suitable because historical examples already include the correct outcome, so the model can learn from labelled input-output pairs.
 
 ---
 
-# 9. Unsupervised Learning
+## 9. Unsupervised Learning
 
-## 9.1 Definition
+### 9.1 Definition
 
 Unsupervised learning uses unlabelled data.  
 The system has to find patterns by itself.
 
-### Example
+#### Example
 | Input data | What AI may find |
 | --- | --- |
 | customer shopping history | groups of similar customers |
@@ -435,10 +435,10 @@ The system has to find patterns by itself.
 | network traffic | unusual patterns |
 
 
-### Mark scheme answer
+#### Mark scheme answer
 > Unsupervised learning uses unlabelled data. The system searches for hidden patterns, structures, or clusters within the data without known outcomes.
 
-### Must-have keywords
+#### Must-have keywords
 + **unlabelled data**
 + **no known outcomes**
 + **hidden patterns**
@@ -448,7 +448,7 @@ The system has to find patterns by itself.
 
 ---
 
-## 9.2 Supervised vs unsupervised learning
+### 9.2 Supervised vs unsupervised learning
 
 | Feature | Supervised learning | Unsupervised learning |
 | --- | --- | --- |
@@ -459,20 +459,20 @@ The system has to find patterns by itself.
 | Example | classify emails as spam/not spam | group customers by behaviour |
 
 
-### Mark scheme style comparison
+#### Mark scheme style comparison
 > Supervised learning uses labelled data with known outcomes, while unsupervised learning uses unlabelled data where outcomes are not known. Unsupervised learning searches for hidden patterns or clusters in the data.
 
 ---
 
-# 10. Reinforcement Learning
+## 10. Reinforcement Learning
 
-## 10.1 Definition
+### 10.1 Definition
 
 Reinforcement learning is learning by trial and error.
 
 The AI interacts with an environment, takes actions, and receives rewards or penalties.
 
-### Example
+#### Example
 | Scenario | Action | Reward / penalty |
 | --- | --- | --- |
 | game AI | move left/right/attack | win points / lose health |
@@ -481,10 +481,10 @@ The AI interacts with an environment, takes actions, and receives rewards or pen
 | trading bot | buy / sell | profit / loss |
 
 
-### Mark scheme answer
+#### Mark scheme answer
 > Reinforcement learning enables learning in an interactive environment by trial and error using rewards and penalties from its own experiences.
 
-### Must-have keywords
+#### Must-have keywords
 + **interactive environment**
 + **trial and error**
 + **actions**
@@ -495,7 +495,7 @@ The AI interacts with an environment, takes actions, and receives rewards or pen
 
 ---
 
-## 10.2 Why use reinforcement learning?
+### 10.2 Why use reinforcement learning?
 
 Use reinforcement learning when:
 
@@ -505,12 +505,12 @@ Use reinforcement learning when:
 + the best action depends on the current state
 + the goal is to maximise reward over time
 
-### Scenario answer
+#### Scenario answer
 > Reinforcement learning is suitable because the agent can try different actions in an environment and improve by using rewards or penalties as feedback.
 
 ---
 
-## 10.3 Common mistake
+### 10.3 Common mistake
 
 | Mistake | Correction |
 | --- | --- |
@@ -521,17 +521,17 @@ Use reinforcement learning when:
 
 ---
 
-# 11. Artificial Neural Networks (ANNs)
+## 11. Artificial Neural Networks (ANNs)
 
-## 11.1 What is an artificial neural network?
+### 11.1 What is an artificial neural network?
 
 An artificial neural network is a computer model inspired by the human brain.  
 It uses many connected processing units called nodes / neurons.
 
-### Mark scheme answer
+#### Mark scheme answer
 > An artificial neural network is designed to work in a similar way to the human brain. It has many connected processing units / nodes arranged in layers that work together to process data and learn from data.
 
-### Must-have keywords
+#### Must-have keywords
 + **human brain**
 + **connected processing units**
 + **nodes / neurons**
@@ -542,7 +542,7 @@ It uses many connected processing units called nodes / neurons.
 
 ---
 
-## 11.2 Structure of an ANN
+### 11.2 Structure of an ANN
 
 ```mermaid
 flowchart LR
@@ -561,12 +561,12 @@ H2 --> O
 | Output layer | gives prediction / classification |
 
 
-### Mark scheme phrase
+#### Mark scheme phrase
 > Artificial neural networks have input, hidden and output layers, with nodes connected by weighted links.
 
 ---
 
-## 11.3 Weights and biases
+### 11.3 Weights and biases
 
 Each connection can have a **weight**.  
 The weight controls how strongly one node affects another node.
@@ -579,21 +579,21 @@ During training:
 + weights are adjusted
 + the model becomes more accurate
 
-### Mark scheme phrase
+#### Mark scheme phrase
 > Weights are adjusted through training to reduce error and give a more accurate result.
 
 ---
 
-# 12. Deep Learning
+## 12. Deep Learning
 
-## 12.1 Definition
+### 12.1 Definition
 
 Deep learning is a type of machine learning that uses artificial neural networks with many hidden layers.
 
-### Mark scheme answer
+#### Mark scheme answer
 > Deep learning uses artificial neural networks with multiple hidden layers to extract complex features from data and make predictions or decisions.
 
-### Must-have keywords
+#### Must-have keywords
 + **artificial neural network**
 + **multiple hidden layers**
 + **complex features**
@@ -603,7 +603,7 @@ Deep learning is a type of machine learning that uses artificial neural networks
 
 ---
 
-## 12.2 Why deep learning is useful
+### 12.2 Why deep learning is useful
 
 Deep learning is useful when:
 
@@ -613,7 +613,7 @@ Deep learning is useful when:
 + the system needs to identify hidden patterns
 + tasks involve images, speech, language, or complex prediction
 
-### Example
+#### Example
 | Task | Why deep learning helps |
 | --- | --- |
 | image recognition | detects complex visual features |
@@ -622,12 +622,12 @@ Deep learning is useful when:
 | natural language processing | identifies meaning and relationships in text |
 
 
-### Mark scheme style answer
+#### Mark scheme style answer
 > Deep learning is useful because multiple hidden layers allow the model to extract complex features from large amounts of data and make more accurate predictions.
 
 ---
 
-## 12.3 Deep learning vs normal machine learning
+### 12.3 Deep learning vs normal machine learning
 
 | Feature | Machine learning | Deep learning |
 | --- | --- | --- |
@@ -640,9 +640,9 @@ Deep learning is useful when:
 
 ---
 
-# 13. Back Propagation of Errors
+## 13. Back Propagation of Errors
 
-## 13.1 What is back propagation?
+### 13.1 What is back propagation?
 
 Back propagation is a training method used in neural networks.
 
@@ -654,7 +654,7 @@ The network:
 4. sends the error backwards through the network  
 5. adjusts weights to reduce future error  
 
-### Mermaid process
+#### Mermaid process
 
 ```mermaid
 flowchart TD
@@ -667,10 +667,10 @@ F --> G[Adjust weights]
 G --> H[Prediction becomes more accurate]
 ```
 
-### Mark scheme answer
+#### Mark scheme answer
 > Back propagation is where the error between the predicted output and expected output is passed backwards through the network so that weights can be adjusted to reduce the error.
 
-### Must-have keywords
+#### Must-have keywords
 + **predicted output**
 + **expected output**
 + **error**
@@ -681,7 +681,7 @@ G --> H[Prediction becomes more accurate]
 
 ---
 
-## 13.2 Common mistake
+### 13.2 Common mistake
 
 | Mistake | Correction |
 | --- | --- |
@@ -692,13 +692,13 @@ G --> H[Prediction becomes more accurate]
 
 ---
 
-# 14. Regression Methods in Machine Learning
+## 14. Regression Methods in Machine Learning
 
-## 14.1 What is regression?
+### 14.1 What is regression?
 
 Regression is used to predict a continuous numeric value.
 
-### Examples
+#### Examples
 | Data | Predicted value |
 | --- | --- |
 | house size, location | house price |
@@ -707,10 +707,10 @@ Regression is used to predict a continuous numeric value.
 | previous sales | future sales |
 
 
-### Mark scheme style answer
+#### Mark scheme style answer
 > Regression is a machine learning method used to model the relationship between variables and predict a continuous numerical value.
 
-### Must-have keywords
+#### Must-have keywords
 + **relationship between variables**
 + **predict**
 + **continuous value**
@@ -719,7 +719,7 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-## 14.2 Classification vs regression
+### 14.2 Classification vs regression
 
 | Feature | Classification | Regression |
 | --- | --- | --- |
@@ -729,15 +729,15 @@ Regression is used to predict a continuous numeric value.
 | Example | disease type | blood pressure value |
 
 
-### Exam tip
+#### Exam tip
 如果题目是预测 **price, score, temperature, distance, time, demand**，通常是 regression。  
 如果题目是预测 **cat/dog, spam/not spam, pass/fail**，通常是 classification。
 
 ---
 
-# 15. Mark Scheme Keywords
+## 15. Mark Scheme Keywords
 
-## 15.1 Graphs in AI
+### 15.1 Graphs in AI
 + **nodes / vertices**
 + **edges**
 + **relationships**
@@ -746,7 +746,7 @@ Regression is used to predict a continuous numeric value.
 + **shortest route**
 + **optimal path**
 
-## 15.2 A* and Dijkstra
+### 15.2 A* and Dijkstra
 + **shortest path**
 + **lowest-cost path**
 + **between two nodes**
@@ -754,21 +754,21 @@ Regression is used to predict a continuous numeric value.
 + **heuristic** for A*
 + **known edge costs** for Dijkstra
 
-## 15.3 Supervised learning
+### 15.3 Supervised learning
 + **labelled data**
 + **known outcomes**
 + **input-output pairs**
 + **training data**
 + **predict outcomes**
 
-## 15.4 Unsupervised learning
+### 15.4 Unsupervised learning
 + **unlabelled data**
 + **unknown outcomes**
 + **hidden patterns**
 + **clusters**
 + **structures in data**
 
-## 15.5 Reinforcement learning
+### 15.5 Reinforcement learning
 + **trial and error**
 + **interactive environment**
 + **agent**
@@ -777,7 +777,7 @@ Regression is used to predict a continuous numeric value.
 + **penalty**
 + **learns from experience**
 
-## 15.6 Artificial neural networks
+### 15.6 Artificial neural networks
 + **human brain**
 + **connected processing units**
 + **nodes / neurons**
@@ -788,14 +788,14 @@ Regression is used to predict a continuous numeric value.
 + **biases**
 + **training**
 
-## 15.7 Deep learning
+### 15.7 Deep learning
 + **multiple hidden layers**
 + **extract complex features**
 + **large amounts of data**
 + **make predictions**
 + **adjust weights**
 
-## 15.8 Back propagation
+### 15.8 Back propagation
 + **error**
 + **predicted output**
 + **expected output**
@@ -803,7 +803,7 @@ Regression is used to predict a continuous numeric value.
 + **adjust weights**
 + **reduce error**
 
-## 15.9 Regression
+### 15.9 Regression
 + **relationship between variables**
 + **continuous numerical value**
 + **prediction**
@@ -812,7 +812,7 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-# 16. Common Mistakes 易错表
+## 16. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Better answer |
 | --- | --- | --- |
@@ -830,74 +830,74 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-# 17. Scenario Answer Bank
+## 17. Scenario Answer Bank
 
-## 17.1 Route-finding AI
-### Scenario
+### 17.1 Route-finding AI
+#### Scenario
 A delivery company wants to find the fastest route between warehouses.
 
-### Answer template
+#### Answer template
 > A graph can be used because the warehouses can be represented as nodes and roads can be represented as edges. The edges can be weighted using distance or travel time. A* or Dijkstra's algorithm can then be used to find the shortest / lowest-cost route between two nodes.
 
 ---
 
-## 17.2 Game character movement
-### Scenario
+### 17.2 Game character movement
+#### Scenario
 A game enemy needs to move from its current position to the player.
 
-### Answer template
+#### Answer template
 > The map can be represented as a graph, with positions as nodes and possible movements as edges. Weights can represent distance or movement cost. A* is suitable because it can use a heuristic estimate of the remaining distance to guide the search towards the target.
 
 ---
 
-## 17.3 Email spam detection
-### Scenario
+### 17.3 Email spam detection
+#### Scenario
 A company has thousands of emails already labelled as spam or not spam.
 
-### Answer template
+#### Answer template
 > Supervised learning is suitable because the training data is labelled with known outcomes. The model can learn the relationship between email features and the correct label, then predict whether new emails are spam.
 
 ---
 
-## 17.4 Customer grouping
-### Scenario
+### 17.4 Customer grouping
+#### Scenario
 A shop has customer purchase data but no pre-defined customer categories.
 
-### Answer template
+#### Answer template
 > Unsupervised learning is suitable because the data is unlabelled. The AI can search for hidden patterns or clusters in the customer behaviour and group similar customers together.
 
 ---
 
-## 17.5 Robot learning to navigate
-### Scenario
+### 17.5 Robot learning to navigate
+#### Scenario
 A robot learns to move through a maze.
 
-### Answer template
+#### Answer template
 > Reinforcement learning is suitable because the robot can learn by trial and error in an interactive environment. It receives rewards for moving closer to the goal and penalties for hitting walls or taking inefficient routes.
 
 ---
 
-## 17.6 Predicting house prices
-### Scenario
+### 17.6 Predicting house prices
+#### Scenario
 A model predicts a house price from size, location and number of bedrooms.
 
-### Answer template
+#### Answer template
 > Regression is suitable because the output is a continuous numerical value. The model can learn the relationship between input variables and house price from training data.
 
 ---
 
-## 17.7 Medical image recognition
-### Scenario
+### 17.7 Medical image recognition
+#### Scenario
 A system analyses medical scans to detect signs of disease.
 
-### Answer template
+#### Answer template
 > Deep learning is suitable because artificial neural networks with multiple hidden layers can extract complex features from image data. The model can learn patterns that may be difficult for humans to define manually.
 
 ---
 
-# 18. Mermaid Process Diagrams
+## 18. Mermaid Process Diagrams
 
-## 18.1 Machine learning category decision
+### 18.1 Machine learning category decision
 
 ```mermaid
 flowchart TD
@@ -908,7 +908,7 @@ D -->|Yes| E[Reinforcement learning<br/>trial and error]
 D -->|No| F[Unsupervised learning<br/>hidden patterns / clusters]
 ```
 
-## 18.2 ANN training process
+### 18.2 ANN training process
 
 ```mermaid
 flowchart LR
@@ -923,7 +923,7 @@ H --> I[Adjust weights]
 I --> C
 ```
 
-## 18.3 Graph search idea
+### 18.3 Graph search idea
 
 ```mermaid
 flowchart LR
@@ -944,9 +944,9 @@ A → C → D = 2 + 8 = 10
 
 ---
 
-# 19. 10 Marks Quick Check
+## 19. 10 Marks Quick Check
 
-## Questions
+### Questions
 1. State two components of a graph. [2]  
 2. State what a weight on an edge may represent. [1]  
 3. State the purpose of Dijkstra's algorithm. [1]  
@@ -954,7 +954,7 @@ A → C → D = 2 + 8 = 10
 5. State what reinforcement learning uses to improve behaviour. [1]  
 6. State the three main layers of an artificial neural network. [3]
 
-## Answers
+### Answers
 1. Nodes / vertices [1], edges [1]  
 2. Cost / distance / time / risk [1]  
 3. To find the shortest / lowest-cost path between nodes in a graph [1]  
@@ -964,16 +964,16 @@ A → C → D = 2 + 8 = 10
 
 ---
 
-# 20. 20 Marks Exam-Style Practice
+## 20. 20 Marks Exam-Style Practice
 
-## Question 1: Graphs and route searching [6]
+### Question 1: Graphs and route searching [6]
 A delivery company uses an AI system to find routes between towns.
 
 (a) Explain how a graph can represent the towns and roads. [3]  
 (b) State the purpose of A* and Dijkstra's algorithms. [2]  
 (c) State one reason why a weighted graph is useful in this scenario. [1]
 
-### Mark scheme
+#### Mark scheme
 (a)
 + towns represented as nodes / vertices [1]  
 + roads represented as edges [1]  
@@ -988,14 +988,14 @@ A delivery company uses an AI system to find routes between towns.
 
 ---
 
-## Question 2: Machine learning categories [6]
+### Question 2: Machine learning categories [6]
 A website wants to recommend products to users. It has a large amount of shopping data but no pre-defined customer categories.
 
 (a) Identify the most suitable machine learning category. [1]  
 (b) Explain your answer. [3]  
 (c) Explain why supervised learning may not be suitable. [2]
 
-### Mark scheme
+#### Mark scheme
 (a) Unsupervised learning [1]
 
 (b)
@@ -1009,14 +1009,14 @@ A website wants to recommend products to users. It has a large amount of shoppin
 
 ---
 
-## Question 3: Neural networks and deep learning [8]
+### Question 3: Neural networks and deep learning [8]
 A hospital uses an AI system to analyse medical images.
 
 (a) Describe the structure of an artificial neural network. [3]  
 (b) Explain what is meant by deep learning. [3]  
 (c) Explain how back propagation helps the model improve. [2]
 
-### Mark scheme
+#### Mark scheme
 (a)
 + has connected processing units / nodes / neurons [1]  
 + arranged in layers: input, hidden and output [1]  

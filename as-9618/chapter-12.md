@@ -1,184 +1,504 @@
 # AS 9618 Chapter 12: Software Development
-## Software Development｜Syllabus-Aligned Paper 2 Revision Sheet
 
-> **Version:** Syllabus-aligned revision for AS Paper 2  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 12 Software development  
-> **Main audience:** Students  
-> **Style:** Chinese explanation + English software development keywords
+> **Paper 2 focus:** select a suitable development life cycle, document modular designs, plan effective testing, correct faults and classify maintenance.
 
 ---
 
-# 0. How to Use This Sheet
+## 1. Syllabus Coverage
 
-Chapter 12 asks how software is planned, built, tested and maintained.
-
-Core revision path:
-
-1. development life cycle
-2. analysis and design
-3. implementation
-4. testing
-5. documentation
-6. maintenance
-7. development methods
-
----
-
-# 1. Software Development Life Cycle
-
-Typical stages:
-
-| Stage | Purpose |
-| --- | --- |
-| analysis | find user requirements and current problems |
-| design | plan algorithms, data structures, interfaces and tests |
-| implementation | write the code |
-| testing | check the solution works as intended |
-| installation | put the system into use |
-| documentation | provide technical and user guidance |
-| evaluation | judge whether requirements were met |
-| maintenance | fix, improve or adapt the system |
-
-Exam tip: when asked for a stage, give both the name and what happens in that stage.
+| Syllabus objective | Where it is covered |
+|---|---|
+| Explain the purpose of a program development life cycle | Section 2 |
+| Choose between waterfall, iterative and RAD | Section 3 |
+| Explain principles, benefits and drawbacks of each life cycle | Section 3 and Worked Example 1 |
+| Understand analysis, design, coding, testing and maintenance | Section 4 |
+| Describe and construct structure charts with parameters | Section 5 |
+| Derive pseudocode from a structure chart | Section 5 and Worked Example 2 |
+| Explain and use state-transition diagrams | Section 6 |
+| Identify syntax, logic and run-time errors | Section 7 |
+| Correct identified errors | Section 7 and Worked Example 3 |
+| Select testing methods | Section 8 |
+| Explain test strategies and test plans | Section 9 |
+| Choose normal, abnormal and extreme/boundary data | Section 9 |
+| Distinguish corrective, adaptive and perfective maintenance | Section 10 |
+| Amend an existing program to enhance functionality | Section 11 |
 
 ---
 
-# 2. Analysis
+## 2. Purpose of a Development Life Cycle
 
-Analysis collects requirements.
+A **program development life cycle** provides an organised process for moving from a problem to a working, maintainable solution.
 
-Methods:
+It helps a team:
 
-- interviews
-- questionnaires
-- observation
-- document analysis
+- understand requirements before committing to code
+- choose and document a design
+- coordinate people and stages
+- find faults systematically
+- judge progress against planned outputs
+- manage later changes
 
-Outputs:
-
-- requirements specification
-- inputs and outputs
-- processing needs
-- constraints
-- success criteria
-
-Common mistake: saying "analysis is writing the program". That is implementation.
+Different projects need different life cycles because requirements, risk, deadlines, user availability and the need for early prototypes vary.
 
 ---
 
-# 3. Design
+## 3. Development Life Cycles
 
-Design may include:
+### Waterfall
 
-- algorithms / pseudocode
-- structure charts
-- data structures
-- file/database design
-- screen layouts
-- validation rules
-- test plan
+Waterfall completes defined stages mainly in sequence.
 
-Good design reduces errors during implementation.
+| Benefits | Drawbacks |
+|---|---|
+| clear milestones and documentation | changes are expensive after a stage is completed |
+| easier to plan stable requirements | working software appears relatively late |
+| formal review before moving on | users may not recognise misunderstandings until late |
 
----
+Suitable when:
 
-# 4. Testing
+- requirements are stable and well understood
+- formal approval/documentation is important
+- technology and scope are predictable
 
-| Testing type | Meaning |
-| --- | --- |
-| dry run | manually trace an algorithm |
-| unit testing | test one module |
-| integration testing | test modules working together |
-| system testing | test whole system |
-| acceptance testing | user checks against requirements |
+### Iterative
 
-Test plan should include:
+Iterative development builds a version, reviews it and improves it through repeated cycles.
 
-- test number
-- purpose
-- test data
-- expected result
-- actual result
-- pass/fail
+| Benefits | Drawbacks |
+|---|---|
+| feedback arrives earlier | scope can keep changing |
+| faults and misunderstandings appear sooner | repeated revisions complicate scheduling |
+| changing requirements can be incorporated | architecture may weaken without control |
 
----
+Suitable when requirements can evolve and users can provide regular feedback.
 
-# 5. Documentation
+### Rapid Application Development (RAD)
 
-| Documentation | Audience | Contents |
-| --- | --- | --- |
-| technical documentation | programmers/maintainers | algorithms, data structures, variable lists, file structures |
-| user documentation | users | installation, how to use features, error messages, troubleshooting |
+RAD uses rapid prototyping, frequent user involvement, reusable components and time-boxed development to produce usable parts quickly.
 
-Common mistake:
+| Benefits | Drawbacks |
+|---|---|
+| prototypes clarify requirements | requires frequent access to suitable users |
+| useful components appear quickly | less suitable for very large or safety-critical systems |
+| reuse and tools can reduce development time | speed may reduce documentation or architectural quality |
 
-- Saying technical documentation is "for users". It is mainly for developers and maintainers.
+Suitable for a modular, interface-heavy system with a short deadline and available users.
 
----
+### Selection rule
 
-# 6. Maintenance
+Do not claim one life cycle is always best. Link the choice to the scenario:
 
-| Type | Meaning | Example |
-| --- | --- | --- |
-| corrective | fix errors | repair bug in tax calculation |
-| adaptive | adapt to new environment | update for new operating system |
-| perfective | improve performance or usability | make search faster |
-
-Maintenance often takes more time than initial development.
+- stable vs changing requirements
+- formal control vs frequent feedback
+- safety/scale
+- deadline
+- modularity
+- user availability
 
 ---
 
-# 7. Development Methods
+## 4. Life-Cycle Stages
 
-## 7.1 Waterfall
+| Stage | Main work | Typical output |
+|---|---|---|
+| Analysis | establish problem, requirements, constraints, inputs and outputs | requirements specification |
+| Design | plan algorithms, modules, interfaces, data and tests | pseudocode, structure chart, test plan |
+| Coding | translate design into source code | working modules/source |
+| Testing | expose faults and compare results with requirements | test evidence and corrected code |
+| Maintenance | correct, adapt or improve after release | revised program/version |
 
-Waterfall completes stages in sequence.
-
-Advantages:
-
-- clear structure
-- good documentation
-- useful when requirements are stable
-
-Disadvantages:
-
-- hard to change requirements late
-- working software appears late
-
-## 7.2 Iterative / Agile-Style Development
-
-Iterative development builds and improves the solution in cycles.
-
-Advantages:
-
-- user feedback can be used early
-- changes are easier to include
-- problems found sooner
-
-Disadvantages:
-
-- can be harder to plan final cost/time
-- needs regular communication
+These are stages of work, not necessarily one-directional steps. Iterative and RAD approaches revisit them.
 
 ---
 
-# 8. Common Exam Mistakes
+## 5. Structure Charts
 
-- Mixing up analysis, design and implementation.
-- Giving "test it" without saying what is tested or with what data.
-- Forgetting expected results in a test plan.
-- Confusing user documentation with technical documentation.
-- Saying all maintenance is bug fixing.
+A structure chart shows:
+
+- hierarchical decomposition into modules
+- which module calls another
+- parameters passed between modules
+- selection or repetition annotations where relevant
+
+It does not show the detailed instructions inside each module.
+
+Example:
+
+```mermaid
+flowchart TD
+    A[ProcessOrder] -->|OrderData| B[GetOrder]
+    A -->|OrderData / IsValid| C[ValidateOrder]
+    A -->|OrderData / Total| D[CalculateTotal]
+    A -->|Total| E[DisplayReceipt]
+```
+
+Possible equivalent pseudocode:
+
+```text
+OrderData <- GetOrder()
+IsValid <- ValidateOrder(OrderData)
+
+IF IsValid = TRUE THEN
+    Total <- CalculateTotal(OrderData)
+    CALL DisplayReceipt(Total)
+ENDIF
+```
+
+### Constructing a structure chart
+
+1. place the controlling module at the top
+2. decompose it into direct sub-tasks
+3. add lower-level modules only where needed
+4. name modules with clear actions
+5. label data passed down and results returned
+6. check that every required task appears once
 
 ---
 
-# 9. Mini Practice
+## 6. State-Transition Diagrams
 
-1. Give two ways to collect requirements and one benefit of each.
-2. Write a test-plan row for validating a mark from 0 to 100.
-3. Explain the difference between corrective and adaptive maintenance.
-4. Compare waterfall and iterative development.
-5. State two items found in technical documentation.
+A state-transition diagram documents:
+
+- possible states
+- events or conditions that trigger a transition
+- the next state
+
+Example vending-machine model:
+
+```mermaid
+stateDiagram-v2
+    [*] --> Waiting
+    Waiting --> CreditEntered: money inserted
+    CreditEntered --> Dispensing: valid selection
+    CreditEntered --> Waiting: cancel / refund
+    Dispensing --> Waiting: item delivered
+```
+
+This representation is suitable when behaviour depends strongly on the current state.
+
+When constructing one:
+
+- give every state a distinct name
+- label transitions with the triggering event/condition
+- include all valid exits from each state
+- avoid transitions that the rules do not allow
 
 ---
+
+## 7. Program Faults
+
+| Error type | Meaning | Example |
+|---|---|---|
+| Syntax | breaks the language/pseudocode rules | missing `ENDIF` |
+| Logic | executes but produces an incorrect result | uses `>` instead of `<` |
+| Run-time | fails during execution | division by zero or invalid array index |
+
+Correction process:
+
+1. reproduce the fault with a small input
+2. identify the first incorrect state or output
+3. locate the instruction responsible
+4. make the smallest correction
+5. rerun the original test
+6. run related normal and boundary tests
+
+Avoiding faults:
+
+- refine the algorithm before coding
+- use meaningful identifiers and modules
+- validate input
+- use walkthroughs and dry runs
+- test modules and interfaces early
+
+---
+
+## 8. Testing Methods
+
+| Method | What it does |
+|---|---|
+| Dry run | manually follows an algorithm using test data and a trace table |
+| Walkthrough | one or more people inspect the design/code step by step |
+| White-box testing | selects tests from internal paths, branches and loops |
+| Black-box testing | checks inputs and outputs against requirements without using internal code structure |
+| Integration testing | checks modules and their interfaces when combined |
+| Alpha testing | controlled testing by/with the developer before wider release |
+| Beta testing | selected external users test in realistic environments before final release |
+| Acceptance testing | customer/user checks whether agreed requirements are satisfied |
+| Stub | temporary replacement that simulates a module not yet available |
+
+Selection examples:
+
+- test every branch of a validation routine: white-box
+- confirm the entire program meets the specification: acceptance
+- test data passed from login module to account module: integration
+- continue development while a payment service is unfinished: stub
+
+---
+
+## 9. Test Strategy, Test Plan and Test Data
+
+### Test strategy
+
+A test strategy is the high-level approach:
+
+- what levels and methods will be used
+- responsibilities
+- environments and tools
+- entry/exit criteria
+- how faults and retests will be recorded
+
+### Test plan
+
+A test plan contains specific cases.
+
+| Test ID | Purpose | Data | Type | Expected result | Actual result | Pass/fail |
+|---|---|---|---|---|---|---|
+| T01 | lower valid limit | 1 | extreme/boundary | accepted | | |
+| T02 | below lower limit | 0 | abnormal/boundary | rejected | | |
+
+### Test-data types
+
+For valid range 1–100 inclusive:
+
+| Type | Example | Meaning |
+|---|---|---|
+| normal | 47 | ordinary valid data |
+| extreme | 1 or 100 | valid endpoint |
+| boundary | 0, 1, 2 and 99, 100, 101 | values on and immediately around limits |
+| abnormal | 0, 101 or wrong type | invalid data |
+
+An expected result must be specific enough to decide pass/fail.
+
+---
+
+## 10. Maintenance
+
+| Type | Purpose | Example |
+|---|---|---|
+| Corrective | fix an identified fault | repair incorrect tax calculation |
+| Adaptive | keep the program working in a changed environment | support a new operating system or file format |
+| Perfective | improve functionality, usability or performance | add filtering or reduce response time |
+
+One change may have several effects, but classify it by its primary reason.
+
+Maintenance needs:
+
+- controlled requirements
+- regression testing
+- updated documentation
+- version tracking
+- checks that unchanged functions still work
+
+---
+
+## 11. Enhancing Existing Programs
+
+When asked to amend a program:
+
+1. state the current behaviour
+2. identify the exact new requirement
+3. find the smallest affected module/data structure
+4. preserve existing correct behaviour
+5. add or change logic
+6. test the new path
+7. rerun existing tests for regression
+
+Example enhancement:
+
+Existing:
+
+```text
+IF Total >= 100 THEN
+    Discount <- Total * 0.10
+ELSE
+    Discount <- 0
+ENDIF
+```
+
+New requirement: members receive 5% discount below $100.
+
+```text
+IF Total >= 100 THEN
+    Discount <- Total * 0.10
+ELSE
+    IF IsMember = TRUE THEN
+        Discount <- Total * 0.05
+    ELSE
+        Discount <- 0
+    ENDIF
+ENDIF
+```
+
+Regression checks must confirm that the original $100 threshold still behaves correctly.
+
+---
+
+## 12. Worked Example 1 — Choose a Life Cycle
+
+A hospital replaces a medicine-calculation component. Requirements are formally approved, safety evidence is required and late uncontrolled changes are unacceptable.
+
+Best-supported choice: **waterfall**.
+
+Reasoning:
+
+- requirements are stable and formally controlled
+- each stage can be reviewed before proceeding
+- documentation and traceability support safety evidence
+
+Trade-off:
+
+- if a requirement changes late, revisiting completed stages is expensive
+
+RAD would be weak here because speed and rapid prototyping do not outweigh formal control and safety requirements.
+
+By contrast, an internal event-booking interface with available users and a short deadline may suit RAD or iterative development.
+
+---
+
+## 13. Worked Example 2 — Structure Chart to Pseudocode
+
+Structure:
+
+```text
+CreateReport
+├── ReadScores -> Scores, Count
+├── CalculateStatistics(Scores, Count) -> Average, Highest
+└── DisplayReport(Average, Highest)
+```
+
+Equivalent control logic:
+
+```text
+CALL ReadScores(Scores, Count)
+CALL CalculateStatistics(Scores, Count, Average, Highest)
+CALL DisplayReport(Average, Highest)
+```
+
+Possible interfaces:
+
+```text
+PROCEDURE ReadScores(
+    BYREF Scores : ARRAY[1:100] OF INTEGER,
+    BYREF Count : INTEGER
+)
+PROCEDURE CalculateStatistics(
+    BYVAL Scores : ARRAY[1:100] OF INTEGER,
+    BYVAL Count : INTEGER,
+    BYREF Average : REAL,
+    BYREF Highest : INTEGER
+)
+PROCEDURE DisplayReport(BYVAL Average : REAL, BYVAL Highest : INTEGER)
+```
+
+The structure chart determines call relationships and data flow; internal algorithms are refined separately.
+
+---
+
+## 14. Worked Example 3 — Expose and Correct a Fault
+
+Faulty average algorithm:
+
+```text
+Total <- 0
+FOR Index <- 1 TO 5
+    Total <- Total + Score[Index]
+NEXT Index
+Average <- Total / (Index - 1)
+```
+
+Depending on the loop convention, `Index` after the loop is easy to misinterpret. The count is already known.
+
+Correction:
+
+```text
+Average <- Total / 5
+```
+
+Tests:
+
+| Data | Purpose | Expected average |
+|---|---|---:|
+| 10, 20, 30, 40, 50 | normal | 30 |
+| 0, 0, 0, 0, 0 | extreme valid values | 0 |
+| 100, 100, 100, 100, 100 | extreme valid values | 100 |
+
+A white-box review confirms the loop totals five elements. Black-box tests confirm the observable averages.
+
+---
+
+## 15. Common Mistakes Checklist
+
+- [ ] I link life-cycle choice to scenario evidence.
+- [ ] I do not describe waterfall as automatically superior.
+- [ ] I keep the official stages distinct.
+- [ ] I label structure-chart parameter flow.
+- [ ] I distinguish a structure chart from a flowchart.
+- [ ] I label state transitions with events/conditions.
+- [ ] I distinguish syntax, logic and run-time errors.
+- [ ] I select a testing method for a stated reason.
+- [ ] I distinguish a strategy from individual test cases.
+- [ ] I give expected results in a test plan.
+- [ ] I distinguish corrective, adaptive and perfective maintenance.
+- [ ] I regression-test unchanged behaviour after an enhancement.
+
+---
+
+## 16. 10 Marks Quick Check
+
+1. State one benefit and one drawback of waterfall. **[2]**
+2. State one difference between iterative development and RAD. **[2]**
+3. State the purpose of a structure chart and the purpose of a state-transition diagram. **[2]**
+4. Distinguish white-box testing from black-box testing. **[2]**
+5. Name the three maintenance types. **[2]**
+
+**Total: 10 marks**
+
+### Quick Check Answers
+
+1. Any linked pair, such as clear staged control/documentation **[1]** but costly late changes or late working software **[1]**. **[2]**
+2. Iterative is the general repeated improvement of versions; RAD specifically emphasises rapid/time-boxed prototyping, strong user involvement and reuse/tools. **[2]**
+3. A structure chart documents modular hierarchy and parameter flow **[1]**; a state-transition diagram documents states and event-triggered changes **[1]**. **[2]**
+4. White-box derives tests from internal paths/logic; black-box tests required input-output behaviour without relying on the internal implementation. **[2]**
+5. Corrective, adaptive and perfective. Award one mark for any two correct and two marks for all three correct. **[2]**
+
+---
+
+## 17. 20 Marks Practice
+
+A sports centre is developing an appointment app. Users are available weekly to review prototypes, the interface is modular and the first usable version is needed quickly.
+
+1. Select a suitable development life cycle and justify it with three scenario details. **[4]**
+2. Describe a structure chart containing a controlling module and three submodules. Name one parameter/result passed for each submodule. **[4]**
+3. Select a suitable testing method for each purpose:
+   - exercise every branch of the validation module
+   - test data passed between booking and payment modules
+   - selected customers use the near-final app
+   - centre management checks agreed requirements. **[4]**
+4. A booking quantity must be from 1 to 6 inclusive. Give one normal value, both extreme values and one abnormal boundary value, with expected outcomes. **[4]**
+5. Classify each change: fix a duplicate-booking fault; support a new mobile operating system; add appointment filtering. **[3]**
+6. The condition `IF Quantity > 1 AND Quantity < 6` is intended to accept the full valid range. State the corrected condition. **[1]**
+
+**Total: 20 marks**
+
+### 20 Marks Practice Mark Scheme
+
+1. RAD or iterative **[1]**; justification linked to any three of weekly users/feedback, modular interface, rapid prototype/short deadline **[3]**. RAD is the strongest answer when all details are used. **[4]**
+2. Controlling module such as `ProcessBooking` **[1]**; three suitable submodules **[1]**; suitable parameter/result for at least two modules **[1]**; clear hierarchy/data flow **[1]**. Example: `GetBooking -> BookingData`, `ValidateBooking(BookingData) -> IsValid`, `SaveBooking(BookingData)`. **[4]**
+3. White-box; integration; beta; acceptance. **[4]**
+4. Normal such as 3, accepted **[1]**; lower extreme 1, accepted **[1]**; upper extreme 6, accepted **[1]**; abnormal boundary 0 or 7, rejected **[1]**. **[4]**
+5. Corrective; adaptive; perfective. **[3]**
+6. `IF Quantity >= 1 AND Quantity <= 6`. **[1]**
+
+---
+
+## 18. Final Self-Assessment
+
+- [ ] I can choose and evaluate waterfall, iterative and RAD.
+- [ ] I can explain the five program-development stages.
+- [ ] I can construct and interpret structure charts with parameters.
+- [ ] I can construct and interpret state-transition diagrams.
+- [ ] I can select every required testing method.
+- [ ] I can produce a test strategy and specific test-plan rows.
+- [ ] I can identify/correct errors and classify maintenance.
+- [ ] I can enhance a program without breaking existing behaviour.
+- [ ] I completed both practice sets before checking the answers.

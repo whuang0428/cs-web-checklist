@@ -1,188 +1,556 @@
 # AS 9618 Chapter 9: Algorithm Design and Problem-Solving
-## Algorithm Design and Problem-Solving｜Syllabus-Aligned Paper 2 Revision Sheet
 
-> **Version:** Syllabus-aligned revision for AS Paper 2  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 9 Algorithm design and problem-solving  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English pseudocode keywords
+> **Paper 2 focus:** model the essential problem, decompose it, document the algorithm precisely and refine it until it can be programmed.
 
 ---
 
-# 0. How to Use This Sheet
+## 1. Syllabus Coverage
 
-AS Paper 2 wants more than simple pseudocode. You must show computational thinking:
-
-- decompose a problem
-- identify inputs, outputs and processing
-- choose suitable data structures
-- trace and dry-run an algorithm
-- design test data
-- refine an inefficient or incorrect solution
-
----
-
-# 1. Computational Thinking
-
-| Skill | Meaning | In an exam answer |
-| --- | --- | --- |
-| abstraction | remove unnecessary detail | focus on essential data and operations |
-| decomposition | split into smaller parts | separate input, processing, output |
-| pattern recognition | spot repeated logic | use loops or subroutines |
-| algorithmic thinking | write ordered steps | pseudocode with correct control flow |
-
-Weak answer: "make a program to solve it".
-
-Strong answer: "decompose the task into input validation, processing each record, and outputting a summary."
+| Syllabus objective | Where it is covered |
+|---|---|
+| Explain and apply abstraction | Section 2 |
+| Produce an abstract model containing essential details | Section 2 and Worked Example 1 |
+| Describe and use decomposition | Section 3 |
+| Understand an algorithm as a sequence of defined steps | Section 4 |
+| Use suitable identifiers and identifier tables | Section 5 |
+| Include input, process and output | Section 6 |
+| Use sequence, selection and iteration | Section 7 |
+| Document algorithms using structured English, flowcharts and pseudocode | Section 8 |
+| Convert between structured English, flowcharts and pseudocode | Section 8 and Worked Example 2 |
+| Use stepwise refinement | Section 9 and Worked Example 3 |
+| Use logic statements to define an algorithm | Sections 7 and 9 |
 
 ---
 
-# 2. Structure Charts and Modular Design
+## 2. Abstraction
 
-A structure chart shows how a solution is divided into modules.
+**Abstraction** removes irrelevant detail and retains only the information needed to solve the current problem.
 
-Good module names:
+For a bus-fare program, essential details may include:
 
-- `GetValidatedMark`
-- `CalculateAverage`
-- `FindHighestScore`
-- `DisplayReport`
+- passenger age
+- journey zone
+- discount entitlement
+- fare rules
 
-Benefits of modular design:
+Usually irrelevant:
 
-- easier to test
-- easier to debug
-- reusable subroutines
-- different programmers can work on different modules
-- reduces repeated code
+- passenger eye colour
+- bus paint colour
+- driver's favourite route
+
+### Why abstraction is useful
+
+- reduces the amount of information being considered
+- makes the model easier to understand
+- exposes the data and rules that affect the output
+- prevents implementation effort being wasted on irrelevant details
+
+An abstract model is not merely “a simpler description”. It must preserve every detail that changes the result.
 
 ---
 
-# 3. Pseudocode Control Structures
+## 3. Decomposition
 
-## 3.1 Selection
+**Decomposition** divides a problem into smaller sub-problems that can become program modules.
+
+Example:
 
 ```text
-IF average >= 80 THEN
-    grade <- "A"
+Process event entries
+├── Input entrant details
+├── Validate category
+├── Calculate fee
+├── Store entry
+└── Display confirmation
+```
+
+Good modules:
+
+- have one clear purpose
+- have meaningful names
+- define what data enters and leaves
+- can be designed and tested separately
+- avoid repeating work already performed elsewhere
+
+Decomposition improves:
+
+- understanding
+- independent development
+- testing and debugging
+- reuse
+- maintenance
+
+Do not confuse decomposition with writing every instruction. It identifies the parts before their internal algorithms are refined.
+
+---
+
+## 4. Algorithms
+
+An **algorithm** is a solution expressed as a finite sequence of defined, unambiguous steps.
+
+A usable algorithm must:
+
+- have a clear starting state
+- state the order of operations
+- handle every required condition
+- terminate
+- produce the required output
+
+Weak:
+
+> Work out the result.
+
+Precise:
+
+```text
+Total <- 0
+FOR Index <- 1 TO ItemCount
+    Total <- Total + Price[Index]
+NEXT Index
+OUTPUT Total
+```
+
+---
+
+## 5. Identifiers and Identifier Tables
+
+An **identifier** is the name used for a variable, constant, array, record or subroutine.
+
+Use names that communicate purpose:
+
+- `ItemCount`
+- `TotalDistance`
+- `IsValid`
+- `MAX_ENTRIES`
+
+Avoid names such as `x`, `temp1` or `data` unless their meaning is genuinely clear from a very small scope.
+
+### Identifier table
+
+An identifier table defines the data used by a solution before detailed pseudocode is written.
+
+| Identifier | Data type | Purpose |
+|---|---|---|
+| `EntrantName` | STRING | stores the current entrant's name |
+| `Age` | INTEGER | stores the current entrant's age |
+| `Fee` | REAL | stores the calculated entry fee |
+| `IsJunior` | BOOLEAN | records whether junior pricing applies |
+| `MAX_ENTRIES` | INTEGER constant | stores the fixed entry limit |
+
+If an array is needed, include its element type and bounds:
+
+| Identifier | Data type | Purpose |
+|---|---|---|
+| `LapTime` | ARRAY[1:8] OF REAL | stores eight lap times |
+
+---
+
+## 6. Input, Process and Output
+
+Use an IPO table before writing the detailed algorithm.
+
+| Input | Process | Output |
+|---|---|---|
+| item prices, quantities | validate quantities, multiply, total | final cost |
+| test scores | total, count, calculate average | average and grade |
+| requested code | compare with stored codes | found/not-found message |
+
+Storage can also be identified when the problem requires data to persist or be reused.
+
+Questions to ask:
+
+1. What data is supplied?
+2. What calculations, comparisons and repetitions are required?
+3. What must be displayed, returned or stored?
+4. What invalid or exceptional cases must be handled?
+
+---
+
+## 7. The Three Basic Constructs
+
+### Sequence
+
+Statements execute in order.
+
+```text
+INPUT Width
+INPUT Height
+Area <- Width * Height
+OUTPUT Area
+```
+
+### Selection
+
+```text
+IF StockLevel < ReorderLevel THEN
+    OUTPUT "Reorder"
 ELSE
-    IF average >= 60 THEN
-        grade <- "B"
-    ELSE
-        grade <- "C"
-    ENDIF
+    OUTPUT "Stock sufficient"
 ENDIF
 ```
 
-## 3.2 Iteration
+Logic statements define when a path is followed:
+
+```text
+IF Age >= 12 AND Age <= 17 THEN
+    TicketType <- "Teen"
+ENDIF
+```
+
+### Iteration
+
+```text
+FOR Index <- 1 TO 10
+    INPUT Score[Index]
+NEXT Index
+```
+
+Every loop needs:
+
+- an initial state
+- a continuation or stopping condition
+- progress towards termination
+
+---
+
+## 8. Algorithm Representations
+
+### Structured English
+
+Structured English uses restricted, indented statements without relying on exact pseudocode syntax.
 
 ```text
 REPEAT
-    INPUT mark
-UNTIL mark >= 0 AND mark <= 100
+    read the quantity
+UNTIL the quantity is between 1 and 20 inclusive
+calculate price multiplied by quantity
+display the result
 ```
 
-## 3.3 Nested Loops
+It should still show decisions and repetition clearly.
+
+### Flowchart
+
+Standard flowchart shapes:
+
+| Shape | Purpose |
+|---|---|
+| rounded start/end | terminator |
+| parallelogram | input or output |
+| rectangle | process |
+| diamond | decision |
+| arrow | control flow |
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/INPUT Quantity/]
+    B --> C{Quantity >= 1 AND Quantity <= 20?}
+    C -- No --> B
+    C -- Yes --> D[Cost = Quantity * Price]
+    D --> E[/OUTPUT Cost/]
+    E --> F([Stop])
+```
+
+### Pseudocode
 
 ```text
-FOR row <- 1 TO 3
-    FOR col <- 1 TO 4
-        OUTPUT grid[row, col]
-    NEXT col
-NEXT row
+REPEAT
+    INPUT Quantity
+UNTIL Quantity >= 1 AND Quantity <= 20
+
+Cost <- Quantity * Price
+OUTPUT Cost
 ```
 
-Common mistake: using one loop when each row and column must be processed.
+### Conversion method
+
+When converting:
+
+1. identify each input/output
+2. identify every process
+3. translate each decision into an `IF` or `CASE`
+4. translate every backward flow into a suitable loop
+5. preserve the original order and conditions
+6. test the converted version with a small example
+
+Do not add behaviour that was absent from the source representation.
 
 ---
 
-# 4. Trace Tables
+## 9. Stepwise Refinement
 
-Trace tables are used to prove what an algorithm does.
+**Stepwise refinement** repeatedly replaces a high-level task with more detailed steps until every step can be programmed.
 
-Checklist:
+Initial statement:
 
-1. include all variables that change
-2. include array indexes if they affect output
-3. include Boolean flags
-4. update values in the order the code executes
-5. record output separately
+```text
+Produce weekly sales report
+```
 
-When tracing nested loops, update the inner loop fully before increasing the outer loop.
+First refinement:
 
----
+```text
+Input daily sales
+Calculate weekly statistics
+Display report
+```
 
-# 5. Searching and Sorting Concepts
+Second refinement:
 
-## 5.1 Linear Search
+```text
+FOR Day <- 1 TO 7
+    input and validate Sales[Day]
+NEXT Day
 
-Linear search checks each item until a match is found or the list ends.
+calculate total
+calculate average
+find highest value
+display total, average and highest value
+```
 
-Best use:
+Final refinement expands each remaining high-level phrase:
 
-- unsorted data
-- small lists
-- simple implementation
+```text
+Total <- 0
+Highest <- Sales[1]
 
-## 5.2 Binary Search
+FOR Day <- 1 TO 7
+    Total <- Total + Sales[Day]
+    IF Sales[Day] > Highest THEN
+        Highest <- Sales[Day]
+    ENDIF
+NEXT Day
 
-Binary search repeatedly halves a sorted list.
+Average <- Total / 7
+OUTPUT Total, Average, Highest
+```
 
-Requirements:
-
-- data must be sorted
-- compare with middle item
-- discard half of the search space
-
-Common phrase:
-
-> Binary search is more efficient on a sorted list because each comparison reduces the remaining search area by about half.
-
-## 5.3 Bubble Sort
-
-Bubble sort repeatedly compares adjacent items and swaps them if needed.
-
-Exam skills:
-
-- trace one pass
-- identify swaps
-- know that the largest item moves to the end after a full ascending pass
+Stop refining when the steps are precise enough to translate directly into code.
 
 ---
 
-# 6. Validation and Test Data
+## 10. Worked Example 1 — Abstract and Decompose a System
 
-| Test type | Purpose |
-| --- | --- |
-| normal | data that should be accepted |
-| boundary | values at and around the limits |
-| abnormal | invalid data that should be rejected |
-| extreme | largest or smallest valid value |
+A repair workshop records jobs. A customer supplies a device code, fault description and priority. The system allocates a job number and displays an estimated completion category. The colour of the customer's bag and the technician's route to work are also mentioned in the scenario.
 
-For every test, include:
+### Abstraction
 
-- test data
-- reason for using it
-- expected result
+Essential:
+
+- device code
+- fault description
+- priority
+- job number
+- rule for completion category
+
+Irrelevant:
+
+- bag colour
+- route to work
+
+### Decomposition
+
+```text
+Process repair job
+├── Input job details
+├── Validate priority
+├── Allocate job number
+├── Determine completion category
+├── Store job
+└── Display confirmation
+```
+
+### IPO
+
+| Input | Process | Output |
+|---|---|---|
+| device code, description, priority | validate, allocate number, select category | job number, completion category |
+
+This model preserves every detail that affects the result and excludes descriptive noise.
 
 ---
 
-# 7. Common Exam Mistakes
+## 11. Worked Example 2 — Identifier Table to Pseudocode
 
-- Writing vague English instead of executable pseudocode.
-- Forgetting to initialise `total`, `count`, `found`, `highest` or `lowest`.
-- Using binary search on unsorted data.
-- Giving test data with no expected outcome.
-- Describing modular design benefits without linking them to testing or maintenance.
+A venue charges $12 per adult ticket and $7 per child ticket. A booking may contain from 1 to 8 tickets.
+
+### Identifier table
+
+| Identifier | Data type | Purpose |
+|---|---|---|
+| `TicketCount` | INTEGER | number of tickets requested |
+| `TicketType` | CHAR | `'A'` for adult or `'C'` for child |
+| `Price` | REAL | price of one ticket |
+| `TotalCost` | REAL | total booking cost |
+| `ADULT_PRICE` | REAL constant | fixed adult price |
+| `CHILD_PRICE` | REAL constant | fixed child price |
+
+### Logic
+
+```text
+CONSTANT ADULT_PRICE = 12.00
+CONSTANT CHILD_PRICE = 7.00
+
+REPEAT
+    INPUT TicketCount
+UNTIL TicketCount >= 1 AND TicketCount <= 8
+
+REPEAT
+    INPUT TicketType
+UNTIL TicketType = 'A' OR TicketType = 'C'
+
+IF TicketType = 'A' THEN
+    Price <- ADULT_PRICE
+ELSE
+    Price <- CHILD_PRICE
+ENDIF
+
+TotalCost <- TicketCount * Price
+OUTPUT TotalCost
+```
+
+Every identifier in the pseudocode has a defined role and suitable type.
 
 ---
 
-# 8. Mini Practice
+## 12. Worked Example 3 — Refine a Ranking Algorithm
 
-1. Draw a structure chart for a program that records sports day results.
-2. Write pseudocode to validate a percentage from 0 to 100.
-3. Trace one pass of bubble sort on `7, 2, 5, 1`.
-4. Explain why binary search needs sorted data.
-5. Give normal, boundary and abnormal test data for a ticket price input.
+Requirement:
+
+> Input five positive scores and display the highest score and its position.
+
+### First refinement
+
+```text
+Input valid scores
+Find highest score
+Display result
+```
+
+### Final algorithm
+
+```text
+FOR Index <- 1 TO 5
+    REPEAT
+        INPUT Score[Index]
+    UNTIL Score[Index] > 0
+NEXT Index
+
+Highest <- Score[1]
+HighestPosition <- 1
+
+FOR Index <- 2 TO 5
+    IF Score[Index] > Highest THEN
+        Highest <- Score[Index]
+        HighestPosition <- Index
+    ENDIF
+NEXT Index
+
+OUTPUT Highest
+OUTPUT HighestPosition
+```
+
+The refined version defines validation, bounds, initialisation, comparison and output. No high-level instruction remains ambiguous.
 
 ---
+
+## 13. Common Mistakes Checklist
+
+- [ ] I remove only irrelevant detail during abstraction.
+- [ ] I decompose into modules with distinct purposes.
+- [ ] I use meaningful identifiers and define them in a table.
+- [ ] I identify input, process and output before coding.
+- [ ] I preserve logic when converting between representations.
+- [ ] I label both branches of a flowchart decision.
+- [ ] I refine until every step is programmable.
+- [ ] I initialise variables before using them.
+- [ ] I ensure every loop can terminate.
+- [ ] I do not move array algorithms or testing theory into the wrong syllabus section.
+
+---
+
+## 14. 10 Marks Quick Check
+
+1. Define abstraction and state one benefit. **[2]**
+2. Define decomposition and state one benefit. **[2]**
+3. State the three columns normally required in an identifier table. **[3]**
+4. Name the three basic programming constructs. **[3]**
+
+**Total: 10 marks**
+
+### Quick Check Answers
+
+1. Abstraction removes irrelevant details while retaining essential details **[1]**; it reduces complexity or focuses the solution on required data/rules **[1]**. **[2]**
+2. Decomposition divides a problem into smaller sub-problems/modules **[1]**; it improves independent design, testing, reuse or maintenance **[1]**. **[2]**
+3. Identifier, data type and purpose. **[3]**
+4. Sequence, selection and iteration/repetition. **[3]**
+
+---
+
+## 15. 20 Marks Practice
+
+A cycling event system records a rider number, age category, distance completed and completion time. It displays an award category. A scenario description also gives the rider's shirt colour and preferred music.
+
+1. Identify two essential details and two irrelevant details for calculating the award. **[4]**
+2. Give four suitable modules for the system. **[4]**
+3. Create four identifier-table rows for data used by the solution. Include identifier, data type and purpose. **[4]**
+4. Write pseudocode to:
+   - input a distance from 0.0 to 100.0 inclusive
+   - input a positive completion time
+   - output `"Gold"` if the full 100.0 km was completed in at most 240 minutes
+   - otherwise output `"Finisher"` if at least 60.0 km was completed
+   - otherwise output `"No award"`. **[8]**
+
+**Total: 20 marks**
+
+### 20 Marks Practice Mark Scheme
+
+1. Essential: any two of distance, completion time, award rules, and age category if used by the rules **[2]**. Irrelevant: shirt colour and preferred music **[2]**. **[4]**
+2. Any four clear modules, for example input rider data, validate values, calculate/select award, store result, display result. **[4]**
+3. Award one mark for each complete, suitable row. Example:
+
+   | Identifier | Data type | Purpose |
+   |---|---|---|
+   | `RiderNumber` | STRING | stores the rider identifier |
+   | `Distance` | REAL | stores kilometres completed |
+   | `CompletionTime` | INTEGER | stores elapsed minutes |
+   | `Award` | STRING | stores the selected award category |
+
+   **[4]**
+
+4. Example:
+
+   ```text
+   REPEAT
+       INPUT Distance
+   UNTIL Distance >= 0.0 AND Distance <= 100.0
+
+   REPEAT
+       INPUT CompletionTime
+   UNTIL CompletionTime > 0
+
+   IF Distance = 100.0 AND CompletionTime <= 240 THEN
+       OUTPUT "Gold"
+   ELSE
+       IF Distance >= 60.0 THEN
+           OUTPUT "Finisher"
+       ELSE
+           OUTPUT "No award"
+       ENDIF
+   ENDIF
+   ```
+
+   Distance input loop and both limits **[2]**; positive-time loop **[1]**; full-distance condition **[1]**; time condition combined with `AND` **[1]**; finisher condition **[1]**; mutually exclusive outputs **[1]**; correct structure and termination **[1]**. **[8]**
+
+---
+
+## 16. Final Self-Assessment
+
+- [ ] I can build an abstract model from a noisy scenario.
+- [ ] I can decompose a problem into useful modules.
+- [ ] I can produce a complete identifier table.
+- [ ] I can identify input, process and output.
+- [ ] I can convert between structured English, flowcharts and pseudocode.
+- [ ] I can use stepwise refinement until an algorithm is programmable.
+- [ ] I completed both practice sets before checking the answers.
