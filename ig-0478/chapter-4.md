@@ -1,21 +1,61 @@
 # IGCSE 0478 Chapter 4: Software
+> **Software｜Syllabus-Aligned Revision Edition**
+> **适用范围**：Cambridge IGCSE Computer Science 0478  
+**章节范围**：4.1 Types of Software and Interrupts｜4.2 Programming Languages, Translators and IDEs  
+**更新依据**：2026–2028 syllabus + 全部 2025 Paper 1 / Mark Scheme 趋势 + 原 2023–2024 WHBC checklist  
+**目标**：删掉低频/过细内容，把学生最容易拿分的 `State / Identify / Describe / Explain / Compare / Suggest` 得分句整理出来。  
+**建议使用方式**：先背 **Core Exam Sentences**，再用 **Common Mistakes** 检查答案是否太泛。
+>
 
-## Exam Focus
+---
 
-| 考点 | 近期出题方向 | 学生最容易丢分的地方 |
+## 0. Syllabus 更新结论：这一章现在怎么考？
+| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
+| --- | --- | --- | --- |
+| **System vs application software** | 常以 1–4 marks 出现，要求区别 + example | 只写 “software used by computer/user”，没有写 **services computer requires / services user requires** | 保留核心定义，减少过长例子 |
+| **Utility software** | 常作为 system software example 出现 | 把 utility software 写成 application software | 明确：utility software is system software |
+| **Operating system functions** | 2025 明显高频：memory management, interrupts, user accounts, platform, interface | 只列名称，不描述 role；或把 bootstrap 当 OS function | 加入 “function + role” 表格 |
+| **Memory management** | 2025 直接考 3 marks：allocates/deallocates memory, checks enough memory, moves data, avoids same location conflict, virtual memory | 只写 “manages memory” 太泛 | 单独强化 memory management 模板 |
+| **Firmware / BIOS / bootloader** | 2025 常和 embedded system / robot / OS running process 联系 | 把 firmware 写成 hardware；忘记 ROM | 保留“stored in ROM / programmed into hardware / provides platform” |
+| **Interrupt handling** | 2025 高频：hardware/software interrupt, priority, stack, ISR / interrupt handler, queue | 只写 “CPU stops” 不够；忘记 ISR 和 priority | 加入 interrupt full process flow |
+| **Hardware vs software interrupts** | 2025 直接问例子 | 把 key press 写成 software interrupt；把 divide by zero 写成 hardware interrupt | 加入对比表和例子 |
+| **High-level vs low-level languages** | 常考 advantages of HLL and features of LLL | 只写 “HLL easier” 太泛；忘记 portable / machine independent | 加入 HLL / LLL mark scheme keywords |
+| **Assembly language + assembler** | 2025 反复考：assembly is low-level, uses mnemonics, assembler translates to machine code | 把 assembler / compiler / interpreter 混淆 | 单独做“三译者对比” |
+| **Compiler vs interpreter** | 2025 高频 cloze / compare：whole code vs line-by-line, error report vs stops at error, executable file | 只写 “compiler faster” 不够稳 | 以 mark scheme 句子为主 |
+| **IDE functions** | 2025 高频：code editor, run-time environment, error diagnostics, auto-completion, auto-correction, prettyprint | 只列功能名，没有解释 role | 做“function + role” 表 |
+| **Buffer** | 不是 2025 核心高频，但仍可作为 interrupt/context support | 写太长，和 RAM 混在一起 | 降权，只保留 one-sentence version |
+
+
+---
+
+### 1. 内容取舍：哪些内容要删？哪些保留？
+#### ✅ 必须保留并重点训练
+| 内容 | 原因 |
+| --- | --- |
+| System software vs application software | syllabus 明确要求；2024–2025 多次出现 |
+| Utility software as system software | 常作为 system software example |
+| OS functions | 2025 直接考 operating system role/function |
+| Memory management | 2025 明确高频，容易丢分 |
+| Firmware / BIOS / bootloader | 和 hardware / OS / application running chain 相关 |
+| Interrupt types and handling process | 2025 明显高频 |
+| Hardware interrupt vs software interrupt | 2025 直接考 example |
+| High-level vs low-level language | 经典高频 comparison |
+| Assembly language and assembler | 2025 反复出现 |
+| Compiler vs interpreter | 2025 高频填空 / compare |
+| IDE functions with descriptions | 2025 直接考 function + role |
+
+
+#### ⚠️ 降权或删除
+| 原内容 | 处理方式 | 原因 |
 | --- | --- | --- |
-| **System vs application software** | 常以 1–4 marks 出现，要求区别 + example | 只写 “software used by computer/user”，没有写 **services computer requires / services user requires** |
-| **Utility software** | 常作为 system software example 出现 | 把 utility software 写成 application software |
-| **Operating system functions** | 2025 明显高频：memory management, interrupts, user accounts, platform, interface | 只列名称，不描述 role；或把 bootstrap 当 OS function |
-| **Memory management** | 2025 直接考 3 marks：allocates/deallocates memory, checks enough memory, moves data, avoids same location conflict, virtual memory | 只写 “manages memory” 太泛 |
-| **Firmware / BIOS / bootloader** | 2025 常和 embedded system / robot / OS running process 联系 | 把 firmware 写成 hardware；忘记 ROM |
-| **Interrupt handling** | 2025 高频：hardware/software interrupt, priority, stack, ISR / interrupt handler, queue | 只写 “CPU stops” 不够；忘记 ISR 和 priority |
-| **Hardware vs software interrupts** | 2025 直接问例子 | 把 key press 写成 software interrupt；把 divide by zero 写成 hardware interrupt |
-| **High-level vs low-level languages** | 常考 advantages of HLL and features of LLL | 只写 “HLL easier” 太泛；忘记 portable / machine independent |
-| **Assembly language + assembler** | 2025 反复考：assembly is low-level, uses mnemonics, assembler translates to machine code | 把 assembler / compiler / interpreter 混淆 |
-| **Compiler vs interpreter** | 2025 高频 cloze / compare：whole code vs line-by-line, error report vs stops at error, executable file | 只写 “compiler faster” 不够稳 |
-| **IDE functions** | 2025 高频：code editor, run-time environment, error diagnostics, auto-completion, auto-correction, prettyprint | 只列功能名，没有解释 role |
-| **Buffer** | 不是 2025 核心高频，但仍可作为 interrupt/context support | 写太长，和 RAM 混在一起 |
+| 过长 application software examples | **压缩** | 考试一般只要 example，不需要背长描述 |
+| Linker / link editor | **降权** | 不在 Chapter 4 的高频考查主线，容易干扰 compiler / assembler |
+| Screensaver as utility software | **删除主表** | 低频且容易让学生误判重点 |
+| “compiler is system software” 长解释 | **压缩** | 考试更常把 compiler 放在 translator 部分考 |
+| 过长 GUI / HCI 解释 | **压缩** | OS interface 只需会写 role |
+| Buffer 长段落 | **降权** | 保留概念即可，不作为主背诵内容 |
+| 品牌软件例子 | **删除** | Cambridge mark scheme 不给 brand name 分 |
+
 
 ---
 
@@ -339,7 +379,7 @@ An **IDE** is a suite of programs used to write, run, test and debug program cod
 
 ---
 
-## Chapter 4 Overall Mind Map
+## 2. Chapter 4 Overall Mind Map
 ```mermaid
 mindmap
   root((Chapter 4 Software))
@@ -399,7 +439,7 @@ mindmap
 
 ---
 
-## Mark Scheme Style Answer Templates
+## 3. Mark Scheme Style Answer Templates
 ### Template A｜Difference between system software and application software
 > System software provides the services that the computer requires and manages / maintains the hardware and software. An example is an operating system or utility software. Application software provides the services that the user requires and allows the user to perform tasks. An example is a word processor or spreadsheet.
 >
@@ -442,7 +482,7 @@ mindmap
 
 ---
 
-## Common Mistakes｜超级重要易错点
+## 4. Common Mistakes｜超级重要易错点
 | Topic | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | System software | “It is software for computer.” | Too vague | “It provides services the computer requires and manages hardware/software.” |
@@ -469,7 +509,7 @@ mindmap
 
 ---
 
-## Fast Revision Tables
+## 5. Fast Revision Tables
 ### 5.1 Must-know Definitions
 | Term | Definition |
 | --- | --- |
@@ -505,7 +545,7 @@ mindmap
 
 ---
 
-## 10 Marks Quick Check
+## 6. 10 Marks Quick Check
 Answer these in exam style.
 
 1. State one example of system software. **[1]**  
@@ -533,7 +573,7 @@ Answer these in exam style.
 
 ---
 
-## 20 Marks Exam-style Practice with Mark Scheme
+## 7. 20 Marks Exam-style Practice with Mark Scheme
 ### Question 1｜Software Types **[4]**
 A student uses a computer to complete homework.  
 Describe the difference between system software and application software. Give one example of each.
@@ -622,3 +662,4 @@ One mark for function + one mark for matching role description, max four:
 + Translator: translates code into machine code / low-level language.
 
 ---
+

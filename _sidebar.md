@@ -1,5 +1,5 @@
 * [Home](README.md)
-* [Course Coverage](coverage.md)
+* [Coverage Status](coverage.md)
 
 * IGCSE 0478
   * [Chapter 1: Data Representation](ig-0478/chapter-1.md)

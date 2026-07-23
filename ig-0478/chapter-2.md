@@ -1,6 +1,14 @@
 # IGCSE 0478 Chapter 2: Data Transmission
+> **Syllabus-Aligned Student Revision Notes**
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
+**Use:** Student revision handout
+**Style:** 中文解释 + English mark scheme keywords  
+**Core aim:** 不是背大段定义，而是学会写出 **mark scheme 得分点**
+>
 
-## Chapter Overview
+---
+
+## 0. Chapter 2 一页总览
 ```mermaid
 mindmap
   root((Chapter 2 Data Transmission))
@@ -61,8 +69,7 @@ mindmap
 
 ---
 
-## Exam Focus
-
+### 1. 近期出题方向总结
 | Priority | Topic | 2025 考法 | 学生必须会写的关键词 |
 | --- | --- | --- | --- |
 | ⭐⭐⭐⭐⭐ | Packet structure & packet switching | 描述 packet 分成什么；packet switching 流程 | **header / payload / trailer / router / different route / arrive out of order / reordered** |
@@ -74,6 +81,24 @@ mindmap
 | ⭐⭐⭐⭐ | Encryption | 2025 明显出现 asymmetric encryption | **plain text / cipher text / key / public key / private key / meaningless** |
 | ⭐⭐⭐ | USB | 常考基础描述，但近年不是最高频长答 | **automatically detected / driver loaded / self-configuring / backward compatible** |
 | ⭐⭐ | CRC / detailed USB cable length | 只保留为补充 | 不建议花太多课时 |
+
+
+---
+
+### 2. 内容取舍说明
+#### 重点保留并强化
++ Packet structure and packet switching  
++ Transmission method suitability：serial / parallel / simplex / half-duplex / full-duplex  
++ Error detection：parity, checksum, echo check, check digit, ARQ  
++ 2.3 Encryption：旧版 CH2 文件中不完整，但 syllabus 和 2025 Paper 1 都需要补回
+
+#### 降权处理
+| Old content | 处理方式 | 原因 |
+| --- | --- | --- |
+| CRC 详细算法 | 降为 trailer/error checking example | 考试更常直接问 checksum / parity / ARQ |
+| USB 优缺点长表 | 压缩成 mark scheme 关键词 | 学生只需能答 plug-in process + advantages/drawbacks |
+| 过长 packet switching route selection 细节 | 保留“router controls route / different route / arrive out of order” | Cambridge 得分点更简洁 |
+| 复杂 “hop number” 解释 | 放入 extension | 不是 2025 高频核心 |
 
 
 ---
@@ -105,8 +130,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 
 ### 2.1.2 Packet Switching
 #### 核心流程
-```mermaid
-flowchart LR
+<!-- 这是一个文本绘图，源码为：flowchart LR
     A[Original data/message] --> B[Data is split into packets]
     B --> C[Each packet has header, payload and trailer]
     C --> D{Routers choose routes}
@@ -118,8 +142,8 @@ flowchart LR
     G --> H
     H --> I[Packets may arrive out of order]
     I --> J[Packets are reordered using packet number]
-    J --> K[Original message is reassembled]
-```
+    J --> K[Original message is reassembled] -->
+![](https://cdn.nlark.com/yuque/__mermaid_v3/aaaef26ef98037cde8f83f00a0f3898b.svg)
 
 #### 必背流程
 1. Data is split into packets.  
@@ -756,3 +780,4 @@ Any two:
 + The private key is not shared.
 
 ---
+

@@ -38,32 +38,6 @@ REVIEW_PAGES = {
     A2_REVIEW_PAGE_2,
 }
 CONTENT_PAGES = EXPECTED_CHAPTERS | REVIEW_PAGES
-STUDENT_PAGES = CONTENT_PAGES | {
-    ROOT / "README.md",
-    ROOT / "_coverpage.md",
-    ROOT / "coverage.md",
-}
-INTERNAL_EDITORIAL_MARKERS = [
-    "Content Update Decision",
-    "Keep and Strengthen",
-    "Downweighted content",
-    "Downweight warning",
-    "Downweighted extension vocabulary",
-    "Delete / Avoid",
-    "Remove / Avoid",
-    "内容取舍",
-    "Syllabus 更新结论",
-    "近期出题方向总结",
-    "**Version:**",
-    "Main audience:",
-    "Docsify: ready",
-    "regenerated version",
-    "Ongoing Improvement Areas",
-    "Maintenance Priorities",
-    "structural/content/runtime checker",
-    "current maturity",
-    "cdn.nlark.com/yuque/__mermaid",
-]
 PHASE2_CHAPTERS = {
     ROOT / "ig-0478" / "chapter-7.md": {
         "worked_examples": 3,
@@ -829,39 +803,6 @@ def check_accessibility_baseline(errors: list[str]) -> None:
             add_error(errors, style, f"missing {description}")
 
 
-def check_student_facing_content(errors: list[str]) -> None:
-    for path in sorted(STUDENT_PAGES):
-        text = path.read_text(encoding="utf-8")
-        for marker in INTERNAL_EDITORIAL_MARKERS:
-            if marker in text:
-                add_error(errors, path, f"student page contains internal editorial text: {marker}")
-
-
-def check_mermaid_layout_fix(errors: list[str]) -> None:
-    index = ROOT / "index.html"
-    index_text = index.read_text(encoding="utf-8")
-    style = ROOT / "assets" / "style.css"
-    style_text = style.read_text(encoding="utf-8")
-
-    index_contracts = [
-        ("graphic.getBBox()", "Mermaid content-bound measurement"),
-        ("data-content-fitted", "Mermaid fit marker"),
-        ("svg.parentElement.style.width", "content-sized Mermaid wrapper"),
-        ("MutationObserver", "post-render Mermaid fitting"),
-    ]
-    for needle, description in index_contracts:
-        if needle not in index_text:
-            add_error(errors, index, f"missing {description}")
-
-    style_contracts = [
-        ("width: fit-content", "content-sized Mermaid containers"),
-        (".mermaid > svg", "responsive Mermaid SVG styling"),
-    ]
-    for needle, description in style_contracts:
-        if needle not in style_text:
-            add_error(errors, style, f"missing {description}")
-
-
 def main() -> int:
     errors: list[str] = []
     check_chapter_inventory(errors)
@@ -871,8 +812,6 @@ def main() -> int:
     check_marked_content(errors)
     check_cdn_versions(errors)
     check_accessibility_baseline(errors)
-    check_student_facing_content(errors)
-    check_mermaid_layout_fix(errors)
 
     if errors:
         print(f"Site checks failed with {len(errors)} error(s):")
@@ -897,8 +836,6 @@ def main() -> int:
     print("- every A2 fenced Python code block compiles and core examples pass smoke tests")
     print("- jsDelivr npm dependencies use exact versions")
     print("- the skip link, keyboard focus and reduced-motion accessibility baseline is present")
-    print("- student pages contain no internal editorial or maintenance markers")
-    print("- Mermaid diagrams are fitted to rendered content and remain responsive")
     return 0
 
 

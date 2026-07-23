@@ -1,6 +1,16 @@
 # AS 9618 Chapter 2: Communication
+> **Communication｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-## How to Use This Chapter
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
+> **Target:** Cambridge International AS & A Level Computer Science 9618  
+> **Chapter:** 2 Communication  
+> **Syllabus section:** 2.1 Networks including the internet  
+> **Main audience:** Students  
+> **Style:** 中文解释 + English mark scheme keywords  
+
+---
+
+## 0. How to Use This Sheet
 
 Chapter 2 不应该只背很多网络名词。2024 和 2025 的 Paper 1 更喜欢把网络知识放进一个具体场景里考：公司 LAN、WAN、smartphone 连接、video conference、star topology diagram、IP address 填空、switch/router/modem 用途等。
 
@@ -36,7 +46,46 @@ F --> G[Bit streaming<br/>real-time / on-demand<br/>buffer / bitrate]
 
 ---
 
-## 2. One-Page Mind Map
+## 2. Content Update Decision
+
+### 2.1 Keep and Strengthen
+
+| Content | Decision | Reason |
+| --- | --- | --- |
+| LAN vs WAN | Strengthen | 2025 asked direct comparison in a company WAN scenario |
+| Star topology | Strengthen | 2025 asked students to draw a star topology with labelled devices |
+| Bus / star / mesh | Strengthen | 2024 tested topology identification from statements |
+| Switch role | Strengthen | 2025 mark scheme rewards MAC address + direct forwarding language |
+| IP address formats | Strengthen | 2024/2025 both reward exact IPv4/IPv6 facts |
+| Public/private/static/dynamic IP | Strengthen | Common short-answer and fill-in area |
+| Bit streaming | Strengthen | 2025 tested real-time bit streaming, buffer and compression together |
+| Modem / dedicated line | Strengthen | 2025 tested their use during internet transmission |
+| Cell phone network | Strengthen | 2025 tested data transmission using smartphone/cell network |
+| Router | Keep strong | 2024 tested public IPv6 address and internet connection |
+
+### 2.2 Downweight
+
+| Content | Why downweight |
+| --- | --- |
+| Very detailed OSI/TCP/IP layers | Not required in AS Chapter 2 syllabus at this depth |
+| Deep cryptography for networks | Mainly Chapter 6/17, not Chapter 2 core |
+| Bluetooth details beyond simple comparison | Not strongly represented in 2024/2025 Paper 1 Chapter 2 questions |
+| Excessive Ethernet frame structure | Syllabus asks Ethernet and CSMA/CD concept, not low-level frame memorisation |
+| MAN/PAN/CAN network types | Not central to current 9618 Chapter 2 syllabus wording |
+| Detailed DNS record types | Students need DNS role/process, not A/AAAA/CNAME detail |
+
+### 2.3 Delete from student revision focus
+
+| Delete / avoid | Reason |
+| --- | --- |
+| Vendor-specific router/switch brand features | Brand names do not receive marks |
+| IPv6 subnet planning in professional CIDR depth | Too far beyond AS Paper 1 expectation |
+| Long historical development of internet | Low exam value |
+| WiFi standards such as 802.11ax speed tables | Too detailed and likely not mark-bearing |
+
+---
+
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -97,9 +146,9 @@ mindmap
 
 ---
 
-## 3. 2.1 Networks including the Internet
+## 4. 2.1 Networks including the Internet
 
-### 3.1 Purpose and benefits of networking devices
+### 4.1 Purpose and benefits of networking devices
 
 #### Core idea
 
@@ -132,9 +181,9 @@ A network connects computers and devices so that they can communicate and share 
 
 ---
 
-## 4. LAN and WAN
+## 5. LAN and WAN
 
-### 4.1 LAN — Local Area Network
+### 5.1 LAN — Local Area Network
 
 #### Definition
 
@@ -148,7 +197,7 @@ A network connects computers and devices so that they can communicate and share 
 + Can use wired Ethernet or wireless WiFi
 + Usually easier to manage than a WAN
 
-### 4.2 WAN — Wide Area Network
+### 5.2 WAN — Wide Area Network
 
 #### Definition
 
@@ -162,7 +211,7 @@ A network connects computers and devices so that they can communicate and share 
 + May use the internet, cell phone network, satellite, fibre links, dedicated lines
 + More complex and more expensive to manage
 
-### 4.3 LAN vs WAN comparison
+### 5.3 LAN vs WAN comparison
 
 | Point | LAN | WAN |
 | --- | --- | --- |
@@ -187,9 +236,9 @@ A network connects computers and devices so that they can communicate and share 
 
 ---
 
-## 5. Network Models
+## 6. Network Models
 
-### 5.1 Client-server model
+### 6.1 Client-server model
 
 #### Meaning
 
@@ -227,7 +276,7 @@ A **server** provides services or resources. A **client** requests and uses thos
 
 ---
 
-### 5.2 Peer-to-peer model
+### 6.2 Peer-to-peer model
 
 #### Meaning
 
@@ -259,7 +308,7 @@ In a **peer-to-peer network**, each computer can act as both client and server. 
 
 ---
 
-### 5.3 Thin client and thick client
+### 6.3 Thin client and thick client
 
 #### Thin client
 
@@ -298,9 +347,9 @@ A **thick client** can process and store more data locally.
 
 ---
 
-## 6. Network Topologies
+## 7. Network Topologies
 
-### 6.1 Bus topology
+### 7.1 Bus topology
 
 #### Structure
 
@@ -327,7 +376,7 @@ E[Computer C] --- B
 + Performance decreases with more devices
 + Harder to isolate faults
 
-#### 2025-style clue
+#### 2024-style clue
 
 > all devices connect to a central cable  
 > most likely to lose data through collisions
@@ -336,7 +385,7 @@ These describe **bus topology**.
 
 ---
 
-### 6.2 Star topology
+### 7.2 Star topology
 
 #### Structure
 
@@ -367,7 +416,7 @@ S --- R[Router / modem<br/>Internet access]
 + More cable than bus
 + Switch adds cost
 
-#### 2026 drawing exam tip
+#### 2025 drawing exam tip
 
 When asked to draw a star topology:
 
@@ -379,7 +428,7 @@ When asked to draw a star topology:
 
 ---
 
-### 6.3 Mesh topology
+### 7.3 Mesh topology
 
 #### Structure
 
@@ -408,7 +457,7 @@ C --- D
 + Complex to install/manage
 + More cabling/wireless links required
 
-#### 2025-style clue
+#### 2024-style clue
 
 > multiple paths for packets  
 > robust against damage because if any line fails, the rest of the network retains functionality
@@ -417,7 +466,7 @@ These describe **mesh topology**.
 
 ---
 
-### 6.4 Hybrid topology
+### 7.4 Hybrid topology
 
 A **hybrid topology** combines two or more topologies, such as star-bus or star-mesh.
 
@@ -427,7 +476,7 @@ Large real networks often use hybrid layouts because one topology may not fit al
 
 ---
 
-### 6.5 Topology choice scenario bank
+### 7.5 Topology choice scenario bank
 
 | Scenario | Best topology | Why |
 | --- | --- | --- |
@@ -438,9 +487,9 @@ Large real networks often use hybrid layouts because one topology may not fit al
 
 ---
 
-## 7. Packets and Transmission between Hosts
+## 8. Packets and Transmission between Hosts
 
-### 7.1 Packet basics
+### 8.1 Packet basics
 
 Data is split into **packets** before being transmitted across a network.
 
@@ -452,14 +501,14 @@ Each packet commonly contains:
 + payload/data
 + error checking data
 
-### 7.2 Why packets are used
+### 8.2 Why packets are used
 
 + Large data can be split into manageable parts
 + Different packets can take different routes
 + Lost/corrupt packets can be resent
 + Network bandwidth can be shared by many users
 
-### 7.3 Packets in topologies
+### 8.3 Packets in topologies
 
 | Topology | Packet route idea |
 | --- | --- |
@@ -473,20 +522,20 @@ Each packet commonly contains:
 
 ---
 
-## 8. Cloud Computing
+## 9. Cloud Computing
 
-### 8.1 Meaning
+### 9.1 Meaning
 
 Cloud computing means using remote servers over a network/internet to store, process or manage data instead of relying only on local hardware.
 
-### 8.2 Public cloud vs private cloud
+### 9.2 Public cloud vs private cloud
 
 | Type | Meaning | Example scenario |
 | --- | --- | --- |
 | Public cloud | shared cloud infrastructure provided by a third-party provider | small business uses online storage |
 | Private cloud | cloud infrastructure dedicated to one organisation | bank stores sensitive internal data |
 
-### 8.3 Benefits
+### 9.3 Benefits
 
 + Data can be accessed from different locations
 + Less need to buy local servers
@@ -495,7 +544,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 + Easier collaboration
 + Backup/disaster recovery can be improved
 
-### 8.4 Drawbacks
+### 9.4 Drawbacks
 
 + Requires reliable internet connection
 + Ongoing subscription cost
@@ -510,9 +559,9 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ---
 
-## 9. Wired and Wireless Networks
+## 10. Wired and Wireless Networks
 
-### 9.1 Wired networks
+### 10.1 Wired networks
 
 #### Copper cable
 
@@ -533,7 +582,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 | Cost | more expensive and harder to install |
 | Security | harder to tap without detection |
 
-### 9.2 Wireless networks
+### 10.2 Wireless networks
 
 #### Radio waves / WiFi
 
@@ -556,7 +605,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 + Higher latency because signal travels long distances
 + Can be affected by weather
 
-### 9.3 Wired vs wireless comparison
+### 10.3 Wired vs wireless comparison
 
 | Point | Wired | Wireless |
 | --- | --- | --- |
@@ -572,9 +621,9 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ---
 
-## 10. Cell Phone Network
+## 11. Cell Phone Network
 
-### 10.1 2025 Paper 1 focus
+### 11.1 2025 Paper 1 focus
 
 2025 tested smartphone access to a company WAN using the cell phone network.
 
@@ -601,15 +650,15 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ---
 
-## 11. LAN Hardware
+## 12. LAN Hardware
 
-### 11.1 Switch
+### 12.1 Switch
 
 #### Role
 
 A switch connects devices in a LAN and forwards frames/packets to the correct device.
 
-#### 2026 mark scheme wording
+#### 2025 mark scheme wording
 
 + stores MAC addresses of connected devices
 + receives packets/frames from devices
@@ -623,7 +672,7 @@ A switch connects devices in a LAN and forwards frames/packets to the correct de
 
 ---
 
-### 11.2 Router
+### 12.2 Router
 
 #### Role
 
@@ -638,19 +687,19 @@ A router connects different networks and forwards packets between networks.
 + Usually has a public IP address on the internet side
 + Can use NAT to allow private LAN devices to access internet
 
-#### 2025-style answer
+#### 2024-style answer
 
 > The router has a public IP address so that it can be identified, accessed and communicated with by other devices on the internet.
 
 ---
 
-### 11.3 Modem
+### 12.3 Modem
 
 #### Role
 
 A modem converts signals so data can be sent over transmission media such as phone lines.
 
-#### 2026 mark scheme wording
+#### 2025 mark scheme wording
 
 > Converts digital data into analogue for transmission down phone lines, or converts analogue data into digital after transmission.
 
@@ -663,7 +712,7 @@ Modern network devices often combine router and modem in one box, but in answers
 
 ---
 
-### 11.4 Dedicated lines
+### 12.4 Dedicated lines
 
 A dedicated line is a private/direct connection between sites.
 
@@ -680,7 +729,7 @@ A dedicated line is a private/direct connection between sites.
 
 ---
 
-### 11.5 Other LAN hardware
+### 12.5 Other LAN hardware
 
 | Hardware | Role |
 | --- | --- |
@@ -694,17 +743,17 @@ A dedicated line is a private/direct connection between sites.
 
 ---
 
-## 12. Ethernet and CSMA/CD
+## 13. Ethernet and CSMA/CD
 
-### 12.1 Ethernet
+### 13.1 Ethernet
 
 Ethernet is a set of standards/protocols used for wired LAN communication.
 
-### 12.2 Collision
+### 13.2 Collision
 
 A collision happens when two devices transmit on the same shared medium at the same time, causing data to interfere.
 
-### 12.3 CSMA/CD
+### 13.3 CSMA/CD
 
 **CSMA/CD** = Carrier Sense Multiple Access / Collision Detection
 
@@ -721,19 +770,19 @@ A collision happens when two devices transmit on the same shared medium at the s
 
 > A device checks whether the medium is free before transmitting. If a collision is detected, devices stop transmitting, wait for a random time and retransmit.
 
-#### Revision focus
+#### Downweight warning
 
 Do not spend too long on Ethernet frame fields unless your course specifically requires it. For AS Paper 1, the high-value answer is usually about **checking medium, detecting collision, random wait, retransmission**.
 
 ---
 
-## 13. Bit Streaming
+## 14. Bit Streaming
 
-### 13.1 Meaning
+### 14.1 Meaning
 
 Bit streaming is transmitting media as a continuous stream of bits so the user can start watching/listening before the whole file has downloaded.
 
-### 13.2 Real-time bit streaming
+### 14.2 Real-time bit streaming
 
 Used for live events, video calls and live conferences.
 
@@ -746,11 +795,11 @@ Used for live events, video calls and live conferences.
 + User views/listens from the buffer
 + Delay must be small because it is live
 
-#### 2026 answer
+#### 2025 answer
 
 > The video is transmitted continuously as a series of bits. The video is uploaded to a media server and downloaded by users. The data is sent to a buffer on the user’s device and the user views the stream from the buffer.
 
-### 13.3 On-demand bit streaming
+### 14.3 On-demand bit streaming
 
 Used for videos/music available at any time.
 
@@ -761,7 +810,7 @@ Used for videos/music available at any time.
 + Less time pressure than live streaming
 + Buffering can occur before playback
 
-### 13.4 Buffer in streaming
+### 14.4 Buffer in streaming
 
 A buffer temporarily stores data before playback.
 
@@ -772,7 +821,7 @@ A buffer temporarily stores data before playback.
 + Buffer reduces playback interruption
 + Allows smooth streaming
 
-### 13.5 Importance of bit rate and broadband speed
+### 14.5 Importance of bit rate and broadband speed
 
 | Term | Meaning | Effect |
 | --- | --- | --- |
@@ -780,7 +829,7 @@ A buffer temporarily stores data before playback.
 | Broadband speed | rate at which user can receive data | must be high enough for smooth streaming |
 | Buffering | waiting while enough data is collected | happens when speed is too low/unstable |
 
-### 13.6 Compression and real-time streaming
+### 14.6 Compression and real-time streaming
 
 2025 tested compression in video conferencing.
 
@@ -808,9 +857,9 @@ For real-time video streaming, **lossy** is usually more appropriate.
 
 ---
 
-## 14. WWW, Internet, URL and DNS
+## 15. WWW, Internet, URL and DNS
 
-### 14.1 Internet vs World Wide Web
+### 15.1 Internet vs World Wide Web
 
 | Term | Meaning |
 | --- | --- |
@@ -830,7 +879,7 @@ For real-time video streaming, **lossy** is usually more appropriate.
 
 ---
 
-### 14.2 Hardware supporting the internet
+### 15.2 Hardware supporting the internet
 
 | Hardware / infrastructure | Use |
 | --- | --- |
@@ -844,7 +893,7 @@ For real-time video streaming, **lossy** is usually more appropriate.
 
 ---
 
-### 14.3 IP addresses
+### 15.3 IP addresses
 
 An IP address identifies a device/interface on a network so packets can be routed.
 
@@ -879,14 +928,14 @@ An IP address identifies a device/interface on a network so packets can be route
 
 ---
 
-### 14.4 Public vs private IP address
+### 15.4 Public vs private IP address
 
 | Type | Meaning | Security implication |
 | --- | --- | --- |
 | Public IP | reachable/identifiable on the internet | exposed to internet, needs protection |
 | Private IP | used inside a LAN, assigned by router | not directly accessible from internet |
 
-#### 2025-style answer
+#### 2024-style answer
 
 > A public IP address allows the router to be visible and accessible by other devices on the internet.
 
@@ -896,7 +945,7 @@ An IP address identifies a device/interface on a network so packets can be route
 
 ---
 
-### 14.5 Static vs dynamic IP address
+### 15.5 Static vs dynamic IP address
 
 | Type | Meaning | Use |
 | --- | --- | --- |
@@ -909,7 +958,7 @@ An IP address identifies a device/interface on a network so packets can be route
 
 ---
 
-### 14.6 Subnetting
+### 15.6 Subnetting
 
 Subnetting divides a network into smaller subnetworks.
 
@@ -927,7 +976,7 @@ Subnetting divides a network into smaller subnetworks.
 
 ---
 
-### 14.7 URL
+### 15.7 URL
 
 A **URL** identifies the location of a resource on the World Wide Web.
 
@@ -943,7 +992,7 @@ https://www.example.com/revision/chapter2.html
 | `www.example.com` | domain name / host |
 | `/revision/chapter2.html` | path/resource |
 
-### 14.8 DNS
+### 15.8 DNS
 
 DNS = **Domain Name Service / Domain Name System**
 
@@ -966,7 +1015,7 @@ DNS translates a human-readable domain name into an IP address.
 
 ---
 
-## 15. Mark Scheme Keywords
+## 16. Mark Scheme Keywords
 
 | Topic | Keywords / phrases to memorise |
 | --- | --- |
@@ -996,7 +1045,7 @@ DNS translates a human-readable domain name into an IP address.
 
 ---
 
-## 16. Common Mistakes 易错表
+## 17. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct exam wording |
 | --- | --- | --- |
@@ -1014,49 +1063,49 @@ DNS translates a human-readable domain name into an IP address.
 
 ---
 
-## 17. Scenario Answer Bank
+## 18. Scenario Answer Bank
 
-### 17.1 Company with multiple city offices
+### 18.1 Company with multiple city offices
 
 > A WAN is suitable because the company has multiple sites in different cities. A WAN covers a large geographical area and can connect LANs at different sites. It may use external transmission media or the internet/cell phone network.
 
-### 17.2 Office LAN with computers, printers and server
+### 18.2 Office LAN with computers, printers and server
 
 > A star topology is suitable because all devices can connect directly to a central switch. If one cable fails, only that device is affected. The switch can forward data directly to the intended recipient.
 
-### 17.3 Critical network where link failure cannot stop communication
+### 18.3 Critical network where link failure cannot stop communication
 
 > A mesh topology is suitable because there are multiple paths for packets. If one link fails, packets can be routed through another path, so the network is more robust.
 
-### 17.4 Smartphone driver connecting to company WAN
+### 18.4 Smartphone driver connecting to company WAN
 
 > The phone communicates wirelessly with a cell tower using low-power radio signals. The land is divided into cells and each cell has a tower/antenna that receives and transmits data to the wider network.
 
-### 17.5 Video conference using real-time streaming
+### 18.5 Video conference using real-time streaming
 
 > Real-time bit streaming sends video continuously as a series of bits. The stream is uploaded to a media server and users download it. Data is stored in a buffer so the user can view the stream smoothly even if transmission speed varies.
 
-### 17.6 Why compress video conference data?
+### 18.6 Why compress video conference data?
 
 > Video is data-intensive, so compression reduces the file size/data rate. This reduces bandwidth use and buffering, allowing people with lower bandwidth to take part and reducing delay in the conversation.
 
-### 17.7 Why use lossy compression for real-time streaming?
+### 18.7 Why use lossy compression for real-time streaming?
 
 > Lossy compression is suitable because it reduces file size more than lossless, so less bandwidth is needed and buffering is reduced. Some data can be removed without noticeably affecting the user experience.
 
-### 17.8 Router has public IP address
+### 18.8 Router has public IP address
 
 > The router needs a public IP address so that it can be identified and accessed by other devices on the internet. It allows packets from the internet to be routed to the correct network.
 
-### 17.9 DNS used when entering a URL
+### 18.9 DNS used when entering a URL
 
 > The user enters a URL containing a domain name. DNS translates the domain name into its IP address so the browser can contact the correct web server and request the resource.
 
 ---
 
-## 18. Process Diagrams
+## 19. Process Diagrams
 
-### 18.1 Real-time bit streaming
+### 19.1 Real-time bit streaming
 
 ```mermaid
 flowchart LR
@@ -1067,7 +1116,7 @@ D --> E[Buffer on user's device]
 E --> F[Video played from buffer]
 ```
 
-### 18.2 DNS lookup
+### 19.2 DNS lookup
 
 ```mermaid
 sequenceDiagram
@@ -1082,7 +1131,7 @@ sequenceDiagram
     Web-->>Browser: Send web page / resource
 ```
 
-### 18.3 Packet transmission in a star LAN
+### 19.3 Packet transmission in a star LAN
 
 ```mermaid
 flowchart LR
@@ -1096,7 +1145,7 @@ R --> I[Internet]
 
 ---
 
-## 19. 10 Marks Quick Check
+## 20. 10 Marks Quick Check
 
 ### Questions
 
@@ -1126,7 +1175,7 @@ R --> I[Internet]
 
 ---
 
-## 20. 20 Marks Exam-Style Practice with Mark Scheme
+## 21. 20 Marks Exam-Style Practice with Mark Scheme
 
 ### Question 1 — WAN and cell phone network [6]
 

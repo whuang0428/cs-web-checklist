@@ -1,6 +1,16 @@
 # A2 9618 Chapter 13: Data Representation
+> **Data Representation｜Syllabus-Aligned Paper 3 Revision Sheet**
 
-## How to Use This Chapter
+> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
+> **Target:** Cambridge International AS & A Level Computer Science 9618 A2  
+> **Chapter:** 13 Data Representation  
+> **Main audience:** Students  
+> **Style:** 中文解释 + English mark scheme keywords / pseudocode phrases  
+> **Important update:** 本版不再使用 2023 past paper 作为趋势依据；趋势判断以 **2024 Paper 3 + 2025 May/June and Oct/Nov Paper 3** 为主。
+
+---
+
+## 0. How to Use This Sheet
 
 Chapter 13 不是普通的“背定义”章节。2024 和 2025 的 Paper 3 很明显喜欢把本章拆成三种题型：
 
@@ -38,7 +48,44 @@ E --> F[Exam calculations<br/>denary to FP / FP to denary]
 
 ---
 
-## 2. One-Page Mind Map
+## 2. Content Update Decision
+
+### 2.1 Keep and Strengthen
+
+| Kept / strengthened content | Why |
+| --- | --- |
+| `TYPE ... ENDTYPE` record declaration | Appears directly in 2024 and 2025 Paper 3 |
+| Enumerated type declaration | Tested repeatedly through vehicle/gate/video-format style questions |
+| Set declaration with `SET OF` and `DEFINE` | 2024/2025 style asks both description and pseudocode |
+| Composite vs non-composite definitions | Repeated short-answer definition topic |
+| Sequential access and serial/sequential file explanation | 2024 Paper 3 tested exact wording |
+| Hashing + collision resolution | 2024 Paper 3 tested hashing in file access; still syllabus core |
+| Floating-point normalisation | Most stable high-frequency calculation topic |
+| Negative floating-point using two's complement | High-risk calculation area; many students lose working marks |
+| Precision / range / rounding / overflow / underflow | Common explanation marks around floating-point representation |
+
+### 2.2 Downweight
+
+| Downweighted content | Why |
+| --- | --- |
+| Long general explanation of why all data is binary | More AS-level; A2 questions expect specific data structure / file / floating-point answers |
+| Too much theory on text files vs binary files | Usually not enough marks to justify very deep coverage |
+| Detailed alternative hashing algorithms not named in syllabus | Students mainly need hashing, collisions, linear search/probing, overflow area, chaining |
+| Excessive mathematical proof of floating-point precision | Cambridge expects practical explanation: fixed number of bits, truncation, rounding error |
+
+### 2.3 Remove / Avoid
+
+| Avoid | Reason |
+| --- | --- |
+| Saying a record is always a built-in type | In this syllabus record is treated as user-defined composite type |
+| Saying set elements are ordered | Mark scheme expects unordered elements |
+| Saying an enumerated value is a string | Enumerated values are identifiers / listed values, not quoted strings |
+| Saying random access means “randomly chosen” | It means direct access using a relationship between key and storage location |
+| Saying more exponent bits improves precision | More exponent bits improves range; more mantissa bits improves precision |
+
+---
+
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -83,9 +130,9 @@ mindmap
 
 ---
 
-## 3. 13.1 User-Defined Data Types
+## 4. 13.1 User-Defined Data Types
 
-### 3.1 Why user-defined data types are necessary
+### 4.1 Why user-defined data types are necessary
 
 #### Mark scheme answer
 > User-defined data types allow the programmer to create data types that match the needs of a specific problem. They make the program easier to understand, less error-prone and allow related data items to be grouped together under one identifier.
@@ -105,7 +152,7 @@ Too vague. You need to explain **why** a built-in type is not enough.
 
 ---
 
-### 3.2 Composite vs non-composite data types
+### 4.2 Composite vs non-composite data types
 
 | Type | Meaning | Examples |
 | --- | --- | --- |
@@ -124,7 +171,7 @@ Too vague. You need to explain **why** a built-in type is not enough.
 
 ---
 
-### 3.3 Enumerated type
+### 4.3 Enumerated type
 
 #### Definition
 > An enumerated data type is a user-defined non-composite data type with a fixed list of possible values.
@@ -160,7 +207,7 @@ DECLARE Gate : GateID
 
 ---
 
-### 3.4 Pointer type
+### 4.4 Pointer type
 
 #### Definition
 > A pointer data type is a user-defined non-composite data type that stores a memory address and indicates the type of data stored at that location.
@@ -185,7 +232,7 @@ DECLARE CurrentName : TNamePointer
 
 ---
 
-### 3.5 Record type
+### 4.5 Record type
 
 #### Definition
 > A record is a user-defined composite data type that contains a fixed number of fields, where the fields may be of different data types.
@@ -243,7 +290,7 @@ Flight1.Airline ← "Cambridge Airways"
 
 ---
 
-### 3.6 Set type
+### 4.6 Set type
 
 #### Definition
 > A set is a user-defined composite data type that contains an unordered list of elements. Set theory operations such as union and intersection can be applied. All elements are of the same data type.
@@ -277,9 +324,9 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ---
 
-## 4. 13.2 File Organisation and Access
+## 5. 13.2 File Organisation and Access
 
-### 4.1 File organisation overview
+### 5.1 File organisation overview
 
 | File organisation | How records are stored | Common access method | Good for |
 | --- | --- | --- | --- |
@@ -289,7 +336,7 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ---
 
-### 4.2 Serial file organisation
+### 5.2 Serial file organisation
 
 #### Mark scheme answer
 > In a serial file, records are stored in the order they are added, often chronological order. There is no ordering by key field, so records must be checked one after another until the required record is found or all records have been checked.
@@ -307,7 +354,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ---
 
-### 4.3 Sequential file organisation
+### 5.3 Sequential file organisation
 
 #### Mark scheme answer
 > In a sequential file, records are stored in order of a key field. The key field is compared as the file is searched, and the search can stop when the required key is found or when the current key is greater than the target key.
@@ -328,7 +375,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ---
 
-### 4.4 Random file organisation
+### 5.4 Random file organisation
 
 #### Mark scheme answer
 > In a random file, records are stored in no particular sequence. There is a relationship between the record key and its location in the file, often using a hashing algorithm, so records can be accessed directly.
@@ -341,7 +388,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ---
 
-### 4.5 Sequential access
+### 5.5 Sequential access
 
 #### Mark scheme answer
 > Sequential access searches records one after another from the physical start of the file until the record is found or the end of file is reached.
@@ -360,7 +407,7 @@ CLOSEFILE "Customer.dat"
 
 ---
 
-### 4.6 Direct access
+### 5.6 Direct access
 
 #### Mark scheme answer
 > Direct access allows a record to be accessed without reading every previous record. A calculation or index can be used to identify the likely record location.
@@ -375,7 +422,7 @@ GETRECORD "AccountRecords.dat", Customer
 
 ---
 
-### 4.7 Hashing algorithm
+### 5.7 Hashing algorithm
 
 #### Definition
 > A hashing algorithm takes a record key as input and calculates the storage location / address for that record in the file.
@@ -394,7 +441,7 @@ Location ← AccountNumber MOD 1000
 
 ---
 
-### 4.8 Collision and collision resolution
+### 5.8 Collision and collision resolution
 
 #### Definition
 > A collision occurs when two different record keys are processed by the hashing algorithm and produce the same hash value / storage location.
@@ -415,9 +462,9 @@ Location ← AccountNumber MOD 1000
 
 ---
 
-## 5. 13.3 Floating-Point Numbers
+## 6. 13.3 Floating-Point Numbers
 
-### 5.1 Format of floating-point representation
+### 6.1 Format of floating-point representation
 
 A binary floating-point number is stored using:
 
@@ -440,7 +487,7 @@ Example mantissa:
 
 ---
 
-### 5.2 Normalisation
+### 6.2 Normalisation
 
 #### Rule
 A normalised mantissa uses the available bits efficiently.
@@ -462,7 +509,7 @@ A normalised mantissa uses the available bits efficiently.
 
 ---
 
-### 5.3 Positive denary to floating-point
+### 6.3 Positive denary to floating-point
 
 #### Example: +54.8125 using 12-bit mantissa and 4-bit exponent
 
@@ -492,7 +539,7 @@ If the question gives 10 mantissa bits, write 10 bits. If it gives 12 mantissa b
 
 ---
 
-### 5.4 Negative denary to floating-point
+### 6.4 Negative denary to floating-point
 
 #### Method
 1. Convert the positive version to binary.  
@@ -536,7 +583,7 @@ Exponent: 000101
 
 ---
 
-### 5.5 Floating-point to denary
+### 6.5 Floating-point to denary
 
 #### Method
 1. Read the exponent. If MSB is 1, convert from two's complement.  
@@ -575,7 +622,7 @@ Convert as two's complement:
 
 ---
 
-### 5.6 Precision, range, rounding, overflow and underflow
+### 6.6 Precision, range, rounding, overflow and underflow
 
 | Concept | Meaning | Exam phrase |
 | --- | --- | --- |
@@ -598,9 +645,9 @@ Convert as two's complement:
 
 ---
 
-## 6. Mark Scheme Keywords
+## 7. Mark Scheme Keywords
 
-### 6.1 User-defined data types
+### 7.1 User-defined data types
 + **user-defined data type**
 + **non-composite**
 + **composite**
@@ -615,7 +662,7 @@ Convert as two's complement:
 + **set is unordered**
 + **set theory operations**
 
-### 6.2 File organisation and access
+### 7.2 File organisation and access
 + **records stored in chronological order**
 + **records stored in order of a key field**
 + **sequential access searches records one after another**
@@ -630,7 +677,7 @@ Convert as two's complement:
 + **overflow area**
 + **chaining**
 
-### 6.3 Floating-point
+### 7.3 Floating-point
 + **mantissa**
 + **exponent**
 + **two's complement**
@@ -646,7 +693,7 @@ Convert as two's complement:
 
 ---
 
-## 7. Common Mistakes
+## 8. Common Mistakes
 
 | Topic | Common mistake | Correction |
 | --- | --- | --- |
@@ -665,12 +712,12 @@ Convert as two's complement:
 
 ---
 
-## 8. Scenario Answer Bank
+## 9. Scenario Answer Bank
 
-### 8.1 Describe a record data type
+### 9.1 Describe a record data type
 > A record is a user-defined composite data type. It contains a fixed number of fields, and the fields can be of different data types. The fields are grouped under one identifier.
 
-### 8.2 Declare a record
+### 9.2 Declare a record
 ```text
 TYPE Order
     DECLARE AccountNumber : STRING
@@ -680,35 +727,35 @@ TYPE Order
 ENDTYPE
 ```
 
-### 8.3 Explain why a field should be enumerated
+### 9.3 Explain why a field should be enumerated
 > This field has a fixed range of possible values, so an enumerated type would restrict the values to valid options and make the program less error-prone.
 
-### 8.4 Describe a set
+### 9.4 Describe a set
 > A set is a user-defined composite data type containing unordered elements of the same data type. Set theory operations such as union, intersection and difference can be applied.
 
-### 8.5 Describe sequential access
+### 9.5 Describe sequential access
 > Sequential access searches records one after another from the physical start of the file until the required record is found or the end of file is reached.
 
-### 8.6 Explain serial vs sequential file search
+### 9.6 Explain serial vs sequential file search
 > In a serial file, records are stored in chronological order, so every record may need to be checked. In a sequential file, records are stored in order of a key field, so the key can be compared and the search can stop when the current key exceeds the target key.
 
-### 8.7 Explain hashing
+### 9.7 Explain hashing
 > A hashing algorithm takes a record key and calculates a hash value that gives the storage location of the record. It is used to provide direct access to records in a random or sequential file.
 
-### 8.8 Explain collision resolution
+### 9.8 Explain collision resolution
 > A collision occurs when two record keys generate the same hash value. It can be resolved by linear probing, by searching an overflow area, or by using a chain of records from the hashed location.
 
-### 8.9 Explain precision and range
+### 9.9 Explain precision and range
 > Increasing the number of bits in the mantissa increases precision. Increasing the number of bits in the exponent increases the range of numbers that can be represented.
 
-### 8.10 Explain rounding error
+### 9.10 Explain rounding error
 > Some denary fractions cannot be represented exactly in binary. Because the number of bits is fixed, the value may be rounded or truncated, causing a loss of precision.
 
 ---
 
-## 9. Process Diagrams
+## 10. Process Diagrams
 
-### 9.1 Choosing a user-defined type
+### 10.1 Choosing a user-defined type
 
 ```mermaid
 flowchart TD
@@ -720,7 +767,7 @@ B -->|Unordered same-type collection| F[Set]
 B -->|Object with attributes and methods| G[Class/Object]
 ```
 
-### 9.2 Floating-point conversion process
+### 10.2 Floating-point conversion process
 
 ```mermaid
 flowchart TD
@@ -736,7 +783,7 @@ G --> H[Fill mantissa and exponent boxes]
 
 ---
 
-## 10. 10 Marks Quick Check
+## 11. 10 Marks Quick Check
 
 ### Questions
 
@@ -760,7 +807,7 @@ G --> H[Fill mantissa and exponent boxes]
 
 ---
 
-## 11. 20 Marks Exam-Style Practice
+## 12. 20 Marks Exam-Style Practice
 
 ### Question 1: User-defined data types [8]
 

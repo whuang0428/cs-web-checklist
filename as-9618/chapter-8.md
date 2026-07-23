@@ -1,6 +1,17 @@
 # AS 9618 Chapter 8: Database
+> **Databases｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-## How to Use This Chapter
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
+> **Target:** Cambridge International AS & A Level Computer Science 9618  
+> **Chapter:** 8 Databases  
+> **Main audience:** Students  
+> **Style:** 中文解释 + English mark scheme keywords  
+> **Docsify:** ready for static webpage display  
+> **Important:** 本章只覆盖 AS Paper 1 理论部分的数据库要求，不加入 A2 / 大学数据库中过深内容。
+
+---
+
+## 0. How to Use This Sheet
 
 本章不是单纯背定义。2024 和 2025 的题目趋势非常明显：
 
@@ -40,7 +51,47 @@ E --> F[SQL<br/>DDL + DML]
 
 ---
 
-## 2. Syllabus Scope
+## 2. Content Update Decision
+
+### 2.1 Keep and Strengthen
+
+| Kept content | Reason |
+| --- | --- |
+| file-based approach limitations | 2024 database question starts from file-based approach |
+| relational database benefits | frequently asked as “explain how relational database addresses limitation” |
+| primary key / foreign key / candidate key | repeated across 2024 and 2025 |
+| referential integrity | direct definition question and useful in relationship explanation |
+| E-R diagram relationships | often tested with given tables |
+| many-to-many linking table | common when two entities can link to many of each other |
+| SQL `CREATE TABLE` | high-value 4–5 mark DDL question |
+| SQL aggregate functions | `SUM`, `COUNT`, `AVG` appear in Paper 1 database scripts |
+| `WHERE`, `GROUP BY`, `INNER JOIN` | practical mark scheme phrases |
+| normalisation to 3NF | syllabus requirement and scenario question topic |
+| DBMS features | can appear as explain/describe questions |
+
+### 2.2 Downweight
+
+| Downweighted content | Why |
+| --- | --- |
+| very detailed database indexing | not central in AS 9618 Paper 1 |
+| transaction processing / ACID | beyond AS Chapter 8 expectation |
+| SQL subqueries | not required by syllabus subset |
+| triggers, stored procedures, views in depth | may confuse students and not common for marks |
+| entity-attribute modelling theory beyond E-R diagrams | too abstract for Paper 1 |
+| full commercial DBMS architecture | only developer interface and query processor are needed |
+
+### 2.3 Delete / Avoid
+
+| Avoided content | Reason |
+| --- | --- |
+| NoSQL databases | not in AS 9618 Chapter 8 |
+| recursive SQL / window functions | beyond syllabus |
+| advanced normal forms such as BCNF / 4NF / 5NF | not required |
+| brand-specific SQL syntax | Cambridge says no brand names; keep generic SQL |
+
+---
+
+## 3. Syllabus Scope
 
 Chapter 8 contains three syllabus sections:
 
@@ -52,7 +103,7 @@ Chapter 8 contains three syllabus sections:
 
 ---
 
-## 3. One-Page Mind Map
+## 4. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -106,9 +157,9 @@ mindmap
 
 ---
 
-## 4. 8.1 Database Concepts
+## 5. 8.1 Database Concepts
 
-### 4.1 File-based approach
+### 5.1 File-based approach
 
 #### Meaning
 
@@ -129,13 +180,13 @@ A **file-based approach** stores data in separate files, usually created for one
 | Poor security | 权限不好统一控制 | difficult to control access rights |
 | Poor integrity | 不容易统一验证数据正确性 | difficult to maintain data integrity |
 
-#### 2025-style answer
+#### 2024-style answer
 
 > A file-based approach can cause data redundancy because the same customer data may be stored in several files. A relational database reduces redundancy by storing customer data once in a CUSTOMER table and linking it to other tables using a foreign key.
 
 ---
 
-### 4.2 Relational database
+### 5.2 Relational database
 
 #### Definition
 
@@ -160,7 +211,7 @@ relational database 的核心就是 **分表 + 关联**。不是把所有数据�
 
 ---
 
-### 4.3 Primary key
+### 5.3 Primary key
 
 #### Mark scheme answer
 
@@ -183,7 +234,7 @@ CUSTOMER(CustomerID, FirstName, LastName, ContactNumber)
 
 ---
 
-### 4.4 Candidate key
+### 5.4 Candidate key
 
 #### Mark scheme answer
 
@@ -207,7 +258,7 @@ Only one is chosen as the **primary key**, but all three could uniquely identify
 
 ---
 
-### 4.5 Foreign key
+### 5.5 Foreign key
 
 #### Mark scheme answer
 
@@ -241,7 +292,7 @@ Foreign keys in `SALE`:
 
 ---
 
-### 4.6 Referential integrity
+### 5.6 Referential integrity
 
 #### Mark scheme answer
 
@@ -261,7 +312,7 @@ Foreign keys in `SALE`:
 
 ---
 
-### 4.7 Relationships
+### 5.7 Relationships
 
 #### One-to-one
 
@@ -312,7 +363,7 @@ REPAIR_PART(PartID, RepairNumber, Quantity)
 
 ---
 
-### 4.8 E-R diagrams
+### 5.8 E-R diagrams
 
 #### What to show
 
@@ -344,9 +395,9 @@ that usually means it is a **linking table** between `REPAIR` and `PART`.
 
 ---
 
-## 5. Normalisation
+## 6. Normalisation
 
-### 5.1 Why normalise?
+### 6.1 Why normalise?
 
 #### Mark scheme answer
 
@@ -368,7 +419,7 @@ normalisation 就是把“乱的大表”拆成“结构清楚的小表”，减
 
 ---
 
-### 5.2 First Normal Form: 1NF
+### 6.2 First Normal Form: 1NF
 
 #### Rule
 
@@ -399,7 +450,7 @@ Problem: `Subjects` contains a repeating group.
 
 ---
 
-### 5.3 Second Normal Form: 2NF
+### 6.3 Second Normal Form: 2NF
 
 #### Rule
 
@@ -425,7 +476,7 @@ So `ProductName` should be moved to `PRODUCT`.
 
 ---
 
-### 5.4 Third Normal Form: 3NF
+### 6.4 Third Normal Form: 3NF
 
 #### Rule
 
@@ -454,7 +505,7 @@ TUTOR(TutorID, TutorName)
 
 ---
 
-### 5.5 Normalisation quick exam wording
+### 6.5 Normalisation quick exam wording
 
 | Question asks | Best answer structure |
 | --- | --- |
@@ -466,9 +517,9 @@ TUTOR(TutorID, TutorName)
 
 ---
 
-## 6. 8.2 Database Management Systems DBMS
+## 7. 8.2 Database Management Systems DBMS
 
-### 6.1 DBMS definition
+### 7.1 DBMS definition
 
 #### Mark scheme answer
 
@@ -479,7 +530,7 @@ DBMS 就是管理数据库的软件层。它不是数据本身，而是用来创
 
 ---
 
-### 6.2 DBMS features
+### 7.2 DBMS features
 
 | Feature | What it does | Mark scheme phrase |
 | --- | --- | --- |
@@ -495,7 +546,7 @@ DBMS 就是管理数据库的软件层。它不是数据本身，而是用来创
 
 ---
 
-### 6.3 Data dictionary
+### 7.3 Data dictionary
 
 #### Definition
 
@@ -521,7 +572,7 @@ Too vague. It stores **data about data**, not normal user records.
 
 ---
 
-### 6.4 Data integrity in DBMS
+### 7.4 Data integrity in DBMS
 
 DBMS can improve integrity by:
 
@@ -538,7 +589,7 @@ DBMS can improve integrity by:
 
 ---
 
-### 6.5 Data security in DBMS
+### 7.5 Data security in DBMS
 
 DBMS can improve security by:
 
@@ -556,7 +607,7 @@ DBMS can improve security by:
 
 ---
 
-### 6.6 Developer interface
+### 7.6 Developer interface
 
 #### Meaning
 
@@ -568,7 +619,7 @@ A developer interface lets developers create and modify database structures and 
 
 ---
 
-### 6.7 Query processor
+### 7.7 Query processor
 
 #### Meaning
 
@@ -588,9 +639,9 @@ It may:
 
 ---
 
-## 7. 8.3 DDL and DML
+## 8. 8.3 DDL and DML
 
-### 7.1 DDL vs DML
+### 8.1 DDL vs DML
 
 | Type | Full name | Purpose | Examples |
 | --- | --- | --- | --- |
@@ -603,7 +654,7 @@ It may:
 
 ---
 
-### 7.2 SQL data types
+### 8.2 SQL data types
 
 | Data type | Use | Example |
 | --- | --- | --- |
@@ -632,7 +683,7 @@ Contact numbers should not be `INTEGER` because they may start with `0` and are 
 
 ---
 
-### 7.3 SQL DDL: `CREATE TABLE`
+### 8.3 SQL DDL: `CREATE TABLE`
 
 #### General structure
 
@@ -660,7 +711,7 @@ CREATE TABLE REPAIR (
 
 ---
 
-### 7.4 2024-style DDL example: linking table
+### 8.4 2024-style DDL example: linking table
 
 Given:
 
@@ -694,7 +745,7 @@ CREATE TABLE REPAIR_PART (
 
 ---
 
-### 7.5 SQL DML: `SELECT`
+### 8.5 SQL DML: `SELECT`
 
 #### Basic structure
 
@@ -714,7 +765,7 @@ WHERE CustomerID = 'C102';
 
 ---
 
-### 7.6 `SUM`, `COUNT`, `AVG`
+### 8.6 `SUM`, `COUNT`, `AVG`
 
 | Function | Purpose | Example use |
 | --- | --- | --- |
@@ -735,7 +786,7 @@ This is a very common Paper 1 style: **aggregate function + WHERE condition**.
 
 ---
 
-### 7.7 Date conditions
+### 8.7 Date conditions
 
 Different SQL systems format dates slightly differently. In Cambridge answers, focus on logic.
 
@@ -761,7 +812,7 @@ If the field is called `Date`, keep it exactly as shown in the question unless t
 
 ---
 
-### 7.8 `GROUP BY`
+### 8.8 `GROUP BY`
 
 Use `GROUP BY` when the question asks for totals/counts **for each group**.
 
@@ -782,7 +833,7 @@ Usually safer: `COUNT(*)` or `COUNT(PrimaryKey)`.
 
 ---
 
-### 7.9 `INNER JOIN`
+### 8.9 `INNER JOIN`
 
 Use `INNER JOIN` when data is needed from two tables.
 
@@ -809,7 +860,7 @@ Both express the same basic relationship.
 
 ---
 
-### 7.10 DML maintenance commands
+### 8.10 DML maintenance commands
 
 #### `INSERT INTO`
 
@@ -845,9 +896,9 @@ unless you want to delete every row.
 
 ---
 
-## 8. Mark Scheme Keywords
+## 9. Mark Scheme Keywords
 
-### 8.1 Database concept keywords
+### 9.1 Database concept keywords
 
 | Concept | Must-have keywords |
 | --- | --- |
@@ -869,7 +920,7 @@ unless you want to delete every row.
 | Query processor | processes / optimises / executes SQL |
 | Developer interface | allows developer to write SQL commands |
 
-### 8.2 SQL keywords
+### 9.2 SQL keywords
 
 | SQL task | Keywords to include |
 | --- | --- |
@@ -890,7 +941,7 @@ unless you want to delete every row.
 
 ---
 
-## 9. Common Mistakes 易错表
+## 10. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -909,7 +960,7 @@ unless you want to delete every row.
 
 ---
 
-## 10. Scenario Answer Bank 场景迁移答题模板
+## 11. Scenario Answer Bank 场景迁移答题模板
 
 ### Scenario 1: File-based approach limitation
 
@@ -1020,7 +1071,7 @@ Describe the purpose of a data dictionary.
 
 ---
 
-## 11. Mermaid Process Diagram: From Scenario to SQL
+## 12. Mermaid Process Diagram: From Scenario to SQL
 
 ```mermaid
 flowchart TD
@@ -1039,7 +1090,7 @@ J --> K[Check field names, types, conditions]
 
 ---
 
-## 12. 10 Marks Quick Check
+## 13. 10 Marks Quick Check
 
 ### Questions
 
@@ -1069,7 +1120,7 @@ J --> K[Check field names, types, conditions]
 
 ---
 
-## 13. 20 Marks Exam-Style Practice
+## 14. 20 Marks Exam-Style Practice
 
 ### Question
 

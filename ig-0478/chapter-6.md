@@ -1,14 +1,47 @@
 # IGCSE 0478 Chapter 6: Automated and Emerging Technologies
+> **Automated Systems and Emerging Technologies｜Syllabus-Aligned Revision Edition**
+> **适用范围**：Cambridge IGCSE Computer Science 0478  
+**更新依据**：2026–2028 syllabus + 2025 Paper 1 mark scheme trend  
+**目标**：删掉低频/过时内容，保留最容易出现在 `State / Describe / Explain / Suggest` 题里的得分点。  
+**建议使用方式**：先背“核心模板”，再用“场景迁移表”练习把知识点套进不同题干。
+>
 
-## Exam Focus
+---
 
-| 考点 | 近期出题方向 | 学生最容易丢分的地方 |
+## 0. Syllabus 更新结论：这一章现在怎么考？
+| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
+| --- | --- | --- | --- |
+| **Automated systems** | 不再只问定义，常放进具体场景：ATM 欢迎屏、天气报警系统、农业/工厂系统 | 只写“sensor collects data”，没有写 **microprocessor compares with stored/preset value** | 增加“传感器 → 微处理器 → 比较 → 输出/执行器”的固定模板 |
+| **Robotics** | 重点转向“是否是 robot”“robot 的特征”“场景优缺点” | 把所有智能设备都说成 robot；忽略 **mechanical structure / actuator / movement** | 删除过多 independent/dependent 分类，突出 robot 判断标准 |
+| **AI** | 高频问 AI characteristics、expert system、machine learning 场景应用 | 把 AI 写成“very smart computer”，没有 data/rules/reason/adapt | 改成 mark scheme 语言：**data + rules + reasoning + learning/adapting** |
+| **Expert system** | 常考填空/描述运行流程，尤其 doctor diagnosis | 组件混淆：knowledge base / rule base / inference engine / interface | 用流程图和组件表重建 |
+| **Machine learning** | 高频放进 smart speaker、game enemy、weather prediction、delivery robot | 只写“it learns”，没有写从什么数据学、怎样改变结果 | 增加“collect → analyse pattern → feedback → adapt → predict”的万能句式 |
+
+
+---
+
+### 1. 内容取舍：哪些内容要删？哪些保留？
+#### ✅ 必须保留并重点训练
+| 内容 | 原因 |
+| --- | --- |
+| sensors, microprocessors and actuators collaboration | syllabus 明确要求；2025 直接考过多次 |
+| advantages / disadvantages in a given scenario | 每年常见，必须和题干对象绑定 |
+| characteristics of a robot | 2025 直接考“为什么是/不是 robot” |
+| robot use in industry, medicine, agriculture, transport, domestic settings | syllabus 场景范围，容易出 explain/suggest |
+| AI characteristics | 2025 高频 |
+| expert system components and operation | 2025 继续考诊断类 expert system |
+| machine learning meaning and improvement | 2025 高频场景题 |
+
+
+#### ⚠️ 降权或删除
+| 原内容 | 处理方式 | 原因 |
 | --- | --- | --- |
-| **Automated systems** | 不再只问定义，常放进具体场景：ATM 欢迎屏、天气报警系统、农业/工厂系统 | 只写“sensor collects data”，没有写 **microprocessor compares with stored/preset value** |
-| **Robotics** | 重点转向“是否是 robot”“robot 的特征”“场景优缺点” | 把所有智能设备都说成 robot；忽略 **mechanical structure / actuator / movement** |
-| **AI** | 高频问 AI characteristics、expert system、machine learning 场景应用 | 把 AI 写成“very smart computer”，没有 data/rules/reason/adapt |
-| **Expert system** | 常考填空/描述运行流程，尤其 doctor diagnosis | 组件混淆：knowledge base / rule base / inference engine / interface |
-| **Machine learning** | 高频放进 smart speaker、game enemy、weather prediction、delivery robot | 只写“it learns”，没有写从什么数据学、怎样改变结果 |
+| Narrow AI / General AI / Strong AI 三分类 | **删除主表，只可作为拓展** | 新 syllabus 明确把 AI 限定在 expert systems 和 machine learning，三分类不是核心得分点 |
+| Independent robots / dependent robots 分类 | **降权** | 可以帮助理解 autonomous/dependent，但不是新卷的主要答题关键词 |
+| 大段 autonomous vehicles 优缺点 | **改成场景模板** | 新题更喜欢 specific scenario，如 surgery robot / delivery robot / weather system |
+| Expert system advantages/disadvantages 长表 | **缩短** | 2025 更重视 operation/components，不再建议学生死背长表 |
+| Deep learning / neural networks | **不作为 IGCSE 必背** | 超出核心考纲。题目接受 supervised/unsupervised 作为 machine learning 例子，但不要求解释细节 |
+
 
 ---
 

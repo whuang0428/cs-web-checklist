@@ -1,6 +1,14 @@
 # IGCSE 0478 Chapter 1: Data Representation
+> **Data Representation｜Syllabus-Aligned Paper 1 Revision Sheet**
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
+**Target:** Cambridge IGCSE Computer Science 0478  
+**Main audience:** Students  
+**Style:** Chinese explanation + English mark scheme keywords  
+>
 
-## How to Use This Chapter
+---
+
+## 0. How to Use This Sheet
 本章不是“背很多定义”就能拿高分的章节。2025 的题目明显更喜欢考：
 
 1. **conversion / calculation / working**  
@@ -37,7 +45,33 @@ D --> E[Compression<br/>lossy / lossless / RLE]
 
 ---
 
-## 2. One-Page Mind Map
+## 2. Content Update Decision
+### 2.1 Keep and Strengthen
+| Kept content | Reason |
+| --- | --- |
+| binary / denary / hexadecimal conversions | Always examinable and frequently tested |
+| binary addition and overflow | 2025 mark schemes reward working and overflow identification |
+| logical shift | Tested as calculation + effect explanation |
+| two's complement | Common short calculation topic |
+| ASCII vs Unicode | Still syllabus and easy 1–3 mark area |
+| sample rate / sample resolution / image resolution / colour depth | Core definitions and file size questions |
+| KiB / MiB / GiB | Still important for calculation questions |
+| lossy / lossless / RLE | High-frequency 2025 topic |
+
+
+### 2.2 Downweight
+| Downweighted content | Why |
+| --- | --- |
+| very detailed memory dump explanation | Usually only needs "hex is used for error codes / memory dumps" |
+| too many decimal unit rows such as EB/PB | Students mainly need bit, nibble, byte, KiB, MiB, GiB |
+| long lossy video compression details | Can confuse students; Paper 1 usually expects simple quality/file-size points |
+| lookup table text compression details | Less central than RLE and lossless/lossy distinction |
+| fixed claim: "Unicode is 16-bit" | Better answer: Unicode uses more bits than ASCII and represents more characters |
+
+
+---
+
+## 3. One-Page Mind Map
 ```mermaid
 mindmap
   root((Chapter 1<br/>Data Representation))
@@ -72,8 +106,8 @@ mindmap
 
 ---
 
-## 3. 1.1 Number Systems
-### 3.1 Why computers use binary
+## 4. 1.1 Number Systems
+### 4.1 Why computers use binary
 #### Mark scheme answer
 > Computers use binary because computer circuits / transistors can only represent two states, such as on/off, high/low or 1/0. All data must be converted into binary so it can be processed and stored by the computer.
 >
@@ -94,7 +128,7 @@ This is too vague. It does not explain **why**.
 
 ---
 
-### 3.2 Number system definitions
+### 4.2 Number system definitions
 | Number system | Base | Digits used | Key point |
 | --- | ---: | --- | --- |
 | Denary | 10 | 0–9 | normal human number system |
@@ -110,7 +144,7 @@ This is too vague. It does not explain **why**.
 
 ---
 
-### 3.3 Binary ↔ denary
+### 4.3 Binary ↔ denary
 #### Binary to denary
 Example:
 
@@ -146,7 +180,7 @@ Answer = 00110101
 
 ---
 
-### 3.4 Hexadecimal ↔ binary
+### 4.4 Hexadecimal ↔ binary
 #### Conversion table
 | Binary | Hex | Denary | Binary | Hex | Denary |
 | --- | --- | ---: | --- | --- | ---: |
@@ -199,7 +233,7 @@ Answer = 01111011
 
 ---
 
-### 3.5 Hexadecimal uses
+### 4.5 Hexadecimal uses
 | Use | Why hexadecimal is suitable |
 | --- | --- |
 | HTML colour codes | 6 hex digits represent RGB values, e.g. `#FF0000` |
@@ -216,8 +250,8 @@ Answer = 01111011
 
 ---
 
-## 4. Binary Operations
-### 4.1 Binary addition
+## 5. Binary Operations
+### 5.1 Binary addition
 #### Rules
 | Addition | Result |
 | --- | --- |
@@ -235,7 +269,7 @@ Answer = 01111011
  = 11010101
 ```
 
-#### 2026 mark scheme focus
+#### 2025 mark scheme focus
 Marks are often awarded for:
 
 1. correct nibbles / final binary answer  
@@ -244,7 +278,7 @@ Marks are often awarded for:
 
 ---
 
-### 4.2 Overflow
+### 5.2 Overflow
 #### Definition
 > Overflow occurs when the result is too large to be stored in the number of bits available.
 >
@@ -266,7 +300,7 @@ Not always enough. A carry inside the calculation is normal. You need to say **t
 
 ---
 
-### 4.3 Logical binary shift
+### 5.3 Logical binary shift
 #### Rules
 | Shift | Effect on positive binary integer |
 | --- | --- |
@@ -299,8 +333,8 @@ Denary:
 
 ---
 
-### 4.4 Two's complement
-### 9-bit two's complement range
+### 5.4 Two's complement
+### 8-bit two's complement range
 | Bits | Range |
 | --- | --- |
 | 8-bit two's complement | -128 to +127 |
@@ -371,8 +405,8 @@ Use column values:
 
 ---
 
-## 5. 1.2 Text, Sound and Images
-### 5.1 Text representation
+## 6. 1.2 Text, Sound and Images
+### 6.1 Text representation
 #### Character set
 > A character set is a set of characters and the codes used to represent them.
 >
@@ -391,7 +425,7 @@ D code stored third
 
 ---
 
-### 5.2 ASCII vs Unicode
+### 6.2 ASCII vs Unicode
 | Feature | ASCII | Unicode |
 | --- | --- | --- |
 | Character range | smaller | much larger |
@@ -413,7 +447,7 @@ Wrong. Unicode has a much larger character set.
 
 ---
 
-### 5.3 Sound representation
+### 6.3 Sound representation
 #### Key terms
 | Term | Meaning |
 | --- | --- |
@@ -446,7 +480,7 @@ Mark scheme style:
 
 ---
 
-### 5.4 Image representation
+### 6.4 Image representation
 #### Key terms
 | Term | Meaning |
 | --- | --- |
@@ -468,8 +502,8 @@ Mark scheme style:
 
 ---
 
-## 6. 1.3 Data Storage and File Size
-### 6.1 Units
+## 7. 1.3 Data Storage and File Size
+### 7.1 Units
 #### Binary units
 | Unit | Size |
 | --- | ---: |
@@ -489,7 +523,7 @@ Do not use 1000 unless the question specifically uses **KB / MB / GB**.
 
 ---
 
-### 6.2 Image file size
+### 7.2 Image file size
 #### Formula
 ```latex
 Image file size in bits = width × height × colour depth
@@ -529,7 +563,7 @@ KiB = 960 000 ÷ 1024
 
 ---
 
-### 6.3 Sound file size
+### 7.3 Sound file size
 #### Formula
 ```latex
 Sound file size in bits =
@@ -565,8 +599,8 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-## 7. Compression
-### 7.1 Why compression is needed
+## 8. Compression
+### 8.1 Why compression is needed
 #### Mark scheme answer
 > Compression reduces file size, so less storage space is needed, less bandwidth is required, and the file can be transmitted / uploaded / downloaded faster.
 >
@@ -580,7 +614,7 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-### 7.2 Lossy vs lossless compression
+### 8.2 Lossy vs lossless compression
 | Feature | Lossless | Lossy |
 | --- | --- | --- |
 | Data removed? | No permanent data loss | Data permanently removed |
@@ -603,7 +637,7 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-### 7.3 Run-length encoding (RLE)
+### 8.3 Run-length encoding (RLE)
 #### What it does
 > RLE identifies repeated adjacent data and stores the value with the number of times it is repeated.
 >
@@ -629,7 +663,7 @@ For images, this could mean:
 
 ---
 
-### 7.4 Choosing compression method
+### 8.4 Choosing compression method
 | Scenario | Best choice | Why |
 | --- | --- | --- |
 | program code | lossless | code must be exactly restored or it may not run |
@@ -640,63 +674,62 @@ For images, this could mean:
 | artwork requiring exact detail | lossless | no part of the image should be lost |
 
 
-```mermaid
-flowchart TD
+<!-- 这是一个文本绘图，源码为：flowchart TD
 A[Need to compress a file] --> B{Must the original be restored exactly?}
 B -->|Yes| C[Use lossless compression]
 B -->|No| D{Is small quality loss acceptable?}
 D -->|Yes| E[Use lossy compression]
 D -->|No| C
 C --> F[Examples: RLE, lossless image/text compression]
-E --> G[Examples: reducing colour depth, resolution, sample rate]
-```
+E --> G[Examples: reducing colour depth, resolution, sample rate] -->
+![](https://cdn.nlark.com/yuque/__mermaid_v3/58060fbf6171f6e9c9ffc60380f26a81.svg)
 
 ---
 
-## 8. Mark Scheme Style Answer Templates
-### 8.1 Why hexadecimal is used
+## 9. Mark Scheme Style Answer Templates
+### 9.1 Why hexadecimal is used
 > Hexadecimal is a shorter representation of binary. It is easier for humans / programmers to read and understand. It is also easy to convert between hexadecimal and binary because one hexadecimal digit represents four bits.
 >
 
 ---
 
-### 8.2 Explain overflow
+### 9.2 Explain overflow
 > Overflow occurs when the result of a calculation is too large to be stored in the available number of bits. For an 8-bit unsigned register, any result greater than 255 cannot be stored.
 >
 
 ---
 
-### 8.3 Explain logical shift
+### 9.3 Explain logical shift
 > In a logical shift, bits are moved left or right. Bits shifted out of the register are lost and zeros are shifted in. A left shift multiplies a positive binary integer by 2 for each shift, while a right shift divides it by 2 for each shift.
 >
 
 ---
 
-### 8.4 Explain Unicode vs ASCII
+### 9.4 Explain Unicode vs ASCII
 > Unicode can represent more characters than ASCII, including different languages, symbols and emojis. Unicode usually requires more bits per character than ASCII, so files may require more storage.
 >
 
 ---
 
-### 8.5 Explain sampling sound
+### 9.5 Explain sampling sound
 > The amplitude of the sound wave is measured at regular intervals. Each measurement is converted to a binary value. Increasing the sample rate or sample resolution improves the accuracy of the recording but increases the file size.
 >
 
 ---
 
-### 8.6 Explain image file size change
+### 9.6 Explain image file size change
 > The image file size increases because there are more pixels / more bits used to store each pixel. Increasing resolution increases the number of pixels, while increasing colour depth increases the number of bits used for each colour.
 >
 
 ---
 
-### 8.7 Explain lossless compression
+### 9.7 Explain lossless compression
 > Lossless compression reduces the file size without permanently removing data. The original file can be restored after decompression. For example, RLE stores repeated data as a value and the number of repetitions.
 >
 
 ---
 
-## 9. Common Mistakes — Must Read
+## 10. Common Mistakes — Must Read
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
 | Why binary? | "Computers understand binary" | "Transistors / logic circuits have two states, on/off or 1/0" |
@@ -716,7 +749,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate]
 
 ---
 
-## 10. Scenario Answer Bank
+## 11. Scenario Answer Bank
 | Scenario | Answer direction |
 | --- | --- |
 | Artist wants image quality unchanged | use lossless; no data is permanently removed; original image can be restored |
@@ -731,7 +764,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate]
 
 ---
 
-## 11. 10 Marks Quick Check
+## 12. 10 Marks Quick Check
 ### Questions
 1. State the base of the binary number system. [1]  
 2. State the largest denary value that can be stored in an unsigned 8-bit register. [1]  
@@ -756,7 +789,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate]
 
 ---
 
-## 12. 20 Marks Exam-Style Practice
+## 13. 20 Marks Exam-Style Practice
 ### Question 1: Number systems and operations [8]
 (a) Convert the denary number 182 to 8-bit binary. [1]  
 (b) Convert `10110110` to hexadecimal. [1]  
@@ -821,3 +854,4 @@ Award up to [3] for correct formula, substitution and final bytes.
 (c) Unicode represents more characters/languages/symbols/emojis than ASCII / Unicode uses more bits per character [1].
 
 ---
+

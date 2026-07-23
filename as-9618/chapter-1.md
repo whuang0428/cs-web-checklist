@@ -1,6 +1,17 @@
 # AS 9618 Chapter 1: Information Representation
+> **Information Representation｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-## How to Use This Chapter
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
+> **Target:** Cambridge International AS & A Level Computer Science 9618  
+> **Chapter:** 1 Information representation  
+> **Main audience:** Students  
+> **Style:** 中文解释 + English keywords / mark scheme style phrases  
+> **Docsify:** ready for static webpage display  
+> **File:** `chapter-1.md`
+
+---
+
+## 0. How to Use This Sheet
 
 AS 9618 Chapter 1 比 IGCSE Chapter 1 更深一点。它不是只考“binary / image / sound / compression”的基础定义，而是更喜欢把这些内容放进 **calculation + exact terminology + scenario explanation** 里面。
 
@@ -44,7 +55,47 @@ E --> F[1.3 Compression<br/>lossy / lossless / RLE / streaming scenario]
 
 ---
 
-## 2. One-Page Mind Map
+## 2. Content Update Decision
+
+### 2.1 Keep and Strengthen
+
+| Kept / strengthened content | Reason |
+| --- | --- |
+| binary and decimal prefixes | 2024 directly tested tebibyte / gigabyte and binary vs decimal prefix |
+| binary, denary, hexadecimal conversion | 2025 tested 558 to 12-bit binary and hexadecimal; Unicode/ASCII code conversion also relies on this |
+| two's complement | 2024 and 2025 both tested two's complement conversion / range |
+| BCD | 2024 tested BCD conversion; 2025 tested BCD application and justification |
+| ASCII / extended ASCII / Unicode | 2025 tested Unicode characteristics and extended ASCII conversion table |
+| bitmap file size | 2024 and 2025 both tested image file size calculation |
+| bit depth / colour depth | 2025 tested effect of decreasing bit depth on image and file |
+| sound terms | 2025 directly tested sampling rate, sampling resolution and analogue wave |
+| compression scenarios | 2025 tested video compression for real-time bit streaming and lossy/lossless choice |
+| mark scheme phrases | Paper 1 awards marks for precise phrases such as “fewer bits per pixel”, “less bandwidth”, “original can be restored” |
+
+### 2.2 Downweight
+
+| Downweighted content | Why |
+| --- | --- |
+| long history of ASCII / Unicode | Exams reward features and differences, not history |
+| very detailed memory dump explanation | Syllabus includes hex uses, but recent questions focus more on conversion and representation |
+| advanced JPEG / MP3 algorithm detail | Useful background, but Paper 1 usually rewards simple lossy / lossless reasoning |
+| memorising every storage unit beyond TiB | Keep to kilo/kibi, mega/mebi, giga/gibi, tera/tebi |
+| excessive vector drawing syntax | Students need concept: objects, properties, drawing list, scaling |
+| overlong sound physics | Only need analogue wave, amplitude sampling, sample rate/resolution |
+
+### 2.3 Delete / Avoid
+
+| Avoid learning as exam fact | Better version |
+| --- | --- |
+| “Unicode is always 16-bit” | Unicode may use more bits than ASCII; syllabus examples often use 16/32 bits |
+| “compression always improves quality” | Compression reduces file size; lossy may reduce quality |
+| “RLE always makes files smaller” | RLE works well when there are long runs of repeated data; it can increase file size otherwise |
+| “right shift always divides exactly” | Bits shifted out are lost; result may be rounded down |
+| “overflow just means there is a carry” | Overflow means the result is outside the range that can be represented using the available bits |
+
+---
+
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -96,9 +147,9 @@ mindmap
 
 ---
 
-## 3. 1.1 Data Representation
+## 4. 1.1 Data Representation
 
-### 3.1 Binary prefixes vs decimal prefixes
+### 4.1 Binary prefixes vs decimal prefixes
 
 #### Core idea
 
@@ -136,7 +187,7 @@ mindmap
 
 ---
 
-### 3.2 Number systems
+### 4.2 Number systems
 
 | Number system | Base | Digits used | Key exam point |
 | --- | ---: | --- | --- |
@@ -160,7 +211,7 @@ mindmap
 
 ---
 
-### 3.3 Binary ↔ denary
+### 4.3 Binary ↔ denary
 
 #### Binary to denary example
 
@@ -193,7 +244,7 @@ AS Paper 1 may ask for **12-bit binary**, not only 8-bit. Always count the requi
 
 ---
 
-### 3.4 Binary ↔ hexadecimal
+### 4.4 Binary ↔ hexadecimal
 
 #### Binary to hexadecimal
 
@@ -242,7 +293,7 @@ Convert `2140` to denary.
 
 ---
 
-### 3.5 One's complement and two's complement
+### 4.5 One's complement and two's complement
 
 #### One's complement
 
@@ -258,9 +309,9 @@ For AS 9618, understand it, but **two's complement is more exam-heavy**.
 
 ---
 
-### 3.6 Two's complement
+### 4.6 Two's complement
 
-#### 9-bit range
+#### 8-bit range
 
 | Representation | Range |
 | --- | --- |
@@ -322,7 +373,7 @@ So:
 
 ---
 
-### 3.7 Binary subtraction using two's complement
+### 4.7 Binary subtraction using two's complement
 
 Example: subtract denary 23 from `01001010`.
 
@@ -362,7 +413,7 @@ Ignore the 9th carry bit:
 
 ---
 
-### 3.8 Overflow
+### 4.8 Overflow
 
 #### Definition
 
@@ -386,7 +437,7 @@ Overflow can occur when:
 
 ---
 
-### 3.9 Binary Coded Decimal (BCD)
+### 4.9 Binary Coded Decimal (BCD)
 
 #### What BCD does
 
@@ -434,7 +485,7 @@ BCD = 0101 0111 0011
 
 ---
 
-### 3.10 Character sets
+### 4.10 Character sets
 
 #### Character set definition
 
@@ -446,7 +497,7 @@ BCD = 0101 0111 0011
 
 ---
 
-### 3.11 ASCII, extended ASCII and Unicode
+### 4.11 ASCII, extended ASCII and Unicode
 
 | Character set | Typical bits | Key point |
 | --- | ---: | --- |
@@ -472,7 +523,7 @@ BCD = 0101 0111 0011
 
 ---
 
-### 3.12 Character code conversion
+### 4.12 Character code conversion
 
 #### Binary Unicode to denary
 
@@ -497,9 +548,9 @@ Convert:
 
 ---
 
-## 4. 1.2 Multimedia — Bitmap Images
+## 5. 1.2 Multimedia — Bitmap Images
 
-### 4.1 Bitmap image keywords
+### 5.1 Bitmap image keywords
 
 | Term | Meaning |
 | --- | --- |
@@ -513,7 +564,7 @@ Convert:
 
 ---
 
-### 4.2 Bit depth / colour depth
+### 5.2 Bit depth / colour depth
 
 #### Formula
 
@@ -545,7 +596,7 @@ Examples:
 
 ---
 
-### 4.3 Image file size calculation
+### 5.3 Image file size calculation
 
 #### Formula
 
@@ -577,7 +628,7 @@ A camera creates an image with **2 million pixels** and **16-bit depth**. Calcul
 4 000 000 / 1 000 000 = 4 MB
 ```
 
-#### 2025-style example
+#### 2024-style example
 
 An image has 4000 × 3000 pixels and 4 bits per pixel.
 
@@ -591,7 +642,7 @@ An image has 4000 × 3000 pixels and 4 bits per pixel.
 
 ---
 
-### 4.4 File header
+### 5.4 File header
 
 A bitmap file header may store:
 
@@ -608,9 +659,9 @@ A bitmap file header may store:
 
 ---
 
-## 5. Vector Graphics
+## 6. Vector Graphics
 
-### 5.1 Vector graphic idea
+### 6.1 Vector graphic idea
 
 Vector graphics do not store every pixel. They store objects / shapes mathematically.
 
@@ -623,11 +674,11 @@ Examples of objects:
 + polygon
 + text object
 
-### 5.2 Property
+### 6.2 Property
 
 > A property is an attribute of a vector object, such as position, line colour, fill colour, line thickness, radius or coordinates.
 
-### 5.3 Drawing list
+### 6.3 Drawing list
 
 > A drawing list stores the objects / commands needed to draw the image and the properties of each object.
 
@@ -639,7 +690,7 @@ LINE from(10,10) to(90,10), thickness 2
 RECTANGLE top-left(20,20), width 40, height 30
 ```
 
-### 5.4 Vector vs bitmap
+### 6.4 Vector vs bitmap
 
 | Feature | Bitmap | Vector |
 | --- | --- | --- |
@@ -656,21 +707,21 @@ RECTANGLE top-left(20,20), width 40, height 30
 
 ---
 
-## 6. Sound Representation
+## 7. Sound Representation
 
-### 6.1 Analogue sound
+### 7.1 Analogue sound
 
 Sound is naturally analogue. This means it changes continuously.
 
 A computer must convert it into digital data by sampling.
 
-### 6.2 Sampling
+### 7.2 Sampling
 
 #### Mark scheme style answer
 
 > The amplitude of the sound wave is measured at regular time intervals. Each sample is converted into a binary value.
 
-### 6.3 Key terms
+### 7.3 Key terms
 
 | Term | Meaning |
 | --- | --- |
@@ -678,7 +729,7 @@ A computer must convert it into digital data by sampling.
 | Sampling resolution / bit depth | number of bits used to store each amplitude measurement |
 | Analogue | continuously changing sound wave before being recorded by a computer |
 
-### 6.4 Effect of increasing sample rate / resolution
+### 7.4 Effect of increasing sample rate / resolution
 
 | Increase in... | Effect on sound | Effect on file |
 | --- | --- | --- |
@@ -703,9 +754,9 @@ A 30-second stereo sound has sample rate 44 100 Hz and sampling resolution 16 bi
 
 ---
 
-## 7. 1.3 Compression
+## 8. 1.3 Compression
 
-### 7.1 Why compression is needed
+### 8.1 Why compression is needed
 
 Compression reduces file size.
 
@@ -723,7 +774,7 @@ Benefits:
 
 ---
 
-### 7.2 Lossy compression
+### 8.2 Lossy compression
 
 #### Definition
 
@@ -736,7 +787,7 @@ Benefits:
 + web photos
 + situations where small loss of quality is acceptable
 
-#### 2026 real-time streaming justification
+#### 2025 real-time streaming justification
 
 For real-time video conferences, lossy compression is usually more appropriate because:
 
@@ -749,7 +800,7 @@ For real-time video conferences, lossy compression is usually more appropriate b
 
 ---
 
-### 7.3 Lossless compression
+### 8.3 Lossless compression
 
 #### Definition
 
@@ -769,7 +820,7 @@ For real-time video conferences, lossy compression is usually more appropriate b
 
 ---
 
-### 7.4 Run-length encoding (RLE)
+### 8.4 Run-length encoding (RLE)
 
 #### What RLE does
 
@@ -812,9 +863,9 @@ becomes
 
 ---
 
-## 8. Mark Scheme Keywords
+## 9. Mark Scheme Keywords
 
-### 8.1 Data representation
+### 9.1 Data representation
 
 + **binary prefix**
 + **decimal prefix**
@@ -830,7 +881,7 @@ becomes
 + **exact decimal digits**
 + **rounding errors**
 
-### 8.2 Character sets
+### 9.2 Character sets
 
 + **character set**
 + **unique binary code**
@@ -843,7 +894,7 @@ becomes
 + **symbols / emojis**
 + **more bits per character**
 
-### 8.3 Bitmap / vector / sound
+### 9.3 Bitmap / vector / sound
 
 + **pixel**
 + **bit depth**
@@ -860,7 +911,7 @@ becomes
 + **analogue**
 + **amplitude**
 
-### 8.4 Compression
+### 9.4 Compression
 
 + **reduces file size**
 + **less storage**
@@ -877,7 +928,7 @@ becomes
 
 ---
 
-## 9. Common Mistakes 易错表
+## 10. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -896,49 +947,49 @@ becomes
 
 ---
 
-## 10. Scenario Answer Bank 场景迁移答题模板
+## 11. Scenario Answer Bank 场景迁移答题模板
 
-### 10.1 Explain why Unicode is used for a global app
+### 11.1 Explain why Unicode is used for a global app
 
 > Unicode is suitable because it can represent a wider range of characters than ASCII. This includes characters from more languages and symbols such as emojis, so users from different countries can use the app.
 
-### 10.2 Explain why decreasing bit depth reduces image file size
+### 11.2 Explain why decreasing bit depth reduces image file size
 
 > Decreasing bit depth means fewer bits are used to store each pixel. This reduces the amount of data stored, so the file size becomes smaller. However, fewer colours or shades can be represented, so image detail may be lost.
 
-### 10.3 Explain why a bitmap image becomes pixelated when enlarged
+### 11.3 Explain why a bitmap image becomes pixelated when enlarged
 
 > A bitmap image is made from a fixed number of pixels. When the image is enlarged, the same pixels cover a larger area, so individual pixels become more visible and the image appears less sharp.
 
-### 10.4 Explain why vector graphics are suitable for logos
+### 11.4 Explain why vector graphics are suitable for logos
 
 > Vector graphics store objects and their properties rather than individual pixels. This means the image can be resized without losing quality, which is useful for a logo that may be used at different sizes.
 
-### 10.5 Explain how sound is sampled
+### 11.5 Explain how sound is sampled
 
 > The amplitude of the analogue sound wave is measured at regular time intervals. Each measurement is converted into a binary value. A higher sampling rate or sampling resolution gives a more accurate digital representation but increases file size.
 
-### 10.6 Justify lossy compression for a video conference
+### 11.6 Justify lossy compression for a video conference
 
 > Lossy compression is suitable because a video is data-intensive and must be transmitted in real time. Lossy compression reduces the file size more than lossless compression, so less bandwidth is needed and buffering is reduced. Some loss of quality is acceptable because users can still understand the video and audio.
 
-### 10.7 Justify lossless compression for program code
+### 11.7 Justify lossless compression for program code
 
 > Lossless compression is suitable because the original file can be restored exactly. Program code must not lose any characters or instructions, otherwise the program may not run correctly.
 
-### 10.8 Explain BCD use in financial systems
+### 11.8 Explain BCD use in financial systems
 
 > BCD is suitable because each decimal digit is stored separately. This helps represent decimal values accurately and avoids accumulating rounding errors that may occur when decimal fractions are stored in normal binary.
 
-### 10.9 Explain RLE using an image
+### 11.9 Explain RLE using an image
 
 > RLE identifies adjacent pixels with the same colour. It stores the colour and the number of times it is repeated. This reduces file size when the image contains long runs of the same colour.
 
 ---
 
-## 11. Process Diagrams
+## 12. Process Diagrams
 
-### 11.1 Choosing a compression method
+### 12.1 Choosing a compression method
 
 ```mermaid
 flowchart TD
@@ -953,7 +1004,7 @@ C --> G[Examples: text, program code, medical image]
 E --> H[Examples: video call, streaming audio, web photo]
 ```
 
-### 11.2 Bitmap file size calculation
+### 12.2 Bitmap file size calculation
 
 ```mermaid
 flowchart LR
@@ -964,7 +1015,7 @@ D --> E[Bytes]
 E --> F[Divide by 1000 or 1024<br/>depending on unit]
 ```
 
-### 11.3 Sound sampling process
+### 12.3 Sound sampling process
 
 ```mermaid
 flowchart LR
@@ -976,7 +1027,7 @@ D --> E[Digital sound file]
 
 ---
 
-## 12. 10 Marks Quick Check
+## 13. 10 Marks Quick Check
 
 ### Questions
 
@@ -1006,7 +1057,7 @@ D --> E[Digital sound file]
 
 ---
 
-## 13. 20 Marks Exam-Style Practice with Mark Scheme
+## 14. 20 Marks Exam-Style Practice with Mark Scheme
 
 ### Question 1: Number systems and character sets [8]
 

@@ -1,6 +1,18 @@
 # AS 9618 Chapter 7: Ethics and Ownership
+> **Ethics and Ownership｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-## How to Use This Chapter
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
+> **Target:** Cambridge International AS & A Level Computer Science 9618  
+> **Chapter:** 7 Ethics and Ownership  
+> **Syllabus area:** 7.1 Ethics and Ownership  
+> **Main audience:** Students preparing for Paper 1  
+> **Style:** 中文解释 + English mark scheme keywords  
+> **Docsify:** ready  
+> **No local image dependency**
+
+---
+
+## 0. How to Use This Sheet
 
 Chapter 7 是典型的 **scenario explanation chapter（场景解释题章节）**。
 
@@ -49,7 +61,46 @@ E --> F[AI<br/>applications + impacts]
 
 ---
 
-## 2. One-Page Mind Map
+## 2. Content Update Decision
+
+### 2.1 Keep and Strengthen
+
+| Kept content | Reason |
+| --- | --- |
+| purpose of ethics for computing professionals | Direct syllabus requirement and 2024 question trend |
+| ethical impact on colleagues/public | 2024 Paper 1 directly asked this style of explanation |
+| BCS and IEEE | Syllabus explicitly names both professional ethical bodies |
+| copyright legislation | Frequently tested as short explanation |
+| licence comparison | High-frequency scenario question |
+| shareware and commercial benefits | 2024 examiner comments show students often described features but missed benefits |
+| open source / free software | Useful for scenario where source code must be modified |
+| AI applications | Common applied question: image recognition / OCR / autonomous systems / recommendation |
+| AI social/economic/environmental impacts | Syllabus explicitly requires these impacts |
+
+### 2.2 Downweight
+
+| Downweighted content | Why |
+| --- | --- |
+| memorising the full IEEE code clause by clause | Students need purpose and examples, not every clause |
+| exact names of national copyright laws | Cambridge normally rewards concept, not law title |
+| long philosophical arguments about machine consciousness | Low exam value for AS Paper 1 |
+| advanced machine learning mathematics | Not required in AS Chapter 7 |
+| too many licence types outside syllabus | Focus on Free Software Foundation, Open Source Initiative, shareware, commercial |
+
+### 2.3 Delete / Avoid
+
+| Avoid | Reason |
+| --- | --- |
+| “Ethics means obeying the law” | Too narrow; ethical behaviour can go beyond legal minimum |
+| “Free software means no copyright” | Wrong; free software can still be copyrighted |
+| “Open source always means completely free” | Too vague; key is source code availability and allowed modification/redistribution |
+| “Shareware is just free software” | Wrong; usually trial/limited version before payment |
+| “Commercial software means better software” | Not guaranteed; explain support/income/control instead |
+| “AI just searches a database” | Weak for AI recognition questions; explain trained model / pattern recognition |
+
+---
+
+## 3. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -100,7 +151,7 @@ mindmap
 
 ---
 
-## 3. Syllabus Objectives
+## 4. Syllabus Objectives
 
 By the end of this chapter, students should be able to:
 
@@ -117,9 +168,9 @@ By the end of this chapter, students should be able to:
 
 ---
 
-## 4. Ethics in Computing
+## 5. Ethics in Computing
 
-### 4.1 What is ethics?
+### 5.1 What is ethics?
 
 #### Student explanation
 
@@ -141,7 +192,7 @@ By the end of this chapter, students should be able to:
 
 ---
 
-### 4.2 Why ethics matters for computing professionals
+### 5.2 Why ethics matters for computing professionals
 
 Computing professionals often work with:
 
@@ -160,7 +211,7 @@ Computing professionals often work with:
 
 ---
 
-### 4.3 Ethical behaviour towards colleagues
+### 5.3 Ethical behaviour towards colleagues
 
 2024 Paper 1 的趋势是：不仅问 “what is ethics”，而是问 programmer 为什么要对 **colleagues** 和 **the public** 负责。
 
@@ -187,7 +238,7 @@ A programmer should:
 
 ---
 
-### 4.4 Ethical behaviour towards the public
+### 5.4 Ethical behaviour towards the public
 
 #### Good points for the public
 
@@ -212,7 +263,7 @@ A programmer should:
 
 ---
 
-### 4.5 Ethical vs legal vs moral
+### 5.5 Ethical vs legal vs moral
 
 | Term | Meaning | Example |
 | --- | --- | --- |
@@ -234,9 +285,9 @@ A programmer should:
 
 ---
 
-## 5. Professional Ethical Bodies
+## 6. Professional Ethical Bodies
 
-### 5.1 BCS and IEEE
+### 6.1 BCS and IEEE
 
 The syllabus specifically names:
 
@@ -247,7 +298,7 @@ The syllabus specifically names:
 
 ---
 
-### 5.2 Why join a professional ethical body?
+### 6.2 Why join a professional ethical body?
 
 #### Main purposes
 
@@ -267,7 +318,7 @@ Professional bodies help computing professionals by providing:
 
 ---
 
-### 5.3 Common weak answer
+### 6.3 Common weak answer
 
 Weak:
 
@@ -279,9 +330,9 @@ Better:
 
 ---
 
-## 6. Copyright
+## 7. Copyright
 
-### 6.1 What is copyright?
+### 7.1 What is copyright?
 
 #### Student explanation
 
@@ -303,7 +354,7 @@ Better:
 
 ---
 
-### 6.2 Why copyright legislation is needed
+### 7.2 Why copyright legislation is needed
 
 Copyright legislation is needed to:
 
@@ -321,7 +372,7 @@ Copyright legislation is needed to:
 
 ---
 
-### 6.3 Copyright in software scenarios
+### 7.3 Copyright in software scenarios
 
 | Scenario | Good answer direction |
 | --- | --- |
@@ -333,7 +384,7 @@ Copyright legislation is needed to:
 
 ---
 
-### 6.4 Common mistakes
+### 7.4 Common mistakes
 
 | Weak answer | Why weak | Better answer |
 | --- | --- | --- |
@@ -344,9 +395,9 @@ Copyright legislation is needed to:
 
 ---
 
-## 7. Software Licences
+## 8. Software Licences
 
-### 7.1 What is a software licence?
+### 8.1 What is a software licence?
 
 #### Definition
 
@@ -366,7 +417,7 @@ A licence may define:
 
 ---
 
-### 7.2 Licence comparison table
+### 8.2 Licence comparison table
 
 | Licence type | Main idea | Source code? | Payment? | Best scenario |
 | --- | --- | --- | --- | --- |
@@ -377,7 +428,7 @@ A licence may define:
 
 ---
 
-### 7.3 Free Software Foundation licence
+### 8.3 Free Software Foundation licence
 
 #### Key idea
 
@@ -408,7 +459,7 @@ Better:
 
 ---
 
-### 7.4 Open Source Initiative licence
+### 8.4 Open Source Initiative licence
 
 #### Key idea
 
@@ -429,7 +480,7 @@ Open source is suitable when:
 
 ---
 
-### 7.5 Shareware licence
+### 8.5 Shareware licence
 
 #### Key idea
 
@@ -458,7 +509,7 @@ It may be:
 
 > Shareware is beneficial because users can try the software before paying, and the developer can still earn income if users pay for continued use or extra features.
 
-#### 2025 exam warning
+#### 2024 exam warning
 
 Do not only write:
 
@@ -468,7 +519,7 @@ The question may ask for **benefits**. You must explain why that is useful.
 
 ---
 
-### 7.6 Commercial software licence
+### 8.6 Commercial software licence
 
 #### Key idea
 
@@ -495,7 +546,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-### 7.7 Licence choice scenario bank
+### 8.7 Licence choice scenario bank
 
 | Scenario | Best licence | Why |
 | --- | --- | --- |
@@ -508,9 +559,9 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-## 8. Artificial Intelligence \(AI\)
+## 9. Artificial Intelligence \(AI\)
 
-### 8.1 What is AI?
+### 9.1 What is AI?
 
 #### Student explanation
 
@@ -532,7 +583,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-### 8.2 AI applications
+### 9.2 AI applications
 
 | Application | How AI is used |
 | --- | --- |
@@ -549,7 +600,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-### 8.3 How AI identifies a car registration number
+### 9.3 How AI identifies a car registration number
 
 This is a very important 2024-style scenario. Many students lose marks by describing only a database search.
 
@@ -578,7 +629,7 @@ Why weak?
 
 ---
 
-### 8.4 AI recognition process diagram
+### 9.4 AI recognition process diagram
 
 ```mermaid
 flowchart TD
@@ -592,9 +643,9 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 9. Impacts of AI
+## 10. Impacts of AI
 
-### 9.1 Social impacts
+### 10.1 Social impacts
 
 | Positive social impact | Explanation |
 | --- | --- |
@@ -617,7 +668,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 9.2 Economic impacts
+### 10.2 Economic impacts
 
 | Positive economic impact | Explanation |
 | --- | --- |
@@ -639,7 +690,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 9.3 Environmental impacts
+### 10.3 Environmental impacts
 
 | Positive environmental impact | Explanation |
 | --- | --- |
@@ -660,9 +711,9 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 10. Mark Scheme Keywords
+## 11. Mark Scheme Keywords
 
-### 10.1 Ethics keywords
+### 11.1 Ethics keywords
 
 - **moral principles**
 - **code of conduct**
@@ -675,7 +726,7 @@ F --> G[Optional check<br/>database / human review]
 - **fairness**
 - **accountability**
 
-### 10.2 Copyright keywords
+### 11.2 Copyright keywords
 
 - **legal protection**
 - **intellectual property**
@@ -687,7 +738,7 @@ F --> G[Optional check<br/>database / human review]
 - **income / revenue**
 - **legal action**
 
-### 10.3 Licence keywords
+### 11.3 Licence keywords
 
 - **source code available**
 - **modify / adapt**
@@ -699,7 +750,7 @@ F --> G[Optional check<br/>database / human review]
 - **restrict copying**
 - **support and updates**
 
-### 10.4 AI keywords
+### 11.4 AI keywords
 
 - **training data**
 - **trained model**
@@ -714,7 +765,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 11. Common Mistakes 易错表
+## 12. Common Mistakes 易错表
 
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
@@ -732,9 +783,9 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 12. Scenario Answer Bank
+## 13. Scenario Answer Bank
 
-### 12.1 Programmer ethics scenarios
+### 13.1 Programmer ethics scenarios
 
 | Scenario | Answer direction |
 | --- | --- |
@@ -750,7 +801,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 12.2 Copyright scenarios
+### 13.2 Copyright scenarios
 
 | Scenario | Answer direction |
 | --- | --- |
@@ -765,7 +816,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 12.3 Licence choice scenarios
+### 13.3 Licence choice scenarios
 
 | Scenario | Suitable licence | Answer direction |
 | --- | --- | --- |
@@ -781,7 +832,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 12.4 AI scenarios
+### 13.4 AI scenarios
 
 | Scenario | AI application | Answer direction |
 | --- | --- | --- |
@@ -797,7 +848,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 13. 10 Marks Quick Check
+## 14. 10 Marks Quick Check
 
 ### Question 1: Ethics and professional bodies [2]
 
@@ -852,7 +903,7 @@ Explain how AI can identify the registration number. [3]
 
 ---
 
-## 14. 20 Marks Exam-Style Practice with Mark Scheme
+## 15. 20 Marks Exam-Style Practice with Mark Scheme
 
 ### Question 1: Ethics in software development [5]
 

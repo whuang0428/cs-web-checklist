@@ -1,28 +1,40 @@
-# Course Coverage
+# Coverage Status
 
-Use this page to see what revision material and marked practice are available for each course.
+This website is a revision checklist and marked-practice hub. The planned chapter-deepening and independent-retest stages are complete; ongoing work should now focus on maintenance, accessibility and future syllabus changes.
 
 ## Current Coverage
 
-| Course | Available pages | What you can revise |
+| Course | Current pages | Status |
 |---|---|---|
-| IGCSE 0478 | Chapters 1-10 and two Paper 2 reviews | Paper 1 theory, Topics 7-10 programming content and two independent 75-mark practice sets |
-| AS 9618 | Chapters 1-12 and two Paper 2 reviews | Paper 1 theory, Sections 9-12 programming content and two independent 75-mark practice sets |
-| A2 9618 | Chapters 13-20, one Paper 3 review and two Paper 4 practicals | Advanced theory plus two independent Python practical sets |
+| IGCSE 0478 | Chapters 1-10 + two Paper 2 reviews | Topics 7-10 deepened; two independent 75-mark retest sets |
+| AS 9618 | Chapters 1-12 + two Paper 2 reviews | Sections 9-12 deepened; two independent 75-mark retest sets |
+| A2 9618 | Chapters 13-20 + Paper 3 review + two Paper 4 practicals | Cross-chapter theory review and two independent practical sets |
 
-## What This Website Provides
+## Ongoing Improvement Areas
 
-- syllabus-aligned revision checklists
-- concise explanations and worked examples
-- mark-scheme keywords and common mistakes
-- quick checks and longer exam-style practice
-- complete answers or reference solutions for the review papers
+The planned maturity stages are complete. These are maintenance opportunities rather than missing core deliverables.
 
-This is a revision and practice resource. It is not a replacement for the official syllabus, your class notes or official past papers.
+### IGCSE 0478
+
+- refresh examples when the syllabus changes
+- continue checking accessibility and mobile layout as content grows
+- add optional topic-specific micro-quizzes if students need shorter retrieval sessions
+
+### AS 9618
+
+- refresh pseudocode examples when the official guide changes
+- continue checking accessibility and mobile layout as content grows
+- add optional topic-specific micro-quizzes if students need shorter retrieval sessions
+
+### A2 9618
+
+- refresh language-specific examples when permitted languages or syllabus details change
+- keep practical reference solutions compatible with supported Python versions
+- add further Paper 3 sets only when there is evidence that another full retest is needed
 
 ## How Students Should Use This Site
 
-Use the pages for targeted revision:
+Use the completed pages for targeted revision:
 
 1. Choose a completed chapter.
 2. Read the syllabus-led explanation.
@@ -31,3 +43,10 @@ Use the pages for targeted revision:
 5. Practise the exam-style questions.
 
 Use this site as a structured revision checklist, then practise with the official syllabus, class notes and past-paper-style practice.
+
+## Maintenance Priorities
+
+1. Run the structural/content/runtime checker before publishing and extend it when site structure changes.
+2. Review syllabus alignment, pseudocode guidance and permitted Paper 4 languages annually.
+3. Continue keyboard, contrast, mobile and long-code-block accessibility checks.
+4. Add further practice only when it remains independent and adds measurable coverage rather than duplicating existing questions.

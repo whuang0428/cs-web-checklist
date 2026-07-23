@@ -1,6 +1,17 @@
 # AS 9618 Chapter 6: Security, Privacy and Data Integrity
+> **Security, Privacy and Data Integrity｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-## How to Use This Chapter
+> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
+> **Target:** Cambridge International AS & A Level Computer Science 9618  
+> **Chapter:** 6 Security, Privacy and Data Integrity  
+> **Main audience:** Students  
+> **Style:** 中文解释 + English mark scheme keywords  
+> **Docsify:** ready  
+> **No local image dependency**
+
+---
+
+## 0. How to Use This Sheet
 
 Chapter 6 不是单纯背定义的章节。2024 和 2025 的 Paper 1 更喜欢把本章放进真实场景，例如：
 
@@ -43,11 +54,50 @@ E --> F[Transfer Checks<br/>parity / checksum]
 
 ---
 
-## 2. Syllabus Checklist
+## 2. Content Update Decision
+
+### 2.1 Keep and Strengthen
+
+| Kept content | Reason |
+| --- | --- |
+| security / privacy / integrity difference | Syllabus core and common definition question |
+| firewall | 2024 banking scenario tested direct explanation |
+| encryption | Frequently appears as data protection method |
+| authentication, especially biometric | Bank/account scenarios are common |
+| malware, hackers, phishing, pharming | Syllabus-listed threats |
+| validation types | Easy marks if students know examples |
+| verification: visual check, double entry | Common contrast with validation |
+| parity byte and parity block | 2024 Paper 1 directly tested parity description |
+| checksum | 2025 Paper 1 directly tested checksum process |
+| access rights | Strong scenario answer for protecting data |
+
+### 2.2 Downweight
+
+| Downweighted content | Why |
+| --- | --- |
+| very deep cryptography algorithms | AS Chapter 6 only needs general encryption concept |
+| detailed biometric AI model training | AI facial recognition belongs more naturally to Chapter 7; here focus on authentication |
+| rare malware types beyond syllabus | virus and spyware are named; worms/trojans useful but not central |
+| long legal/privacy legislation discussion | Chapter 7 handles ethics/ownership; Chapter 6 focuses technical protection |
+| complex checksum arithmetic | Paper 1 usually asks process, not advanced checksum calculation |
+
+### 2.3 Delete / Avoid
+
+| Avoid | Reason |
+| --- | --- |
+| saying validation proves data is correct | Validation only checks reasonableness |
+| saying parity can always correct all errors | Single-byte parity detects error but cannot locate bit; block parity may locate one bit only |
+| saying encryption stops data being intercepted | It does not stop interception; it stops understanding without key |
+| saying firewall removes all viruses | Firewall filters traffic; anti-virus handles malware files/programs |
+| using brand names | Cambridge says no marks for brand names |
+
+---
+
+## 3. Syllabus Checklist
 
 Chapter 6 contains two syllabus sections.
 
-### 5.1 Data Security
+### 6.1 Data Security
 
 Students must be able to:
 
@@ -72,7 +122,7 @@ Students must be able to:
   - **phishing**
   - **pharming**
 
-### 5.2 Data Integrity
+### 6.2 Data Integrity
 
 Students must be able to:
 
@@ -96,7 +146,7 @@ Students must be able to:
 
 ---
 
-## 3. One-Page Mind Map
+## 4. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -141,9 +191,9 @@ mindmap
 
 ---
 
-## 4. 6.1 Data Security
+## 5. 6.1 Data Security
 
-### 4.1 Security vs Privacy vs Integrity
+### 5.1 Security vs Privacy vs Integrity
 
 | Term | Meaning | Simple student version |
 | --- | --- | --- |
@@ -167,7 +217,7 @@ Too vague. You must say **safe from what**: unauthorised access, damage, alterat
 
 ---
 
-### 4.2 Why data security is needed
+### 5.2 Why data security is needed
 
 Data security protects:
 
@@ -192,7 +242,7 @@ When asked "why is data security needed?", write:
 
 ---
 
-### 4.3 User accounts
+### 5.3 User accounts
 
 A **user account** identifies a user on a system.
 
@@ -218,7 +268,7 @@ It can store:
 
 ---
 
-### 4.4 Passwords
+### 5.4 Passwords
 
 A password is a secret value used to prove a user’s identity.
 
@@ -252,7 +302,7 @@ If the question gives a weak password like `John2008`, explain:
 
 ---
 
-### 4.5 Authentication
+### 5.5 Authentication
 
 Authentication checks that a user is who they claim to be.
 
@@ -294,7 +344,7 @@ Examples:
 
 ---
 
-### 4.6 Digital signatures
+### 5.6 Digital signatures
 
 A digital signature can be used to:
 
@@ -315,7 +365,7 @@ Digital signature 不等于手写签名图片。它是用加密相关方法生�
 
 ---
 
-### 4.7 Firewall
+### 5.7 Firewall
 
 A firewall controls traffic between a private network and external networks.
 
@@ -341,7 +391,7 @@ A firewall controls traffic between a private network and external networks.
 
 ---
 
-### 4.8 Anti-virus and anti-spyware
+### 5.8 Anti-virus and anti-spyware
 
 #### Anti-virus software
 
@@ -368,7 +418,7 @@ Spyware may:
 
 ---
 
-### 4.9 Encryption
+### 5.9 Encryption
 
 Encryption converts readable data into unreadable data.
 
@@ -393,7 +443,7 @@ Better wording:
 
 ---
 
-### 4.10 Access rights
+### 5.10 Access rights
 
 Access rights control what a user can do.
 
@@ -419,9 +469,9 @@ Examples:
 
 ---
 
-## 5. Threats to Computer and Data Security
+## 6. Threats to Computer and Data Security
 
-### 5.1 Malware
+### 6.1 Malware
 
 **Malware** means malicious software.
 
@@ -437,7 +487,7 @@ For AS 9618, focus mainly on **virus** and **spyware**, because they are directl
 
 ---
 
-### 5.2 Virus
+### 6.2 Virus
 
 A virus is malware that can replicate and attach itself to files/programs.
 
@@ -459,7 +509,7 @@ A virus is malware that can replicate and attach itself to files/programs.
 
 ---
 
-### 5.3 Spyware
+### 6.3 Spyware
 
 Spyware secretly monitors user activity or collects data.
 
@@ -480,7 +530,7 @@ Spyware secretly monitors user activity or collects data.
 
 ---
 
-### 5.4 Hackers
+### 6.4 Hackers
 
 A hacker may try to gain unauthorised access to a system.
 
@@ -503,7 +553,7 @@ A hacker may try to gain unauthorised access to a system.
 
 ---
 
-### 5.5 Phishing
+### 6.5 Phishing
 
 Phishing uses fake messages to trick users into giving personal information.
 
@@ -522,7 +572,7 @@ Phishing uses fake messages to trick users into giving personal information.
 
 ---
 
-### 5.6 Pharming
+### 6.6 Pharming
 
 Pharming redirects users to a fake website, often even when the correct URL is typed.
 
@@ -539,9 +589,9 @@ Pharming redirects users to a fake website, often even when the correct URL is t
 
 ---
 
-## 6. 6.2 Data Integrity
+## 7. 6.2 Data Integrity
 
-### 6.1 What is data integrity?
+### 7.1 What is data integrity?
 
 Data integrity means data is:
 
@@ -556,7 +606,7 @@ Data integrity means data is:
 
 ---
 
-### 6.2 Validation vs Verification
+### 7.2 Validation vs Verification
 
 | Method | Main purpose | Done by | Can prove data is correct? |
 | --- | --- | --- | --- |
@@ -573,9 +623,9 @@ If age `26` is typed as `62`, range check may accept it because `62` is still re
 
 ---
 
-## 7. Validation Methods
+## 8. Validation Methods
 
-### 7.1 Range check
+### 8.1 Range check
 
 Checks data is within a lower and upper boundary.
 
@@ -591,7 +641,7 @@ Age must be between 16 and 100.
 
 ---
 
-### 7.2 Limit check
+### 8.2 Limit check
 
 Checks data does not go beyond one boundary.
 
@@ -610,7 +660,7 @@ Score must be no more than 100.
 
 ---
 
-### 7.3 Length check
+### 8.3 Length check
 
 Checks the number of characters.
 
@@ -623,7 +673,7 @@ Student ID must be exactly 6 characters.
 
 ---
 
-### 7.4 Format check
+### 8.4 Format check
 
 Checks the pattern of data.
 
@@ -637,7 +687,7 @@ Postcode must follow a required pattern.
 
 ---
 
-### 7.5 Presence check
+### 8.5 Presence check
 
 Checks that data has been entered.
 
@@ -649,7 +699,7 @@ Username field cannot be blank.
 
 ---
 
-### 7.6 Existence check
+### 8.6 Existence check
 
 Checks that data exists in a stored list/file/database.
 
@@ -661,7 +711,7 @@ CustomerID entered must already exist in CUSTOMER table.
 
 ---
 
-### 7.7 Check digit
+### 8.7 Check digit
 
 A check digit is an extra digit calculated from the other digits in a code.
 
@@ -685,9 +735,9 @@ Used for:
 
 ---
 
-## 8. Verification During Data Entry
+## 9. Verification During Data Entry
 
-### 8.1 Visual check
+### 9.1 Visual check
 
 A person compares entered data with the original source.
 
@@ -710,7 +760,7 @@ Compare the typed passport number with the passport document.
 
 ---
 
-### 8.2 Double entry
+### 9.2 Double entry
 
 Data is entered twice and the two entries are compared.
 
@@ -727,9 +777,9 @@ Enter password twice.
 
 ---
 
-## 9. Verification During Data Transfer
+## 10. Verification During Data Transfer
 
-### 9.1 Parity check overview
+### 10.1 Parity check overview
 
 A parity check adds a **parity bit** to make the number of `1` bits odd or even.
 
@@ -763,7 +813,7 @@ Total 1s = 3 odd
 
 ---
 
-### 9.2 Byte parity
+### 10.2 Byte parity
 
 Byte parity checks each byte separately.
 
@@ -783,7 +833,7 @@ Byte parity checks each byte separately.
 
 ---
 
-### 9.3 Block parity
+### 10.3 Block parity
 
 Block parity checks both rows and columns.
 
@@ -802,7 +852,7 @@ Block parity checks both rows and columns.
 
 ---
 
-### 9.4 Checksum
+### 10.4 Checksum
 
 A checksum is a value calculated from a block of data and sent with the data.
 
@@ -829,9 +879,9 @@ sequenceDiagram
 
 ---
 
-## 10. Mark Scheme Keywords
+## 11. Mark Scheme Keywords
 
-### 10.1 Data security
+### 11.1 Data security
 
 | Topic | Keywords / phrases |
 | --- | --- |
@@ -847,7 +897,7 @@ sequenceDiagram
 | Phishing | fake email/message, tricks user, confidential information |
 | Pharming | redirects to fake website, captures personal data |
 
-### 10.2 Data integrity
+### 11.2 Data integrity
 
 | Topic | Keywords / phrases |
 | --- | --- |
@@ -868,7 +918,7 @@ sequenceDiagram
 
 ---
 
-## 11. Common Mistakes — Must Read
+## 12. Common Mistakes — Must Read
 
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
@@ -889,7 +939,7 @@ sequenceDiagram
 
 ---
 
-## 12. Scenario Answer Bank
+## 13. Scenario Answer Bank
 
 | Scenario | Answer direction |
 | --- | --- |
@@ -911,7 +961,7 @@ sequenceDiagram
 
 ---
 
-## 13. 10 Marks Quick Check
+## 14. 10 Marks Quick Check
 
 ### Questions
 
@@ -939,7 +989,7 @@ sequenceDiagram
 
 ---
 
-## 14. 20 Marks Exam-Style Practice with Mark Scheme
+## 15. 20 Marks Exam-Style Practice with Mark Scheme
 
 ### Question 1: Bank data security and integrity [10]
 
