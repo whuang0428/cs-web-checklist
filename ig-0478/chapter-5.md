@@ -1,56 +1,18 @@
 # IGCSE 0478 Chapter 5: The Internet and Its Uses
-> **The Internet and Its Uses｜Syllabus-Aligned Revision Edition**
-> **适用范围**：Cambridge IGCSE Computer Science 0478  
-**章节范围**：5.1 The Internet and the World Wide Web｜5.2 Digital Currency｜5.3 Cyber Security  
-**更新依据**：2026–2028 syllabus + 2025 Paper 1 mark scheme trend + 原 2023–2024 WHBC checklist  
-**目标**：删掉低频/过细内容，保留最容易出现在 `State / Identify / Describe / Explain / Compare / Suggest` 题里的得分点。  
-**建议使用方式**：先背 **Core Exam Sentences**，再用 **Common Mistakes** 检查自己的答案是否太泛。
->
 
----
+## Exam Focus
 
-## 0. Syllabus 更新结论：这一章现在怎么考？
-| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
-| --- | --- | --- | --- |
-| **URL / HTTP / HTTPS / SSL/TLS** | 常考 URL 部分、HTML/DNS/IP/SSL/TLS/Browser 定义；HTTPS 要写出安全机制 | 只写 “HTTPS is secure”，没有写 **SSL/TLS / encryption / digital certificate / public-private key** | 加入 HTTPS 高分模板和 URL 拆分图 |
-| **DNS + webpage retrieval** | 重点考 DNS 的作用、浏览器如何定位并显示网页 | 忘记写 **DNS returns IP address**；把 DNS 写成 “finds website” 太泛 | 固定为 `URL → DNS → IP → web server → HTML → browser renders` |
-| **Web browser functions** | 常以定义表、填空、2 marks list 出现 | 只写 “search the internet”，混淆 search engine 和 browser | 单独列出可得分功能，并强调 browser ≠ search engine |
-| **Cookies** | 2025 高频：session / persistent 对比、用途、由 browser stored/managed | 把 cookies 写成 “virus / spyware”；或只写 “stores data” | 加入 session vs persistent 对比表和常见用途模板 |
-| **Proxy server** | 2025 明显高频：DDoS 防护、caching、hide IP、limit requests、block certain IP | 把 proxy 和 firewall 完全混为一谈 | 加入 proxy vs firewall 对比，以及 proxy 的 2025 答题句 |
-| **DDoS / Botnet** | 2025 考过 diagram-style answer：malware → bot → botnet → many requests → server crashes | 只写 “many requests” 不写 bots / botnet / web server cannot handle | 加入 DDoS 流程图模板 |
-| **Security solutions** | 常要求 “solution + explanation”，不是只列名称 | 只写 “use firewall / password” 没解释如何防护 | 建立 “solution → how it works → what threat it prevents” 表 |
-| **Social engineering** | 2025 直接考定义与例子 | 只写 “hacking people” 太口语、不够精确 | 改成 mark scheme 语言：**manipulating/deceiving people to obtain confidential data** |
-| **Digital currency / blockchain** | 2025 Paper 1 出现较少，但仍在 syllabus；应保留核心流程 | 讲太深：mining, proof-of-work, wallet 等超出 IGCSE 主线 | 缩成 “digital ledger + time-stamped records + cannot be altered” |
-
-
----
-
-### 1. 内容取舍：哪些内容要删？哪些保留？
-#### ✅ 必须保留并重点训练
-| 内容 | 原因 |
-| --- | --- |
-| Internet vs World Wide Web | syllabus 明确要求，常以 1–2 marks 出现 |
-| URL parts: protocol, domain name, web page/file name | 2025 直接考 URL label |
-| HTTP vs HTTPS + SSL/TLS | 2025 高频，HTTPS 要能解释加密和证书 |
-| Web browser functions | 2025 高频填空/表格题 |
-| DNS role and webpage retrieval process | 2025 继续考 DNS role |
-| Session cookies and persistent cookies | 2025 高频对比题 |
-| Digital currency and blockchain basics | syllabus 明确要求，保留核心定义即可 |
-| Cyber security threats | syllabus 明确列出：brute-force, data interception, DDoS, hacking, malware, pharming, phishing, social engineering |
-| Security solutions | 2025 强调 “措施 + 解释”，特别是 password, 2FA, biometrics, firewall, anti-spyware, proxy |
-
-
-#### ⚠️ 降权或删除
-| 原内容 | 处理方式 | 原因 |
+| 考点 | 近期出题方向 | 学生最容易丢分的地方 |
 | --- | --- | --- |
-| 过长的 biometric 优缺点表 | **压缩** | 2025 更常考 biometric 为什么安全，而不是四种技术长表 |
-| SSL 应用场景长列表 | **删除主表** | 考试更重视 SSL/TLS 如何保护数据，不重视背应用清单 |
-| WEP 作为 data interception 防护 | **降权** | 不建议作为主答案，直接写 encryption / SSL/TLS / secure protocol 更稳 |
-| pharming/phishing 过细防范清单 | **压缩成对比表** | 高频是 “process / difference / similarity”，不是长防范清单 |
-| malware 每类超长描述 | **改成一行定义 + 关键 effect** | 更贴近 mark scheme 的短答形式 |
-| digital currency vs cryptocurrency 过度扩展 | **只保留基础区别** | syllabus 核心是 digital currency 和 blockchain，不要求深入 crypto 机制 |
-| “protects the computer” 这类泛泛表达 | **替换成 mark scheme keywords** | 太泛容易 0 分或低分 |
-
+| **URL / HTTP / HTTPS / SSL/TLS** | 常考 URL 部分、HTML/DNS/IP/SSL/TLS/Browser 定义；HTTPS 要写出安全机制 | 只写 “HTTPS is secure”，没有写 **SSL/TLS / encryption / digital certificate / public-private key** |
+| **DNS + webpage retrieval** | 重点考 DNS 的作用、浏览器如何定位并显示网页 | 忘记写 **DNS returns IP address**；把 DNS 写成 “finds website” 太泛 |
+| **Web browser functions** | 常以定义表、填空、2 marks list 出现 | 只写 “search the internet”，混淆 search engine 和 browser |
+| **Cookies** | 2025 高频：session / persistent 对比、用途、由 browser stored/managed | 把 cookies 写成 “virus / spyware”；或只写 “stores data” |
+| **Proxy server** | 2025 明显高频：DDoS 防护、caching、hide IP、limit requests、block certain IP | 把 proxy 和 firewall 完全混为一谈 |
+| **DDoS / Botnet** | 2025 考过 diagram-style answer：malware → bot → botnet → many requests → server crashes | 只写 “many requests” 不写 bots / botnet / web server cannot handle |
+| **Security solutions** | 常要求 “solution + explanation”，不是只列名称 | 只写 “use firewall / password” 没解释如何防护 |
+| **Social engineering** | 2025 直接考定义与例子 | 只写 “hacking people” 太口语、不够精确 |
+| **Digital currency / blockchain** | 2025 Paper 1 出现较少，但仍在 syllabus；应保留核心流程 | 讲太深：mining, proof-of-work, wallet 等超出 IGCSE 主线 |
 
 ---
 

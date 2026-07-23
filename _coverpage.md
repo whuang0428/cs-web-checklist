@@ -28,5 +28,5 @@
   <span>Student revision checklist</span>
   <span>Syllabus-aligned chapters</span>
   <span>Exam-focused summaries</span>
-  <a href="#/coverage">Coverage status</a>
+  <a href="#/coverage">Course coverage</a>
 </div>

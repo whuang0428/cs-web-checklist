@@ -1,17 +1,6 @@
 # AS 9618 Chapter 5: System Software
-> **System Software｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns focus  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 5 System Software  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English mark scheme keywords  
-> **Docsify:** no local image dependency; Mermaid supported  
->
-
----
-
-## 0. How to Use This Sheet
+## How to Use This Chapter
 
 Chapter 5 不是单纯背定义的章节。2024–2025 的趋势更喜欢把 **Operating System / utility software / libraries / IDE / translators** 放进真实场景中问：
 
@@ -56,45 +45,7 @@ G --> H[IDE features]
 
 ---
 
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| OS purpose | 2025 Paper 1 directly asks purpose of OS-style question |
-| file / memory / security / hardware / process management | Core syllabus and common short-answer area |
-| utility software examples | 2024 Paper 1 asks backup / compression style questions |
-| program libraries and DLL | 2024 Paper 1 asks benefits of library files |
-| IDE features | 2024 Paper 1 asks presentation and debugging features directly |
-| compiler / interpreter comparison | Classic high-frequency translator topic |
-| Java partial compilation and interpretation | Explicit syllabus point and easy 2–3 mark answer |
-| scenario wording | Mark schemes reward applied answers, not vague textbook phrases |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| detailed history of operating systems | Rarely gives marks |
-| long GUI vs CLI discussion | Useful background but not central to current Chapter 5 trend |
-| very deep virtual memory algorithms | Mention as memory management only; AS does not require OS-level paging detail here |
-| exact vendor examples / brand names | Cambridge says no marks for brand names |
-| low-level compiler phases | Lexical/syntax/semantic analysis detail is more than needed for AS Chapter 5 |
-| detailed JVM implementation | Only need source code → bytecode → virtual machine/interpreter idea |
-
-### 2.3 Delete / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| “compiler checks one line at a time” | Wrong; interpreter usually works line-by-line |
-| “interpreter creates an executable file” | Wrong |
-| “DLL is only for Windows” | Do not rely on brand/platform-specific wording |
-| “backup prevents data loss completely” | Weak; backup allows recovery after loss |
-| “file compression always loses data” | Wrong; file compression may be lossless |
-
----
-
-## 3. One-Page Mind Map
+## 2. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -139,9 +90,9 @@ mindmap
 
 ---
 
-## 4. 5.1 Operating Systems
+## 3. 5.1 Operating Systems
 
-### 4.1 Why a computer system requires an OS
+### 3.1 Why a computer system requires an OS
 
 #### Student-friendly explanation
 
@@ -170,7 +121,7 @@ This is too vague. You need to say **what it controls / manages** and **why it i
 
 ---
 
-### 4.2 Key OS management tasks
+### 3.2 Key OS management tasks
 
 #### Exam structure
 
@@ -185,7 +136,7 @@ C --> D[Apply to device / user / program]
 
 ---
 
-### 4.3 Memory management
+### 3.3 Memory management
 
 #### Meaning
 
@@ -218,7 +169,7 @@ Memory management 是 OS 管理 main memory / RAM 的过程。它决定哪些 pr
 
 ---
 
-### 4.4 File management
+### 3.4 File management
 
 #### Meaning
 
@@ -241,7 +192,7 @@ File management 是 OS 管理 files 和 folders/directories 的功能。2024 Pap
 + **file location**
 + **permissions / access rights**
 
-#### 2024-style answer bank
+#### 2025-style answer bank
 
 | Question wording | Strong answer |
 | --- | --- |
@@ -257,7 +208,7 @@ Backup is usually **utility software**, not the core meaning of file management.
 
 ---
 
-### 4.5 Security management
+### 3.5 Security management
 
 #### Meaning
 
@@ -288,7 +239,7 @@ Security management 是 OS 防止 unauthorised access，保护 data 和 resource
 
 ---
 
-### 4.6 Hardware / peripheral management
+### 3.6 Hardware / peripheral management
 
 #### Meaning
 
@@ -318,7 +269,7 @@ A printer is much slower than the CPU.
 
 ---
 
-### 4.7 Process management
+### 3.7 Process management
 
 #### Meaning
 
@@ -347,9 +298,9 @@ No. It means managing **running programs**.
 
 ---
 
-## 5. Utility Software
+## 4. Utility Software
 
-### 5.1 What is utility software?
+### 4.1 What is utility software?
 
 Utility software 是 system software 的一种，用来维护、保护、优化或管理 computer system。
 
@@ -368,7 +319,7 @@ Utility software 是 system software 的一种，用来维护、保护、优化�
 
 ---
 
-### 5.2 Back-up software
+### 4.2 Back-up software
 
 #### Meaning
 
@@ -379,7 +330,7 @@ Back-up software creates copies of files/data so they can be restored if the ori
 > It creates a copy of data/files.  
 > The copy can be used to restore data after accidental deletion, corruption, hardware failure or malware attack.
 
-#### 2024-style answer
+#### 2025-style answer
 
 > Back-up software is needed because the file may be accidentally deleted, corrupted or lost due to hardware failure. A backup copy can be restored so the user does not need to recreate the file.
 
@@ -393,7 +344,7 @@ Back-up software creates copies of files/data so they can be restored if the ori
 
 ---
 
-### 5.3 File compression utility
+### 4.3 File compression utility
 
 #### Meaning
 
@@ -418,7 +369,7 @@ Do not say “compression makes the file better quality”. It usually reduces s
 
 ---
 
-### 5.4 Virus checker / anti-virus utility
+### 4.4 Virus checker / anti-virus utility
 
 #### Meaning
 
@@ -439,7 +390,7 @@ No. It reduces risk but cannot guarantee perfect protection.
 
 ---
 
-### 5.5 Defragmentation software
+### 4.5 Defragmentation software
 
 #### Meaning
 
@@ -456,7 +407,7 @@ Defragmentation is mainly relevant to **magnetic hard disks**, not SSDs.
 
 ---
 
-### 5.6 Disk formatter
+### 4.6 Disk formatter
 
 #### Meaning
 
@@ -470,7 +421,7 @@ Disk formatter prepares a storage device for use.
 
 ---
 
-### 5.7 Disk contents analysis / disk repair
+### 4.7 Disk contents analysis / disk repair
 
 #### Meaning
 
@@ -484,9 +435,9 @@ Disk analysis checks storage usage and errors. Disk repair attempts to fix file 
 
 ---
 
-## 6. Program Libraries and DLL Files
+## 5. Program Libraries and DLL Files
 
-### 6.1 What is a program library?
+### 5.1 What is a program library?
 
 A program library is a collection of pre-written routines/modules that programmers can use in their own software.
 
@@ -505,13 +456,13 @@ A program library is a collection of pre-written routines/modules that programme
 | Specialist functions | Developer can use complex functions written by experts |
 | Easier maintenance | Library routine can be updated instead of rewriting every program |
 
-#### 2024-style answer
+#### 2025-style answer
 
 > Using library files saves development time because the student can reuse existing routines. The routines may already have been tested, so there are fewer errors. It also allows the program to be developed in modules.
 
 ---
 
-### 6.2 Dynamic Link Library (DLL)
+### 5.2 Dynamic Link Library (DLL)
 
 #### Meaning
 
@@ -534,9 +485,9 @@ A DLL is a library file that is linked/loaded when the program runs, not permane
 
 ---
 
-## 7. 5.2 Language Translators
+## 6. 5.2 Language Translators
 
-### 7.1 Why translators are needed
+### 6.1 Why translators are needed
 
 Computers execute machine code. Programmers usually write high-level language or assembly language. Translators convert code into a form the processor can execute.
 
@@ -546,7 +497,7 @@ Computers execute machine code. Programmers usually write high-level language or
 
 ---
 
-### 7.2 Assembler
+### 6.2 Assembler
 
 #### Meaning
 
@@ -562,7 +513,7 @@ Do not say assembler translates Java/Python/C++ high-level code. It translates *
 
 ---
 
-### 7.3 Compiler
+### 6.3 Compiler
 
 #### Meaning
 
@@ -594,7 +545,7 @@ Compiler translates the whole high-level language program into object code / exe
 
 ---
 
-### 7.4 Interpreter
+### 6.4 Interpreter
 
 #### Meaning
 
@@ -625,7 +576,7 @@ Interpreter translates and executes high-level language instructions one stateme
 
 ---
 
-### 7.5 Compiler vs interpreter exam comparison
+### 6.5 Compiler vs interpreter exam comparison
 
 | Feature | Compiler | Interpreter |
 | --- | --- | --- |
@@ -642,7 +593,7 @@ Interpreter translates and executes high-level language instructions one stateme
 
 ---
 
-### 7.6 Java partial compilation and interpretation
+### 6.6 Java partial compilation and interpretation
 
 #### What AS students need
 
@@ -676,9 +627,9 @@ For AS 9618, remember: **partially compiled and partially interpreted**.
 
 ---
 
-## 8. Integrated Development Environment (IDE)
+## 7. Integrated Development Environment (IDE)
 
-### 8.1 What is an IDE?
+### 7.1 What is an IDE?
 
 An IDE is software that provides tools to help programmers write, test, debug and maintain programs.
 
@@ -688,7 +639,7 @@ An IDE is software that provides tools to help programmers write, test, debug an
 
 ---
 
-### 8.2 Coding feature: context-sensitive prompts
+### 7.2 Coding feature: context-sensitive prompts
 
 #### Meaning
 
@@ -705,7 +656,7 @@ If a programmer types `print`, the IDE may suggest the correct function syntax o
 
 ---
 
-### 8.3 Initial error detection: dynamic syntax checks
+### 7.3 Initial error detection: dynamic syntax checks
 
 #### Meaning
 
@@ -725,7 +676,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-### 8.4 Presentation features
+### 7.4 Presentation features
 
 2024 Paper 1 asked students to identify and describe presentation features. You need **feature + description**.
 
@@ -743,7 +694,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-### 8.5 Debugging features
+### 7.5 Debugging features
 
 2024 Paper 1 also asked students to identify and describe debugging features.
 
@@ -771,9 +722,9 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 9. Mark Scheme Keywords
+## 8. Mark Scheme Keywords
 
-### 9.1 Operating System
+### 8.1 Operating System
 
 + **interface between user/application and hardware**
 + **manages resources**
@@ -789,7 +740,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **allocates processor time**
 + **schedules processes**
 
-### 9.2 Utility Software
+### 8.2 Utility Software
 
 + **maintain / protect / optimise**
 + **backup copy**
@@ -805,7 +756,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **defragment / contiguous blocks**
 + **disk formatter / file system**
 
-### 9.3 Program Libraries
+### 8.3 Program Libraries
 
 + **existing code**
 + **pre-written routines**
@@ -818,7 +769,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **loaded at runtime**
 + **shared by multiple programs**
 
-### 9.4 Language Translators
+### 8.4 Language Translators
 
 + **source code**
 + **object code**
@@ -833,7 +784,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **bytecode**
 + **virtual machine**
 
-### 9.5 IDE
+### 8.5 IDE
 
 + **context-sensitive prompts**
 + **dynamic syntax checks**
@@ -846,7 +797,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 10. Common Mistakes 易错表
+## 9. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -863,7 +814,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 11. Scenario Answer Bank
+## 10. Scenario Answer Bank
 
 ### Scenario 1: Student writes a program in an IDE
 
@@ -925,7 +876,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 12. Process Diagram: OS + Application + Hardware
+## 11. Process Diagram: OS + Application + Hardware
 
 ```mermaid
 flowchart TD
@@ -944,7 +895,7 @@ OS --> HW[Hardware]
 
 ---
 
-## 13. Process Diagram: Translator Choice
+## 12. Process Diagram: Translator Choice
 
 ```mermaid
 flowchart TD
@@ -961,7 +912,7 @@ I --> J[Virtual machine interprets / executes bytecode]
 
 ---
 
-## 14. 10 Marks Quick Check
+## 13. 10 Marks Quick Check
 
 ### Questions
 
@@ -994,7 +945,7 @@ I --> J[Virtual machine interprets / executes bytecode]
 
 ---
 
-## 15. 20 Marks Exam-Style Practice
+## 14. 20 Marks Exam-Style Practice
 
 ### Question 1: Operating System and Utility Software **[8]**
 
@@ -1032,7 +983,7 @@ A programmer writes a high-level language program.
 
 ---
 
-## 16. 20 Marks Practice Mark Scheme
+## 15. 20 Marks Practice Mark Scheme
 
 ### Question 1 Mark Scheme **[8]**
 

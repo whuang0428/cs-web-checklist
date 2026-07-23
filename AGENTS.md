@@ -86,6 +86,8 @@ Already addressed in the current baseline:
 
 - The home page, cover page, and sidebar link to `coverage.md`.
 - A dependency-free structural checker and GitHub Actions workflow validate chapter inventory, headings, links, navigation and pinned CDN versions.
+- The checker rejects internal editorial/maintenance markers in public student pages and remote Yuque Mermaid placeholders.
+- Mermaid SVGs are fitted to their rendered content bounds so small diagrams do not create large blank areas.
 - Student-facing chapter headings use syllabus-aligned wording instead of `Trend-Based` or `Past Paper Focus` entry titles.
 - Teacher-only sections have been removed from student-facing pages.
 - IGCSE 0478 checklist coverage now includes Chapters 1-10.

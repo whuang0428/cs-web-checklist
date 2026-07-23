@@ -1,15 +1,6 @@
 # A2 9618 Chapter 14: Communication and Internet Technologies
-> **Communication and Internet Technologies｜Syllabus-Aligned Paper 3 Revision Sheet**
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 mark-scheme patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
-> **Syllabus chapter:** 14 Communication and internet technologies  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English mark scheme keywords / phrases  
->
 
----
-
-## 0. How to Use This Sheet
+## How to Use This Chapter
 Chapter 14 表面上是“网络通信”，但考试不是让你随便解释互联网。2024–2025 Paper 3 更喜欢考：
 
 1. **TCP/IP protocol stack 四层的顺序和作用**  
@@ -51,39 +42,7 @@ F --> G[Scenario comparison<br/>which method is suitable?]
 
 ---
 
-## 2. Content Update Decision
-### 2.1 Keep and Strengthen
-| Kept content | Reason |
-| --- | --- |
-| protocol definition | Repeated short-answer question; easy marks if exact wording is used |
-| TCP/IP four layers | Directly tested in 2024 and 2025 |
-| Application / Transport / Internet / Link functions | Mark schemes reward layer-specific phrases |
-| HTTP, FTP, POP3, IMAP, SMTP, BitTorrent | Syllabus names these protocols directly |
-| packet switching process | High-frequency explanation question |
-| circuit switching benefits and drawbacks | Direct 4-mark style question in 2025 |
-| router function in packet switching | Explicit syllabus requirement |
-| circuit vs packet comparison | Common scenario / compare question |
-
-### 2.2 Downweight
-| Downweighted content | Why |
-| --- | --- |
-| full OSI seven-layer model | 9618 Chapter 14 asks for TCP/IP four-layer suite, not OSI detail |
-| exact packet header field list beyond IP / sequence / error-checking idea | Usually not required in detail |
-| BitTorrent tracker / swarm / seeder / leecher vocabulary | Useful extension but not the main mark scheme focus |
-| physical cable / signal-level explanations | More AS communication background; Chapter 14 focus is protocol stack and switching |
-| detailed TCP vs UDP comparison | Not central unless question specifically asks |
-
-### 2.3 Delete / Avoid
-| Avoid | Reason |
-| --- | --- |
-| saying “protocol = software” only | Too vague; protocol is a set of rules |
-| saying “Application Layer is where apps are installed” | Not enough; must mention services/interface/protocols for communication |
-| saying “packet switching is faster” without reason | Not always true; marks require packet behaviour or bandwidth/routing reason |
-| saying “router sends internet” | Too vague; must mention destination address / route / forwarding |
-
----
-
-## 3. One-Page Mind Map
+## 2. One-Page Mind Map
 ```mermaid
 mindmap
   root((Chapter 14<br/>Communication and internet technologies))
@@ -130,8 +89,8 @@ mindmap
 
 ---
 
-## 4. 14.1 Protocols
-### 4.1 What is a protocol?
+## 3. 14.1 Protocols
+### 3.1 What is a protocol?
 #### Mark scheme answer
 > A protocol is a standard set of rules that enables successful communication / data transfer between devices.
 
@@ -156,7 +115,7 @@ This is too vague. You need to say **rules** and **successful data transfer / co
 
 ---
 
-### 4.2 Protocol suite
+### 3.2 Protocol suite
 #### Definition
 > A protocol suite is a collection of related protocols used together to enable communication across a network.
 
@@ -193,8 +152,8 @@ D --> E[Application Layer]
 
 ---
 
-## 5. TCP/IP Four Layers
-### 5.1 Application Layer
+## 4. TCP/IP Four Layers
+### 4.1 Application Layer
 #### Main purpose
 Application Layer 是用户和网络服务最接近的一层。它为应用程序提供通信服务，比如网页访问、文件传输、电子邮件、peer-to-peer file sharing。
 
@@ -217,7 +176,7 @@ Application Layer 是用户和网络服务最接近的一层。它为应用程�
 
 ---
 
-### 5.2 Transport Layer
+### 4.2 Transport Layer
 #### Main purpose
 Transport Layer 负责 source host 到 destination host 之间的数据传输管理。它不关心网页内容是什么，而是关心数据如何可靠地送到正确的 application process。
 
@@ -236,7 +195,7 @@ Transport Layer 负责 source host 到 destination host 之间的数据传输管
 
 ---
 
-### 5.3 Internet Layer
+### 4.3 Internet Layer
 #### Main purpose
 Internet Layer 负责 IP addressing 和 routing。它决定 packet 应该往哪里走。
 
@@ -251,7 +210,7 @@ Internet Layer 负责 IP addressing 和 routing。它决定 packet 应该往哪�
 
 ---
 
-### 5.4 Link Layer
+### 4.4 Link Layer
 #### Main purpose
 Link Layer 负责数据在本地网络中的传输，和实际 network hardware / physical medium 接口。
 
@@ -267,7 +226,7 @@ Link Layer 负责数据在本地网络中的传输，和实际 network hardware 
 
 ---
 
-### 5.5 How the layers interact
+### 4.5 How the layers interact
 #### Recent exam-style answer
 > The TCP/IP suite can be viewed as layers within a stack. Each layer accepts input from the layer above or below it. When a message is sent, it passes from the Application Layer down to the Link Layer. When received, it passes from the Link Layer up to the Application Layer.
 
@@ -297,8 +256,8 @@ sequenceDiagram
 
 ---
 
-## 6. Application Layer Protocols
-### 6.1 Protocol table
+## 5. Application Layer Protocols
+### 5.1 Protocol table
 | Protocol | Full name | Purpose / mark scheme phrase |
 | --- | --- | --- |
 | HTTP / HTTPS | Hypertext Transfer Protocol / Secure | transfers web pages / hypertext documents on the World Wide Web |
@@ -310,7 +269,7 @@ sequenceDiagram
 
 ---
 
-### 6.2 SMTP vs POP3 vs IMAP
+### 5.2 SMTP vs POP3 vs IMAP
 #### SMTP
 SMTP is for **sending** email.
 
@@ -335,7 +294,7 @@ IMAP is also for receiving email, but it keeps messages on the server and synchr
 
 ---
 
-### 6.3 BitTorrent
+### 5.3 BitTorrent
 #### Mark scheme answer
 > BitTorrent provides peer-to-peer file sharing, allowing users to share files directly with each other over the internet without relying on one central web server.
 
@@ -345,7 +304,7 @@ IMAP is also for receiving email, but it keeps messages on the server and synchr
 + no single central server has to provide the whole file
 + suitable for sharing large files with many users
 
-#### Downweighted extension vocabulary
+#### Optional extension vocabulary
 | Term | Simple meaning |
 | --- | --- |
 | peer | a user/device sharing the file |
@@ -357,8 +316,8 @@ For exam revision, the main phrase is still: **peer-to-peer file sharing**.
 
 ---
 
-## 7. 14.2 Circuit Switching
-### 7.1 What is circuit switching?
+## 6. 14.2 Circuit Switching
+### 6.1 What is circuit switching?
 Circuit switching 是在通信开始前，先建立一条 dedicated path / dedicated channel。传输期间，数据都沿着同一路径传输，直到通信结束。
 
 #### Mark scheme answer
@@ -376,7 +335,7 @@ E --> F[Dedicated path released]
 
 ---
 
-### 7.2 Benefits of circuit switching
+### 6.2 Benefits of circuit switching
 | Benefit | Mark scheme phrase |
 | --- | --- |
 | stable communication | suitable for long continuous transmission |
@@ -390,7 +349,7 @@ E --> F[Dedicated path released]
 
 ---
 
-### 7.3 Drawbacks of circuit switching
+### 6.3 Drawbacks of circuit switching
 | Drawback | Mark scheme phrase |
 | --- | --- |
 | setup delay | dedicated connection must be established before transmission starts |
@@ -404,7 +363,7 @@ E --> F[Dedicated path released]
 
 ---
 
-### 7.4 Suitable uses
+### 6.4 Suitable uses
 | Scenario | Why circuit switching may be suitable |
 | --- | --- |
 | traditional telephone call | continuous real-time communication |
@@ -414,8 +373,8 @@ E --> F[Dedicated path released]
 
 ---
 
-## 8. Packet Switching
-### 8.1 What is packet switching?
+## 7. Packet Switching
+### 7.1 What is packet switching?
 Packet switching 是把 message 拆成很多 packets，每个 packet 有 header。Packets 可以独立走不同路线，到达后再重新组合。
 
 #### Mark scheme answer
@@ -423,7 +382,7 @@ Packet switching 是把 message 拆成很多 packets，每个 packet 有 header�
 
 ---
 
-### 8.2 Packet switching process
+### 7.2 Packet switching process
 ```mermaid
 flowchart TD
 A[Original message] --> B[Split into packets]
@@ -446,7 +405,7 @@ G --> H[Missing/damaged packets resent]
 
 ---
 
-### 8.3 Benefits of packet switching
+### 7.3 Benefits of packet switching
 | Benefit | Mark scheme phrase |
 | --- | --- |
 | efficient bandwidth use | bandwidth can be shared between transmissions |
@@ -460,7 +419,7 @@ G --> H[Missing/damaged packets resent]
 
 ---
 
-### 8.4 Drawbacks of packet switching
+### 7.4 Drawbacks of packet switching
 | Drawback | Mark scheme phrase |
 | --- | --- |
 | variable delay | packets may take different routes and arrive at different times |
@@ -474,8 +433,8 @@ G --> H[Missing/damaged packets resent]
 
 ---
 
-## 9. Function of a Router in Packet Switching
-### 9.1 What does a router do?
+## 8. Function of a Router in Packet Switching
+### 8.1 What does a router do?
 A router receives packets, examines the destination address in the packet header, chooses a suitable next hop / route, and forwards the packet.
 
 #### Mark scheme answer
@@ -508,7 +467,7 @@ Better:
 
 ---
 
-## 10. Circuit Switching vs Packet Switching
+## 9. Circuit Switching vs Packet Switching
 | Feature | Circuit switching | Packet switching |
 | --- | --- | --- |
 | Path | dedicated path established first | no dedicated path needed |
@@ -520,20 +479,20 @@ Better:
 | Setup time | setup needed before transmission | no dedicated setup path required |
 | Best for | continuous real-time communication | internet data, file transfer, email, web traffic |
 
-### 4-mark compare answer
+### 5-mark compare answer
 > Circuit switching establishes a dedicated path before data transfer begins, whereas packet switching does not require a dedicated path. In circuit switching, all data follows the same route, but in packet switching, packets may take different routes. Circuit switching reserves the whole bandwidth, whereas packet switching shares bandwidth. Packet switching may require packets to be reassembled at the destination.
 
 ---
 
-## 11. Mark Scheme Keywords
-### 11.1 Protocols
+## 10. Mark Scheme Keywords
+### 10.1 Protocols
 + **standard set of rules**
 + **successful data transfer**
 + **communication between devices**
 + **compatibility between devices / platforms**
 + **independent of hardware / software**
 
-### 11.2 TCP/IP Stack
+### 10.2 TCP/IP Stack
 + **layers within a stack**
 + **adjacent layer**
 + **Application, Transport, Internet, Link**
@@ -541,13 +500,13 @@ Better:
 + **message passes up the stack when received**
 + **Link Layer interfaces directly with the network**
 
-### 11.3 Application Layer
+### 10.3 Application Layer
 + **services / interface with the user**
 + **access to applications**
 + **file transfer / email / network file access**
 + **protocols used to exchange data**
 
-### 11.4 Transport Layer
+### 10.4 Transport Layer
 + **end-to-end delivery**
 + **logical communication between applications**
 + **breaks data into segments**
@@ -556,7 +515,7 @@ Better:
 + **error-free delivery**
 + **retransmits lost packets**
 
-### 11.5 Packet Switching
+### 10.5 Packet Switching
 + **data broken into packets**
 + **packet header**
 + **source and destination IP address**
@@ -567,7 +526,7 @@ Better:
 + **reassembled at destination**
 + **missing / damaged packets resent**
 
-### 11.6 Circuit Switching
+### 10.6 Circuit Switching
 + **dedicated path / channel**
 + **established before transmission**
 + **same path for whole communication**
@@ -576,7 +535,7 @@ Better:
 + **setup delay**
 + **no alternative route if failure occurs**
 
-### 11.7 Router
+### 10.7 Router
 + **reads destination IP address**
 + **uses routing table**
 + **selects next hop**
@@ -585,7 +544,7 @@ Better:
 
 ---
 
-## 12. Common Mistakes — Must Read
+## 11. Common Mistakes — Must Read
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
 | Define protocol | “a connection method” | “a standard set of rules for communication / data transfer” |
@@ -603,7 +562,7 @@ Better:
 
 ---
 
-## 13. Scenario Answer Bank
+## 12. Scenario Answer Bank
 | Scenario | Best answer direction |
 | --- | --- |
 | A company wants stable long continuous voice communication | circuit switching; dedicated path; steady rate; same route |
@@ -621,7 +580,7 @@ Better:
 
 ---
 
-## 14. 10 Marks Quick Check
+## 13. 10 Marks Quick Check
 ### Questions
 1. Define the term protocol. [1]  
 2. State the four layers of the TCP/IP protocol stack in order from top to bottom. [2]  
@@ -644,7 +603,7 @@ Better:
 
 ---
 
-## 15. 20 Marks Exam-Style Practice
+## 14. 20 Marks Exam-Style Practice
 ### Question 1: TCP/IP stack and protocols [7]
 (a) Explain why protocols are essential for communication between computers. [2]  
 (b) State the four layers of the TCP/IP stack in correct order from top to bottom. [2]  
@@ -684,4 +643,3 @@ A student sends a large file across the internet.
 (c) Router reads destination IP address and forwards packet to next hop / best available route using routing table. [1]
 
 ---
-

@@ -1,15 +1,6 @@
 # A2 9618 Chapter 15: Hardware and Virtual Machines
-> **Hardware and Virtual Machines｜Syllabus-Aligned Paper 3 Revision Sheet**
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
-> **Chapter:** 15 Hardware and Virtual Machines  
-> **Main audience:** Students preparing for Paper 3 Advanced Theory  
-> **Style:** 中文解释 + English mark scheme keywords  
->
 
----
-
-## 0. How to Use This Sheet
+## How to Use This Chapter
 
 Chapter 15 看起来内容很多，但考试不是平均考所有内容。2024–2025 Paper 3 的趋势很明显：
 
@@ -52,50 +43,7 @@ F --> G[K-map<br/>grouping / simplified expression]
 
 ---
 
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| RISC features | 2024 Paper 3 asked directly for RISC features |
-| interrupt handling and pipelining | Short-answer mark scheme rewards exact sequence phrases |
-| SISD, SIMD, MISD, MIMD | Repeated 2023–2024 and still syllabus core |
-| massively parallel computers | Often appears as definition/description |
-| virtual machines | syllabus explicit and scenario-friendly |
-| Boolean algebra laws | 2025 mark scheme rewards law names and correct application |
-| De Morgan's laws | 2025 directly rewarded correct De Morgan application |
-| truth tables | 2024–2025 Paper 3 repeatedly tests intermediate columns and final output |
-| sum-of-products | frequent bridge between truth tables and simplification |
-| K-map | 2024–2025 very high-value skill |
-| SR/JK flip-flops | syllabus explicit; useful for data storage questions |
-| half adder / full adder | syllabus explicit; linked to truth tables and logic circuits |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| transistor-level explanation of RISC/CISC | not needed for CAIE mark scheme |
-| detailed CPU microarchitecture | only high-level features are usually rewarded |
-| complex electronic timing diagrams for flip-flops | beyond syllabus depth |
-| excessive Boolean law memorisation without use | students need application more than a long law list |
-| drawing perfect circuit diagrams for every expression | Paper 3 more often rewards truth table, expression and simplification |
-| commercial virtualisation product names | brand names are not awarded |
-
-### 2.3 Delete / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| saying RISC is always faster than CISC | too absolute; depends on design and task |
-| saying virtual machines are "fake computers" only | too vague |
-| using normal binary order in K-map columns | K-map uses Gray code order |
-| grouping K-map 1s in groups of 3 or 6 | groups must be powers of 2 |
-| applying De Morgan by only changing AND/OR but not complementing terms | loses marks |
-| using `+` as arithmetic addition in Boolean algebra | in Boolean algebra, `+` means OR |
-
----
-
-## 3. One-Page Mind Map
+## 2. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -147,9 +95,9 @@ mindmap
 
 ---
 
-## 4. 15.1 Processors, Parallel Processing and Virtual Machines
+## 3. 15.1 Processors, Parallel Processing and Virtual Machines
 
-### 4.1 RISC processors
+### 3.1 RISC processors
 
 #### Core idea
 RISC means **Reduced Instruction Set Computer**.
@@ -171,7 +119,7 @@ RISC processor 的设计思想是：
 + **pipelining**
 + **hard-wired control unit**
 
-#### 2024–2025 style features
+#### 2025–2025 style features
 | Feature | Explanation |
 | --- | --- |
 | Few instructions | instruction set is reduced |
@@ -190,7 +138,7 @@ This is too vague. You need features such as **fixed length instructions**, **fe
 
 ---
 
-### 4.2 CISC processors
+### 3.2 CISC processors
 
 CISC means **Complex Instruction Set Computer**.
 
@@ -221,7 +169,7 @@ CISC processor 的设计思想是：
 
 ---
 
-### 4.3 Interrupt handling on RISC and CISC processors
+### 3.3 Interrupt handling on RISC and CISC processors
 
 #### Basic interrupt sequence
 Interrupt handling 的核心不是“CPU stop”，而是：
@@ -240,7 +188,7 @@ Interrupt handling 的核心不是“CPU stop”，而是：
 #### Pipeline issue
 Pipelining 会让 interrupt handling 更复杂，因为 pipeline 里可能已经有多条 instruction 正在不同 stage 中执行。
 
-#### 2024-style phrase
+#### 2025-style phrase
 > There may be a number of instructions still in the pipeline when the interrupt is received, so some instructions may need to be discarded or the processor must restart from the correct next instruction after the ISR.
 >
 
@@ -254,7 +202,7 @@ Pipelining 会让 interrupt handling 更复杂，因为 pipeline 里可能已经
 
 ---
 
-### 4.4 Pipelining in RISC processors
+### 3.4 Pipelining in RISC processors
 
 #### Core idea
 Pipelining means different instructions can be at different stages of execution at the same time.
@@ -295,9 +243,9 @@ This makes pipeline stages more regular.
 
 ---
 
-## 5. Parallel Processing Architectures
+## 4. Parallel Processing Architectures
 
-### 5.1 Flynn's four architectures
+### 4.1 Flynn's four architectures
 
 The four basic computer architectures are:
 
@@ -311,7 +259,7 @@ The key exam skill is:
 
 ---
 
-### 5.2 SISD
+### 4.2 SISD
 
 #### Full name
 **Single Instruction, Single Data**
@@ -331,7 +279,7 @@ A traditional single-core computer running one instruction at a time.
 
 ---
 
-### 5.3 SIMD
+### 4.3 SIMD
 
 #### Full name
 **Single Instruction, Multiple Data**
@@ -357,7 +305,7 @@ Wrong. SIMD = one instruction, many data items.
 
 ---
 
-### 5.4 MISD
+### 4.4 MISD
 
 #### Full name
 **Multiple Instruction, Single Data**
@@ -380,7 +328,7 @@ MISD is less common in real systems, but it is still syllabus content.
 
 ---
 
-### 5.5 MIMD
+### 4.5 MIMD
 
 #### Full name
 **Multiple Instruction, Multiple Data**
@@ -400,7 +348,7 @@ A multi-core computer running different tasks on different cores.
 
 ---
 
-### 5.6 Quick comparison table
+### 4.6 Quick comparison table
 
 | Architecture | Instructions | Data | Simple exam phrase |
 | --- | --- | --- | --- |
@@ -411,9 +359,9 @@ A multi-core computer running different tasks on different cores.
 
 ---
 
-## 6. Massively Parallel Computers
+## 5. Massively Parallel Computers
 
-### 6.1 Definition
+### 5.1 Definition
 A massively parallel computer uses a large number of processors or separate computers to perform coordinated computations at the same time.
 
 #### Mark scheme answer
@@ -445,9 +393,9 @@ Too vague. You must mention **many processors** and **parallel coordinated proce
 
 ---
 
-## 7. Virtual Machines
+## 6. Virtual Machines
 
-### 7.1 Concept of a virtual machine
+### 6.1 Concept of a virtual machine
 
 A **virtual machine (VM)** is a software-based emulation of a computer system. It runs on a physical computer but behaves like a separate computer.
 
@@ -465,7 +413,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ---
 
-### 7.2 Roles / examples of virtual machines
+### 6.2 Roles / examples of virtual machines
 
 | Role | Example |
 | --- | --- |
@@ -482,7 +430,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ---
 
-### 7.3 Benefits of virtual machines
+### 6.3 Benefits of virtual machines
 
 | Benefit | Explanation |
 | --- | --- |
@@ -500,7 +448,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ---
 
-### 7.4 Limitations of virtual machines
+### 6.4 Limitations of virtual machines
 
 | Limitation | Explanation |
 | --- | --- |
@@ -517,9 +465,9 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ---
 
-## 8. 15.2 Boolean Algebra and Logic Circuits
+## 7. 15.2 Boolean Algebra and Logic Circuits
 
-### 8.1 Boolean algebra notation
+### 7.1 Boolean algebra notation
 
 | Symbol | Meaning | Logic gate |
 | --- | --- | --- |
@@ -545,7 +493,7 @@ It means **OR**.
 
 ---
 
-### 8.2 Core Boolean laws
+### 7.2 Core Boolean laws
 
 | Law | AND form | OR form |
 | --- | --- | --- |
@@ -558,7 +506,7 @@ It means **OR**.
 | Absorption | `A.(A + B) = A` | `A + A.B = A` |
 | Double complement | `(A')' = A` | — |
 
-#### 2025 trend
+#### 2026 trend
 2025 mark schemes reward not only the final answer but also correct application of laws such as:
 
 + **De Morgan's laws**
@@ -570,7 +518,7 @@ So when showing working, write the law name if possible.
 
 ---
 
-### 8.3 De Morgan's laws
+### 7.3 De Morgan's laws
 
 #### Law 1
 ```text
@@ -622,9 +570,9 @@ Step:
 
 ---
 
-## 9. Truth Tables
+## 8. Truth Tables
 
-### 9.1 Truth table method
+### 8.1 Truth table method
 
 For Paper 3, when a circuit or expression is given, do not jump straight to the answer. Make working columns.
 
@@ -659,7 +607,7 @@ So always show working columns.
 
 ---
 
-### 9.2 Sum-of-products
+### 8.2 Sum-of-products
 
 A **sum-of-products** expression is made by OR-ing together product terms.
 
@@ -710,9 +658,9 @@ Z = C
 
 ---
 
-## 10. Half Adders and Full Adders
+## 9. Half Adders and Full Adders
 
-### 10.1 Half adder
+### 9.1 Half adder
 
 A half adder adds two one-bit inputs.
 
@@ -746,7 +694,7 @@ C = A.B
 
 ---
 
-### 10.2 Full adder
+### 9.2 Full adder
 
 A full adder adds three one-bit inputs:
 
@@ -783,9 +731,9 @@ Cout = A.B + A.Cin + B.Cin
 
 ---
 
-## 11. Flip-Flops
+## 10. Flip-Flops
 
-### 11.1 What is a flip-flop?
+### 10.1 What is a flip-flop?
 
 A flip-flop is a logic circuit that can store one bit of data.
 
@@ -802,7 +750,7 @@ A flip-flop is a logic circuit that can store one bit of data.
 
 ---
 
-### 11.2 SR flip-flop
+### 10.2 SR flip-flop
 
 SR means:
 
@@ -822,7 +770,7 @@ SR flip-flop can store a bit because when `S = 0` and `R = 0`, the output stays 
 
 ---
 
-### 11.3 JK flip-flop
+### 10.3 JK flip-flop
 
 JK flip-flop solves the invalid state problem of SR.
 
@@ -840,9 +788,9 @@ JK flip-flop solves the invalid state problem of SR.
 
 ---
 
-## 12. Karnaugh Maps
+## 11. Karnaugh Maps
 
-### 12.1 What is a K-map?
+### 11.1 What is a K-map?
 
 A Karnaugh map is a visual method for simplifying Boolean expressions.
 
@@ -858,7 +806,7 @@ A Karnaugh map is a visual method for simplifying Boolean expressions.
 
 ---
 
-### 12.2 K-map order
+### 11.2 K-map order
 
 For two variables:
 
@@ -898,7 +846,7 @@ Not:
 
 ---
 
-### 12.3 Grouping rules
+### 11.3 Grouping rules
 
 | Rule | Explanation |
 | --- | --- |
@@ -920,7 +868,7 @@ Not:
 
 ---
 
-### 12.4 Reading a group
+### 11.4 Reading a group
 
 When reading a group:
 
@@ -948,9 +896,9 @@ Z = C
 
 ---
 
-## 13. Mark Scheme Keywords
+## 12. Mark Scheme Keywords
 
-### 13.1 RISC / CISC
+### 12.1 RISC / CISC
 + **Reduced Instruction Set Computer**
 + **Complex Instruction Set Computer**
 + **few instructions**
@@ -963,7 +911,7 @@ Z = C
 + **variable length instructions**
 + **several clock cycles**
 
-### 13.2 Interrupts
+### 12.2 Interrupts
 + **interrupt detected**
 + **fetch-execute cycle**
 + **temporarily stopped**
@@ -974,7 +922,7 @@ Z = C
 + **registers restored**
 + **pipeline flushed / discarded instructions**
 
-### 13.3 Parallel processing
+### 12.3 Parallel processing
 + **SISD**
 + **SIMD**
 + **MISD**
@@ -987,7 +935,7 @@ Z = C
 + **coordinated computations**
 + **message interface**
 
-### 13.4 Virtual machines
+### 12.4 Virtual machines
 + **software emulation**
 + **host**
 + **guest**
@@ -998,7 +946,7 @@ Z = C
 + **performance overhead**
 + **single point of failure**
 
-### 13.5 Boolean / K-map
+### 12.5 Boolean / K-map
 + **truth table**
 + **intermediate columns**
 + **sum-of-products**
@@ -1014,7 +962,7 @@ Z = C
 + **wrap-around**
 + **simplified expression**
 
-### 13.6 Flip-flops and adders
+### 12.6 Flip-flops and adders
 + **half adder**
 + **full adder**
 + **sum**
@@ -1028,7 +976,7 @@ Z = C
 
 ---
 
-## 14. Common Mistakes 易错表
+## 13. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -1047,7 +995,7 @@ Z = C
 
 ---
 
-## 15. Scenario Answer Bank
+## 14. Scenario Answer Bank
 
 ### Scenario 1: A CPU designer chooses RISC for a new embedded processor.
 #### Answer template
@@ -1086,9 +1034,9 @@ Z = C
 
 ---
 
-## 16. Mermaid Process Diagrams
+## 15. Mermaid Process Diagrams
 
-### 16.1 Interrupt handling process
+### 15.1 Interrupt handling process
 
 ```mermaid
 flowchart TD
@@ -1099,7 +1047,7 @@ D --> E[Restore saved state]
 E --> F[Continue original program]
 ```
 
-### 16.2 VM structure
+### 15.2 VM structure
 
 ```mermaid
 flowchart TD
@@ -1110,7 +1058,7 @@ C --> E[Guest VM 2<br/>OS + Apps]
 C --> F[Guest VM 3<br/>OS + Apps]
 ```
 
-### 16.3 K-map simplification process
+### 15.3 K-map simplification process
 
 ```mermaid
 flowchart LR
@@ -1123,7 +1071,7 @@ E --> F[Write simplified expression]
 
 ---
 
-## 17. 10 Marks Quick Check
+## 16. 10 Marks Quick Check
 
 ### Questions
 
@@ -1149,7 +1097,7 @@ E --> F[Write simplified expression]
 
 ---
 
-## 18. 20 Marks Exam-Style Practice with Mark Scheme
+## 17. 20 Marks Exam-Style Practice with Mark Scheme
 
 ### Question 1: RISC, interrupts and pipelining `[6]`
 

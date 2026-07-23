@@ -1,17 +1,6 @@
 # A2 9618 Chapter 17: Security
-> **Security｜Syllabus-Aligned Paper 3 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 17 Security  
-> **Main audience:** A2 students  
-> **Style:** Chinese explanation + English mark scheme keywords  
-> **Docsify:** ready  
->
-
----
-
-## 0. How to Use This Sheet
+## How to Use This Chapter
 
 Chapter 17 不是“网络安全常识”章节，而是一个非常典型的 **mark scheme keyword chapter**。2024–2025 Paper 3 更喜欢考：
 
@@ -56,47 +45,7 @@ G --> I[Digital Signature<br/>authentication + integrity]
 
 ---
 
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| plaintext, ciphertext, encryption, decryption | Core vocabulary; common low-mark questions |
-| symmetric key cryptography | Required by syllabus and easy comparison marks |
-| asymmetric key cryptography | Very high-frequency Paper 3 concept |
-| public/private key pair | Most common source of student mistakes |
-| private message process | Mark schemes reward correct key direction |
-| verified/public message process | Often confused with private message process |
-| digital certificates | 2024–2025 trend remains strong |
-| Certificate Authority (CA) | Needed for digital certificate explanation |
-| digital signatures | Required link between private key and verification |
-| SSL/TLS | Required by syllabus; common client-server scenario |
-| quantum cryptography | Often appears as benefits/drawbacks short answer |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| detailed mathematical encryption algorithms | Syllabus asks understanding, not RSA maths |
-| very deep SSL/TLS packet-level detail | Need purpose and handshake idea, not full protocol engineering |
-| malware types in detail | More AS security / general security, not the A2 Chapter 17 focus |
-| long history of SSL vs TLS | Only need know TLS is newer / more secure version idea |
-| certificate chain technical depth | Useful extension, but exam usually wants CA + public key + identity |
-
-### 2.3 Remove / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| saying “public key is secret” | Public key is shared openly |
-| saying “private key is sent to receiver” | Private key must be kept secret |
-| saying “digital certificate is the same as digital signature” | They are related but different |
-| saying “SSL/TLS only encrypts passwords” | It secures client-server communication generally |
-| saying “quantum cryptography means quantum computer encryption” | It mainly uses quantum properties for secure key exchange / detecting eavesdropping |
-
----
-
-## 3. One-Page Mind Map
+## 2. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -145,9 +94,9 @@ mindmap
 
 ---
 
-## 4. 17.1 Encryption, Encryption Protocols and Digital Certificates
+## 3. 17.1 Encryption, Encryption Protocols and Digital Certificates
 
-### 4.1 Core encryption vocabulary
+### 3.1 Core encryption vocabulary
 
 | Term | Chinese explanation | Mark scheme style phrase |
 | --- | --- | --- |
@@ -179,7 +128,7 @@ This is too vague. You must say **how**: plaintext becomes ciphertext using a ke
 
 ---
 
-### 4.2 Symmetric key cryptography
+### 3.2 Symmetric key cryptography
 
 #### Definition
 
@@ -223,7 +172,7 @@ sequenceDiagram
 
 ---
 
-### 4.3 Asymmetric key cryptography
+### 3.3 Asymmetric key cryptography
 
 #### Definition
 
@@ -248,13 +197,13 @@ sequenceDiagram
 
 ---
 
-## 5. Two Different Uses of Public and Private Keys
+## 4. Two Different Uses of Public and Private Keys
 
 This is the most important part of Chapter 17. Students lose marks because they mix up these two cases.
 
 ---
 
-### 5.1 Case 1: Sending a private message to an individual / organisation
+### 4.1 Case 1: Sending a private message to an individual / organisation
 
 #### Scenario
 
@@ -293,7 +242,7 @@ sequenceDiagram
 
 ---
 
-### 5.2 Case 2: Sending a verified message to the public
+### 4.2 Case 2: Sending a verified message to the public
 
 #### Scenario
 
@@ -337,7 +286,7 @@ sequenceDiagram
 
 ---
 
-## 6. Symmetric vs Asymmetric Cryptography
+## 5. Symmetric vs Asymmetric Cryptography
 
 | Feature | Symmetric cryptography | Asymmetric cryptography |
 | --- | --- | --- |
@@ -354,9 +303,9 @@ sequenceDiagram
 
 ---
 
-## 7. SSL / TLS
+## 6. SSL / TLS
 
-### 7.1 Purpose of SSL/TLS
+### 6.1 Purpose of SSL/TLS
 
 SSL means **Secure Socket Layer**. TLS means **Transport Layer Security**.
 
@@ -379,7 +328,7 @@ In modern wording, TLS is the newer and more secure protocol, but exam answers o
 
 ---
 
-### 7.2 Where SSL/TLS is appropriate
+### 6.2 Where SSL/TLS is appropriate
 
 | Situation | Why SSL/TLS is suitable |
 | --- | --- |
@@ -396,7 +345,7 @@ In modern wording, TLS is the newer and more secure protocol, but exam answers o
 
 ---
 
-### 7.3 Simplified TLS handshake process
+### 6.3 Simplified TLS handshake process
 
 You do not need full industry-level TLS detail, but you should know the logic.
 
@@ -439,9 +388,9 @@ sequenceDiagram
 
 ---
 
-## 8. Digital Certificates
+## 7. Digital Certificates
 
-### 8.1 What is a digital certificate?
+### 7.1 What is a digital certificate?
 
 A digital certificate is an electronic document used to prove the identity of a website, person or organisation.
 
@@ -459,7 +408,7 @@ It normally contains:
 
 ---
 
-### 8.2 Certificate Authority (CA)
+### 7.2 Certificate Authority (CA)
 
 A **Certificate Authority** is a trusted organisation that issues digital certificates.
 
@@ -476,7 +425,7 @@ A **Certificate Authority** is a trusted organisation that issues digital certif
 
 ---
 
-### 8.3 How a digital certificate is acquired
+### 7.3 How a digital certificate is acquired
 
 ```mermaid
 flowchart TD
@@ -494,7 +443,7 @@ F --> G[CA digitally signs certificate]
 
 ---
 
-### 8.4 How a digital certificate is used in TLS
+### 7.4 How a digital certificate is used in TLS
 
 ```mermaid
 flowchart LR
@@ -516,9 +465,9 @@ E -->|No| G[Warning / connection blocked]
 
 ---
 
-## 9. Digital Signatures
+## 8. Digital Signatures
 
-### 9.1 Purpose
+### 8.1 Purpose
 
 A digital signature is used to prove:
 
@@ -526,7 +475,7 @@ A digital signature is used to prove:
 2. **integrity** — message has not been changed
 3. **non-repudiation** — sender cannot easily deny sending it
 
-### 9.2 How a digital signature is produced
+### 8.2 How a digital signature is produced
 
 ```mermaid
 flowchart TD
@@ -537,7 +486,7 @@ D --> E[Digital signature]
 E --> F[Send message + signature]
 ```
 
-### 9.3 How a digital signature is verified
+### 8.3 How a digital signature is verified
 
 ```mermaid
 flowchart TD
@@ -563,9 +512,9 @@ E -->|No| G[Invalid signature / message altered]
 
 ---
 
-## 10. Quantum Cryptography
+## 9. Quantum Cryptography
 
-### 10.1 Purpose
+### 9.1 Purpose
 
 Quantum cryptography is used to create highly secure communication, especially for key exchange.
 
@@ -573,7 +522,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 
 > Quantum cryptography uses the principles of quantum mechanics / properties of photons to provide secure communication and detect eavesdropping.
 
-### 10.2 Benefits
+### 9.2 Benefits
 
 | Benefit | Mark scheme style explanation |
 | --- | --- |
@@ -582,7 +531,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 | useful for sensitive data | suitable for government / financial / military data |
 | supports secure key exchange | keys can be exchanged with detection of interception |
 
-### 10.3 Drawbacks
+### 9.3 Drawbacks
 
 | Drawback | Explanation |
 | --- | --- |
@@ -598,9 +547,9 @@ Quantum cryptography is used to create highly secure communication, especially f
 
 ---
 
-## 11. Mark Scheme Keywords
+## 10. Mark Scheme Keywords
 
-### 11.1 Encryption
+### 10.1 Encryption
 
 + **plaintext**
 + **ciphertext**
@@ -610,7 +559,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 + **decrypt**
 + **intercepted data cannot be understood**
 
-### 11.2 Symmetric cryptography
+### 10.2 Symmetric cryptography
 
 + **same key**
 + **shared secret key**
@@ -619,7 +568,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 + **key distribution problem**
 + **key must be kept secret**
 
-### 11.3 Asymmetric cryptography
+### 10.3 Asymmetric cryptography
 
 + **public key**
 + **private key**
@@ -629,7 +578,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 + **private key kept secret**
 + **encrypted with one key, decrypted with the other**
 
-### 11.4 SSL/TLS
+### 10.4 SSL/TLS
 
 + **secure communication**
 + **client-server**
@@ -640,7 +589,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 + **data integrity**
 + **HTTPS**
 
-### 11.5 Digital certificate
+### 10.5 Digital certificate
 
 + **electronic document**
 + **Certificate Authority / CA**
@@ -650,7 +599,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 + **validity period**
 + **authenticate**
 
-### 11.6 Digital signature
+### 10.6 Digital signature
 
 + **hash / message digest**
 + **sender's private key**
@@ -660,7 +609,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 + **non-repudiation**
 + **message has not been altered**
 
-### 11.7 Quantum cryptography
+### 10.7 Quantum cryptography
 
 + **quantum mechanics**
 + **photons**
@@ -672,7 +621,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 
 ---
 
-## 12. Common Mistakes 易错表
+## 11. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct answer |
 | --- | --- | --- |
@@ -689,41 +638,41 @@ Quantum cryptography is used to create highly secure communication, especially f
 
 ---
 
-## 13. Scenario Answer Bank
+## 12. Scenario Answer Bank
 
-### 13.1 Online banking uses HTTPS
+### 12.1 Online banking uses HTTPS
 
 > HTTPS uses SSL/TLS to create a secure client-server session. The bank server sends a digital certificate containing its public key. The browser checks that the certificate is trusted and issued by a Certificate Authority. A session key is established and used to encrypt data such as passwords and transaction details. This helps provide confidentiality, authentication and data integrity.
 
 ---
 
-### 13.2 A customer sends a private message to a company
+### 12.2 A customer sends a private message to a company
 
 > The customer obtains the company's public key, often from a digital certificate. The customer encrypts the plaintext using the company's public key to produce ciphertext. The ciphertext is sent to the company. Only the company can decrypt the message because only the company has the matching private key.
 
 ---
 
-### 13.3 A software company signs an update
+### 12.3 A software company signs an update
 
 > The software company creates a hash of the update and encrypts the hash using its private key to create a digital signature. The user's computer uses the company's public key to verify the signature. If the calculated hash matches the decrypted hash, the update is verified as coming from the company and not being altered.
 
 ---
 
-### 13.4 A school wants to prove its website is genuine
+### 12.4 A school wants to prove its website is genuine
 
 > The school applies to a Certificate Authority for a digital certificate. The CA checks the school's identity or domain ownership and issues a certificate containing the school's public key. When users visit the website, their browser checks the CA signature and certificate details to authenticate the website.
 
 ---
 
-### 13.5 A government department considers quantum cryptography
+### 12.5 A government department considers quantum cryptography
 
 > Quantum cryptography may be suitable because it can detect eavesdropping and offers very high security for sensitive data. However, it can be expensive, requires specialist equipment and may have distance limitations, so it may not be suitable for every network.
 
 ---
 
-## 14. Process Diagrams
+## 13. Process Diagrams
 
-### 14.1 Private message using asymmetric cryptography
+### 13.1 Private message using asymmetric cryptography
 
 ```mermaid
 flowchart TD
@@ -734,7 +683,7 @@ D --> E[Receiver decrypts using receiver private key]
 E --> F[Plaintext recovered]
 ```
 
-### 14.2 Digital signature process
+### 13.2 Digital signature process
 
 ```mermaid
 flowchart TD
@@ -750,7 +699,7 @@ H -->|Yes| I[Authentic and unchanged]
 H -->|No| J[Invalid / altered]
 ```
 
-### 14.3 TLS simplified process
+### 13.3 TLS simplified process
 
 ```mermaid
 flowchart TD
@@ -763,7 +712,7 @@ E --> F[Data transferred securely]
 
 ---
 
-## 15. 10 Marks Quick Check
+## 14. 10 Marks Quick Check
 
 ### Questions
 
@@ -787,7 +736,7 @@ E --> F[Data transferred securely]
 
 ---
 
-## 16. 20 Marks Exam-Style Practice
+## 15. 20 Marks Exam-Style Practice
 
 ### Question 1 — Asymmetric cryptography and private messages [5]
 

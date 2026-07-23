@@ -1,17 +1,6 @@
 # A2 9618 Chapter 16: System Software
-> **System Software｜Syllabus-Aligned Paper 3 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 16 System Software  
-> **Main audience:** A2 students  
-> **Style:** Chinese explanation + English mark scheme keywords  
-> **Docsify:** ready  
->
-
----
-
-## 0. How to Use This Sheet
+## How to Use This Chapter
 
 Chapter 16 不是简单背“OS 是什么”的章节。2024–2025 Paper 3 更喜欢考：
 
@@ -51,46 +40,7 @@ F --> G[RPN<br/>stack evaluation]
 
 ---
 
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| OS resource management | Syllabus core; often appears inside scenario questions |
-| process states and scheduling | 2025 mark scheme directly rewards scheduling vocabulary |
-| round robin / FCFS / SJF / SRT | Must compare and explain benefits / drawbacks |
-| interrupt handling | Common short-answer topic and links to CPU / process management |
-| virtual memory, paging, segmentation | 2024–2025 style questions like asking exact process / definition |
-| disk thrashing | Very common 3-mark explanation topic |
-| interpreter / compiler | 2025 explicitly tested interpreter operation |
-| lexical analysis / syntax analysis / code generation / optimisation | Standard compiler-stage marks |
-| BNF and syntax diagrams | Repeated Paper 3 high-frequency skill |
-| RPN with stack | Repeated Paper 3 high-frequency skill |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| very deep OS architecture beyond kernel/user mode | Usually not needed for marks |
-| complex page replacement algorithms beyond FIFO / usage idea | Cambridge normally expects concept, not full algorithm design |
-| linker / loader detail | Useful background but not central to Chapter 16 syllabus wording |
-| advanced compiler theory such as parse trees in detail | BNF / syntax diagrams are more frequently rewarded |
-| complex RPN expressions with too many operators | Students need method first; exams usually reward step-by-step stack use |
-
-### 2.3 Remove / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| memorising brand-name operating systems | No marks awarded for brand names |
-| saying "virtual memory is RAM" | Virtual memory uses secondary storage as if it were main memory |
-| saying "interpreter compiles line by line" | Interpreter translates and executes; it does not produce a stored executable |
-| saying "round robin is always fastest" | It is fair, but context decides efficiency |
-| saying "disk thrashing means disk is broken" | It is excessive swapping between RAM and secondary storage |
-
----
-
-## 3. One-Page Mind Map
+## 2. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -140,9 +90,9 @@ mindmap
 
 ---
 
-## 4. 16.1 Purposes of an Operating System
+## 3. 16.1 Purposes of an Operating System
 
-### 4.1 What the OS does
+### 3.1 What the OS does
 
 #### Mark scheme answer
 > An operating system manages the computer system resources, provides a user interface, hides the complexity of the hardware, and provides a platform for programs to run.
@@ -163,7 +113,7 @@ OS 可以理解为用户、应用程序和硬件之间的“中间层”。用�
 
 ---
 
-### 4.2 How the user interface hides hardware complexity
+### 3.2 How the user interface hides hardware complexity
 
 | User action | Hidden complexity |
 | --- | --- |
@@ -184,9 +134,9 @@ This is true but too vague. Say **what is hidden** and **how the user interacts 
 
 ---
 
-## 5. Process Management
+## 4. Process Management
 
-### 5.1 Process
+### 4.1 Process
 
 #### Definition
 > A process is a program that is currently being executed.
@@ -204,7 +154,7 @@ A process is not just the program file. It includes:
 
 ---
 
-### 5.2 Process states
+### 4.2 Process states
 
 | State | Meaning | Example |
 | --- | --- | --- |
@@ -220,7 +170,7 @@ A process is not just the program file. It includes:
 
 ---
 
-### 5.3 State transition diagram
+### 4.3 State transition diagram
 
 ```mermaid
 stateDiagram-v2
@@ -237,9 +187,9 @@ Blocked 通常不是“坏了”，而是 **waiting for an event**。比如正�
 
 ---
 
-## 6. Scheduling
+## 5. Scheduling
 
-### 6.1 Why scheduling is needed
+### 5.1 Why scheduling is needed
 
 #### Mark scheme answer
 > Scheduling is needed because several processes may be ready to use the CPU, but only one process can use the CPU at a time. The scheduler decides which process is allocated CPU time next.
@@ -254,7 +204,7 @@ Blocked 通常不是“坏了”，而是 **waiting for an event**。比如正�
 
 ---
 
-### 6.2 First Come First Served / FCFS
+### 5.2 First Come First Served / FCFS
 
 #### How it works
 > Processes are executed in the order they arrive in the ready queue.
@@ -272,7 +222,7 @@ Blocked 通常不是“坏了”，而是 **waiting for an event**。比如正�
 
 ---
 
-### 6.3 Round Robin
+### 5.3 Round Robin
 
 #### How it works
 > Each process is given a fixed time slice. When the time slice expires, the process is pre-empted and moved to the back of the ready queue if it has not finished.
@@ -302,7 +252,7 @@ Wrong. Only one process uses a single CPU at a time. Round robin just switches q
 
 ---
 
-### 6.4 Shortest Job First / SJF
+### 5.4 Shortest Job First / SJF
 
 #### How it works
 > The process with the shortest estimated total burst time is executed first.
@@ -316,7 +266,7 @@ Wrong. Only one process uses a single CPU at a time. Round robin just switches q
 
 ---
 
-### 6.5 Shortest Remaining Time / SRT
+### 5.5 Shortest Remaining Time / SRT
 
 #### How it works
 > The process with the shortest remaining burst time is executed first. It is pre-emptive, so a running process can be replaced if a new process with a shorter remaining time arrives.
@@ -331,9 +281,9 @@ Wrong. Only one process uses a single CPU at a time. Round robin just switches q
 
 ---
 
-## 7. Interrupt Handling
+## 6. Interrupt Handling
 
-### 7.1 What is an interrupt?
+### 6.1 What is an interrupt?
 
 #### Definition
 > An interrupt is a signal sent to the processor that requires immediate attention and may cause the current process to be temporarily stopped.
@@ -349,7 +299,7 @@ Wrong. Only one process uses a single CPU at a time. Round robin just switches q
 
 ---
 
-### 7.2 Interrupt handling process
+### 6.2 Interrupt handling process
 
 ```mermaid
 flowchart TD
@@ -375,9 +325,9 @@ G --> H[Process continues or scheduler chooses next process]
 
 ---
 
-## 8. Memory Management
+## 7. Memory Management
 
-### 8.1 Virtual memory
+### 7.1 Virtual memory
 
 #### Definition
 > Virtual memory uses secondary storage as an extension of main memory so that programs can run even when there is not enough RAM to hold all required pages at once.
@@ -395,7 +345,7 @@ G --> H[Process continues or scheduler chooses next process]
 
 ---
 
-### 8.2 Paging
+### 7.2 Paging
 
 #### Key idea
 > Paging divides a process into fixed-size pages and divides memory into fixed-size page frames. Pages can be loaded into any available frame.
@@ -424,7 +374,7 @@ I --> D
 
 ---
 
-### 8.3 Page replacement
+### 7.3 Page replacement
 
 #### Why replacement is needed
 If RAM is full and a required page is not in RAM, the OS must remove / replace a page to make room.
@@ -443,7 +393,7 @@ Do not over-learn advanced algorithms unless your course specifically requires t
 
 ---
 
-### 8.4 Segmentation
+### 7.4 Segmentation
 
 #### Key idea
 > Segmentation divides a program into variable-sized logical sections called segments.
@@ -463,7 +413,7 @@ Examples of segments:
 
 ---
 
-### 8.5 Paging vs segmentation
+### 7.5 Paging vs segmentation
 
 | Feature | Paging | Segmentation |
 | --- | --- | --- |
@@ -479,7 +429,7 @@ Examples of segments:
 
 ---
 
-### 8.6 Disk thrashing
+### 7.6 Disk thrashing
 
 #### Definition
 > Disk thrashing occurs when the system spends more time swapping pages between RAM and secondary storage than executing useful instructions.
@@ -509,9 +459,9 @@ F --> G[System performance becomes very slow]
 
 ---
 
-## 9. 16.2 Translation Software
+## 8. 16.2 Translation Software
 
-### 9.1 Interpreter
+### 8.1 Interpreter
 
 #### What an interpreter does
 > An interpreter translates and executes a high-level language program one statement / line at a time without producing a stored executable file.
@@ -537,7 +487,7 @@ F --> G[System performance becomes very slow]
 
 ---
 
-### 9.2 Compiler
+### 8.2 Compiler
 
 #### What a compiler does
 > A compiler translates the whole source code into object code / executable code before the program is run.
@@ -559,7 +509,7 @@ F --> G[System performance becomes very slow]
 
 ---
 
-### 9.3 Compiler stages
+### 8.3 Compiler stages
 
 ```mermaid
 flowchart LR
@@ -570,7 +520,7 @@ D --> E[Optimisation]
 E --> F[Object code / executable]
 ```
 
-### 9.4 Lexical analysis
+### 8.4 Lexical analysis
 
 #### What happens
 + removes unnecessary spaces / comments
@@ -584,7 +534,7 @@ E --> F[Object code / executable]
 
 ---
 
-### 9.5 Syntax analysis
+### 8.5 Syntax analysis
 
 #### What happens
 + checks tokens against grammar rules
@@ -598,7 +548,7 @@ E --> F[Object code / executable]
 
 ---
 
-### 9.6 Code generation
+### 8.6 Code generation
 
 #### What happens
 + produces machine code / object code
@@ -611,7 +561,7 @@ E --> F[Object code / executable]
 
 ---
 
-### 9.7 Optimisation
+### 8.7 Optimisation
 
 #### What happens
 + improves efficiency of object code
@@ -625,9 +575,9 @@ E --> F[Object code / executable]
 
 ---
 
-## 10. BNF and Syntax Diagrams
+## 9. BNF and Syntax Diagrams
 
-### 10.1 What BNF is
+### 9.1 What BNF is
 
 #### Definition
 > Backus-Naur Form / BNF is a notation used to describe the grammar rules of a programming language.
@@ -643,7 +593,7 @@ E --> F[Object code / executable]
 
 ---
 
-### 10.2 BNF examples
+### 9.2 BNF examples
 
 ```bnf
 <digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
@@ -660,7 +610,7 @@ E --> F[Object code / executable]
 
 ---
 
-### 10.3 Syntax diagram rules
+### 9.3 Syntax diagram rules
 
 A syntax diagram is a visual way to show the same grammar.
 
@@ -683,9 +633,9 @@ When checking if a string is valid:
 
 ---
 
-## 11. Reverse Polish Notation / RPN
+## 10. Reverse Polish Notation / RPN
 
-### 11.1 What RPN is
+### 10.1 What RPN is
 
 #### Definition
 > Reverse Polish Notation writes the operator after the operands.
@@ -699,7 +649,7 @@ When checking if a string is valid:
 
 ---
 
-### 11.2 Why stack is used
+### 10.2 Why stack is used
 
 RPN is normally evaluated using a stack because the most recent operands are used first.
 
@@ -717,7 +667,7 @@ RPN is normally evaluated using a stack because the most recent operands are use
 
 ---
 
-### 11.3 Worked RPN example
+### 10.3 Worked RPN example
 
 Evaluate:
 
@@ -745,9 +695,9 @@ Answer:
 
 ---
 
-## 12. Mark Scheme Keywords
+## 11. Mark Scheme Keywords
 
-### 12.1 Operating system
+### 11.1 Operating system
 + **manages resources**
 + **hides complexity of hardware**
 + **provides user interface**
@@ -757,7 +707,7 @@ Answer:
 + **I/O management**
 + **security management**
 
-### 12.2 Process management
+### 11.2 Process management
 + **process**
 + **running / ready / blocked**
 + **ready queue**
@@ -768,7 +718,7 @@ Answer:
 + **context switch**
 + **starvation**
 
-### 12.3 Interrupts
+### 11.3 Interrupts
 + **interrupt detected**
 + **current process temporarily stopped**
 + **registers stored**
@@ -776,7 +726,7 @@ Answer:
 + **interrupt service routine / ISR**
 + **registers restored**
 
-### 12.4 Memory management
+### 11.4 Memory management
 + **virtual memory**
 + **secondary storage**
 + **page**
@@ -788,7 +738,7 @@ Answer:
 + **disk thrashing**
 + **more time swapping than processing**
 
-### 12.5 Translation software
+### 11.5 Translation software
 + **source code**
 + **object code**
 + **executable**
@@ -801,7 +751,7 @@ Answer:
 + **tokens**
 + **grammar rules**
 
-### 12.6 Grammar and RPN
+### 11.6 Grammar and RPN
 + **Backus-Naur Form / BNF**
 + **syntax diagram**
 + **terminal / non-terminal**
@@ -811,7 +761,7 @@ Answer:
 
 ---
 
-## 13. Common Mistakes 易错表
+## 12. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Better answer |
 | --- | --- | --- |
@@ -830,41 +780,41 @@ Answer:
 
 ---
 
-## 14. Scenario Answer Bank
+## 13. Scenario Answer Bank
 
-### 14.1 User says the computer can run many apps at once
+### 13.1 User says the computer can run many apps at once
 > This is multi-tasking. The OS stores several processes in memory and the scheduler allocates CPU time to one process at a time. Processes may move between ready, running and blocked states.
 
-### 14.2 A running process is waiting for printer output
+### 13.2 A running process is waiting for printer output
 > The process becomes blocked because it cannot continue until the I/O operation is complete. When the event occurs, it can return to the ready queue.
 
-### 14.3 A system needs fair CPU access for many users
+### 13.3 A system needs fair CPU access for many users
 > Round robin is suitable because each process is given a fixed time slice. If a process does not finish, it is pre-empted and moved to the back of the queue.
 
-### 14.4 Short tasks should finish quickly
+### 13.4 Short tasks should finish quickly
 > Shortest job first or shortest remaining time can be suitable because processes with short burst times are executed first, reducing waiting time. However, long jobs may suffer starvation.
 
-### 14.5 RAM is full but a program still runs
+### 13.5 RAM is full but a program still runs
 > Virtual memory is used. Pages not immediately needed are moved to secondary storage and required pages are loaded into RAM when needed.
 
-### 14.6 Computer becomes very slow with many programs open
+### 13.6 Computer becomes very slow with many programs open
 > Disk thrashing may occur because pages are frequently swapped between RAM and secondary storage. More time is spent swapping pages than processing data.
 
-### 14.7 Programmer is debugging a program
+### 13.7 Programmer is debugging a program
 > An interpreter may be useful because it translates and executes one line at a time and stops with an error message when an error is found.
 
-### 14.8 Finished software is distributed to users
+### 13.8 Finished software is distributed to users
 > A compiler may be better because it produces executable object code. The program can run faster and the source code does not need to be distributed.
 
-### 14.9 A grammar rule must describe valid strings
+### 13.9 A grammar rule must describe valid strings
 > BNF or a syntax diagram can be used. BNF uses symbols such as `::=` to define rules and `|` to show alternatives.
 
-### 14.10 An expression must be evaluated without brackets
+### 13.10 An expression must be evaluated without brackets
 > Reverse Polish Notation can be used. Operands are written before the operator and the expression is evaluated using a stack.
 
 ---
 
-## 15. 10 Marks Quick Check
+## 14. 10 Marks Quick Check
 
 ### Questions
 
@@ -888,7 +838,7 @@ Answer:
 
 ---
 
-## 16. 20 Marks Exam-Style Practice
+## 15. 20 Marks Exam-Style Practice
 
 ### Question 1: OS process management and scheduling [7]
 

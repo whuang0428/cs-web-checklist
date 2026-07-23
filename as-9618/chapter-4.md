@@ -1,16 +1,6 @@
 # AS 9618 Chapter 4: Processor Fundamentals
-> **Processor Fundamentals｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Main audience:** AS students preparing for Paper 1 Theory Fundamentals  
-> **Style:** 中文解释 + English keywords / mark scheme phrases  
-> **Docsify:** ready for static webpage display  
-> **Local images:** not required  
-
----
-
-## 0. How to Use This Sheet
+## How to Use This Chapter
 
 Chapter 4 是 AS 9618 Paper 1 里非常容易“看起来会、实际丢分”的章节。  
 本章不是只背 CPU 名词，而是要会：
@@ -54,59 +44,9 @@ F --> G[Bit manipulation<br/>AND OR XOR shifts masks]
 | Peripheral ports | Medium | USB, HDMI, VGA; link features to scenario |
 | Deep electronics inside ALU | Low | Know purpose only; detailed circuit design rarely gains marks in Chapter 4 |
 
-### 1.1 2024–2025 exam evidence used
-
-| Paper trend | What changed in this regenerated version |
-| --- | --- |
-| 2024 Paper 1 used register purpose / Status Register / general-purpose vs special-purpose register style questions | Register definitions now use exact mark-scheme phrases and weak-answer warnings |
-| 2024 Paper 1 used instruction-set questions with `ACC` and `IX` | Assembly trace section is kept as a core skill, not an optional extension |
-| 2025 Paper 1 Question 8 used an instruction-set trace table with `LDD`, `INC`, `STO`, `LDI`, `CMP`, `JPE`, `ADD`, `JMP`, `DEC` | Added stronger trace-table method and jump/compare warning |
-| 2025 Paper 1 Question 8 also tested bit manipulation instructions: set least significant bit, `XOR &FE`, `LSR #5` | Bit manipulation is upgraded to very high priority |
-| 2025 Paper 1 tested bus width and performance | Bus-width explanation now focuses on data bus vs address bus effect |
-
 ---
 
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Content | Why it must stay |
-| --- | --- |
-| Von Neumann model | Core architecture concept; links to stored program and FDE |
-| PC, MAR, MDR, CIR, ACC, IX, SR | Very common short-answer / table completion topic |
-| ALU, CU, system clock, IAS | Repeated CPU component definitions |
-| Address bus, data bus, control bus | Frequently confused; needed for FDE explanations |
-| FDE cycle register transfers | High-frequency sequence question |
-| Interrupt handling | Mark schemes reward exact sequence and ISR terminology |
-| Processor performance factors | Common “explain why” question |
-| Assembly instruction tracing | Very high recent Paper 1 trend |
-| Addressing modes | Appears through instruction-set questions |
-| Bitwise AND/OR/XOR and shifts | Can be tested as calculation and control-device scenario |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| Very detailed CPU manufacturing / transistor-level design | Not needed for AS Paper 1 marks |
-| Long history of Von Neumann architecture | Only stored-program idea matters |
-| Memorising uncommon real assembly instruction names | Use exam-provided instruction set |
-| Deep compiler theory inside assembly chapter | Language translators are mainly Chapter 5 |
-| Complex Boolean algebra simplification beyond AS scope | Logic gates are Chapter 3; Chapter 4 focuses bit manipulation |
-| Overly advanced pipeline / branch prediction detail | A Level processors go deeper later; AS expects performance factors only |
-
-### 2.3 Delete / Avoid
-
-| Avoid learning as core | Reason |
-| --- | --- |
-| “CPU speed = clock speed only” | Wrong. Cores, cache, bus width, architecture also matter |
-| “A dual-core CPU is always twice as fast” | False; depends on software, parallelism, OS scheduling |
-| “Status register just stores status” | Too vague; must mention flags / bits |
-| “General purpose register is for general things” | Examiner reports dislike name-repeating answers |
-| “Assembly is the same as machine code” | Assembly uses mnemonics; machine code is binary |
-
----
-
-## 3. One-Page Mind Map
+## 2. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -160,9 +100,9 @@ mindmap
 
 ---
 
-## 4. 4.1 Central Processing Unit Architecture
+## 3. 4.1 Central Processing Unit Architecture
 
-### 4.1 Von Neumann model
+### 3.1 Von Neumann model
 
 #### Core idea
 
@@ -194,7 +134,7 @@ Too vague. 必须说出 **stored program** 和 **instructions/data in same memor
 
 ---
 
-### 4.2 CPU main components
+### 3.2 CPU main components
 
 | Component | Chinese explanation | Mark scheme style phrase |
 | --- | --- | --- |
@@ -236,9 +176,9 @@ That is not computer science meaning.
 
 ---
 
-## 5. Registers
+## 4. Registers
 
-### 5.1 Register summary table
+### 4.1 Register summary table
 
 | Register | Full name | Main role |
 | --- | --- | --- |
@@ -253,7 +193,7 @@ That is not computer science meaning.
 
 ---
 
-### 5.2 PC — Program Counter
+### 4.2 PC — Program Counter
 
 #### Role
 
@@ -275,7 +215,7 @@ That is not computer science meaning.
 
 ---
 
-### 5.3 MAR — Memory Address Register
+### 4.3 MAR — Memory Address Register
 
 #### Role
 
@@ -288,7 +228,7 @@ That is not computer science meaning.
 
 ---
 
-### 5.4 MDR — Memory Data Register
+### 4.4 MDR — Memory Data Register
 
 #### Role
 
@@ -301,7 +241,7 @@ That is not computer science meaning.
 
 ---
 
-### 5.5 CIR — Current Instruction Register
+### 4.5 CIR — Current Instruction Register
 
 #### Role
 
@@ -320,7 +260,7 @@ Do not confuse:
 
 ---
 
-### 5.6 ACC — Accumulator
+### 4.6 ACC — Accumulator
 
 #### Role
 
@@ -337,7 +277,7 @@ After this code, ACC = 15.
 
 ---
 
-### 5.7 IX — Index Register
+### 4.7 IX — Index Register
 
 #### Role
 
@@ -354,7 +294,7 @@ If `LDX 14` means load from address `14 + IX`, then effective address = 16.
 
 ---
 
-### 5.8 SR — Status Register
+### 4.8 SR — Status Register
 
 #### Role
 
@@ -382,7 +322,7 @@ This usually loses marks because it repeats the name. Add **flags** and **indivi
 
 ---
 
-### 5.9 General purpose vs special purpose registers
+### 4.9 General purpose vs special purpose registers
 
 | Type | Meaning | Examples |
 | --- | --- | --- |
@@ -405,9 +345,9 @@ No marks / very weak.
 
 ---
 
-## 6. Buses
+## 5. Buses
 
-### 6.1 Bus overview
+### 5.1 Bus overview
 
 A bus is a set of parallel wires / communication pathways used to transfer data, addresses or control signals.
 
@@ -419,7 +359,7 @@ A bus is a set of parallel wires / communication pathways used to transfer data,
 
 ---
 
-### 6.2 Address bus
+### 5.2 Address bus
 
 #### Mark scheme answer
 
@@ -438,7 +378,7 @@ Example:
 
 ---
 
-### 6.3 Data bus
+### 5.3 Data bus
 
 #### Mark scheme answer
 
@@ -452,7 +392,7 @@ Example:
 
 ---
 
-### 6.4 Control bus
+### 5.4 Control bus
 
 #### Mark scheme answer
 
@@ -468,9 +408,9 @@ Example:
 
 ---
 
-## 7. Fetch-Decode-Execute Cycle
+## 6. Fetch-Decode-Execute Cycle
 
-### 7.1 Basic sequence
+### 6.1 Basic sequence
 
 The fetch-decode-execute cycle is the repeated process used by the CPU to process instructions.
 
@@ -489,7 +429,7 @@ I --> A
 
 ---
 
-### 7.2 Fetch stage
+### 6.2 Fetch stage
 
 #### Step-by-step
 
@@ -506,7 +446,7 @@ I --> A
 
 ---
 
-### 7.3 Decode stage
+### 6.3 Decode stage
 
 The CU decodes the instruction stored in the CIR.
 
@@ -531,7 +471,7 @@ ADD #5
 
 ---
 
-### 7.4 Execute stage
+### 6.4 Execute stage
 
 The CPU performs the instruction.
 
@@ -548,7 +488,7 @@ Examples:
 
 ---
 
-### 7.5 FDE common mistake table
+### 6.5 FDE common mistake table
 
 | Mistake | Correction |
 | --- | --- |
@@ -560,9 +500,9 @@ Examples:
 
 ---
 
-## 8. Interrupts
+## 7. Interrupts
 
-### 8.1 What is an interrupt?
+### 7.1 What is an interrupt?
 
 An interrupt is a signal that tells the processor that an event needs attention.
 
@@ -577,7 +517,7 @@ Examples:
 
 ---
 
-### 8.2 Interrupt handling sequence
+### 7.2 Interrupt handling sequence
 
 ```mermaid
 flowchart TD
@@ -595,7 +535,7 @@ J --> K[Return to previous process]
 
 ---
 
-### 8.3 Mark scheme answer
+### 7.3 Mark scheme answer
 
 > An interrupt flag is raised. At the end of the current fetch-execute cycle, the processor checks whether the interrupt has higher priority. If it does, the current contents of registers are saved on the stack. The appropriate ISR is called. After the interrupt is processed, the register contents are restored and control returns to the previous process.
 
@@ -612,9 +552,9 @@ J --> K[Return to previous process]
 
 ---
 
-## 9. Processor Performance
+## 8. Processor Performance
 
-### 9.1 Factors affecting performance
+### 8.1 Factors affecting performance
 
 | Factor | How it affects performance |
 | --- | --- |
@@ -629,7 +569,7 @@ J --> K[Return to previous process]
 
 ---
 
-### 9.2 Clock speed
+### 8.2 Clock speed
 
 Clock speed is measured in Hz.
 
@@ -646,7 +586,7 @@ Example:
 
 ---
 
-### 9.3 Multiple cores
+### 8.3 Multiple cores
 
 A core is an independent processing unit inside the CPU.
 
@@ -667,9 +607,9 @@ Strong answer:
 
 ---
 
-## 10. Assembly Language
+## 9. Assembly Language
 
-### 10.1 Assembly language vs machine code
+### 9.1 Assembly language vs machine code
 
 | Feature | Assembly language | Machine code |
 | --- | --- | --- |
@@ -684,7 +624,7 @@ Strong answer:
 
 ---
 
-### 10.2 Instruction format
+### 9.2 Instruction format
 
 Most assembly instructions contain:
 
@@ -708,7 +648,7 @@ ADD #5
 
 ---
 
-### 10.3 Common instruction groups
+### 9.3 Common instruction groups
 
 | Group | Examples | Meaning |
 | --- | --- | --- |
@@ -721,9 +661,9 @@ ADD #5
 
 ---
 
-## 11. Addressing Modes
+## 10. Addressing Modes
 
-### 11.1 Immediate addressing
+### 10.1 Immediate addressing
 
 #### Example
 
@@ -745,7 +685,7 @@ The operand is the actual value.
 
 ---
 
-### 11.2 Direct addressing
+### 10.2 Direct addressing
 
 #### Example
 
@@ -763,7 +703,7 @@ If memory address 10 contains 45, then ACC becomes 45.
 
 ---
 
-### 11.3 Indirect addressing
+### 10.3 Indirect addressing
 
 #### Example
 
@@ -796,7 +736,7 @@ loads `99` into ACC.
 
 ---
 
-### 11.4 Indexed addressing
+### 10.4 Indexed addressing
 
 #### Example
 
@@ -823,7 +763,7 @@ The contents of memory address 23 are loaded into ACC.
 
 ---
 
-### 11.5 Relative addressing
+### 10.5 Relative addressing
 
 #### Meaning
 
@@ -845,7 +785,7 @@ means jump to an address relative to current program counter.
 
 ---
 
-### 11.6 Addressing mode comparison table
+### 10.6 Addressing mode comparison table
 
 | Mode | Operand represents | Example | Final action |
 | --- | --- | --- | --- |
@@ -857,9 +797,9 @@ means jump to an address relative to current program counter.
 
 ---
 
-## 12. Assembly Trace Method
+## 11. Assembly Trace Method
 
-### 12.1 How to trace ACC / IX questions
+### 11.1 How to trace ACC / IX questions
 
 Use this checklist:
 
@@ -876,7 +816,7 @@ Use this checklist:
 
 ---
 
-### 12.2 Worked example
+### 11.2 Worked example
 
 Memory:
 
@@ -923,9 +863,9 @@ IX = 2
 
 ---
 
-## 13. Two-Pass Assembler
+## 12. Two-Pass Assembler
 
-### 13.1 Why two passes?
+### 12.1 Why two passes?
 
 Assembly language uses labels and symbolic addresses.  
 The assembler may not know the address of a label when it first sees it.
@@ -937,7 +877,7 @@ So it uses two passes:
 
 ---
 
-### 13.2 Pass 1
+### 12.2 Pass 1
 
 Pass 1 usually:
 
@@ -954,7 +894,7 @@ Pass 1 usually:
 
 ---
 
-### 13.3 Pass 2
+### 12.3 Pass 2
 
 Pass 2 usually:
 
@@ -970,9 +910,9 @@ Pass 2 usually:
 
 ---
 
-## 14. Bit Manipulation
+## 13. Bit Manipulation
 
-### 14.1 Why bit manipulation is used
+### 13.1 Why bit manipulation is used
 
 Bit manipulation means working directly with individual bits.
 
@@ -996,7 +936,7 @@ Bit 3 = alarm output
 
 ---
 
-### 14.2 Bitwise AND
+### 13.2 Bitwise AND
 
 #### Purpose
 
@@ -1027,7 +967,7 @@ Result is not zero, so bit 2 was set.
 
 ---
 
-### 14.3 Bitwise OR
+### 13.3 Bitwise OR
 
 #### Purpose
 
@@ -1054,7 +994,7 @@ Bit 2 is set to 1.
 
 ---
 
-### 14.4 Bitwise XOR
+### 13.4 Bitwise XOR
 
 #### Purpose
 
@@ -1081,7 +1021,7 @@ Bit 2 changed from 1 to 0.
 
 ---
 
-### 14.5 Logical shift
+### 13.5 Logical shift
 
 #### Rules
 
@@ -1101,7 +1041,7 @@ Logical left shift 2:
 
 ---
 
-### 14.6 Arithmetic shift
+### 13.6 Arithmetic shift
 
 Arithmetic shift preserves the sign bit when shifting right.
 
@@ -1126,7 +1066,7 @@ Arithmetic right shift 2:  11111101
 
 ---
 
-### 14.7 Cyclic shift / rotate
+### 13.7 Cyclic shift / rotate
 
 In a cyclic shift, bits shifted out at one end re-enter at the other end.
 
@@ -1142,9 +1082,9 @@ The leftmost `1` moves to the rightmost position.
 
 ---
 
-## 15. Mark Scheme Keywords
+## 14. Mark Scheme Keywords
 
-### 15.1 CPU / architecture
+### 14.1 CPU / architecture
 
 + **stored program concept**
 + **instructions and data stored in memory**
@@ -1154,7 +1094,7 @@ The leftmost `1` moves to the rightmost position.
 + **system clock synchronises operations**
 + **IAS stores programs and data currently in use**
 
-### 15.2 Registers
+### 14.2 Registers
 
 + **PC stores address of next instruction**
 + **MAR stores memory address being accessed**
@@ -1164,7 +1104,7 @@ The leftmost `1` moves to the rightmost position.
 + **IX stores offset for indexed addressing**
 + **SR stores status flags as individual bits**
 
-### 15.3 Buses
+### 14.3 Buses
 
 + **address bus carries memory address**
 + **data bus carries data/instructions**
@@ -1173,7 +1113,7 @@ The leftmost `1` moves to the rightmost position.
 + **bi-directional data bus**
 + **bus width affects amount transferred**
 
-### 15.4 Interrupts
+### 14.4 Interrupts
 
 + **interrupt flag is raised**
 + **checked at end of current FDE cycle**
@@ -1183,7 +1123,7 @@ The leftmost `1` moves to the rightmost position.
 + **registers restored**
 + **returns to previous process**
 
-### 15.5 Assembly
+### 14.5 Assembly
 
 + **mnemonic**
 + **opcode**
@@ -1193,7 +1133,7 @@ The leftmost `1` moves to the rightmost position.
 + **symbol table**
 + **immediate / direct / indirect / indexed / relative addressing**
 
-### 15.6 Bit manipulation
+### 14.6 Bit manipulation
 
 + **mask**
 + **isolate a bit**
@@ -1207,7 +1147,7 @@ The leftmost `1` moves to the rightmost position.
 
 ---
 
-## 16. Common Mistakes 易错表
+## 15. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -1227,9 +1167,9 @@ The leftmost `1` moves to the rightmost position.
 
 ---
 
-## 17. Scenario Answer Bank 场景迁移答题模板
+## 16. Scenario Answer Bank 场景迁移答题模板
 
-### 17.1 “Describe the role of register X”
+### 16.1 “Describe the role of register X”
 
 Template:
 
@@ -1241,7 +1181,7 @@ Example:
 
 ---
 
-### 17.2 “Explain why a dual-core CPU is not always twice as fast”
+### 16.2 “Explain why a dual-core CPU is not always twice as fast”
 
 Template:
 
@@ -1249,7 +1189,7 @@ Template:
 
 ---
 
-### 17.3 “Describe the FDE cycle”
+### 16.3 “Describe the FDE cycle”
 
 Template:
 
@@ -1257,7 +1197,7 @@ Template:
 
 ---
 
-### 17.4 “Describe how an interrupt is handled”
+### 16.4 “Describe how an interrupt is handled”
 
 Template:
 
@@ -1265,7 +1205,7 @@ Template:
 
 ---
 
-### 17.5 “Identify the addressing mode”
+### 16.5 “Identify the addressing mode”
 
 Template:
 
@@ -1279,7 +1219,7 @@ Template:
 
 ---
 
-### 17.6 “Explain use of bitwise AND with a mask”
+### 16.6 “Explain use of bitwise AND with a mask”
 
 Template:
 
@@ -1287,9 +1227,9 @@ Template:
 
 ---
 
-## 18. Mermaid Process Diagrams
+## 17. Mermaid Process Diagrams
 
-### 18.1 Register transfer in fetch stage
+### 17.1 Register transfer in fetch stage
 
 ```mermaid
 sequenceDiagram
@@ -1305,7 +1245,7 @@ MDR->>CIR: copy instruction
 PC->>PC: increment
 ```
 
-### 18.2 Assembly addressing modes
+### 17.2 Assembly addressing modes
 
 ```mermaid
 flowchart TD
@@ -1318,7 +1258,7 @@ F -- Yes --> G["Indirect addressing<br/>ACC = Memory(Memory(address))"]
 F -- No --> H["Direct addressing<br/>ACC = Memory(address)"]
 ```
 
-### 18.3 Bit mask selection
+### 17.3 Bit mask selection
 
 ```mermaid
 flowchart LR
@@ -1333,7 +1273,7 @@ E --> H[Selected bit changes]
 
 ---
 
-## 19. 10 Marks Quick Check
+## 18. 10 Marks Quick Check
 
 ### Questions
 
@@ -1363,7 +1303,7 @@ E --> H[Selected bit changes]
 
 ---
 
-## 20. 20 Marks Exam-Style Practice with Mark Scheme
+## 19. 20 Marks Exam-Style Practice with Mark Scheme
 
 ### Question 1: Registers and FDE cycle [7]
 

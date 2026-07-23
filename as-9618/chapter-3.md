@@ -1,17 +1,6 @@
 # AS 9618 Chapter 3: Hardware
-> **Hardware｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 3 Hardware  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English keywords / mark scheme style phrases  
-> **Docsify:** ready  
-> **File name:** `chapter-3.md`
-
----
-
-## 0. How to Use This Sheet
+## How to Use This Chapter
 
 本章是 AS Paper 1 里面非常容易“看起来会，写出来不给分”的章节。  
 2024 和 2025 的考法都说明：Chapter 3 不是只背硬件名字，而是要会把硬件知识放进 **scenario 场景题** 里解释。
@@ -48,45 +37,7 @@ E --> F[Logic gates and circuits<br/>expression / circuit / truth table]
 
 ---
 
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| Embedded system definition and drawbacks | 2024 tested doorbell / embedded system features; 2025 still uses scenario-based hardware |
-| Sensors and actuators | 2024 and 2025 use security/shop systems with real-world sensors |
-| Monitoring vs control | Repeated scenario distinction; students often write too vaguely |
-| RAM / ROM / SRAM / DRAM | 2024 tested DRAM vs SRAM and ROM/storage in embedded context; 2025 tested RAM effect on performance |
-| PROM / EPROM / EEPROM | 2024 tested EPROM vs EEPROM directly |
-| Magnetic, optical, solid-state storage | 2024/2025 tested principal operation of storage devices |
-| Buffers | 2024 and 2025 mark schemes reward “speed difference” and “temporary storage” wording |
-| Logic gates, expressions, circuits, truth tables | 2025 Paper 1 opened with logic expressions/truth tables; very high frequency |
-| Port examples: USB, HDMI | 2024/2025 tested automatic connection and HDMI/peripheral connection |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| Very detailed electronic circuit design | Usually not needed for AS Paper 1 answers |
-| Long lists of obscure sensors | Students need common sensor-choice vocabulary, not memorising every possible sensor |
-| Detailed SSD wear-levelling algorithms | Not commonly rewarded in Paper 1 |
-| Multi-input gate theory | AS usually uses two-input logic gates and drawn circuits |
-| Deep Boolean algebra simplification | More relevant to A2 Boolean algebra; AS focuses expression/circuit/truth table |
-
-### 2.3 Remove / Avoid
-
-| Avoid this | Reason |
-| --- | --- |
-| Saying “monitoring system has outputs so it is control” automatically | Wrong. Need whether output affects the environment/input |
-| Saying “RAM stores everything permanently” | RAM is volatile |
-| Saying “ROM is main working memory” | ROM stores firmware/start-up instructions |
-| Saying “buffer makes CPU faster” | Buffer handles speed mismatch / temporary storage |
-| Using brand names for ports or devices | Cambridge gives no marks for brand names |
-
----
-
-## 3. One-Page Mind Map
+## 2. One-Page Mind Map
 
 ```mermaid
 mindmap
@@ -139,7 +90,7 @@ mindmap
 
 ---
 
-## 4. Syllabus Checklist
+## 3. Syllabus Checklist
 
 | Syllabus area | What to know | Revision priority |
 | --- | --- | --- |
@@ -148,9 +99,9 @@ mindmap
 
 ---
 
-## 5. 3.1 Computers and Their Components
+## 4. 3.1 Computers and Their Components
 
-### 5.1 Embedded systems
+### 4.1 Embedded systems
 
 #### Definition
 
@@ -190,7 +141,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.2 Input, output and storage devices
+### 4.2 Input, output and storage devices
 
 #### Input devices
 
@@ -223,7 +174,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.3 Sensors
+### 4.3 Sensors
 
 #### Common sensors and uses
 
@@ -243,7 +194,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.4 Monitoring systems vs control systems
+### 4.4 Monitoring systems vs control systems
 
 #### Monitoring system
 
@@ -274,7 +225,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.5 Actuators
+### 4.5 Actuators
 
 #### Definition
 
@@ -292,7 +243,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.6 Buffers
+### 4.6 Buffers
 
 #### Definition
 
@@ -328,9 +279,9 @@ Wrong. A buffer is **temporary storage**.
 
 ---
 
-## 6. Memory
+## 5. Memory
 
-### 6.1 RAM and ROM
+### 5.1 RAM and ROM
 
 | Feature | RAM | ROM |
 | --- | --- | --- |
@@ -358,7 +309,7 @@ Wrong. A buffer is **temporary storage**.
 
 ---
 
-### 6.2 Effect of RAM on performance
+### 5.2 Effect of RAM on performance
 
 #### Good answer
 
@@ -372,7 +323,7 @@ This is too vague. Say **why**.
 
 ---
 
-### 6.3 SRAM vs DRAM
+### 5.3 SRAM vs DRAM
 
 | Feature | SRAM | DRAM |
 | --- | --- | --- |
@@ -408,7 +359,7 @@ This is too vague. Say **why**.
 
 ---
 
-### 6.4 PROM, EPROM and EEPROM
+### 5.4 PROM, EPROM and EEPROM
 
 | Memory type | Meaning | Key point |
 | --- | --- | --- |
@@ -427,9 +378,9 @@ This is too vague. Say **why**.
 
 ---
 
-## 7. Secondary Storage
+## 6. Secondary Storage
 
-### 7.1 Magnetic hard disk
+### 6.1 Magnetic hard disk
 
 #### Principal operation
 
@@ -466,7 +417,7 @@ A magnetic hard disk:
 
 ---
 
-### 7.2 Optical storage
+### 6.2 Optical storage
 
 #### Principal operation
 
@@ -492,7 +443,7 @@ An optical disc reader/writer:
 
 ---
 
-### 7.3 Solid-state storage / flash memory
+### 6.3 Solid-state storage / flash memory
 
 #### Key features
 
@@ -518,9 +469,9 @@ An optical disc reader/writer:
 
 ---
 
-## 8. Ports and Peripheral Connection
+## 7. Ports and Peripheral Connection
 
-### 8.1 USB
+### 7.1 USB
 
 #### Why USB is useful
 
@@ -536,7 +487,7 @@ An optical disc reader/writer:
 
 ---
 
-### 8.2 HDMI
+### 7.2 HDMI
 
 #### Why HDMI may be better than VGA
 
@@ -554,11 +505,11 @@ An optical disc reader/writer:
 
 ---
 
-## 9. Processor-related Hardware Performance
+## 8. Processor-related Hardware Performance
 
 Although detailed CPU architecture is mainly Chapter 4, recent Paper 1 questions often mix hardware performance into Chapter 3-style device comparison questions.
 
-### 9.1 Number of cores
+### 8.1 Number of cores
 
 | More cores can help when... | Why |
 | --- | --- |
@@ -572,7 +523,7 @@ More cores do not always mean faster performance if the software cannot use them
 
 ---
 
-### 9.2 Clock speed
+### 8.2 Clock speed
 
 > Clock speed is the number of cycles per second. Higher clock speed may allow more instructions to be processed per second.
 
@@ -586,7 +537,7 @@ Better:
 
 ---
 
-### 9.3 Bus width
+### 8.3 Bus width
 
 | Bus | Effect |
 | --- | --- |
@@ -600,9 +551,9 @@ Better:
 
 ---
 
-## 10. 3.2 Logic Gates and Logic Circuits
+## 9. 3.2 Logic Gates and Logic Circuits
 
-### 10.1 Basic gates
+### 9.1 Basic gates
 
 | Gate | Meaning | Output is 1 when... |
 | --- | --- | --- |
@@ -615,7 +566,7 @@ Better:
 
 ---
 
-### 10.2 Truth tables
+### 9.2 Truth tables
 
 #### NOT
 
@@ -671,7 +622,7 @@ Better:
 
 ---
 
-### 10.3 Writing logic expressions from a circuit
+### 9.3 Writing logic expressions from a circuit
 
 #### Method
 
@@ -711,7 +662,7 @@ Cambridge accepts word-form expressions such as:
 
 ---
 
-### 10.4 Completing truth tables for complex expressions
+### 9.4 Completing truth tables for complex expressions
 
 Example:
 
@@ -743,7 +694,7 @@ XOR = 1 only when inputs are different
 
 ---
 
-### 10.5 Drawing logic circuits from expressions
+### 9.5 Drawing logic circuits from expressions
 
 #### Method
 
@@ -769,7 +720,7 @@ Draw:
 
 ---
 
-## 11. Mark Scheme Keywords
+## 10. Mark Scheme Keywords
 
 ### Embedded systems
 
@@ -830,7 +781,7 @@ Draw:
 
 ---
 
-## 12. Common Mistakes 易错表
+## 11. Common Mistakes 易错表
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -847,51 +798,51 @@ Draw:
 
 ---
 
-## 13. Scenario Answer Bank
+## 12. Scenario Answer Bank
 
-### 13.1 Embedded smart doorbell
+### 12.1 Embedded smart doorbell
 
 > This is an embedded system because the processor, memory and software are built into the doorbell and are dedicated to specific tasks such as motion detection, video recording and sending notifications. It is not a general-purpose computer.
 
-### 13.2 Security light system
+### 12.2 Security light system
 
 > This is a control system because sensor readings are processed and used to send a signal to turn on the floodlight. The output changes the environment by increasing the light level.
 
-### 13.3 Temperature monitoring system
+### 12.3 Temperature monitoring system
 
 > This is a monitoring system if it only records or displays the temperature readings. It becomes a control system if the processor uses the readings to switch on a fan/heater through an actuator.
 
-### 13.4 Buffer for optical writing
+### 12.4 Buffer for optical writing
 
 > The buffer temporarily stores data before it is written to the optical disc because the computer may send data faster than the disc writer can write it. The data remains in the buffer until the writer is ready.
 
-### 13.5 More RAM
+### 12.5 More RAM
 
 > More RAM allows more currently running programs, data and instructions to be stored in main memory. This reduces the need to use virtual memory or access slower secondary storage, reducing delay.
 
-### 13.6 Wider data bus
+### 12.6 Wider data bus
 
 > A wider data bus allows more data to be transferred between components at one time, so there may be less delay when data is fetched or transferred.
 
-### 13.7 USB automatic connection
+### 12.7 USB automatic connection
 
 > USB supports plug-and-play. When the device is connected, the OS detects it and loads the required driver, allowing the device to be used automatically.
 
-### 13.8 HDMI instead of VGA
+### 12.8 HDMI instead of VGA
 
 > HDMI is digital and can carry both video and audio. It supports high-resolution displays and does not need a separate audio cable, unlike VGA.
 
-### 13.9 Sensor on shop shelf
+### 12.9 Sensor on shop shelf
 
 > A pressure sensor can detect that the pressure/weight on the shelf has decreased when an item is removed. This data is sent to the system so it can identify the item taken.
 
-### 13.10 Logic expression answer
+### 12.10 Logic expression answer
 
 > Work from left to right. Give each gate an intermediate expression, then combine them with brackets. For example: `X = (A AND NOT B) OR C`.
 
 ---
 
-## 14. Process Diagram
+## 13. Process Diagram
 
 ```mermaid
 flowchart TD
@@ -905,7 +856,7 @@ F --> G[Actuator changes environment<br/>control behaviour]
 
 ---
 
-## 15. Logic Circuit Working Process
+## 14. Logic Circuit Working Process
 
 ```mermaid
 flowchart LR
@@ -919,7 +870,7 @@ F --> G[Check XOR and NOT carefully]
 
 ---
 
-## 16. 10 Marks Quick Check
+## 15. 10 Marks Quick Check
 
 ### Questions
 
@@ -947,7 +898,7 @@ F --> G[Check XOR and NOT carefully]
 
 ---
 
-## 17. 20 Marks Exam-Style Practice with Mark Scheme
+## 16. 20 Marks Exam-Style Practice with Mark Scheme
 
 ### Question 1: Embedded system and sensors [6]
 

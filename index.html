@@ -45,12 +45,63 @@
 
       plugins: [
         function (hook) {
+          var mermaidFitScheduled = false;
+
+          function fitMermaidDiagrams() {
+            mermaidFitScheduled = false;
+            document.querySelectorAll('.mermaid svg:not([data-content-fitted])').forEach(function (svg) {
+              var graphic = svg.querySelector(':scope > g');
+              if (!graphic || typeof graphic.getBBox !== 'function') return;
+
+              var bounds;
+              try {
+                bounds = graphic.getBBox();
+              } catch (error) {
+                return;
+              }
+
+              if (!bounds.width || !bounds.height) return;
+
+              var padding = 24;
+              var fittedWidth = bounds.width + padding * 2;
+              var fittedHeight = bounds.height + padding * 2;
+              svg.setAttribute('viewBox', [
+                bounds.x - padding,
+                bounds.y - padding,
+                fittedWidth,
+                fittedHeight
+              ].join(' '));
+              svg.style.width = Math.ceil(fittedWidth) + 'px';
+              svg.style.maxWidth = '100%';
+              svg.style.height = 'auto';
+              svg.setAttribute('data-content-fitted', 'true');
+              if (svg.parentElement) {
+                svg.parentElement.style.width = Math.ceil(fittedWidth + 32) + 'px';
+              }
+            });
+          }
+
+          function scheduleMermaidFit() {
+            if (mermaidFitScheduled) return;
+            mermaidFitScheduled = true;
+            requestAnimationFrame(fitMermaidDiagrams);
+          }
+
+          if (!window.__mermaidFitObserver) {
+            window.__mermaidFitObserver = new MutationObserver(scheduleMermaidFit);
+            window.__mermaidFitObserver.observe(document.documentElement, {
+              childList: true,
+              subtree: true
+            });
+          }
+
           hook.doneEach(function () {
             var main = document.querySelector('main');
             if (main) {
               main.id = 'main-content';
               main.tabIndex = -1;
             }
+            scheduleMermaidFit();
           });
         }
       ]

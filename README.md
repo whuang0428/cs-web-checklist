@@ -5,7 +5,7 @@
 Welcome to the CS Web Checklist.  
 Choose a course below to start learning.
 
-[View syllabus coverage and current maturity](coverage.md)
+[View course coverage](coverage.md)
 
 ---
 
