@@ -66,48 +66,51 @@ Students must be able to:
 
 ---
 
-## 4. One-Page Mind Map
+<span id="_4-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 6<br/>Security Privacy<br/>Data Integrity))
-    Core Terms
-      Security
-      Privacy
-      Integrity
-    Threats
-      Malware
-        Virus
-        Spyware
-      Hackers
-      Phishing
-      Pharming
-    Protection
-      User accounts
-      Passwords
-      Authentication
-        Biometrics
-        Digital signatures
-      Firewall
-      Anti-virus
-      Anti-spyware
-      Encryption
-      Access rights
-    Integrity
-      Validation
-        Range check
-        Format check
-        Length check
-        Presence check
-        Existence check
-        Limit check
-        Check digit
-      Verification
-        Visual check
-        Double entry
-        Parity check
-        Checksum
-```
+## 4. Chapter at a Glance
+
+Use this overview to distinguish key terms, match controls, verify input and protect integrity.
+
+### Distinguish core terms
+
+<span lang="zh-CN">安全、隐私和完整性关注的问题不同，不能互换。</span>
+
+- Security protects systems and data from unauthorised access, damage or misuse.
+- Privacy controls who may access personal or sensitive information.
+- Integrity means data remains accurate, complete and changed only when authorised.
+
+**Exam cue:** Define the term named in the question before applying it.
+
+### Match threats to controls
+
+<span lang="zh-CN">防护措施必须针对攻击发生的具体途径。</span>
+
+- Accounts, passwords, biometrics and access rights restrict system entry and permitted actions.
+- Firewalls filter network traffic, while anti-virus and anti-spyware detect malicious software.
+- Encryption protects data from being understood if it is intercepted.
+
+**Exam cue:** Explain how the selected control interrupts the stated threat.
+
+### Validate or verify
+
+<span lang="zh-CN">验证合理性与核对录入准确性是两个不同目标。</span>
+
+- Validation checks whether input is sensible and follows specified rules.
+- Verification checks whether data has been copied or entered accurately.
+- Choose range, format, length, presence, existence, limit or check-digit tests appropriately.
+
+**Exam cue:** Name the check, give the rule and apply it to the field.
+
+### Protect integrity
+
+<span lang="zh-CN">数据传输检查要说明发送值、重新计算和比较过程。</span>
+
+- Visual checking and double entry compare entered data with the source.
+- Parity detects some changed bits by checking the expected parity pattern.
+- A checksum is recalculated after transfer and compared with the transmitted value.
+
+**Exam cue:** State what is calculated, compared and concluded.
 
 ---
 

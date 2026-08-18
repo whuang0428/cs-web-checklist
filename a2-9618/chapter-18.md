@@ -13,49 +13,51 @@ Revise: graphs and route search; machine-learning categories; neural networks an
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 18<br/>Artificial Intelligence))
-    Graphs
-      Nodes or vertices
-      Edges
-      Weights
-      Relationships
-      Routes
-    Search
-      Dijkstra
-        Shortest path
-        Uses known cost
-      A star
-        Shortest or optimal path
-        Uses heuristic
-    Machine Learning
-      Supervised
-        Labelled data
-        Input output pairs
-      Unsupervised
-        Unlabelled data
-        Hidden patterns
-      Reinforcement
-        Trial and error
-        Reward and penalty
-    Neural Networks
-      Input layer
-      Hidden layer
-      Output layer
-      Nodes
-      Weights
-      Biases
-    Deep Learning
-      Many hidden layers
-      Complex features
-      Prediction
-    Training
-      Back propagation
-      Regression
-```
+## 3. Chapter at a Glance
+
+Use this overview to model routes, choose learning, train networks and evaluate results.
+
+### Model graphs and search
+
+<span lang="zh-CN">先定义节点、边和权重，再按算法更新路径代价。</span>
+
+- A graph represents entities as vertices and relationships or routes as weighted edges.
+- Dijkstra's algorithm expands the lowest known accumulated cost.
+- A* combines accumulated cost with a heuristic estimate to guide the search.
+
+**Exam cue:** Record visited nodes, tentative costs and the chosen route at each step.
+
+### Choose a learning approach
+
+<span lang="zh-CN">根据训练数据是否有标签以及是否使用奖励来分类。</span>
+
+- Supervised learning trains from labelled input-output examples.
+- Unsupervised learning discovers structure or clusters in unlabelled data.
+- Reinforcement learning improves actions through rewards, penalties and repeated experience.
+
+**Exam cue:** Identify the training signal and relate it to the required outcome.
+
+### Train a neural network
+
+<span lang="zh-CN">跟踪输入、权重、偏置、激活和误差更新。</span>
+
+- Input values pass through weighted connections and biases to hidden and output layers.
+- The network compares its prediction with the expected output to calculate error.
+- Backpropagation adjusts weights to reduce future error; deep learning uses many hidden layers.
+
+**Exam cue:** Explain how training changes weights rather than saying the network “remembers”.
+
+### Evaluate results
+
+<span lang="zh-CN">模型效果取决于数据、误差指标和对新数据的表现。</span>
+
+- Regression predicts a continuous value from learned relationships.
+- Training data quality and representativeness affect accuracy and bias.
+- Validation on unseen data checks whether the model generalises beyond its training examples.
+
+**Exam cue:** Connect the evaluation measure to the stated prediction or classification task.
 
 ---
 

@@ -13,64 +13,59 @@ Revise: networks and topologies; packets; internet services; hardware; Ethernet 
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 2<br/>Communication))
-    Networks
-      LAN
-      WAN
-      Benefits of networking
-      Drawbacks of networking
-    Models
-      Client-server
-      Peer-to-peer
-      Thin client
-      Thick client
-    Topologies
-      Bus
-      Star
-      Mesh
-      Hybrid
-      Packet route
-    Cloud
-      Public cloud
-      Private cloud
-      Benefits
-      Drawbacks
-    Transmission
-      Copper cable
-      Fibre optic
-      Radio waves / WiFi
-      Microwaves
-      Satellite
-      Cell phone network
-    Hardware
-      Switch
-      Router
-      Server
-      NIC / WNIC
-      WAP
-      Bridge
-      Repeater
-      Modem
-      Dedicated line
-    Internet
-      WWW vs Internet
-      IP address
-      IPv4 / IPv6
-      Static / dynamic
-      Public / private
-      URL
-      DNS
-    Streaming
-      Real-time
-      On-demand
-      Buffer
-      Bitrate
-      Compression
-```
+## 3. Chapter at a Glance
+
+Use this map to choose, trace, explain and justify.
+
+### Choose the network
+
+<span lang="zh-CN">根据范围、所有权和服务方式选择网络方案。</span>
+
+- Decide between a LAN and WAN using geographical scope and infrastructure ownership.
+- Choose client-server for centralised services and peer-to-peer for simple direct sharing.
+- Select a topology by relating reliability, cost and traffic to the scenario.
+
+**Exam cue:** State and justify the network type, model and topology.
+
+### Trace the journey
+
+<span lang="zh-CN">按数据经过的设备顺序说明每一步的作用。</span>
+
+- Follow data from the user's device through the local network to its destination.
+- Identify each device and explain the role it performs.
+- Connect addressing and DNS resolution to the requested internet service.
+
+<ol class="overview-route" aria-label="Data route from a device to a DNS or application server">
+  <li><svg aria-hidden="true"><use href="assets/overview-icons.svg#device"></use></svg><span>Device</span></li>
+  <li><svg aria-hidden="true"><use href="assets/overview-icons.svg#switch"></use></svg><span>Switch</span></li>
+  <li><svg aria-hidden="true"><use href="assets/overview-icons.svg#router"></use></svg><span>Router</span></li>
+  <li><svg aria-hidden="true"><use href="assets/overview-icons.svg#internet"></use></svg><span>Internet</span></li>
+  <li><svg aria-hidden="true"><use href="assets/overview-icons.svg#server"></use></svg><span>DNS / Server</span></li>
+</ol>
+
+**Exam cue:** Name the order and role of each device.
+
+### Select the technology
+
+<span lang="zh-CN">把带宽、距离、成本和环境与介质或设备匹配。</span>
+
+- Choose copper, fibre or wireless transmission for the required link.
+- Identify access devices such as a NIC or WNIC, WAP and modem.
+- Match bandwidth, distance, interference, mobility and cost to the scenario.
+
+**Exam cue:** State the medium and access device, then justify both.
+
+### Score the marks
+
+<span lang="zh-CN">答案必须引用场景，并写出设备的具体作用。</span>
+
+- Justify every network choice with evidence from the scenario.
+- Name the device and explain its specific role rather than listing hardware.
+- Keep the internet, WWW, IP address, URL and DNS as distinct concepts.
+
+**Exam cue:** Justify, name the device and avoid concept confusion.
 
 ---
 

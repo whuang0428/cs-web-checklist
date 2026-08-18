@@ -333,63 +333,51 @@ An **IDE** is a suite of programs used to write, run, test and debug program cod
 
 ---
 
-## 2. Chapter 4 Overall Mind Map
-```mermaid
-mindmap
-  root((Chapter 4 Software))
-    4.1 Types of software and interrupts
-      Software types
-        System software
-          OS
-          Utility software
-          Device driver
-        Application software
-          User tasks
-          Word processor
-          Spreadsheet
-      Operating system
-        File management
-        Memory management
-        Peripheral and driver management
-        Multitasking
-        Security
-        User accounts
-        Platform for applications
-        Interface
-      Firmware
-        ROM
-        BIOS
-        Bootloader
-      Interrupts
-        Hardware interrupt
-        Software interrupt
-        Priority
-        ISR / interrupt handler
-        Stack
-      Buffer
-        Temporary memory
-        CPU efficiency
-    4.2 Languages translators and IDEs
-      High-level language
-        Easier to read
-        Easier to debug
-        Portable
-      Low-level language
-        Assembly
-        Machine code
-        Direct hardware control
-      Translators
-        Compiler
-        Interpreter
-        Assembler
-      IDE
-        Code editor
-        Runtime environment
-        Error diagnostics
-        Auto-completion
-        Auto-correction
-        Prettyprint
-```
+<span id="_2-chapter-4-overall-mind-map" class="legacy-anchor" aria-hidden="true"></span>
+
+## 2. Chapter at a Glance
+
+Use this overview to classify software, trace interrupts, translate code and select tools.
+
+### Select software
+
+<span lang="zh-CN">先判断软件服务的是计算机系统还是最终用户。</span>
+
+- System software manages or maintains hardware and other software.
+- Application software helps a user complete a specific task.
+- Firmware is permanent control software normally stored in ROM.
+
+**Exam cue:** Name a suitable example and explain the service it provides.
+
+### Handle interrupts
+
+<span lang="zh-CN">把中断写成保存、处理、恢复的完整过程。</span>
+
+- A hardware or software event sends an interrupt signal to the processor.
+- The processor saves its current state before running the interrupt service routine.
+- The saved state is restored so the interrupted process can continue.
+
+**Exam cue:** Include priority, the ISR and the saved processor state where relevant.
+
+### Translate source code
+
+<span lang="zh-CN">根据输入语言和输出方式区分三种翻译器。</span>
+
+- A compiler translates a complete high-level program before execution.
+- An interpreter translates and executes high-level code one statement at a time.
+- An assembler translates assembly language into machine code.
+
+**Exam cue:** Compare when translation happens, what output is produced and how errors are reported.
+
+### Use IDE tools
+
+<span lang="zh-CN">写出工具名称后，还要说明它怎样帮助程序员。</span>
+
+- A code editor and runtime environment support writing and executing code.
+- Diagnostics locate errors while auto-completion and auto-correction reduce typing mistakes.
+- Prettyprint or syntax highlighting makes program structure easier to read.
+
+**Exam cue:** Give the feature and its practical benefit, not the feature name alone.
 
 ---
 

@@ -66,6 +66,95 @@
     });
   }
 
+  function headingLevel(heading) {
+    return Number(heading.tagName.substring(1));
+  }
+
+  function isOverviewHeading(heading) {
+    var text = heading.textContent.trim();
+    return text.endsWith('Chapter at a Glance') || text.endsWith('Threats at a Glance');
+  }
+
+  function prepareChapterOverviews() {
+    var content = document.querySelector('.markdown-section');
+    if (!content) return;
+
+    Array.from(content.querySelectorAll('h2, h3')).forEach(function (heading) {
+      if (!isOverviewHeading(heading) || heading.dataset.overviewReady) return;
+
+      var level = headingLevel(heading);
+      var topicSelector = 'H' + (level + 1);
+      var nodes = [];
+      var node = heading.nextSibling;
+
+      while (node) {
+        if (node.nodeType === 1 && node.matches('hr')) break;
+        if (node.nodeType === 1 && /^H[1-6]$/.test(node.tagName) && headingLevel(node) <= level) break;
+        nodes.push(node);
+        node = node.nextSibling;
+      }
+
+      if (!nodes.length) return;
+
+      var overview = document.createElement('section');
+      overview.className = 'chapter-overview';
+      if (heading.id) overview.setAttribute('aria-labelledby', heading.id);
+      heading.parentNode.insertBefore(overview, nodes[0]);
+      nodes.forEach(function (item) { overview.appendChild(item); });
+
+      var topics = Array.from(overview.children).filter(function (child) {
+        return child.tagName === topicSelector;
+      });
+
+      topics.forEach(function (topicHeading, index) {
+        var nextTopic = topics[index + 1] || null;
+        var topic = document.createElement('article');
+        topic.className = 'overview-topic';
+        overview.insertBefore(topic, topicHeading);
+
+        var topicNode = topicHeading;
+        while (topicNode && topicNode !== nextTopic) {
+          var next = topicNode.nextSibling;
+          topic.appendChild(topicNode);
+          topicNode = next;
+        }
+
+        Array.from(topic.querySelectorAll('p')).forEach(function (paragraph) {
+          if (paragraph.querySelector('[lang="zh-CN"]')) {
+            paragraph.classList.add('overview-cn-hint');
+          }
+          var strong = paragraph.querySelector(':scope > strong:first-child');
+          if (strong && strong.textContent.trim() === 'Exam cue:') {
+            paragraph.classList.add('overview-exam-cue');
+          }
+        });
+      });
+
+      var intro = Array.from(overview.children).find(function (child) {
+        return child.tagName === 'P';
+      });
+      if (intro) intro.classList.add('overview-intro');
+      heading.dataset.overviewReady = 'true';
+    });
+  }
+
+  function restoreOverviewAnchor() {
+    var queryStart = window.location.hash.indexOf('?');
+    if (queryStart === -1) return;
+
+    var routeParams = new URLSearchParams(window.location.hash.substring(queryStart + 1));
+    var anchorId = routeParams.get('id');
+    if (!anchorId) return;
+
+    var target = document.getElementById(anchorId);
+    if (!target) return;
+    if (!target.classList.contains('legacy-anchor') && !isOverviewHeading(target)) return;
+
+    window.setTimeout(function () {
+      target.scrollIntoView({ block: 'start' });
+    }, 700);
+  }
+
   function prepareTables() {
     document.querySelectorAll('.markdown-section table').forEach(function (table, index) {
       if (table.parentElement.classList.contains('table-scroll')) return;
@@ -148,10 +237,12 @@
         var path = vm.route.path || '/';
         prepareMain();
         applyCourseIdentity(path);
+        prepareChapterOverviews();
         foldAnswers();
         prepareTables();
         constrainPagination(path);
         prepareSearch();
+        restoreOverviewAnchor();
       }, 0);
     });
   };

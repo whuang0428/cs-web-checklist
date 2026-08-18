@@ -13,57 +13,51 @@ Revise: CPU architecture; registers and buses; instruction cycle; assembly langu
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 4<br/>Processor Fundamentals))
-    CPU Architecture
-      Von Neumann
-      Stored program
-      ALU
-      CU
-      System clock
-      IAS
-    Registers
-      PC
-      MAR
-      MDR
-      CIR
-      ACC
-      IX
-      SR
-    Buses
-      Address bus
-      Data bus
-      Control bus
-    FDE Cycle
-      Fetch
-      Decode
-      Execute
-      PC increment
-      Register transfers
-    Interrupts
-      Interrupt flag
-      Priority
-      Stack
-      ISR
-      Restore state
-    Assembly
-      Mnemonics
-      Opcode
-      Operand
-      Symbolic address
-      Addressing modes
-      Two-pass assembler
-    Bit Manipulation
-      AND mask
-      OR set bit
-      XOR toggle bit
-      Logical shift
-      Arithmetic shift
-      Cyclic shift
-```
+## 3. Chapter at a Glance
+
+Use this overview to trace instructions, move data, handle interrupts and read assembly code.
+
+### Trace fetch-decode-execute
+
+<span lang="zh-CN">把每一步的寄存器传送和总线方向写清楚。</span>
+
+- Fetch the next instruction using the PC, MAR, memory, MDR and CIR.
+- Increment the PC so it identifies the following instruction.
+- Decode the opcode, then execute the operation using the required data and registers.
+
+**Exam cue:** State each register transfer in the correct order.
+
+### Use registers and buses
+
+<span lang="zh-CN">寄存器保存什么，与哪条总线传输什么必须对应。</span>
+
+- The address bus carries locations, while the data bus carries instructions or data.
+- The control bus carries timing and command signals between components.
+- PC, MAR, MDR, CIR, ACC, IX and SR each hold a specific value during processing.
+
+**Exam cue:** Name the register or bus and describe the value it carries.
+
+### Handle interrupts
+
+<span lang="zh-CN">中断答案要包含优先级判断、保存状态和恢复执行。</span>
+
+- The processor checks for enabled interrupt requests and compares their priorities.
+- It saves the current processor state before executing the interrupt service routine.
+- The saved state is restored so the original process resumes correctly.
+
+**Exam cue:** Include the interrupt flag, stack and ISR where the question requires them.
+
+### Read assembly code
+
+<span lang="zh-CN">先分辨操作码、操作数和寻址方式，再跟踪数据变化。</span>
+
+- Separate each mnemonic into its opcode and operand.
+- Apply immediate, direct, indirect, indexed or relative addressing correctly.
+- Use masks and shifts to clear, set, toggle or reposition selected bits.
+
+**Exam cue:** Trace register and memory values after every instruction.
 
 ---
 

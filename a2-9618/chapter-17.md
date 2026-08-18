@@ -13,52 +13,51 @@ Revise: symmetric and asymmetric cryptography; TLS; certificates, signatures and
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 17<br/>Security))
-    Encryption
-      plaintext
-      ciphertext
-      encryption
-      decryption
-      key
-    Symmetric
-      one shared key
-      same key encrypts and decrypts
-      fast
-      key distribution problem
-    Asymmetric
-      public key
-      private key
-      matching key pair
-      slower
-      no shared secret needed first
-    Private Message
-      encrypt with receiver public key
-      decrypt with receiver private key
-    Verified Message
-      sender signs with private key
-      public verifies with sender public key
-    SSL_TLS
-      secure socket layer
-      transport layer security
-      client-server
-      handshake
-      session key
-      HTTPS
-    Digital Certificate
-      certificate authority
-      website identity
-      public key
-      validity period
-    Quantum Cryptography
-      quantum properties
-      eavesdropping detected
-      high cost
-      short distance limitation
-```
+## 3. Chapter at a Glance
+
+Use this overview to choose encryption, protect or verify messages, establish trust and evaluate quantum methods.
+
+### Choose encryption
+
+<span lang="zh-CN">根据速度、密钥分发和通信阶段选择对称或非对称加密。</span>
+
+- Symmetric encryption uses one shared secret key for encryption and decryption.
+- Asymmetric encryption uses a mathematically related public and private key pair.
+- Symmetric methods are faster, while asymmetric methods solve initial shared-key distribution.
+
+**Exam cue:** Compare key use and explain why the method fits the stage of communication.
+
+### Secure or verify messages
+
+<span lang="zh-CN">保密使用接收者密钥，身份验证使用发送者密钥。</span>
+
+- Encrypt confidential data with the receiver's public key so only their private key decrypts it.
+- Sign a digest with the sender's private key so the sender's public key verifies it.
+- A digital signature supports authenticity and integrity but does not itself hide the message.
+
+**Exam cue:** Identify whose key is used, whether it is public or private, and the intended property.
+
+### Establish TLS trust
+
+<span lang="zh-CN">证书验证服务器身份，握手建立后续会话密钥。</span>
+
+- A certificate authority signs a certificate that binds an identity to a public key.
+- The client validates the certificate, issuer, domain and validity period.
+- The TLS handshake establishes secure session keys used for efficient encrypted communication.
+
+**Exam cue:** Separate certificate validation from later symmetric session encryption.
+
+### Evaluate quantum cryptography
+
+<span lang="zh-CN">评价量子密钥分发时同时考虑窃听检测和现实限制。</span>
+
+- Quantum states can reveal interception because measurement changes the transmitted state.
+- The method can distribute key material with evidence of eavesdropping.
+- High cost, specialist hardware, noise and distance limit practical deployment.
+
+**Exam cue:** Give both the security advantage and an implementation limitation.
 
 ---
 

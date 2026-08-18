@@ -13,54 +13,51 @@ Revise: professional ethics; copyright; software licences; artificial intelligen
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 7<br/>Ethics and Ownership))
-    Ethics
-      professional conduct
-      public interest
-      honesty
-      confidentiality
-      safety
-      fairness
-    Professional Bodies
-      BCS
-      IEEE
-      code of conduct
-      standards
-      guidance
-      accountability
-    Copyright
-      ownership
-      intellectual property
-      permission
-      legal action
-      protect income
-      prevent copying
-    Software Licences
-      Free Software Foundation
-      Open Source Initiative
-      Shareware
-      Commercial
-      licence choice
-      scenario justification
-    AI
-      image recognition
-      OCR
-      speech recognition
-      recommendation systems
-      expert systems
-      autonomous systems
-    Impacts
-      social
-      economic
-      environmental
-      bias
-      privacy
-      jobs
-```
+## 3. Chapter at a Glance
+
+Use this overview to apply ethical principles, explain ownership, evaluate AI and balance impacts.
+
+### Apply ethical principles
+
+<span lang="zh-CN">根据公众利益、安全、公平和保密要求判断行为。</span>
+
+- Computing professionals should act honestly, protect confidentiality and avoid preventable harm.
+- A code of conduct turns broad ethical principles into expected professional behaviour.
+- Bodies such as BCS and IEEE provide standards, guidance and accountability.
+
+**Exam cue:** Identify the affected stakeholder and explain the likely consequence.
+
+### Explain ownership and licensing
+
+<span lang="zh-CN">区分作品所有权、使用许可和源代码开放程度。</span>
+
+- Copyright protects intellectual property and controls copying, distribution and modification.
+- Free software, open-source, shareware and commercial licences grant different rights.
+- The suitable licence depends on cost, source access, modification, support and distribution needs.
+
+**Exam cue:** Justify the licence using the user or organisation's requirements.
+
+### Evaluate AI uses
+
+<span lang="zh-CN">先说明人工智能执行的任务，再评价结果。</span>
+
+- AI can recognise images, text or speech and produce recommendations.
+- Expert systems apply stored knowledge and rules to a user's data.
+- Autonomous systems use sensor data to make and carry out decisions.
+
+**Exam cue:** Explain the AI process instead of stating that it is “smart”.
+
+### Balance impacts
+
+<span lang="zh-CN">完整评价必须同时考虑收益、风险和不同利益相关者。</span>
+
+- AI can improve speed, consistency, access to services and decision support.
+- Bias, privacy loss and unsafe decisions can harm individuals or groups.
+- Automation changes jobs, costs, energy use and environmental impact.
+
+**Exam cue:** Develop both sides and finish with a scenario-based judgement.
 
 ---
 

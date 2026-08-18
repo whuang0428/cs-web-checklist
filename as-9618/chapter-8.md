@@ -25,57 +25,51 @@ Chapter 8 contains three syllabus sections:
 
 ---
 
-## 4. One-Page Mind Map
+<span id="_4-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 8<br/>Databases))
-    Database Concepts
-      File-based approach
-      Relational database
-      Entity
-      Attribute
-      Tuple
-      Primary key
-      Candidate key
-      Foreign key
-      Referential integrity
-    Relationships
-      One-to-one
-      One-to-many
-      Many-to-many
-      Linking table
-      E-R diagram
-    Normalisation
-      1NF
-      2NF
-      3NF
-      Redundancy
-      Anomalies
-    DBMS
-      Data dictionary
-      Data modelling
-      Logical schema
-      Access rights
-      Backup
-      Query processor
-      Developer interface
-    SQL
-      DDL
-        CREATE DATABASE
-        CREATE TABLE
-        ALTER TABLE
-        PRIMARY KEY
-        FOREIGN KEY
-      DML
-        SELECT FROM
-        WHERE
-        ORDER BY
-        GROUP BY
-        INNER JOIN
-        SUM COUNT AVG
-        INSERT DELETE UPDATE
-```
+## 4. Chapter at a Glance
+
+Use this overview to model data, normalise relations, explain the DBMS and write SQL.
+
+### Model the database
+
+<span lang="zh-CN">从实体、属性和键建立表之间的准确关系。</span>
+
+- Represent each entity as a table containing attributes and tuples.
+- Choose a primary key that uniquely identifies each record.
+- Use foreign keys and linking tables to implement relationships and referential integrity.
+
+**Exam cue:** Label keys and cardinality clearly on an entity-relationship model.
+
+### Normalise to 3NF
+
+<span lang="zh-CN">逐级消除重复组、部分依赖和传递依赖。</span>
+
+- First normal form removes repeating groups and gives fields atomic values.
+- Second normal form removes partial dependency on a composite key.
+- Third normal form removes non-key dependency on another non-key attribute.
+
+**Exam cue:** Show the new relations, primary keys and foreign keys at every stage.
+
+### Explain DBMS functions
+
+<span lang="zh-CN">数据库管理系统的功能要与集中控制数据联系起来。</span>
+
+- A data dictionary stores metadata about tables, fields, types and constraints.
+- Access rights, validation and backup support security, integrity and recovery.
+- A query processor, logical schema and developer interface provide controlled data access.
+
+**Exam cue:** State the DBMS feature and the specific benefit it provides.
+
+### Write SQL
+
+<span lang="zh-CN">先判断题目要求定义结构还是查询与修改数据。</span>
+
+- Use DDL such as `CREATE TABLE` and `ALTER TABLE` to define database structures.
+- Use `SELECT`, `WHERE`, `ORDER BY`, grouping and joins to retrieve required data.
+- Use `INSERT`, `UPDATE` and `DELETE` to change records safely.
+
+**Exam cue:** Check table names, join fields, conditions and required output columns.
 
 ---
 

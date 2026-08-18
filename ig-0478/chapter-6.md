@@ -446,70 +446,51 @@ Answer
 
 ---
 
-## 9. Final One-Page Revision Map
-```mermaid
-mindmap
-  root((Chapter 6))
-    Automated Systems
-      Sensor
-        detects data
-      Microprocessor
-        receives data
-        compares with preset value
-        sends signal
-      Actuator/output
-        performs action
-      Advantages
-        faster
-        safer
-        consistent
-        works 24/7
-      Disadvantages
-        cost
-        maintenance
-        hacking
-        malfunction
-        job loss
-    Robotics
-      Characteristics
-        mechanical structure
-        electrical components
-        programmable
-        movement
-      Uses
-        industry
-        medicine
-        agriculture
-        transport
-        domestic
-      Benefits
-        dangerous tasks
-        repetitive tasks
-        precision
-      Drawbacks
-        cost
-        hacking
-        malfunction
-        unemployment
-    AI
-      Characteristics
-        data
-        rules
-        reason
-        learn
-        adapt
-      Expert Systems
-        interface
-        knowledge base
-        rule base
-        inference engine
-      Machine Learning
-        collect data
-        analyse patterns
-        feedback
-        adapt
-        predict
-```
+<span id="_9-final-one-page-revision-map" class="legacy-anchor" aria-hidden="true"></span>
+
+## 9. Chapter at a Glance
+
+Use this overview to trace automated control, classify robots, explain AI and evaluate impacts.
+
+### Trace an automated system
+
+<span lang="zh-CN">按输入、处理、输出和反馈的顺序描述系统。</span>
+
+- A sensor measures a physical property and sends data to a microprocessor.
+- The microprocessor compares the input with stored rules or a preset value.
+- An output device or actuator changes the system and new sensor data provides feedback.
+
+**Exam cue:** Apply every stage to the named scenario rather than giving a generic list.
+
+### Classify robots
+
+<span lang="zh-CN">机器人必须同时体现结构、控制和运动能力。</span>
+
+- A robot has a mechanical structure, electrical components and programmable control.
+- Robots perform dangerous, repetitive or precise tasks in industry, medicine and other fields.
+- A device is not a robot merely because it contains sensors or artificial intelligence.
+
+**Exam cue:** Link each claimed benefit to the task the robot performs.
+
+### Explain AI
+
+<span lang="zh-CN">说明系统怎样使用数据和规则进行推理或学习。</span>
+
+- AI systems use data and rules to reason, learn, adapt or make predictions.
+- An expert system combines a user interface, knowledge base, rule base and inference engine.
+- Machine learning analyses training data and feedback to improve future outputs.
+
+**Exam cue:** Describe the mechanism, not just the phrase “the computer learns”.
+
+### Evaluate impacts
+
+<span lang="zh-CN">优点和缺点都要与具体使用场景产生联系。</span>
+
+- Automation can improve speed, consistency, availability and safety.
+- Costs, maintenance, malfunction and hacking can reduce reliability or increase risk.
+- Robotics and AI can change employment while also enabling work humans cannot do safely.
+
+**Exam cue:** Develop each point with a consequence for the organisation, worker or user.
 
 ---
 

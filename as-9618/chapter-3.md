@@ -13,56 +13,51 @@ Revise: computer components; memory and storage; logic gates and logic circuits.
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 3<br/>Hardware))
-    Embedded systems
-      Specific task
-      Dedicated hardware/software
-      Built into larger device
-      Hard to update
-      Limited functionality
-    Devices
-      Input
-        Sensors
-        Keyboard
-        Camera
-      Output
-        Screen
-        Speaker
-        Actuator
-      Storage
-        Magnetic
-        Optical
-        Solid-state
-    Memory
-      RAM
-        Volatile
-        Current data and instructions
-      ROM
-        Non-volatile
-        Firmware
-      SRAM
-        Fast
-        Expensive
-      DRAM
-        Cheaper
-        Needs refresh
-      PROM EPROM EEPROM
-    Monitoring and Control
-      Sensor input
-      Processor compares
-      Output signal
-      Actuator changes system
-    Logic
-      NOT AND OR
-      NAND NOR XOR
-      Truth table
-      Logic expression
-      Logic circuit
-```
+## 3. Chapter at a Glance
+
+Use this overview to classify hardware, compare storage, trace control and solve logic tasks.
+
+### Classify hardware
+
+<span lang="zh-CN">先判断设备是输入、输出、存储还是嵌入式系统的一部分。</span>
+
+- An embedded system is built into a larger device for a specific task.
+- Input devices capture data, while output devices present information or perform an action.
+- Choose magnetic, optical or solid-state storage from capacity, speed, durability and cost.
+
+**Exam cue:** Name the hardware and link its feature to the stated use.
+
+### Compare memory and storage
+
+<span lang="zh-CN">用易失性、速度、成本和用途建立比较。</span>
+
+- RAM is volatile working memory, while ROM stores non-volatile instructions such as firmware.
+- SRAM is faster and more expensive, while DRAM is denser and requires refreshing.
+- PROM, EPROM and EEPROM differ in how stored instructions can be written or erased.
+
+**Exam cue:** Give one paired difference and its consequence for use.
+
+### Trace monitoring and control
+
+<span lang="zh-CN">按传感器、处理器、输出和反馈描述完整控制循环。</span>
+
+- A sensor measures a physical property and sends data to a processor.
+- The processor compares the data with stored values and sends an output signal.
+- An actuator changes the system, allowing later sensor readings to provide feedback.
+
+**Exam cue:** Apply each stage to the named system and measurement.
+
+### Build logic answers
+
+<span lang="zh-CN">在逻辑表达式、真值表和电路之间逐步转换。</span>
+
+- Recognise NOT, AND, OR, NAND, NOR and XOR gates from symbols or behaviour.
+- Evaluate each input combination systematically to complete a truth table.
+- Translate between a logic expression, gate circuit and required output condition.
+
+**Exam cue:** Show intermediate outputs so a single error does not corrupt the whole answer.
 
 ---
 

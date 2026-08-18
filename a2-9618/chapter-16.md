@@ -13,53 +13,51 @@ Revise: operating-system scheduling and memory; translation software; BNF, synta
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 16<br/>System Software))
-    Operating System
-      hides hardware complexity
-      manages resources
-      provides user interface
-      kernel
-    Process Management
-      process
-      PCB
-      running
-      ready
-      blocked
-      scheduling
-        FCFS
-        round robin
-        SJF
-        SRT
-    Interrupts
-      interrupt detected
-      current process paused
-      registers stored
-      ISR executed
-      process restored
-    Memory Management
-      virtual memory
-      paging
-      page frames
-      page replacement
-      segmentation
-      disk thrashing
-    Translation Software
-      interpreter
-      compiler
-      lexical analysis
-      syntax analysis
-      code generation
-      optimisation
-    Grammar and Expressions
-      BNF
-      syntax diagrams
-      RPN
-      stack evaluation
-```
+## 3. Chapter at a Glance
+
+Use this overview to schedule processes, manage memory, handle interrupts and translate languages.
+
+### Schedule processes
+
+<span lang="zh-CN">根据进程状态、优先级和调度规则跟踪执行顺序。</span>
+
+- A process control block stores the state and management data for a process.
+- Processes move between ready, running and blocked states as resources become available.
+- FCFS, round robin, SJF and SRT select work using different fairness and response-time rules.
+
+**Exam cue:** Apply the named scheduling algorithm one decision at a time.
+
+### Manage memory
+
+<span lang="zh-CN">说明逻辑地址怎样映射到内存，以及页面不足时发生什么。</span>
+
+- Paging divides memory into fixed-size pages and page frames.
+- Virtual memory moves pages between RAM and secondary storage using a replacement policy.
+- Segmentation uses variable logical units, while excessive paging can cause disk thrashing.
+
+**Exam cue:** Distinguish the memory structure from the movement of data.
+
+### Handle interrupts
+
+<span lang="zh-CN">完整过程包括检测、保存、服务和恢复。</span>
+
+- The processor detects an interrupt and pauses the current process at a safe point.
+- Register values and process state are saved before the ISR runs.
+- The saved context is restored so the interrupted process can continue.
+
+**Exam cue:** Keep the steps in order and identify where state is stored.
+
+### Parse and translate code
+
+<span lang="zh-CN">区分词法、语法、代码生成和表达式求值阶段。</span>
+
+- Lexical analysis groups source characters into tokens and records identifiers.
+- Syntax analysis checks tokens against grammar expressed using BNF or syntax diagrams.
+- Code generation and optimisation produce target code, while RPN can be evaluated with a stack.
+
+**Exam cue:** Name the phase and describe its input, check and output.
 
 ---
 

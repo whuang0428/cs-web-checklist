@@ -242,36 +242,51 @@ F --> G[Copies of the ledger are distributed]
 ---
 
 ## 5.3 Cyber Security
-### 5.3.1 Threat Overview Mind Map
-```mermaid
-mindmap
-  root((Cyber Security Threats))
-    Brute-force attack
-      Guessing many password combinations
-      Prevented by strong passwords and attempt limits
-    Data interception
-      Data is captured during transmission
-      Prevented by encryption and secure protocols
-    DDoS
-      Botnet sends many requests
-      Web server cannot respond
-    Hacking
-      Unauthorised access
-      Data may be stolen changed deleted
-    Malware
-      Virus
-      Worm
-      Trojan horse
-      Spyware
-      Adware
-      Ransomware
-    Pharming
-      Redirects user to fake website
-    Phishing
-      Fake email or message with link
-    Social engineering
-      Manipulating people to reveal data
-```
+<span id="_531-threat-overview-mind-map" class="legacy-anchor" aria-hidden="true"></span>
+
+### 5.3.1 Threats at a Glance
+
+Use this overview to identify an attack, recognise evidence, choose protection and separate similar threats.
+
+#### Identify the attack
+
+<span lang="zh-CN">根据攻击过程判断威胁，不要只看造成的结果。</span>
+
+- Brute force repeatedly guesses credentials, while hacking means gaining unauthorised access.
+- DDoS uses many devices to send simultaneous requests that overwhelm a server.
+- Malware includes viruses, worms, Trojan horses, spyware, adware and ransomware.
+
+**Exam cue:** Describe how the attack works before stating its effect.
+
+#### Recognise the evidence
+
+<span lang="zh-CN">把题目中的线索对应到传输、用户行为或恶意软件。</span>
+
+- Captured data during transmission indicates data interception.
+- A legitimate-looking message and fake link indicate phishing.
+- Redirection despite entering the correct address indicates pharming.
+
+**Exam cue:** Quote the scenario evidence that distinguishes the threat.
+
+#### Choose protection
+
+<span lang="zh-CN">防护措施必须直接阻断题目描述的攻击过程。</span>
+
+- Strong passwords and attempt limits reduce successful brute-force attacks.
+- Encryption and secure protocols protect intercepted data from being understood.
+- Firewalls, anti-malware tools and user training address different attack routes.
+
+**Exam cue:** Name the control and explain exactly how it reduces the stated risk.
+
+#### Avoid threat confusion
+
+<span lang="zh-CN">比较相似概念时，写出触发方式和用户是否需要操作。</span>
+
+- Phishing relies on a deceptive message; pharming redirects the user through malicious code or DNS changes.
+- A virus needs an active host, while a worm can replicate across a network independently.
+- Social engineering manipulates people rather than directly exploiting software.
+
+**Exam cue:** State one precise difference instead of giving two unrelated definitions.
 
 ---
 

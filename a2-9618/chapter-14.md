@@ -13,50 +13,51 @@ Revise: protocols and the TCP/IP model; circuit and packet switching; routers an
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
-```mermaid
-mindmap
-  root((Chapter 14<br/>Communication and internet technologies))
-    Protocols
-      standard rules
-      successful data transfer
-      compatibility
-      independent of hardware/software
-    TCP/IP Stack
-      Application Layer
-        user/application services
-        HTTP FTP SMTP POP3 IMAP BitTorrent
-      Transport Layer
-        segments data
-        sequencing
-        end-to-end delivery
-        reassembly
-      Internet Layer
-        addressing
-        routing
-        packets
-      Link Layer
-        physical network access
-        frames
-        local transmission
-    Circuit Switching
-      dedicated path
-      setup before transmission
-      whole bandwidth
-      same route
-      good for continuous real-time data
-    Packet Switching
-      split into packets
-      packet headers
-      independent routes
-      reassembly
-      resend missing/damaged packets
-    Router
-      reads destination IP
-      chooses next hop
-      forwards packet
-      avoids failed/congested routes
-```
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
+
+## 3. Chapter at a Glance
+
+Use this overview to trace the TCP/IP stack, compare switching, route packets and match protocols.
+
+### Trace the TCP/IP stack
+
+<span lang="zh-CN">发送时从应用层向下封装，接收时按相反顺序处理。</span>
+
+- The application layer provides network services to user applications.
+- The transport layer segments, sequences and reassembles end-to-end data.
+- The internet and link layers address, route, frame and transmit data across networks.
+
+**Exam cue:** Name the layer and describe the operation performed there.
+
+### Compare switching
+
+<span lang="zh-CN">比较路径是否预先建立、带宽是否独占以及数据如何到达。</span>
+
+- Circuit switching establishes one dedicated route before transmission begins.
+- Packet switching divides data into addressed packets that may take different routes.
+- Circuit switching suits continuous traffic, while packet switching shares network capacity efficiently.
+
+**Exam cue:** Give a paired difference and relate it to the communication requirement.
+
+### Route packets
+
+<span lang="zh-CN">路由器依据目标地址和当前路径情况选择下一跳。</span>
+
+- A router reads the destination IP address in a packet header.
+- It consults routing information to choose an appropriate next hop.
+- It can avoid failed or congested routes before forwarding the packet.
+
+**Exam cue:** Describe the decision and forwarding action, not just “the router sends data”.
+
+### Match protocols
+
+<span lang="zh-CN">根据应用服务选择协议，并说明标准规则为什么必要。</span>
+
+- Protocols define standard rules so different systems exchange data successfully.
+- HTTP, FTP, SMTP, POP3 and IMAP support different application services.
+- A protocol suite combines related protocols that cooperate across layers.
+
+**Exam cue:** Name the protocol and link it to the service or transfer it supports.
 
 ---
 

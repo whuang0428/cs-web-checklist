@@ -47,6 +47,148 @@ HUB_PAGES = {ROOT / course / "README.md" for course in COURSE_RANGES}
 COURSE_SIDEBARS = {ROOT / course / "_sidebar.md" for course in COURSE_RANGES}
 SHARED_PAGES = {ROOT / "exam-technique.md", ROOT / "syllabus-versions.md"}
 CONTENT_PAGES = EXPECTED_CHAPTERS | REVIEW_PAGES | HUB_PAGES | SHARED_PAGES
+OVERVIEW_CONTRACTS = {
+    ROOT / "ig-0478" / "chapter-1.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        ["Convert values", "Calculate storage", "Represent media", "Choose compression"],
+    ),
+    ROOT / "ig-0478" / "chapter-4.md": (
+        "## 2. Chapter at a Glance",
+        "_2-chapter-4-overall-mind-map",
+        ["Select software", "Handle interrupts", "Translate source code", "Use IDE tools"],
+    ),
+    ROOT / "ig-0478" / "chapter-5.md": (
+        "### 5.3.1 Threats at a Glance",
+        "_531-threat-overview-mind-map",
+        [
+            "Identify the attack",
+            "Recognise the evidence",
+            "Choose protection",
+            "Avoid threat confusion",
+        ],
+    ),
+    ROOT / "ig-0478" / "chapter-6.md": (
+        "## 9. Chapter at a Glance",
+        "_9-final-one-page-revision-map",
+        ["Trace an automated system", "Classify robots", "Explain AI", "Evaluate impacts"],
+    ),
+    ROOT / "as-9618" / "chapter-1.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        [
+            "Convert and encode",
+            "Calculate multimedia size",
+            "Compare representations",
+            "Choose compression",
+        ],
+    ),
+    ROOT / "as-9618" / "chapter-2.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        ["Choose the network", "Trace the journey", "Select the technology", "Score the marks"],
+    ),
+    ROOT / "as-9618" / "chapter-3.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        [
+            "Classify hardware",
+            "Compare memory and storage",
+            "Trace monitoring and control",
+            "Build logic answers",
+        ],
+    ),
+    ROOT / "as-9618" / "chapter-4.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        [
+            "Trace fetch-decode-execute",
+            "Use registers and buses",
+            "Handle interrupts",
+            "Read assembly code",
+        ],
+    ),
+    ROOT / "as-9618" / "chapter-5.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        [
+            "Explain OS management",
+            "Choose utilities and libraries",
+            "Trace translation",
+            "Use IDE tools",
+        ],
+    ),
+    ROOT / "as-9618" / "chapter-6.md": (
+        "## 4. Chapter at a Glance",
+        "_4-one-page-mind-map",
+        [
+            "Distinguish core terms",
+            "Match threats to controls",
+            "Validate or verify",
+            "Protect integrity",
+        ],
+    ),
+    ROOT / "as-9618" / "chapter-7.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        [
+            "Apply ethical principles",
+            "Explain ownership and licensing",
+            "Evaluate AI uses",
+            "Balance impacts",
+        ],
+    ),
+    ROOT / "as-9618" / "chapter-8.md": (
+        "## 4. Chapter at a Glance",
+        "_4-one-page-mind-map",
+        ["Model the database", "Normalise to 3NF", "Explain DBMS functions", "Write SQL"],
+    ),
+    ROOT / "a2-9618" / "chapter-13.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        ["Define data types", "Choose file access", "Calculate floating point", "Control range and error"],
+    ),
+    ROOT / "a2-9618" / "chapter-14.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        ["Trace the TCP/IP stack", "Compare switching", "Route packets", "Match protocols"],
+    ),
+    ROOT / "a2-9618" / "chapter-15.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        [
+            "Compare processors",
+            "Explain parallel processing and VMs",
+            "Simplify Boolean expressions",
+            "Build logic circuits",
+        ],
+    ),
+    ROOT / "a2-9618" / "chapter-16.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        ["Schedule processes", "Manage memory", "Handle interrupts", "Parse and translate code"],
+    ),
+    ROOT / "a2-9618" / "chapter-17.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        [
+            "Choose encryption",
+            "Secure or verify messages",
+            "Establish TLS trust",
+            "Evaluate quantum cryptography",
+        ],
+    ),
+    ROOT / "a2-9618" / "chapter-18.md": (
+        "## 3. Chapter at a Glance",
+        "_3-one-page-mind-map",
+        [
+            "Model graphs and search",
+            "Choose a learning approach",
+            "Train a neural network",
+            "Evaluate results",
+        ],
+    ),
+}
 PHASE2_CHAPTERS = {
     ROOT / "ig-0478" / "chapter-7.md": {
         "worked_examples": 3,
@@ -271,6 +413,8 @@ def resolve_reference(source: Path, reference: str) -> Path | None:
     target = reference.split("?", 1)[0].split("#", 1)[0]
     if not target:
         return None
+    if target.startswith("assets/"):
+        return (ROOT / target).resolve()
     return (source.parent / target).resolve()
 
 
@@ -774,8 +918,106 @@ def check_python_code_blocks(errors: list[str]) -> None:
             add_error(errors, path, f"Phase 4 runtime smoke test failed: {error}")
 
 
+def check_chapter_overviews(errors: list[str]) -> None:
+    mindmap_fence = re.compile(
+        r"^```mermaid\s*\n\s*mindmap\b",
+        flags=re.MULTILINE,
+    )
+    for path in sorted(EXPECTED_CHAPTERS):
+        text = path.read_text(encoding="utf-8")
+        if mindmap_fence.search(text):
+            add_error(errors, path, "chapter inventory must not use a Mermaid mindmap fence")
+
+    for path, (overview_heading, legacy_anchor, expected_topics) in OVERVIEW_CONTRACTS.items():
+        text = path.read_text(encoding="utf-8")
+        lines = text.splitlines()
+
+        try:
+            heading_index = lines.index(overview_heading)
+        except ValueError:
+            add_error(errors, path, f"missing overview heading: {overview_heading}")
+            continue
+
+        try:
+            anchor_index = next(
+                index
+                for index, line in enumerate(lines)
+                if f'id="{legacy_anchor}"' in line and 'class="legacy-anchor"' in line
+            )
+        except StopIteration:
+            add_error(errors, path, f"missing legacy overview anchor: {legacy_anchor}")
+        else:
+            if anchor_index >= heading_index:
+                add_error(errors, path, "legacy overview anchor must appear before the new heading")
+
+        level = len(overview_heading) - len(overview_heading.lstrip("#"))
+        end_index = len(lines)
+        for index in range(heading_index + 1, len(lines)):
+            if lines[index] == "---":
+                end_index = index
+                break
+            match = re.match(r"^(#{1,6})\s+\S", lines[index])
+            if match and len(match.group(1)) <= level:
+                end_index = index
+                break
+
+        overview_lines = lines[heading_index + 1 : end_index]
+        topic_prefix = "#" * (level + 1) + " "
+        topic_positions = [
+            index
+            for index, line in enumerate(overview_lines)
+            if line.startswith(topic_prefix)
+        ]
+        actual_topics = [overview_lines[index][len(topic_prefix) :] for index in topic_positions]
+        if actual_topics != expected_topics:
+            add_error(
+                errors,
+                path,
+                "overview task areas must be exactly: " + "; ".join(expected_topics),
+            )
+            continue
+
+        intro = "\n".join(overview_lines[: topic_positions[0]]).strip()
+        if not intro or re.search(r"[<>]", intro):
+            add_error(errors, path, "overview must begin with one plain Markdown instruction sentence")
+
+        information_units = len(actual_topics)
+        for topic_index, topic_name in enumerate(actual_topics):
+            start = topic_positions[topic_index] + 1
+            end = (
+                topic_positions[topic_index + 1]
+                if topic_index + 1 < len(topic_positions)
+                else len(overview_lines)
+            )
+            topic_text = "\n".join(overview_lines[start:end])
+            cn_hints = re.findall(r'<span lang="zh-CN">[^<]+</span>', topic_text)
+            statements = re.findall(r"^- \S.+$", topic_text, flags=re.MULTILINE)
+            exam_cues = re.findall(r"^\*\*Exam cue:\*\* \S.+$", topic_text, flags=re.MULTILINE)
+
+            if len(cn_hints) != 1:
+                add_error(errors, path, f"{topic_name} must contain exactly one Chinese hint")
+            if len(statements) != 3:
+                add_error(
+                    errors,
+                    path,
+                    f"{topic_name} must contain exactly three core statements, found {len(statements)}",
+                )
+            if len(exam_cues) != 1:
+                add_error(errors, path, f"{topic_name} must contain exactly one Exam cue")
+
+            information_units += len(cn_hints) + len(statements) + len(exam_cues)
+
+        if not 20 <= information_units <= 28:
+            add_error(
+                errors,
+                path,
+                f"overview has {information_units} information units; expected 20 to 28",
+            )
+
+
 def check_marked_content(errors: list[str]) -> None:
     check_editorial_contracts(errors)
+    check_chapter_overviews(errors)
     check_marked_chapter_contracts(errors, "Phase 2", PHASE2_CHAPTERS)
     check_marked_chapter_contracts(errors, "Phase 3", PHASE3_CHAPTERS)
     check_marked_chapter_contracts(errors, "Phase 4", PHASE4_CHAPTERS)
@@ -946,6 +1188,9 @@ def check_accessibility_baseline(errors: list[str]) -> None:
         ("answer-disclosure", "native answer disclosure processing"),
         ("table-scroll", "focusable horizontal table processing"),
         ("course-hub-return", "course-bounded pagination return"),
+        ("prepareChapterOverviews", "chapter overview preparation"),
+        ("chapter-overview", "stable chapter overview wrapper"),
+        ("overview-topic", "stable overview task-area wrapper"),
     ]
     for needle, description in script_contracts:
         if needle not in script_text:
@@ -955,6 +1200,10 @@ def check_accessibility_baseline(errors: list[str]) -> None:
         (":focus-visible", "visible keyboard focus styling"),
         ("prefers-reduced-motion: reduce", "reduced-motion support"),
         ("@media print", "A4 print styling"),
+        (".chapter-overview", "chapter overview layout styling"),
+        (".overview-topic", "overview task-area styling"),
+        (".overview-route", "responsive semantic route styling"),
+        ("break-inside: avoid", "print-safe overview task areas"),
     ]
     for needle, description in style_contracts:
         if needle not in style_text:
@@ -984,6 +1233,7 @@ def main() -> int:
     print("- root navigation is hub-only and every course hub/sidebar is complete")
     print("- explicit search paths include all student content and exclude coverage.md")
     print("- all 30 chapters satisfy the editorial, identity and 10/20-mark contracts")
+    print("- all 18 chapter overviews satisfy the title, anchor, four-area and 20-28-unit contracts")
     print("- student pages contain no maintainer headings, raw font tags or legacy keyword labels")
     print("- IGCSE Paper 1 Set A has 6 questions, 75 marks and AO1/AO2/AO3 45/15/15")
     print("- IGCSE Paper 2 chapters satisfy worked-example and exact 10/20-mark contracts")

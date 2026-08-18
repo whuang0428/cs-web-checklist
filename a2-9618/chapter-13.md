@@ -13,48 +13,51 @@ Revise: user-defined types; file organisation and access; floating-point represe
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 13<br/>Data Representation))
-    User-defined data types
-      Non-composite
-        Enumerated
-        Pointer
-      Composite
-        Record
-        Set
-        Class object
-      Pseudocode declaration
-    File organisation and access
-      Serial file
-        chronological order
-        sequential access
-      Sequential file
-        key field order
-        sequential or direct access
-      Random file
-        record key
-        direct access
-        hashing
-      Collision resolution
-        linear probing
-        overflow area
-        chaining
-    Floating-point numbers
-      Mantissa
-      Exponent
-      Two's complement
-      Normalisation
-        positive 01
-        negative 10
-      Precision
-      Range
-      Rounding error
-      Overflow
-      Underflow
-```
+## 3. Chapter at a Glance
+
+Use this overview to define data types, choose file access, calculate floating point and control errors.
+
+### Define data types
+
+<span lang="zh-CN">先判断类型是否由其他类型组合，再写出准确声明。</span>
+
+- Enumerated and pointer types are user-defined non-composite types.
+- Records, sets and class objects combine or refer to other data types.
+- A clear declaration gives the type name, allowed values or component fields.
+
+**Exam cue:** Use syllabus pseudocode and explain why the type suits the data.
+
+### Choose file access
+
+<span lang="zh-CN">文件组织方式决定记录顺序和查找方法。</span>
+
+- Serial files store records in arrival order and are normally searched sequentially.
+- Sequential files store records in key order and support ordered processing.
+- Random files use a record key and hashing to support direct access.
+
+**Exam cue:** Justify the organisation using update frequency, access pattern and search speed.
+
+### Calculate floating point
+
+<span lang="zh-CN">分别处理尾数和指数，并始终保留给定的位数。</span>
+
+- Interpret the mantissa and exponent as two's-complement binary values.
+- Shift the binary point according to the exponent to recover the represented number.
+- Normalise positive mantissas to begin `01` and negative mantissas to begin `10`.
+
+**Exam cue:** Show sign handling, binary-point movement and the final value.
+
+### Control range and error
+
+<span lang="zh-CN">增加尾数位改善精度，增加指数位扩大范围。</span>
+
+- Mantissa length controls precision, while exponent length controls range.
+- Rounding can introduce a representation error when bits are discarded.
+- Overflow and underflow occur when a magnitude cannot be represented in the available format.
+
+**Exam cue:** Name the error and link it to the field that is too short.
 
 ---
 

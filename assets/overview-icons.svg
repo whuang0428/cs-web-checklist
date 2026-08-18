@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="device" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="8" width="27" height="22" rx="2"/>
+    <path d="M11 38h11M16.5 30v8M7 12h19v14H7z"/>
+    <rect x="34" y="8" width="11" height="30" rx="2"/>
+    <path d="M37 13h5M37 18h5M39.5 33h.01"/>
+  </symbol>
+  <symbol id="switch" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 15h34l4 6v13H3V21l4-6z"/>
+    <path d="M3 21h42M9 28h3M16 28h3M23 28h3M31 28h2M38 28h2"/>
+  </symbol>
+  <symbol id="router" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="24" cy="24" rx="20" ry="13"/>
+    <path d="M24 12v24M12 24h24M24 12l-4 4M24 12l4 4M36 24l-4-4M36 24l-4 4M24 36l-4-4M24 36l4-4M12 24l4-4M12 24l4 4"/>
+  </symbol>
+  <symbol id="internet" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="24" r="20"/>
+    <path d="M4 24h40M24 4c6 6 9 12 9 20s-3 14-9 20M24 4c-6 6-9 12-9 20s3 14 9 20M8 14h32M8 34h32"/>
+  </symbol>
+  <symbol id="server" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="5" width="34" height="11" rx="2"/>
+    <rect x="7" y="19" width="34" height="11" rx="2"/>
+    <rect x="7" y="33" width="34" height="10" rx="2"/>
+    <path d="M12 10h.01M12 24h.01M12 38h.01M17 10h17M17 24h17M17 38h17"/>
+  </symbol>
+</svg>

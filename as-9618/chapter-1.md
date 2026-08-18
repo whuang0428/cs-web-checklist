@@ -13,55 +13,51 @@ Revise: number systems and codes; bitmap and vector graphics; sound representati
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((AS 9618<br/>Chapter 1<br/>Information Representation))
-    Data Representation
-      Binary prefixes
-        kibi 1024
-        kilo 1000
-      Number systems
-        Binary
-        Denary
-        Hexadecimal
-        BCD
-      Negative numbers
-        One's complement
-        Two's complement
-        Range
-        Overflow
-      Character sets
-        ASCII
-        Extended ASCII
-        Unicode
-    Multimedia
-      Bitmap
-        Pixel
-        Resolution
-        Bit depth
-        Colour depth
-        File header
-        File size
-      Vector graphic
-        Object
-        Property
-        Drawing list
-        Scalable
-      Sound
-        Analogue wave
-        Sampling rate
-        Sampling resolution
-        File size
-    Compression
-      Lossy
-      Lossless
-      RLE
-      Streaming
-      Bandwidth
-      Buffering
-```
+## 3. Chapter at a Glance
+
+Use this overview to convert, calculate, compare and justify information representation.
+
+### Convert and encode
+
+<span lang="zh-CN">先确认单位、数制和符号表示方法，再开始转换。</span>
+
+- Convert between binary, denary, hexadecimal and binary-coded decimal.
+- Distinguish decimal prefixes based on 1000 from binary prefixes based on 1024.
+- Represent negative integers using the specified complement method and bit width.
+
+**Exam cue:** Keep the required number of bits and identify overflow when the result is out of range.
+
+### Calculate multimedia size
+
+<span lang="zh-CN">列出所有影响文件大小的量，并统一单位。</span>
+
+- Calculate bitmap size from dimensions and colour depth, including header data when specified.
+- Calculate sound size from sampling rate, sampling resolution, channels and duration.
+- Relate higher resolution or sampling values to both quality and storage size.
+
+**Exam cue:** Write the complete formula and give the final answer in the requested unit.
+
+### Compare representations
+
+<span lang="zh-CN">比较时要说明存储方式、缩放效果和适用场景。</span>
+
+- A bitmap stores pixels, while a vector graphic stores objects and their properties.
+- Vector graphics scale without pixelation, while bitmap detail depends on resolution.
+- ASCII, extended ASCII and Unicode provide different character ranges and storage requirements.
+
+**Exam cue:** Give one linked difference rather than two separate descriptions.
+
+### Choose compression
+
+<span lang="zh-CN">根据是否允许永久丢失数据来选择压缩方法。</span>
+
+- Lossless compression reconstructs the original data exactly.
+- Lossy compression removes data permanently to achieve a smaller file.
+- Buffering stores incoming stream data temporarily when delivery and playback rates differ.
+
+**Exam cue:** Justify the compression or streaming choice using quality, bandwidth and user needs.
 
 ---
 

@@ -13,38 +13,51 @@ Revise: binary and hexadecimal; text, sound and images; storage units, file-size
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
-```mermaid
-mindmap
-  root((Chapter 1<br/>Data Representation))
-    Number Systems
-      Binary base 2
-      Denary base 10
-      Hexadecimal base 16
-      Hex digit = 4 bits
-      8-bit range 0 to 255
-    Binary Operations
-      Addition
-      Overflow
-      Logical shift
-      Two's complement
-    Text Sound Image
-      ASCII
-      Unicode
-      Sampling
-      Resolution
-      Colour depth
-    Storage
-      bit nibble byte
-      KiB MiB GiB
-      Image file size
-      Sound file size
-    Compression
-      Lossy
-      Lossless
-      RLE
-      Suitable method
-```
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
+
+## 3. Chapter at a Glance
+
+Use this overview to convert, calculate, represent and justify.
+
+### Convert values
+
+<span lang="zh-CN">先确定数制和位数，再选择正确的转换方法。</span>
+
+- Convert accurately between binary, denary and hexadecimal.
+- Use one hexadecimal digit to represent exactly four binary bits.
+- Check that an unsigned 8-bit value stays within the range 0 to 255.
+
+**Exam cue:** Show working and preserve leading zeroes when the bit pattern matters.
+
+### Calculate storage
+
+<span lang="zh-CN">把题目给出的每个量和单位都写进计算过程。</span>
+
+- Calculate image size from resolution and colour depth.
+- Calculate sound size from sample rate, sample resolution and duration.
+- Convert consistently between bits, bytes, KiB, MiB and GiB.
+
+**Exam cue:** State the formula, substitute values, then give the final unit.
+
+### Represent media
+
+<span lang="zh-CN">说明数据如何被编码，而不只是列出术语。</span>
+
+- Explain how ASCII or Unicode assigns binary codes to characters.
+- Link sample rate and sample resolution to sound quality and file size.
+- Link image resolution and colour depth to quality and storage requirements.
+
+**Exam cue:** Describe both the representation method and its effect on quality or size.
+
+### Choose compression
+
+<span lang="zh-CN">根据文件用途判断是否可以丢失数据。</span>
+
+- Choose lossless compression when the original data must be reconstructed exactly.
+- Choose lossy compression when a smaller file is worth some permanent quality loss.
+- Explain how run-length encoding replaces repeated data with a value and count.
+
+**Exam cue:** Justify the method using the file content and the user's requirement.
 
 ---
 

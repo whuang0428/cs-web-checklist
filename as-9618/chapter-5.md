@@ -13,48 +13,51 @@ Revise: operating systems and utilities; program libraries; translators and inte
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 5<br/>System Software))
-    Operating System
-      Interface
-      Application environment
-      Resource management
-      Error handling
-    OS Management
-      Memory
-      File
-      Security
-      Hardware
-      Process
-    Utility Software
-      Backup
-      Virus checker
-      Defragmenter
-      Disk formatter
-      Disk repair
-      File compression
-    Program Libraries
-      Existing routines
-      Reuse tested code
-      Save time
-      DLL
-    Translators
-      Assembler
-      Compiler
-      Interpreter
-      Java bytecode
-    IDE
-      Coding prompts
-      Syntax checks
-      Prettyprint
-      Collapse blocks
-      Breakpoints
-      Single stepping
-      Watch window
-```
+## 3. Chapter at a Glance
+
+Use this overview to explain management, choose support software, trace translation and use development tools.
+
+### Explain OS management
+
+<span lang="zh-CN">不要只写“操作系统管理电脑”，要指出资源和动作。</span>
+
+- The OS provides an interface and an environment in which applications run.
+- It allocates memory, schedules processes and manages files, hardware and security.
+- It detects errors and coordinates access to shared system resources.
+
+**Exam cue:** Name the resource, describe the OS action and state why it is needed.
+
+### Choose utilities and libraries
+
+<span lang="zh-CN">根据任务区分维护工具与可复用程序代码。</span>
+
+- Utility software performs maintenance such as backup, malware checking and disk repair.
+- Compression, formatting and defragmentation utilities change storage organisation or use.
+- Program libraries provide tested reusable routines, including dynamically linked libraries.
+
+**Exam cue:** Match the named utility or library benefit to the scenario.
+
+### Trace translation
+
+<span lang="zh-CN">说明翻译单位、输出结果和错误出现的时间。</span>
+
+- An assembler translates assembly language instructions into machine code.
+- A compiler translates a whole high-level program, while an interpreter works statement by statement.
+- Java source can be compiled to bytecode and executed by a virtual machine.
+
+**Exam cue:** Compare complete translation, execution method and error reporting.
+
+### Use IDE tools
+
+<span lang="zh-CN">把每个开发工具与调试或编写代码的具体帮助联系起来。</span>
+
+- Coding prompts, syntax checks and prettyprint help create readable valid code.
+- Breakpoints and single stepping pause execution at controlled points.
+- A watch window displays changing variable values while the program runs.
+
+**Exam cue:** Explain what the tool reveals or prevents during development.
 
 ---
 

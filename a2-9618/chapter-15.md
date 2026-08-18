@@ -13,55 +13,51 @@ Revise: processor architectures; parallel processing and virtual machines; Boole
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 
-## 3. One-Page Mind Map
+<span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-```mermaid
-mindmap
-  root((Chapter 15<br/>Hardware and Virtual Machines))
-    Processors
-      RISC
-        simple instructions
-        fixed length
-        single cycle
-        many registers
-        pipelining
-      CISC
-        complex instructions
-        variable length
-        fewer instructions per task
-        complex control unit
-      Interrupts
-        save registers
-        run ISR
-        restore state
-        pipeline issue
-    Parallel Processing
-      SISD
-      SIMD
-      MISD
-      MIMD
-      massively parallel
-    Virtual Machines
-      host
-      guest
-      hypervisor
-      portability
-      isolation
-      overhead
-    Boolean Algebra
-      AND OR NOT
-      De Morgan
-      absorption
-      distributive
-      simplify expression
-    Logic Circuits
-      truth tables
-      half adder
-      full adder
-      SR flip-flop
-      JK flip-flop
-      K-map
-```
+## 3. Chapter at a Glance
+
+Use this overview to compare processors, explain virtual execution, simplify Boolean expressions and build circuits.
+
+### Compare processors
+
+<span lang="zh-CN">用指令复杂度、长度、周期和流水线建立成对比较。</span>
+
+- RISC uses fewer simple fixed-format instructions and many registers.
+- CISC uses a larger set of complex variable-length instructions that may take several cycles.
+- Regular RISC instructions simplify pipelining, while CISC may reduce the number of instructions per task.
+
+**Exam cue:** Compare the same processor feature on both sides.
+
+### Explain parallel processing and VMs
+
+<span lang="zh-CN">先区分指令流和数据流，再说明主机、客户机和虚拟机监控器。</span>
+
+- SISD, SIMD, MISD and MIMD classify systems by instruction and data streams.
+- Massively parallel systems divide suitable work across many processing elements.
+- A hypervisor runs isolated guest systems on a host but introduces resource overhead.
+
+**Exam cue:** Link the architecture or virtual-machine benefit to the workload.
+
+### Simplify Boolean expressions
+
+<span lang="zh-CN">每一步只应用一条代数定律，并保持补运算准确。</span>
+
+- Apply identity, complement, absorption and distributive laws systematically.
+- Use De Morgan's laws by changing the operator and complementing every term.
+- Confirm a simplification with a truth table or Karnaugh map when appropriate.
+
+**Exam cue:** Name or show each transformation so method marks remain visible.
+
+### Build logic circuits
+
+<span lang="zh-CN">把表达式、真值表和组合或时序电路逐步对应。</span>
+
+- Half and full adders combine gates to produce sum and carry outputs.
+- SR and JK flip-flops store state according to inputs and the current output.
+- Karnaugh-map groups must contain powers of two and may wrap across edges.
+
+**Exam cue:** Label intermediate signals and use the required gate or flip-flop notation.
 
 ---
 
