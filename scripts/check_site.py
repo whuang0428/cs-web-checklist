@@ -259,6 +259,14 @@ def resolve_reference(source: Path, reference: str) -> Path | None:
         return ROOT / f"{route}.md"
     if reference.startswith("#"):
         return None
+    if reference.startswith("/"):
+        raw_route = reference.split("?", 1)[0].split("#", 1)[0]
+        route = raw_route.strip("/")
+        if not route:
+            return ROOT / "README.md"
+        if raw_route.endswith("/"):
+            return ROOT / route / "README.md"
+        return ROOT / f"{route}.md"
 
     target = reference.split("?", 1)[0].split("#", 1)[0]
     if not target:
@@ -325,6 +333,25 @@ def check_navigation(errors: list[str]) -> None:
             }
             if foreign:
                 add_error(errors, source, "course navigation contains a chapter from another level")
+
+        sidebar = ROOT / course / "_sidebar.md"
+        sidebar_references = MARKDOWN_REF_RE.findall(sidebar.read_text(encoding="utf-8"))
+        local_references = [
+            reference for reference in sidebar_references
+            if not reference.startswith(("http://", "https://", "//", "mailto:", "tel:"))
+        ]
+        if any(not reference.startswith("/") for reference in local_references):
+            add_error(
+                errors,
+                sidebar,
+                "course sidebar links must use explicit Docsify routes so the course prefix is preserved",
+            )
+        course_references = [
+            reference for reference in local_references
+            if "chapter-" in reference or "paper-" in reference
+        ]
+        if any(not reference.startswith(f"/{course}/") for reference in course_references):
+            add_error(errors, sidebar, "course sidebar content links must retain the course route prefix")
 
     root_sidebar = (ROOT / "_sidebar.md").read_text(encoding="utf-8")
     if "chapter-" in root_sidebar:
