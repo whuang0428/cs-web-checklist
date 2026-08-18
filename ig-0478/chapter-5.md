@@ -1,70 +1,29 @@
 # IGCSE 0478 Chapter 5: The Internet and Its Uses
-> **The Internet and Its Uses｜Syllabus-Aligned Revision Edition**
-> **适用范围**：Cambridge IGCSE Computer Science 0478  
-**章节范围**：5.1 The Internet and the World Wide Web｜5.2 Digital Currency｜5.3 Cyber Security  
-**更新依据**：2026–2028 syllabus + 2025 Paper 1 mark scheme trend + 原 2023–2024 WHBC checklist  
-**目标**：删掉低频/过细内容，保留最容易出现在 `State / Identify / Describe / Explain / Compare / Suggest` 题里的得分点。  
-**建议使用方式**：先背 **Core Exam Sentences**，再用 **Common Mistakes** 检查自己的答案是否太泛。
->
 
----
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
 
-## 0. Syllabus 更新结论：这一章现在怎么考？
-| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
-| --- | --- | --- | --- |
-| **URL / HTTP / HTTPS / SSL/TLS** | 常考 URL 部分、HTML/DNS/IP/SSL/TLS/Browser 定义；HTTPS 要写出安全机制 | 只写 “HTTPS is secure”，没有写 **SSL/TLS / encryption / digital certificate / public-private key** | 加入 HTTPS 高分模板和 URL 拆分图 |
-| **DNS + webpage retrieval** | 重点考 DNS 的作用、浏览器如何定位并显示网页 | 忘记写 **DNS returns IP address**；把 DNS 写成 “finds website” 太泛 | 固定为 `URL → DNS → IP → web server → HTML → browser renders` |
-| **Web browser functions** | 常以定义表、填空、2 marks list 出现 | 只写 “search the internet”，混淆 search engine 和 browser | 单独列出可得分功能，并强调 browser ≠ search engine |
-| **Cookies** | 2025 高频：session / persistent 对比、用途、由 browser stored/managed | 把 cookies 写成 “virus / spyware”；或只写 “stores data” | 加入 session vs persistent 对比表和常见用途模板 |
-| **Proxy server** | 2025 明显高频：DDoS 防护、caching、hide IP、limit requests、block certain IP | 把 proxy 和 firewall 完全混为一谈 | 加入 proxy vs firewall 对比，以及 proxy 的 2025 答题句 |
-| **DDoS / Botnet** | 2025 考过 diagram-style answer：malware → bot → botnet → many requests → server crashes | 只写 “many requests” 不写 bots / botnet / web server cannot handle | 加入 DDoS 流程图模板 |
-| **Security solutions** | 常要求 “solution + explanation”，不是只列名称 | 只写 “use firewall / password” 没解释如何防护 | 建立 “solution → how it works → what threat it prevents” 表 |
-| **Social engineering** | 2025 直接考定义与例子 | 只写 “hacking people” 太口语、不够精确 | 改成 mark scheme 语言：**manipulating/deceiving people to obtain confidential data** |
-| **Digital currency / blockchain** | 2025 Paper 1 出现较少，但仍在 syllabus；应保留核心流程 | 讲太深：mining, proof-of-work, wallet 等超出 IGCSE 主线 | 缩成 “digital ledger + time-stamped records + cannot be altered” |
+## Official Syllabus Checklist
 
+Revise: internet and World Wide Web; URLs, browsers and cookies; digital currency; cyber-security threats and protection.
 
----
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-### 1. 内容取舍：哪些内容要删？哪些保留？
-#### ✅ 必须保留并重点训练
-| 内容 | 原因 |
-| --- | --- |
-| Internet vs World Wide Web | syllabus 明确要求，常以 1–2 marks 出现 |
-| URL parts: protocol, domain name, web page/file name | 2025 直接考 URL label |
-| HTTP vs HTTPS + SSL/TLS | 2025 高频，HTTPS 要能解释加密和证书 |
-| Web browser functions | 2025 高频填空/表格题 |
-| DNS role and webpage retrieval process | 2025 继续考 DNS role |
-| Session cookies and persistent cookies | 2025 高频对比题 |
-| Digital currency and blockchain basics | syllabus 明确要求，保留核心定义即可 |
-| Cyber security threats | syllabus 明确列出：brute-force, data interception, DDoS, hacking, malware, pharming, phishing, social engineering |
-| Security solutions | 2025 强调 “措施 + 解释”，特别是 password, 2FA, biometrics, firewall, anti-spyware, proxy |
+## Core Knowledge
 
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-#### ⚠️ 降权或删除
-| 原内容 | 处理方式 | 原因 |
-| --- | --- | --- |
-| 过长的 biometric 优缺点表 | **压缩** | 2025 更常考 biometric 为什么安全，而不是四种技术长表 |
-| SSL 应用场景长列表 | **删除主表** | 考试更重视 SSL/TLS 如何保护数据，不重视背应用清单 |
-| WEP 作为 data interception 防护 | **降权** | 不建议作为主答案，直接写 encryption / SSL/TLS / secure protocol 更稳 |
-| pharming/phishing 过细防范清单 | **压缩成对比表** | 高频是 “process / difference / similarity”，不是长防范清单 |
-| malware 每类超长描述 | **改成一行定义 + 关键 effect** | 更贴近 mark scheme 的短答形式 |
-| digital currency vs cryptocurrency 过度扩展 | **只保留基础区别** | syllabus 核心是 digital currency 和 blockchain，不要求深入 crypto 机制 |
-| “protects the computer” 这类泛泛表达 | **替换成 mark scheme keywords** | 太泛容易 0 分或低分 |
-
-
----
 
 ## 5.1 The Internet and the World Wide Web
 ### 5.1.1 Internet vs World Wide Web
-**<font style="background-color:#f8fbff;">Internet</font>**<font style="background-color:#f8fbff;">  
-</font><font style="background-color:#f8fbff;">A worldwide collection of interconnected networks.  
-  
-</font>**<font style="background-color:#f8fbff;">Key idea:</font>**<font style="background-color:#f8fbff;"> infrastructure / network of networks. </font>
+**Internet**
+A worldwide collection of interconnected networks.
 
-**<font style="background-color:#fffaf2;">World Wide Web</font>**<font style="background-color:#fffaf2;">  
-</font><font style="background-color:#fffaf2;">A collection of websites and web pages accessed using the internet.  
-  
-</font>**<font style="background-color:#fffaf2;">Key idea:</font>**<font style="background-color:#fffaf2;"> one service that uses the internet. </font>
+**Key idea:** infrastructure / network of networks.
+
+**World Wide Web**
+A collection of websites and web pages accessed using the internet.
+
+**Key idea:** one service that uses the internet.
 
 #### Core Exam Sentences
 + The **internet** is the physical / network infrastructure.
@@ -73,7 +32,7 @@
 + The WWW uses protocols such as **HTTP / HTTPS**.
 + Email, file transfer and video streaming also use the internet, but they are not the same as the WWW.
 
-> **Common trap**：不要写 “the internet is the websites”。更准确：**the WWW contains websites; the internet is the infrastructure used to access them.**
+> **Common trap**：<span lang="zh-CN">不要写</span> “the internet is the websites”。<span lang="zh-CN">更准确</span>：**the WWW contains websites; the internet is the infrastructure used to access them.**
 >
 
 ---
@@ -116,7 +75,7 @@ https://www.example.com/shop/index.html
 | Typical clue | `http://` | `https://`, padlock / certificate |
 
 
-#### HTTPS / SSL / TLS 高分模板
+#### HTTPS / SSL / TLS Answer Structure
 > **Explain how HTTPS helps keep data secure.**
 >
 
@@ -168,7 +127,7 @@ A **web browser** is software used to **retrieve, render and display web pages**
 | Protocol management | manages HTTP/HTTPS |
 
 
-> **Common trap**：Browser ≠ Search Engine.  
+> **Common trap**：Browser ≠ Search Engine.
 A browser displays web pages. A search engine finds web pages based on keywords.
 >
 
@@ -253,7 +212,7 @@ A **digital currency** is a currency that **only exists electronically**.
 | Transactions may not be public | Transactions can be recorded on a public ledger |
 
 
-> **Keep it simple**：IGCSE 不需要深入解释 mining / proof-of-work / wallet seed phrase。核心是 digital currency 和 blockchain ledger。
+> **Keep it simple**：IGCSE <span lang="zh-CN">不需要深入解释</span> mining / proof-of-work / wallet seed phrase。<span lang="zh-CN">核心是</span> digital currency <span lang="zh-CN">和</span> blockchain ledger。
 >
 
 ---
@@ -508,7 +467,7 @@ A **proxy server** sits between the user/client and the web server.
 | DDoS defence | can restrict traffic | can absorb/filter/limit requests before web server |
 
 
-> **Common trap**：Proxy server 可以像 firewall 一样过滤 traffic，但不要只写 “it protects the website”。要写 **examines requests, filters invalid traffic, caches data, hides IP, limits requests**。
+> **Common trap**：Proxy server <span lang="zh-CN">可以像</span> firewall <span lang="zh-CN">一样过滤</span> traffic，<span lang="zh-CN">但不要只写</span> “it protects the website”。<span lang="zh-CN">要写</span> **examines requests, filters invalid traffic, caches data, hides IP, limits requests**。
 >
 
 ---
@@ -530,28 +489,28 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-## 6. Common Mistakes｜最容易丢分的答案
+## 6. Common Confusions
 | Topic | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
-| Internet vs WWW | “They are the same.” | 完全错误 | The internet is the infrastructure; the WWW is a collection of web pages accessed using the internet. |
-| Browser | “It searches websites.” | 混淆 browser 和 search engine | A web browser renders HTML and displays web pages. |
-| DNS | “DNS finds the website.” | 太泛 | DNS stores domain names and matching IP addresses, then returns the IP address to the browser. |
-| HTTPS | “It is secure.” | 太泛，没有得分关键词 | HTTPS uses SSL/TLS to encrypt data so intercepted data cannot be understood. |
-| SSL certificate | “It makes website safe.” | 不具体 | A digital certificate authenticates the web server and contains the server’s public key. |
-| Cookies | “Cookies are viruses.” | 错误 | Cookies are small text files stored/managed by the browser to store login details, preferences or shopping cart items. |
-| Session cookie | “Temporary cookie.” | 可以得 1 分但不完整 | Session cookies are deleted when the browser is closed and are stored temporarily / in RAM. |
-| Persistent cookie | “Permanent cookie.” | 不完整 | Persistent cookies remain after the browser is closed and are deleted by the user or when they expire. |
-| DDoS | “Many requests attack server.” | 少了 botnet 过程 | Malware turns computers into bots; a botnet sends many requests at once, so the server cannot respond and crashes. |
-| Firewall | “Protects computer.” | 太泛 | It monitors incoming/outgoing traffic and blocks traffic that does not meet rules/criteria. |
-| Proxy server | “Same as firewall.” | 混淆概念 | A proxy sits between user and web server, examines requests, can cache responses, hide IP, and block/limit requests. |
-| Brute-force | “Hacker guesses password.” | 不够系统 | The attacker systematically tries many combinations until the password is found. |
-| Phishing | “Fake website.” | 少了 email/link 过程 | A legitimate-looking email contains a link to a fake website where the user enters personal details. |
-| Pharming | “Fake email.” | 和 phishing 混了 | Malicious code redirects the user to a fake website, even if the user did not click a fake email link. |
-| Social engineering | “Hacking people.” | 太口语 | It manipulates/deceives people to obtain confidential or personal data. |
-| 2FA | “More secure.” | 太泛 | A code is sent to the user’s registered device, so the hacker needs both password and device/account. |
-| Biometrics | “Uses fingerprint.” | 缺少 why secure | Biometric data is unique to the user and difficult to fake or replicate. |
-| Anti-spyware | “Stops viruses.” | 工具对象错 | Anti-spyware detects/removes spyware and prevents keyloggers collecting passwords. |
-| Blockchain | “Bitcoin system.” | 太窄 | Blockchain is a digital ledger of time-stamped records that cannot easily be altered. |
+| Internet vs WWW | “They are the same.” | <span lang="zh-CN">完全错误</span> | The internet is the infrastructure; the WWW is a collection of web pages accessed using the internet. |
+| Browser | “It searches websites.” | <span lang="zh-CN">混淆</span> browser <span lang="zh-CN">和</span> search engine | A web browser renders HTML and displays web pages. |
+| DNS | “DNS finds the website.” | <span lang="zh-CN">太泛</span> | DNS stores domain names and matching IP addresses, then returns the IP address to the browser. |
+| HTTPS | “It is secure.” | <span lang="zh-CN">太泛</span>，<span lang="zh-CN">没有得分关键词</span> | HTTPS uses SSL/TLS to encrypt data so intercepted data cannot be understood. |
+| SSL certificate | “It makes website safe.” | <span lang="zh-CN">不具体</span> | A digital certificate authenticates the web server and contains the server’s public key. |
+| Cookies | “Cookies are viruses.” | <span lang="zh-CN">错误</span> | Cookies are small text files stored/managed by the browser to store login details, preferences or shopping cart items. |
+| Session cookie | “Temporary cookie.” | <span lang="zh-CN">可以得</span> 1 <span lang="zh-CN">分但不完整</span> | Session cookies are deleted when the browser is closed and are stored temporarily / in RAM. |
+| Persistent cookie | “Permanent cookie.” | <span lang="zh-CN">不完整</span> | Persistent cookies remain after the browser is closed and are deleted by the user or when they expire. |
+| DDoS | “Many requests attack server.” | <span lang="zh-CN">少了</span> botnet <span lang="zh-CN">过程</span> | Malware turns computers into bots; a botnet sends many requests at once, so the server cannot respond and crashes. |
+| Firewall | “Protects computer.” | <span lang="zh-CN">太泛</span> | It monitors incoming/outgoing traffic and blocks traffic that does not meet rules/criteria. |
+| Proxy server | “Same as firewall.” | <span lang="zh-CN">混淆概念</span> | A proxy sits between user and web server, examines requests, can cache responses, hide IP, and block/limit requests. |
+| Brute-force | “Hacker guesses password.” | <span lang="zh-CN">不够系统</span> | The attacker systematically tries many combinations until the password is found. |
+| Phishing | “Fake website.” | <span lang="zh-CN">少了</span> email/link <span lang="zh-CN">过程</span> | A legitimate-looking email contains a link to a fake website where the user enters personal details. |
+| Pharming | “Fake email.” | <span lang="zh-CN">和</span> phishing <span lang="zh-CN">混了</span> | Malicious code redirects the user to a fake website, even if the user did not click a fake email link. |
+| Social engineering | “Hacking people.” | <span lang="zh-CN">太口语</span> | It manipulates/deceives people to obtain confidential or personal data. |
+| 2FA | “More secure.” | <span lang="zh-CN">太泛</span> | A code is sent to the user’s registered device, so the hacker needs both password and device/account. |
+| Biometrics | “Uses fingerprint.” | <span lang="zh-CN">缺少</span> why secure | Biometric data is unique to the user and difficult to fake or replicate. |
+| Anti-spyware | “Stops viruses.” | <span lang="zh-CN">工具对象错</span> | Anti-spyware detects/removes spyware and prevents keyloggers collecting passwords. |
+| Blockchain | “Bitcoin system.” | <span lang="zh-CN">太窄</span> | Blockchain is a digital ledger of time-stamped records that cannot easily be altered. |
 
 
 ---
@@ -559,11 +518,11 @@ A **proxy server** sits between the user/client and the web server.
 ## 7. Command Word Strategy
 | Command word | What to do | Example answer style |
 | --- | --- | --- |
-| **State / Give / Identify** | 短答案，给名称即可 | `Proxy server`, `persistent cookie`, `DNS` |
-| **Describe** | 写 “what happens” 的步骤 | The browser sends the URL to DNS; DNS returns the IP address. |
-| **Explain** | 写原因 / 机制 / 结果 | HTTPS encrypts data, so intercepted data cannot be understood. |
-| **Compare** | 两边都要写 | Session cookies are deleted when the browser closes, whereas persistent cookies remain until deleted/expired. |
-| **Suggest** | 结合场景给合理措施 | Use two-step verification because the attacker would also need the registered device. |
+| **State / Give / Identify** | <span lang="zh-CN">短答案</span>，<span lang="zh-CN">给名称即可</span> | `Proxy server`, `persistent cookie`, `DNS` |
+| **Describe** | <span lang="zh-CN">写</span> “what happens” <span lang="zh-CN">的步骤</span> | The browser sends the URL to DNS; DNS returns the IP address. |
+| **Explain** | <span lang="zh-CN">写原因</span> / <span lang="zh-CN">机制</span> / <span lang="zh-CN">结果</span> | HTTPS encrypts data, so intercepted data cannot be understood. |
+| **Compare** | <span lang="zh-CN">两边都要写</span> | Session cookies are deleted when the browser closes, whereas persistent cookies remain until deleted/expired. |
+| **Suggest** | <span lang="zh-CN">结合场景给合理措施</span> | Use two-step verification because the attacker would also need the registered device. |
 
 
 ---
@@ -599,30 +558,47 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-## 9. Quick Check｜10 Marks
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 ### Questions
-1. State one difference between the internet and the World Wide Web. `[1]`  
-2. Identify two parts of a URL. `[2]`  
-3. Give one function of a web browser. `[1]`  
-4. State what DNS returns to the web browser. `[1]`  
-5. Give one use of cookies. `[1]`  
-6. State one difference between session cookies and persistent cookies. `[1]`  
-7. State what is meant by social engineering. `[2]`  
+1. State one difference between the internet and the World Wide Web. `[1]`
+2. Identify two parts of a URL. `[2]`
+3. Give one function of a web browser. `[1]`
+4. State what DNS returns to the web browser. `[1]`
+5. Give one use of cookies. `[1]`
+6. State one difference between session cookies and persistent cookies. `[1]`
+7. State what is meant by social engineering. `[2]`
 8. Give one benefit of a proxy server. `[1]`
 
-### Mark Scheme
-1. Internet is the infrastructure; WWW is a collection of web pages accessed using the internet.  
-2. Protocol / domain name / path / web page name / file name.  
-3. Renders HTML / displays web pages / stores bookmarks / records history / manages cookies / provides address bar.  
-4. The matching IP address.  
-5. Stores login details / preferences / payment details / shopping cart / targeted advertising.  
-6. Session cookies are deleted when the browser is closed; persistent cookies remain until deleted or expired.  
-7. Manipulating/deceiving people to obtain confidential/personal/valuable data.  
+## Quick Check Answers
+1. Internet is the infrastructure; WWW is a collection of web pages accessed using the internet.
+2. Protocol / domain name / path / web page name / file name.
+3. Renders HTML / displays web pages / stores bookmarks / records history / manages cookies / provides address bar.
+4. The matching IP address.
+5. Stores login details / preferences / payment details / shopping cart / targeted advertising.
+6. Session cookies are deleted when the browser is closed; persistent cookies remain until deleted or expired.
+7. Manipulating/deceiving people to obtain confidential/personal/valuable data.
 8. Caching / hiding IP address / blocking requests / limiting requests / protecting web server from DDoS.
 
 ---
 
-## 10. Exam-style Practice｜20 Marks
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 ### Question 1｜Webpage retrieval `[5]`
 A user enters a URL into a web browser to visit a website.
 
@@ -695,3 +671,10 @@ Any five from:
 
 ---
 
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

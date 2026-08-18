@@ -1,90 +1,17 @@
 # AS 9618 Chapter 3: Hardware
-> **Hardware｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 3 Hardware  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English keywords / mark scheme style phrases  
-> **Docsify:** ready  
-> **File name:** `chapter-3.md`
+<div class="chapter-meta"><strong>AS 9618 · Paper 1</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: computer components; memory and storage; logic gates and logic circuits.
 
-本章是 AS Paper 1 里面非常容易“看起来会，写出来不给分”的章节。  
-2024 和 2025 的考法都说明：Chapter 3 不是只背硬件名字，而是要会把硬件知识放进 **scenario 场景题** 里解释。
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-本章复习顺序建议：
+## Core Knowledge
 
-```mermaid
-flowchart LR
-A[Embedded systems<br/>specific task / dedicated hardware] --> B[Input, output and storage devices<br/>sensors / ports / magnetic / optical / SSD]
-B --> C[Memory<br/>RAM / ROM / SRAM / DRAM / PROM / EPROM / EEPROM]
-C --> D[Monitoring and control<br/>sensor / processor / actuator]
-D --> E[Buffers<br/>speed difference / temporary storage]
-E --> F[Logic gates and circuits<br/>expression / circuit / truth table]
-```
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
----
-
-## 1. Recent Paper 1 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Logic gates / circuits | Very high | Write expressions from circuits, complete truth tables, recognise NOT / AND / OR / NAND / NOR / XOR |
-| Embedded systems | High | Explain why a device is embedded; describe drawbacks, firmware update difficulty, limited function |
-| Sensors + monitoring/control | High | Choose correct sensor; explain whether system is monitoring or control |
-| RAM / ROM / flash memory | High | Current data/instructions, firmware/start-up instructions, solid-state storage, NAND/NOR/floating/control gates |
-| SRAM vs DRAM | Medium-high | Cost, density, refresh, speed; explain advantages/disadvantages |
-| PROM / EPROM / EEPROM | Medium | One-time write, UV erasing, electrical erasing, in-circuit update |
-| Secondary storage operation | High | Magnetic hard disk, optical disc, SSD/flash principles |
-| Buffer use | High | Temporary storage between devices/processes with different speeds |
-| Ports and peripheral connection | Medium | USB automatic connection / HDMI benefits |
-| Monitoring/control system wording | Medium-high | Input → processing → output; actuator changes environment |
-| Detailed electronics beyond syllabus | Low | Do not over-teach transistor-level circuits except required SSD flash gate terms |
-| Multi-input / simplified Boolean algebra | Low for AS Chapter 3 | Keep as awareness only; deeper simplification is more A2/Chapter 15 style |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| Embedded system definition and drawbacks | 2024 tested doorbell / embedded system features; 2025 still uses scenario-based hardware |
-| Sensors and actuators | 2024 and 2025 use security/shop systems with real-world sensors |
-| Monitoring vs control | Repeated scenario distinction; students often write too vaguely |
-| RAM / ROM / SRAM / DRAM | 2024 tested DRAM vs SRAM and ROM/storage in embedded context; 2025 tested RAM effect on performance |
-| PROM / EPROM / EEPROM | 2024 tested EPROM vs EEPROM directly |
-| Magnetic, optical, solid-state storage | 2024/2025 tested principal operation of storage devices |
-| Buffers | 2024 and 2025 mark schemes reward “speed difference” and “temporary storage” wording |
-| Logic gates, expressions, circuits, truth tables | 2025 Paper 1 opened with logic expressions/truth tables; very high frequency |
-| Port examples: USB, HDMI | 2024/2025 tested automatic connection and HDMI/peripheral connection |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| Very detailed electronic circuit design | Usually not needed for AS Paper 1 answers |
-| Long lists of obscure sensors | Students need common sensor-choice vocabulary, not memorising every possible sensor |
-| Detailed SSD wear-levelling algorithms | Not commonly rewarded in Paper 1 |
-| Multi-input gate theory | AS usually uses two-input logic gates and drawn circuits |
-| Deep Boolean algebra simplification | More relevant to A2 Boolean algebra; AS focuses expression/circuit/truth table |
-
-### 2.3 Remove / Avoid
-
-| Avoid this | Reason |
-| --- | --- |
-| Saying “monitoring system has outputs so it is control” automatically | Wrong. Need whether output affects the environment/input |
-| Saying “RAM stores everything permanently” | RAM is volatile |
-| Saying “ROM is main working memory” | ROM stores firmware/start-up instructions |
-| Saying “buffer makes CPU faster” | Buffer handles speed mismatch / temporary storage |
-| Using brand names for ports or devices | Cambridge gives no marks for brand names |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -139,7 +66,7 @@ mindmap
 
 ---
 
-## 4. Syllabus Checklist
+## Syllabus Map
 
 | Syllabus area | What to know | Revision priority |
 | --- | --- | --- |
@@ -156,8 +83,8 @@ mindmap
 
 > An embedded system is a computer system built into a larger device, designed to perform a specific / dedicated task.
 
-中文理解：  
-嵌入式系统不是一台“通用电脑”，而是放在某个设备里面，只负责几个固定任务。比如 smart doorbell、washing machine、car braking system、microwave controller。
+<span lang="zh-CN">中文理解</span>：
+<span lang="zh-CN">嵌入式系统不是一台</span>“<span lang="zh-CN">通用电脑</span>”，<span lang="zh-CN">而是放在某个设备里面</span>，<span lang="zh-CN">只负责几个固定任务</span>。<span lang="zh-CN">比如</span> smart doorbell、washing machine、car braking system、microwave controller。
 
 #### Mark scheme keywords
 
@@ -556,7 +483,7 @@ An optical disc reader/writer:
 
 ## 9. Processor-related Hardware Performance
 
-Although detailed CPU architecture is mainly Chapter 4, recent Paper 1 questions often mix hardware performance into Chapter 3-style device comparison questions.
+Although detailed CPU architecture is mainly Chapter 4, exam questions can mix hardware performance into Chapter 3-style device comparison questions.
 
 ### 9.1 Number of cores
 
@@ -594,7 +521,7 @@ Better:
 | Address bus | wider address bus allows more memory locations to be directly addressed |
 | Control bus | carries control signals |
 
-#### Recent exam-style answer
+#### Exam-style answer
 
 > A wider data bus means more data can be transferred between components at one time, reducing delay. A wider address bus means more memory locations can be addressed directly.
 
@@ -734,7 +661,7 @@ Recommended working columns:
 
 #### Common method error
 
-Students often calculate `XOR` as normal `OR`.  
+Students often calculate `XOR` as normal `OR`.
 Remember:
 
 ```text
@@ -830,7 +757,7 @@ Draw:
 
 ---
 
-## 12. Common Mistakes 易错表
+## 12. Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -919,51 +846,68 @@ F --> G[Check XOR and NOT carefully]
 
 ---
 
-## 16. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
-1. Define an embedded system. [2]  
-2. Give one drawback of an embedded system. [1]  
-3. State what RAM stores while a program is running. [1]  
-4. Give one difference between SRAM and DRAM. [1]  
-5. State why a buffer is used when writing data to a slow storage device. [1]  
-6. Identify a suitable sensor to detect whether a door is open. [1]  
-7. State the output of `1 XOR 1`. [1]  
-8. State the output of `1 NAND 1`. [1]  
+1. Define an embedded system. [2]
+2. Give one drawback of an embedded system. [1]
+3. State what RAM stores while a program is running. [1]
+4. Give one difference between SRAM and DRAM. [1]
+5. State why a buffer is used when writing data to a slow storage device. [1]
+6. Identify a suitable sensor to detect whether a door is open. [1]
+7. State the output of `1 XOR 1`. [1]
+8. State the output of `1 NAND 1`. [1]
 9. Explain why HDMI can be better than VGA for a monitor with speakers. [1]
 
-### Answers
+## Quick Check Answers
 
-1. Built into a larger device [1], performs a specific/dedicated task [1].  
-2. Difficult to update / limited functionality / specialist repair / e-waste [1].  
-3. Current data and instructions / currently running programs [1].  
-4. SRAM is faster / more expensive / no refresh; DRAM is cheaper / higher density / needs refresh [1].  
-5. It temporarily stores data because devices work at different speeds [1].  
-6. Contact sensor / magnetic sensor [1].  
-7. `0` [1].  
-8. `0` [1].  
+1. Built into a larger device [1], performs a specific/dedicated task [1].
+2. Difficult to update / limited functionality / specialist repair / e-waste [1].
+3. Current data and instructions / currently running programs [1].
+4. SRAM is faster / more expensive / no refresh; DRAM is cheaper / higher density / needs refresh [1].
+5. It temporarily stores data because devices work at different speeds [1].
+6. Contact sensor / magnetic sensor [1].
+7. `0` [1].
+8. `0` [1].
 9. HDMI can carry audio and video / is digital / supports high resolution [1].
 
 ---
 
-## 17. 20 Marks Exam-Style Practice with Mark Scheme
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: Embedded system and sensors [6]
 
 A smart security doorbell has a camera, motion sensor, speaker and network connection. It detects movement and sends a video notification to a user’s phone.
 
-(a) Explain why the smart doorbell is an embedded system. [2]  
-(b) Identify a suitable sensor for detecting movement near the door. [1]  
+(a) Explain why the smart doorbell is an embedded system. [2]
+(b) Identify a suitable sensor for detecting movement near the door. [1]
 (c) Explain whether the doorbell is a monitoring system or a control system. [3]
 
 #### Mark scheme
 
-(a) Built into a larger device / doorbell [1], performs specific tasks such as motion detection / video recording / notification [1].  
-(b) Infrared / motion / proximity sensor [1].  
-(c) Award up to [3]:  
-+ monitoring if it records/transmits video without affecting the sensor input [1]  
-+ control if it processes data and sends a signal to an output device such as speaker/light [1]  
+(a) Built into a larger device / doorbell [1], performs specific tasks such as motion detection / video recording / notification [1].
+(b) Infrared / motion / proximity sensor [1].
+(c) Award up to [3]:
++ monitoring if it records/transmits video without affecting the sensor input [1]
++ control if it processes data and sends a signal to an output device such as speaker/light [1]
 + must justify using the given scenario: data from sensor causes output/action or only records/transmits [1]
 
 ---
@@ -972,19 +916,19 @@ A smart security doorbell has a camera, motion sensor, speaker and network conne
 
 A computer has 2 GB RAM, ROM, a magnetic hard disk and a USB flash drive.
 
-(a) Explain how more RAM can improve performance. [3]  
+(a) Explain how more RAM can improve performance. [3]
 (b) Describe the principal operation of a magnetic hard disk. [3]
 
 #### Mark scheme
 
-(a) Award up to [3]:  
-+ more current data/instructions/programs can be stored in main memory [1]  
-+ less need for virtual memory / secondary storage access [1]  
+(a) Award up to [3]:
++ more current data/instructions/programs can be stored in main memory [1]
++ less need for virtual memory / secondary storage access [1]
 + secondary storage has slower access time, so there is less delay/latency [1]
 
-(b) Award up to [3]:  
-+ platters are magnetised and rotate on a spindle [1]  
-+ read/write head moves across the surface [1]  
+(b) Award up to [3]:
++ platters are magnetised and rotate on a spindle [1]
++ read/write head moves across the surface [1]
 + changes in magnetic field are detected / used to read binary data [1]
 
 ---
@@ -993,12 +937,12 @@ A computer has 2 GB RAM, ROM, a magnetic hard disk and a USB flash drive.
 
 A computer writes sensor readings to an optical disc. The computer also connects to a monitor with built-in speakers.
 
-(a) Explain why a buffer may be used when writing to the optical disc. [2]  
+(a) Explain why a buffer may be used when writing to the optical disc. [2]
 (b) Explain one benefit of using HDMI to connect the monitor instead of VGA. [2]
 
 #### Mark scheme
 
-(a) Temporary storage [1] because the computer and optical disc writer work at different speeds / data is stored until writer is ready [1].  
+(a) Temporary storage [1] because the computer and optical disc writer work at different speeds / data is stored until writer is ready [1].
 (b) HDMI carries audio and video so no separate audio cable is needed [1] OR HDMI is digital / supports higher resolution [1], with a clear comparison to VGA [1].
 
 ---
@@ -1038,3 +982,11 @@ X = (A AND NOT B) OR (B XOR C)
 Award [2] for first four rows correct and [2] for second four rows correct.
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

@@ -1,89 +1,17 @@
 # AS 9618 Chapter 2: Communication
-> **Communication｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 2 Communication  
-> **Syllabus section:** 2.1 Networks including the internet  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English mark scheme keywords  
+<div class="chapter-meta"><strong>AS 9618 · Paper 1</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: networks and topologies; packets; internet services; hardware; Ethernet and bit streaming.
 
-Chapter 2 不应该只背很多网络名词。2024 和 2025 的 Paper 1 更喜欢把网络知识放进一个具体场景里考：公司 LAN、WAN、smartphone 连接、video conference、star topology diagram、IP address 填空、switch/router/modem 用途等。
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-复习时请按下面顺序：
+## Core Knowledge
 
-```mermaid
-flowchart LR
-A[Network purpose<br/>LAN / WAN] --> B[Network models<br/>client-server / peer-to-peer<br/>thin / thick client]
-B --> C[Topology choice<br/>bus / star / mesh / hybrid]
-C --> D[Transmission media<br/>wired / wireless<br/>cell phone network]
-D --> E[Network hardware<br/>switch / router / modem / WAP / NIC]
-E --> F[Internet concepts<br/>WWW / internet / IP / DNS / URL]
-F --> G[Bit streaming<br/>real-time / on-demand<br/>buffer / bitrate]
-```
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
----
-
-## 1. Recent Paper 1 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Topologies | Very high | Identify bus / star / mesh; justify choice; draw labelled star topology |
-| LAN vs WAN | High | Compare geographical area, ownership of hardware/media, private/external infrastructure |
-| IP addresses | Very high | IPv4 vs IPv6, static vs dynamic, public vs private, subnetting basics |
-| Network hardware | Very high | Switch, router, modem, dedicated line, WAP, NIC/WNIC, server |
-| Cell phone network | High in 2025 | Cells, towers, wireless low-power radio signals, smartphone to tower communication |
-| Bit streaming | High in 2025 | Real-time streaming, media server, buffer, bandwidth, compression, latency |
-| Switch role | High in 2025 | MAC address table, receives packets, forwards directly to intended device |
-| Router/public IP | High in 2024 | Router connects LAN to internet; public IP is accessible/visible on internet |
-| Cloud computing | Medium | Public/private cloud, benefits/drawbacks, scenario justification |
-| DNS / URL / WWW vs internet | Medium | Definitions and process, but less calculation-heavy than IP/topology |
-| Ethernet / CSMA-CD | Medium-low | Know collision detection/avoidance, but not too deep beyond syllabus wording |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Content | Decision | Reason |
-| --- | --- | --- |
-| LAN vs WAN | Strengthen | 2025 asked direct comparison in a company WAN scenario |
-| Star topology | Strengthen | 2025 asked students to draw a star topology with labelled devices |
-| Bus / star / mesh | Strengthen | 2024 tested topology identification from statements |
-| Switch role | Strengthen | 2025 mark scheme rewards MAC address + direct forwarding language |
-| IP address formats | Strengthen | 2024/2025 both reward exact IPv4/IPv6 facts |
-| Public/private/static/dynamic IP | Strengthen | Common short-answer and fill-in area |
-| Bit streaming | Strengthen | 2025 tested real-time bit streaming, buffer and compression together |
-| Modem / dedicated line | Strengthen | 2025 tested their use during internet transmission |
-| Cell phone network | Strengthen | 2025 tested data transmission using smartphone/cell network |
-| Router | Keep strong | 2024 tested public IPv6 address and internet connection |
-
-### 2.2 Downweight
-
-| Content | Why downweight |
-| --- | --- |
-| Very detailed OSI/TCP/IP layers | Not required in AS Chapter 2 syllabus at this depth |
-| Deep cryptography for networks | Mainly Chapter 6/17, not Chapter 2 core |
-| Bluetooth details beyond simple comparison | Not strongly represented in 2024/2025 Paper 1 Chapter 2 questions |
-| Excessive Ethernet frame structure | Syllabus asks Ethernet and CSMA/CD concept, not low-level frame memorisation |
-| MAN/PAN/CAN network types | Not central to current 9618 Chapter 2 syllabus wording |
-| Detailed DNS record types | Students need DNS role/process, not A/AAAA/CNAME detail |
-
-### 2.3 Delete from student revision focus
-
-| Delete / avoid | Reason |
-| --- | --- |
-| Vendor-specific router/switch brand features | Brand names do not receive marks |
-| IPv6 subnet planning in professional CIDR depth | Too far beyond AS Paper 1 expectation |
-| Long historical development of internet | Low exam value |
-| WiFi standards such as 802.11ax speed tables | Too detailed and likely not mark-bearing |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -158,12 +86,12 @@ A network connects computers and devices so that they can communicate and share 
 
 | Benefit | Student-friendly explanation | Mark scheme phrase |
 | --- | --- | --- |
-| Share hardware | 多台电脑可以共用 printers / storage | **share resources / peripherals** |
-| Share data | 用户可以访问共同文件 | **share files / data** |
-| Central backup | 数据可统一备份 | **centralised backup** |
-| Central security | 管理员可统一设置权限 | **centralised access rights / permissions** |
-| Communication | 用户可发送 messages / email / video calls | **communication between users** |
-| Software management | 可以集中安装或更新软件 | **centralised software update / management** |
+| Share hardware | <span lang="zh-CN">多台电脑可以共用</span> printers / storage | **share resources / peripherals** |
+| Share data | <span lang="zh-CN">用户可以访问共同文件</span> | **share files / data** |
+| Central backup | <span lang="zh-CN">数据可统一备份</span> | **centralised backup** |
+| Central security | <span lang="zh-CN">管理员可统一设置权限</span> | **centralised access rights / permissions** |
+| Communication | <span lang="zh-CN">用户可发送</span> messages / email / video calls | **communication between users** |
+| Software management | <span lang="zh-CN">可以集中安装或更新软件</span> | **centralised software update / management** |
 
 #### Drawbacks of networking
 
@@ -222,7 +150,7 @@ A network connects computers and devices so that they can communicate and share 
 | Speed/latency | usually faster/lower latency | may be slower/higher latency |
 | Example | school network | company network across cities |
 
-#### Recent exam-style answer
+#### Exam-style answer
 
 > A WAN covers a larger geographical area than a LAN. A WAN may use external or non-company-owned transmission media, while a LAN usually uses dedicated hardware and media owned by the organisation.
 
@@ -723,7 +651,7 @@ A dedicated line is a private/direct connection between sites.
 + not shared with general public traffic in the same way
 + can improve security/control
 
-#### Recent exam-style answer
+#### Exam-style answer
 
 > A dedicated line provides a direct/private connection, which can provide faster and more reliable transmission.
 
@@ -770,7 +698,7 @@ A collision happens when two devices transmit on the same shared medium at the s
 
 > A device checks whether the medium is free before transmitting. If a collision is detected, devices stop transmitting, wait for a random time and retransmit.
 
-#### Downweight warning
+#### Scope warning
 
 Do not spend too long on Ethernet frame fields unless your course specifically requires it. For AS Paper 1, the high-value answer is usually about **checking medium, detecting collision, random wait, retransmission**.
 
@@ -939,7 +867,7 @@ An IP address identifies a device/interface on a network so packets can be route
 
 > A public IP address allows the router to be visible and accessible by other devices on the internet.
 
-#### Recent exam-style answer
+#### Exam-style answer
 
 > A private IP address can only be accessed by devices in the same LAN and is assigned by the router within the LAN.
 
@@ -1045,7 +973,7 @@ DNS translates a human-readable domain name into an IP address.
 
 ---
 
-## 17. Common Mistakes 易错表
+## 17. Common Confusions
 
 | Mistake | Why it loses marks | Correct exam wording |
 | --- | --- | --- |
@@ -1145,7 +1073,22 @@ R --> I[Internet]
 
 ---
 
-## 20. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -1160,7 +1103,7 @@ R --> I[Internet]
 9. What does DNS do? [1]
 10. Why is a buffer used in bit streaming? [1]
 
-### Answers
+## Quick Check Answers
 
 1. A WAN covers a larger geographical area / may use external transmission media.
 2. Centralised backup/security/management.
@@ -1175,7 +1118,9 @@ R --> I[Internet]
 
 ---
 
-## 21. 20 Marks Exam-Style Practice with Mark Scheme
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1 — WAN and cell phone network [6]
 
@@ -1274,3 +1219,11 @@ Award up to 3 marks:
 + Quality reduction is acceptable for video conference.
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

@@ -1,62 +1,30 @@
 # IGCSE 0478 Chapter 6: Automated and Emerging Technologies
-> **Automated Systems and Emerging Technologies｜Syllabus-Aligned Revision Edition**
-> **适用范围**：Cambridge IGCSE Computer Science 0478  
-**更新依据**：2026–2028 syllabus + 2025 Paper 1 mark scheme trend  
-**目标**：删掉低频/过时内容，保留最容易出现在 `State / Describe / Explain / Suggest` 题里的得分点。  
-**建议使用方式**：先背“核心模板”，再用“场景迁移表”练习把知识点套进不同题干。
->
 
----
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
 
-## 0. Syllabus 更新结论：这一章现在怎么考？
-| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
-| --- | --- | --- | --- |
-| **Automated systems** | 不再只问定义，常放进具体场景：ATM 欢迎屏、天气报警系统、农业/工厂系统 | 只写“sensor collects data”，没有写 **microprocessor compares with stored/preset value** | 增加“传感器 → 微处理器 → 比较 → 输出/执行器”的固定模板 |
-| **Robotics** | 重点转向“是否是 robot”“robot 的特征”“场景优缺点” | 把所有智能设备都说成 robot；忽略 **mechanical structure / actuator / movement** | 删除过多 independent/dependent 分类，突出 robot 判断标准 |
-| **AI** | 高频问 AI characteristics、expert system、machine learning 场景应用 | 把 AI 写成“very smart computer”，没有 data/rules/reason/adapt | 改成 mark scheme 语言：**data + rules + reasoning + learning/adapting** |
-| **Expert system** | 常考填空/描述运行流程，尤其 doctor diagnosis | 组件混淆：knowledge base / rule base / inference engine / interface | 用流程图和组件表重建 |
-| **Machine learning** | 高频放进 smart speaker、game enemy、weather prediction、delivery robot | 只写“it learns”，没有写从什么数据学、怎样改变结果 | 增加“collect → analyse pattern → feedback → adapt → predict”的万能句式 |
+## Official Syllabus Checklist
 
+Revise: automated systems; robotics; artificial intelligence, expert systems and machine learning.
 
----
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-### 1. 内容取舍：哪些内容要删？哪些保留？
-#### ✅ 必须保留并重点训练
-| 内容 | 原因 |
-| --- | --- |
-| sensors, microprocessors and actuators collaboration | syllabus 明确要求；2025 直接考过多次 |
-| advantages / disadvantages in a given scenario | 每年常见，必须和题干对象绑定 |
-| characteristics of a robot | 2025 直接考“为什么是/不是 robot” |
-| robot use in industry, medicine, agriculture, transport, domestic settings | syllabus 场景范围，容易出 explain/suggest |
-| AI characteristics | 2025 高频 |
-| expert system components and operation | 2025 继续考诊断类 expert system |
-| machine learning meaning and improvement | 2025 高频场景题 |
+## Core Knowledge
 
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-#### ⚠️ 降权或删除
-| 原内容 | 处理方式 | 原因 |
-| --- | --- | --- |
-| Narrow AI / General AI / Strong AI 三分类 | **删除主表，只可作为拓展** | 新 syllabus 明确把 AI 限定在 expert systems 和 machine learning，三分类不是核心得分点 |
-| Independent robots / dependent robots 分类 | **降权** | 可以帮助理解 autonomous/dependent，但不是新卷的主要答题关键词 |
-| 大段 autonomous vehicles 优缺点 | **改成场景模板** | 新题更喜欢 specific scenario，如 surgery robot / delivery robot / weather system |
-| Expert system advantages/disadvantages 长表 | **缩短** | 2025 更重视 operation/components，不再建议学生死背长表 |
-| Deep learning / neural networks | **不作为 IGCSE 必背** | 超出核心考纲。题目接受 supervised/unsupervised 作为 machine learning 例子，但不要求解释细节 |
-
-
----
 
 ## 6.1 Automated Systems
 ### 6.1.1 Core Definition
 An **automated system** is a system that can perform actions **without human intervention**, usually by using:
 
-**<font style="background-color:#f8fbff;">1. Sensor</font>**<font style="background-color:#f8fbff;">  
-</font><font style="background-color:#f8fbff;">Collects data from the environment. </font>
+**1. Sensor**
+Collects data from the environment.
 
-**<font style="background-color:#fffaf2;">2. Microprocessor</font>**<font style="background-color:#fffaf2;">  
-</font><font style="background-color:#fffaf2;">Processes sensor data and makes decisions. </font>
+**2. Microprocessor**
+Processes sensor data and makes decisions.
 
-**<font style="background-color:#f7fff5;">3. Actuator / Output</font>**<font style="background-color:#f7fff5;">  
-</font><font style="background-color:#f7fff5;">Carries out the action or gives an alert. </font>
+**3. Actuator / Output**
+Carries out the action or gives an alert.
 
 ---
 
@@ -66,11 +34,11 @@ An **automated system** is a system that can perform actions **without human int
 
 Use this structure almost every time:
 
-1. The **sensor** detects / measures data from the environment.  
-2. The sensor data is sent to the **microprocessor**.  
-3. The microprocessor compares the data with a **stored value / preset value / acceptable range**.  
-4. If the condition is met, the microprocessor sends a **signal**.  
-5. The signal triggers an **actuator** or output device.  
+1. The **sensor** detects / measures data from the environment.
+2. The sensor data is sent to the **microprocessor**.
+3. The microprocessor compares the data with a **stored value / preset value / acceptable range**.
+4. If the condition is met, the microprocessor sends a **signal**.
+5. The signal triggers an **actuator** or output device.
 6. The process repeats continuously.
 
 ```mermaid
@@ -164,8 +132,8 @@ A robot should usually have several of these features:
 | Can sense surroundings | It uses sensors to detect data from the environment. |
 
 
-> **Important exam trap**  
-A device can be “smart” but still **not** be a robot if it has no mechanical structure, no actuator and cannot move itself.  
+> **Important exam trap**
+A device can be “smart” but still **not** be a robot if it has no mechanical structure, no actuator and cannot move itself.
 Example: a smart speaker can use AI, but it is normally not a robot.
 >
 
@@ -258,11 +226,11 @@ Good answer:
 
 In IGCSE 0478, AI is mainly limited to:
 
-**<font style="background-color:#f8fbff;">Expert systems</font>**<font style="background-color:#f8fbff;">  
-</font><font style="background-color:#f8fbff;">Use expert knowledge, rules and inference to suggest decisions. </font>
+**Expert systems**
+Use expert knowledge, rules and inference to suggest decisions.
 
-**<font style="background-color:#fffaf2;">Machine learning</font>**<font style="background-color:#fffaf2;">  
-</font><font style="background-color:#fffaf2;">Allows a program to automatically adapt its own processes and/or data. </font>
+**Machine learning**
+Allows a program to automatically adapt its own processes and/or data.
 
 ---
 
@@ -280,8 +248,8 @@ A strong answer should include any of these:
 
 
 #### 3-mark AI definition template
-> AI is the simulation of intelligent behaviour by computers.  
-It uses a collection of data and rules for using that data.  
+> AI is the simulation of intelligent behaviour by computers.
+It uses a collection of data and rules for using that data.
 It can reason or make decisions, and may learn/adapt from previous results.
 >
 
@@ -310,8 +278,8 @@ Common scenarios:
 | **Inference engine** | Applies the rule base to the knowledge base and user input to reach a conclusion. |
 
 
-> **Do not overfocus on “explanation system”**  
-It may appear in textbooks, but the core IGCSE syllabus components are:  
+> **Do not overfocus on “explanation system”**
+It may appear in textbooks, but the core IGCSE syllabus components are:
 **interface, knowledge base, rule base, inference engine**.
 >
 
@@ -330,10 +298,10 @@ G --> H[Output shown on interface]
 ```
 
 #### Mark Scheme Style Answer: Doctor diagnosis
-> The doctor enters data about the patient’s symptoms into the **interface**.  
-The **inference engine** decides which questions to ask based on the previous answers.  
-It compares the symptoms with facts in the **knowledge base**.  
-It applies the **rule base** to decide a diagnosis.  
+> The doctor enters data about the patient’s symptoms into the **interface**.
+The **inference engine** decides which questions to ask based on the previous answers.
+It compares the symptoms with facts in the **knowledge base**.
+It applies the **rule base** to decide a diagnosis.
 The diagnosis is output through the **interface**.
 >
 
@@ -431,14 +399,14 @@ Use these points:
 
 ---
 
-## 8. Recent Exam-Style Mini Question Bank
+## Worked Scenario Question Bank
 ### Q1. Automated weather alert system [3]
-A weather station sends an alert when a sensor value is greater than 40.  
+A weather station sends an alert when a sensor value is greater than 40.
 Describe how the sensor and microprocessor are used.
 
 Answer
 
- - A sensor collects environmental data. - The sensor sends the data to the microprocessor. - The microprocessor compares the data with the preset value of 40. - If the data is greater than 40, the microprocessor sends a signal to trigger the alert. 
+ - A sensor collects environmental data. - The sensor sends the data to the microprocessor. - The microprocessor compares the data with the preset value of 40. - If the data is greater than 40, the microprocessor sends a signal to trigger the alert.
 
 ---
 
@@ -447,7 +415,7 @@ Explain why a smart speaker is not normally considered a robot.
 
 Answer
 
- - It does not have a mechanical structure. - It does not have actuators. - It cannot move itself. 
+ - It does not have a mechanical structure. - It does not have actuators. - It cannot move itself.
 
 ---
 
@@ -456,7 +424,7 @@ Describe how an expert system can help a doctor diagnose an illness.
 
 Answer
 
- - The doctor enters symptoms into the interface. - The inference engine decides which questions to ask based on previous answers. - The inference engine compares symptoms with facts in the knowledge base. - It applies rules from the rule base. - A diagnosis is output through the interface. 
+ - The doctor enters symptoms into the interface. - The inference engine decides which questions to ask based on previous answers. - The inference engine compares symptoms with facts in the knowledge base. - It applies rules from the rule base. - A diagnosis is output through the interface.
 
 ---
 
@@ -465,7 +433,7 @@ Explain how machine learning can improve the movement of a game enemy.
 
 Answer
 
- - It collects data about the player’s actions. - It analyses patterns in the player’s movements. - It predicts the player’s next movement. - It adapts its own movements to match the player. - It stores successful and unsuccessful moves. 
+ - It collects data about the player’s actions. - It analyses patterns in the player’s movements. - It predicts the player’s next movement. - It adapts its own movements to match the player. - It stores successful and unsuccessful moves.
 
 ---
 
@@ -474,7 +442,7 @@ Explain two benefits of using a robot for remote surgery.
 
 Answer
 
- - A specialist doctor does not need to travel, so surgery can happen sooner. - The robot can improve precision, so smaller incisions can be made. - Smaller incisions may reduce recovery time. - The doctor may not need to be near an infectious patient, so the surgery can be safer or more hygienic. 
+ - A specialist doctor does not need to travel, so surgery can happen sooner. - The robot can improve precision, so smaller incisions can be made. - Smaller incisions may reduce recovery time. - The doctor may not need to be near an infectious patient, so the surgery can be safer or more hygienic.
 
 ---
 
@@ -545,7 +513,7 @@ mindmap
 
 ---
 
-## 10. Ultra-Short Student Checklist
+## Revision Readiness Checklist
 Before the exam, students should be able to answer:
 
 - [ ] Can I describe the sensor → microprocessor → actuator cycle?
@@ -561,4 +529,69 @@ Before the exam, students should be able to answer:
 - [ ] Can I apply machine learning to weather, gaming, voice recognition and robot navigation?
 
 ---
+## Required Ideas and Exam Language
 
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
+
+1. State the three main stages of an automated control system. **[2]**
+2. Describe how an automated greenhouse responds when its temperature rises above a stored maximum. **[3]**
+3. Give two characteristics that distinguish a robot from a simple smart device. **[2]**
+4. Describe how a medical expert system uses a knowledge base, rule base and inference engine. **[3]**
+
+## Quick Check Answers
+
+1. Sensor/input, microprocessor/controller and actuator/output. Award any two correctly ordered stages. **[2]**
+2. A sensor measures temperature and sends the reading to the microprocessor **[1]**; the reading is compared with the stored maximum **[1]**; the processor signals an actuator such as a fan or vent to reduce the temperature **[1]**. **[3]**
+3. Any two: mechanical structure, electrical components, programmable control, movement or manipulation, sensing its environment. **[2]**
+4. The knowledge base stores facts **[1]**; the rule base stores conditional expert rules **[1]**; the inference engine matches the entered symptoms to facts/rules to produce questions and a possible diagnosis **[1]**. **[3]**
+
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
+
+### Question 1 — Automated Warehouse [6]
+
+A warehouse uses a light sensor and motorised lamps to maintain a minimum light level. Describe the complete feedback process. **[6]**
+
+### Question 2 — Agricultural Robot [6]
+
+Evaluate the use of a robot to inspect crops and remove weeds. Give two benefits, two limitations and a justified conclusion. **[6]**
+
+### Question 3 — Machine-Learning Prediction [8]
+
+A water company wants a machine-learning system to predict pipe failures. Explain how data would be used to train and improve the system, and identify one risk that must be controlled. **[8]**
+
+## Practice Mark Scheme
+
+### Question 1 Mark Scheme [6]
+
+Sensor repeatedly measures light level **[1]**; analogue reading is converted to digital if required **[1]**; data is sent to the microprocessor **[1]**; reading is compared with the stored minimum **[1]**; if below the minimum, a signal switches/brightens the lamps **[1]**; new readings provide feedback and lamps are reduced/switched off when the target is reached **[1]**. **[6]**
+
+### Question 2 Mark Scheme [6]
+
+Benefits: any two contextual points, such as continuous operation, consistent detection, reduced chemical use, less repetitive labour or access to large fields **[2]**. Limitations: any two contextual points, such as purchase/maintenance cost, crop-recognition errors, damage from malfunction, weather/terrain limits or cyber attack **[2]**. Conclusion compares the evidence and proposes a justified condition, such as supervised trials and a manual stop before full deployment **[2]**. **[6]**
+
+### Question 3 Mark Scheme [8]
+
+Collect historical labelled examples containing pipe condition, sensor readings and whether/when failure occurred **[2]**; clean and divide representative data into training and test/validation sets **[1]**; train the model to find patterns linking inputs to failures **[1]**; compare predictions with known outcomes and calculate error **[1]**; adjust the model and repeat with further outcomes/feedback **[1]**; test on unseen data before operational use **[1]**; control a relevant risk such as biased/incomplete data, false alarms, missed failures or insecure sensor data **[1]**. **[8]**
+
+## Final Revision Checklist
+
+- I can describe a sensor–processor–actuator feedback loop in order.
+- I can distinguish an automated system, a robot, an expert system and machine learning.
+- I can apply benefits and limitations to a named scenario.
+- I can explain how training data and feedback change a machine-learning model.
+- I can complete and self-mark both assessment sections.

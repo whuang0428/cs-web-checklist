@@ -1,75 +1,29 @@
 # IGCSE 0478 Chapter 4: Software
-> **Software｜Syllabus-Aligned Revision Edition**
-> **适用范围**：Cambridge IGCSE Computer Science 0478  
-**章节范围**：4.1 Types of Software and Interrupts｜4.2 Programming Languages, Translators and IDEs  
-**更新依据**：2026–2028 syllabus + 全部 2025 Paper 1 / Mark Scheme 趋势 + 原 2023–2024 WHBC checklist  
-**目标**：删掉低频/过细内容，把学生最容易拿分的 `State / Identify / Describe / Explain / Compare / Suggest` 得分句整理出来。  
-**建议使用方式**：先背 **Core Exam Sentences**，再用 **Common Mistakes** 检查答案是否太泛。
->
 
----
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
 
-## 0. Syllabus 更新结论：这一章现在怎么考？
-| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
-| --- | --- | --- | --- |
-| **System vs application software** | 常以 1–4 marks 出现，要求区别 + example | 只写 “software used by computer/user”，没有写 **services computer requires / services user requires** | 保留核心定义，减少过长例子 |
-| **Utility software** | 常作为 system software example 出现 | 把 utility software 写成 application software | 明确：utility software is system software |
-| **Operating system functions** | 2025 明显高频：memory management, interrupts, user accounts, platform, interface | 只列名称，不描述 role；或把 bootstrap 当 OS function | 加入 “function + role” 表格 |
-| **Memory management** | 2025 直接考 3 marks：allocates/deallocates memory, checks enough memory, moves data, avoids same location conflict, virtual memory | 只写 “manages memory” 太泛 | 单独强化 memory management 模板 |
-| **Firmware / BIOS / bootloader** | 2025 常和 embedded system / robot / OS running process 联系 | 把 firmware 写成 hardware；忘记 ROM | 保留“stored in ROM / programmed into hardware / provides platform” |
-| **Interrupt handling** | 2025 高频：hardware/software interrupt, priority, stack, ISR / interrupt handler, queue | 只写 “CPU stops” 不够；忘记 ISR 和 priority | 加入 interrupt full process flow |
-| **Hardware vs software interrupts** | 2025 直接问例子 | 把 key press 写成 software interrupt；把 divide by zero 写成 hardware interrupt | 加入对比表和例子 |
-| **High-level vs low-level languages** | 常考 advantages of HLL and features of LLL | 只写 “HLL easier” 太泛；忘记 portable / machine independent | 加入 HLL / LLL mark scheme keywords |
-| **Assembly language + assembler** | 2025 反复考：assembly is low-level, uses mnemonics, assembler translates to machine code | 把 assembler / compiler / interpreter 混淆 | 单独做“三译者对比” |
-| **Compiler vs interpreter** | 2025 高频 cloze / compare：whole code vs line-by-line, error report vs stops at error, executable file | 只写 “compiler faster” 不够稳 | 以 mark scheme 句子为主 |
-| **IDE functions** | 2025 高频：code editor, run-time environment, error diagnostics, auto-completion, auto-correction, prettyprint | 只列功能名，没有解释 role | 做“function + role” 表 |
-| **Buffer** | 不是 2025 核心高频，但仍可作为 interrupt/context support | 写太长，和 RAM 混在一起 | 降权，只保留 one-sentence version |
+## Official Syllabus Checklist
 
+Revise: system and application software; operating systems and interrupts; translators and IDEs.
 
----
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-### 1. 内容取舍：哪些内容要删？哪些保留？
-#### ✅ 必须保留并重点训练
-| 内容 | 原因 |
-| --- | --- |
-| System software vs application software | syllabus 明确要求；2024–2025 多次出现 |
-| Utility software as system software | 常作为 system software example |
-| OS functions | 2025 直接考 operating system role/function |
-| Memory management | 2025 明确高频，容易丢分 |
-| Firmware / BIOS / bootloader | 和 hardware / OS / application running chain 相关 |
-| Interrupt types and handling process | 2025 明显高频 |
-| Hardware interrupt vs software interrupt | 2025 直接考 example |
-| High-level vs low-level language | 经典高频 comparison |
-| Assembly language and assembler | 2025 反复出现 |
-| Compiler vs interpreter | 2025 高频填空 / compare |
-| IDE functions with descriptions | 2025 直接考 function + role |
+## Core Knowledge
 
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-#### ⚠️ 降权或删除
-| 原内容 | 处理方式 | 原因 |
-| --- | --- | --- |
-| 过长 application software examples | **压缩** | 考试一般只要 example，不需要背长描述 |
-| Linker / link editor | **降权** | 不在 Chapter 4 的高频考查主线，容易干扰 compiler / assembler |
-| Screensaver as utility software | **删除主表** | 低频且容易让学生误判重点 |
-| “compiler is system software” 长解释 | **压缩** | 考试更常把 compiler 放在 translator 部分考 |
-| 过长 GUI / HCI 解释 | **压缩** | OS interface 只需会写 role |
-| Buffer 长段落 | **降权** | 保留概念即可，不作为主背诵内容 |
-| 品牌软件例子 | **删除** | Cambridge mark scheme 不给 brand name 分 |
-
-
----
 
 ## 4.1 Types of Software and Interrupts
 ### 4.1.1 Software Types｜System Software vs Application Software
-**<font style="background-color:#f8fbff;">System Software</font>**<font style="background-color:#f8fbff;">  
-</font><font style="background-color:#f8fbff;">Software that provides the services that the computer requires.  
-  
-</font>**<font style="background-color:#f8fbff;">Key idea:</font>**<font style="background-color:#f8fbff;"> manages / maintains hardware and software. </font>
+**System Software**
+Software that provides the services that the computer requires.
 
-**<font style="background-color:#fffaf2;">Application Software</font>**<font style="background-color:#fffaf2;">  
-</font><font style="background-color:#fffaf2;">Software that provides the services that the user requires.  
-  
-</font>**<font style="background-color:#fffaf2;">Key idea:</font>**<font style="background-color:#fffaf2;"> allows the user to perform tasks. </font>
+**Key idea:** manages / maintains hardware and software.
+
+**Application Software**
+Software that provides the services that the user requires.
+
+**Key idea:** allows the user to perform tasks.
 
 #### Core Exam Sentences
 + **System software** provides the services that the computer requires.
@@ -79,7 +33,7 @@
 + Application software allows the user to **perform specific tasks**.
 + Examples: word processor, spreadsheet, database, web browser, image editor, video editor.
 
-> **Common trap**：考试如果问 system software example，最稳答案是 **operating system** 或 **utility software**。不要写 brand name。
+> **Common trap**：<span lang="zh-CN">考试如果问</span> system software example，<span lang="zh-CN">最稳答案是</span> **operating system** <span lang="zh-CN">或</span> **utility software**。<span lang="zh-CN">不要写</span> brand name。
 >
 
 ---
@@ -103,7 +57,7 @@
 + Utility software is a type of **system software**.
 + Anti-virus software is utility software because it helps protect the computer system.
 
-> **注意**：defragmentation 主要适用于 **magnetic storage / HDD**，不要把它当作 SSD 的主功能来写。
+> **<span lang="zh-CN">注意</span>**：defragmentation <span lang="zh-CN">主要适用于</span> **magnetic storage / HDD**，<span lang="zh-CN">不要把它当作</span> SSD <span lang="zh-CN">的主功能来写</span>。
 >
 
 ---
@@ -125,7 +79,7 @@ An **operating system (OS)** is system software that manages the main functions 
 | **Managing user accounts** | allows multiple users to log in and have separate settings/access rights |
 
 
-#### OS Memory Management｜2025 高频模板
+#### OS Memory Management Answer Structure
 > **Describe the role of the OS in managing memory.**
 >
 
@@ -144,7 +98,7 @@ Use these points:
 + The OS manages **memory, files, peripherals, security, user accounts and multitasking**.
 + The OS handles interrupts by assigning priority and calling the **interrupt service routine**.
 
-> **Common trap**：`loading the bootstrap` 不是 OS 的 function。Bootstrap / bootloader is firmware used to start the operating system.
+> **Common trap**：`loading the bootstrap` <span lang="zh-CN">不是</span> OS <span lang="zh-CN">的</span> function。Bootstrap / bootloader is firmware used to start the operating system.
 >
 
 ---
@@ -198,8 +152,8 @@ An **interrupt** is a signal sent from hardware or software to the processor to 
 | **Software interrupt** | generated by software or a software error | division by zero, two processes trying to access the same memory location, program error |
 
 
-> **Exam-safe examples**：  
-Hardware interrupt = **key press on keyboard** / mouse click / printer out of ink.  
+> **Exam-safe examples**：
+Hardware interrupt = **key press on keyboard** / mouse click / printer out of ink.
 Software interrupt = **division by zero** / two processes trying to access same memory location.
 >
 
@@ -280,7 +234,7 @@ A **buffer** is a temporary memory area used to store data while it is being tra
 + Can execute faster after translation.
 + Useful for embedded systems or hardware-specific programming.
 
-> **Common trap**：不要只写 “high-level is easier”。要补出 **easier to debug / portable / machine independent / does not need hardware knowledge**。
+> **Common trap**：<span lang="zh-CN">不要只写</span> “high-level is easier”。<span lang="zh-CN">要补出</span> **easier to debug / portable / machine independent / does not need hardware knowledge**。
 >
 
 ---
@@ -374,7 +328,7 @@ An **IDE** is a suite of programs used to write, run, test and debug program cod
 + Auto-correction corrects misspelled command words.
 + Prettyprint / syntax highlighting colours command words and identifiers to make code easier to read.
 
-> **Common trap**：如果题目要求 “function and description”，只写 `auto-completion` 不够，要写它如何帮助 programmer。
+> **Common trap**：<span lang="zh-CN">如果题目要求</span> “function and description”，<span lang="zh-CN">只写</span> `auto-completion` <span lang="zh-CN">不够</span>，<span lang="zh-CN">要写它如何帮助</span> programmer。
 >
 
 ---
@@ -482,7 +436,7 @@ mindmap
 
 ---
 
-## 4. Common Mistakes｜超级重要易错点
+## 4. Common Confusions
 | Topic | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | System software | “It is software for computer.” | Too vague | “It provides services the computer requires and manages hardware/software.” |
@@ -545,37 +499,54 @@ mindmap
 
 ---
 
-## 6. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 Answer these in exam style.
 
-1. State one example of system software. **[1]**  
-2. State one example of application software. **[1]**  
-3. Give one function of an operating system. **[1]**  
-4. State what is meant by firmware. **[1]**  
-5. Give one example of a hardware interrupt. **[1]**  
-6. Give one example of a software interrupt. **[1]**  
-7. Give the name of the translator used for assembly language. **[1]**  
-8. State one advantage of using a high-level language. **[1]**  
-9. State one function of an IDE. **[1]**  
+1. State one example of system software. **[1]**
+2. State one example of application software. **[1]**
+3. Give one function of an operating system. **[1]**
+4. State what is meant by firmware. **[1]**
+5. Give one example of a hardware interrupt. **[1]**
+6. Give one example of a software interrupt. **[1]**
+7. Give the name of the translator used for assembly language. **[1]**
+8. State one advantage of using a high-level language. **[1]**
+9. State one function of an IDE. **[1]**
 10. State what is meant by a buffer. **[1]**
 
-### Quick Check Answers
-1. Operating system / utility software / device driver.  
-2. Word processor / spreadsheet / database / web browser / image editor.  
-3. Managing files / handling interrupts / managing memory / managing multitasking / providing interface / etc.  
-4. Software/instructions programmed into hardware, usually stored in ROM.  
-5. Key press / mouse click / printer out of paper / printer out of ink.  
-6. Division by zero / two processes trying to access same memory location.  
-7. Assembler.  
-8. Easier to read/write/debug / portable / machine independent.  
-9. Code editor / run-time environment / error diagnostics / auto-completion / auto-correction / prettyprint.  
+## Quick Check Answers
+1. Operating system / utility software / device driver.
+2. Word processor / spreadsheet / database / web browser / image editor.
+3. Managing files / handling interrupts / managing memory / managing multitasking / providing interface / etc.
+4. Software/instructions programmed into hardware, usually stored in ROM.
+5. Key press / mouse click / printer out of paper / printer out of ink.
+6. Division by zero / two processes trying to access same memory location.
+7. Assembler.
+8. Easier to read/write/debug / portable / machine independent.
+9. Code editor / run-time environment / error diagnostics / auto-completion / auto-correction / prettyprint.
 10. A temporary memory area used to store data during transfer.
 
 ---
 
-## 7. 20 Marks Exam-style Practice with Mark Scheme
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 ### Question 1｜Software Types **[4]**
-A student uses a computer to complete homework.  
+A student uses a computer to complete homework.
 Describe the difference between system software and application software. Give one example of each.
 
 #### Mark Scheme
@@ -609,13 +580,13 @@ Any three from:
 ### Question 3｜Interrupts **[5]**
 A key is pressed on a keyboard while a computer is running another process.
 
-(a) Give the type of interrupt generated. **[1]**  
-(b) Give the name of the program/routine used to service the interrupt. **[1]**  
+(a) Give the type of interrupt generated. **[1]**
+(b) Give the name of the program/routine used to service the interrupt. **[1]**
 (c) Describe how the interrupt is handled. **[3]**
 
 #### Mark Scheme
-(a) Hardware interrupt.  
-(b) Interrupt service routine / interrupt handler.  
+(a) Hardware interrupt.
+(b) Interrupt service routine / interrupt handler.
 (c) Any three from:
 
 + CPU / OS checks priority of the interrupt.
@@ -647,7 +618,7 @@ Any four from:
 ---
 
 ### Question 5｜IDE Functions **[4]**
-A programmer uses an IDE to create a program.  
+A programmer uses an IDE to create a program.
 Describe two functions of an IDE and explain how each helps the programmer.
 
 #### Mark Scheme
@@ -663,3 +634,10 @@ One mark for function + one mark for matching role description, max four:
 
 ---
 
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

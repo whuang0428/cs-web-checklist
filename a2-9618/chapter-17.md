@@ -1,100 +1,17 @@
 # A2 9618 Chapter 17: Security
-> **Security｜Syllabus-Aligned Paper 3 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 17 Security  
-> **Main audience:** A2 students  
-> **Style:** Chinese explanation + English mark scheme keywords  
-> **Docsify:** ready  
->
+<div class="chapter-meta"><strong>A2 9618 · Paper 3</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: symmetric and asymmetric cryptography; TLS; certificates, signatures and quantum cryptography.
 
-Chapter 17 不是“网络安全常识”章节，而是一个非常典型的 **mark scheme keyword chapter**。2024–2025 Paper 3 更喜欢考：
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-1. **symmetric vs asymmetric cryptography** 的过程对比  
-2. **public key / private key** 在不同场景中的使用方向  
-3. **SSL/TLS handshake** 的大致流程与目的  
-4. **digital certificate / certificate authority / digital signature** 的作用  
-5. **quantum cryptography** 的 purpose, benefit, drawback  
+## Core Knowledge
 
-复习时要记住：
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-> 安全题不是写“it is secure”就能拿分，必须写出 **how / why / which key / who owns the key / what is verified**。
-
-```mermaid
-flowchart LR
-A[Encryption<br/>plaintext to ciphertext] --> B[Symmetric Cryptography<br/>same shared key]
-A --> C[Asymmetric Cryptography<br/>public + private key]
-C --> D[Private Message<br/>encrypt with receiver public key]
-C --> E[Verified Message<br/>sign with sender private key]
-D --> F[SSL / TLS<br/>secure client-server session]
-E --> G[Digital Certificate<br/>identity + public key + CA]
-F --> H[Secure Web Communication<br/>HTTPS / online banking]
-G --> I[Digital Signature<br/>authentication + integrity]
-```
-
----
-
-## 1. Recent Paper 3 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Symmetric cryptography | High | one shared key, encrypt and decrypt, fast but key distribution risk |
-| Asymmetric cryptography | Very high | public/private key pair, one key encrypts and matching key decrypts |
-| Public/private key use | Very high | private message vs verified message; do not mix up direction |
-| SSL/TLS | High | purpose, handshake idea, session key, secure client-server communication |
-| Digital certificate | Very high | identifies website/organisation, contains public key, issued by CA |
-| Digital signature | High | proves sender identity and message integrity |
-| Quantum cryptography | Medium-high | purpose, benefits and drawbacks, eavesdropping detection |
-| Plaintext/ciphertext terminology | High | precise definitions often earn easy marks |
-| HTTPS / online banking scenario | High | explain why SSL/TLS is appropriate |
-| Malware / firewall detail | Low for Chapter 17 | Mostly not this chapter; avoid spending too much time |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| plaintext, ciphertext, encryption, decryption | Core vocabulary; common low-mark questions |
-| symmetric key cryptography | Required by syllabus and easy comparison marks |
-| asymmetric key cryptography | Very high-frequency Paper 3 concept |
-| public/private key pair | Most common source of student mistakes |
-| private message process | Mark schemes reward correct key direction |
-| verified/public message process | Often confused with private message process |
-| digital certificates | 2024–2025 trend remains strong |
-| Certificate Authority (CA) | Needed for digital certificate explanation |
-| digital signatures | Required link between private key and verification |
-| SSL/TLS | Required by syllabus; common client-server scenario |
-| quantum cryptography | Often appears as benefits/drawbacks short answer |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| detailed mathematical encryption algorithms | Syllabus asks understanding, not RSA maths |
-| very deep SSL/TLS packet-level detail | Need purpose and handshake idea, not full protocol engineering |
-| malware types in detail | More AS security / general security, not the A2 Chapter 17 focus |
-| long history of SSL vs TLS | Only need know TLS is newer / more secure version idea |
-| certificate chain technical depth | Useful extension, but exam usually wants CA + public key + identity |
-
-### 2.3 Remove / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| saying “public key is secret” | Public key is shared openly |
-| saying “private key is sent to receiver” | Private key must be kept secret |
-| saying “digital certificate is the same as digital signature” | They are related but different |
-| saying “SSL/TLS only encrypts passwords” | It secures client-server communication generally |
-| saying “quantum cryptography means quantum computer encryption” | It mainly uses quantum properties for secure key exchange / detecting eavesdropping |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -151,18 +68,18 @@ mindmap
 
 | Term | Chinese explanation | Mark scheme style phrase |
 | --- | --- | --- |
-| Plaintext | 原始可读信息 | original readable message/data |
-| Ciphertext | 加密后的不可读信息 | encrypted unreadable message/data |
-| Encryption | 把明文变成密文 | converting plaintext into ciphertext using an algorithm and key |
-| Decryption | 把密文还原成明文 | converting ciphertext back into plaintext using a key |
-| Key | 控制加密/解密过程的数据 | value used by the encryption/decryption algorithm |
-| Cryptography | 加密通信的方法 | method of protecting data using encryption techniques |
+| Plaintext | <span lang="zh-CN">原始可读信息</span> | original readable message/data |
+| Ciphertext | <span lang="zh-CN">加密后的不可读信息</span> | encrypted unreadable message/data |
+| Encryption | <span lang="zh-CN">把明文变成密文</span> | converting plaintext into ciphertext using an algorithm and key |
+| Decryption | <span lang="zh-CN">把密文还原成明文</span> | converting ciphertext back into plaintext using a key |
+| Key | <span lang="zh-CN">控制加密</span>/<span lang="zh-CN">解密过程的数据</span> | value used by the encryption/decryption algorithm |
+| Cryptography | <span lang="zh-CN">加密通信的方法</span> | method of protecting data using encryption techniques |
 
 #### Mark scheme answer
 
 > Encryption is the process of converting plaintext into ciphertext using an encryption algorithm and a key, so that the data cannot be understood if intercepted.
 
-#### Must-have keywords
+#### Required ideas / marking points
 
 + **plaintext**
 + **ciphertext**
@@ -348,7 +265,7 @@ sequenceDiagram
 | Main use | bulk data encryption / session data | key exchange, digital signatures, secure initial communication |
 | Risk | if shared key is intercepted, messages can be read | if private key is stolen, identity/security is compromised |
 
-### Recent exam-style comparison
+### Exam-style comparison
 
 > Symmetric cryptography uses a single shared key to encrypt and decrypt data, while asymmetric cryptography uses a public/private key pair. Symmetric cryptography is faster, but the shared key must be distributed securely. Asymmetric cryptography avoids sending a shared secret key first, but it is slower and requires more processing.
 
@@ -366,7 +283,7 @@ In modern wording, TLS is the newer and more secure protocol, but exam answers o
 
 > SSL/TLS provides secure client-server communication over a network by encrypting data, authenticating the server, and helping maintain data integrity.
 
-#### Must-have keywords
+#### Required ideas / marking points
 
 + **secure communication**
 + **client-server**
@@ -672,7 +589,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 
 ---
 
-## 12. Common Mistakes 易错表
+## 12. Common Confusions
 
 | Mistake | Why it loses marks | Correct answer |
 | --- | --- | --- |
@@ -763,7 +680,22 @@ E --> F[Data transferred securely]
 
 ---
 
-## 15. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -775,7 +707,7 @@ E --> F[Data transferred securely]
 6. Give one benefit of quantum cryptography. [1]  
 7. Explain why a digital signature can show that a message has not been changed. [2]
 
-### Answers
+## Quick Check Answers
 
 1. Plaintext is the original readable message/data. Ciphertext is the encrypted unreadable message/data. [2]  
 2. Symmetric uses one shared key; asymmetric uses a public/private key pair. [1]  
@@ -787,7 +719,9 @@ E --> F[Data transferred securely]
 
 ---
 
-## 16. 20 Marks Exam-Style Practice
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1 — Asymmetric cryptography and private messages [5]
 
@@ -883,3 +817,10 @@ Drawbacks, one mark each:
 
 ---
 
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

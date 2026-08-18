@@ -1,99 +1,17 @@
 # A2 9618 Chapter 15: Hardware and Virtual Machines
-> **Hardware and Virtual Machines｜Syllabus-Aligned Paper 3 Revision Sheet**
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
-> **Chapter:** 15 Hardware and Virtual Machines  
-> **Main audience:** Students preparing for Paper 3 Advanced Theory  
-> **Style:** 中文解释 + English mark scheme keywords  
->
 
----
+<div class="chapter-meta"><strong>A2 9618 · Paper 3</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
-## 0. How to Use This Sheet
+## Official Syllabus Checklist
 
-Chapter 15 看起来内容很多，但考试不是平均考所有内容。2024–2025 Paper 3 的趋势很明显：
+Revise: processor architectures; parallel processing and virtual machines; Boolean algebra and sequential logic.
 
-1. **Boolean algebra / truth table / K-map** 是最稳定的高频区  
-2. **RISC features / interrupt handling / pipelining** 常以短答形式出现  
-3. **SISD / SIMD / MISD / MIMD** 常考定义和对比  
-4. **Virtual machine** 不一定每年考，但一旦考，通常要写 benefits and limitations  
-5. **Flip-flop / half adder / full adder** 属于 syllabus 明确要求，不能删除，但复习时不用过度扩展到电子工程细节
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-建议复习顺序：
+## Core Knowledge
 
-```mermaid
-flowchart LR
-A[RISC vs CISC<br/>features / differences] --> B[Parallel architectures<br/>SISD SIMD MISD MIMD]
-B --> C[Massively parallel computers<br/>many processors / coordinated computation]
-C --> D[Virtual machines<br/>role / benefits / limitations]
-D --> E[Boolean algebra<br/>laws / De Morgan]
-E --> F[Truth tables<br/>circuits / adders / flip-flops]
-F --> G[K-map<br/>grouping / simplified expression]
-```
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
----
-
-## 1. Recent Paper 3 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| RISC features | High | few/simple instructions, fixed length, single-cycle, registers, pipelining |
-| CISC vs RISC | Medium-high | compare instruction set, cycles, hardware/software emphasis |
-| Interrupt handling | Medium | save registers/status, ISR, restore state, pipeline issue |
-| SISD / SIMD / MISD / MIMD | Medium-high | expand acronym + describe data/instruction streams |
-| Massively parallel computers | Medium | many processors/computers, coordinated computation, message interface |
-| Virtual machines | Medium | concept, examples, benefits, limitations |
-| Truth tables from circuits | Very high | work through intermediate columns carefully |
-| Sum-of-products | Very high | write minterms only where output = 1 |
-| Boolean algebra simplification | Very high | De Morgan, distributive, absorption, idempotent |
-| K-map | Very high | Gray code order, group 1s in powers of 2, wrap-around |
-| Flip-flops | Medium | SR/JK truth table, storage of one bit |
-| Half/full adders | Medium | sum/carry truth table and circuit idea |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| RISC features | 2024 Paper 3 asked directly for RISC features |
-| interrupt handling and pipelining | Short-answer mark scheme rewards exact sequence phrases |
-| SISD, SIMD, MISD, MIMD | Repeated 2023–2024 and still syllabus core |
-| massively parallel computers | Often appears as definition/description |
-| virtual machines | syllabus explicit and scenario-friendly |
-| Boolean algebra laws | 2025 mark scheme rewards law names and correct application |
-| De Morgan's laws | 2025 directly rewarded correct De Morgan application |
-| truth tables | 2024–2025 Paper 3 repeatedly tests intermediate columns and final output |
-| sum-of-products | frequent bridge between truth tables and simplification |
-| K-map | 2024–2025 very high-value skill |
-| SR/JK flip-flops | syllabus explicit; useful for data storage questions |
-| half adder / full adder | syllabus explicit; linked to truth tables and logic circuits |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| transistor-level explanation of RISC/CISC | not needed for CAIE mark scheme |
-| detailed CPU microarchitecture | only high-level features are usually rewarded |
-| complex electronic timing diagrams for flip-flops | beyond syllabus depth |
-| excessive Boolean law memorisation without use | students need application more than a long law list |
-| drawing perfect circuit diagrams for every expression | Paper 3 more often rewards truth table, expression and simplification |
-| commercial virtualisation product names | brand names are not awarded |
-
-### 2.3 Delete / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| saying RISC is always faster than CISC | too absolute; depends on design and task |
-| saying virtual machines are "fake computers" only | too vague |
-| using normal binary order in K-map columns | K-map uses Gray code order |
-| grouping K-map 1s in groups of 3 or 6 | groups must be powers of 2 |
-| applying De Morgan by only changing AND/OR but not complementing terms | loses marks |
-| using `+` as arithmetic addition in Boolean algebra | in Boolean algebra, `+` means OR |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -154,14 +72,14 @@ mindmap
 #### Core idea
 RISC means **Reduced Instruction Set Computer**.
 
-RISC processor 的设计思想是：  
-用较少、较简单、格式较固定的指令，让 CPU 更容易快速执行和流水线处理。
+RISC processor <span lang="zh-CN">的设计思想是</span>：
+<span lang="zh-CN">用较少</span>、<span lang="zh-CN">较简单</span>、<span lang="zh-CN">格式较固定的指令</span>，<span lang="zh-CN">让</span> CPU <span lang="zh-CN">更容易快速执行和流水线处理</span>。
 
 #### Mark scheme answer
 > A RISC processor uses a relatively small number of simple instructions, often fixed length and fixed format. Instructions usually use a single cycle, make use of general-purpose registers, and pipelining is easier to apply.
 >
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **Reduced Instruction Set Computer**
 + **few instructions**
 + **simple instructions**
@@ -194,8 +112,8 @@ This is too vague. You need features such as **fixed length instructions**, **fe
 
 CISC means **Complex Instruction Set Computer**.
 
-CISC processor 的设计思想是：  
-一条指令可以完成更复杂的操作，因此程序可能需要更少的指令，但 CPU 解码和执行会更复杂。
+CISC processor <span lang="zh-CN">的设计思想是</span>：
+<span lang="zh-CN">一条指令可以完成更复杂的操作</span>，<span lang="zh-CN">因此程序可能需要更少的指令</span>，<span lang="zh-CN">但</span> CPU <span lang="zh-CN">解码和执行会更复杂</span>。
 
 #### Mark scheme answer
 > A CISC processor has a larger instruction set with more complex instructions. Instructions may be variable length and may take several clock cycles to execute. The design emphasis is more on hardware.
@@ -224,13 +142,13 @@ CISC processor 的设计思想是：
 ### 4.3 Interrupt handling on RISC and CISC processors
 
 #### Basic interrupt sequence
-Interrupt handling 的核心不是“CPU stop”，而是：
+Interrupt handling <span lang="zh-CN">的核心不是</span>“CPU stop”，<span lang="zh-CN">而是</span>：
 
-1. interrupt is detected  
-2. current process/program is temporarily stopped  
-3. registers / program counter / status are saved  
-4. Interrupt Service Routine (**ISR**) is executed  
-5. saved register values are restored  
+1. interrupt is detected
+2. current process/program is temporarily stopped
+3. registers / program counter / status are saved
+4. Interrupt Service Routine (**ISR**) is executed
+5. saved register values are restored
 6. original program continues
 
 #### Mark scheme answer
@@ -238,7 +156,7 @@ Interrupt handling 的核心不是“CPU stop”，而是：
 >
 
 #### Pipeline issue
-Pipelining 会让 interrupt handling 更复杂，因为 pipeline 里可能已经有多条 instruction 正在不同 stage 中执行。
+Pipelining <span lang="zh-CN">会让</span> interrupt handling <span lang="zh-CN">更复杂</span>，<span lang="zh-CN">因为</span> pipeline <span lang="zh-CN">里可能已经有多条</span> instruction <span lang="zh-CN">正在不同</span> stage <span lang="zh-CN">中执行</span>。
 
 #### 2024-style phrase
 > There may be a number of instructions still in the pipeline when the interrupt is received, so some instructions may need to be discarded or the processor must restart from the correct next instruction after the ISR.
@@ -306,8 +224,8 @@ The four basic computer architectures are:
 + **MISD**
 + **MIMD**
 
-The key exam skill is:  
-**Instruction stream** 和 **data stream** 分别是 single 还是 multiple。
+The key exam skill is:
+**Instruction stream** <span lang="zh-CN">和</span> **data stream** <span lang="zh-CN">分别是</span> single <span lang="zh-CN">还是</span> multiple。
 
 ---
 
@@ -420,7 +338,7 @@ A massively parallel computer uses a large number of processors or separate comp
 > A massively parallel computer contains a large number of processors / computers connected together, simultaneously performing coordinated computations and communicating using messages.
 >
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **large number of processors**
 + **separate computers connected together**
 + **simultaneously**
@@ -540,7 +458,7 @@ means:
 ```
 
 #### Common mistake
-`+` does not mean arithmetic addition in Boolean algebra.  
+`+` does not mean arithmetic addition in Boolean algebra.
 It means **OR**.
 
 ---
@@ -593,8 +511,8 @@ Meaning:
 #### Exam method
 When applying De Morgan:
 
-1. change AND ↔ OR  
-2. complement each term  
+1. change AND ↔ OR
+2. complement each term
 3. remove the outer NOT
 
 #### Common mistake
@@ -664,10 +582,10 @@ So always show working columns.
 A **sum-of-products** expression is made by OR-ing together product terms.
 
 #### Method
-1. Find rows where output = 1  
-2. For each row, write one AND term  
-3. If input is 1, write normal variable  
-4. If input is 0, write complemented variable  
+1. Find rows where output = 1
+2. For each row, write one AND term
+3. If input is 1, write normal variable
+4. If input is 0, write complemented variable
 5. OR all terms together
 
 #### Example
@@ -793,7 +711,7 @@ A flip-flop is a logic circuit that can store one bit of data.
 > A flip-flop is a bistable circuit that can store one bit. Its output remains in the same state until the input causes it to change.
 >
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **bistable**
 + **stores one bit**
 + **data storage element**
@@ -1028,7 +946,7 @@ Z = C
 
 ---
 
-## 14. Common Mistakes 易错表
+## 14. Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -1123,54 +1041,71 @@ E --> F[Write simplified expression]
 
 ---
 
-## 17. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
-1. State two features of a RISC processor. `[2]`  
-2. Give one difference between RISC and CISC. `[1]`  
-3. What does SIMD stand for? `[1]`  
-4. Describe MIMD. `[2]`  
-5. State one benefit of a virtual machine. `[1]`  
-6. State one limitation of a virtual machine. `[1]`  
-7. Write De Morgan's law for `(A + B)'`. `[1]`  
+1. State two features of a RISC processor. `[2]`
+2. Give one difference between RISC and CISC. `[1]`
+3. What does SIMD stand for? `[1]`
+4. Describe MIMD. `[2]`
+5. State one benefit of a virtual machine. `[1]`
+6. State one limitation of a virtual machine. `[1]`
+7. Write De Morgan's law for `(A + B)'`. `[1]`
 8. In a K-map, why is the order `00, 01, 11, 10` used? `[1]`
 
-### Answers
+## Quick Check Answers
 
-1. Any two: few/simple instructions; fixed length instructions; single-cycle instructions; many registers; easier pipelining.  
-2. RISC has fewer/simple instructions, while CISC has more/complex instructions.  
-3. Single Instruction, Multiple Data.  
-4. Multiple processors execute different instruction streams on different data streams independently/asynchronously.  
-5. Isolation / cost saving / portability / allows different OS / safer testing.  
-6. Performance overhead / resource sharing / host failure affects VMs / management complexity.  
-7. `(A + B)' = A'.B'`  
+1. Any two: few/simple instructions; fixed length instructions; single-cycle instructions; many registers; easier pipelining.
+2. RISC has fewer/simple instructions, while CISC has more/complex instructions.
+3. Single Instruction, Multiple Data.
+4. Multiple processors execute different instruction streams on different data streams independently/asynchronously.
+5. Isolation / cost saving / portability / allows different OS / safer testing.
+6. Performance overhead / resource sharing / host failure affects VMs / management complexity.
+7. `(A + B)' = A'.B'`
 8. It is Gray code, so only one bit changes between adjacent cells.
 
 ---
 
-## 18. 20 Marks Exam-Style Practice with Mark Scheme
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: RISC, interrupts and pipelining `[6]`
 
-(a) Identify four features of a RISC processor. `[4]`  
+(a) Identify four features of a RISC processor. `[4]`
 (b) Explain why interrupt handling can be more complex when pipelining is used. `[2]`
 
 #### Mark scheme
 (a) One mark each, max 4:
 
-+ uses few instructions  
-+ uses simple instructions  
-+ fixed length / fixed format instructions  
-+ instructions often execute in a single cycle  
-+ uses general-purpose registers  
-+ pipelining is easier to apply  
-+ hard-wired control unit  
-+ design emphasis on software / compiler  
++ uses few instructions
++ uses simple instructions
++ fixed length / fixed format instructions
++ instructions often execute in a single cycle
++ uses general-purpose registers
++ pipelining is easier to apply
++ hard-wired control unit
++ design emphasis on software / compiler
 
 (b)
 
-+ several instructions may already be in the pipeline when the interrupt is detected `[1]`  
++ several instructions may already be in the pipeline when the interrupt is detected `[1]`
 + instructions may need to be discarded / pipeline flushed / processor restarts at correct next instruction after ISR `[1]`
 
 ---
@@ -1189,10 +1124,10 @@ Complete the table.
 #### Mark scheme
 One mark per correct row, max 4:
 
-+ SISD = Single Instruction, Single Data; one instruction stream on one data stream / sequential execution  
-+ SIMD = Single Instruction, Multiple Data; same instruction applied to multiple data items  
-+ MISD = Multiple Instruction, Single Data; different instructions applied to same data stream  
-+ MIMD = Multiple Instruction, Multiple Data; different processors execute different instructions on different data streams  
++ SISD = Single Instruction, Single Data; one instruction stream on one data stream / sequential execution
++ SIMD = Single Instruction, Multiple Data; same instruction applied to multiple data items
++ MISD = Multiple Instruction, Single Data; different instructions applied to same data stream
++ MIMD = Multiple Instruction, Multiple Data; different processors execute different instructions on different data streams
 
 ---
 
@@ -1205,19 +1140,19 @@ Explain two benefits and two limitations of using virtual machines. `[4]`
 #### Mark scheme
 Benefits, max 2:
 
-+ different operating systems can run on one host machine  
-+ isolated from the host / other VMs  
-+ safer testing environment  
-+ VM can be restored from snapshot / backup  
-+ reduces need for extra physical machines  
++ different operating systems can run on one host machine
++ isolated from the host / other VMs
++ safer testing environment
++ VM can be restored from snapshot / backup
++ reduces need for extra physical machines
 
 Limitations, max 2:
 
-+ performance overhead due to hypervisor  
-+ VMs share CPU/RAM/storage resources  
-+ if host fails, VMs are affected  
-+ extra management complexity  
-+ security risk if poorly configured  
++ performance overhead due to hypervisor
++ VMs share CPU/RAM/storage resources
++ if host fails, VMs are affected
++ extra management complexity
++ security risk if poorly configured
 
 ---
 
@@ -1261,7 +1196,7 @@ A B C
 1 1 1
 ```
 
-(a) Write the full sum-of-products expression. `[2]`  
+(a) Write the full sum-of-products expression. `[2]`
 (b) Simplify the expression. `[1]`
 
 #### Mark scheme
@@ -1285,3 +1220,10 @@ Z = C
 
 ---
 
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

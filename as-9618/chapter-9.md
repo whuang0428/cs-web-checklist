@@ -1,10 +1,22 @@
 # AS 9618 Chapter 9: Algorithm Design and Problem-Solving
 
+<div class="chapter-meta"><strong>AS 9618 · Paper 2</strong><span>9618 · 2027–2029 · Version 2</span></div>
+
+## Official Syllabus Checklist
+
+Revise: abstraction and decomposition; identifiers; algorithm constructs and representations; stepwise refinement.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
+
 > **Paper 2 focus:** model the essential problem, decompose it, document the algorithm precisely and refine it until it can be programmed.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Syllabus objective | Where it is covered |
 |---|---|
@@ -455,7 +467,11 @@ The refined version defines validation, bounds, initialisation, comparison and o
 
 ---
 
-## 13. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I remove only irrelevant detail during abstraction.
 - [ ] I decompose into modules with distinct purposes.
@@ -470,7 +486,11 @@ The refined version defines validation, bounds, initialisation, comparison and o
 
 ---
 
-## 14. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. Define abstraction and state one benefit. **[2]**
 2. Define decomposition and state one benefit. **[2]**
@@ -479,7 +499,7 @@ The refined version defines validation, bounds, initialisation, comparison and o
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. Abstraction removes irrelevant details while retaining essential details **[1]**; it reduces complexity or focuses the solution on required data/rules **[1]**. **[2]**
 2. Decomposition divides a problem into smaller sub-problems/modules **[1]**; it improves independent design, testing, reuse or maintenance **[1]**. **[2]**
@@ -488,7 +508,7 @@ The refined version defines validation, bounds, initialisation, comparison and o
 
 ---
 
-## 15. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A cycling event system records a rider number, age category, distance completed and completion time. It displays an award category. A scenario description also gives the rider's shirt colour and preferred music.
 
@@ -545,7 +565,7 @@ A cycling event system records a rider number, age category, distance completed 
 
 ---
 
-## 16. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can build an abstract model from a noisy scenario.
 - [ ] I can decompose a problem into useful modules.

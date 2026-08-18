@@ -1,122 +1,32 @@
 # IGCSE 0478 Chapter 2: Data Transmission
-> **Syllabus-Aligned Student Revision Notes**
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-**Use:** Student revision handout
-**Style:** 中文解释 + English mark scheme keywords  
-**Core aim:** 不是背大段定义，而是学会写出 **mark scheme 得分点**
->
 
----
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
 
-## 0. Chapter 2 一页总览
-```mermaid
-mindmap
-  root((Chapter 2 Data Transmission))
-    2.1 Types and methods
-      Packets
-        Header
-        Payload
-        Trailer
-      Packet switching
-        Router controls route
-        Different routes
-        Reordering
-      Transmission methods
-        Serial
-        Parallel
-        Simplex
-        Half-duplex
-        Full-duplex
-      USB
-        self-configuring
-        driver loaded
-        backward compatible
-    2.2 Error detection
-      Why errors occur
-        Interference
-        Crosstalk
-        Data loss/gain/change
-        Skew
-      Parity check
-        odd parity
-        even parity
-        parity bit
-        parity block
-      Checksum
-        calculated value
-        algorithm
-        compare values
-      Echo check
-        send copy back
-        compare
-      Check digit
-        data entry check
-        barcode
-        ISBN
-      ARQ
-        acknowledgement
-        timeout
-        resend
-    2.3 Encryption
-      Plain text
-      Cipher text
-      Symmetric
-        same key
-      Asymmetric
-        public key
-        private key
-```
+## Official Syllabus Checklist
 
----
+Revise: packet structure and switching; transmission methods; error detection; symmetric and asymmetric encryption.
 
-### 1. 近期出题方向总结
-| Priority | Topic | 2025 考法 | 学生必须会写的关键词 |
-| --- | --- | --- | --- |
-| ⭐⭐⭐⭐⭐ | Packet structure & packet switching | 描述 packet 分成什么；packet switching 流程 | **header / payload / trailer / router / different route / arrive out of order / reordered** |
-| ⭐⭐⭐⭐⭐ | Serial / parallel + simplex / duplex suitability | 给场景选择并解释为什么适合 | **one bit at a time / single wire / multiple bits / skew / crosstalk / both directions** |
-| ⭐⭐⭐⭐⭐ | Checksum | 5 marks 流程题 | **calculated using data / algorithm / transmitted with data / recalculated / compared / resend** |
-| ⭐⭐⭐⭐⭐ | Parity check | 填空、流程、odd/even parity | **parity bit / each byte / count 1s / odd or even / error detected** |
-| ⭐⭐⭐⭐ | Echo check + ARQ | 填空、定义、过程题 | **copy sent back / acknowledgement / timeout / resend** |
-| ⭐⭐⭐⭐ | Error causes | 解释为什么数据可能出错 | **interference / crosstalk / data loss / data gain / data change / skew** |
-| ⭐⭐⭐⭐ | Encryption | 2025 明显出现 asymmetric encryption | **plain text / cipher text / key / public key / private key / meaningless** |
-| ⭐⭐⭐ | USB | 常考基础描述，但近年不是最高频长答 | **automatically detected / driver loaded / self-configuring / backward compatible** |
-| ⭐⭐ | CRC / detailed USB cable length | 只保留为补充 | 不建议花太多课时 |
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
+## Core Knowledge
 
----
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-### 2. 内容取舍说明
-#### 重点保留并强化
-+ Packet structure and packet switching  
-+ Transmission method suitability：serial / parallel / simplex / half-duplex / full-duplex  
-+ Error detection：parity, checksum, echo check, check digit, ARQ  
-+ 2.3 Encryption：旧版 CH2 文件中不完整，但 syllabus 和 2025 Paper 1 都需要补回
-
-#### 降权处理
-| Old content | 处理方式 | 原因 |
-| --- | --- | --- |
-| CRC 详细算法 | 降为 trailer/error checking example | 考试更常直接问 checksum / parity / ARQ |
-| USB 优缺点长表 | 压缩成 mark scheme 关键词 | 学生只需能答 plug-in process + advantages/drawbacks |
-| 过长 packet switching route selection 细节 | 保留“router controls route / different route / arrive out of order” | Cambridge 得分点更简洁 |
-| 复杂 “hop number” 解释 | 放入 extension | 不是 2025 高频核心 |
-
-
----
 
 ## 2.1 Types and Methods of Data Transmission
 ---
 
 ### 2.1.1 Packet Structure
-#### 什么是 packet？
-当数据通过网络传输时，整段数据通常不会一次性发送，而是被分成很多小的数据包，叫 **packets**。
+#### What Is a Packet?
+<span lang="zh-CN">当数据通过网络传输时</span>，<span lang="zh-CN">整段数据通常不会一次性发送</span>，<span lang="zh-CN">而是被分成很多小的数据包</span>，<span lang="zh-CN">叫</span> **packets**。
 
 A packet contains three main parts:
 
-| Part | 中文理解 | Mark scheme keywords |
+| Part | <span lang="zh-CN">中文理解</span> | Mark scheme keywords |
 | --- | --- | --- |
-| **Header** | 包头，告诉网络这个包从哪里来、到哪里去、顺序是多少 | **destination address, originator address, packet number** |
-| **Payload** | 真正要传输的数据 | **actual data being carried** |
-| **Trailer** | 包尾，表示 packet 结束，也可能包含错误检测信息 | **end of packet, error checking method** |
+| **Header** | <span lang="zh-CN">包头</span>，<span lang="zh-CN">告诉网络这个包从哪里来</span>、<span lang="zh-CN">到哪里去</span>、<span lang="zh-CN">顺序是多少</span> | **destination address, originator address, packet number** |
+| **Payload** | <span lang="zh-CN">真正要传输的数据</span> | **actual data being carried** |
+| **Trailer** | <span lang="zh-CN">包尾</span>，<span lang="zh-CN">表示</span> packet <span lang="zh-CN">结束</span>，<span lang="zh-CN">也可能包含错误检测信息</span> | **end of packet, error checking method** |
 
 
 #### Exam answer template
@@ -129,8 +39,8 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 ---
 
 ### 2.1.2 Packet Switching
-#### 核心流程
-<!-- 这是一个文本绘图，源码为：flowchart LR
+#### Core Process
+<!-- <span lang="zh-CN">这是一个文本绘图</span>，<span lang="zh-CN">源码为</span>：flowchart LR
     A[Original data/message] --> B[Data is split into packets]
     B --> C[Each packet has header, payload and trailer]
     C --> D{Routers choose routes}
@@ -145,7 +55,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
     J --> K[Original message is reassembled] -->
 ![](https://cdn.nlark.com/yuque/__mermaid_v3/aaaef26ef98037cde8f83f00a0f3898b.svg)
 
-#### 必背流程
+#### Required Process
 1. Data is split into packets.  
 2. Each packet has a header, payload and trailer.  
 3. Routers control/direct the route each packet takes.  
@@ -157,32 +67,32 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 #### Benefits of packet switching
 | Benefit | Exam wording |
 | --- | --- |
-| 网络线路不被一个 message 独占 | No need to tie up a single communication line |
-| 可以绕开故障线路 | Packets can be re-routed around failed/busy/faulty lines |
-| 网络利用率更高 | More efficient use of network resources |
-| 容易扩展 | Easier to expand network usage |
+| <span lang="zh-CN">网络线路不被一个</span> message <span lang="zh-CN">独占</span> | No need to tie up a single communication line |
+| <span lang="zh-CN">可以绕开故障线路</span> | Packets can be re-routed around failed/busy/faulty lines |
+| <span lang="zh-CN">网络利用率更高</span> | More efficient use of network resources |
+| <span lang="zh-CN">容易扩展</span> | Easier to expand network usage |
 
 
 #### Drawbacks of packet switching
 | Drawback | Exam wording |
 | --- | --- |
-| packet 可能丢失 | Packets can be lost and need to be re-sent |
-| packet 可能乱序到达 | Packets may arrive out of order |
-| 目的地需要时间重组 | Delay while packets are reordered |
-| real-time streaming 可能受影响 | Less suitable for real-time streaming |
+| packet <span lang="zh-CN">可能丢失</span> | Packets can be lost and need to be re-sent |
+| packet <span lang="zh-CN">可能乱序到达</span> | Packets may arrive out of order |
+| <span lang="zh-CN">目的地需要时间重组</span> | Delay while packets are reordered |
+| real-time streaming <span lang="zh-CN">可能受影响</span> | Less suitable for real-time streaming |
 
 
 ---
 
 ### 2.1.3 Data Transmission Directions
-| Type | 中文理解 | English definition | Example |
+| Type | <span lang="zh-CN">中文理解</span> | English definition | Example |
 | --- | --- | --- | --- |
-| **Simplex** | 单向传输 | Data is transmitted in one direction only | keyboard to computer, sensor to microprocessor |
-| **Half-duplex** | 双向，但不能同时 | Data can be transmitted in both directions, but not at the same time | walkie-talkie |
-| **Full-duplex** | 双向，同时 | Data can be transmitted in both directions at the same time | phone call, video call |
+| **Simplex** | <span lang="zh-CN">单向传输</span> | Data is transmitted in one direction only | keyboard to computer, sensor to microprocessor |
+| **Half-duplex** | <span lang="zh-CN">双向</span>，<span lang="zh-CN">但不能同时</span> | Data can be transmitted in both directions, but not at the same time | walkie-talkie |
+| **Full-duplex** | <span lang="zh-CN">双向</span>，<span lang="zh-CN">同时</span> | Data can be transmitted in both directions at the same time | phone call, video call |
 
 
-#### 易考表达
+#### Exam Language
 + **Simplex:** data only needs to be sent in one direction.  
 + **Half-duplex:** data needs to go both ways, but not simultaneously.  
 + **Full-duplex:** data needs to go both ways at the same time, for example to send data and receive error notifications.
@@ -258,20 +168,20 @@ flowchart TD
 #### Benefits of USB
 | Benefit | Exam wording |
 | --- | --- |
-| 自动配置 | self-configuring / automatically detected |
-| 自动加载驱动 | device driver can be automatically loaded |
-| 向后兼容 | backward compatible |
-| 支持多种速度 | supports several transmission rates |
-| 可供电 | cable can supply power |
-| 可扩展 | USB hubs can add more ports |
+| <span lang="zh-CN">自动配置</span> | self-configuring / automatically detected |
+| <span lang="zh-CN">自动加载驱动</span> | device driver can be automatically loaded |
+| <span lang="zh-CN">向后兼容</span> | backward compatible |
+| <span lang="zh-CN">支持多种速度</span> | supports several transmission rates |
+| <span lang="zh-CN">可供电</span> | cable can supply power |
+| <span lang="zh-CN">可扩展</span> | USB hubs can add more ports |
 
 
 #### Drawbacks of USB
 | Drawback | Exam wording |
 | --- | --- |
-| 线长有限 | standard USB has limited cable length |
-| 速度可能不如其他连接 | transfer rate may be slower than some network connections |
-| 端口数量有限 | limited number of ports unless a hub is used |
+| <span lang="zh-CN">线长有限</span> | standard USB has limited cable length |
+| <span lang="zh-CN">速度可能不如其他连接</span> | transfer rate may be slower than some network connections |
+| <span lang="zh-CN">端口数量有限</span> | limited number of ports unless a hub is used |
 
 
 ---
@@ -495,7 +405,7 @@ If no acknowledgement is received before **timeout**, the sender automatically *
 ---
 
 ## 2.3 Encryption
-> 旧版 CH2 文件没有完整覆盖 2.3，但 2025 Paper 1 已经明显考到 encryption，必须补回。
+> <span lang="zh-CN">旧版</span> CH2 <span lang="zh-CN">文件没有完整覆盖</span> 2.3，<span lang="zh-CN">但</span> 2025 Paper 1 <span lang="zh-CN">已经明显考到</span> encryption，<span lang="zh-CN">必须补回</span>。
 >
 
 ---
@@ -644,27 +554,27 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-## 4. Common Mistakes 易错点
+## 4. Common Confusions
 | Mistake | Why it loses marks | Better answer |
 | --- | --- | --- |
-| “Packet has address.” | 太泛，没有结构 | packet has **header, payload and trailer** |
-| “Header has address.” | 不完整 | **destination address, originator address, packet number** |
-| “Packet switching means packet goes through internet.” | 没有流程 | data is split into packets; each can take different route; router controls route; reordered |
-| “Serial is slower.” | 只有缺点，不解释适合性 | serial is reliable over long distance because bits arrive in order and less skew/crosstalk |
-| “Parallel is better because faster.” | 没有限制条件 | parallel is faster over short distance because multiple bits are sent at the same time |
-| “Full-duplex means two computers.” | 错误理解 | data can be sent **both directions at the same time** |
-| “Parity checks if data is correct.” | 太泛 | parity bit is added; number of 1s is counted; odd/even rule checked |
-| “Checksum is a number.” | 不够 | checksum is calculated from data using algorithm, sent with data, recalculated and compared |
-| “Echo check sends data twice.” | 不准确 | receiver sends a copy back; sender compares returned data with original |
-| “Check digit checks transmission errors.” | 错 | check digit detects **data entry errors**, e.g. barcode/ISBN |
-| “ARQ checks errors.” | 不够 | ARQ uses **acknowledgement + timeout + resend** |
-| “Encryption hides data.” | 太泛 | encryption turns plain text into cipher text, making it meaningless without key |
-| “Public key decrypts data.” | 对 asymmetric 理解错误 | public key encrypts; private key decrypts |
+| “Packet has address.” | <span lang="zh-CN">太泛</span>，<span lang="zh-CN">没有结构</span> | packet has **header, payload and trailer** |
+| “Header has address.” | <span lang="zh-CN">不完整</span> | **destination address, originator address, packet number** |
+| “Packet switching means packet goes through internet.” | <span lang="zh-CN">没有流程</span> | data is split into packets; each can take different route; router controls route; reordered |
+| “Serial is slower.” | <span lang="zh-CN">只有缺点</span>，<span lang="zh-CN">不解释适合性</span> | serial is reliable over long distance because bits arrive in order and less skew/crosstalk |
+| “Parallel is better because faster.” | <span lang="zh-CN">没有限制条件</span> | parallel is faster over short distance because multiple bits are sent at the same time |
+| “Full-duplex means two computers.” | <span lang="zh-CN">错误理解</span> | data can be sent **both directions at the same time** |
+| “Parity checks if data is correct.” | <span lang="zh-CN">太泛</span> | parity bit is added; number of 1s is counted; odd/even rule checked |
+| “Checksum is a number.” | <span lang="zh-CN">不够</span> | checksum is calculated from data using algorithm, sent with data, recalculated and compared |
+| “Echo check sends data twice.” | <span lang="zh-CN">不准确</span> | receiver sends a copy back; sender compares returned data with original |
+| “Check digit checks transmission errors.” | <span lang="zh-CN">错</span> | check digit detects **data entry errors**, e.g. barcode/ISBN |
+| “ARQ checks errors.” | <span lang="zh-CN">不够</span> | ARQ uses **acknowledgement + timeout + resend** |
+| “Encryption hides data.” | <span lang="zh-CN">太泛</span> | encryption turns plain text into cipher text, making it meaningless without key |
+| “Public key decrypts data.” | <span lang="zh-CN">对</span> asymmetric <span lang="zh-CN">理解错误</span> | public key encrypts; private key decrypts |
 
 
 ---
 
-## 5. Scenario Answer Bank 场景迁移表
+## 5. Scenario Answer Bank
 | Scenario | Best points to use |
 | --- | --- |
 | Data sent over long distance | serial, less skew, less crosstalk, reliable |
@@ -680,7 +590,22 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-## 6. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 ### Questions
 1. State the three parts of a packet. `[3]`  
 2. Give two items stored in a packet header. `[2]`  
@@ -689,7 +614,7 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 5. What two things are used in ARQ? `[2]`  
 6. State what is meant by cipher text. `[1]`
 
-### Answers
+## Quick Check Answers
 1. Header, payload, trailer.  
 2. Destination address, originator address, packet number.  
 3. Each packet can take a different route.  
@@ -699,7 +624,9 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-## 7. 20 Marks Exam-style Practice
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 ---
 
 ### Question 1 — Packet switching `[5]`
@@ -781,3 +708,10 @@ Any two:
 
 ---
 
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

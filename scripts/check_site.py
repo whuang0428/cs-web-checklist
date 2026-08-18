@@ -23,21 +23,30 @@ EXPECTED_CHAPTERS = {
 }
 IG_REVIEW_PAGE = ROOT / "ig-0478" / "paper-2-review.md"
 IG_REVIEW_PAGE_2 = ROOT / "ig-0478" / "paper-2-review-2.md"
+IG_PAPER1_REVIEW_PAGE = ROOT / "ig-0478" / "paper-1-review.md"
 AS_REVIEW_PAGE = ROOT / "as-9618" / "paper-2-review.md"
 AS_REVIEW_PAGE_2 = ROOT / "as-9618" / "paper-2-review-2.md"
+AS_PAPER1_REVIEW_PAGE = ROOT / "as-9618" / "paper-1-review.md"
 A2_PAPER3_REVIEW_PAGE = ROOT / "a2-9618" / "paper-3-review.md"
+A2_PAPER3_REVIEW_PAGE_2 = ROOT / "a2-9618" / "paper-3-review-2.md"
 A2_REVIEW_PAGE = ROOT / "a2-9618" / "paper-4-review.md"
 A2_REVIEW_PAGE_2 = ROOT / "a2-9618" / "paper-4-review-2.md"
 REVIEW_PAGES = {
+    IG_PAPER1_REVIEW_PAGE,
     IG_REVIEW_PAGE,
     IG_REVIEW_PAGE_2,
+    AS_PAPER1_REVIEW_PAGE,
     AS_REVIEW_PAGE,
     AS_REVIEW_PAGE_2,
     A2_PAPER3_REVIEW_PAGE,
+    A2_PAPER3_REVIEW_PAGE_2,
     A2_REVIEW_PAGE,
     A2_REVIEW_PAGE_2,
 }
-CONTENT_PAGES = EXPECTED_CHAPTERS | REVIEW_PAGES
+HUB_PAGES = {ROOT / course / "README.md" for course in COURSE_RANGES}
+COURSE_SIDEBARS = {ROOT / course / "_sidebar.md" for course in COURSE_RANGES}
+SHARED_PAGES = {ROOT / "exam-technique.md", ROOT / "syllabus-versions.md"}
+CONTENT_PAGES = EXPECTED_CHAPTERS | REVIEW_PAGES | HUB_PAGES | SHARED_PAGES
 PHASE2_CHAPTERS = {
     ROOT / "ig-0478" / "chapter-7.md": {
         "worked_examples": 3,
@@ -241,8 +250,13 @@ def resolve_reference(source: Path, reference: str) -> Path | None:
     if not reference or reference.startswith(("http://", "https://", "//", "mailto:", "tel:")):
         return None
     if reference.startswith("#/"):
-        route = reference[2:].split("?", 1)[0].split("#", 1)[0].strip("/")
-        return ROOT / (f"{route}.md" if route else "README.md")
+        raw_route = reference[2:].split("?", 1)[0].split("#", 1)[0]
+        route = raw_route.strip("/")
+        if not route:
+            return ROOT / "README.md"
+        if raw_route.endswith("/"):
+            return ROOT / route / "README.md"
+        return ROOT / f"{route}.md"
     if reference.startswith("#"):
         return None
 
@@ -266,70 +280,69 @@ def check_references(errors: list[str]) -> None:
                 add_error(errors, source, f"missing local target for {reference!r}")
 
 
-def chapter_targets_from_sidebar() -> set[Path]:
-    sidebar = ROOT / "_sidebar.md"
-    targets = set()
-    for reference in MARKDOWN_REF_RE.findall(sidebar.read_text(encoding="utf-8")):
-        target = resolve_reference(sidebar, reference)
-        if target and target.name.startswith("chapter-"):
-            targets.add(target)
-    return targets
-
-
-def chapter_targets_from_home() -> set[Path]:
-    home = ROOT / "README.md"
-    targets = set()
-    for reference in HTML_REF_RE.findall(home.read_text(encoding="utf-8")):
-        target = resolve_reference(home, reference)
-        if target and target.name.startswith("chapter-"):
-            targets.add(target)
-    return targets
+def local_targets(source: Path) -> set[Path]:
+    text = source.read_text(encoding="utf-8")
+    references = MARKDOWN_REF_RE.findall(text) + HTML_REF_RE.findall(text)
+    return {
+        target
+        for reference in references
+        if (target := resolve_reference(source, reference)) is not None
+    }
 
 
 def check_navigation(errors: list[str]) -> None:
-    sidebar_targets = chapter_targets_from_sidebar()
-    home_targets = chapter_targets_from_home()
-    if sidebar_targets != EXPECTED_CHAPTERS:
-        errors.append("_sidebar.md: chapter links do not exactly match the expected 30 chapters")
-    if home_targets != EXPECTED_CHAPTERS:
-        errors.append("README.md: chapter cards do not exactly match the expected 30 chapters")
+    root_sources = [ROOT / "README.md", ROOT / "_coverpage.md", ROOT / "_sidebar.md"]
+    for source in root_sources:
+        targets = local_targets(source)
+        missing_hubs = HUB_PAGES - targets
+        if missing_hubs:
+            add_error(errors, source, "root navigation must link all three course hubs")
+        if any(target.name.startswith("chapter-") for target in targets):
+            add_error(errors, source, "root navigation must not list individual chapters")
+        if ROOT / "coverage.md" in targets:
+            add_error(errors, source, "coverage.md is maintainer-only and must not be in student navigation")
 
-    sidebar = ROOT / "_sidebar.md"
-    sidebar_references = MARKDOWN_REF_RE.findall(sidebar.read_text(encoding="utf-8"))
-    sidebar_all_targets = {
-        target
-        for reference in sidebar_references
-        if (target := resolve_reference(sidebar, reference)) is not None
+    course_reviews = {
+        "ig-0478": {IG_PAPER1_REVIEW_PAGE, IG_REVIEW_PAGE, IG_REVIEW_PAGE_2},
+        "as-9618": {AS_PAPER1_REVIEW_PAGE, AS_REVIEW_PAGE, AS_REVIEW_PAGE_2},
+        "a2-9618": {
+            A2_PAPER3_REVIEW_PAGE,
+            A2_PAPER3_REVIEW_PAGE_2,
+            A2_REVIEW_PAGE,
+            A2_REVIEW_PAGE_2,
+        },
     }
-    for review_page in REVIEW_PAGES:
-        if review_page not in sidebar_all_targets:
-            add_error(
-                errors,
-                sidebar,
-                f"missing mixed review link for {review_page.parent.name}",
-            )
+    for course, numbers in COURSE_RANGES.items():
+        expected_chapters = {ROOT / course / f"chapter-{number}.md" for number in numbers}
+        expected = expected_chapters | course_reviews[course]
+        for source in (ROOT / course / "README.md", ROOT / course / "_sidebar.md"):
+            targets = local_targets(source)
+            if not expected.issubset(targets):
+                add_error(errors, source, "course hub/sidebar is missing chapter or review links")
+            foreign = {
+                target for target in targets
+                if target.name.startswith("chapter-") and target.parent.name != course
+            }
+            if foreign:
+                add_error(errors, source, "course navigation contains a chapter from another level")
 
-    home = ROOT / "README.md"
-    home_references = HTML_REF_RE.findall(home.read_text(encoding="utf-8"))
-    home_all_targets = {
-        target
-        for reference in home_references
-        if (target := resolve_reference(home, reference)) is not None
-    }
-    for review_page in REVIEW_PAGES:
-        if review_page not in home_all_targets:
-            add_error(
-                errors,
-                home,
-                f"missing mixed review card for {review_page.parent.name}",
-            )
+    root_sidebar = (ROOT / "_sidebar.md").read_text(encoding="utf-8")
+    if "chapter-" in root_sidebar:
+        add_error(errors, ROOT / "_sidebar.md", "root sidebar must stay course-level")
 
-    coverage_sources = [ROOT / "README.md", ROOT / "_coverpage.md", ROOT / "_sidebar.md"]
-    for source in coverage_sources:
-        text = source.read_text(encoding="utf-8")
-        references = MARKDOWN_REF_RE.findall(text) + HTML_REF_RE.findall(text)
-        if not any("coverage" in reference for reference in references):
-            add_error(errors, source, "missing link to coverage.md")
+    index = ROOT / "index.html"
+    index_text = index.read_text(encoding="utf-8")
+    if "paths: 'auto'" in index_text or "paths: \"auto\"" in index_text:
+        add_error(errors, index, "search paths must be an explicit list")
+    for path in sorted(CONTENT_PAGES):
+        if path in SHARED_PAGES:
+            route = "/" + path.stem
+        elif path.name == "README.md":
+            route = "/" + path.parent.name + "/"
+        else:
+            route = "/" + relative(path)[:-3]
+        if repr(route) not in index_text:
+            add_error(errors, index, f"explicit search paths missing {route}")
 
 
 def check_marked_chapter_contracts(
@@ -338,11 +351,11 @@ def check_marked_chapter_contracts(
     chapters: dict[Path, dict[str, object]],
 ) -> None:
     required_sections = [
-        "Syllabus Coverage",
-        "10 Marks Quick Check",
+        "Official Syllabus Checklist",
+        "10-Mark Quick Check",
         "Quick Check Answers",
-        "20 Marks Practice",
-        "20 Marks Practice Mark Scheme",
+        "20-Mark Exam Practice",
+        "Practice Mark Scheme",
         "Total: 10 marks",
         "Total: 20 marks",
     ]
@@ -358,7 +371,7 @@ def check_marked_chapter_contracts(
                 )
 
         worked_examples = len(
-            re.findall(r"^## \d+\. Worked Example", text, flags=re.MULTILINE)
+            re.findall(r"^## (?:\d+\. )?Worked Example", text, flags=re.MULTILINE)
         )
         required_examples = int(requirements["worked_examples"])
         if worked_examples < required_examples:
@@ -374,11 +387,11 @@ def check_marked_chapter_contracts(
                 add_error(errors, path, f"missing required syllabus evidence: {topic}")
 
         for label, expected_total in [
-            ("10 Marks Quick Check", 10),
-            ("20 Marks Practice", 20),
+            ("10-Mark Quick Check", 10),
+            ("20-Mark Exam Practice", 20),
         ]:
             heading_match = re.search(
-                rf"^## \d+\. {re.escape(label)}$",
+                rf"^## {re.escape(label)}$",
                 text,
                 flags=re.MULTILINE,
             )
@@ -399,6 +412,70 @@ def check_marked_chapter_contracts(
                     f"{label} mark labels total {actual_total}, "
                     f"expected {expected_total}",
                 )
+
+
+def check_editorial_contracts(errors: list[str]) -> None:
+    required_sections = [
+        "Official Syllabus Checklist",
+        "Core Knowledge",
+        "Required Ideas and Exam Language",
+        "Common Confusions",
+        "Worked Examples",
+        "10-Mark Quick Check",
+        "Quick Check Answers",
+        "20-Mark Exam Practice",
+        "Final Revision Checklist",
+    ]
+    banned = [
+        "Content Update Decision",
+        "Keep / Downweight / Delete",
+        "Keep/Downweight/Delete",
+        "Must-have keywords",
+        "<font",
+        "**Docsify:**",
+    ]
+    identities = {
+        "ig-0478": ("# IGCSE 0478 Chapter", "0478 · 2026–2028 · Version 5"),
+        "as-9618": ("# AS 9618 Chapter", "9618 · 2027–2029 · Version 2"),
+        "a2-9618": ("# A2 9618 Chapter", "9618 · 2027–2029 · Version 2"),
+    }
+    for path in sorted(EXPECTED_CHAPTERS):
+        text = path.read_text(encoding="utf-8")
+        h1_prefix, version = identities[path.parent.name]
+        if not text.startswith(h1_prefix):
+            add_error(errors, path, f"H1 must start with {h1_prefix!r}")
+        if version not in text or "class=\"chapter-meta\"" not in text:
+            add_error(errors, path, "missing course/Paper/syllabus-version metadata")
+        for section in required_sections:
+            if f"## {section}" not in text:
+                add_error(errors, path, f"missing chapter contract section: {section}")
+        for phrase in banned:
+            if phrase.casefold() in text.casefold():
+                add_error(errors, path, f"student page contains banned editorial text: {phrase}")
+        for marks in (10, 20):
+            if f"**Total: {marks} marks**" not in text:
+                add_error(errors, path, f"missing explicit {marks}-mark assessment total")
+        for number, line in enumerate(text.splitlines(), 1):
+            if line.startswith("#") and re.search(r"[\u4e00-\u9fff]", line):
+                add_error(errors, path, f"student heading must be English (line {number})")
+            if re.search(r"[\u4e00-\u9fff]", line) and 'lang="zh-CN"' not in line:
+                add_error(errors, path, f"Chinese support lacks lang attribute (line {number})")
+
+
+def check_ao_totals(
+    errors: list[str],
+    path: Path,
+    expected_ao1: int,
+    expected_ao2: int,
+    expected_ao3: int | None = None,
+) -> None:
+    text = path.read_text(encoding="utf-8")
+    if expected_ao3 is None:
+        total_row = rf"\| \*\*Total\*\* .*\| \*\*75\*\* \| \*\*{expected_ao1}\*\* \| \*\*{expected_ao2}\*\* \|"
+    else:
+        total_row = rf"\| \*\*Total\*\* .*\| \*\*75\*\* \| \*\*{expected_ao1}\*\* \| \*\*{expected_ao2}\*\* \| \*\*{expected_ao3}\*\* \|"
+    if not re.search(total_row, text):
+        add_error(errors, path, "assessment-objective totals do not match the approved allocation")
 
 
 def check_mixed_review(
@@ -671,10 +748,23 @@ def check_python_code_blocks(errors: list[str]) -> None:
 
 
 def check_marked_content(errors: list[str]) -> None:
+    check_editorial_contracts(errors)
     check_marked_chapter_contracts(errors, "Phase 2", PHASE2_CHAPTERS)
     check_marked_chapter_contracts(errors, "Phase 3", PHASE3_CHAPTERS)
     check_marked_chapter_contracts(errors, "Phase 4", PHASE4_CHAPTERS)
 
+    check_mixed_review(
+        errors,
+        IG_PAPER1_REVIEW_PAGE,
+        6,
+        [
+            "Original practice paper",
+            "1 hour 45 minutes",
+            "0478, examinations 2026–2028, Version 5",
+            "Question 6 — Automated and Emerging Technologies [12]",
+            "**45** | **15** | **15**",
+        ],
+    )
     check_mixed_review(
         errors,
         IG_REVIEW_PAGE,
@@ -696,6 +786,18 @@ def check_marked_content(errors: list[str]) -> None:
             "1 hour 45 minutes",
             "Question 7 — Integrated Programming Scenario [15]",
             "Total: 75 marks",
+        ],
+    )
+    check_mixed_review(
+        errors,
+        AS_PAPER1_REVIEW_PAGE,
+        8,
+        [
+            "Original practice paper",
+            "1 hour 30 minutes",
+            "9618, examinations 2027–2029, Version 2",
+            "Question 8 — Databases [10]",
+            "**45** | **30**",
         ],
     )
     check_mixed_review(
@@ -727,10 +829,23 @@ def check_marked_content(errors: list[str]) -> None:
         8,
         [
             "Original practice paper",
+            "Review — Set A",
             "1 hour 30 minutes",
             "Sections 13–20",
             "Question 8 — Further Programming [9]",
             "Total: 75 marks",
+        ],
+    )
+    check_mixed_review(
+        errors,
+        A2_PAPER3_REVIEW_PAGE_2,
+        8,
+        [
+            "Original practice paper",
+            "independent second set",
+            "1 hour 30 minutes",
+            "Question 8 — Program Design [9]",
+            "**45** | **30**",
         ],
     )
     check_mixed_review(
@@ -761,7 +876,11 @@ def check_marked_content(errors: list[str]) -> None:
     )
     check_review_independence(errors, IG_REVIEW_PAGE, IG_REVIEW_PAGE_2)
     check_review_independence(errors, AS_REVIEW_PAGE, AS_REVIEW_PAGE_2)
+    check_review_independence(errors, A2_PAPER3_REVIEW_PAGE, A2_PAPER3_REVIEW_PAGE_2)
     check_review_independence(errors, A2_REVIEW_PAGE, A2_REVIEW_PAGE_2)
+    check_ao_totals(errors, IG_PAPER1_REVIEW_PAGE, 45, 15, 15)
+    check_ao_totals(errors, AS_PAPER1_REVIEW_PAGE, 45, 30)
+    check_ao_totals(errors, A2_PAPER3_REVIEW_PAGE_2, 45, 30)
     check_python_code_blocks(errors)
 
 
@@ -781,22 +900,34 @@ def check_cdn_versions(errors: list[str]) -> None:
 def check_accessibility_baseline(errors: list[str]) -> None:
     index = ROOT / "index.html"
     index_text = index.read_text(encoding="utf-8")
+    site_script = ROOT / "assets" / "site.js"
+    script_text = site_script.read_text(encoding="utf-8")
     style = ROOT / "assets" / "style.css"
     style_text = style.read_text(encoding="utf-8")
 
     index_contracts = [
         ('class="skip-link"', "a keyboard skip link"),
         ('href="#main-content"', "a skip-link target"),
-        ("main.id = 'main-content'", "a persistent main content target"),
-        ("main.tabIndex = -1", "a programmatically focusable main target"),
     ]
     for needle, description in index_contracts:
         if needle not in index_text:
             add_error(errors, index, f"missing {description}")
 
+    script_contracts = [
+        ("main.id = 'main-content'", "a persistent main content target"),
+        ("main.tabIndex = -1", "a programmatically focusable main target"),
+        ("answer-disclosure", "native answer disclosure processing"),
+        ("table-scroll", "focusable horizontal table processing"),
+        ("course-hub-return", "course-bounded pagination return"),
+    ]
+    for needle, description in script_contracts:
+        if needle not in script_text:
+            add_error(errors, site_script, f"missing {description}")
+
     style_contracts = [
         (":focus-visible", "visible keyboard focus styling"),
         ("prefers-reduced-motion: reduce", "reduced-motion support"),
+        ("@media print", "A4 print styling"),
     ]
     for needle, description in style_contracts:
         if needle not in style_text:
@@ -821,21 +952,25 @@ def main() -> int:
 
     print("Site checks passed:")
     print("- 30 expected chapter files are present")
-    print("- every chapter and review page has one H1 and consistent heading levels")
+    print("- every student content page has one H1 and consistent heading levels")
     print("- local Markdown/HTML references resolve")
-    print("- home and sidebar chapter/review navigation are complete")
-    print("- coverage.md is linked from home, cover and sidebar")
+    print("- root navigation is hub-only and every course hub/sidebar is complete")
+    print("- explicit search paths include all student content and exclude coverage.md")
+    print("- all 30 chapters satisfy the editorial, identity and 10/20-mark contracts")
+    print("- student pages contain no maintainer headings, raw font tags or legacy keyword labels")
+    print("- IGCSE Paper 1 Set A has 6 questions, 75 marks and AO1/AO2/AO3 45/15/15")
     print("- IGCSE Paper 2 chapters satisfy worked-example and exact 10/20-mark contracts")
     print("- both IGCSE Paper 2 reviews have 7 questions, 75 marks and 7 mark schemes")
+    print("- AS Paper 1 Set A has 8 questions, 75 marks and AO1/AO2 45/30")
     print("- AS Paper 2 chapters satisfy worked-example and exact 10/20-mark contracts")
     print("- both AS Paper 2 reviews have 7 questions, 75 marks and 7 mark schemes")
-    print("- the A2 Paper 3 review has 8 questions, 75 marks and 8 mark schemes")
+    print("- both A2 Paper 3 reviews have 8 questions and 75 marks; Set B has AO1/AO2 45/30")
     print("- A2 Paper 4 chapters satisfy worked-example and exact 10/20-mark contracts")
     print("- both A2 Paper 4 reviews have 3 questions, 75 marks and 3 mark schemes")
-    print("- Set B question bodies remain below the 65% near-duplicate threshold")
+    print("- every A/B review pair remains below the 65% near-duplicate threshold")
     print("- every A2 fenced Python code block compiles and core examples pass smoke tests")
     print("- jsDelivr npm dependencies use exact versions")
-    print("- the skip link, keyboard focus and reduced-motion accessibility baseline is present")
+    print("- skip link, keyboard focus, answer/table/pagination scripting, print and reduced-motion checks pass")
     return 0
 
 

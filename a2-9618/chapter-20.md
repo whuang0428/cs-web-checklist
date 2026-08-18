@@ -1,12 +1,24 @@
 # A2 9618 Chapter 20: Further Programming
 
+<div class="chapter-meta"><strong>A2 9618 · Paper 4</strong><span>9618 · 2027–2029 · Version 2</span></div>
+
+## Official Syllabus Checklist
+
+Revise: programming paradigms; object-oriented design; file organisation and exception handling.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
+
 > **Paper 4 focus:** build procedural and object-oriented Python console programs that process files, handle exceptions and produce test evidence.
 
 Paper 4 excludes **low-level** and **declarative** programming, but these paradigms remain part of Section 20 theory for Paper 3. This chapter labels that boundary explicitly.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Syllabus objective | Where it is covered |
 |---|---|
@@ -483,7 +495,11 @@ Evidence should show at least:
 
 ---
 
-## 14. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I do not include low-level or declarative tasks in Paper 4 practice.
 - [ ] I distinguish an object from its class.
@@ -499,7 +515,11 @@ Evidence should show at least:
 
 ---
 
-## 15. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. Define a programming paradigm. **[1]**
 2. State the two Section 20 paradigms excluded from Paper 4. **[2]**
@@ -510,7 +530,7 @@ Evidence should show at least:
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. A general approach/style for organising computation and expressing solutions. **[1]**
 2. Low-level **[1]** and declarative **[1]**.
@@ -521,7 +541,7 @@ Evidence should show at least:
 
 ---
 
-## 16. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A text file contains sensor records in the format `sensor_id,reading`. Design a robust object-oriented loader.
 
@@ -579,7 +599,7 @@ Tests, one mark each for data plus expected outcome, for example: `-50.0` accept
 
 ---
 
-## 17. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can distinguish all four paradigms and the Paper 4 exclusion boundary.
 - [ ] I can design procedural subroutines with clear parameters and returns.

@@ -1,12 +1,24 @@
 # A2 9618 Chapter 19: Computational Thinking and Problem-Solving
 
+<div class="chapter-meta"><strong>A2 9618 · Paper 4</strong><span>9618 · 2027–2029 · Version 2</span></div>
+
+## Official Syllabus Checklist
+
+Revise: searching and sorting; abstract data types; algorithm complexity and recursion.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
+
 > **Paper 4 focus:** implement, test and justify searching, sorting, abstract data types and recursive solutions in a permitted console-mode language.
 
 This chapter uses **Python 3 console-mode code** because Python is one of the languages permitted for Paper 4. The algorithms and design principles also apply to Java and Visual Basic.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Syllabus objective | Where it is covered |
 |---|---|
@@ -530,7 +542,11 @@ The empty-subtree base case is essential. Each call moves to a child, so the alg
 
 ---
 
-## 13. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I do not use binary search before proving the data is sorted.
 - [ ] My search failure condition terminates and returns an explicit value.
@@ -544,7 +560,11 @@ The empty-subtree base case is essential. Each call moves to a child, so the alg
 
 ---
 
-## 14. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. State the condition that must be true before binary search is used. **[1]**
 2. Give the worst-case time complexity of binary search. **[1]**
@@ -555,7 +575,7 @@ The empty-subtree base case is essential. Each call moves to a child, so the alg
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. The data is sorted using the search key. **[1]**
 2. `O(log n)`. **[1]**
@@ -566,7 +586,7 @@ The empty-subtree base case is essential. Each call moves to a child, so the alg
 
 ---
 
-## 15. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A program stores unique integer keys in a binary search tree.
 
@@ -623,7 +643,7 @@ Tests, one mark each for a distinct case with expected result/state, for example
 
 ---
 
-## 16. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can implement and test linear and binary searches.
 - [ ] I can implement insertion and bubble sorts without index errors.

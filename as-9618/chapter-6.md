@@ -1,99 +1,19 @@
 # AS 9618 Chapter 6: Security, Privacy and Data Integrity
-> **Security, Privacy and Data Integrity｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 6 Security, Privacy and Data Integrity  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English mark scheme keywords  
-> **Docsify:** ready  
-> **No local image dependency**
+<div class="chapter-meta"><strong>AS 9618 · Paper 1</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: security threats and controls; privacy; data integrity; validation and verification.
 
-Chapter 6 不是单纯背定义的章节。2024 和 2025 的 Paper 1 更喜欢把本章放进真实场景，例如：
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-- bank / online account / app / customer data
-- data transfer between organisations
-- website account creation
-- personal data protection
-- checksum / parity check 的过程解释
-- firewall / encryption / biometric authentication 的保护作用
+## Core Knowledge
 
-本章复习顺序建议：
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-```mermaid
-flowchart LR
-A[Security / Privacy / Integrity<br/>three core terms] --> B[Threats<br/>malware / hackers / phishing / pharming]
-B --> C[Security Measures<br/>password / authentication / firewall / encryption]
-C --> D[Access Control<br/>user accounts / access rights]
-D --> E[Data Integrity<br/>validation / verification]
-E --> F[Transfer Checks<br/>parity / checksum]
-```
 
----
-
-## 1. Recent Paper 1 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Security / privacy / integrity definitions | Medium-high | 区分三者，不要混写 |
-| Firewall | High | Explain filtering, blocking unauthorised access, rules, packet/source/destination checking |
-| Encryption | High | Scrambles/encodes data; needs key; protects intercepted data |
-| Biometric authentication | Medium-high | Face/fingerprint/iris; verifies identity using unique biological feature |
-| Malware / virus / spyware | Medium | Threat + mitigation, not just definition |
-| Phishing / pharming | Medium | Identify fake email/website redirection and explain risk |
-| Access rights | Medium | Limit users to data/files they are allowed to access |
-| Validation checks | High | range, limit, length, format, presence, existence, check digit |
-| Verification during data entry | Medium | visual check and double entry |
-| Parity check | Very high in 2024 | even/odd parity, parity bit, byte/block parity, parity byte |
-| Checksum | Very high in 2025 | sender calculates checksum; sends with data; receiver recalculates; compare |
-| Long cyber-security essays | Low | Cambridge normally rewards concise, specific mark scheme points |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| security / privacy / integrity difference | Syllabus core and common definition question |
-| firewall | 2024 banking scenario tested direct explanation |
-| encryption | Frequently appears as data protection method |
-| authentication, especially biometric | Bank/account scenarios are common |
-| malware, hackers, phishing, pharming | Syllabus-listed threats |
-| validation types | Easy marks if students know examples |
-| verification: visual check, double entry | Common contrast with validation |
-| parity byte and parity block | 2024 Paper 1 directly tested parity description |
-| checksum | 2025 Paper 1 directly tested checksum process |
-| access rights | Strong scenario answer for protecting data |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| very deep cryptography algorithms | AS Chapter 6 only needs general encryption concept |
-| detailed biometric AI model training | AI facial recognition belongs more naturally to Chapter 7; here focus on authentication |
-| rare malware types beyond syllabus | virus and spyware are named; worms/trojans useful but not central |
-| long legal/privacy legislation discussion | Chapter 7 handles ethics/ownership; Chapter 6 focuses technical protection |
-| complex checksum arithmetic | Paper 1 usually asks process, not advanced checksum calculation |
-
-### 2.3 Delete / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| saying validation proves data is correct | Validation only checks reasonableness |
-| saying parity can always correct all errors | Single-byte parity detects error but cannot locate bit; block parity may locate one bit only |
-| saying encryption stops data being intercepted | It does not stop interception; it stops understanding without key |
-| saying firewall removes all viruses | Firewall filters traffic; anti-virus handles malware files/programs |
-| using brand names | Cambridge says no marks for brand names |
-
----
-
-## 3. Syllabus Checklist
+## Syllabus Map
 
 Chapter 6 contains two syllabus sections.
 
@@ -197,9 +117,9 @@ mindmap
 
 | Term | Meaning | Simple student version |
 | --- | --- | --- |
-| **Security** | protecting data/system from unauthorised access, damage or misuse | 防止别人乱进、乱改、乱偷 |
-| **Privacy** | controlling who can see personal/sensitive data | 个人信息不要被不该看的人看到 |
-| **Integrity** | data remains accurate, complete and unchanged unless authorised | 数据是准确、完整、没有被乱改的 |
+| **Security** | protecting data/system from unauthorised access, damage or misuse | <span lang="zh-CN">防止别人乱进</span>、<span lang="zh-CN">乱改</span>、<span lang="zh-CN">乱偷</span> |
+| **Privacy** | controlling who can see personal/sensitive data | <span lang="zh-CN">个人信息不要被不该看的人看到</span> |
+| **Integrity** | data remains accurate, complete and unchanged unless authorised | <span lang="zh-CN">数据是准确</span>、<span lang="zh-CN">完整</span>、<span lang="zh-CN">没有被乱改的</span> |
 
 #### Mark scheme style phrases
 
@@ -354,7 +274,7 @@ A digital signature can be used to:
 
 #### Student-friendly explanation
 
-Digital signature 不等于手写签名图片。它是用加密相关方法生成的一段数据，用来证明：
+Digital signature <span lang="zh-CN">不等于手写签名图片</span>。<span lang="zh-CN">它是用加密相关方法生成的一段数据</span>，<span lang="zh-CN">用来证明</span>：
 
 1. message really came from the claimed sender  
 2. message has not been changed after signing  
@@ -918,7 +838,7 @@ sequenceDiagram
 
 ---
 
-## 12. Common Mistakes — Must Read
+## 12. Common Confusions
 
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
@@ -961,7 +881,22 @@ sequenceDiagram
 
 ---
 
-## 14. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -975,7 +910,7 @@ sequenceDiagram
 8. Explain how double entry verification works. [1]  
 9. State what a checksum is used for. [1]
 
-### Answers
+## Quick Check Answers
 
 1. Protecting data/systems from unauthorised access, damage or misuse.  
 2. Ensuring personal/sensitive data is only accessed by authorised users.  
@@ -989,7 +924,9 @@ sequenceDiagram
 
 ---
 
-## 15. 20 Marks Exam-Style Practice with Mark Scheme
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: Bank data security and integrity [10]
 
@@ -1067,3 +1004,11 @@ A website lets users create accounts and play quizzes. A user must enter:
 - Users/staff can only access data/functions they are authorised to use. [1]
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

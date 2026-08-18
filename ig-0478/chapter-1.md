@@ -1,75 +1,17 @@
 # IGCSE 0478 Chapter 1: Data Representation
-> **Data Representation｜Syllabus-Aligned Paper 1 Revision Sheet**
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-**Target:** Cambridge IGCSE Computer Science 0478  
-**Main audience:** Students  
-**Style:** Chinese explanation + English mark scheme keywords  
->
 
----
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
 
-## 0. How to Use This Sheet
-本章不是“背很多定义”就能拿高分的章节。2025 的题目明显更喜欢考：
+## Official Syllabus Checklist
 
-1. **conversion / calculation / working**  
-2. **exact keyword definitions**  
-3. **file size, colour depth, resolution, compression choice**  
-4. **binary addition, overflow, logical shift, two's complement**
+Revise: binary and hexadecimal; text, sound and images; storage units, file-size calculations and compression.
 
-所以复习时请按下面顺序：
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-```mermaid
-flowchart LR
-A[Number systems<br/>binary / denary / hexadecimal] --> B[Binary operations<br/>addition / overflow / shift / two's complement]
-B --> C[Text, sound and image<br/>ASCII / Unicode / sampling / pixels]
-C --> D[File size calculation<br/>image / sound / units]
-D --> E[Compression<br/>lossy / lossless / RLE]
-```
+## Core Knowledge
 
----
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-## 1. Recent Paper 1 Pattern Map
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Binary / denary / hexadecimal | Very high frequency | Base 2 / base 10 / base 16, binary ↔ denary, hex ↔ binary, hex ↔ denary |
-| Binary addition | High frequency | Show carries, add two 8-bit numbers, identify overflow |
-| Logical shift | High frequency | Left shift = ×2 each shift, right shift = ÷2 each shift, lost bits, zeros shifted in |
-| Two's complement | Medium-high | Convert negative denary ↔ 8-bit two's complement |
-| Colour depth / resolution | High frequency | Define and explain effect on file size |
-| Lossless compression / RLE | Very high frequency | "without permanently removing data", repeated pixels grouped and stored with count |
-| Lossy vs lossless choice | High frequency | Choose based on file type and whether quality/data loss is acceptable |
-| Sound file size | Medium | sample rate × sample resolution × duration × channels |
-| ASCII / Unicode | Medium | Unicode supports more characters/languages/emojis but uses more bits |
-| Very detailed lossy video/audio algorithms | Low | Know concept; avoid over-learning beyond syllabus |
-
-
----
-
-## 2. Content Update Decision
-### 2.1 Keep and Strengthen
-| Kept content | Reason |
-| --- | --- |
-| binary / denary / hexadecimal conversions | Always examinable and frequently tested |
-| binary addition and overflow | 2025 mark schemes reward working and overflow identification |
-| logical shift | Tested as calculation + effect explanation |
-| two's complement | Common short calculation topic |
-| ASCII vs Unicode | Still syllabus and easy 1–3 mark area |
-| sample rate / sample resolution / image resolution / colour depth | Core definitions and file size questions |
-| KiB / MiB / GiB | Still important for calculation questions |
-| lossy / lossless / RLE | High-frequency 2025 topic |
-
-
-### 2.2 Downweight
-| Downweighted content | Why |
-| --- | --- |
-| very detailed memory dump explanation | Usually only needs "hex is used for error codes / memory dumps" |
-| too many decimal unit rows such as EB/PB | Students mainly need bit, nibble, byte, KiB, MiB, GiB |
-| long lossy video compression details | Can confuse students; Paper 1 usually expects simple quality/file-size points |
-| lookup table text compression details | Less central than RLE and lossless/lossy distinction |
-| fixed claim: "Unicode is 16-bit" | Better answer: Unicode uses more bits than ASCII and represents more characters |
-
-
----
 
 ## 3. One-Page Mind Map
 ```mermaid
@@ -112,7 +54,7 @@ mindmap
 > Computers use binary because computer circuits / transistors can only represent two states, such as on/off, high/low or 1/0. All data must be converted into binary so it can be processed and stored by the computer.
 >
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **transistors**
 + **logic circuits**
 + **two states**
@@ -136,7 +78,7 @@ This is too vague. It does not explain **why**.
 | Hexadecimal | 16 | 0–9 and A–F | shorter representation of binary |
 
 
-#### Recent exam-style facts
+#### Exam-style facts
 + 8-bit unsigned binary range: **0 to 255**
 + 1 hexadecimal digit = **4 bits**
 + A in hexadecimal = **10**
@@ -514,6 +456,8 @@ Mark scheme style:
 | MiB | 1024 KiB |
 | GiB | 1024 MiB |
 | TiB | 1024 GiB |
+| PiB | 1024 TiB |
+| EiB | 1024 PiB |
 
 
 #### Exam warning
@@ -674,7 +618,7 @@ For images, this could mean:
 | artwork requiring exact detail | lossless | no part of the image should be lost |
 
 
-<!-- 这是一个文本绘图，源码为：flowchart TD
+<!-- <span lang="zh-CN">这是一个文本绘图</span>，<span lang="zh-CN">源码为</span>：flowchart TD
 A[Need to compress a file] --> B{Must the original be restored exactly?}
 B -->|Yes| C[Use lossless compression]
 B -->|No| D{Is small quality loss acceptable?}
@@ -729,7 +673,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-## 10. Common Mistakes — Must Read
+## 10. Common Confusions
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
 | Why binary? | "Computers understand binary" | "Transistors / logic circuits have two states, on/off or 1/0" |
@@ -764,7 +708,22 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-## 12. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 ### Questions
 1. State the base of the binary number system. [1]  
 2. State the largest denary value that can be stored in an unsigned 8-bit register. [1]  
@@ -776,7 +735,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 8. State what is meant by colour depth. [1]  
 9. Give one reason why compression is used. [1]
 
-### Answers
+## Quick Check Answers
 1. Base 2  
 2. 255  
 3. AE  
@@ -789,7 +748,9 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-## 13. 20 Marks Exam-Style Practice
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 ### Question 1: Number systems and operations [8]
 (a) Convert the denary number 182 to 8-bit binary. [1]  
 (b) Convert `10110110` to hexadecimal. [1]  
@@ -855,3 +816,10 @@ Award up to [3] for correct formula, substitution and final bytes.
 
 ---
 
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

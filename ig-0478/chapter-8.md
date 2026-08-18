@@ -1,10 +1,22 @@
-# Chapter 8: Programming
+# IGCSE 0478 Chapter 8: Programming
+
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 5</span></div>
+
+## Official Syllabus Checklist
+
+Revise: data types and control structures; strings; arrays; subroutines; files and maintainable programs.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 > **Paper 2 focus:** translate an algorithm into clear pseudocode or program code by choosing suitable data, control structures, arrays, subroutines and file operations.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Objective | Where it is covered |
 |---|---|
@@ -471,7 +483,11 @@ The file loop handles an unknown number of lines. The procedure separates displa
 
 ---
 
-## 13. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I choose a data type based on how data is used, not how it looks.
 - [ ] I use assignment and equality in the correct contexts.
@@ -486,7 +502,11 @@ The file loop handles an unknown number of lines. The procedure separates displa
 
 ---
 
-## 14. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. State a suitable data type for each value: number of students, average height, one menu letter and a login flag. **[4]**
 2. State one difference between a `WHILE` loop and a `REPEAT ... UNTIL` loop. **[2]**
@@ -495,7 +515,7 @@ The file loop handles an unknown number of lines. The procedure separates displa
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. Integer; real; character; Boolean. **[4]**
 2. `WHILE` tests before its body and may run zero times; `REPEAT ... UNTIL` tests after its body and therefore runs at least once. **[2]**
@@ -504,7 +524,7 @@ The file loop handles an unknown number of lines. The procedure separates displa
 
 ---
 
-## 15. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A wildlife station stores the number of birds seen at four sites on seven days in `Birds[1:4, 1:7]`. A valid daily count is from 0 to 500 inclusive.
 
@@ -589,7 +609,7 @@ A wildlife station stores the number of birds seen at four sites on seven days i
 
 ---
 
-## 16. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can select and justify primitive data types.
 - [ ] I can write sequence, `IF`, `CASE` and all three loop types.

@@ -1,9 +1,10 @@
-# A2 9618 Paper 3 Advanced Theory Review
+# A2 9618 Paper 3 Advanced Theory Review — Set A
 
 > **Original practice paper:** an independent cross-chapter review for Sections 13–20. It does not reproduce official questions or mark schemes.
 
 ## Instructions
 
+- Syllabus: **9618, examinations 2027–2029, Version 2**
 - Recommended time: **1 hour 30 minutes**
 - Total: **75 marks**
 - Answer all eight questions.

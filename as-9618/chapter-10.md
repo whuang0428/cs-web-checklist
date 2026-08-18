@@ -1,10 +1,22 @@
 # AS 9618 Chapter 10: Data Types and Structures
 
+<div class="chapter-meta"><strong>AS 9618 · Paper 2</strong><span>9618 · 2027–2029 · Version 2</span></div>
+
+## Official Syllabus Checklist
+
+Revise: records and arrays; file processing; stacks, queues and linked lists.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
+
 > **Paper 2 focus:** select, declare and process records, arrays and text files, then reason accurately about stack, queue and linked-list operations.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Syllabus objective | Where it is covered |
 |---|---|
@@ -529,7 +541,11 @@ Only links change; `C` does not need to move physically.
 
 ---
 
-## 15. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I use a record for related mixed-type fields.
 - [ ] I distinguish an array element from its index.
@@ -544,7 +560,11 @@ Only links change; `C` does not need to move physically.
 
 ---
 
-## 16. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. State suitable types for a product code, quantity and measured mass. **[3]**
 2. State why a record is suitable for storing one student's ID, name and mark. **[2]**
@@ -553,7 +573,7 @@ Only links change; `C` does not need to move physically.
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. STRING, INTEGER and REAL. **[3]**
 2. It groups related fields under one identifier **[1]** and allows the fields to have different data types **[1]**. **[2]**
@@ -562,7 +582,7 @@ Only links change; `C` does not need to move physically.
 
 ---
 
-## 17. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A clinic stores six appointments in an array of records. Each appointment has a unique code, patient name, duration in minutes and attended flag.
 
@@ -621,7 +641,7 @@ A clinic stores six appointments in an array of records. Each appointment has a 
 
 ---
 
-## 18. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can select every required AS pseudocode data type.
 - [ ] I can define and process records and arrays of records.

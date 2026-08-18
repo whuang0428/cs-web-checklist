@@ -1,52 +1,55 @@
-# Coverage Status
+# Coverage and Maintenance Status
 
-This website is a revision checklist and marked-practice hub. The planned chapter-deepening and independent-retest stages are complete; ongoing work should now focus on maintenance, accessibility and future syllabus changes.
+This maintainer page records the current information architecture and assessment inventory. It is intentionally excluded from student navigation and search.
 
-## Current Coverage
+## Syllabus Baselines
 
-| Course | Current pages | Status |
+| Course area | Baseline | Student hub |
 |---|---|---|
-| IGCSE 0478 | Chapters 1-10 + two Paper 2 reviews | Topics 7-10 deepened; two independent 75-mark retest sets |
-| AS 9618 | Chapters 1-12 + two Paper 2 reviews | Sections 9-12 deepened; two independent 75-mark retest sets |
-| A2 9618 | Chapters 13-20 + Paper 3 review + two Paper 4 practicals | Cross-chapter theory review and two independent practical sets |
+| IGCSE 0478 | 2026–2028, Version 5 | `ig-0478/README.md` |
+| AS 9618 | 2027–2029, Version 2, Sections 1–12 | `as-9618/README.md` |
+| A Level 9618 — A2 / Year 2 | 2027–2029, Version 2, Sections 13–20 | `a2-9618/README.md` |
 
-## Ongoing Improvement Areas
+## Current Inventory
 
-The planned maturity stages are complete. These are maintenance opportunities rather than missing core deliverables.
+| Course | Chapters | Complete original practice |
+|---|---:|---|
+| IGCSE 0478 | 1–10 | Paper 1 Set A; Paper 2 Sets A and B |
+| AS 9618 | 1–12 | Paper 1 Set A; Paper 2 Sets A and B |
+| A Level 9618 — A2 / Year 2 | 13–20 | Paper 3 Sets A and B; Paper 4 Sets A and B |
 
-### IGCSE 0478
+All 30 chapter pages carry course/Paper/version metadata and the same editorial contract: Official Syllabus Checklist, Core Knowledge, Required Ideas and Exam Language, Common Confusions, Worked Examples, 10-Mark Quick Check with answers, 20-Mark Exam Practice with a mark scheme, and Final Revision Checklist.
 
-- refresh examples when the syllabus changes
-- continue checking accessibility and mobile layout as content grows
-- add optional topic-specific micro-quizzes if students need shorter retrieval sessions
+## Navigation Contract
 
-### AS 9618
+- The root cover and fallback home link only to the three course hubs and shared student resources.
+- Each course loads its own `_sidebar.md`; course pagination must not cross into another level.
+- `exam-technique.md` owns the stable Command Words anchor.
+- `syllabus-versions.md` records the examination cycles used by the site.
+- Search uses an explicit list of student pages in `index.html`.
+- This file remains maintainer-only.
 
-- refresh pseudocode examples when the official guide changes
-- continue checking accessibility and mobile layout as content grows
-- add optional topic-specific micro-quizzes if students need shorter retrieval sessions
+## Runtime and Visual Contract
 
-### A2 9618
+- Docsify, Markdown, CSS and local native JavaScript only; no build system or account/progress layer.
+- `assets/site.js` applies course identity, answer disclosure, focusable table scrolling and course-bounded pagination.
+- `assets/style.css` defines the IG blue, AS teal and A2 amber tokens, the approximately 76-character reading measure, responsive layout and A4 print rules.
+- Answers remain collapsed by default. Printing a collapsed page produces a student version; opening the answer disclosure before printing includes the mark scheme.
 
-- refresh language-specific examples when permitted languages or syllabus details change
-- keep practical reference solutions compatible with supported Python versions
-- add further Paper 3 sets only when there is evidence that another full retest is needed
+## Verification
 
-## How Students Should Use This Site
+Run before any publication decision:
 
-Use the completed pages for targeted revision:
+```bash
+python3 scripts/check_site.py
+git diff --check
+```
 
-1. Choose a completed chapter.
-2. Read the syllabus-led explanation.
-3. Review mark-scheme keywords.
-4. Check common mistakes.
-5. Practise the exam-style questions.
-
-Use this site as a structured revision checklist, then practise with the official syllabus, class notes and past-paper-style practice.
+Then verify the cover, all three hubs, representative theory/practical/Mermaid pages, search, course sidebars, pagination, answer disclosure, wide tables and A4 print output at desktop and mobile widths.
 
 ## Maintenance Priorities
 
-1. Run the structural/content/runtime checker before publishing and extend it when site structure changes.
-2. Review syllabus alignment, pseudocode guidance and permitted Paper 4 languages annually.
-3. Continue keyboard, contrast, mobile and long-code-block accessibility checks.
-4. Add further practice only when it remains independent and adds measurable coverage rather than duplicating existing questions.
+1. Keep every practice set independent; do not create new sets by rewording an existing scenario.
+2. Recheck syllabus versions and Paper 4 permitted languages when Cambridge publishes a new cycle.
+3. Preserve keyboard, contrast, mobile, print, Mermaid and long-code/table accessibility.
+4. Keep public wording student-facing and original; do not add teacher-only or trend-ranking material.

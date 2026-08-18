@@ -1,32 +1,32 @@
-# CS Web Checklist
+<div class="cover-brand">CS Web Checklist</div>
 
-## Computer Science revision for Cambridge 0478 and 9618
+# Choose your course
 
 <div class="cover-intro">
-  <p>Choose your course and start from the chapter you need. Notes are organised for quick revision, mark-scheme keywords, common mistakes and practice questions.</p>
+  <p>Revision checklists, worked examples and original exam practice for Cambridge Computer Science.</p>
 </div>
 
 <div class="cover-course-actions">
-  <a class="cover-course-action ig-action" href="#/ig-0478/chapter-1">
+  <a class="cover-course-action ig-action" href="#/ig-0478/">
     <span>IGCSE 0478</span>
-    <strong>Paper 1 and Paper 2</strong>
-    <small>Start Chapter 1: Data Representation</small>
+    <strong>Papers 1–2 · Topics 1–10</strong>
+    <small>Open IGCSE revision hub</small>
   </a>
-  <a class="cover-course-action as-action" href="#/as-9618/chapter-1">
-    <span>AS 9618</span>
-    <strong>Paper 1 and Paper 2</strong>
-    <small>Start Chapter 1: Information Representation</small>
+  <a class="cover-course-action as-action" href="#/as-9618/">
+    <span>AS Level 9618</span>
+    <strong>Papers 1–2 · Sections 1–12</strong>
+    <small>Open AS revision hub</small>
   </a>
-  <a class="cover-course-action a2-action" href="#/a2-9618/chapter-13">
-    <span>A2 9618</span>
-    <strong>Paper 3 and Paper 4</strong>
-    <small>Start Chapter 13: Data Representation</small>
+  <a class="cover-course-action a2-action" href="#/a2-9618/">
+    <span>A Level 9618 — A2 / Year 2</span>
+    <strong>Papers 3–4 · Sections 13–20</strong>
+    <small>Open A Level revision hub</small>
   </a>
 </div>
 
-<div class="cover-meta">
-  <span>Student revision checklist</span>
-  <span>Syllabus-aligned chapters</span>
-  <span>Exam-focused summaries</span>
-  <a href="#/coverage">Coverage status</a>
+<div class="cover-resources" aria-label="Shared resources">
+  <strong>Shared resources</strong>
+  <a href="#/exam-technique">Exam technique</a>
+  <a href="#/exam-technique?id=command-words">Command words</a>
+  <a href="#/syllabus-versions">Syllabus versions</a>
 </div>

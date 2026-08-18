@@ -1,10 +1,22 @@
 # AS 9618 Chapter 12: Software Development
 
+<div class="chapter-meta"><strong>AS 9618 · Paper 2</strong><span>9618 · 2027–2029 · Version 2</span></div>
+
+## Official Syllabus Checklist
+
+Revise: development life cycles; structure charts and state diagrams; testing, faults and maintenance.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
+
 > **Paper 2 focus:** select a suitable development life cycle, document modular designs, plan effective testing, correct faults and classify maintenance.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Syllabus objective | Where it is covered |
 |---|---|
@@ -426,7 +438,11 @@ A white-box review confirms the loop totals five elements. Black-box tests confi
 
 ---
 
-## 15. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I link life-cycle choice to scenario evidence.
 - [ ] I do not describe waterfall as automatically superior.
@@ -443,7 +459,11 @@ A white-box review confirms the loop totals five elements. Black-box tests confi
 
 ---
 
-## 16. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. State one benefit and one drawback of waterfall. **[2]**
 2. State one difference between iterative development and RAD. **[2]**
@@ -453,7 +473,7 @@ A white-box review confirms the loop totals five elements. Black-box tests confi
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. Any linked pair, such as clear staged control/documentation **[1]** but costly late changes or late working software **[1]**. **[2]**
 2. Iterative is the general repeated improvement of versions; RAD specifically emphasises rapid/time-boxed prototyping, strong user involvement and reuse/tools. **[2]**
@@ -463,7 +483,7 @@ A white-box review confirms the loop totals five elements. Black-box tests confi
 
 ---
 
-## 17. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A sports centre is developing an appointment app. Users are available weekly to review prototypes, the interface is modular and the first usable version is needed quickly.
 
@@ -491,7 +511,7 @@ A sports centre is developing an appointment app. Users are available weekly to 
 
 ---
 
-## 18. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can choose and evaluate waterfall, iterative and RAD.
 - [ ] I can explain the five program-development stages.

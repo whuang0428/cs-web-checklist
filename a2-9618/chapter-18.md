@@ -1,87 +1,17 @@
 # A2 9618 Chapter 18: Artificial Intelligence
-> **Artificial Intelligence (AI)｜Syllabus-Aligned Paper 3 Revision Sheet**
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618 — A2  
-> **Chapter:** 18 Artificial Intelligence (AI)  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English mark scheme keywords  
-> **Docsify:** ready  
->
 
----
+<div class="chapter-meta"><strong>A2 9618 · Paper 3</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
-## 0. How to Use This Sheet
+## Official Syllabus Checklist
 
-本章是 A2 Paper 3 中比较新的章节，但近年考试已经形成明显规律：
+Revise: graphs and route search; machine-learning categories; neural networks and backpropagation.
 
-1. **graphs in AI** 经常考定义、结构、用途  
-2. **A* / Dijkstra's algorithm** 不要求写完整算法，但要会解释用途和做简单路径判断  
-3. **machine learning categories** 很喜欢考 matching / describe / compare  
-4. **artificial neural networks / deep learning** 要写出 mark scheme phrase  
-5. **back propagation / regression** 不要求大学级数学，但要能解释训练目的  
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-所以复习顺序建议：
+## Core Knowledge
 
-```mermaid
-flowchart LR
-A[Graphs in AI<br/>nodes / edges / weights] --> B[Search algorithms<br/>A* / Dijkstra]
-B --> C[Machine learning categories<br/>supervised / unsupervised / reinforcement]
-C --> D[Artificial neural networks<br/>nodes / layers / weights]
-D --> E[Deep learning<br/>multiple hidden layers]
-E --> F[Training methods<br/>back propagation / regression]
-```
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
----
-
-## 1. Recent Paper 3 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Graph structure | High | nodes / vertices, edges, weights, relationships between entities |
-| Graph use in AI | High | maps, route finding, shortest route, cost / distance / time |
-| A* and Dijkstra | Medium-high | purpose: find shortest / optimal / lowest-cost route between nodes |
-| Supervised learning | High | labelled data, input-output pairs, known outcomes |
-| Unsupervised learning | High | unlabelled data, hidden patterns / clusters |
-| Reinforcement learning | High | trial and error, reward / penalty, interactive environment |
-| Deep learning | High | multiple hidden layers, complex features, predictions |
-| Artificial neural networks | High | brain-like structure, connected nodes, layers, weights adjusted during training |
-| Back propagation | Medium | error is passed backwards, weights adjusted to reduce error |
-| Regression | Medium | predicts continuous numeric values / finds relationship between variables |
-| Over-detailed AI ethics | Low for this chapter | Useful background, but not the core 9618 Chapter 18 mark focus |
-| Coding AI algorithms | Low / not required | Syllabus says students are not required to write graph search algorithms |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| purpose and structure of graphs | Direct syllabus item and tested in 2025 |
-| nodes / vertices / edges / weights | Required mark scheme keywords |
-| A* and Dijkstra route-search purpose | Often tested as short-answer |
-| supervised vs unsupervised comparison | Recent exam-style explain/compare question |
-| reinforcement learning definition | 2024-style direct short-answer |
-| deep learning definition | 2024 and 2025 high-frequency short-answer |
-| artificial neural network structure | 2025 mark schemes reward nodes, layers, weights |
-| back propagation of errors | Syllabus item; usually concept-based |
-| regression methods | Syllabus item; likely short-answer / application-based |
-
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| detailed mathematical formulae for neural networks | Not needed for 9618 Paper 3 |
-| implementation code for A* / Dijkstra | Syllabus says candidates do not need to write graph search algorithms |
-| detailed calculus behind back propagation | Too advanced and unlikely to gain marks |
-| many real-world AI examples without keywords | Students lose marks if examples replace definitions |
-| generative AI / LLM detail | Interesting but not core 2024–2025 syllabus wording |
-| ethical AI essay content | More useful as context; Chapter 18 questions focus on technical definitions and methods |
-
-
----
 
 ## 3. One-Page Mind Map
 
@@ -134,13 +64,13 @@ mindmap
 ### 4.1 What is Artificial Intelligence?
 
 #### Student-friendly explanation
-Artificial Intelligence means using computer systems to carry out tasks that normally need human intelligence.  
+Artificial Intelligence means using computer systems to carry out tasks that normally need human intelligence.
 For example, recognising patterns, making decisions, finding routes, making predictions, or learning from data.
 
 #### Mark scheme style answer
 > Artificial intelligence is the use of computer systems to perform tasks that normally require human intelligence, such as learning, reasoning, recognising patterns, making predictions, or making decisions.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **learning**
 + **reasoning**
 + **decision-making**
@@ -195,7 +125,7 @@ A graph is a data structure used to show relationships between items.
 #### Mark scheme answer
 > A graph uses vertices / nodes to represent entities and edges to represent connections or relationships between them. Edges can be weighted to represent cost, distance, time, or another value.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **nodes / vertices**
 + **edges**
 + **relationships**
@@ -233,7 +163,7 @@ Examples:
 
 
 #### Exam tip
-如果题目没有特别强调 directed graph，不要主动写太复杂。通常写 **nodes, edges, weights, shortest route** 已经足够。
+<span lang="zh-CN">如果题目没有特别强调</span> directed graph，<span lang="zh-CN">不要主动写太复杂</span>。<span lang="zh-CN">通常写</span> **nodes, edges, weights, shortest route** <span lang="zh-CN">已经足够</span>。
 
 ---
 
@@ -267,13 +197,13 @@ In this graph:
 
 ### 6.1 What these algorithms are used for
 
-A* and Dijkstra's algorithm are graph search algorithms.  
+A* and Dijkstra's algorithm are graph search algorithms.
 They are used to find the best route through a graph.
 
 #### Mark scheme answer
 > A* and Dijkstra's algorithms are used to find the shortest / optimal / lowest-cost route between two nodes in a graph, based on distance, cost, or time.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **shortest route**
 + **optimal route**
 + **lowest cost**
@@ -305,7 +235,7 @@ Dijkstra looks for the shortest path from a starting node by repeatedly choosing
 #### Student-friendly explanation
 A* also finds a route, but it uses both:
 
-1. the cost already travelled  
+1. the cost already travelled
 2. an estimated cost to the goal
 
 This estimate is called a **heuristic**.
@@ -352,7 +282,7 @@ Machine learning means the computer learns from data. Instead of manually progra
 #### Mark scheme answer
 > Machine learning is a component of AI where a system learns from data and improves its performance or predictions without being explicitly programmed for every rule.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **learns from data**
 + **patterns**
 + **training**
@@ -397,7 +327,7 @@ A label is the correct answer already attached to an example.
 #### Mark scheme answer
 > Supervised learning uses labelled data, where known outcomes are applied to specific inputs so that the AI can learn to predict outcomes for new data.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **labelled data**
 + **known outcomes**
 + **input-output pairs**
@@ -423,7 +353,7 @@ Use supervised learning when:
 
 ### 9.1 Definition
 
-Unsupervised learning uses unlabelled data.  
+Unsupervised learning uses unlabelled data.
 The system has to find patterns by itself.
 
 #### Example
@@ -438,7 +368,7 @@ The system has to find patterns by itself.
 #### Mark scheme answer
 > Unsupervised learning uses unlabelled data. The system searches for hidden patterns, structures, or clusters within the data without known outcomes.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **unlabelled data**
 + **no known outcomes**
 + **hidden patterns**
@@ -484,7 +414,7 @@ The AI interacts with an environment, takes actions, and receives rewards or pen
 #### Mark scheme answer
 > Reinforcement learning enables learning in an interactive environment by trial and error using rewards and penalties from its own experiences.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **interactive environment**
 + **trial and error**
 + **actions**
@@ -525,13 +455,13 @@ Use reinforcement learning when:
 
 ### 11.1 What is an artificial neural network?
 
-An artificial neural network is a computer model inspired by the human brain.  
+An artificial neural network is a computer model inspired by the human brain.
 It uses many connected processing units called nodes / neurons.
 
 #### Mark scheme answer
 > An artificial neural network is designed to work in a similar way to the human brain. It has many connected processing units / nodes arranged in layers that work together to process data and learn from data.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **human brain**
 + **connected processing units**
 + **nodes / neurons**
@@ -568,7 +498,7 @@ H2 --> O
 
 ### 11.3 Weights and biases
 
-Each connection can have a **weight**.  
+Each connection can have a **weight**.
 The weight controls how strongly one node affects another node.
 
 During training:
@@ -593,7 +523,7 @@ Deep learning is a type of machine learning that uses artificial neural networks
 #### Mark scheme answer
 > Deep learning uses artificial neural networks with multiple hidden layers to extract complex features from data and make predictions or decisions.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **artificial neural network**
 + **multiple hidden layers**
 + **complex features**
@@ -648,11 +578,11 @@ Back propagation is a training method used in neural networks.
 
 The network:
 
-1. makes an output prediction  
-2. compares the prediction with the expected output  
-3. calculates the error  
-4. sends the error backwards through the network  
-5. adjusts weights to reduce future error  
+1. makes an output prediction
+2. compares the prediction with the expected output
+3. calculates the error
+4. sends the error backwards through the network
+5. adjusts weights to reduce future error
 
 #### Mermaid process
 
@@ -670,7 +600,7 @@ G --> H[Prediction becomes more accurate]
 #### Mark scheme answer
 > Back propagation is where the error between the predicted output and expected output is passed backwards through the network so that weights can be adjusted to reduce the error.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **predicted output**
 + **expected output**
 + **error**
@@ -710,7 +640,7 @@ Regression is used to predict a continuous numeric value.
 #### Mark scheme style answer
 > Regression is a machine learning method used to model the relationship between variables and predict a continuous numerical value.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **relationship between variables**
 + **predict**
 + **continuous value**
@@ -730,8 +660,8 @@ Regression is used to predict a continuous numeric value.
 
 
 #### Exam tip
-如果题目是预测 **price, score, temperature, distance, time, demand**，通常是 regression。  
-如果题目是预测 **cat/dog, spam/not spam, pass/fail**，通常是 classification。
+<span lang="zh-CN">如果题目是预测</span> **price, score, temperature, distance, time, demand**，<span lang="zh-CN">通常是</span> regression。
+<span lang="zh-CN">如果题目是预测</span> **cat/dog, spam/not spam, pass/fail**，<span lang="zh-CN">通常是</span> classification。
 
 ---
 
@@ -812,7 +742,7 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-## 16. Common Mistakes 易错表
+## 16. Common Confusions
 
 | Mistake | Why it loses marks | Better answer |
 | --- | --- | --- |
@@ -944,91 +874,116 @@ A → C → D = 2 + 8 = 10
 
 ---
 
-## 19. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
-1. State two components of a graph. [2]  
-2. State what a weight on an edge may represent. [1]  
-3. State the purpose of Dijkstra's algorithm. [1]  
-4. Give one difference between supervised and unsupervised learning. [2]  
-5. State what reinforcement learning uses to improve behaviour. [1]  
+1. State two components of a graph. [2]
+2. State what a weight on an edge may represent. [1]
+3. State the purpose of Dijkstra's algorithm. [1]
+4. Give one difference between supervised and unsupervised learning. [2]
+5. State what reinforcement learning uses to improve behaviour. [1]
 6. State the three main layers of an artificial neural network. [3]
 
-### Answers
-1. Nodes / vertices [1], edges [1]  
-2. Cost / distance / time / risk [1]  
-3. To find the shortest / lowest-cost path between nodes in a graph [1]  
-4. Supervised learning uses labelled data / known outcomes [1], unsupervised learning uses unlabelled data / finds hidden patterns [1]  
-5. Rewards and penalties / trial and error feedback [1]  
+## Quick Check Answers
+1. Nodes / vertices [1], edges [1]
+2. Cost / distance / time / risk [1]
+3. To find the shortest / lowest-cost path between nodes in a graph [1]
+4. Supervised learning uses labelled data / known outcomes [1], unsupervised learning uses unlabelled data / finds hidden patterns [1]
+5. Rewards and penalties / trial and error feedback [1]
 6. Input layer [1], hidden layer(s) [1], output layer [1]
 
 ---
 
-## 20. 20 Marks Exam-Style Practice
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: Graphs and route searching [6]
 A delivery company uses an AI system to find routes between towns.
 
-(a) Explain how a graph can represent the towns and roads. [3]  
-(b) State the purpose of A* and Dijkstra's algorithms. [2]  
+(a) Explain how a graph can represent the towns and roads. [3]
+(b) State the purpose of A* and Dijkstra's algorithms. [2]
 (c) State one reason why a weighted graph is useful in this scenario. [1]
 
 #### Mark scheme
 (a)
-+ towns represented as nodes / vertices [1]  
-+ roads represented as edges [1]  
-+ weights can represent distance / time / cost [1]  
++ towns represented as nodes / vertices [1]
++ roads represented as edges [1]
++ weights can represent distance / time / cost [1]
 
 (b)
-+ to find the shortest / optimal / lowest-cost route [1]  
-+ between two nodes in a graph [1]  
++ to find the shortest / optimal / lowest-cost route [1]
++ between two nodes in a graph [1]
 
 (c)
-+ allows AI to compare possible routes by distance / time / cost [1]  
++ allows AI to compare possible routes by distance / time / cost [1]
 
 ---
 
 ### Question 2: Machine learning categories [6]
 A website wants to recommend products to users. It has a large amount of shopping data but no pre-defined customer categories.
 
-(a) Identify the most suitable machine learning category. [1]  
-(b) Explain your answer. [3]  
+(a) Identify the most suitable machine learning category. [1]
+(b) Explain your answer. [3]
 (c) Explain why supervised learning may not be suitable. [2]
 
 #### Mark scheme
 (a) Unsupervised learning [1]
 
 (b)
-+ data is unlabelled / categories are not already known [1]  
-+ system can find hidden patterns / structures [1]  
-+ customers can be grouped into clusters based on behaviour [1]  
++ data is unlabelled / categories are not already known [1]
++ system can find hidden patterns / structures [1]
++ customers can be grouped into clusters based on behaviour [1]
 
 (c)
-+ supervised learning needs labelled data / known outcomes [1]  
-+ there are no pre-defined correct customer categories / labels [1]  
++ supervised learning needs labelled data / known outcomes [1]
++ there are no pre-defined correct customer categories / labels [1]
 
 ---
 
 ### Question 3: Neural networks and deep learning [8]
 A hospital uses an AI system to analyse medical images.
 
-(a) Describe the structure of an artificial neural network. [3]  
-(b) Explain what is meant by deep learning. [3]  
+(a) Describe the structure of an artificial neural network. [3]
+(b) Explain what is meant by deep learning. [3]
 (c) Explain how back propagation helps the model improve. [2]
 
 #### Mark scheme
 (a)
-+ has connected processing units / nodes / neurons [1]  
-+ arranged in layers: input, hidden and output [1]  
-+ connections have weights / weights affect output [1]  
++ has connected processing units / nodes / neurons [1]
++ arranged in layers: input, hidden and output [1]
++ connections have weights / weights affect output [1]
 
 (b)
-+ uses artificial neural networks [1]  
-+ with multiple hidden layers [1]  
-+ to extract complex features / make predictions from data [1]  
++ uses artificial neural networks [1]
++ with multiple hidden layers [1]
++ to extract complex features / make predictions from data [1]
 
 (c)
-+ error between predicted and expected output is calculated and passed backwards [1]  
-+ weights are adjusted to reduce future error / improve accuracy [1]  
++ error between predicted and expected output is calculated and passed backwards [1]
++ weights are adjusted to reduce future error / improve accuracy [1]
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

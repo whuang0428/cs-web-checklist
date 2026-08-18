@@ -1,110 +1,17 @@
 # AS 9618 Chapter 4: Processor Fundamentals
-> **Processor Fundamentals｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Main audience:** AS students preparing for Paper 1 Theory Fundamentals  
-> **Style:** 中文解释 + English keywords / mark scheme phrases  
-> **Docsify:** ready for static webpage display  
-> **Local images:** not required  
+<div class="chapter-meta"><strong>AS 9618 · Paper 1</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: CPU architecture; registers and buses; instruction cycle; assembly language and addressing modes.
 
-Chapter 4 是 AS 9618 Paper 1 里非常容易“看起来会、实际丢分”的章节。  
-本章不是只背 CPU 名词，而是要会：
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-1. **说清楚 register 的 role**  
-2. **按顺序写 fetch-decode-execute cycle**  
-3. **区分 address bus / data bus / control bus**  
-4. **trace assembly code**  
-5. **判断 addressing mode**  
-6. **做 bit manipulation / masking / shifting**
+## Core Knowledge
 
-建议复习顺序：
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-```mermaid
-flowchart LR
-A[Von Neumann model<br/>stored program concept] --> B[CPU components<br/>ALU CU clock IAS]
-B --> C[Registers and buses<br/>PC MAR MDR CIR ACC IX SR]
-C --> D[Fetch Decode Execute cycle<br/>register transfer steps]
-D --> E[Interrupts<br/>ISR stack priority]
-E --> F[Assembly language<br/>mnemonics addressing modes trace]
-F --> G[Bit manipulation<br/>AND OR XOR shifts masks]
-```
-
----
-
-## 1. Recent Paper 1 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Assembly trace table | Very high | Follow instruction addresses, update ACC / memory after each instruction, handle jumps correctly |
-| Bit manipulation instructions | Very high in 2025 | Use OR to set bits, AND to clear/test bits, XOR to toggle bits, LSL/LSR shifts |
-| Addressing modes | Very high | Immediate `#n`, direct `<address>`, indirect `LDI`, indexed `LDX`, relative branch/jump |
-| CPU registers | High | PC, MAR, MDR, CIR, ACC, IX, SR roles; avoid vague definitions |
-| Status Register | High | Status flags / bits such as zero, carry, overflow, negative; do not only say “stores status” |
-| General vs special purpose registers | High in 2024 | Explain fixed CPU role vs general temporary storage |
-| Buses and bus width | High in 2025 | Wider data bus transfers more data at once; wider address bus accesses more memory locations |
-| Processor performance | High | clock speed, cores, cache, bus width, RAM; explain performance effect, not just list |
-| Fetch-decode-execute cycle | Medium-high | Register transfer notation, PC increment, MAR/MDR/CIR sequence |
-| Interrupts | Medium | interrupt flag, priority check, stack/register saving, ISR, restore previous state |
-| Two-pass assembler | Medium | symbol table, addresses, opcodes, syntax/error checking |
-| Peripheral ports | Medium | USB, HDMI, VGA; link features to scenario |
-| Deep electronics inside ALU | Low | Know purpose only; detailed circuit design rarely gains marks in Chapter 4 |
-
-### 1.1 2024–2025 exam evidence used
-
-| Paper trend | What changed in this regenerated version |
-| --- | --- |
-| 2024 Paper 1 used register purpose / Status Register / general-purpose vs special-purpose register style questions | Register definitions now use exact mark-scheme phrases and weak-answer warnings |
-| 2024 Paper 1 used instruction-set questions with `ACC` and `IX` | Assembly trace section is kept as a core skill, not an optional extension |
-| 2025 Paper 1 Question 8 used an instruction-set trace table with `LDD`, `INC`, `STO`, `LDI`, `CMP`, `JPE`, `ADD`, `JMP`, `DEC` | Added stronger trace-table method and jump/compare warning |
-| 2025 Paper 1 Question 8 also tested bit manipulation instructions: set least significant bit, `XOR &FE`, `LSR #5` | Bit manipulation is upgraded to very high priority |
-| 2025 Paper 1 tested bus width and performance | Bus-width explanation now focuses on data bus vs address bus effect |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Content | Why it must stay |
-| --- | --- |
-| Von Neumann model | Core architecture concept; links to stored program and FDE |
-| PC, MAR, MDR, CIR, ACC, IX, SR | Very common short-answer / table completion topic |
-| ALU, CU, system clock, IAS | Repeated CPU component definitions |
-| Address bus, data bus, control bus | Frequently confused; needed for FDE explanations |
-| FDE cycle register transfers | High-frequency sequence question |
-| Interrupt handling | Mark schemes reward exact sequence and ISR terminology |
-| Processor performance factors | Common “explain why” question |
-| Assembly instruction tracing | Very high recent Paper 1 trend |
-| Addressing modes | Appears through instruction-set questions |
-| Bitwise AND/OR/XOR and shifts | Can be tested as calculation and control-device scenario |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| Very detailed CPU manufacturing / transistor-level design | Not needed for AS Paper 1 marks |
-| Long history of Von Neumann architecture | Only stored-program idea matters |
-| Memorising uncommon real assembly instruction names | Use exam-provided instruction set |
-| Deep compiler theory inside assembly chapter | Language translators are mainly Chapter 5 |
-| Complex Boolean algebra simplification beyond AS scope | Logic gates are Chapter 3; Chapter 4 focuses bit manipulation |
-| Overly advanced pipeline / branch prediction detail | A Level processors go deeper later; AS expects performance factors only |
-
-### 2.3 Delete / Avoid
-
-| Avoid learning as core | Reason |
-| --- | --- |
-| “CPU speed = clock speed only” | Wrong. Cores, cache, bus width, architecture also matter |
-| “A dual-core CPU is always twice as fast” | False; depends on software, parallelism, OS scheduling |
-| “Status register just stores status” | Too vague; must mention flags / bits |
-| “General purpose register is for general things” | Examiner reports dislike name-repeating answers |
-| “Assembly is the same as machine code” | Assembly uses mnemonics; machine code is binary |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -166,16 +73,16 @@ mindmap
 
 #### Core idea
 
-Von Neumann architecture 的核心是 **stored program concept**：
+Von Neumann architecture <span lang="zh-CN">的核心是</span> **stored program concept**：
 
 > Program instructions and data are stored in the same main memory and are fetched, decoded and executed by the CPU.
 
-中文理解：
+<span lang="zh-CN">中文理解</span>：
 
-+ 程序指令和数据都放在 main memory / IAS 中。
-+ CPU 一条一条取出指令。
-+ 每条指令经过 fetch → decode → execute。
-+ 同一套 buses 用来传输地址、数据和控制信号。
++ <span lang="zh-CN">程序指令和数据都放在</span> main memory / IAS <span lang="zh-CN">中</span>。
++ CPU <span lang="zh-CN">一条一条取出指令</span>。
++ <span lang="zh-CN">每条指令经过</span> fetch → decode → execute。
++ <span lang="zh-CN">同一套</span> buses <span lang="zh-CN">用来传输地址</span>、<span lang="zh-CN">数据和控制信号</span>。
 
 #### Mark scheme keywords
 
@@ -190,7 +97,7 @@ Von Neumann architecture 的核心是 **stored program concept**：
 
 > Von Neumann is a computer model.
 
-Too vague. 必须说出 **stored program** 和 **instructions/data in same memory**。
+Too vague. <span lang="zh-CN">必须说出</span> **stored program** <span lang="zh-CN">和</span> **instructions/data in same memory**。
 
 ---
 
@@ -198,11 +105,11 @@ Too vague. 必须说出 **stored program** 和 **instructions/data in same memor
 
 | Component | Chinese explanation | Mark scheme style phrase |
 | --- | --- | --- |
-| ALU | 进行算术和逻辑运算 | carries out arithmetic and logical operations |
-| CU | 控制 CPU 内部数据流和指令执行 | controls and coordinates the operation of the CPU |
-| System clock | 产生 timing signals，让操作同步 | provides timing signals to synchronise CPU operations |
-| IAS / main memory | 存放当前正在使用的程序和数据 | stores programs and data currently in use |
-| Registers | CPU 内部非常快的小存储位置 | small high-speed storage locations inside the CPU |
+| ALU | <span lang="zh-CN">进行算术和逻辑运算</span> | carries out arithmetic and logical operations |
+| CU | <span lang="zh-CN">控制</span> CPU <span lang="zh-CN">内部数据流和指令执行</span> | controls and coordinates the operation of the CPU |
+| System clock | <span lang="zh-CN">产生</span> timing signals，<span lang="zh-CN">让操作同步</span> | provides timing signals to synchronise CPU operations |
+| IAS / main memory | <span lang="zh-CN">存放当前正在使用的程序和数据</span> | stores programs and data currently in use |
+| Registers | CPU <span lang="zh-CN">内部非常快的小存储位置</span> | small high-speed storage locations inside the CPU |
 
 #### ALU
 
@@ -599,7 +506,7 @@ J --> K[Return to previous process]
 
 > An interrupt flag is raised. At the end of the current fetch-execute cycle, the processor checks whether the interrupt has higher priority. If it does, the current contents of registers are saved on the stack. The appropriate ISR is called. After the interrupt is processed, the register contents are restored and control returns to the previous process.
 
-#### Must-have keywords
+#### Required ideas / marking points
 
 + **interrupt flag**
 + **at end of current FDE cycle**
@@ -1207,7 +1114,7 @@ The leftmost `1` moves to the rightmost position.
 
 ---
 
-## 16. Common Mistakes 易错表
+## 16. Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -1227,7 +1134,7 @@ The leftmost `1` moves to the rightmost position.
 
 ---
 
-## 17. Scenario Answer Bank 场景迁移答题模板
+## 17. Scenario Answer Bank
 
 ### 17.1 “Describe the role of register X”
 
@@ -1333,7 +1240,22 @@ E --> H[Selected bit changes]
 
 ---
 
-## 19. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -1348,7 +1270,7 @@ E --> H[Selected bit changes]
 9. What bitwise operation is commonly used to test a bit using a mask? [1]  
 10. What is the role of an ISR? [1]
 
-### Answers
+## Quick Check Answers
 
 1. Stores address of next instruction.  
 2. Stores memory address being accessed.  
@@ -1363,7 +1285,9 @@ E --> H[Selected bit changes]
 
 ---
 
-## 20. 20 Marks Exam-Style Practice with Mark Scheme
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: Registers and FDE cycle [7]
 
@@ -1513,3 +1437,11 @@ Explain how the system can test whether the door is open. [2]
 + result is non-zero / `00000100`, so bit 2 is 1 and the door is open [1]
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

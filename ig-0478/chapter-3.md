@@ -1,76 +1,25 @@
 # IGCSE 0478 Chapter 3: Hardware
-> **Hardware｜Syllabus-Aligned Revision Edition**
-> **适用范围**：Cambridge IGCSE Computer Science 0478  
-**章节范围**：3.1 Computer Architecture｜3.2 Input and Output Devices｜3.3 Data Storage｜3.4 Network Hardware  
-**更新依据**：2026–2028 syllabus + 全部 2025 Paper 1 / Mark Scheme 趋势 + 原 2023–2024 WHBC checklist  
-**目标**：删掉低频/过细内容，把学生最容易拿分的 `State / Identify / Describe / Explain / Compare / Suggest` 得分句整理出来。  
-**建议使用方式**：先背 **Core Exam Sentences**，再用 **Common Mistakes** 检查答案是否太泛。
->
 
----
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
 
-## 0. Syllabus 更新结论：这一章现在怎么考？
-| 考点 | 近期出题方向 | 学生最容易丢分的地方 | 更新处理 |
-| --- | --- | --- | --- |
-| **CPU components** | 高频：CU / ALU / cache / PC / MDR / clock / ACC 的功能匹配 | 只写缩写，不写 function；MDR/MAR 混淆 | 加入 “component + one-line function” 表格 |
-| **Fetch–Decode–Execute cycle** | 高频：填空题、流程题、图示题；常考 PC → MAR → RAM → MDR → CIR → CU | 只写 fetch/decode/execute 三个词，没有寄存器流向 | 加入 6-mark FDE 模板和 Mermaid 流程图 |
-| **CIR / CU / ALU / ACC diagram** | 2025 直接考图示：CIR built into CU, ACC built into ALU, CU decodes and sends signal to ALU | 忘记 instruction set / opcode and operand / ACC stores data | 单独强化 decode + execute 关系 |
-| **Core / cache / clock** | 高频 comparison：如何提高 CPU performance | 只写 “more cores faster”，没有 expansion | 加入 “factor + effect + because” 模板 |
-| **Instruction set** | 常以 1 mark definition 出现 | 写成 “set of instructions” 太泛，没提 machine code / processed by CPU | 保留精准句 |
-| **Embedded systems** | 2025 反复考：dedicated function, dedicated hardware, microprocessor, hard to reprogram | 把 embedded system 写成 normal computer | 做成 4-point scoring template |
-| **Input/output devices** | 常考 identify / choose suitable device | 写 brand name；把 touch screen 只写 input 或 output | 精简到 exam-useful device list |
-| **Sensors + microprocessor** | 2025 高频 scenario：proximity / infrared / light / pressure / moisture / level | 忘记 ADC / stored value / continuous monitoring / actuator | 加入 monitoring & control answer templates |
-| **Monitoring vs control** | 常考 scenario explain | 把 monitoring 写成 control；忘记 control system changes physical condition | 加入对比表 |
-| **RAM / ROM / primary / secondary** | 高频：RAM purpose, ROM/cache example, RAM vs secondary storage | 只写 “stores data” 太泛 | 加入 exam sentences |
-| **Virtual memory** | 2025 高频：partition secondary storage, transfer pages, when RAM full | 忘记 pages / secondary storage partition | 单独强化 3-mark template |
-| **SSD / HDD / optical storage** | 高频：SSD operation, optical pits/lands, HDD vs SSD choice | 只写 “SSD faster”，没有 no moving parts / transistors / NAND/NOR | 加入 storage media decision table |
-| **Cloud storage** | 常与 smart devices / limited storage结合 | 只写 “online storage”，没写 remote servers / third party / internet access | 保留精简版 |
-| **NIC / MAC / IP / router** | 高频：NIC role, MAC structure, IPv6 features, router purpose | MAC/IP 混淆；router/switch 混淆 | 加入 network hardware one-page section |
+## Official Syllabus Checklist
 
+Revise: computer architecture; input, output and sensors; storage media; network hardware.
 
----
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-### 1. 内容取舍：哪些内容要删？哪些保留？
-#### ✅ 必须保留并重点训练
-| 内容 | 原因 |
-| --- | --- |
-| CPU role, microprocessor definition | syllabus 明确要求，常以 1 mark 出现 |
-| CU / ALU / registers / buses | 2025 多次考 matching / diagram / FDE |
-| FDE cycle with PC, MAR, MDR, CIR, CU | 2025 高频流程题 |
-| Core / cache / clock impact | 2025 高频 explain performance |
-| Instruction set, opcode, operand | 常以 short definition / diagram label 出现 |
-| Embedded systems characteristics | 2025 反复出现 |
-| Input/output devices identification | Paper 1 基础送分点 |
-| Sensor + ADC + microprocessor + actuator template | 3.2 最常见 explain 题型 |
-| Monitoring vs control | 学生容易混淆，场景题高频 |
-| RAM / ROM / secondary storage | 每年稳定高频 |
-| Magnetic / optical / solid-state working | 2025 考到 optical 和 SSD operation |
-| Virtual memory | 2025 明确高频 |
-| Cloud storage | 常结合智能设备 / storage limitation |
-| NIC / MAC / IP / router | 2025 网络硬件高频 |
+## Core Knowledge
 
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-#### ⚠️ 降权或删除
-| 原内容 | 处理方式 | 原因 |
-| --- | --- | --- |
-| 过长 device examples | **压缩** | 考试更常考选择与作用，不考百科式清单 |
-| CD / DVD / Blu-ray 过细参数 | **降权** | 容量和 laser wavelength 低频，保留 pits/lands 和 optical principle |
-| Microcontroller / SoC 深入区别 | **降权** | syllabus 核心是 embedded system purpose/characteristics |
-| Overclocking 长解释 | **删除主表** | 非核心，容易干扰 core/cache/clock 主考点 |
-| Printer 复杂工作原理 | **压缩** | 主要考 inkjet vs laser benefits/drawbacks |
-| DVD-RAM 等旧式细节 | **删除主背诵区** | 低频，保留 optical storage working principle 即可 |
-| 过长 cloud types | **压缩** | public/private/hybrid 可了解，但不必大篇幅背诵 |
-
-
----
 
 ## 3.1 Computer Architecture
 ### 3.1.1 CPU and Microprocessor
-**<font style="background-color:#f8fbff;">CPU</font>**<font style="background-color:#f8fbff;">  
-</font><font style="background-color:#f8fbff;">Processes instructions and data that are input into the computer so that results can be output. </font>
+**CPU**
+Processes instructions and data that are input into the computer so that results can be output.
 
-**<font style="background-color:#fffaf2;">Microprocessor</font>**<font style="background-color:#fffaf2;">  
-</font><font style="background-color:#fffaf2;">A type of integrated circuit on a single chip. </font>
+**Microprocessor**
+A type of integrated circuit on a single chip.
 
 #### Core Exam Sentences
 + The CPU **processes instructions and data**.
@@ -198,7 +147,7 @@ Use paired points:
 + Increase the **clock speed** → more FDE cycles / instructions can be processed **per second**.
 + Increase the **cache size** → more frequently used data/instructions can be stored and accessed faster than RAM.
 
-> **Common trap**：不要只写 “more cores = faster”。必须补充 **more instructions can be processed simultaneously**。
+> **Common trap**：<span lang="zh-CN">不要只写</span> “more cores = faster”。<span lang="zh-CN">必须补充</span> **more instructions can be processed simultaneously**。
 >
 
 ---
@@ -250,7 +199,7 @@ An **embedded system** is a computer system built into a larger device to perfor
 | often uses a microprocessor | has a CPU |
 
 
-> **Common trap**：不要写 “embedded system is small” 作为唯一答案。考试更看重 **dedicated function / dedicated hardware / microprocessor / not easily reprogrammed**。
+> **Common trap**：<span lang="zh-CN">不要写</span> “embedded system is small” <span lang="zh-CN">作为唯一答案</span>。<span lang="zh-CN">考试更看重</span> **dedicated function / dedicated hardware / microprocessor / not easily reprogrammed**。
 >
 
 ---
@@ -719,7 +668,7 @@ D --> E[Destination network]
 
 ---
 
-## 5. Common Mistakes｜学生最容易丢分的答案
+## 5. Common Confusions
 | Question type | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | CPU role | “CPU runs the computer” | too vague | CPU processes instructions and data and performs the FDE cycle |
@@ -747,31 +696,48 @@ D --> E[Destination network]
 
 ---
 
-## 6. Quick Check｜10 marks
-1. State the purpose of the **program counter**. `[1]`  
-2. State the purpose of the **memory data register**. `[1]`  
-3. Define **instruction set**. `[1]`  
-4. Give two characteristics of an embedded system. `[2]`  
-5. State the device used to convert analogue sensor readings into digital data. `[1]`  
-6. Give one difference between RAM and secondary storage. `[1]`  
-7. Give one feature of an SSD. `[1]`  
-8. State the purpose of a NIC. `[1]`  
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
+1. State the purpose of the **program counter**. `[1]`
+2. State the purpose of the **memory data register**. `[1]`
+3. Define **instruction set**. `[1]`
+4. Give two characteristics of an embedded system. `[2]`
+5. State the device used to convert analogue sensor readings into digital data. `[1]`
+6. Give one difference between RAM and secondary storage. `[1]`
+7. Give one feature of an SSD. `[1]`
+8. State the purpose of a NIC. `[1]`
 9. State one characteristic of an IPv6 address. `[1]`
 
-### Quick Check Answers
-1. Stores the address of the next instruction to be fetched.  
-2. Stores data immediately before it is written to RAM or immediately after it is read from RAM.  
-3. A list of machine code commands that can be processed by a CPU.  
-4. Any two: dedicated/single function; dedicated hardware; contains a microprocessor; not easily reprogrammed; built into larger device.  
-5. ADC / analogue-to-digital converter.  
-6. RAM is directly accessed by the CPU / volatile; secondary storage is not directly accessed by CPU / non-volatile.  
-7. Any one: no moving parts; uses flash memory; uses semiconductor chips; uses NAND/NOR; uses transistors.  
-8. Allows a device to connect to a network / send and receive network data.  
+## Quick Check Answers
+1. Stores the address of the next instruction to be fetched.
+2. Stores data immediately before it is written to RAM or immediately after it is read from RAM.
+3. A list of machine code commands that can be processed by a CPU.
+4. Any two: dedicated/single function; dedicated hardware; contains a microprocessor; not easily reprogrammed; built into larger device.
+5. ADC / analogue-to-digital converter.
+6. RAM is directly accessed by the CPU / volatile; secondary storage is not directly accessed by CPU / non-volatile.
+7. Any one: no moving parts; uses flash memory; uses semiconductor chips; uses NAND/NOR; uses transistors.
+8. Allows a device to connect to a network / send and receive network data.
 9. Any one: 128 bits; hexadecimal; separated by colons; eight groups; `::` can represent groups of zeros once.
 
 ---
 
-## 7. Exam-style Practice｜20 marks
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 ### Question 1｜CPU and FDE `[6]`
 A CPU uses a Von Neumann architecture. Describe how the CPU fetches and decodes an instruction.
 
@@ -846,7 +812,7 @@ Any two from:
 
 ---
 
-## 8. One-page Exam Sheet｜考前最后一页
+## 8. Final Revision Checklist
 ### CPU
 + CPU processes instructions and data.
 + CU sends control signals and manages data flow.
@@ -883,3 +849,10 @@ Sensor → ADC → microprocessor → compare with stored value → output warni
 
 ---
 
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

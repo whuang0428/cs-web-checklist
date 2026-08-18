@@ -1,94 +1,17 @@
 # A2 9618 Chapter 16: System Software
-> **System Software｜Syllabus-Aligned Paper 3 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 16 System Software  
-> **Main audience:** A2 students  
-> **Style:** Chinese explanation + English mark scheme keywords  
-> **Docsify:** ready  
->
+<div class="chapter-meta"><strong>A2 9618 · Paper 3</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: operating-system scheduling and memory; translation software; BNF, syntax diagrams and RPN.
 
-Chapter 16 不是简单背“OS 是什么”的章节。2024–2025 Paper 3 更喜欢考：
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-1. **process management / scheduling** 的精确描述  
-2. **virtual memory / paging / segmentation / disk thrashing** 的因果关系  
-3. **interpreter / compiler stages** 的 mark scheme 句子  
-4. **BNF / syntax diagram / RPN** 的规则转换与操作步骤  
+## Core Knowledge
 
-所以复习时不要只背关键词，要能写出 **cause → process → result**。
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-```mermaid
-flowchart LR
-A[Operating System<br/>resource management] --> B[Process Management<br/>states + scheduling]
-B --> C[Interrupt Handling<br/>kernel + ISR]
-C --> D[Memory Management<br/>virtual memory / paging / segmentation]
-D --> E[Translation Software<br/>interpreter + compiler stages]
-E --> F[Language Grammar<br/>BNF + syntax diagrams]
-F --> G[RPN<br/>stack evaluation]
-```
-
----
-
-## 1. Recent Paper 3 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Process states | Medium-high | running / ready / blocked, reason for transition |
-| Scheduling routines | High | FCFS, round robin, shortest job first, shortest remaining time |
-| Interrupt handling | Medium-high | kernel detects interrupt, current process paused, registers / status stored, ISR run, restored |
-| Virtual memory | High | used when RAM is insufficient, pages moved between RAM and secondary storage |
-| Paging vs segmentation | High | fixed-size pages vs variable-size logical segments |
-| Disk thrashing | Very high | frequent swapping, more time swapping than processing |
-| Interpreter | High in 2025 | translates one line at a time, executes if no syntax error, no executable produced |
-| Compiler stages | Medium-high | lexical analysis, syntax analysis, code generation, optimisation |
-| BNF / syntax diagrams | Very high | convert diagram ↔ BNF, recognise valid/invalid strings |
-| RPN | Very high | convert infix ↔ RPN, evaluate with stack |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| OS resource management | Syllabus core; often appears inside scenario questions |
-| process states and scheduling | 2025 mark scheme directly rewards scheduling vocabulary |
-| round robin / FCFS / SJF / SRT | Must compare and explain benefits / drawbacks |
-| interrupt handling | Common short-answer topic and links to CPU / process management |
-| virtual memory, paging, segmentation | 2024–2025 style questions like asking exact process / definition |
-| disk thrashing | Very common 3-mark explanation topic |
-| interpreter / compiler | 2025 explicitly tested interpreter operation |
-| lexical analysis / syntax analysis / code generation / optimisation | Standard compiler-stage marks |
-| BNF and syntax diagrams | Repeated Paper 3 high-frequency skill |
-| RPN with stack | Repeated Paper 3 high-frequency skill |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| very deep OS architecture beyond kernel/user mode | Usually not needed for marks |
-| complex page replacement algorithms beyond FIFO / usage idea | Cambridge normally expects concept, not full algorithm design |
-| linker / loader detail | Useful background but not central to Chapter 16 syllabus wording |
-| advanced compiler theory such as parse trees in detail | BNF / syntax diagrams are more frequently rewarded |
-| complex RPN expressions with too many operators | Students need method first; exams usually reward step-by-step stack use |
-
-### 2.3 Remove / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| memorising brand-name operating systems | No marks awarded for brand names |
-| saying "virtual memory is RAM" | Virtual memory uses secondary storage as if it were main memory |
-| saying "interpreter compiles line by line" | Interpreter translates and executes; it does not produce a stored executable |
-| saying "round robin is always fastest" | It is fair, but context decides efficiency |
-| saying "disk thrashing means disk is broken" | It is excessive swapping between RAM and secondary storage |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -148,7 +71,7 @@ mindmap
 > An operating system manages the computer system resources, provides a user interface, hides the complexity of the hardware, and provides a platform for programs to run.
 >
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **manages resources**
 + **user interface**
 + **hides hardware complexity**
@@ -159,7 +82,7 @@ mindmap
 + **security management**
 
 #### Chinese explanation
-OS 可以理解为用户、应用程序和硬件之间的“中间层”。用户不需要知道 CPU register、memory address、device driver 怎么工作，也可以通过 GUI / CLI 使用电脑。
+OS <span lang="zh-CN">可以理解为用户</span>、<span lang="zh-CN">应用程序和硬件之间的</span>“<span lang="zh-CN">中间层</span>”。<span lang="zh-CN">用户不需要知道</span> CPU register、memory address、device driver <span lang="zh-CN">怎么工作</span>，<span lang="zh-CN">也可以通过</span> GUI / CLI <span lang="zh-CN">使用电脑</span>。
 
 ---
 
@@ -233,7 +156,7 @@ stateDiagram-v2
 ```
 
 #### Exam warning
-Blocked 通常不是“坏了”，而是 **waiting for an event**。比如正在等用户输入、文件读取、网络响应。
+Blocked <span lang="zh-CN">通常不是</span>“<span lang="zh-CN">坏了</span>”，<span lang="zh-CN">而是</span> **waiting for an event**。<span lang="zh-CN">比如正在等用户输入</span>、<span lang="zh-CN">文件读取</span>、<span lang="zh-CN">网络响应</span>。
 
 ---
 
@@ -517,7 +440,7 @@ F --> G[System performance becomes very slow]
 > An interpreter translates and executes a high-level language program one statement / line at a time without producing a stored executable file.
 >
 
-#### Recent exam-style mark scheme answer
+#### Exam-style mark scheme answer
 > The interpreter translates the source code one line at a time. If the line is syntax error free, it is executed. The translated code is not stored in executable format. If an error is found, the program halts with an error message. Each line must be translated every time it is run.
 >
 
@@ -811,7 +734,7 @@ Answer:
 
 ---
 
-## 13. Common Mistakes 易错表
+## 13. Common Confusions
 
 | Mistake | Why it loses marks | Better answer |
 | --- | --- | --- |
@@ -864,7 +787,22 @@ Answer:
 
 ---
 
-## 15. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -876,7 +814,7 @@ Answer:
 6. State one difference between paging and segmentation. [1]  
 7. What does an interpreter do? [1]
 
-### Answers
+## Quick Check Answers
 
 1. Any two: manages resources, provides user interface, hides hardware complexity, process management, memory management, file management, I/O management.  
 2. Running, ready, blocked.  
@@ -888,7 +826,9 @@ Answer:
 
 ---
 
-## 16. 20 Marks Exam-Style Practice
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: OS process management and scheduling [7]
 
@@ -962,3 +902,11 @@ Description example: lexical analysis breaks code into tokens / syntax analysis 
 (d) Stack. [1]
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

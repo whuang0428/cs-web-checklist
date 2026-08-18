@@ -28,16 +28,24 @@ There is no npm package, build step, React app, or Vite config in this repositor
 ## Important Files
 
 - `index.html`: Docsify runtime configuration and CDN scripts.
-- `README.md`: home page and course cards.
-- `_coverpage.md`: cover page.
-- `_sidebar.md`: navigation structure.
+- `README.md`: concise no-script root fallback.
+- `_coverpage.md`: cover-only course chooser.
+- `_sidebar.md`: root course/shared-resource navigation.
+- `ig-0478/README.md`, `as-9618/README.md`, `a2-9618/README.md`: course hubs.
+- Each course folder's `_sidebar.md`: course-scoped navigation.
 - `assets/style.css`: custom styling.
+- `assets/site.js`: course identity, answer disclosure, table and pagination behaviour.
+- `exam-technique.md`: exam technique and the stable Command Words anchor.
+- `syllabus-versions.md`: active syllabus-cycle record.
+- `coverage.md`: maintainer-only inventory; exclude it from student navigation/search.
 - `ig-0478/chapter-*.md`: IGCSE 0478 chapters.
+- `ig-0478/paper-1-review.md`: original 75-mark IGCSE Paper 1 review.
 - `ig-0478/paper-2-review*.md`: two original 75-mark IGCSE Paper 2 mixed reviews.
 - `as-9618/chapter-*.md`: AS 9618 chapters.
+- `as-9618/paper-1-review.md`: original 75-mark AS Paper 1 review.
 - `as-9618/paper-2-review*.md`: two original 75-mark AS 9618 Paper 2 mixed reviews.
 - `a2-9618/chapter-*.md`: A2 9618 chapters.
-- `a2-9618/paper-3-review.md`: original 75-mark A2 9618 Advanced Theory review.
+- `a2-9618/paper-3-review*.md`: two original 75-mark A2 9618 Advanced Theory reviews.
 - `a2-9618/paper-4-review*.md`: two original 75-mark A2 9618 Python practical reviews.
 
 Do not edit `.git`, generated browser caches, or temporary files.
@@ -60,23 +68,26 @@ If another server already uses port 8000, choose a different port.
 
 ## Content Structure
 
-Current sidebar sections:
+Current course hubs and sidebars:
 
 - `IGCSE 0478`
   - `ig-0478/chapter-1.md` through `chapter-10.md`
+  - `ig-0478/paper-1-review.md`
   - `ig-0478/paper-2-review.md`
   - `ig-0478/paper-2-review-2.md`
 - `AS 9618`
   - `as-9618/chapter-1.md` through `chapter-12.md`
+  - `as-9618/paper-1-review.md`
   - `as-9618/paper-2-review.md`
   - `as-9618/paper-2-review-2.md`
 - `A2 9618`
   - `a2-9618/chapter-13.md` through `chapter-20.md`
   - `a2-9618/paper-3-review.md`
+  - `a2-9618/paper-3-review-2.md`
   - `a2-9618/paper-4-review.md`
   - `a2-9618/paper-4-review-2.md`
 
-When adding or renaming pages, update `_sidebar.md` and any links in `README.md`.
+When adding or renaming pages, update the relevant course hub/sidebar and the explicit search paths in `index.html`. Keep the root navigation at course level.
 
 ## Maturity And Improvement Priorities
 
@@ -84,19 +95,21 @@ This repository is a revision checklist and marked-practice hub. It should not b
 
 Already addressed in the current baseline:
 
-- The home page, cover page, and sidebar link to `coverage.md`.
-- A dependency-free structural checker and GitHub Actions workflow validate chapter inventory, headings, links, navigation and pinned CDN versions.
+- The root page is a cover-only course chooser; three course hubs and course-specific sidebars separate the levels.
+- `coverage.md` is maintainer-only; `exam-technique.md` and `syllabus-versions.md` are shared student resources.
+- A dependency-free structural checker and GitHub Actions workflow validate chapter inventory, editorial contracts, versions, headings, links, scoped navigation, explicit search paths, practice totals, A/B independence, runtime hooks and pinned CDN versions.
 - Student-facing chapter headings use syllabus-aligned wording instead of `Trend-Based` or `Past Paper Focus` entry titles.
 - Teacher-only sections have been removed from student-facing pages.
-- IGCSE 0478 checklist coverage now includes Chapters 1-10.
+- All 30 chapters use the shared editorial contract and course/Paper/version metadata.
+- IGCSE 0478 checklist coverage includes Chapters 1-10 and an original 75-mark Paper 1 Set A.
 - IGCSE Chapters 7-10 include syllabus maps, worked examples, 10-mark checks, 20-mark practice and full answers.
 - Two original 75-mark IGCSE Paper 2 mixed reviews and mark schemes cover Topics 7-10.
-- AS 9618 checklist coverage now includes Chapters 1-12.
+- AS 9618 checklist coverage includes Chapters 1-12 and an original 75-mark Paper 1 Set A.
 - AS Chapters 9-12 include syllabus maps, worked examples, 10-mark checks, 20-mark practice and full answers.
 - Two original 75-mark AS Paper 2 mixed reviews and mark schemes cover Sections 9-12.
 - A2 9618 checklist coverage now includes Chapters 13-20.
 - A2 Chapters 19-20 include syllabus maps, executable Python examples, worked examples, 10-mark checks and 20-mark practice.
-- An original 75-mark A2 Paper 3 review covers Sections 13-20.
+- Two independent original 75-mark A2 Paper 3 reviews cover Sections 13-20.
 - Two original 75-mark A2 Paper 4 Python practicals and reference mark schemes cover Sections 19-20.
 
 Remaining highest-priority improvements:

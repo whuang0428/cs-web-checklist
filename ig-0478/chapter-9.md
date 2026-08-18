@@ -1,10 +1,22 @@
-# Chapter 9: Databases
+# IGCSE 0478 Chapter 9: Databases
+
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 5</span></div>
+
+## Official Syllabus Checklist
+
+Revise: single-table database design; primary keys; data types; SELECT, WHERE, ORDER BY, SUM and COUNT.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 > **Paper 2 focus:** design a suitable single-table database, choose fields and data types, select a primary key, and read or complete SQL queries.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Objective | Where it is covered |
 |---|---|
@@ -326,7 +338,11 @@ The value `35.00` does not satisfy `Fee < 35`, but Web Basics is still included 
 
 ---
 
-## 10. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I design one record around one clearly identified entity.
 - [ ] I do not use a non-unique name as a primary key.
@@ -341,7 +357,11 @@ The value `35.00` does not satisfy `Fee < 35`, but Web Basics is still included 
 
 ---
 
-## 11. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. Define a record and a field. **[2]**
 2. State two properties of a suitable primary key. **[2]**
@@ -350,7 +370,7 @@ The value `35.00` does not satisfy `Fee < 35`, but Web Basics is still included 
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. A record is all stored fields about one entity; a field is one category/item of data in each record. **[2]**
 2. Any two: unique, always present, stable. **[2]**
@@ -359,7 +379,7 @@ The value `35.00` does not satisfy `Fee < 35`, but Web Basics is still included 
 
 ---
 
-## 12. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A bicycle-hire company needs one table. For every bicycle it stores a unique code such as `"BK042"`, model name, hourly rate, number of hires and whether it is currently available.
 
@@ -413,7 +433,7 @@ Assume the table is named `Bicycles` and uses these fields: `BikeCode`, `ModelNa
 
 ---
 
-## 13. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can convert storage requirements into a single-table design.
 - [ ] I can justify every field's data type.

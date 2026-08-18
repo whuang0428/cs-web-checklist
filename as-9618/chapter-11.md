@@ -1,10 +1,22 @@
 # AS 9618 Chapter 11: Programming
 
+<div class="chapter-meta"><strong>AS 9618 · Paper 2</strong><span>9618 · 2027–2029 · Version 2</span></div>
+
+## Official Syllabus Checklist
+
+Revise: expressions; selection and iteration; procedures, functions and parameter passing.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
+
 > **Paper 2 focus:** translate a design into correct, efficient pseudocode using declarations, expressions, suitable control structures and well-defined subroutines.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Syllabus objective | Where it is covered |
 |---|---|
@@ -489,7 +501,11 @@ The function:
 
 ---
 
-## 15. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I declare values before using them.
 - [ ] I distinguish assignment from equality.
@@ -505,7 +521,11 @@ The function:
 
 ---
 
-## 16. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. State one difference between a constant and a variable. **[2]**
 2. Give one situation suitable for each loop: `FOR`, `WHILE`, `REPEAT ... UNTIL`. **[3]**
@@ -515,7 +535,7 @@ The function:
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. A constant cannot change during execution, while a variable can; both should be named. **[2]**
 2. `FOR`: known repetition count; `WHILE`: condition tested first/zero repetitions possible; `REPEAT`: body must execute at least once. **[3]**
@@ -525,7 +545,7 @@ The function:
 
 ---
 
-## 17. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A delivery program processes an unknown number of parcel masses. Entry stops when `-1` is entered. Valid masses are greater than 0 and at most 25.0 kg.
 
@@ -603,7 +623,7 @@ A delivery program processes an unknown number of parcel masses. Entry stops whe
 
 ---
 
-## 18. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can translate structured English or a flowchart into pseudocode.
 - [ ] I can declare constants and variables and build expressions.

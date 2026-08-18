@@ -1,98 +1,17 @@
 # AS 9618 Chapter 5: System Software
-> **System Software｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns focus  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 5 System Software  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English mark scheme keywords  
-> **Docsify:** no local image dependency; Mermaid supported  
->
+<div class="chapter-meta"><strong>AS 9618 · Paper 1</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: operating systems and utilities; program libraries; translators and integrated development environments.
 
-Chapter 5 不是单纯背定义的章节。2024–2025 的趋势更喜欢把 **Operating System / utility software / libraries / IDE / translators** 放进真实场景中问：
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-1. **Explain purpose / need**：为什么需要 OS、utility、translator、IDE feature  
-2. **Describe management task**：file / memory / security / hardware / process management  
-3. **Apply to scenario**：学生写程序、发文件、多人开发、安装/维护软件  
-4. **Compare / justify**：compiler vs interpreter, why library, why backup, why compression  
-5. **Feature + description**：IDE presentation feature、debugging feature，不能只写名称  
+## Core Knowledge
 
-复习顺序建议：
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-```mermaid
-flowchart LR
-A[Why OS is needed] --> B[OS management tasks]
-B --> C[Utility software]
-C --> D[Program libraries and DLL]
-D --> E[Language translators]
-E --> F[Compiler vs interpreter]
-F --> G[Java partial compile + interpret]
-G --> H[IDE features]
-```
-
----
-
-## 1. Recent Paper 1 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Purpose of OS | High | OS provides interface, manages hardware/resources, allows applications to run |
-| File management | High | create / delete / move / rename / organise / store / retrieve files and directories |
-| Process management | High | schedule processes, allocate CPU time, manage multitasking, handle process states |
-| Hardware / peripheral management | Medium-high | device drivers, buffers, interrupts, input/output communication |
-| Security management | Medium | user accounts, passwords, access rights, updates, protection from unauthorised access |
-| Utility software | High | backup, file compression, virus checker, defragmenter, disk formatter, disk repair |
-| Back-up software | High | restore data after loss, corruption, hardware failure, accidental deletion |
-| Program libraries | High | reuse tested code, save development time, reduce errors, modular development |
-| DLL files | Medium | loaded at runtime, shared by multiple programs, saves memory/storage, easier updates |
-| Assembler / compiler / interpreter | High | know what each translates and why needed |
-| Compiler vs interpreter | High | compare speed, error reporting, portability, executable/object code |
-| Java partial compilation | Medium | source code compiled to bytecode, bytecode interpreted/executed by VM |
-| IDE coding/error/presentation/debugging features | Very high | context-sensitive prompts, dynamic syntax checks, prettyprint, collapse blocks, breakpoints, watch/report window |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| OS purpose | 2025 Paper 1 directly asks purpose of OS-style question |
-| file / memory / security / hardware / process management | Core syllabus and common short-answer area |
-| utility software examples | 2024 Paper 1 asks backup / compression style questions |
-| program libraries and DLL | 2024 Paper 1 asks benefits of library files |
-| IDE features | 2024 Paper 1 asks presentation and debugging features directly |
-| compiler / interpreter comparison | Classic high-frequency translator topic |
-| Java partial compilation and interpretation | Explicit syllabus point and easy 2–3 mark answer |
-| scenario wording | Mark schemes reward applied answers, not vague textbook phrases |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| detailed history of operating systems | Rarely gives marks |
-| long GUI vs CLI discussion | Useful background but not central to current Chapter 5 trend |
-| very deep virtual memory algorithms | Mention as memory management only; AS does not require OS-level paging detail here |
-| exact vendor examples / brand names | Cambridge says no marks for brand names |
-| low-level compiler phases | Lexical/syntax/semantic analysis detail is more than needed for AS Chapter 5 |
-| detailed JVM implementation | Only need source code → bytecode → virtual machine/interpreter idea |
-
-### 2.3 Delete / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| “compiler checks one line at a time” | Wrong; interpreter usually works line-by-line |
-| “interpreter creates an executable file” | Wrong |
-| “DLL is only for Windows” | Do not rely on brand/platform-specific wording |
-| “backup prevents data loss completely” | Weak; backup allows recovery after loss |
-| “file compression always loses data” | Wrong; file compression may be lossless |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -145,13 +64,13 @@ mindmap
 
 #### Student-friendly explanation
 
-Operating System 就像电脑的“总管”。没有 OS，普通用户和 application software 很难直接控制硬件。OS 提供一个环境，让程序可以运行，也帮用户和硬件之间进行沟通。
+Operating System <span lang="zh-CN">就像电脑的</span>“<span lang="zh-CN">总管</span>”。<span lang="zh-CN">没有</span> OS，<span lang="zh-CN">普通用户和</span> application software <span lang="zh-CN">很难直接控制硬件</span>。OS <span lang="zh-CN">提供一个环境</span>，<span lang="zh-CN">让程序可以运行</span>，<span lang="zh-CN">也帮用户和硬件之间进行沟通</span>。
 
 #### Mark scheme answer
 
 > An operating system is needed to provide an interface between the user/application software and the hardware, to manage hardware and system resources, and to provide an environment in which applications can run.
 
-#### Must-have keywords
+#### Required ideas / marking points
 
 + **interface**
 + **user**
@@ -189,7 +108,7 @@ C --> D[Apply to device / user / program]
 
 #### Meaning
 
-Memory management 是 OS 管理 main memory / RAM 的过程。它决定哪些 programs 和 data 放进 RAM，分配多少 memory，并防止程序互相破坏数据。
+Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</span> main memory / RAM <span lang="zh-CN">的过程</span>。<span lang="zh-CN">它决定哪些</span> programs <span lang="zh-CN">和</span> data <span lang="zh-CN">放进</span> RAM，<span lang="zh-CN">分配多少</span> memory，<span lang="zh-CN">并防止程序互相破坏数据</span>。
 
 #### Mark scheme phrases
 
@@ -202,11 +121,11 @@ Memory management 是 OS 管理 main memory / RAM 的过程。它决定哪些 pr
 
 | Point | Student explanation |
 | --- | --- |
-| Allocate memory | 给正在运行的程序分配 RAM |
-| Deallocate memory | 程序结束后释放 RAM |
-| Track memory | 记录哪些 memory locations 正在被用 |
-| Memory protection | 防止一个 program 改到另一个 program 的 memory |
-| Virtual memory | RAM 不够时，用 secondary storage 的一部分临时代替 |
+| Allocate memory | <span lang="zh-CN">给正在运行的程序分配</span> RAM |
+| Deallocate memory | <span lang="zh-CN">程序结束后释放</span> RAM |
+| Track memory | <span lang="zh-CN">记录哪些</span> memory locations <span lang="zh-CN">正在被用</span> |
+| Memory protection | <span lang="zh-CN">防止一个</span> program <span lang="zh-CN">改到另一个</span> program <span lang="zh-CN">的</span> memory |
+| Virtual memory | RAM <span lang="zh-CN">不够时</span>，<span lang="zh-CN">用</span> secondary storage <span lang="zh-CN">的一部分临时代替</span> |
 
 #### Common mistake
 
@@ -222,7 +141,7 @@ Memory management 是 OS 管理 main memory / RAM 的过程。它决定哪些 pr
 
 #### Meaning
 
-File management 是 OS 管理 files 和 folders/directories 的功能。2024 Paper 1 特别喜欢问这个。
+File management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</span> files <span lang="zh-CN">和</span> folders/directories <span lang="zh-CN">的功能</span>。2024 Paper 1 <span lang="zh-CN">特别喜欢问这个</span>。
 
 #### Mark scheme answer
 
@@ -261,7 +180,7 @@ Backup is usually **utility software**, not the core meaning of file management.
 
 #### Meaning
 
-Security management 是 OS 防止 unauthorised access，保护 data 和 resources。
+Security management <span lang="zh-CN">是</span> OS <span lang="zh-CN">防止</span> unauthorised access，<span lang="zh-CN">保护</span> data <span lang="zh-CN">和</span> resources。
 
 #### Mark scheme phrases
 
@@ -322,7 +241,7 @@ A printer is much slower than the CPU.
 
 #### Meaning
 
-Process management 是 OS 管理正在运行的 programs/processes。它决定哪个 process 使用 CPU，什么时候运行，以及如何切换。
+Process management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理正在运行的</span> programs/processes。<span lang="zh-CN">它决定哪个</span> process <span lang="zh-CN">使用</span> CPU，<span lang="zh-CN">什么时候运行</span>，<span lang="zh-CN">以及如何切换</span>。
 
 #### Mark scheme answer
 
@@ -351,7 +270,7 @@ No. It means managing **running programs**.
 
 ### 5.1 What is utility software?
 
-Utility software 是 system software 的一种，用来维护、保护、优化或管理 computer system。
+Utility software <span lang="zh-CN">是</span> system software <span lang="zh-CN">的一种</span>，<span lang="zh-CN">用来维护</span>、<span lang="zh-CN">保护</span>、<span lang="zh-CN">优化或管理</span> computer system。
 
 #### Mark scheme answer
 
@@ -846,7 +765,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 10. Common Mistakes 易错表
+## 10. Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -961,7 +880,22 @@ I --> J[Virtual machine interprets / executes bytecode]
 
 ---
 
-## 14. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -972,7 +906,7 @@ I --> J[Virtual machine interprets / executes bytecode]
 5. Identify one presentation feature of an IDE and describe it. **[2]**
 6. State the purpose of an assembler. **[1]**
 
-### Mark Scheme
+## Quick Check Answers
 
 1. Any two:
    + provides interface between user/application and hardware
@@ -994,7 +928,9 @@ I --> J[Virtual machine interprets / executes bytecode]
 
 ---
 
-## 15. 20 Marks Exam-Style Practice
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: Operating System and Utility Software **[8]**
 
@@ -1032,7 +968,7 @@ A programmer writes a high-level language program.
 
 ---
 
-## 16. 20 Marks Practice Mark Scheme
+## Practice Mark Scheme
 
 ### Question 1 Mark Scheme **[8]**
 
@@ -1121,3 +1057,11 @@ Award 1 mark each:
 + Source code is compiled into bytecode, then bytecode is interpreted/executed by a virtual machine.
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

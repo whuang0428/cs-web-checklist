@@ -1,10 +1,22 @@
-# Chapter 7: Algorithm Design and Problem-Solving
+# IGCSE 0478 Chapter 7: Algorithm Design and Problem-Solving
+
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 5</span></div>
+
+## Official Syllabus Checklist
+
+Revise: program development; algorithm design; standard methods; validation, testing and trace tables.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 > **Paper 2 focus:** turn a problem into a precise algorithm, test it systematically, trace it accurately, and correct errors.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 Use this chapter to check every Topic 7 objective.
 
@@ -404,7 +416,11 @@ The original first value is lost. A temporary variable is necessary.
 
 ---
 
-## 12. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I do not confuse validation with verification.
 - [ ] I distinguish extreme data from the wider set of boundary data.
@@ -419,7 +435,11 @@ The original first value is lost. A temporary variable is necessary.
 
 ---
 
-## 13. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. Name the four stages of the program development life cycle. **[4]**
 2. State one difference between validation and verification. **[2]**
@@ -428,7 +448,7 @@ The original first value is lost. A temporary variable is necessary.
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. Analysis, design, coding and testing. Award one mark for each. **[4]**
 2. Validation checks that data is sensible or follows rules; verification checks that data was entered/copied accurately. **[2]**
@@ -437,7 +457,7 @@ The original first value is lost. A temporary variable is necessary.
 
 ---
 
-## 14. 20 Marks Practice
+## 20-Mark Exam Practice
 
 A running club records eight lap times in seconds in the array `LapTime[1:8]`. Every time must be from 30 to 180 inclusive.
 
@@ -496,7 +516,7 @@ A running club records eight lap times in seconds in the array `LapTime[1:8]`. E
 
 ---
 
-## 15. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can move from requirements to input-process-output-storage.
 - [ ] I can decompose a solution before coding.

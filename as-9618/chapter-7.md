@@ -1,104 +1,17 @@
 # AS 9618 Chapter 7: Ethics and Ownership
-> **Ethics and Ownership｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 7 Ethics and Ownership  
-> **Syllabus area:** 7.1 Ethics and Ownership  
-> **Main audience:** Students preparing for Paper 1  
-> **Style:** 中文解释 + English mark scheme keywords  
-> **Docsify:** ready  
-> **No local image dependency**
+<div class="chapter-meta"><strong>AS 9618 · Paper 1</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: professional ethics; copyright; software licences; artificial intelligence and its impacts.
 
-Chapter 7 是典型的 **scenario explanation chapter（场景解释题章节）**。
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-这一章很少靠死背拿满分。考试通常给一个具体情境，例如：
+## Core Knowledge
 
-- programmer 在公司里如何对 colleagues / public 负责
-- business 需要选择合适的软件 licence
-- programmer 为什么要 copyright their program
-- AI system 如何识别车牌 / 图像 / 语音 / 数据模式
-- AI 对 society / economy / environment 的影响
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-所以复习时不能只背 “ethics = right and wrong”。你需要练习：
-
-1. **state / identify**：说出 licence type、AI application、professional body。  
-2. **describe**：写出 licence / copyright / AI process 的特征。  
-3. **explain**：联系场景，说出为什么这是 benefit / drawback / impact。  
-4. **justify**：选择 licence 或 ethical action，并给出场景理由。
-
-复习顺序建议：
-
-```mermaid
-flowchart LR
-A[Ethics<br/>professional behaviour] --> B[Professional bodies<br/>BCS / IEEE]
-B --> C[Ethical / Unethical impact<br/>colleagues / public / client]
-C --> D[Copyright<br/>ownership + legal protection]
-D --> E[Software licences<br/>free / open source / shareware / commercial]
-E --> F[AI<br/>applications + impacts]
-```
-
----
-
-## 1. Recent Paper 1 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Acting ethically as a programmer | Very high in 2024 | Explain impact on **colleagues** and **the public**, not just define ethics |
-| Professional bodies: BCS / IEEE | Medium | Know purpose: code of conduct, standards, guidance, accountability |
-| Copyright | High | Explain ownership, legal protection, preventing copying, protecting income |
-| Software licence choice | Very high | Choose **open source / free software / shareware / commercial** for a scenario and justify |
-| Shareware benefits | High in 2024 | Do not only describe “trial version”; explain benefit to user/distributor |
-| Commercial licence benefits | High in 2024 | Explain income, support, control, updates, legal restrictions |
-| Open source / Free Software Foundation | High | Source code can be examined/modified; suitable when client needs changes |
-| AI application process | High in 2024–2025 | Explain image recognition / OCR / pattern matching / trained model, not database lookup only |
-| AI impact | Medium-high | Social, economic, environmental impacts with scenario detail |
-| Long philosophy of AI | Low | Do not waste time on “can AI think?” unless tied to exam scenario |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| purpose of ethics for computing professionals | Direct syllabus requirement and 2024 question trend |
-| ethical impact on colleagues/public | 2024 Paper 1 directly asked this style of explanation |
-| BCS and IEEE | Syllabus explicitly names both professional ethical bodies |
-| copyright legislation | Frequently tested as short explanation |
-| licence comparison | High-frequency scenario question |
-| shareware and commercial benefits | 2024 examiner comments show students often described features but missed benefits |
-| open source / free software | Useful for scenario where source code must be modified |
-| AI applications | Common applied question: image recognition / OCR / autonomous systems / recommendation |
-| AI social/economic/environmental impacts | Syllabus explicitly requires these impacts |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| memorising the full IEEE code clause by clause | Students need purpose and examples, not every clause |
-| exact names of national copyright laws | Cambridge normally rewards concept, not law title |
-| long philosophical arguments about machine consciousness | Low exam value for AS Paper 1 |
-| advanced machine learning mathematics | Not required in AS Chapter 7 |
-| too many licence types outside syllabus | Focus on Free Software Foundation, Open Source Initiative, shareware, commercial |
-
-### 2.3 Delete / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| “Ethics means obeying the law” | Too narrow; ethical behaviour can go beyond legal minimum |
-| “Free software means no copyright” | Wrong; free software can still be copyrighted |
-| “Open source always means completely free” | Too vague; key is source code availability and allowed modification/redistribution |
-| “Shareware is just free software” | Wrong; usually trial/limited version before payment |
-| “Commercial software means better software” | Not guaranteed; explain support/income/control instead |
-| “AI just searches a database” | Weak for AI recognition questions; explain trained model / pattern recognition |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -151,20 +64,20 @@ mindmap
 
 ---
 
-## 4. Syllabus Objectives
+## Syllabus Map
 
 By the end of this chapter, students should be able to:
 
 | Syllabus requirement | Student-friendly meaning |
 | --- | --- |
-| Show understanding of the need for and purpose of ethics as a computing professional | 解释为什么程序员/IT 专业人员必须负责任地工作 |
-| Understand the importance of joining a professional ethical body including BCS and IEEE | 知道 BCS / IEEE 提供 code of conduct、professional standards 和 guidance |
-| Show understanding of acting ethically or unethically in a given situation | 能根据场景判断行为是否 ethical，并解释影响 |
-| Show understanding of copyright legislation | 解释 copyright 如何保护软件、代码、图像、音乐等 intellectual property |
-| Show understanding of different types of software licensing | 比较 free software、open source、shareware、commercial software |
-| Justify the use of a licence for a given situation | 根据 business/user/programmer 的需求选择 licence |
-| Show understanding of AI | 解释 AI 是什么，以及它如何用于真实系统 |
-| Understand applications and impacts of AI | 能写出 AI 的 social / economic / environmental impact |
+| Show understanding of the need for and purpose of ethics as a computing professional | <span lang="zh-CN">解释为什么程序员</span>/IT <span lang="zh-CN">专业人员必须负责任地工作</span> |
+| Understand the importance of joining a professional ethical body including BCS and IEEE | <span lang="zh-CN">知道</span> BCS / IEEE <span lang="zh-CN">提供</span> code of conduct、professional standards <span lang="zh-CN">和</span> guidance |
+| Show understanding of acting ethically or unethically in a given situation | <span lang="zh-CN">能根据场景判断行为是否</span> ethical，<span lang="zh-CN">并解释影响</span> |
+| Show understanding of copyright legislation | <span lang="zh-CN">解释</span> copyright <span lang="zh-CN">如何保护软件</span>、<span lang="zh-CN">代码</span>、<span lang="zh-CN">图像</span>、<span lang="zh-CN">音乐等</span> intellectual property |
+| Show understanding of different types of software licensing | <span lang="zh-CN">比较</span> free software、open source、shareware、commercial software |
+| Justify the use of a licence for a given situation | <span lang="zh-CN">根据</span> business/user/programmer <span lang="zh-CN">的需求选择</span> licence |
+| Show understanding of AI | <span lang="zh-CN">解释</span> AI <span lang="zh-CN">是什么</span>，<span lang="zh-CN">以及它如何用于真实系统</span> |
+| Understand applications and impacts of AI | <span lang="zh-CN">能写出</span> AI <span lang="zh-CN">的</span> social / economic / environmental impact |
 
 ---
 
@@ -180,7 +93,7 @@ By the end of this chapter, students should be able to:
 
 > Ethics are moral principles / a code of conduct that guide professional behaviour and help computing professionals act responsibly.
 
-#### Must-have keywords
+#### Required ideas / marking points
 
 - **moral principles**
 - **code of conduct**
@@ -203,7 +116,7 @@ Computing professionals often work with:
 - AI decision-making systems
 - software that many people depend on
 
-如果程序员不 ethical，后果可能很严重：data leak、unsafe software、biased AI、unfair treatment、financial loss，甚至 physical harm。
+<span lang="zh-CN">如果程序员不</span> ethical，<span lang="zh-CN">后果可能很严重</span>：data leak、unsafe software、biased AI、unfair treatment、financial loss，<span lang="zh-CN">甚至</span> physical harm。
 
 #### Mark scheme style answer
 
@@ -213,7 +126,7 @@ Computing professionals often work with:
 
 ### 5.3 Ethical behaviour towards colleagues
 
-2024 Paper 1 的趋势是：不仅问 “what is ethics”，而是问 programmer 为什么要对 **colleagues** 和 **the public** 负责。
+A strong response should recognise that <span lang="zh-CN">不仅问</span> “what is ethics”，<span lang="zh-CN">而是问</span> programmer <span lang="zh-CN">为什么要对</span> **colleagues** <span lang="zh-CN">和</span> **the public** <span lang="zh-CN">负责</span>。
 
 #### Good points for colleagues
 
@@ -275,11 +188,11 @@ A programmer should:
 
 #### Exam warning
 
-不要写：
+<span lang="zh-CN">不要写</span>：
 
 > Ethics is the same as law.
 
-更好的写法：
+<span lang="zh-CN">更好的写法</span>：
 
 > Laws are formal rules enforced by the legal system, while ethics are moral/professional principles. An action may be legal but still unethical.
 
@@ -342,7 +255,7 @@ Better:
 
 > Copyright is legal protection for original work / intellectual property, giving the owner control over copying, distribution, modification and use.
 
-#### Must-have keywords
+#### Required ideas / marking points
 
 - **legal protection**
 - **original work**
@@ -571,7 +484,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 > AI is the ability of a computer system to perform tasks that normally require human intelligence, such as learning, recognising patterns, making decisions or solving problems.
 
-#### Must-have keywords
+#### Required ideas / marking points
 
 - **human intelligence**
 - **learning from data**
@@ -765,7 +678,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 12. Common Mistakes 易错表
+## 12. Common Confusions
 
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
@@ -848,62 +761,40 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 14. 10 Marks Quick Check
+## Required Ideas and Exam Language
 
-### Question 1: Ethics and professional bodies [2]
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
 
-(a) Define ethics in the context of computing. [1]  
-(b) Give one reason why a programmer may join BCS or IEEE. [1]
+## Common Confusions
 
-#### Mark scheme
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
 
-(a) Moral principles / code of conduct guiding professional behaviour. [1]  
-(b) Provides ethical guidance / professional standards / code of conduct / accountability. [1]
+## Worked Examples
 
----
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
 
-### Question 2: Copyright [2]
+## 10-Mark Quick Check
 
-A programmer writes a new game and wants to protect the source code.
+**Total: 10 marks**
 
-Explain why copyright is useful. [2]
+1. Define ethics in the context of computing. **[1]**
+2. Give one reason why a programmer may join BCS or IEEE. **[1]**
+3. Explain two ways copyright can protect the author of a new game. **[2]**
+4. A company wants users to try a limited version before paying. Identify a suitable licence and give two reasons for the choice. **[3]**
+5. Explain how an AI car-park system can identify a registration number from a camera image. **[3]**
 
-#### Mark scheme
+## Quick Check Answers
 
-- Identifies programmer as owner/author / gives formal recognition of ownership. [1]
-- Allows legal action / prevents unauthorised copying or distribution / protects income. [1]
+1. Moral principles or a code of conduct that guides professional behaviour. **[1]**
+2. It provides ethical guidance, professional standards, accountability or a recognised code of conduct. **[1]**
+3. Copyright identifies the author/owner **[1]** and supports action against unauthorised copying or distribution / protects income **[1]**. **[2]**
+4. Shareware **[1]**; users can try a limited version or trial before paying **[1]**; the company may convert trial users into paying users **[1]**. **[3]**
+5. The camera captures the plate **[1]**; OCR/image recognition locates and identifies characters **[1]**; the model compares patterns with training data and outputs the most likely registration **[1]**. **[3]**
 
----
+## 20-Mark Exam Practice
 
-### Question 3: Software licence [3]
-
-A company wants users to try a limited version of its software before deciding whether to pay for the full version.
-
-Identify a suitable licence and justify your answer. [3]
-
-#### Mark scheme
-
-- Shareware. [1]
-- Users can try the software before paying / limited version or trial period. [1]
-- Company may gain paying users later / still earns income from full version. [1]
-
----
-
-### Question 4: AI [3]
-
-A car park system uses a camera to read vehicle registration numbers.
-
-Explain how AI can identify the registration number. [3]
-
-#### Mark scheme
-
-- Camera captures image of registration plate. [1]
-- OCR / image recognition identifies the characters / plate area. [1]
-- AI compares shapes/patterns with a trained model / training data and outputs likely number. [1]
-
----
-
-## 15. 20 Marks Exam-Style Practice with Mark Scheme
+**Total: 20 marks**
 
 ### Question 1: Ethics in software development [5]
 
@@ -1005,3 +896,11 @@ Economic impact:
 Need at least one social and one economic point for full marks.
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

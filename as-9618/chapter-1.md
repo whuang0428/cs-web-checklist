@@ -1,99 +1,17 @@
 # AS 9618 Chapter 1: Information Representation
-> **Information Representation｜Syllabus-Aligned Paper 1 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 1 Information representation  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English keywords / mark scheme style phrases  
-> **Docsify:** ready for static webpage display  
-> **File:** `chapter-1.md`
+<div class="chapter-meta"><strong>AS 9618 · Paper 1</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: number systems and codes; bitmap and vector graphics; sound representation and compression.
 
-AS 9618 Chapter 1 比 IGCSE Chapter 1 更深一点。它不是只考“binary / image / sound / compression”的基础定义，而是更喜欢把这些内容放进 **calculation + exact terminology + scenario explanation** 里面。
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-2024 和 2025 的 Paper 1 趋势很明显：
+## Core Knowledge
 
-1. **number systems conversion** 仍然高频，但更常见 12-bit / two's complement / BCD / Unicode code conversion  
-2. **bitmap / bit depth / colour depth / file size** 是高频计算和解释题  
-3. **Unicode / ASCII / extended ASCII** 会考特点、优点和转换  
-4. **sound representation** 重点是 sampling rate / sampling resolution / analogue wave  
-5. **compression** 不只考定义，还会考 real-time bit streaming / lossy vs lossless choice  
-6. **vector graphics** 仍要掌握 property / drawing list / scalability，但 2024–2025 中比 bitmap 稍低频
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-建议复习顺序：
-
-```mermaid
-flowchart LR
-A[1.1 Data Representation<br/>binary / hex / BCD / complements] --> B[Character Sets<br/>ASCII / extended ASCII / Unicode]
-B --> C[1.2 Bitmap Images<br/>pixel / bit depth / resolution / file size]
-C --> D[Vector Graphics<br/>objects / properties / drawing list]
-D --> E[Sound Representation<br/>sampling rate / resolution / analogue]
-E --> F[1.3 Compression<br/>lossy / lossless / RLE / streaming scenario]
-```
-
----
-
-## 1. Recent Paper 1 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Binary prefixes vs decimal prefixes | High | kibi/kilo, mebi/mega, gibi/giga, tebi/tera; 1024 vs 1000 |
-| Binary ↔ denary ↔ hexadecimal | Very high | 8-bit and 12-bit conversion, hex grouping into nibbles |
-| Two's complement | Very high | binary to denary, smallest/largest 8-bit values, subtraction by adding two's complement |
-| BCD | High | BCD to denary, applications such as financial calculations, date/time, displays, barcode systems |
-| Character sets | High | ASCII, extended ASCII, Unicode, bits per character, languages/symbols/emojis |
-| Bitmap image | Very high | pixel, bit depth, colour depth, screen resolution / dpi, file size calculation |
-| Effect of lowering bit depth | Very high in 2025 | fewer colours/shades, less detail, smaller file size |
-| Sound representation | High in 2025 | sampling rate, sampling resolution, analogue wave, effect on quality/file size |
-| Vector graphics | Medium | drawing list, property, scalable without quality loss |
-| Compression | Very high | why compress, lossy vs lossless, RLE, streaming scenario justification |
-| Detailed compression algorithms | Low-medium | know principles; avoid over-learning MP3/JPEG internal detail unless needed for scenario |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept / strengthened content | Reason |
-| --- | --- |
-| binary and decimal prefixes | 2024 directly tested tebibyte / gigabyte and binary vs decimal prefix |
-| binary, denary, hexadecimal conversion | 2025 tested 558 to 12-bit binary and hexadecimal; Unicode/ASCII code conversion also relies on this |
-| two's complement | 2024 and 2025 both tested two's complement conversion / range |
-| BCD | 2024 tested BCD conversion; 2025 tested BCD application and justification |
-| ASCII / extended ASCII / Unicode | 2025 tested Unicode characteristics and extended ASCII conversion table |
-| bitmap file size | 2024 and 2025 both tested image file size calculation |
-| bit depth / colour depth | 2025 tested effect of decreasing bit depth on image and file |
-| sound terms | 2025 directly tested sampling rate, sampling resolution and analogue wave |
-| compression scenarios | 2025 tested video compression for real-time bit streaming and lossy/lossless choice |
-| mark scheme phrases | Paper 1 awards marks for precise phrases such as “fewer bits per pixel”, “less bandwidth”, “original can be restored” |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| long history of ASCII / Unicode | Exams reward features and differences, not history |
-| very detailed memory dump explanation | Syllabus includes hex uses, but recent questions focus more on conversion and representation |
-| advanced JPEG / MP3 algorithm detail | Useful background, but Paper 1 usually rewards simple lossy / lossless reasoning |
-| memorising every storage unit beyond TiB | Keep to kilo/kibi, mega/mebi, giga/gibi, tera/tebi |
-| excessive vector drawing syntax | Students need concept: objects, properties, drawing list, scaling |
-| overlong sound physics | Only need analogue wave, amplitude sampling, sample rate/resolution |
-
-### 2.3 Delete / Avoid
-
-| Avoid learning as exam fact | Better version |
-| --- | --- |
-| “Unicode is always 16-bit” | Unicode may use more bits than ASCII; syllabus examples often use 16/32 bits |
-| “compression always improves quality” | Compression reduces file size; lossy may reduce quality |
-| “RLE always makes files smaller” | RLE works well when there are long runs of repeated data; it can increase file size otherwise |
-| “right shift always divides exactly” | Bits shifted out are lost; result may be rounded down |
-| “overflow just means there is a carry” | Overflow means the result is outside the range that can be represented using the available bits |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -153,7 +71,7 @@ mindmap
 
 #### Core idea
 
-计算机中有两套常见单位：
+<span lang="zh-CN">计算机中有两套常见单位</span>：
 
 | Type | Example | Meaning | Used for |
 | --- | --- | ---: | --- |
@@ -172,6 +90,10 @@ mindmap
 | 1 gibibyte / GiB | 1024 MiB |
 | 1 terabyte / TB | 1000 GB |
 | 1 tebibyte / TiB | 1024 GiB |
+| 1 petabyte / PB | 1000 TB |
+| 1 pebibyte / PiB | 1024 TiB |
+| 1 exabyte / EB | 1000 PB |
+| 1 exbibyte / EiB | 1024 PiB |
 
 #### Mark scheme style phrase
 
@@ -238,7 +160,7 @@ Convert 558 to 12-bit binary.
 Answer = 0010 0010 1110
 ```
 
-#### Recent exam-style note
+#### Exam-style note
 
 AS Paper 1 may ask for **12-bit binary**, not only 8-bit. Always count the required number of bits.
 
@@ -582,7 +504,7 @@ Examples:
 | 16 bits | 65 536 |
 | 24 bits | 16 777 216 |
 
-#### Recent exam-style answer: effect of decreasing bit depth
+#### Exam-style answer: effect of decreasing bit depth
 
 | Effect on image | Effect on file |
 | --- | --- |
@@ -618,7 +540,7 @@ KB or MB = divide by 1000
 KiB or MiB = divide by 1024
 ```
 
-#### Recent exam-style example
+#### Exam-style example
 
 A camera creates an image with **2 million pixels** and **16-bit depth**. Calculate the file size in MB.
 
@@ -638,7 +560,7 @@ An image has 4000 × 3000 pixels and 4 bits per pixel.
 = 6 MB
 ```
 
-> 注意：如果题目或 mark scheme 用 MB，通常按 decimal 1 MB = 1 000 000 bytes。题目写 MiB 才用 1024。
+> <span lang="zh-CN">注意</span>：<span lang="zh-CN">如果题目或</span> mark scheme <span lang="zh-CN">用</span> MB，<span lang="zh-CN">通常按</span> decimal 1 MB = 1 000 000 bytes。<span lang="zh-CN">题目写</span> MiB <span lang="zh-CN">才用</span> 1024。
 
 ---
 
@@ -928,7 +850,7 @@ becomes
 
 ---
 
-## 10. Common Mistakes 易错表
+## 10. Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -947,7 +869,7 @@ becomes
 
 ---
 
-## 11. Scenario Answer Bank 场景迁移答题模板
+## 11. Scenario Answer Bank
 
 ### 11.1 Explain why Unicode is used for a global app
 
@@ -1027,7 +949,22 @@ D --> E[Digital sound file]
 
 ---
 
-## 13. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -1042,7 +979,7 @@ D --> E[Digital sound file]
 9. Name one lossless compression method. [1]  
 10. State why lossy compression may be suitable for real-time video streaming. [1]
 
-### Answers
+## Quick Check Answers
 
 1. KB = 1000 bytes; KiB = 1024 bytes.  
 2. `C67`  
@@ -1057,7 +994,9 @@ D --> E[Digital sound file]
 
 ---
 
-## 14. 20 Marks Exam-Style Practice with Mark Scheme
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: Number systems and character sets [8]
 
@@ -1134,3 +1073,11 @@ A school uses live video conferencing. The video is compressed before being tran
 + some data can be removed without noticeably affecting user experience / resolution or audio sample rate can be reduced [1]
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

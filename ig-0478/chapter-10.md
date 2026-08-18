@@ -1,10 +1,22 @@
-# Chapter 10: Boolean Logic
+# IGCSE 0478 Chapter 10: Boolean Logic
+
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 5</span></div>
+
+## Official Syllabus Checklist
+
+Revise: logic gates; Boolean expressions; truth tables; circuits and problem statements.
+
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+
+## Core Knowledge
+
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 > **Paper 2 focus:** move accurately between a problem statement, logic-gate circuit, Boolean expression and truth table.
 
 ---
 
-## 1. Syllabus Coverage
+## Syllabus Map
 
 | Objective | Where it is covered |
 |---|---|
@@ -272,7 +284,11 @@ Do not replace the given network with a simplified alternative when the task ask
 
 ---
 
-## 9. Common Mistakes Checklist
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 - [ ] I recognise the inversion circle on `NOT`, `NAND` and `NOR`.
 - [ ] I recognise the extra input-side curve on `XOR/EOR`.
@@ -287,7 +303,11 @@ Do not replace the given network with a simplified alternative when the task ask
 
 ---
 
-## 10. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
 
 1. State the output of an `AND` gate and a `NAND` gate when both inputs are 1. **[2]**
 2. State the output of an `OR` gate and an `XOR` gate when both inputs are 1. **[2]**
@@ -298,7 +318,7 @@ Do not replace the given network with a simplified alternative when the task ask
 
 **Total: 10 marks**
 
-### Quick Check Answers
+## Quick Check Answers
 
 1. `AND = 1`; `NAND = 0`. **[2]**
 2. `OR = 1`; `XOR = 0`. **[2]**
@@ -309,7 +329,7 @@ Do not replace the given network with a simplified alternative when the task ask
 
 ---
 
-## 11. 20 Marks Practice
+## 20-Mark Exam Practice
 
 1. State the output condition for each gate: `NOT`, `AND`, `OR`, `NAND`, `NOR`, `XOR`. **[6]**
 2. Complete the outputs:
@@ -377,7 +397,7 @@ Do not replace the given network with a simplified alternative when the task ask
 
 ---
 
-## 12. Final Self-Assessment
+## Final Revision Checklist
 
 - [ ] I can draw and identify all six standard gate symbols.
 - [ ] I can state every gate's output condition.

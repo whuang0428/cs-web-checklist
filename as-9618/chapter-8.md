@@ -1,97 +1,19 @@
-# AS 9618 Chapter 8: Database
-> **Databases｜Syllabus-Aligned Paper 1 Revision Sheet**
+# AS 9618 Chapter 8: Databases
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 1 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618  
-> **Chapter:** 8 Databases  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English mark scheme keywords  
-> **Docsify:** ready for static webpage display  
-> **Important:** 本章只覆盖 AS Paper 1 理论部分的数据库要求，不加入 A2 / 大学数据库中过深内容。
+<div class="chapter-meta"><strong>AS 9618 · Paper 1</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: relational database concepts; normalisation; DBMS features; DDL and DML.
 
-本章不是单纯背定义。2024 和 2025 的题目趋势非常明显：
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-1. **给一个真实场景数据库**
-2. **要求判断 primary key / foreign key / relationship**
-3. **写 SQL DDL 或 DML**
-4. **解释 normalisation / file-based approach / DBMS features**
-5. **用 mark scheme phrases 精准拿分**
+## Core Knowledge
 
-复习顺序建议如下：
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-```mermaid
-flowchart LR
-A[File-based approach<br/>limitations] --> B[Relational database<br/>tables / records / fields]
-B --> C[Keys and relationships<br/>PK / FK / E-R diagram]
-C --> D[Normalisation<br/>1NF / 2NF / 3NF]
-D --> E[DBMS features<br/>dictionary / security / integrity]
-E --> F[SQL<br/>DDL + DML]
-```
 
----
-
-## 1. Recent Paper 1 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| File-based approach vs relational database | High | limitation + how relational database solves it |
-| Primary key / foreign key | Very high | identify keys from table design and explain purpose |
-| E-R relationship | High | one-to-many / many-to-many implemented using linking table |
-| SQL DDL `CREATE TABLE` | Very high | field type, `PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, sensible constraints |
-| SQL DML `SELECT` queries | Very high | `SUM`, `COUNT`, `WHERE`, date condition, `GROUP BY`, simple join |
-| Database terminology | High | tuple, attribute, entity, candidate key, referential integrity |
-| Normalisation | Medium-high | purpose and benefits; remove redundancy and update/insert/delete anomalies |
-| DBMS features | Medium | data dictionary, access rights, backup, query processor, developer interface |
-| Complex relational theory | Low | do not over-study beyond 3NF and syllabus wording |
-| Very advanced SQL | Low | no nested queries, no stored procedures, no triggers required |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept content | Reason |
-| --- | --- |
-| file-based approach limitations | 2024 database question starts from file-based approach |
-| relational database benefits | frequently asked as “explain how relational database addresses limitation” |
-| primary key / foreign key / candidate key | repeated across 2024 and 2025 |
-| referential integrity | direct definition question and useful in relationship explanation |
-| E-R diagram relationships | often tested with given tables |
-| many-to-many linking table | common when two entities can link to many of each other |
-| SQL `CREATE TABLE` | high-value 4–5 mark DDL question |
-| SQL aggregate functions | `SUM`, `COUNT`, `AVG` appear in Paper 1 database scripts |
-| `WHERE`, `GROUP BY`, `INNER JOIN` | practical mark scheme phrases |
-| normalisation to 3NF | syllabus requirement and scenario question topic |
-| DBMS features | can appear as explain/describe questions |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| very detailed database indexing | not central in AS 9618 Paper 1 |
-| transaction processing / ACID | beyond AS Chapter 8 expectation |
-| SQL subqueries | not required by syllabus subset |
-| triggers, stored procedures, views in depth | may confuse students and not common for marks |
-| entity-attribute modelling theory beyond E-R diagrams | too abstract for Paper 1 |
-| full commercial DBMS architecture | only developer interface and query processor are needed |
-
-### 2.3 Delete / Avoid
-
-| Avoided content | Reason |
-| --- | --- |
-| NoSQL databases | not in AS 9618 Chapter 8 |
-| recursive SQL / window functions | beyond syllabus |
-| advanced normal forms such as BCNF / 4NF / 5NF | not required |
-| brand-specific SQL syntax | Cambridge says no brand names; keep generic SQL |
-
----
-
-## 3. Syllabus Scope
+## Syllabus Map
 
 Chapter 8 contains three syllabus sections:
 
@@ -165,20 +87,20 @@ mindmap
 
 A **file-based approach** stores data in separate files, usually created for one specific application.
 
-中文理解：  
-就是每个程序自己管自己的文件。比如 repair data 一个文件，customer data 一个文件，invoice data 又一个文件。这样简单，但容易重复、难维护。
+<span lang="zh-CN">中文理解</span>：
+<span lang="zh-CN">就是每个程序自己管自己的文件</span>。<span lang="zh-CN">比如</span> repair data <span lang="zh-CN">一个文件</span>，customer data <span lang="zh-CN">一个文件</span>，invoice data <span lang="zh-CN">又一个文件</span>。<span lang="zh-CN">这样简单</span>，<span lang="zh-CN">但容易重复</span>、<span lang="zh-CN">难维护</span>。
 
 #### Limitations
 
-| Limitation | 中文解释 | Mark scheme phrase |
+| Limitation | Brief Chinese Support | Mark scheme phrase |
 | --- | --- | --- |
-| Data duplication / redundancy | 同一数据在多个文件重复存储 | same data stored more than once |
-| Data inconsistency | 一个文件更新了，另一个没更新 | data may become inconsistent |
-| Data isolation | 数据分散在不同文件中 | data stored in separate files |
-| Program-data dependence | 文件结构变了，程序也要改 | file structure is dependent on program |
-| Difficult to query | 很难跨文件查找复杂信息 | difficult to search / retrieve related data |
-| Poor security | 权限不好统一控制 | difficult to control access rights |
-| Poor integrity | 不容易统一验证数据正确性 | difficult to maintain data integrity |
+| Data duplication / redundancy | <span lang="zh-CN">同一数据在多个文件重复存储</span> | same data stored more than once |
+| Data inconsistency | <span lang="zh-CN">一个文件更新了</span>，<span lang="zh-CN">另一个没更新</span> | data may become inconsistent |
+| Data isolation | <span lang="zh-CN">数据分散在不同文件中</span> | data stored in separate files |
+| Program-data dependence | <span lang="zh-CN">文件结构变了</span>，<span lang="zh-CN">程序也要改</span> | file structure is dependent on program |
+| Difficult to query | <span lang="zh-CN">很难跨文件查找复杂信息</span> | difficult to search / retrieve related data |
+| Poor security | <span lang="zh-CN">权限不好统一控制</span> | difficult to control access rights |
+| Poor integrity | <span lang="zh-CN">不容易统一验证数据正确性</span> | difficult to maintain data integrity |
 
 #### 2024-style answer
 
@@ -192,22 +114,22 @@ A **file-based approach** stores data in separate files, usually created for one
 
 > A relational database stores data in tables. Tables are linked using primary keys and foreign keys.
 
-中文理解：  
-relational database 的核心就是 **分表 + 关联**。不是把所有数据塞进一个大表，而是把 customer、repair、part、invoice 等分开放，再用 key 连接。
+<span lang="zh-CN">中文理解</span>：
+relational database <span lang="zh-CN">的核心就是</span> **<span lang="zh-CN">分表</span> + <span lang="zh-CN">关联</span>**。<span lang="zh-CN">不是把所有数据塞进一个大表</span>，<span lang="zh-CN">而是把</span> customer、repair、part、invoice <span lang="zh-CN">等分开放</span>，<span lang="zh-CN">再用</span> key <span lang="zh-CN">连接</span>。
 
 #### Core terms
 
-| Term | Meaning | 中文解释 |
+| Term | Meaning | Brief Chinese Support |
 | --- | --- | --- |
-| Entity | something about which data is stored | 要存储的对象，如 CUSTOMER / REPAIR |
-| Table / relation | a set of records about one entity | 表 |
-| Attribute / field | one item of data stored for an entity | 字段 / 列 |
-| Tuple / record | one row in a table | 一条记录 / 一行 |
-| Domain | set of allowed values for an attribute | 一个字段允许的值范围 |
-| Primary key | attribute(s) that uniquely identify a record | 主键，唯一识别一行 |
-| Candidate key | attribute(s) that could be chosen as primary key | 候选键，可以当主键 |
-| Foreign key | attribute that references primary key in another table | 外键，连接另一张表 |
-| Referential integrity | foreign key values must match existing primary key values or be null | 外键必须引用真实存在的主键 |
+| Entity | something about which data is stored | <span lang="zh-CN">要存储的对象</span>，<span lang="zh-CN">如</span> CUSTOMER / REPAIR |
+| Table / relation | a set of records about one entity | <span lang="zh-CN">表</span> |
+| Attribute / field | one item of data stored for an entity | <span lang="zh-CN">字段</span> / <span lang="zh-CN">列</span> |
+| Tuple / record | one row in a table | <span lang="zh-CN">一条记录</span> / <span lang="zh-CN">一行</span> |
+| Domain | set of allowed values for an attribute | <span lang="zh-CN">一个字段允许的值范围</span> |
+| Primary key | attribute(s) that uniquely identify a record | <span lang="zh-CN">主键</span>，<span lang="zh-CN">唯一识别一行</span> |
+| Candidate key | attribute(s) that could be chosen as primary key | <span lang="zh-CN">候选键</span>，<span lang="zh-CN">可以当主键</span> |
+| Foreign key | attribute that references primary key in another table | <span lang="zh-CN">外键</span>，<span lang="zh-CN">连接另一张表</span> |
+| Referential integrity | foreign key values must match existing primary key values or be null | <span lang="zh-CN">外键必须引用真实存在的主键</span> |
 
 ---
 
@@ -298,10 +220,10 @@ Foreign keys in `SALE`:
 
 > Referential integrity ensures that a foreign key value in one table must match an existing primary key value in the referenced table.
 
-#### 中文解释
+#### Brief Chinese Support
 
-如果 `REPAIR.CustomerID = "C102"`，那么 `CUSTOMER` 表里必须真的有 `CustomerID = "C102"`。  
-不能出现 repair 记录属于一个不存在的 customer。
+<span lang="zh-CN">如果</span> `REPAIR.CustomerID = "C102"`，<span lang="zh-CN">那么</span> `CUSTOMER` <span lang="zh-CN">表里必须真的有</span> `CustomerID = "C102"`。
+<span lang="zh-CN">不能出现</span> repair <span lang="zh-CN">记录属于一个不存在的</span> customer。
 
 #### Why it matters
 
@@ -348,7 +270,7 @@ Example:
 REPAIR ---- PART
 ```
 
-One repair can use many parts.  
+One repair can use many parts.
 One part can be used in many repairs.
 
 This is implemented using a **linking table**:
@@ -403,19 +325,19 @@ that usually means it is a **linking table** between `REPAIR` and `PART`.
 
 > Normalisation reduces data redundancy and helps avoid update, insert and delete anomalies.
 
-中文理解：  
-normalisation 就是把“乱的大表”拆成“结构清楚的小表”，减少重复，避免数据改一处漏一处。
+<span lang="zh-CN">中文理解</span>：
+normalisation <span lang="zh-CN">就是把</span>“<span lang="zh-CN">乱的大表</span>”<span lang="zh-CN">拆成</span>“<span lang="zh-CN">结构清楚的小表</span>”，<span lang="zh-CN">减少重复</span>，<span lang="zh-CN">避免数据改一处漏一处</span>。
 
 #### Benefits
 
-| Benefit | 中文解释 | Mark scheme phrase |
+| Benefit | Brief Chinese Support | Mark scheme phrase |
 | --- | --- | --- |
-| Reduces redundancy | 减少重复数据 | reduces data duplication |
-| Improves consistency | 数据更一致 | improves data consistency |
-| Avoids update anomaly | 修改数据时不用改很多地方 | avoids update anomalies |
-| Avoids insert anomaly | 可以插入某类数据而不依赖其他数据 | avoids insert anomalies |
-| Avoids delete anomaly | 删除一条记录不会误删其他重要信息 | avoids delete anomalies |
-| Improves integrity | 数据更准确完整 | improves data integrity |
+| Reduces redundancy | <span lang="zh-CN">减少重复数据</span> | reduces data duplication |
+| Improves consistency | <span lang="zh-CN">数据更一致</span> | improves data consistency |
+| Avoids update anomaly | <span lang="zh-CN">修改数据时不用改很多地方</span> | avoids update anomalies |
+| Avoids insert anomaly | <span lang="zh-CN">可以插入某类数据而不依赖其他数据</span> | avoids insert anomalies |
+| Avoids delete anomaly | <span lang="zh-CN">删除一条记录不会误删其他重要信息</span> | avoids delete anomalies |
+| Improves integrity | <span lang="zh-CN">数据更准确完整</span> | improves data integrity |
 
 ---
 
@@ -425,8 +347,8 @@ normalisation 就是把“乱的大表”拆成“结构清楚的小表”，减
 
 > A table is in 1NF if it has no repeating groups and each field contains atomic values.
 
-中文理解：  
-一格里面只能放一个值，不能放列表。
+<span lang="zh-CN">中文理解</span>：
+<span lang="zh-CN">一格里面只能放一个值</span>，<span lang="zh-CN">不能放列表</span>。
 
 #### Bad example
 
@@ -456,8 +378,8 @@ Problem: `Subjects` contains a repeating group.
 
 > A table is in 2NF if it is in 1NF and every non-key attribute is fully dependent on the whole primary key.
 
-中文理解：  
-如果主键是 composite key，那么非主键字段必须依赖整个主键，而不能只依赖其中一部分。
+<span lang="zh-CN">中文理解</span>：
+<span lang="zh-CN">如果主键是</span> composite key，<span lang="zh-CN">那么非主键字段必须依赖整个主键</span>，<span lang="zh-CN">而不能只依赖其中一部分</span>。
 
 #### Example
 
@@ -482,8 +404,8 @@ So `ProductName` should be moved to `PRODUCT`.
 
 > A table is in 3NF if it is in 2NF and has no non-key attribute depending on another non-key attribute.
 
-中文理解：  
-非主键字段不能依赖另一个非主键字段。
+<span lang="zh-CN">中文理解</span>：
+<span lang="zh-CN">非主键字段不能依赖另一个非主键字段</span>。
 
 #### Example
 
@@ -525,8 +447,8 @@ TUTOR(TutorID, TutorName)
 
 > A DBMS is software used to define, create, maintain and control access to a database.
 
-中文理解：  
-DBMS 就是管理数据库的软件层。它不是数据本身，而是用来创建表、修改数据、查询数据、控制权限、备份数据的软件系统。
+<span lang="zh-CN">中文理解</span>：
+DBMS <span lang="zh-CN">就是管理数据库的软件层</span>。<span lang="zh-CN">它不是数据本身</span>，<span lang="zh-CN">而是用来创建表</span>、<span lang="zh-CN">修改数据</span>、<span lang="zh-CN">查询数据</span>、<span lang="zh-CN">控制权限</span>、<span lang="zh-CN">备份数据的软件系统</span>。
 
 ---
 
@@ -828,7 +750,7 @@ GROUP BY Size;
 
 #### Common mistake
 
-Writing `COUNT(Size)` when the question wants count of records.  
+Writing `COUNT(Size)` when the question wants count of records.
 Usually safer: `COUNT(*)` or `COUNT(PrimaryKey)`.
 
 ---
@@ -900,7 +822,7 @@ unless you want to delete every row.
 
 ### 9.1 Database concept keywords
 
-| Concept | Must-have keywords |
+| Concept | Required ideas / marking points |
 | --- | --- |
 | Primary key | uniquely identifies each record |
 | Candidate key | could be used as primary key |
@@ -941,7 +863,7 @@ unless you want to delete every row.
 
 ---
 
-## 10. Common Mistakes 易错表
+## 10. Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -960,11 +882,11 @@ unless you want to delete every row.
 
 ---
 
-## 11. Scenario Answer Bank 场景迁移答题模板
+## 11. Scenario Answer Bank
 
 ### Scenario 1: File-based approach limitation
 
-**Question:**  
+**Question:**
 A shop stores repair data using separate files. Give one limitation and explain how a relational database addresses it.
 
 **Answer template:**
@@ -975,7 +897,7 @@ A shop stores repair data using separate files. Give one limitation and explain 
 
 ### Scenario 2: Identify foreign keys
 
-**Question:**  
+**Question:**
 Given:
 
 ```text
@@ -986,14 +908,14 @@ CUSTOMER(CustomerID, CompanyName)
 
 **Answer template:**
 
-> `BatchID` in `SALE` is a foreign key referencing `BATCH(BatchID)`.  
+> `BatchID` in `SALE` is a foreign key referencing `BATCH(BatchID)`.
 > `CustomerID` in `SALE` is a foreign key referencing `CUSTOMER(CustomerID)`.
 
 ---
 
 ### Scenario 3: Many-to-many relationship
 
-**Question:**  
+**Question:**
 A repair can use many parts. A part can be used in many repairs. Explain how this relationship is implemented.
 
 **Answer template:**
@@ -1004,7 +926,7 @@ A repair can use many parts. A part can be used in many repairs. Explain how thi
 
 ### Scenario 4: Normalisation benefit
 
-**Question:**  
+**Question:**
 Explain one benefit of normalisation.
 
 **Answer template:**
@@ -1015,7 +937,7 @@ Explain one benefit of normalisation.
 
 ### Scenario 5: Write total SQL query
 
-**Question:**  
+**Question:**
 Return the total amount due for supplier `JK675` for unpaid invoices.
 
 **Answer template:**
@@ -1031,7 +953,7 @@ AND Paid = FALSE;
 
 ### Scenario 6: Create linking table SQL
 
-**Question:**  
+**Question:**
 Write SQL to create `REPAIR_PART(PartID, RepairNumber, Quantity)`.
 
 **Answer template:**
@@ -1051,7 +973,7 @@ CREATE TABLE REPAIR_PART (
 
 ### Scenario 7: DBMS security
 
-**Question:**  
+**Question:**
 Explain how a DBMS can protect data.
 
 **Answer template:**
@@ -1062,7 +984,7 @@ Explain how a DBMS can protect data.
 
 ### Scenario 8: Data dictionary
 
-**Question:**  
+**Question:**
 Describe the purpose of a data dictionary.
 
 **Answer template:**
@@ -1090,7 +1012,22 @@ J --> K[Check field names, types, conditions]
 
 ---
 
-## 13. 10 Marks Quick Check
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
+
+- Do not substitute a related term for the process named in the question.
+- Do not list advantages or definitions without linking them to the stated context.
+
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -1105,7 +1042,7 @@ J --> K[Check field names, types, conditions]
 9. Write the SQL aggregate function used to total values. `[1]`
 10. State what `DML` is used for. `[1]`
 
-### Answers
+## Quick Check Answers
 
 1. An attribute / set of attributes that uniquely identifies each record.
 2. An attribute in one table that references the primary key in another table.
@@ -1120,7 +1057,9 @@ J --> K[Check field names, types, conditions]
 
 ---
 
-## 14. 20 Marks Exam-Style Practice
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question
 
@@ -1269,3 +1208,11 @@ Example answer:
 > A data dictionary stores metadata about the database, such as table names, field names, data types, primary keys, foreign keys and validation rules.
 
 ---
+
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.

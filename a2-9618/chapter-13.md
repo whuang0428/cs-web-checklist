@@ -1,89 +1,17 @@
 # A2 9618 Chapter 13: Data Representation
-> **Data Representation｜Syllabus-Aligned Paper 3 Revision Sheet**
 
-> **Version:** Syllabus-aligned revision; informed by recent Paper 3 patterns  
-> **Target:** Cambridge International AS & A Level Computer Science 9618 A2  
-> **Chapter:** 13 Data Representation  
-> **Main audience:** Students  
-> **Style:** 中文解释 + English mark scheme keywords / pseudocode phrases  
-> **Important update:** 本版不再使用 2023 past paper 作为趋势依据；趋势判断以 **2024 Paper 3 + 2025 May/June and Oct/Nov Paper 3** 为主。
+<div class="chapter-meta"><strong>A2 9618 · Paper 3</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
----
+## Official Syllabus Checklist
 
-## 0. How to Use This Sheet
+Revise: user-defined types; file organisation and access; floating-point representation and normalisation.
 
-Chapter 13 不是普通的“背定义”章节。2024 和 2025 的 Paper 3 很明显喜欢把本章拆成三种题型：
+> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
-1. **User-defined data type pseudocode**：写 `TYPE ... ENDTYPE`、`SET OF ...`、enumerated type、record field assignment。  
-2. **File organisation / access explanation**：serial / sequential / random、sequential access、hashing、collision resolution。  
-3. **Floating-point calculation**：normalise、denary ↔ floating-point、two's complement mantissa / exponent、precision / range / overflow / underflow。
+## Core Knowledge
 
-复习顺序建议：
+Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-```mermaid
-flowchart LR
-A[User-defined data types<br/>record / set / enumerated / pointer] --> B[File organisation<br/>serial / sequential / random]
-B --> C[File access<br/>sequential / direct / hashing]
-C --> D[Floating-point format<br/>mantissa + exponent]
-D --> E[Normalisation<br/>positive: 01... negative: 10...]
-E --> F[Exam calculations<br/>denary to FP / FP to denary]
-```
-
----
-
-## 1. Recent Paper 3 Pattern Map
-
-| Area | Recent exam pattern | What students must practise |
-| --- | --- | --- |
-| Floating-point conversion | Very high frequency | Convert denary ↔ normalised binary floating-point; show working; handle negative values using two's complement; 2025 May/June and Oct/Nov both reinforced this |
-| Mantissa / exponent allocation | High frequency | More mantissa bits = more precision; more exponent bits = greater range |
-| User-defined records | Very high frequency | `TYPE ... ENDTYPE`, correct field names, correct data types, `DECLARE` used correctly |
-| Enumerated type | Very high frequency | Fixed list of possible values; useful when a field has limited possible values; repeated in 2025 vehicle/gate/activity-style questions |
-| Set data type | High frequency | Composite type, unordered elements, same data type, `SET OF`, set theory operations |
-| Composite vs non-composite | High frequency | Composite refers to other data types / contains multiple elements; non-composite does not |
-| File access and file organisation | Medium-high | Serial, sequential, random; sequential access; direct access; choose suitable method |
-| Hashing algorithm | Medium-high | Hash key to location; collision; linear probing / overflow area / chaining |
-| Pointer type | Medium | Stores memory address; indicates the type of data at that address |
-| Very detailed binary file internal storage | Low | Know text vs binary and records/fields; avoid over-learning beyond mark scheme wording |
-
----
-
-## 2. Content Update Decision
-
-### 2.1 Keep and Strengthen
-
-| Kept / strengthened content | Why |
-| --- | --- |
-| `TYPE ... ENDTYPE` record declaration | Appears directly in 2024 and 2025 Paper 3 |
-| Enumerated type declaration | Tested repeatedly through vehicle/gate/video-format style questions |
-| Set declaration with `SET OF` and `DEFINE` | 2024/2025 style asks both description and pseudocode |
-| Composite vs non-composite definitions | Repeated short-answer definition topic |
-| Sequential access and serial/sequential file explanation | 2024 Paper 3 tested exact wording |
-| Hashing + collision resolution | 2024 Paper 3 tested hashing in file access; still syllabus core |
-| Floating-point normalisation | Most stable high-frequency calculation topic |
-| Negative floating-point using two's complement | High-risk calculation area; many students lose working marks |
-| Precision / range / rounding / overflow / underflow | Common explanation marks around floating-point representation |
-
-### 2.2 Downweight
-
-| Downweighted content | Why |
-| --- | --- |
-| Long general explanation of why all data is binary | More AS-level; A2 questions expect specific data structure / file / floating-point answers |
-| Too much theory on text files vs binary files | Usually not enough marks to justify very deep coverage |
-| Detailed alternative hashing algorithms not named in syllabus | Students mainly need hashing, collisions, linear search/probing, overflow area, chaining |
-| Excessive mathematical proof of floating-point precision | Cambridge expects practical explanation: fixed number of bits, truncation, rounding error |
-
-### 2.3 Remove / Avoid
-
-| Avoid | Reason |
-| --- | --- |
-| Saying a record is always a built-in type | In this syllabus record is treated as user-defined composite type |
-| Saying set elements are ordered | Mark scheme expects unordered elements |
-| Saying an enumerated value is a string | Enumerated values are identifiers / listed values, not quoted strings |
-| Saying random access means “randomly chosen” | It means direct access using a relationship between key and storage location |
-| Saying more exponent bits improves precision | More exponent bits improves range; more mantissa bits improves precision |
-
----
 
 ## 3. One-Page Mind Map
 
@@ -137,7 +65,7 @@ mindmap
 #### Mark scheme answer
 > User-defined data types allow the programmer to create data types that match the needs of a specific problem. They make the program easier to understand, less error-prone and allow related data items to be grouped together under one identifier.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **user-defined**
 + **specific problem**
 + **group related data**
@@ -295,7 +223,7 @@ Flight1.Airline ← "Cambridge Airways"
 #### Definition
 > A set is a user-defined composite data type that contains an unordered list of elements. Set theory operations such as union and intersection can be applied. All elements are of the same data type.
 
-#### Must-have keywords
+#### Required ideas / marking points
 + **composite data type**
 + **unordered elements**
 + **same data type**
@@ -693,7 +621,11 @@ Convert as two's complement:
 
 ---
 
-## 8. Common Mistakes
+## Required Ideas and Exam Language
+
+Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+
+## Common Confusions
 
 | Topic | Common mistake | Correction |
 | --- | --- | --- |
@@ -783,7 +715,13 @@ G --> H[Fill mantissa and exponent boxes]
 
 ---
 
-## 11. 10 Marks Quick Check
+## Worked Examples
+
+The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+
+## 10-Mark Quick Check
+
+**Total: 10 marks**
 
 ### Questions
 
@@ -795,7 +733,7 @@ G --> H[Fill mantissa and exponent boxes]
 6. In floating-point representation, what is the effect of increasing mantissa bits? [1]  
 7. What should the first two bits of a normalised positive mantissa be? [1]
 
-### Answers
+## Quick Check Answers
 
 1. Composite data type refers to other data types / contains multiple elements [1]; non-composite does not refer to another data type / contains one type [1].  
 2. `TYPE Day = (Monday, Tuesday, Wednesday)` [2].  
@@ -807,7 +745,9 @@ G --> H[Fill mantissa and exponent boxes]
 
 ---
 
-## 12. 20 Marks Exam-Style Practice
+## 20-Mark Exam Practice
+
+**Total: 20 marks**
 
 ### Question 1: User-defined data types [8]
 
@@ -895,3 +835,10 @@ Convert to binary [1], correct normalisation / exponent 5 [1], correct mantissa 
 
 ---
 
+## Final Revision Checklist
+
+- I can define the required terms precisely.
+- I can explain each process in the correct order.
+- I can apply the ideas to an unfamiliar scenario.
+- I can complete the 10-mark check without notes.
+- I can complete and self-mark the 20-mark practice.
