@@ -224,7 +224,7 @@ Answer = 01111011
  = 11010101
 ```
 
-#### 2025 mark scheme focus
+#### Mark scheme focus
 Marks are often awarded for:
 
 1. correct nibbles / final binary answer  

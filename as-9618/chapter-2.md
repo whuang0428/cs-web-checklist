@@ -299,7 +299,7 @@ E[Computer C] --- B
 + Performance decreases with more devices
 + Harder to isolate faults
 
-#### 2024-style clue
+#### Topology clue
 
 > all devices connect to a central cable  
 > most likely to lose data through collisions
@@ -339,7 +339,7 @@ S --- R[Router / modem<br/>Internet access]
 + More cable than bus
 + Switch adds cost
 
-#### 2025 drawing exam tip
+#### Drawing exam tip
 
 When asked to draw a star topology:
 
@@ -380,7 +380,7 @@ C --- D
 + Complex to install/manage
 + More cabling/wireless links required
 
-#### 2024-style clue
+#### Topology clue
 
 > multiple paths for packets  
 > robust against damage because if any line fails, the rest of the network retains functionality
@@ -546,9 +546,9 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ## Cell Phone Network
 
-### 2025 Paper 1 focus
+### Exam focus
 
-2025 tested smartphone access to a company WAN using the cell phone network.
+You should be able to explain how a smartphone accesses a company WAN using the cell phone network.
 
 #### How data is transmitted
 
@@ -581,7 +581,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 A switch connects devices in a LAN and forwards frames/packets to the correct device.
 
-#### 2025 mark scheme wording
+#### Mark scheme wording
 
 + stores MAC addresses of connected devices
 + receives packets/frames from devices
@@ -610,7 +610,7 @@ A router connects different networks and forwards packets between networks.
 + Usually has a public IP address on the internet side
 + Can use NAT to allow private LAN devices to access internet
 
-#### 2024-style answer
+#### Exam-style answer
 
 > The router has a public IP address so that it can be identified, accessed and communicated with by other devices on the internet.
 
@@ -622,7 +622,7 @@ A router connects different networks and forwards packets between networks.
 
 A modem converts signals so data can be sent over transmission media such as phone lines.
 
-#### 2025 mark scheme wording
+#### Mark scheme wording
 
 > Converts digital data into analogue for transmission down phone lines, or converts analogue data into digital after transmission.
 
@@ -718,7 +718,7 @@ Used for live events, video calls and live conferences.
 + User views/listens from the buffer
 + Delay must be small because it is live
 
-#### 2025 answer
+#### Exam-style answer
 
 > The video is transmitted continuously as a series of bits. The video is uploaded to a media server and downloaded by users. The data is sent to a buffer on the user’s device and the user views the stream from the buffer.
 
@@ -754,7 +754,7 @@ A buffer temporarily stores data before playback.
 
 ### Compression and real-time streaming
 
-2025 tested compression in video conferencing.
+Video-conferencing questions may combine compression with real-time streaming.
 
 #### Why compress video before real-time streaming?
 
@@ -858,7 +858,7 @@ An IP address identifies a device/interface on a network so packets can be route
 | Public IP | reachable/identifiable on the internet | exposed to internet, needs protection |
 | Private IP | used inside a LAN, assigned by router | not directly accessible from internet |
 
-#### 2024-style answer
+#### Exam-style answer
 
 > A public IP address allows the router to be visible and accessible by other devices on the internet.
 

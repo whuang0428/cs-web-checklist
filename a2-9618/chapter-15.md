@@ -85,7 +85,7 @@ RISC processor <span lang="zh-CN">的设计思想是</span>：
 + **pipelining**
 + **hard-wired control unit**
 
-#### 2024–2025 style features
+#### Processor design features
 | Feature | Explanation |
 | --- | --- |
 | Few instructions | instruction set is reduced |
@@ -154,7 +154,7 @@ Interrupt handling <span lang="zh-CN">的核心不是</span>“CPU stop”，<sp
 #### Pipeline issue
 Pipelining <span lang="zh-CN">会让</span> interrupt handling <span lang="zh-CN">更复杂</span>，<span lang="zh-CN">因为</span> pipeline <span lang="zh-CN">里可能已经有多条</span> instruction <span lang="zh-CN">正在不同</span> stage <span lang="zh-CN">中执行</span>。
 
-#### 2024-style phrase
+#### Exam phrase
 > There may be a number of instructions still in the pipeline when the interrupt is received, so some instructions may need to be discarded or the processor must restart from the correct next instruction after the ISR.
 >
 
@@ -472,8 +472,8 @@ It means **OR**.
 | Absorption | `A.(A + B) = A` | `A + A.B = A` |
 | Double complement | `(A')' = A` | — |
 
-#### 2025 trend
-2025 mark schemes reward not only the final answer but also correct application of laws such as:
+#### Showing Boolean-law working
+Mark schemes may reward not only the final answer but also correct application of laws such as:
 
 + **De Morgan's laws**
 + **Idempotent law**
@@ -562,7 +562,7 @@ Truth table:
 | 1 | 1 | 1 | 1 | 0 | 0 |
 
 #### Mark scheme advice
-2024–2025 mark schemes often award marks for:
+Marks may be awarded for:
 
 + intermediate working columns
 + first half of output rows

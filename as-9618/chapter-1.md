@@ -546,7 +546,7 @@ A camera creates an image with **2 million pixels** and **16-bit depth**. Calcul
 4 000 000 / 1 000 000 = 4 MB
 ```
 
-#### 2024-style example
+#### Worked example
 
 An image has 4000 × 3000 pixels and 4 bits per pixel.
 
@@ -705,7 +705,7 @@ Benefits:
 + web photos
 + situations where small loss of quality is acceptable
 
-#### 2025 real-time streaming justification
+#### Real-time streaming justification
 
 For real-time video conferences, lossy compression is usually more appropriate because:
 

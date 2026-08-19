@@ -144,7 +144,7 @@ Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</sp
 
 #### Meaning
 
-File management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</span> files <span lang="zh-CN">和</span> folders/directories <span lang="zh-CN">的功能</span>。2024 Paper 1 <span lang="zh-CN">特别喜欢问这个</span>。
+File management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</span> files <span lang="zh-CN">和</span> folders/directories <span lang="zh-CN">的功能</span>。
 
 #### Mark scheme answer
 
@@ -163,7 +163,7 @@ File management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</span
 + **file location**
 + **permissions / access rights**
 
-#### 2024-style answer bank
+#### Exam-style answer bank
 
 | Question wording | Strong answer |
 | --- | --- |
@@ -301,7 +301,7 @@ Back-up software creates copies of files/data so they can be restored if the ori
 > It creates a copy of data/files.  
 > The copy can be used to restore data after accidental deletion, corruption, hardware failure or malware attack.
 
-#### 2024-style answer
+#### Exam-style answer
 
 > Back-up software is needed because the file may be accidentally deleted, corrupted or lost due to hardware failure. A backup copy can be restored so the user does not need to recreate the file.
 
@@ -427,7 +427,7 @@ A program library is a collection of pre-written routines/modules that programme
 | Specialist functions | Developer can use complex functions written by experts |
 | Easier maintenance | Library routine can be updated instead of rewriting every program |
 
-#### 2024-style answer
+#### Exam-style answer
 
 > Using library files saves development time because the student can reuse existing routines. The routines may already have been tested, so there are fewer errors. It also allows the program to be developed in modules.
 
@@ -649,7 +649,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ### Presentation features
 
-2024 Paper 1 asked students to identify and describe presentation features. You need **feature + description**.
+For each presentation feature, give the **feature + description**.
 
 | Feature | Description |
 | --- | --- |
@@ -667,7 +667,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ### Debugging features
 
-2024 Paper 1 also asked students to identify and describe debugging features.
+For each debugging feature, identify it and describe what it does.
 
 | Feature | Description |
 | --- | --- |

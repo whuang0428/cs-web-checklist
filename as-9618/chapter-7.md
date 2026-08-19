@@ -419,7 +419,7 @@ It may be:
 
 > Shareware is beneficial because users can try the software before paying, and the developer can still earn income if users pay for continued use or extra features.
 
-#### 2024 exam warning
+#### Exam warning
 
 Do not only write:
 
@@ -512,7 +512,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ### How AI identifies a car registration number
 
-This is a very important 2024-style scenario. Many students lose marks by describing only a database search.
+In this common exam scenario, describing only a database search is not enough.
 
 #### Strong answer structure
 

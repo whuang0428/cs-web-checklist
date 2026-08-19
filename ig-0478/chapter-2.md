@@ -452,10 +452,6 @@ If no acknowledgement is received before **timeout**, the sender automatically *
 ---
 
 ## 2.3 Encryption
-> <span lang="zh-CN">旧版</span> CH2 <span lang="zh-CN">文件没有完整覆盖</span> 2.3，<span lang="zh-CN">但</span> 2025 Paper 1 <span lang="zh-CN">已经明显考到</span> encryption，<span lang="zh-CN">必须补回</span>。
->
-
----
 
 ### 2.3.1 Why encryption is needed
 Encryption is used to protect data during transmission.

@@ -96,7 +96,7 @@ A **file-based approach** stores data in separate files, usually created for one
 | Poor security | <span lang="zh-CN">权限不好统一控制</span> | difficult to control access rights |
 | Poor integrity | <span lang="zh-CN">不容易统一验证数据正确性</span> | difficult to maintain data integrity |
 
-#### 2024-style answer
+#### Exam-style answer
 
 > A file-based approach can cause data redundancy because the same customer data may be stored in several files. A relational database reduces redundancy by storing customer data once in a CUSTOMER table and linking it to other tables using a foreign key.
 
@@ -203,7 +203,7 @@ CUSTOMER(CustomerID, FirstName, LastName, ContactNumber)
 
 `CustomerID` in `REPAIR` is a foreign key because it references `CustomerID` in `CUSTOMER`.
 
-#### Common 2024-style task
+#### Common exam task
 
 Given:
 
@@ -659,7 +659,7 @@ CREATE TABLE REPAIR (
 
 ---
 
-### 2024-style DDL example: linking table
+### DDL worked example: linking table
 
 Given:
 

@@ -705,11 +705,43 @@ def check_editorial_contracts(errors: list[str]) -> None:
     ]
     banned = [
         "Content Update Decision",
+        "Keep and Strengthen",
         "Keep / Downweight / Delete",
         "Keep/Downweight/Delete",
+        "Downweighted content",
+        "Downweight warning",
+        "Delete / Avoid",
+        "Remove / Avoid",
         "Must-have keywords",
+        "**Version:**",
+        "Main audience:",
+        "**Style:**",
+        "regenerated version",
+        "Ongoing Improvement Areas",
+        "Maintenance Priorities",
+        "structural/content/runtime checker",
+        "current maturity",
+        "旧版",
+        "文件没有完整覆盖",
+        "必须补回",
         "<font",
         "**Docsify:**",
+    ]
+    dated_editorial_patterns = [
+        (
+            r"^#{2,6}\s+.*\b20\d{2}(?:[–-]20\d{2})?\b.*"
+            r"(?:style|trend|focus|warning|answer|clue|wording|justification|tip|features|phrase)",
+            "dated editorial heading",
+        ),
+        (
+            r"\b20\d{2}\s+Paper\s+[1-4]\s+(?:also\s+)?(?:asked|tested)\b",
+            "dated past-paper commentary",
+        ),
+        (
+            r"\b20\d{2}(?:[–-]20\d{2})?\s+mark schemes?\s+"
+            r"(?:often\s+)?(?:award|reward)\b",
+            "dated mark-scheme commentary",
+        ),
     ]
     identities = {
         "ig-0478": ("# IGCSE 0478 Chapter", "0478 · 2026–2028 · Version 5"),
@@ -729,6 +761,9 @@ def check_editorial_contracts(errors: list[str]) -> None:
         for phrase in banned:
             if phrase.casefold() in text.casefold():
                 add_error(errors, path, f"student page contains banned editorial text: {phrase}")
+        for pattern, description in dated_editorial_patterns:
+            if re.search(pattern, text, flags=re.IGNORECASE | re.MULTILINE):
+                add_error(errors, path, f"student page contains {description}")
         for marks in (10, 20):
             if f"**Total: {marks} marks**" not in text:
                 add_error(errors, path, f"missing explicit {marks}-mark assessment total")
