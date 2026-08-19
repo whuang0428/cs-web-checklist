@@ -1274,6 +1274,14 @@ def check_accessibility_baseline(errors: list[str]) -> None:
         (":focus-visible", "visible keyboard focus styling"),
         ("prefers-reduced-motion: reduce", "reduced-motion support"),
         ("@media print", "A4 print styling"),
+        ("--muted: #59697d", "contrast-safe muted text"),
+        ("--code-bg: #111c2e", "stable code-block background"),
+        ("--code-text: #e5edf7", "contrast-safe code-block text"),
+        ("--code-punctuation: #cbd5e1", "contrast-safe code punctuation"),
+        ("--code-tag: #7dd3fc", "contrast-safe code tags"),
+        ("background: var(--code-bg); color: var(--code-text)", "code-block foreground/background pairing"),
+        (".markdown-section pre .token.punctuation", "code punctuation override"),
+        (".markdown-section pre .token.tag", "code tag override"),
         (".chapter-overview", "chapter overview layout styling"),
         (".overview-topic", "overview task-area styling"),
         (".overview-route", "responsive semantic route styling"),
@@ -1365,7 +1373,7 @@ def main() -> int:
     print("- every A/B review pair remains below the 65% near-duplicate threshold")
     print("- every A2 fenced Python code block compiles and core examples pass smoke tests")
     print("- jsDelivr npm dependencies use exact versions")
-    print("- skip link, keyboard focus, answer/table/pagination scripting, print and reduced-motion checks pass")
+    print("- skip link, keyboard focus, contrast-safe code styling, answer/table/pagination scripting, print and reduced-motion checks pass")
     print("- Mermaid uses one render path, natural SVG sizes and guarded local overflow")
     return 0
 

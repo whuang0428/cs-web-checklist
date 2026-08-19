@@ -1,8 +1,10 @@
 :root {
   --theme-color: #2563eb; --course-accent: #2563eb;
   --ig: #2563eb; --as: #0f766e; --a2: #b45309;
-  --ink: #122033; --body: #334155; --muted: #64748b;
+  --ink: #122033; --body: #334155; --muted: #59697d;
   --line: #d9e1ea; --soft: #f6f8fb; --focus: #f59e0b;
+  --code-bg: #111c2e; --code-text: #e5edf7;
+  --code-punctuation: #cbd5e1; --code-tag: #7dd3fc;
   --radius-sm: 6px; --radius: 10px;
   --shadow: 0 12px 32px rgba(15, 23, 42, 0.08); --prose: 76ch;
 }
@@ -60,9 +62,12 @@ summary:focus-visible, [tabindex]:focus-visible {
 }
 .markdown-section pre {
   max-width: 100%; margin: 1.35rem 0; overflow-x: auto;
-  border: 1px solid #263548; border-radius: var(--radius); background: #111c2e;
+  border: 1px solid #263548; border-radius: var(--radius);
+  background: var(--code-bg); color: var(--code-text);
 }
 .markdown-section pre code { border: 0; background: transparent; color: inherit; }
+.markdown-section pre .token.punctuation { color: var(--code-punctuation); }
+.markdown-section pre .token.tag { color: var(--code-tag); }
 
 /* Course hubs */
 .syllabus-notice, .chapter-meta {
