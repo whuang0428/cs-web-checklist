@@ -1072,8 +1072,8 @@ A school uses live video conferencing. The video is compressed before being tran
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can calculate with binary, hexadecimal, BCD and two's complement.
+- [ ] I can calculate bitmap/vector and sampled-sound storage.
+- [ ] I can compare character encodings and multimedia representations.
+- [ ] I can justify lossy, lossless and RLE compression choices.
+- [ ] I can complete and self-mark both chapter practices.

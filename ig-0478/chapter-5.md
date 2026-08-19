@@ -12,6 +12,53 @@ Revise: internet and World Wide Web; URLs, browsers and cookies; digital currenc
 
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
+<span id="_chapter-5-at-a-glance" class="legacy-anchor" aria-hidden="true"></span>
+
+## Chapter at a Glance
+
+Use this overview to retrieve web resources, explain digital transactions and defend systems.
+
+### Trace a web request
+
+<span lang="zh-CN">区分互联网基础设施和万维网服务。</span>
+
+- Interpret a URL into protocol, domain and resource path.
+- Explain DNS resolution, browser request and web-server response.
+- Explain cookie storage and legitimate session/personalisation uses.
+
+**Exam cue:** write the request sequence from typed URL to returned page.
+
+### Secure web use
+
+<span lang="zh-CN">把加密、身份验证和访问控制放在正确位置。</span>
+
+- Explain how HTTPS/TLS protects data in transit.
+- Use strong authentication and access controls for accounts.
+- State the remaining human or endpoint risk after encryption.
+
+**Exam cue:** never claim that one control prevents every attack.
+
+### Explain digital currency
+
+<span lang="zh-CN">说明电子交易记录如何建立信任。</span>
+
+- Identify digital-currency characteristics and electronic transfer.
+- Explain linked blocks, hashes and distributed copies.
+- Evaluate benefits and risks in the stated payment context.
+
+**Exam cue:** connect tamper evidence to changed hashes and shared validation.
+
+### Match threats to controls
+
+<span lang="zh-CN">先从行为识别威胁，再选择针对性防护。</span>
+
+- Distinguish malware, phishing, pharming, social engineering and denial of service.
+- Match prevention, detection and recovery controls to the attack route.
+- Explain why layered controls address different failure points.
+
+**Exam cue:** name the threat, describe its mechanism, then justify each control.
+
+---
 
 ## 5.1 The Internet and the World Wide Web
 ### 5.1.1 Internet vs World Wide Web
@@ -688,8 +735,8 @@ Any five from:
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can trace URL, DNS, browser and web-server interaction.
+- [ ] I can explain cookies, HTTPS and account controls without overclaiming.
+- [ ] I can explain digital currency and blockchain transaction records.
+- [ ] I can identify threats from behaviour and justify layered controls.
+- [ ] I can complete and self-mark both chapter practices.

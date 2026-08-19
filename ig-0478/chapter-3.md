@@ -12,6 +12,53 @@ Revise: computer architecture; input, output and sensors; storage media; network
 
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
+<span id="_chapter-3-at-a-glance" class="legacy-anchor" aria-hidden="true"></span>
+
+## Chapter at a Glance
+
+Use this overview to trace the CPU, select devices, explain storage and connect networks.
+
+### Trace processor operation
+
+<span lang="zh-CN">寄存器、总线和控制信号必须按顺序对应。</span>
+
+- State the roles of CU, ALU, registers and buses.
+- Trace fetch, decode and execute using PC, MAR, MDR and CIR.
+- Link clock speed, cache and cores to processor performance.
+
+**Exam cue:** state what value or address each register holds at that moment.
+
+### Select devices and sensors
+
+<span lang="zh-CN">选择设备时写出工作原理和场景理由。</span>
+
+- Match input/output devices to the data and user requirement.
+- Distinguish resistive, capacitive and infra-red touchscreens.
+- Distinguish sensors that measure a condition from devices that capture media.
+
+**Exam cue:** name the device, explain its operation and link one benefit to the task.
+
+### Explain data storage
+
+<span lang="zh-CN">区分介质、设备、容量、速度和耐用性。</span>
+
+- Compare primary and secondary storage and virtual memory.
+- Explain magnetic, optical and solid-state operation.
+- Evaluate cloud storage using access, security, availability and backup.
+
+**Exam cue:** compare both technologies against the same contextual criterion.
+
+### Connect network hardware
+
+<span lang="zh-CN">说明每个设备处理的是地址、信号还是连接。</span>
+
+- Explain NIC and MAC-address roles within a network.
+- Distinguish public/private and static/dynamic IP addressing.
+- Explain how a router forwards data between networks.
+
+**Exam cue:** do not use switch and router as interchangeable terms.
+
+---
 
 ## 3.1 Computer Architecture
 ### 3.1.1 CPU and Microprocessor
@@ -898,8 +945,8 @@ Sensor → ADC → microprocessor → compare with stored value → output warni
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can trace FDE using the correct registers and buses.
+- [ ] I can choose input/output devices, touchscreen types and sensors.
+- [ ] I can explain magnetic, optical and solid-state operation.
+- [ ] I can compare storage and identify NIC, MAC/IP and router roles.
+- [ ] I can complete and self-mark both chapter practices.

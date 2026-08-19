@@ -480,7 +480,7 @@ Assembler translates assembly language into machine code.
 
 #### Exam warning
 
-Do not say assembler translates Java/Python/C++ high-level code. It translates **assembly language**.
+Do not say an assembler translates Java or other high-level source code. It translates **assembly language**.
 
 ---
 
@@ -1063,8 +1063,8 @@ Award 1 mark each:
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can explain OS management, utilities and libraries/DLLs.
+- [ ] I can compare compiler, interpreter and assembler operation.
+- [ ] I can explain Java bytecode and virtual-machine execution.
+- [ ] I can select IDE tools for syntax, runtime and logic faults.
+- [ ] I can complete and self-mark both chapter practices.

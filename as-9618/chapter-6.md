@@ -1010,8 +1010,8 @@ A website lets users create accounts and play quizzes. A user must enter:
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can distinguish security, privacy and integrity.
+- [ ] I can match threats to prevention, detection and recovery controls.
+- [ ] I can distinguish validation from verification with examples.
+- [ ] I can explain encryption, access control and backup limits.
+- [ ] I can complete and self-mark both chapter practices.

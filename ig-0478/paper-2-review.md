@@ -12,7 +12,7 @@
 - Answer all seven questions.
 - Spend about **30 minutes** on Question 7.
 - Use clear pseudocode unless a question asks for another representation.
-- For Question 7, pseudocode, Python, Visual Basic or Java may be used.
+- For Question 7, use pseudocode or Python. Do not mix the two syntaxes in one solution.
 - Attempt the complete paper before opening the mark scheme.
 
 ### Coverage Map
@@ -183,7 +183,7 @@ Write one complete solution that:
 - displays `"Code not found"` when the code is absent
 - outputs the final number of books borrowed
 
-Use pseudocode, Python, Visual Basic or Java. **[15]**
+Use pseudocode or Python. **[15]**
 
 ---
 

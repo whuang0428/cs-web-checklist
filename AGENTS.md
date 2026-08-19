@@ -39,14 +39,14 @@ There is no npm package, build step, React app, or Vite config in this repositor
 - `syllabus-versions.md`: active syllabus-cycle record.
 - `coverage.md`: maintainer-only inventory; exclude it from student navigation/search.
 - `ig-0478/chapter-*.md`: IGCSE 0478 chapters.
-- `ig-0478/paper-1-review.md`: original 75-mark IGCSE Paper 1 review.
+- `ig-0478/paper-1-review*.md`: two independent original 75-mark IGCSE Paper 1 reviews.
 - `ig-0478/paper-2-review*.md`: two original 75-mark IGCSE Paper 2 mixed reviews.
 - `as-9618/chapter-*.md`: AS 9618 chapters.
-- `as-9618/paper-1-review.md`: original 75-mark AS Paper 1 review.
+- `as-9618/paper-1-review*.md`: two independent original 75-mark AS Paper 1 reviews.
 - `as-9618/paper-2-review*.md`: two original 75-mark AS 9618 Paper 2 mixed reviews.
 - `a2-9618/chapter-*.md`: A2 9618 chapters.
 - `a2-9618/paper-3-review*.md`: two original 75-mark A2 9618 Advanced Theory reviews.
-- `a2-9618/paper-4-review*.md`: two original 75-mark A2 9618 Python practical reviews.
+- `a2-9618/paper-4-review*.md`: two original 75-mark A2 9618 Java practical reviews.
 
 Do not edit `.git`, generated browser caches, or temporary files.
 
@@ -73,11 +73,13 @@ Current course hubs and sidebars:
 - `IGCSE 0478`
   - `ig-0478/chapter-1.md` through `chapter-10.md`
   - `ig-0478/paper-1-review.md`
+  - `ig-0478/paper-1-review-2.md`
   - `ig-0478/paper-2-review.md`
   - `ig-0478/paper-2-review-2.md`
 - `AS 9618`
   - `as-9618/chapter-1.md` through `chapter-12.md`
   - `as-9618/paper-1-review.md`
+  - `as-9618/paper-1-review-2.md`
   - `as-9618/paper-2-review.md`
   - `as-9618/paper-2-review-2.md`
 - `A2 9618`
@@ -101,21 +103,21 @@ Already addressed in the current baseline:
 - Student-facing chapter headings use syllabus-aligned wording instead of `Trend-Based` or `Past Paper Focus` entry titles.
 - Teacher-only sections have been removed from student-facing pages.
 - All 30 chapters use the shared editorial contract and course/Paper/version metadata.
-- IGCSE 0478 checklist coverage includes Chapters 1-10 and an original 75-mark Paper 1 Set A.
+- IGCSE 0478 checklist coverage includes Chapters 1-10 and two independent 75-mark Paper 1 sets.
 - IGCSE Chapters 7-10 include syllabus maps, worked examples, 10-mark checks, 20-mark practice and full answers.
 - Two original 75-mark IGCSE Paper 2 mixed reviews and mark schemes cover Topics 7-10.
-- AS 9618 checklist coverage includes Chapters 1-12 and an original 75-mark Paper 1 Set A.
+- AS 9618 checklist coverage includes Chapters 1-12 and two independent 75-mark Paper 1 sets.
 - AS Chapters 9-12 include syllabus maps, worked examples, 10-mark checks, 20-mark practice and full answers.
 - Two original 75-mark AS Paper 2 mixed reviews and mark schemes cover Sections 9-12.
 - A2 9618 checklist coverage now includes Chapters 13-20.
-- A2 Chapters 19-20 include syllabus maps, executable Python examples, worked examples, 10-mark checks and 20-mark practice.
+- A2 Chapters 19-20 include syllabus maps, executable Java examples, pseudocode planning, worked examples, 10-mark checks and 20-mark practice.
 - Two independent original 75-mark A2 Paper 3 reviews cover Sections 13-20.
-- Two original 75-mark A2 Paper 4 Python practicals and reference mark schemes cover Sections 19-20.
+- Two original 75-mark A2 Paper 4 Java practicals and reference mark schemes cover Sections 19-20.
 
 Remaining highest-priority improvements:
 
 1. Keep all practice sets independent and avoid duplicating scenarios merely to increase page count.
-2. Keep practical Python examples executable and update them if permitted Paper 4 languages change.
+2. Keep practical Java examples executable and preserve pseudocode across all three course levels.
 3. Maintain keyboard, contrast, mobile and long-code-block accessibility.
 4. Keep recent-paper references as supporting evidence, but do not make them the main page title or site positioning.
 5. Do not add teacher notes, teaching guides, classroom-management advice, or teacher-only appendices to public pages.

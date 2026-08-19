@@ -1217,8 +1217,8 @@ Award up to 3 marks:
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can compare network models, topologies and transmission media.
+- [ ] I can trace switching, routing, DNS and internet communication.
+- [ ] I can explain Ethernet, IP addressing and cloud services.
+- [ ] I can select application protocols including POP3 and IMAP.
+- [ ] I can complete and self-mark both chapter practices.

@@ -624,8 +624,8 @@ One mark for function + one mark for matching role description, max four:
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can distinguish system/application software and explain OS functions.
+- [ ] I can describe interrupt handling in the correct order.
+- [ ] I can compare high-level/low-level languages and translators.
+- [ ] I can explain how named IDE tools improve development.
+- [ ] I can complete and self-mark both chapter practices.

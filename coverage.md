@@ -14,9 +14,9 @@ This maintainer page records the current information architecture and assessment
 
 | Course | Chapters | Complete original practice |
 |---|---:|---|
-| IGCSE 0478 | 1–10 | Paper 1 Set A; Paper 2 Sets A and B |
-| AS 9618 | 1–12 | Paper 1 Set A; Paper 2 Sets A and B |
-| A Level 9618 — A2 / Year 2 | 13–20 | Paper 3 Sets A and B; Paper 4 Sets A and B |
+| IGCSE 0478 | 1–10 | Paper 1 Sets A and B; Paper 2 Sets A and B |
+| AS 9618 | 1–12 | Paper 1 Sets A and B; Paper 2 Sets A and B |
+| A Level 9618 — A2 / Year 2 | 13–20 | Paper 3 Sets A and B; Java Paper 4 Sets A and B |
 
 All 30 chapter pages carry course/Paper/version metadata and the same editorial contract: Official Syllabus Checklist, Core Knowledge, Required Ideas and Exam Language, Common Confusions, Worked Examples, 10-Mark Quick Check with answers, 20-Mark Exam Practice with a mark scheme, and Final Revision Checklist.
 
@@ -46,14 +46,14 @@ This register paraphrases the current official objectives; it does not reproduce
 | IG-6.1-1 | Trace sensors, processor decisions and actuators and evaluate automated systems | `ig-0478/chapter-6.md` — Automated Systems | Chapter 6 quick check and exam practice | covered |
 | IG-6.2-1 | Explain robot characteristics, roles, benefits and limitations | `ig-0478/chapter-6.md` — Robotics | Chapter 6 marked practice | covered |
 | IG-6.3-1 | Explain AI characteristics and the basic operation of expert systems and machine learning | `ig-0478/chapter-6.md` — Artificial Intelligence | Chapter 6 marked practice | covered |
-| IG-7.1-1 | Apply the program development life cycle, decomposition, abstraction and identifier tables | `ig-0478/chapter-7.md` — Program Development | Chapter 7 quick check and exam practice | covered |
+| IG-7.1-1 | Apply the program development life cycle, decomposition, abstraction and identifier tables | `ig-0478/chapter-7.md` — Program Development and Abstraction | Chapter 7 abstraction quick check and exam practice | covered |
 | IG-7.2-1 | Trace and design totals, counts, maximum/minimum, average, search and bubble-sort solutions | `ig-0478/chapter-7.md` — Standard Algorithms | Chapter 7 worked examples | covered |
 | IG-7.3-1 | Select validation/verification and normal, abnormal, extreme and boundary test data; use trace tables | `ig-0478/chapter-7.md` — Validation, Testing and Tracing | Chapter 7 marked practice | covered |
 | IG-7.4-1 | Identify, correct, write and amend algorithms using flowcharts, pseudocode or program code | `ig-0478/chapter-7.md` — Algorithm Design | Chapter 7 marked practice | covered |
 | IG-8.1-1 | Use variables, types, input/output, assignment, control structures, subroutines, strings and library routines | `ig-0478/chapter-8.md` — Programming Concepts | Chapter 8 quick check and exam practice | covered |
 | IG-8.2-1 | Declare, index, read and update one- and two-dimensional arrays | `ig-0478/chapter-8.md` — Arrays | Chapter 8 worked examples and exam practice | covered |
 | IG-8.3-1 | Open, read, write and close text files safely | `ig-0478/chapter-8.md` — File Handling | Chapter 8 worked examples and exam practice | covered |
-| IG-9.1-1 | Design a single-table database with suitable fields, types and primary key | `ig-0478/chapter-9.md` — Database Design | Chapter 9 quick check and exam practice | covered |
+| IG-9.1-1 | Design a single-table database with suitable fields, types, validation rules and primary key | `ig-0478/chapter-9.md` — Database Design and Validation | Chapter 9 quick check and exam practice | covered |
 | IG-9.2-1 | Read and complete the required SQL query subset, including filtering, ordering and aggregates | `ig-0478/chapter-9.md` — SQL | Chapter 9 marked practice | covered |
 | IG-10.1-1 | Identify and explain NOT, AND, OR, NAND, NOR and XOR gates | `ig-0478/chapter-10.md` — Logic Gates | Chapter 10 quick check | covered |
 | IG-10.2-1 | Convert between problem statements, expressions, truth tables and logic circuits | `ig-0478/chapter-10.md` — Boolean Logic | Chapter 10 exam practice | covered |
@@ -68,7 +68,7 @@ This register paraphrases the current official objectives; it does not reproduce
 | AS-2.1-networks | Explain network models/topologies, cloud, media, LAN/internet hardware, Ethernet, streaming, IP, URL and DNS | `as-9618/chapter-2.md` — Networks Including the Internet | Chapter 2 marked practice | covered |
 | AS-3.1-components | Explain embedded systems, required hardware operation, buffers, memory/storage and monitoring/control | `as-9618/chapter-3.md` — Computers and Components | Principal-operation drill and Chapter 3 practice | covered |
 | AS-3.2-logic | Convert between logic requirements, expressions, gates and truth tables | `as-9618/chapter-3.md` — Logic Gates and Circuits | Chapter 3 marked practice | covered |
-| AS-4.1-cpu | Explain CPU architecture, registers/buses, ports, FDE, interrupts and performance | `as-9618/chapter-4.md` — CPU Architecture | Chapter 4 marked practice | covered |
+| AS-4.1-cpu | Explain CPU architecture, registers/buses, USB/HDMI/VGA ports, FDE, interrupts and performance | `as-9618/chapter-4.md` — CPU Architecture and Peripheral Ports | Chapter 4 port selection quick check and exam practice | covered |
 | AS-4.2-assembly | Apply two-pass assembly, trace the example instruction set and use five addressing modes | `as-9618/chapter-4.md` — Assembly Language | Chapter 4 trace practice | covered |
 | AS-4.3-bit-manipulation | Perform logical/arithmetic/cyclic shifts and test/set bits with masks | `as-9618/chapter-4.md` — Bit Manipulation | Chapter 4 exam practice | covered |
 | AS-5.1-operating-systems | Explain OS management, utilities and program-library/DLL use | `as-9618/chapter-5.md` — Operating Systems | Chapter 5 marked practice | covered |
@@ -107,10 +107,10 @@ This register paraphrases the current official objectives; it does not reproduce
 | A2-16.2-translation | Explain interpreter/compiler stages, syntax notation and RPN evaluation | `a2-9618/chapter-16.md` — Translation Software | Chapter 16 marked practice | covered |
 | A2-17.1-security | Apply symmetric/asymmetric/quantum cryptography, TLS, certificates and signatures | `a2-9618/chapter-17.md` — Security | Chapter 17 marked practice | covered |
 | A2-18.1-ai | Apply graph search, neural networks, learning categories, reinforcement, backpropagation and regression | `a2-9618/chapter-18.md` — Artificial Intelligence | Chapter 18 marked practice | covered |
-| A2-19.1-algorithms | Implement/compare searches, sorts and ADTs using Big O time/space analysis | `a2-9618/chapter-19.md` — Algorithms | Chapter 19 marked practice | covered |
-| A2-19.2-recursion | Write and trace recursive algorithms and explain call-stack unwinding | `a2-9618/chapter-19.md` — Recursion | Chapter 19 marked practice | covered |
+| A2-19.1-algorithms | Implement/compare searches, sorts and ADTs using Big O time/space analysis | `a2-9618/chapter-19.md` — Search, Sort and Abstract Data Types | Java examples and Chapter 19 marked practice | covered |
+| A2-19.2-recursion | Write and trace recursive algorithms and explain call-stack unwinding | `a2-9618/chapter-19.md` — Recursion | Java factorial smoke test and Chapter 19 practice | covered |
 | A2-20.1-paradigms | Explain four paradigms and write low-level and declarative code alongside procedural/OOP code | `a2-9618/chapter-20.md` — Programming Paradigms | Chapter 20 Paper 3 quick check and Paper 3 reviews | covered |
-| A2-20.2-files-exceptions | Process serial/sequential/random files and write targeted exception handling | `a2-9618/chapter-20.md` — File Processing and Exception Handling | Chapter 20 Paper 4 exam practice | covered |
+| A2-20.2-files-exceptions | Process serial/sequential/random files and write targeted exception handling | `a2-9618/chapter-20.md` — File Organisation, Processing and Exception Handling | Java Chapter 20 practice and Paper 4 Sets A/B | covered |
 
 ## Navigation Contract
 
@@ -124,6 +124,7 @@ This register paraphrases the current official objectives; it does not reproduce
 ## Runtime and Visual Contract
 
 - Docsify, Markdown, CSS and local native JavaScript only; no build system or account/progress layer.
+- Pseudocode is compulsory across IGCSE, AS and A2; IGCSE program-code examples use Python, while AS/A2 program-language examples and A2 Paper 4 use Java only.
 - `assets/site.js` applies course identity, answer disclosure, focusable table scrolling and course-bounded pagination.
 - `assets/style.css` defines the IG blue, AS teal and A2 amber tokens, the approximately 76-character reading measure, responsive layout and A4 print rules.
 - Answers remain collapsed by default. Printing a collapsed page produces a student version; opening the answer disclosure before printing includes the mark scheme.
@@ -142,6 +143,6 @@ Then verify the cover, all three hubs, representative theory/practical/Mermaid p
 ## Maintenance Priorities
 
 1. Keep every practice set independent; do not create new sets by rewording an existing scenario.
-2. Recheck syllabus versions and Paper 4 permitted languages when Cambridge publishes a new cycle.
+2. Recheck syllabus versions while preserving this project's Python-for-IG and Java-for-AS/A2 language path.
 3. Preserve keyboard, contrast, mobile, print, Mermaid and long-code/table accessibility.
 4. Keep public wording student-facing and original; do not add teacher-only or trend-ranking material.

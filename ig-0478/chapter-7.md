@@ -23,7 +23,7 @@ Use this chapter to check every Topic 7 objective.
 | Objective | Where it is covered |
 |---|---|
 | Program development life cycle | Program Development Life Cycle |
-| Decomposition and subsystem design | Program Development Life Cycle; Describing an Algorithm |
+| Decomposition, abstraction and subsystem design | Program Development Life Cycle; Describing an Algorithm |
 | Structure diagrams, flowcharts and pseudocode | Describing an Algorithm |
 | Algorithm purpose and input-process-output-storage | Describing an Algorithm |
 | Linear search, bubble sort, totalling, counting, maximum, minimum and average | Standard Algorithm Methods |
@@ -59,6 +59,21 @@ For a school event booking system, possible subsystems are:
 - display confirmation
 
 This makes the design easier to understand, code and test.
+
+### Abstraction
+
+**Abstraction** keeps the details needed to solve the problem and removes details that do not affect the solution.
+
+For the event-booking system, the algorithm needs the ticket type, quantity and price. It does not need the attendee's favourite colour or the colour of the payment card. Removing irrelevant details makes the inputs, rules and data structures easier to identify.
+
+Abstraction and decomposition solve different design problems:
+
+| Method | Question answered | Event-booking example |
+|---|---|---|
+| Decomposition | What smaller subsystems are needed? | input, validation, price calculation, saving and output |
+| Abstraction | Which details matter inside those subsystems? | keep ticket type and quantity; ignore unrelated personal preferences |
+
+**Exam cue:** when asked how abstraction helps, name an irrelevant detail that is removed and explain how this simplifies the model or algorithm.
 
 ---
 
@@ -442,8 +457,8 @@ The worked calculations, process templates and scenario answers above model the 
 ## 10-Mark Quick Check
 
 1. Name the four stages of the program development life cycle. **[4]**
-2. State one difference between validation and verification. **[2]**
-3. A valid age is from 1 to 120 inclusive. Give one lower-boundary invalid value and one upper extreme value. **[2]**
+2. State one difference between decomposition and abstraction. **[2]**
+3. State one difference between validation and verification. **[2]**
 4. State the purpose of a linear search and the purpose of a bubble sort. **[2]**
 
 **Total: 10 marks**
@@ -451,8 +466,8 @@ The worked calculations, process templates and scenario answers above model the 
 ## Quick Check Answers
 
 1. Analysis, design, coding and testing. Award one mark for each. **[4]**
-2. Validation checks that data is sensible or follows rules; verification checks that data was entered/copied accurately. **[2]**
-3. Lower-boundary invalid value: `0`; upper extreme value: `120`. **[2]**
+2. Decomposition divides the problem into smaller subsystems **[1]**; abstraction removes irrelevant detail while keeping the features needed by the solution **[1]**. **[2]**
+3. Validation checks that data is sensible or follows rules; verification checks that data was entered/copied accurately. **[2]**
 4. Linear search finds a target by checking items in sequence; bubble sort repeatedly compares and swaps adjacent items to place data in order. **[2]**
 
 ---
@@ -461,7 +476,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 A running club records eight lap times in seconds in the array `LapTime[1:8]`. Every time must be from 30 to 180 inclusive.
 
-1. Identify one input, one process and one output for this system. **[3]**
+1. Identify one input, one process and one output for this system, then name one detail that can be removed by abstraction. **[4]**
 2. Give one normal value, both extreme values and one abnormal value for testing a lap-time input. **[4]**
 3. Explain why double entry is verification rather than validation. **[2]**
 4. The following algorithm is intended to find the fastest time:
@@ -480,13 +495,13 @@ A running club records eight lap times in seconds in the array `LapTime[1:8]`. E
    - input and validate eight lap times
    - calculate their total and average
    - count how many are below 60 seconds
-   - output the average and count. **[7]**
+   - output the average and count. **[6]**
 
 **Total: 20 marks**
 
 ### 20 Marks Practice Mark Scheme
 
-1. Any suitable input such as a lap time; process such as calculate average/count values below 60; output such as the average or count. One mark each. **[3]**
+1. Any suitable input such as a lap time; process such as calculate average/count values below 60; output such as the average or count **[3]**; one irrelevant detail that can be removed, such as the runner's favourite colour **[1]**. **[4]**
 2. Normal: any integer clearly within the range, such as 75; extremes: 30 and 180; abnormal: any value outside the range or wrong type, such as 181. **[4]**
 3. Double entry compares two versions to check accurate entry **[1]**; it does not check whether the value satisfies a sensible rule **[1]**. **[2]**
 4. `Fastest` should be initialised to `LapTime[1]`, not zero **[2]**; a faster time is smaller, so the comparison should use `<`, not `>` **[2]**. **[4]**
@@ -512,7 +527,7 @@ A running club records eight lap times in seconds in the array `LapTime[1:8]`. E
    OUTPUT Under60
    ```
 
-   Award for: initialising total and counter **[1]**; correct eight-item loop **[1]**; valid range loop **[1]**; storing each input **[1]**; correct total **[1]**; correct conditional count **[1]**; correct average and both outputs **[1]**. **[7]**
+   Award for: initialising total and counter **[1]**; correct eight-item loop **[1]**; valid range loop and storing each input **[1]**; correct total **[1]**; correct conditional count **[1]**; correct average and both outputs **[1]**. **[6]**
 
 ---
 

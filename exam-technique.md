@@ -37,6 +37,89 @@ Use this progression when a question asks you to explain, justify or evaluate:
 
 **Contextual:** Fibre has higher bandwidth and is not affected by electromagnetic interference, so it is more suitable for a reliable high-volume link between the two school buildings.
 
+## Five High-Mark Answer Patterns
+
+### 1. Calculation: formula → substitution → conversion → unit
+
+**Question pattern:** calculate the size of a `400 × 300` image at 16-bit colour in KiB.
+
+```text
+400 × 300 × 16 = 1 920 000 bits
+1 920 000 ÷ 8 = 240 000 bytes
+240 000 ÷ 1024 = 234.375 KiB
+```
+
+Write every conversion. A correct number with no method can lose working marks; a correct method with a final unit slip may retain them. Practise this pattern in [IGCSE Chapter 1](ig-0478/chapter-1.md) and [AS Chapter 1](as-9618/chapter-1.md).
+
+### 2. Trace: record only states that actually change
+
+For binary search, use columns such as `Low`, `High`, `Middle`, `Value` and `Action`. Calculate the middle index, compare once, then update only one boundary. Do not silently jump to the final answer.
+
+| Step | Low | High | Middle | Value | Action |
+|---:|---:|---:|---:|---:|---|
+| 1 | 0 | 6 | 3 | 21 | target larger, so `Low = 4` |
+| 2 | 4 | 6 | 5 | 33 | target smaller, so `High = 4` |
+
+For assembly, record ACC, IX and changed memory after every instruction. For recursion, show calls descending and returned values during unwinding. Practise in [A2 Chapter 19](a2-9618/chapter-19.md) and [AS Chapter 4](as-9618/chapter-4.md).
+
+### 3. Pseudocode: contract → initialise → process → return/output
+
+All three courses require pseudocode. Before writing the body:
+
+1. identify inputs, outputs and return type
+2. declare/initialise totals, counters, flags and arrays
+3. choose the loop from the stopping condition
+4. keep array bounds and indexing consistent
+5. close every construct and return on every required path
+
+```text
+FUNCTION FindCode(Codes, Target) RETURNS INTEGER
+    FOR Index <- 0 TO LENGTH(Codes) - 1
+        IF Codes[Index] = Target THEN
+            RETURN Index
+        ENDIF
+    NEXT Index
+    RETURN -1
+ENDFUNCTION
+```
+
+IGCSE may also use Python program code; AS Paper 2 uses Cambridge pseudocode; A2 executable examples and Paper 4 practice in this site use Java. Do not mix syntax within one answer. See [IGCSE Chapter 7](ig-0478/chapter-7.md), [AS Chapter 11](as-9618/chapter-11.md) and [A2 Chapter 19](a2-9618/chapter-19.md).
+
+### 4. Evaluate: benefits and limitations must lead to a decision
+
+For a 4-mark structure asking for two benefits, one limitation and a conclusion:
+
+- benefit 1: technical mechanism + contextual effect
+- benefit 2: a different mechanism + contextual effect
+- limitation: how/when the proposal can fail
+- judgement: choose, reject or trial it using the evidence above
+
+**Model:** “Automated classification can process items continuously, increasing throughput. It can also apply the same learned criteria consistently. However, dirty or unusual items may be outside the training data and be misclassified. The centre should therefore trial it with sampled human checks until measured accuracy meets its target.”
+
+The conclusion is not a repeated benefit; it is an action supported by the trade-off.
+
+### 5. Paper 4 Java evidence: code → input → expected → actual → result
+
+Paper 4 marks executable behaviour and testing evidence. For every required test, record:
+
+| Test purpose | Input | Expected result | Actual result | Pass? |
+|---|---|---|---|---|
+| lower boundary | reading `-50.0` | object accepted | object accepted | yes |
+| invalid value | reading `150.1` | `IllegalArgumentException` | `IllegalArgumentException` | yes |
+
+Use Java console mode throughout this site's A2 practical route. Include normal, boundary and invalid cases plus empty/full/missing-file paths where relevant. A screenshot without the input and expected outcome is weak evidence. Apply this pattern in [Paper 4 Set A](a2-9618/paper-4-review.md) and [Set B](a2-9618/paper-4-review-2.md).
+
+## Losing Marks: Diagnosis and Repair
+
+| Weak response | Why it loses marks | Repair |
+|---|---|---|
+| list of keywords | no relationship or mechanism | turn each keyword into subject + action + effect |
+| generic advantage | not applied to the scenario | name the data, device, user or constraint |
+| trace with final value only | no evidence of correct execution | show each comparison/state change |
+| pseudocode with mixed syntax | unclear or invalid constructs | use one consistent course convention |
+| “reasonable answer” without condition | cannot be awarded precisely | state the exact fact and causal link |
+| Java test says “works” | no reproducible evidence | show input, expected, actual and pass/fail |
+
 ## Assessment Objectives
 
 ### IGCSE 0478

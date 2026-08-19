@@ -896,8 +896,8 @@ Need at least one social and one economic point for full marks.
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can apply professional ethical principles to a new scenario.
+- [ ] I can distinguish copyright, licences, free software and freeware.
+- [ ] I can identify bias, privacy and accountability risks in AI.
+- [ ] I can produce a balanced evaluation with a justified conclusion.
+- [ ] I can complete and self-mark both chapter practices.

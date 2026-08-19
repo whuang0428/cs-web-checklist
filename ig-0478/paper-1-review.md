@@ -81,7 +81,7 @@ A greenhouse uses sensors, a microprocessor and actuators to control plant condi
 1. Identify one suitable sensor and one suitable actuator for controlling temperature. **[2]**
 2. Describe the feedback process used to maintain the target temperature. **[4]**
 3. Give two characteristics that distinguish a robot from a simple automated system. **[2]**
-4. The owner proposes an artificial-intelligence system that predicts watering needs. Evaluate this proposal, giving two benefits, two limitations and a justified conclusion. **[4]**
+4. The owner proposes an artificial-intelligence system that predicts watering needs. Evaluate this proposal, giving two benefits, one limitation and a justified conclusion. **[4]**
 
 ## Mark Scheme
 
@@ -130,4 +130,4 @@ A greenhouse uses sensors, a microprocessor and actuators to control plant condi
 1. Temperature sensor/thermistor **[1]**; heater, fan, motorised vent or cooling unit **[1]**. **[2]**
 2. Sensor repeatedly measures temperature **[1]**; analogue value is converted if required and sent to the microprocessor **[1]**; reading is compared with stored target/range **[1]**; control signal operates or stops the actuator, then new readings provide feedback **[1]**. **[4]**
 3. Any two: programmable, can sense its environment, can move/manipulate objects, performs a range of tasks, may make rule-based/autonomous decisions. **[2]**
-4. Award one mark each for two valid benefits, such as adapting water to conditions and reducing waste **[2]**; one mark for valid limitations, such as biased/insufficient training data, sensor failure, cost or opaque decisions **[1]**; one mark for a conclusion justified using the scenario, such as trial it with human override and measured validation before full control **[1]**. **[4]**
+4. Award one mark each for two distinct benefits, such as adapting water to conditions and reducing waste **[2]**; one mark for one developed limitation, such as poor training data producing unreliable predictions, sensor failure supplying misleading inputs, or cost outweighing the saving **[1]**; one mark for a conclusion justified using the scenario, such as trial it with human override and measured validation before full control **[1]**. **[4]**

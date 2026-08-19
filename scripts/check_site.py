@@ -4,7 +4,10 @@
 from __future__ import annotations
 
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 from difflib import SequenceMatcher
 from pathlib import Path
 from urllib.parse import unquote
@@ -24,18 +27,22 @@ EXPECTED_CHAPTERS = {
 IG_REVIEW_PAGE = ROOT / "ig-0478" / "paper-2-review.md"
 IG_REVIEW_PAGE_2 = ROOT / "ig-0478" / "paper-2-review-2.md"
 IG_PAPER1_REVIEW_PAGE = ROOT / "ig-0478" / "paper-1-review.md"
+IG_PAPER1_REVIEW_PAGE_2 = ROOT / "ig-0478" / "paper-1-review-2.md"
 AS_REVIEW_PAGE = ROOT / "as-9618" / "paper-2-review.md"
 AS_REVIEW_PAGE_2 = ROOT / "as-9618" / "paper-2-review-2.md"
 AS_PAPER1_REVIEW_PAGE = ROOT / "as-9618" / "paper-1-review.md"
+AS_PAPER1_REVIEW_PAGE_2 = ROOT / "as-9618" / "paper-1-review-2.md"
 A2_PAPER3_REVIEW_PAGE = ROOT / "a2-9618" / "paper-3-review.md"
 A2_PAPER3_REVIEW_PAGE_2 = ROOT / "a2-9618" / "paper-3-review-2.md"
 A2_REVIEW_PAGE = ROOT / "a2-9618" / "paper-4-review.md"
 A2_REVIEW_PAGE_2 = ROOT / "a2-9618" / "paper-4-review-2.md"
 REVIEW_PAGES = {
     IG_PAPER1_REVIEW_PAGE,
+    IG_PAPER1_REVIEW_PAGE_2,
     IG_REVIEW_PAGE,
     IG_REVIEW_PAGE_2,
     AS_PAPER1_REVIEW_PAGE,
+    AS_PAPER1_REVIEW_PAGE_2,
     AS_REVIEW_PAGE,
     AS_REVIEW_PAGE_2,
     A2_PAPER3_REVIEW_PAGE,
@@ -53,19 +60,34 @@ OVERVIEW_CONTRACTS = {
         "_3-one-page-mind-map",
         ["Convert values", "Calculate storage", "Represent media", "Choose compression"],
     ),
+    ROOT / "ig-0478" / "chapter-2.md": (
+        "## Chapter at a Glance",
+        "_chapter-2-at-a-glance",
+        ["Trace packet delivery", "Select transmission", "Detect errors", "Protect messages"],
+    ),
+    ROOT / "ig-0478" / "chapter-3.md": (
+        "## Chapter at a Glance",
+        "_chapter-3-at-a-glance",
+        [
+            "Trace processor operation",
+            "Select devices and sensors",
+            "Explain data storage",
+            "Connect network hardware",
+        ],
+    ),
     ROOT / "ig-0478" / "chapter-4.md": (
         "## Chapter at a Glance",
         "_2-chapter-4-overall-mind-map",
         ["Select software", "Handle interrupts", "Translate source code", "Use IDE tools"],
     ),
     ROOT / "ig-0478" / "chapter-5.md": (
-        "### 5.3.1 Threats at a Glance",
-        "_531-threat-overview-mind-map",
+        "## Chapter at a Glance",
+        "_chapter-5-at-a-glance",
         [
-            "Identify the attack",
-            "Recognise the evidence",
-            "Choose protection",
-            "Avoid threat confusion",
+            "Trace a web request",
+            "Secure web use",
+            "Explain digital currency",
+            "Match threats to controls",
         ],
     ),
     ROOT / "ig-0478" / "chapter-6.md": (
@@ -285,8 +307,8 @@ PHASE4_CHAPTERS = {
     ROOT / "a2-9618" / "chapter-19.md": {
         "worked_examples": 4,
         "topics": [
-            "binary_search",
-            "insertion_sort",
+            "binarySearch",
+            "insertionSort",
             "ArrayLinkedList",
             "BinarySearchTree",
             "TwoStackQueue",
@@ -307,7 +329,7 @@ PHASE4_CHAPTERS = {
             "sequential",
             "random",
             "HashTable",
-            "FileNotFoundError",
+            "FileNotFoundException",
         ],
     },
 }
@@ -317,8 +339,8 @@ HEADING_RE = re.compile(r"^(#{1,6})\s+\S")
 CDN_RE = re.compile(r"//cdn\.jsdelivr\.net/npm/([^/\"']+)")
 EXACT_VERSION_RE = re.compile(r"^[^@]+@\d+\.\d+\.\d+$")
 BOLD_MARK_RE = re.compile(r"\*\*\[(\d+)\]\*\*")
-PYTHON_FENCE_RE = re.compile(
-    r"^```python\s*\n(.*?)^```\s*$",
+JAVA_FENCE_RE = re.compile(
+    r"^```java\s*\n(.*?)^```\s*$",
     flags=re.MULTILINE | re.DOTALL,
 )
 
@@ -522,8 +544,18 @@ def check_navigation(errors: list[str]) -> None:
             add_error(errors, source, "coverage.md is maintainer-only and must not be in student navigation")
 
     course_reviews = {
-        "ig-0478": {IG_PAPER1_REVIEW_PAGE, IG_REVIEW_PAGE, IG_REVIEW_PAGE_2},
-        "as-9618": {AS_PAPER1_REVIEW_PAGE, AS_REVIEW_PAGE, AS_REVIEW_PAGE_2},
+        "ig-0478": {
+            IG_PAPER1_REVIEW_PAGE,
+            IG_PAPER1_REVIEW_PAGE_2,
+            IG_REVIEW_PAGE,
+            IG_REVIEW_PAGE_2,
+        },
+        "as-9618": {
+            AS_PAPER1_REVIEW_PAGE,
+            AS_PAPER1_REVIEW_PAGE_2,
+            AS_REVIEW_PAGE,
+            AS_REVIEW_PAGE_2,
+        },
         "a2-9618": {
             A2_PAPER3_REVIEW_PAGE,
             A2_PAPER3_REVIEW_PAGE_2,
@@ -746,6 +778,15 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "between `0` and `1` inclusive",
             "RAND(x)",
         ],
+        ROOT / "ig-0478" / "chapter-7.md": [
+            "### Abstraction",
+            "Decomposition divides the problem",
+            "one detail that can be removed by abstraction",
+        ],
+        ROOT / "ig-0478" / "chapter-9.md": [
+            "### Validation in a database design",
+            "State one suitable validation rule for `HourlyRate`",
+        ],
         ROOT / "as-9618" / "chapter-3.md": [
             "##### Laser printer",
             "##### 3D printer",
@@ -759,6 +800,10 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "floating gate",
         ],
         ROOT / "as-9618" / "chapter-4.md": [
+            "## Peripheral Ports",
+            "| USB |",
+            "| HDMI |",
+            "| VGA |",
             "### Current example instruction set",
             "`LDM #n`",
             "`LDD address`",
@@ -788,6 +833,8 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "A2 9618 · Papers 3–4",
             "**Paper 3 focus:**",
             "**Paper 4 focus:**",
+            "Java console mode",
+            "Pseudocode for binary search",
         ],
         ROOT / "a2-9618" / "chapter-20.md": [
             "A2 9618 · Papers 3–4",
@@ -806,6 +853,7 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "FACT",
             "RULE",
             "GOAL",
+            "Java console mode",
         ],
         AS_PAPER1_REVIEW_PAGE: [
             "star topology",
@@ -818,6 +866,8 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "Trace these operations in order",
             "Count = 6` means full",
         ],
+        IG_REVIEW_PAGE: ["Use pseudocode or Python"],
+        IG_REVIEW_PAGE_2: ["Use pseudocode or Python"],
         A2_PAPER3_REVIEW_PAGE: [
             "BitTorrent distributes a file between peers",
             "lexical analysis, syntax analysis and code generation",
@@ -829,6 +879,14 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "Using `LDM`, `STO` and `JPE`",
             "JPE MATCH",
         ],
+        A2_REVIEW_PAGE: [
+            "Java console mode",
+            "Complete every task in Java",
+        ],
+        A2_REVIEW_PAGE_2: [
+            "Java console mode",
+            "Complete every task in Java",
+        ],
         ROOT / "exam-technique.md": [
             "## Examination Conditions",
             "IGCSE 0478 Papers 1 and 2 do not permit calculators",
@@ -836,11 +894,22 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
         ],
         ROOT / "as-9618" / "README.md": [
             "721401-2027-2029-pseudocode-guide.pdf",
+            "Pseudocode is compulsory for Paper 2",
+        ],
+        ROOT / "ig-0478" / "README.md": [
+            "required pseudocode",
+            "Python program-code practice",
+        ],
+        ROOT / "a2-9618" / "README.md": [
+            "Pseudocode remains required",
+            "Java console mode only",
         ],
         ROOT / "syllabus-versions.md": [
             "721401-2027-2029-pseudocode-guide.pdf",
             "RAND(x)",
             "RANDOM()",
+            "every student learns pseudocode",
+            "Java console mode only",
         ],
     }
 
@@ -864,6 +933,8 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "Write pseudocode for `Dequeue",
             "FUNCTION Dequeue",
         ],
+        IG_REVIEW_PAGE: ["Visual Basic", "Use pseudocode, Python, Visual Basic or Java"],
+        IG_REVIEW_PAGE_2: ["Visual Basic", "Use pseudocode, Python, Visual Basic or Java"],
         A2_PAPER3_REVIEW_PAGE: [
             "bit streaming and why buffering",
             "compiler, linker and loader",
@@ -873,6 +944,10 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "training data, validation data and test data",
             "Distinguish syntax, logic and runtime errors",
         ],
+        A2_REVIEW_PAGE: ["```python", "Python 3 console mode"],
+        A2_REVIEW_PAGE_2: ["```python", "Python 3 console mode"],
+        ROOT / "a2-9618" / "chapter-19.md": ["```python", "Python 3"],
+        ROOT / "a2-9618" / "chapter-20.md": ["```python", "Python 3"],
     }
 
     for path, forbidden_items in forbidden_evidence.items():
@@ -1049,153 +1124,98 @@ def check_review_independence(
                 )
 
 
-def check_python_code_blocks(errors: list[str]) -> None:
-    python_pages = set(PHASE4_CHAPTERS) | {A2_REVIEW_PAGE, A2_REVIEW_PAGE_2}
-    for path in sorted(python_pages):
+def check_java_code_blocks(errors: list[str]) -> None:
+    java_pages = set(PHASE4_CHAPTERS) | {A2_REVIEW_PAGE, A2_REVIEW_PAGE_2}
+    javac = shutil.which("javac")
+    java = shutil.which("java")
+    if javac is None or java is None:
+        errors.append("Java validation requires both javac and java on PATH")
+        return
+
+    smoke_classes = {
+        ROOT / "a2-9618" / "chapter-19.md": [
+            "Ch19SearchSortDemo",
+            "Ch19ArrayLinkedListDemo",
+            "Ch19TwoStackQueueDemo",
+            "Ch19TreeDemo",
+            "Ch19RecursionDemo",
+        ],
+        ROOT / "a2-9618" / "chapter-20.md": [
+            "Ch20OopDemo",
+            "Ch20HashTableDemo",
+            "Ch20FileDemo",
+        ],
+        A2_REVIEW_PAGE: [
+            "Paper4AQuestion1",
+            "Paper4AQuestion2",
+            "Paper4AQuestion3",
+        ],
+        A2_REVIEW_PAGE_2: [
+            "Paper4BQuestion1",
+            "Paper4BQuestion2",
+            "Paper4BQuestion3",
+        ],
+    }
+
+    for path in sorted(java_pages):
         text = path.read_text(encoding="utf-8")
-        blocks = PYTHON_FENCE_RE.findall(text)
+        blocks = JAVA_FENCE_RE.findall(text)
         if not blocks:
-            add_error(errors, path, "expected at least one fenced Python code block")
+            add_error(errors, path, "expected at least one fenced Java code block")
             continue
-        namespace: dict[str, object] = {"__builtins__": __builtins__}
-        syntax_valid = True
-        for block_number, code in enumerate(blocks, 1):
-            try:
-                compiled = compile(
-                    code,
-                    f"{relative(path)}:python-block-{block_number}",
-                    "exec",
+        if "```python" in text.casefold() or "Python 3 console mode" in text:
+            add_error(errors, path, "A2 executable content must be Java-only")
+
+        with tempfile.TemporaryDirectory(prefix="cs-check-java-") as temp_name:
+            temp = Path(temp_name)
+            output = temp / "classes"
+            output.mkdir()
+            compilation_failed = False
+            for block_number, code in enumerate(blocks, 1):
+                source = temp / f"Snippet{block_number}.java"
+                source.write_text(code, encoding="utf-8")
+                result = subprocess.run(
+                    [javac, "-encoding", "UTF-8", "-d", str(output), str(source)],
+                    capture_output=True,
+                    text=True,
+                    timeout=20,
+                    check=False,
                 )
-                exec(compiled, namespace)
-            except SyntaxError as error:
-                syntax_valid = False
-                add_error(
-                    errors,
-                    path,
-                    f"Python block {block_number} has invalid syntax: "
-                    f"line {error.lineno}: {error.msg}",
+                if result.returncode != 0:
+                    compilation_failed = True
+                    detail = (result.stderr or result.stdout).strip().splitlines()
+                    add_error(
+                        errors,
+                        path,
+                        f"Java block {block_number} failed to compile: "
+                        + (detail[-1] if detail else "unknown javac error"),
+                    )
+
+            if compilation_failed:
+                continue
+
+            for class_name in smoke_classes[path]:
+                result = subprocess.run(
+                    [java, "-cp", str(output), class_name],
+                    capture_output=True,
+                    text=True,
+                    timeout=20,
+                    check=False,
                 )
-            except Exception as error:
-                syntax_valid = False
-                add_error(
-                    errors,
-                    path,
-                    f"Python block {block_number} failed during definition: {error}",
-                )
+                if result.returncode != 0:
+                    detail = (result.stderr or result.stdout).strip().splitlines()
+                    add_error(
+                        errors,
+                        path,
+                        f"Java smoke test {class_name} failed: "
+                        + (detail[-1] if detail else f"exit {result.returncode}"),
+                    )
 
-        if not syntax_valid:
-            continue
-
-        try:
-            if path == ROOT / "a2-9618" / "chapter-19.md":
-                values = [7, 3, 5, 2]
-                namespace["insertion_sort"](values)
-                if values != [2, 3, 5, 7]:
-                    raise ValueError("insertion_sort produced an incorrect result")
-                if namespace["binary_search"](values, 5) != 2:
-                    raise ValueError("binary_search failed to find an existing item")
-                linked = namespace["ArrayLinkedList"](2)
-                if not linked.insert_front("A") or not linked.insert_front("B"):
-                    raise ValueError("ArrayLinkedList could not fill available nodes")
-                if linked.insert_front("C") or not linked.delete("A"):
-                    raise ValueError("ArrayLinkedList full/delete behaviour is incorrect")
-                if not linked.insert_front("C") or linked.find("C") == -1:
-                    raise ValueError("ArrayLinkedList did not reuse a freed node")
-                queue = namespace["TwoStackQueue"]()
-                queue.enqueue("first")
-                queue.enqueue("second")
-                if queue.dequeue() != "first" or queue.dequeue() != "second":
-                    raise ValueError("TwoStackQueue did not preserve FIFO order")
-                if namespace["factorial"](5) != 120:
-                    raise ValueError("factorial recursion produced an incorrect result")
-
-            elif path == ROOT / "a2-9618" / "chapter-20.md":
-                basic = namespace["Activity"]("Basic", 10)
-                timed = namespace["TimedActivity"]("Timed", 10, 5)
-                booking = namespace["Booking"]("Learner")
-                booking.add_activity(basic)
-                booking.add_activity(timed)
-                if abs(booking.total_fee() - 21.0) > 1e-9:
-                    raise ValueError("polymorphic booking total is incorrect")
-                table = namespace["HashTable"](7)
-                if not table.insert(10, "A") or not table.insert(17, "B"):
-                    raise ValueError("HashTable collision insertion failed")
-                if table.find(10) != "A" or table.find(17) != "B":
-                    raise ValueError("HashTable collision lookup failed")
-                reading = namespace["SensorReading"]("S1", -50.0)
-                reading.set_reading(150.0)
-                if reading.get_reading() != 150.0:
-                    raise ValueError("SensorReading boundary update failed")
-                try:
-                    reading.set_reading(150.1)
-                except ValueError:
-                    pass
-                else:
-                    raise ValueError("SensorReading accepted an out-of-range value")
-
-            elif path == A2_REVIEW_PAGE:
-                deliveries = [
-                    [104, 2, 8.5],
-                    [101, 1, 4.0],
-                    [109, 3, 12.5],
-                    [106, 2, 5.0],
-                ]
-                namespace["insertion_sort_deliveries"](deliveries)
-                if [record[0] for record in deliveries] != [101, 104, 106, 109]:
-                    raise ValueError("review insertion sort produced incorrect IDs")
-                if namespace["binary_search_delivery"](deliveries, 106) != 2:
-                    raise ValueError("review binary search failed")
-                if abs(namespace["total_weight"](deliveries, 0) - 30.0) > 1e-9:
-                    raise ValueError("review recursive total is incorrect")
-                course = namespace["Course"]("C1", "Writing", 20)
-                workshop = namespace["Workshop"]("W1", "Robotics", 30, 4)
-                booking = namespace["Booking"]("Learner")
-                booking.add_course(course)
-                booking.add_course(workshop)
-                if abs(booking.total_fee() - 68.0) > 1e-9:
-                    raise ValueError("review polymorphic booking total is incorrect")
-                queue = namespace["CircularQueue"](2)
-                if not queue.enqueue("A") or not queue.enqueue("B"):
-                    raise ValueError("review queue could not fill")
-                if queue.enqueue("C") or queue.dequeue() != "A":
-                    raise ValueError("review queue overflow/FIFO behaviour is incorrect")
-                if not queue.enqueue("C") or queue.dequeue() != "B":
-                    raise ValueError("review circular queue did not wrap correctly")
-                patient_table = namespace["PatientTable"](7)
-                patient_table.insert(10, "A")
-                patient_table.insert(17, "B")
-                if patient_table.find(10) != "A" or patient_table.find(17) != "B":
-                    raise ValueError("review patient-table collision lookup failed")
-
-            elif path == A2_REVIEW_PAGE_2:
-                results = [[1, 42.0], [2, 35.0], [3, 28.0]]
-                namespace["bubble_sort_results"](results)
-                if [record[0] for record in results] != [3, 2, 1]:
-                    raise ValueError("Set B bubble sort produced incorrect order")
-                if namespace["linear_search_runner"](results, 2) != [2, 35.0]:
-                    raise ValueError("Set B linear search failed")
-                if namespace["count_faster"](results, 40.0, 0) != 2:
-                    raise ValueError("Set B recursive count failed")
-                ticket = namespace["Ticket"]("T1", "Talk", 20)
-                group = namespace["GroupTicket"]("G1", "Lab", 10, 4)
-                order = namespace["TicketOrder"]("Learner")
-                order.add_ticket(ticket)
-                order.add_ticket(group)
-                if abs(order.total_fee() - 56.0) > 1e-9:
-                    raise ValueError("Set B polymorphic ticket total is incorrect")
-                tree = namespace["CatalogueTree"]()
-                tree.insert(20, "Root")
-                tree.insert(10, "Left")
-                tree.insert(30, "Right")
-                tree.insert(10, "Updated")
-                if tree.find(10) != "Updated" or tree.find(99) is not None:
-                    raise ValueError("Set B catalogue find/update failed")
-                ordered = []
-                namespace["in_order"](tree.root, ordered)
-                if [record[0] for record in ordered] != [10, 20, 30]:
-                    raise ValueError("Set B in-order traversal failed")
-        except Exception as error:
-            add_error(errors, path, f"Phase 4 runtime smoke test failed: {error}")
+    for course in (ROOT / "as-9618", ROOT / "a2-9618"):
+        for path in sorted(course.glob("*.md")):
+            text = path.read_text(encoding="utf-8")
+            if re.search(r"\bpython\b", text, flags=re.IGNORECASE):
+                add_error(errors, path, "AS/A2 student content must use Java, not Python")
 
 
 def check_chapter_overviews(errors: list[str]) -> None:
@@ -1317,6 +1337,18 @@ def check_marked_content(errors: list[str]) -> None:
     )
     check_mixed_review(
         errors,
+        IG_PAPER1_REVIEW_PAGE_2,
+        6,
+        [
+            "Original practice paper",
+            "independent second set",
+            "1 hour 45 minutes",
+            "Question 6 — Automated and Emerging Technologies [12]",
+            "**45** | **15** | **15**",
+        ],
+    )
+    check_mixed_review(
+        errors,
         IG_REVIEW_PAGE,
         7,
         [
@@ -1346,6 +1378,18 @@ def check_marked_content(errors: list[str]) -> None:
             "Original practice paper",
             "1 hour 30 minutes",
             "9618, examinations 2027–2029, Version 2",
+            "Question 8 — Databases [10]",
+            "**45** | **30**",
+        ],
+    )
+    check_mixed_review(
+        errors,
+        AS_PAPER1_REVIEW_PAGE_2,
+        8,
+        [
+            "Original practice paper",
+            "independent second set",
+            "1 hour 30 minutes",
             "Question 8 — Databases [10]",
             "**45** | **30**",
         ],
@@ -1405,7 +1449,7 @@ def check_marked_content(errors: list[str]) -> None:
         [
             "Original practice paper",
             "2 hours 30 minutes",
-            "Python 3 console mode",
+            "Java console mode",
             "complete program code and evidence of testing",
             "Question 3 — Clinic Queue and Direct Lookup [24]",
             "75 marks",
@@ -1419,20 +1463,24 @@ def check_marked_content(errors: list[str]) -> None:
             "Original practice paper",
             "independent second practical set",
             "2 hours 30 minutes",
-            "Python 3 console mode",
+            "Java console mode",
             "Question 3 — Search Tree Catalogue [24]",
             "75 marks",
         ],
     )
     check_review_independence(errors, IG_REVIEW_PAGE, IG_REVIEW_PAGE_2)
+    check_review_independence(errors, IG_PAPER1_REVIEW_PAGE, IG_PAPER1_REVIEW_PAGE_2)
     check_review_independence(errors, AS_REVIEW_PAGE, AS_REVIEW_PAGE_2)
+    check_review_independence(errors, AS_PAPER1_REVIEW_PAGE, AS_PAPER1_REVIEW_PAGE_2)
     check_review_independence(errors, A2_PAPER3_REVIEW_PAGE, A2_PAPER3_REVIEW_PAGE_2)
     check_review_independence(errors, A2_REVIEW_PAGE, A2_REVIEW_PAGE_2)
     check_ao_totals(errors, IG_PAPER1_REVIEW_PAGE, 45, 15, 15)
+    check_ao_totals(errors, IG_PAPER1_REVIEW_PAGE_2, 45, 15, 15)
     check_ao_totals(errors, AS_PAPER1_REVIEW_PAGE, 45, 30)
+    check_ao_totals(errors, AS_PAPER1_REVIEW_PAGE_2, 45, 30)
     check_ao_totals(errors, A2_PAPER3_REVIEW_PAGE, 45, 30)
     check_ao_totals(errors, A2_PAPER3_REVIEW_PAGE_2, 45, 30)
-    check_python_code_blocks(errors)
+    check_java_code_blocks(errors)
 
 
 def check_cdn_versions(errors: list[str]) -> None:
@@ -1567,12 +1615,12 @@ def main() -> int:
     print("- root navigation is hub-only and course sidebars stay course-only and complete")
     print("- explicit search paths include all student content and exclude coverage.md")
     print("- all 30 chapters satisfy the editorial, identity and 10/20-mark contracts")
-    print("- all 18 chapter overviews satisfy the title, anchor, four-area and 20-28-unit contracts")
+    print("- all 21 registered chapter overviews satisfy the title, anchor, four-area and 20-28-unit contracts")
     print("- student pages contain no maintainer headings, raw font tags or legacy keyword labels")
-    print("- IGCSE Paper 1 Set A has 6 questions, 75 marks and AO1/AO2/AO3 45/15/15")
+    print("- both IGCSE Paper 1 sets have 6 questions, 75 marks and AO1/AO2/AO3 45/15/15")
     print("- IGCSE Paper 2 chapters satisfy worked-example and exact 10/20-mark contracts")
     print("- both IGCSE Paper 2 reviews have 7 questions, 75 marks and 7 mark schemes")
-    print("- AS Paper 1 Set A has 8 questions, 75 marks and AO1/AO2 45/30")
+    print("- both AS Paper 1 sets have 8 questions, 75 marks and AO1/AO2 45/30")
     print("- AS Paper 2 chapters satisfy worked-example and exact 10/20-mark contracts")
     print("- both AS Paper 2 reviews have 7 questions, 75 marks and 7 mark schemes")
     print("- both A2 Paper 3 reviews have 8 questions, 75 marks and AO1/AO2 45/30")
@@ -1580,7 +1628,7 @@ def main() -> int:
     print("- both A2 Paper 4 reviews have 3 questions, 75 marks and 3 mark schemes")
     print("- every A/B review pair remains below the 65% near-duplicate threshold")
     print("- syllabus-alignment evidence, scope exclusions, exam conditions and objective register pass")
-    print("- every A2 fenced Python code block compiles and core examples pass smoke tests")
+    print("- every A2 fenced Java code block compiles and all Java smoke tests pass")
     print("- jsDelivr npm dependencies use exact versions")
     print("- skip link, keyboard focus, contrast-safe code styling, answer/table/pagination scripting, print and reduced-motion checks pass")
     print("- Mermaid uses one render path, natural SVG sizes and guarded local overflow")

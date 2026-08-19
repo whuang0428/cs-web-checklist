@@ -297,6 +297,19 @@ A suitable design is:
 
 Why `GardenerName` is not the key: two gardeners may share a name, and one person's displayed name may change. The allocated plot code is unique for the record.
 
+### Validation in a database design
+
+Validation rules prevent unacceptable values from being stored. They do not prove that an accepted value is factually correct.
+
+| Field | Suitable validation | Reason |
+|---|---|---|
+| PlotCode | presence check and format check such as `P-` followed by three digits | every record needs a code in the stated format |
+| Area | type check and range check, for example `1.0` to `500.0` | rejects text, zero and unrealistic areas |
+| HasWater | Boolean/type check | only the two defined logical values are accepted |
+| AllocationDate | type check | ensures a valid date value is stored |
+
+For example, `Area = 24.5` passes the range rule but could still be a mistaken measurement. That is why validation and verification must not be confused.
+
 ---
 
 ## Worked Example 2 — Query and Output
@@ -365,8 +378,9 @@ The worked calculations, process templates and scenario answers above model the 
 
 1. Define a record and a field. **[2]**
 2. State two properties of a suitable primary key. **[2]**
-3. Give suitable data types for a product code `"007A"`, a quantity, a price and an in-stock flag. **[4]**
-4. State the purpose of `WHERE` and `ORDER BY`. **[2]**
+3. Give suitable data types for a product code `"007A"`, a quantity and an in-stock flag. **[3]**
+4. State one suitable validation rule for a quantity and the purpose of `WHERE`. **[2]**
+5. State the purpose of `ORDER BY`. **[1]**
 
 **Total: 10 marks**
 
@@ -374,8 +388,9 @@ The worked calculations, process templates and scenario answers above model the 
 
 1. A record is all stored fields about one entity; a field is one category/item of data in each record. **[2]**
 2. Any two: unique, always present, stable. **[2]**
-3. Text/alphanumeric; integer; real; Boolean. **[4]**
-4. `WHERE` filters records using a condition; `ORDER BY` sorts the result using a field and direction. **[2]**
+3. Text/alphanumeric; integer; Boolean. **[3]**
+4. For example, a type check for integer or a range check such as `Quantity >= 0` **[1]**; `WHERE` filters records using a condition **[1]**. **[2]**
+5. `ORDER BY` sorts the result using a field and direction. **[1]**
 
 ---
 
@@ -385,10 +400,10 @@ A bicycle-hire company needs one table. For every bicycle it stores a unique cod
 
 1. Give a suitable field name and data type for each of the five values. **[5]**
 2. Identify the primary key and justify your answer. **[2]**
-3. Write a query to display the code, model and hourly rate of available bicycles costing less than 12.50 per hour, ordered from lowest to highest rate. **[5]**
-4. Write a query to output the number of bicycles that are unavailable. **[3]**
-5. Write a query to output the total number of hires for bicycles whose hourly rate is greater than 15.00 or whose hire count is greater than 100. **[4]**
-6. State why `ModelName` would be unsuitable as the primary key. **[1]**
+3. State one suitable validation rule for `HourlyRate` and explain what it prevents. **[2]**
+4. Write a query to display the code, model and hourly rate of available bicycles costing less than 12.50 per hour, ordered from lowest to highest rate. **[5]**
+5. Write a query to output the number of bicycles that are unavailable. **[2]**
+6. Write a query to output the total number of hires for bicycles whose hourly rate is greater than 15.00 or whose hire count is greater than 100. **[4]**
 
 **Total: 20 marks**
 
@@ -398,7 +413,9 @@ Assume the table is named `Bicycles` and uses these fields: `BikeCode`, `ModelNa
 
 1. `BikeCode`: text; `ModelName`: text; `HourlyRate`: real; `HireCount`: integer; `Available`: Boolean. Award one mark for each suitable field/type pair. **[5]**
 2. `BikeCode` **[1]** because it is stated to be unique for every bicycle **[1]**. **[2]**
-3.
+3. A type check requiring a real/numeric value or a range check such as `HourlyRate >= 0` **[1]**; it rejects non-numeric or negative rates before storage **[1]**. **[2]**
+
+4.
 
    ```sql
    SELECT BikeCode, ModelName, HourlyRate
@@ -409,7 +426,7 @@ Assume the table is named `Bicycles` and uses these fields: `BikeCode`, `ModelNa
 
    Correct selected fields **[1]**; table **[1]**; availability condition **[1]**; rate condition joined with `AND` **[1]**; ascending rate order **[1]**. **[5]**
 
-4.
+5.
 
    ```sql
    SELECT COUNT(BikeCode)
@@ -417,9 +434,9 @@ Assume the table is named `Bicycles` and uses these fields: `BikeCode`, `ModelNa
    WHERE Available = FALSE;
    ```
 
-   `COUNT` with a field **[1]**; correct table **[1]**; correct condition **[1]**. **[3]**
+   `COUNT` with a field **[1]**; correct unavailable condition **[1]**. **[2]**
 
-5.
+6.
 
    ```sql
    SELECT SUM(HireCount)
@@ -428,8 +445,6 @@ Assume the table is named `Bicycles` and uses these fields: `BikeCode`, `ModelNa
    ```
 
    `SUM(HireCount)` **[1]**; correct table **[1]**; both conditions **[1]**; correct `OR` connector **[1]**. **[4]**
-
-6. More than one bicycle may have the same model name, so it is not guaranteed to be unique. **[1]**
 
 ---
 

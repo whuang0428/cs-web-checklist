@@ -818,8 +818,8 @@ Drawbacks, one mark each:
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can select symmetric/asymmetric methods and key roles.
+- [ ] I can distinguish encryption, hashing and digital signatures.
+- [ ] I can trace TLS and certificate-based trust.
+- [ ] I can evaluate quantum cryptography without overstating benefits.
+- [ ] I can complete and self-mark both chapter practices.

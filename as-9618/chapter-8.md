@@ -1237,8 +1237,8 @@ Example answer:
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can model entities, keys, relationships and referential integrity.
+- [ ] I can normalise data to 3NF using dependencies.
+- [ ] I can explain secondary keys, indexing and DBMS functions.
+- [ ] I can write the required SQL DDL and DML accurately.
+- [ ] I can complete and self-mark both chapter practices.

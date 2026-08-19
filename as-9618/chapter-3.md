@@ -1034,8 +1034,8 @@ Award [2] for first four rows correct and [2] for second four rows correct.
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can explain required device and storage principal operations.
+- [ ] I can distinguish monitoring from control and trace feedback.
+- [ ] I can compare memory, storage and buffer roles.
+- [ ] I can derive logic expressions, truth tables and circuits.
+- [ ] I can complete and self-mark both chapter practices.

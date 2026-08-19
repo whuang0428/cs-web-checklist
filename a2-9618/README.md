@@ -5,7 +5,7 @@
   <span>Check your examination year before using this revision set.</span>
 </div>
 
-This is the second-year content for the staged A Level route, not a separate qualification. Paper 4 uses Java, Visual Basic .NET or Python in console mode.
+This is the second-year content for the staged A Level route, not a separate qualification. Pseudocode remains required for planning and algorithm reasoning; this project supports **Java console mode only** for executable examples and Paper 4 practice.
 
 ## Paper 3 — Advanced Theory
 
@@ -30,11 +30,11 @@ This is the second-year content for the staged A Level route, not a separate qua
 ## Paper 4 — Practical
 
 **2 hours 30 minutes · 75 marks · Sections 19–20**
-**Complete program code and testing evidence required**
+**Java console program code and testing evidence required**
 
 <div class="practice-links">
-  <a href="#/a2-9618/paper-4-review"><strong>Paper 4 Practical — Set A</strong><span>Original Python console-mode practice</span></a>
-  <a href="#/a2-9618/paper-4-review-2"><strong>Paper 4 Practical — Set B</strong><span>Independent Python console-mode retest</span></a>
+  <a href="#/a2-9618/paper-4-review"><strong>Paper 4 Practical — Set A</strong><span>Original Java console-mode practice</span></a>
+  <a href="#/a2-9618/paper-4-review-2"><strong>Paper 4 Practical — Set B</strong><span>Independent Java console-mode retest</span></a>
 </div>
 
 ## What Is New at This Level?

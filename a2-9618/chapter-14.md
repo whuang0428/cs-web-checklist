@@ -635,8 +635,8 @@ A student sends a large file across the internet.
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can trace data through all TCP/IP layers.
+- [ ] I can explain and select required application protocols.
+- [ ] I can compare circuit and packet switching in context.
+- [ ] I can explain router decisions and end-to-end packet delivery.
+- [ ] I can complete and self-mark both chapter practices.

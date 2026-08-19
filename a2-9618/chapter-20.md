@@ -4,694 +4,380 @@
 
 ## Official Syllabus Checklist
 
-Revise for Paper 3: all programming paradigms, including writing low-level and declarative code. Revise for Paper 4: procedural and object-oriented programming, file processing and exception handling.
+Revise: programming paradigms; low-level programming and five addressing modes; declarative facts, rules, variables and goals; OOP, containment, inheritance and polymorphism; file organisation/processing; exception handling; practical implementation and testing.
 
-> The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
+> **Paper 3 focus:** Section 20 theory, including low-level and declarative programming.
+>
+> **Paper 4 focus:** practical Sections 19–20, but **Paper 4 excludes low-level and declarative programming**. This project uses **Java console mode**. Pseudocode is still required for planning, tracing and language-neutral algorithm answers.
 
 ## Core Knowledge
 
-Use the topic sections below to connect definitions, processes, comparisons and calculations.
+## Chapter at a Glance
 
-> **Paper 3 focus:** understand all four paradigms and write low-level and declarative code from supplied requirements.
->
-> **Paper 4 focus:** build procedural and object-oriented console programs that process files, handle exceptions and produce test evidence.
+### Separate the four paradigms
 
-Paper 4 excludes **low-level** and **declarative** programming, but these paradigms remain part of Section 20 theory for Paper 3. This chapter labels that boundary explicitly.
+<span lang="zh-CN">先判断程序由什么规则驱动。</span>
+
+- Imperative code changes state through ordered statements.
+- Object-Oriented code organises state and behaviour into objects.
+- Declarative code states facts, rules and goals.
+- Low-level code uses processor instructions and explicit addressing modes.
+
+**Exam cue:** identify the defining feature, not merely a language name.
+
+### Reason about low-level code
+
+<span lang="zh-CN">操作数可能是值、地址或偏移量。</span>
+
+- Trace ACC, IX, memory and comparison result after every instruction.
+- Distinguish immediate, direct, indirect, indexed and relative addressing.
+
+**Exam cue:** calculate the effective address before changing a register.
+
+### Design Java objects
+
+<span lang="zh-CN">封装数据，通过公共方法维护有效状态。</span>
+
+- Constructors establish valid objects.
+- Containment models has-a; inheritance models is-a.
+- Overridden methods enable polymorphism through a common superclass type.
+
+**Exam cue:** show where validation occurs and why dynamic dispatch is used.
+
+### Process files safely
+
+<span lang="zh-CN">文件组织方式、访问方式和异常处理必须匹配。</span>
+
+- Serial, sequential and random files support different access patterns.
+- Handle expected exceptions specifically and preserve valid records.
+- Tests must state input, expected result and actual result.
+
+**Exam cue:** do not use an empty catch block.
 
 ---
 
 ## Syllabus Map
 
-| Syllabus objective | Where it is covered |
+| Requirement | Evidence |
 |---|---|
-| Define a programming paradigm | Programming Paradigms |
-| Explain the four paradigms and write low-level code using five addressing modes | Programming Paradigms; Low-Level Programming for Paper 3 |
-| Write declarative facts and rules, then use them to satisfy a goal | Declarative Programming for Paper 3 |
-| Write procedural code using variables, constructs and subroutines | Imperative and Procedural Design |
-| Use all required OOP terminology accurately | Object-Oriented Terminology |
-| Design classes and write OOP code | Object-Oriented Terminology; Designing and Implementing Classes and Worked Example 1 |
-| Open, read, write, append and close files | File Processing |
-| Process serial, sequential and random files | File Processing; Serial, Sequential and Random Files and Worked Examples 2–3 |
-| Explain exceptions and select when to handle them | Exception Handling |
-| Write exception-handling code | Exception Handling and Worked Example 4 |
-| Produce complete code and testing evidence | Paper 3 and Paper 4 Boundary; Worked Example 1 — OOP Design from Requirements; Worked Example 2 — Sequential File Merge; Worked Example 3 — Hash Collision Trace; Worked Example 4 — Controlled File Failure |
-
----
-
-## Paper 3 and Paper 4 Boundary
-
-Paper 3 can assess every objective in Sections 13–20. This includes writing low-level code and declarative facts, rules and goals.
-
-Paper 4 is a practical examination. Candidates use Python, Java or Visual Basic .NET in console mode and submit:
-
-- complete program code
-- evidence that the program was executed and tested
-
-The practical paper applies Sections 19–20 but excludes low-level and declarative programming.
-
-A strong evidence sequence shows:
-
-1. the code or relevant program section
-2. the exact input or test file used
-3. the output produced
-4. a short statement of what the test proves
-
-Do not submit only the successful normal case. Include boundary and failure behaviour where the task allows it.
-
----
+| Four paradigms | Programming Paradigms |
+| Five addressing modes and example instructions | Low-Level Programming for Paper 3 |
+| Facts, rules, variables and goals | Declarative Programming for Paper 3 |
+| OOP, containment, inheritance and polymorphism | Java OOP for Paper 4 |
+| Serial, sequential and random files | File Organisation and Processing |
+| Hashing and exceptions | Worked Examples 3 and 4 |
 
 ## Programming Paradigms
 
-A **programming paradigm** is a general approach to organising computation and expressing solutions.
-
-| Paradigm | Main idea | Typical features | Paper 4? |
-|---|---|---|---|
-| low-level | closely represents processor operations | registers, memory addresses, addressing modes | excluded |
-| imperative/procedural | program state changes through ordered instructions | variables, selection, iteration, procedures, functions | included |
-| object-oriented | interacting objects combine state and behaviour | classes, methods, inheritance, encapsulation | included |
-| declarative | states facts, rules or desired results rather than control steps | facts, rules, goals | excluded |
-
-### Low-level programming
-
-Low-level code uses operations and addressing modes such as immediate, direct, indirect, indexed and relative. It offers hardware control but is machine-dependent and harder to maintain.
+| Paradigm | Main idea | Typical evidence |
+|---|---|---|
+| imperative/procedural | statements update state in a defined order | assignment, selection, iteration, procedures |
+| Object-Oriented | objects combine private state and public behaviour | classes, objects, methods, inheritance |
+| declarative | facts/rules describe relationships and a goal asks what follows | knowledge base and inference |
+| low-level | instructions map closely to processor operations | accumulator, memory addresses, jumps |
 
 ## Low-Level Programming for Paper 3
 
-### Core instruction set
+### Five addressing modes
 
-| Instruction | Effect |
-| --- | --- |
-| `LDM #n` | load the immediate value `n` into ACC |
-| `LDD address` | load the contents of `address` into ACC |
-| `LDI address` | treat the contents of `address` as a second address and load from there |
-| `LDX address` | load from `address + IX` into ACC |
-| `LDR #n` | load the immediate value `n` into IX |
-| `MOV register` | copy ACC into the named register |
-| `STO address` | store ACC at the given address |
-| `ADD` / `SUB` | add to or subtract from ACC using the stated operand |
-| `CMP` / `CMI` | compare ACC with a directly or indirectly addressed value |
-| `JMP` | jump unconditionally |
-| `JPE` / `JPN` | jump when the preceding comparison is true / false |
+| Mode | Operand means | Example | Effect |
+|---|---|---|---|
+| immediate | literal value | `LDM #8` | `ACC ← 8` |
+| direct | memory address | `LDD 20` | `ACC ← Memory[20]` |
+| indirect | address holding another address | `LDI 20` | `ACC ← Memory[Memory[20]]` |
+| indexed | base address plus IX | `LDX 20` | `ACC ← Memory[20 + IX]` |
+| relative | offset from current PC | `JMP +4` | branch relative to current instruction position |
 
-### Addressing modes
+### Current example instruction set
 
-| Mode | Where the operand is found | Example |
-| --- | --- | --- |
-| immediate | the value is inside the instruction | `LDM #8` loads `8` |
-| direct | the operand gives the address containing the value | `LDD 40` loads `Memory[40]` |
-| indirect | the stated address contains a second address | `LDI 40` loads `Memory[Memory[40]]` |
-| indexed | the effective address is the stated address plus IX | `LDX 40` loads `Memory[40 + IX]` |
-| relative | a supplied displacement is added to the current / next PC | if a question defines `JMP +3`, execution moves three instructions forward |
+| Instruction | Meaning |
+|---|---|
+| `LDM #n` | load immediate value into ACC |
+| `LDD address` | load direct from memory |
+| `LDI address` | load indirect from memory |
+| `LDX address` | load from address plus IX |
+| `LDR #n` | load immediate value into IX |
+| `MOV IX` | copy ACC into IX |
+| `STO address` | store ACC in memory |
+| `ADD address` / `ADD #n` | add memory value or immediate value |
+| `SUB address` / `SUB #n` | subtract memory value or immediate value |
+| `CMP address` / `CMP #n` | compare ACC with operand |
+| `CMI address` | compare ACC indirectly |
+| `JMP address` | unconditional jump |
+| `JPE address` | jump when previous comparison is true/equal |
+| `JPN address` | jump when previous comparison is false/not equal |
 
-For relative addressing, follow the displacement notation defined in the question. Do not silently treat an absolute symbolic address as a relative offset.
+### Worked low-level writing example
 
-### Worked example — write and trace low-level code
-
-Requirement: load `6`, add the value stored at address `25`, store the result at address `40`, compare it with the value at address `41` and jump to `MATCH` when the comparison is true.
+Load immediate `6`, add the value stored at address `30`, and store the result at address `31`:
 
 ```text
 LDM #6
-ADD 25
-STO 40
-CMP 41
-JPE MATCH
+ADD 30
+STO 31
 ```
 
-If `Memory[25] = 4` and `Memory[41] = 10`, ACC becomes `10`, address `40` receives `10`, the comparison is true and the jump is taken.
+For conditional flow, `CMP #10` records whether ACC equals 10. `JPE MATCH` follows the true/equal path; `JPN OTHER` follows the false/not-equal path. Both depend on the preceding compare.
 
-### Imperative programming
+## Worked Example 1 — Addressing and Memory Trace
 
-An imperative program states **how** to perform a task through an ordered sequence. Procedural programming groups those instructions into reusable procedures and functions.
+Given `Memory[12] = 20`, `Memory[20] = 7`, `Memory[14] = 9` and `IX = 2`:
 
-### Object-oriented programming
+| Instruction | Mode | Result |
+|---|---|---|
+| `LDM #12` | immediate | `ACC = 12` |
+| `LDD 12` | direct | `ACC = 20` |
+| `LDI 12` | indirect | `ACC = Memory[20] = 7` |
+| `LDX 12` | indexed | `ACC = Memory[14] = 9` |
 
-OOP models a problem using classes and objects. Each object owns state and exposes controlled behaviour through methods.
-
-### Declarative programming
-
-Declarative code describes facts/rules and asks whether a goal can be satisfied. The engine decides the control sequence. For example, a family-relationship system can store a `parent` fact and define an `ancestor` rule.
-
-Low-level and declarative programming can be assessed in Paper 3 theory but must not be made part of a Paper 4 practice task.
+The same numeric operand can lead to four different values because its interpretation changes.
 
 ## Declarative Programming for Paper 3
 
-Use the syntax supplied by the question. In the neutral notation below:
+This chapter uses the following self-contained notation:
 
-- a **fact** states a relationship that is known to be true
-- a **variable** such as `X` or `Y` can match a value
-- a **rule** states when another relationship is true
-- a **goal** asks whether the stored facts and rules can satisfy a query
+- `FACT relation(item)` states a known relationship.
+- `RULE result(X) IF condition(X)` states an implication.
+- A capital letter such as `X` is a **variable**.
+- `GOAL relation(item)` asks whether the knowledge base can satisfy a relationship.
 
-```text
-FACT parent("Asha", "Ben")
-FACT parent("Ben", "Chen")
-
-RULE grandparent(X, Z)
-    IF parent(X, Y) AND parent(Y, Z)
-
-GOAL grandparent("Asha", "Chen")
-```
-
-The goal is satisfied: the first fact can match `parent(X, Y)` with `X = "Asha"` and `Y = "Ben"`; the second fact then matches `parent(Y, Z)` with `Z = "Chen"`.
-
-### Worked example — translate supplied information
-
-Given that every refrigerated parcel is priority and parcel `P17` is refrigerated:
+Example:
 
 ```text
-FACT refrigerated("P17")
+FACT refrigerated(vaccine)
+FACT urgent(vaccine)
+FACT refrigerated(juice)
 
-RULE priority(X)
-    IF refrigerated(X)
+RULE priority(X) IF refrigerated(X) AND urgent(X)
 
-GOAL priority("P17")
+GOAL priority(vaccine)
 ```
 
-The goal is satisfied by applying the rule to the fact. The solution states the required relationship; it does not prescribe an iteration or selection sequence.
+The goal succeeds because both conditions can be matched with `X = vaccine`. `GOAL priority(juice)` fails because no `urgent(juice)` fact is supplied.
 
----
+## Worked Example 2 — Natural Language to Rule and Goal
 
-## Imperative and Procedural Design
+Statement: “Every member with an overdue loan is blocked. Mina has an overdue loan.”
 
-Use functions and procedures to give each part one responsibility.
-
-```python
-def read_positive_integer(prompt):
-    while True:
-        try:
-            value = int(input(prompt))
-            if value > 0:
-                return value
-            print("Enter a value greater than zero")
-        except ValueError:
-            print("Enter a whole number")
-
-
-def calculate_total(price, quantity):
-    return price * quantity
+```text
+FACT overdue(mina)
+RULE blocked(X) IF overdue(X)
+GOAL blocked(mina)
 ```
 
-Good procedural design:
+The goal succeeds by applying the rule to the matching fact. The variable makes the rule general; `mina` is a specific value.
 
-- passes required data as parameters
-- returns a result instead of changing unrelated global state
-- separates input, processing, storage and output
-- keeps validation close to the input boundary
-- gives subroutines names that describe one action
+## Java OOP for Paper 4
 
-Global constants can be appropriate. Mutable global variables usually make testing and reasoning harder.
+### Encapsulation, containment and polymorphism
 
----
+- Private fields prevent uncontrolled direct changes.
+- A constructor establishes a valid initial state.
+- A `Booking` containing activities is a has-a relationship.
+- `TimedActivity extends Activity` is an is-a relationship.
+- Calling an overridden `fee()` through an `Activity` reference is polymorphism.
 
-## Object-Oriented Terminology
+```java
+import java.util.ArrayList;
+import java.util.List;
 
-| Term | Precise meaning |
-|---|---|
-| class | definition/template describing attributes and methods |
-| object/instance | one runtime occurrence created from a class |
-| attribute/property | data belonging to an object |
-| method | operation belonging to a class/object |
-| constructor | initialises a new object |
-| encapsulation | keeps state with its methods and controls direct access |
-| getter | returns a controlled view of an attribute |
-| setter | validates or controls a change to an attribute |
-| inheritance | creates a subclass from a superclass |
-| polymorphism | the same method call can execute different subclass behaviour |
-| containment/aggregation | one object stores or uses other objects: a “has-a” relationship |
+class Ch20OopDemo {
+    static class Activity {
+        private final String name;
+        private double baseFee;
+        Activity(String name, double baseFee) {
+            this.name = name;
+            setBaseFee(baseFee);
+        }
+        String getName() { return name; }
+        double getBaseFee() { return baseFee; }
+        void setBaseFee(double value) {
+            if (value < 0) throw new IllegalArgumentException("negative fee");
+            baseFee = value;
+        }
+        double fee() { return baseFee; }
+    }
 
-Distinguish the relationships:
+    static class TimedActivity extends Activity {
+        private final int minutes;
+        TimedActivity(String name, double baseFee, int minutes) {
+            super(name, baseFee);
+            if (minutes <= 0) throw new IllegalArgumentException("invalid minutes");
+            this.minutes = minutes;
+        }
+        @Override double fee() { return getBaseFee() + minutes * 0.20; }
+    }
 
-- `ElectricCar` **is a** `Vehicle`: inheritance
-- `Fleet` **has** `Vehicle` objects: containment/aggregation
+    static class Booking {
+        private final String customer;
+        private final List<Activity> activities = new ArrayList<>();
+        Booking(String customer) { this.customer = customer; }
+        void addActivity(Activity activity) { activities.add(activity); }
+        double totalFee() {
+            double total = 0;
+            for (Activity activity : activities) total += activity.fee();
+            return total;
+        }
+    }
 
----
-
-## Designing and Implementing Classes
-
-```python
-class Activity:
-    def __init__(self, title, base_fee):
-        self.__title = title
-        self.__base_fee = 0.0
-        self.set_base_fee(base_fee)
-
-    def get_title(self):
-        return self.__title
-
-    def get_base_fee(self):
-        return self.__base_fee
-
-    def set_base_fee(self, new_fee):
-        if new_fee < 0:
-            raise ValueError("fee cannot be negative")
-        self.__base_fee = float(new_fee)
-
-    def calculate_fee(self):
-        return self.__base_fee
-
-
-class TimedActivity(Activity):
-    def __init__(self, title, base_fee, minutes):
-        super().__init__(title, base_fee)
-        if minutes <= 0:
-            raise ValueError("minutes must be positive")
-        self.__minutes = minutes
-
-    def calculate_fee(self):
-        return self.get_base_fee() + self.__minutes * 0.20
-
-
-class Booking:
-    def __init__(self, customer):
-        self.__customer = customer
-        self.__activities = []
-
-    def add_activity(self, activity):
-        self.__activities.append(activity)
-
-    def total_fee(self):
-        total = 0.0
-        for activity in self.__activities:
-            total += activity.calculate_fee()
-        return total
+    public static void main(String[] args) {
+        Booking booking = new Booking("Learner");
+        booking.addActivity(new Activity("Basic", 10));
+        booking.addActivity(new TimedActivity("Timed", 10, 5));
+        if (Math.abs(booking.totalFee() - 21.0) > 0.000001) throw new AssertionError();
+    }
+}
 ```
 
-This design demonstrates:
+The total loop contains no type test. Dynamic dispatch selects the correct `fee()` implementation.
 
-- private attributes and controlled access
-- a subclass inheriting common behaviour
-- an overridden `calculate_fee()` method
-- polymorphism in `Booking.total_fee()`
-- containment because a booking stores activity objects
+## File Organisation and Processing
 
-Python does not enforce private access in the same way as every other language. Double-underscore name mangling signals and supports encapsulation, but good design still depends on using the public interface.
+| Organisation | Arrangement | Access | Suitable use |
+|---|---|---|---|
+| serial | records in arrival order, no key order | read through until found | append-only logs |
+| sequential | records in key order | efficient ordered batch processing | payroll/report runs |
+| random/direct | calculated address or key lookup | jump to likely record location | frequent individual lookup/update |
 
----
+Java text processing normally uses `BufferedReader`/`BufferedWriter`. For true random access, `RandomAccessFile` supports `seek()` to a byte position. File formats must define field order, delimiter and validation rules.
 
-## File Processing
+## Worked Example 3 — HashTable with Linear Probing
 
-### Modes and safe closure
+For size 7, keys 10 and 17 both hash to index 3. Key 10 occupies index 3; key 17 probes index 4. Searches must repeat the identical probe sequence and stop after at most seven attempts.
 
-| Mode | Meaning | Important effect |
-|---|---|---|
-| `"r"` | read | fails if the file does not exist |
-| `"w"` | write | creates or truncates the file |
-| `"a"` | append | adds to the end, creating the file if needed |
-
-Use `with` so the file closes even if an exception occurs.
-
-```python
-def write_names(filename, names):
-    with open(filename, "w", encoding="utf-8") as output_file:
-        for name in names:
-            output_file.write(name + "\n")
-
-
-def append_name(filename, name):
-    with open(filename, "a", encoding="utf-8") as output_file:
-        output_file.write(name + "\n")
-
-
-def read_names(filename):
-    names = []
-    with open(filename, "r", encoding="utf-8") as input_file:
-        for line in input_file:
-            names.append(line.strip())
-    return names
+```java
+class Ch20HashTableDemo {
+    static class HashTable {
+        private final Integer[] keys;
+        private final String[] values;
+        HashTable(int size) { keys = new Integer[size]; values = new String[size]; }
+        boolean insert(int key, String value) {
+            int index = Math.floorMod(key, keys.length);
+            for (int count = 0; count < keys.length; count++) {
+                if (keys[index] == null || keys[index] == key) {
+                    keys[index] = key; values[index] = value; return true;
+                }
+                index = (index + 1) % keys.length;
+            }
+            return false;
+        }
+        String find(int key) {
+            int index = Math.floorMod(key, keys.length);
+            for (int count = 0; count < keys.length; count++) {
+                if (keys[index] == null) return null;
+                if (keys[index] == key) return values[index];
+                index = (index + 1) % keys.length;
+            }
+            return null;
+        }
+    }
+    public static void main(String[] args) {
+        HashTable table = new HashTable(7);
+        if (!table.insert(10, "A") || !table.insert(17, "B")) throw new AssertionError();
+        if (!"A".equals(table.find(10)) || !"B".equals(table.find(17))) throw new AssertionError();
+    }
+}
 ```
-
-### Records in a text file
-
-```python
-def load_scores(filename):
-    scores = []
-    with open(filename, "r", encoding="utf-8") as input_file:
-        for line_number, line in enumerate(input_file, start=1):
-            fields = line.strip().split(",")
-            if len(fields) != 2:
-                raise ValueError(f"invalid record on line {line_number}")
-            name = fields[0]
-            score = int(fields[1])
-            scores.append((name, score))
-    return scores
-```
-
-Validate:
-
-- field count
-- data type conversion
-- required range
-- unique key if required
-- empty/malformed records
-
----
-
-## Serial, Sequential and Random Files
-
-| Organisation | Record arrangement | Access pattern |
-|---|---|---|
-| serial | records stored in the order received | normally scan from the start |
-| sequential | records stored in key order | scan in order; merging/range processing is efficient |
-| random/direct | record location derived from its key | calculate location and access without scanning all earlier records |
-
-### Serial file
-
-An append-only event log is normally serial. New records are added at the end, without rearranging earlier data.
-
-### Sequential file
-
-A customer file sorted by customer ID is sequential. Processing every customer in ID order is efficient, but inserting a new record may require rewriting the file.
-
-### Random access simulation
-
-Paper 4 source files are text files. Random organisation can be simulated by loading records into a hash table and using a hash function to calculate a slot.
-
-```python
-class HashTable:
-    def __init__(self, size):
-        self.__keys = [None] * size
-        self.__values = [None] * size
-
-    def _start_index(self, key):
-        return key % len(self.__keys)
-
-    def insert(self, key, value):
-        index = self._start_index(key)
-        for _ in range(len(self.__keys)):
-            if self.__keys[index] in (None, key):
-                self.__keys[index] = key
-                self.__values[index] = value
-                return True
-            index = (index + 1) % len(self.__keys)
-        return False
-
-    def find(self, key):
-        index = self._start_index(key)
-        for _ in range(len(self.__keys)):
-            if self.__keys[index] is None:
-                return None
-            if self.__keys[index] == key:
-                return self.__values[index]
-            index = (index + 1) % len(self.__keys)
-        return None
-```
-
-This uses **linear probing** to resolve collisions. The loop is bounded by the table size, preventing an infinite search when the table is full.
-
----
 
 ## Exception Handling
 
-An **exception** is an event raised during execution that interrupts the normal control flow.
+Catch exceptions you can handle. Examples include `FileNotFoundException`, `IOException` and `NumberFormatException`. A `finally` block is useful for cleanup, although try-with-resources closes files automatically.
 
-Handle an exception when the program can respond meaningfully, for example:
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
-- ask again after an invalid conversion
-- display a clear message for a missing file
-- skip and report a damaged input record
-- release a resource and stop safely
-
-Do not use a broad `except:` to hide programming errors.
-
-```python
-def read_integer_file(filename):
-    try:
-        with open(filename, "r", encoding="utf-8") as input_file:
-            return [int(line.strip()) for line in input_file if line.strip()]
-    except FileNotFoundError:
-        print("The input file was not found")
-    except ValueError:
-        print("The file contains a non-integer value")
-    except OSError as error:
-        print(f"The file could not be read: {error}")
-    return None
+class Ch20FileDemo {
+    static double average(Path path) {
+        double total = 0;
+        int count = 0;
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                try {
+                    total += Double.parseDouble(line.trim());
+                    count++;
+                } catch (NumberFormatException error) {
+                    System.out.println("Invalid number skipped: " + line);
+                }
+            }
+        } catch (IOException error) {
+            System.out.println("File could not be read: " + error.getMessage());
+        }
+        return count == 0 ? 0 : total / count;
+    }
+    public static void main(String[] args) {
+        if (average(Path.of("file-that-does-not-exist.txt")) != 0) throw new AssertionError();
+    }
+}
 ```
 
-Use specific exception types because each represents a different failure and may require a different response. Exception handling does not prevent the fault; it controls what happens after the exception is raised.
+## Worked Example 4 — Select the Exception Boundary
 
----
-
-## Worked Example 1 — OOP Design from Requirements
-
-Requirements:
-
-- every account has an ID and balance
-- balance cannot be changed directly
-- `SavingsAccount` adds an interest rate
-- a portfolio contains several accounts and calculates a total balance
-
-```python
-class Account:
-    def __init__(self, account_id, opening_balance):
-        if opening_balance < 0:
-            raise ValueError("opening balance cannot be negative")
-        self.__account_id = account_id
-        self.__balance = float(opening_balance)
-
-    def get_account_id(self):
-        return self.__account_id
-
-    def get_balance(self):
-        return self.__balance
-
-    def deposit(self, amount):
-        if amount <= 0:
-            raise ValueError("deposit must be positive")
-        self.__balance += amount
-
-
-class SavingsAccount(Account):
-    def __init__(self, account_id, opening_balance, interest_rate):
-        super().__init__(account_id, opening_balance)
-        self.__interest_rate = interest_rate
-
-    def projected_balance(self):
-        return self.get_balance() * (1 + self.__interest_rate)
-
-
-class Portfolio:
-    def __init__(self):
-        self.__accounts = []
-
-    def add_account(self, account):
-        self.__accounts.append(account)
-
-    def total_balance(self):
-        return sum(account.get_balance() for account in self.__accounts)
-```
-
-Design justification:
-
-- `SavingsAccount` **is an** `Account`, so inheritance is appropriate
-- `Portfolio` **has accounts**, so containment is appropriate
-- private balance plus validated `deposit()` protects the object invariant
-
----
-
-## Worked Example 2 — Sequential File Merge
-
-Two files contain records sorted by integer ID. Merge them without sorting the combined result again.
-
-```python
-def parse_record(line):
-    identifier, name = line.rstrip("\n").split(",", 1)
-    return int(identifier), name
-
-
-def merge_sorted_files(first_name, second_name, output_name):
-    with open(first_name, "r", encoding="utf-8") as first_file:
-        first_records = [parse_record(line) for line in first_file if line.strip()]
-    with open(second_name, "r", encoding="utf-8") as second_file:
-        second_records = [parse_record(line) for line in second_file if line.strip()]
-
-    first_index = 0
-    second_index = 0
-    merged = []
-
-    while first_index < len(first_records) and second_index < len(second_records):
-        if first_records[first_index][0] <= second_records[second_index][0]:
-            merged.append(first_records[first_index])
-            first_index += 1
-        else:
-            merged.append(second_records[second_index])
-            second_index += 1
-
-    merged.extend(first_records[first_index:])
-    merged.extend(second_records[second_index:])
-
-    with open(output_name, "w", encoding="utf-8") as output_file:
-        for identifier, name in merged:
-            output_file.write(f"{identifier},{name}\n")
-```
-
-Because both inputs are already ordered, the merge is `O(n + m)`. A common error is stopping when either file ends and forgetting to copy the remaining records from the other file.
-
----
-
-## Worked Example 3 — Hash Collision Trace
-
-For table size 7, use `key MOD 7` and linear probing.
-
-Insert keys `10`, `17`, `24`:
-
-| key | calculated slot | collision path | final slot |
-|---:|---:|---|---:|
-| 10 | 3 | none | 3 |
-| 17 | 3 | slot 3 occupied | 4 |
-| 24 | 3 | slots 3 and 4 occupied | 5 |
-
-Searching for `24` must repeat the same probing sequence: `3 → 4 → 5`. Stopping after the first collision would incorrectly report that the key is absent.
-
-Tests should include:
-
-- key found at its home slot
-- key found after one or more collisions
-- missing key that reaches an unused slot
-- insertion when every slot is occupied
-- update of an existing key
-
----
-
-## Worked Example 4 — Controlled File Failure
-
-```python
-def average_from_file(filename):
-    try:
-        with open(filename, "r", encoding="utf-8") as input_file:
-            values = [float(line.strip()) for line in input_file if line.strip()]
-        if not values:
-            raise ValueError("the file contains no values")
-        return sum(values) / len(values)
-    except FileNotFoundError:
-        print("No file was found")
-    except ValueError as error:
-        print(f"Invalid data: {error}")
-    return None
-```
-
-Evidence should show at least:
-
-| Test | Expected result |
-|---|---|
-| valid numeric lines | correct average returned |
-| missing file | clear missing-file message; program continues safely |
-| non-numeric line | invalid-data message |
-| empty file | explicit empty-data message |
-
----
+Place the outer `IOException` handler around opening and reading the file. Place the inner `NumberFormatException` handler around one record conversion. A malformed row is then reported and skipped without discarding later valid rows. Catching every exception around the entire method would hide programming faults and stop useful recovery.
 
 ## Required Ideas and Exam Language
 
-Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
+- Identify the paradigm from its defining control model.
+- For low-level code, state the addressing mode and effective address.
+- For declarative code, distinguish a known fact from a general rule and a tested goal.
+- Explain containment as has-a and inheritance as is-a.
+- Explain polymorphism as the same method call selecting an overridden implementation.
+- Match file organisation to the access pattern and catch specific Java exceptions.
 
 ## Common Confusions
 
 - [ ] I do not include low-level or declarative tasks in Paper 4 practice.
-- [ ] I distinguish an object from its class.
-- [ ] I use inheritance only for an “is-a” relationship.
-- [ ] I use containment for a “has-a” relationship.
-- [ ] Setters preserve object invariants instead of assigning blindly.
-- [ ] Overridden methods demonstrate real polymorphic behaviour.
-- [ ] I understand that write mode truncates an existing file.
-- [ ] I distinguish serial, sequential and random organisation.
-- [ ] Hash probing is bounded and uses the same path for insert and find.
-- [ ] I catch specific exceptions and do not hide unrelated faults.
-- [ ] My test evidence states the expected and actual result.
-
----
+- [ ] I distinguish direct from indirect addressing.
+- [ ] I base `JPE`/`JPN` on the preceding comparison.
+- [ ] I do not treat a failed declarative goal as a false fact unless the question defines that meaning.
+- [ ] I keep fields private and validate through constructors/setters.
+- [ ] I distinguish serial arrival order from sequential key order.
+- [ ] I never leave a Java catch block empty.
+- [ ] I plan in pseudocode and implement executable Paper 4 solutions in Java.
 
 ## Worked Examples
 
-The worked calculations, process templates and scenario answers above model the chain of reasoning expected in examination responses. Rework each example before reading its answer.
+The four examples cover Paper 3 low-level/declarative reasoning and Paper 4 Java data structures, files and exceptions.
 
 ## 10-Mark Quick Check
 
-This check targets the Section 20 skills that can appear in Paper 3 but are excluded from Paper 4.
-
-1. Identify the addressing mode in each instruction or question-defined operation: `LDM #7`, `LDD 40`, `LDI 40`, `LDX 40`, `JMP +3` where `+3` is added to the next PC. **[5]**
-2. Write three instructions to load the immediate value `12`, add the value stored at address `30`, and store the result at address `50`. **[3]**
-3. Using the notation from this chapter, write a rule stating that every refrigerated parcel is priority and a goal asking whether parcel `P17` is priority. **[2]**
+1. Identify the addressing mode in each instruction: `LDM #5`, `LDD 20`, `LDI 20`, `LDX 20`, `JMP +3`. **[5]**
+2. Write three instructions to load immediate 4, add the value at address 12 and store the result at address 13. **[3]**
+3. Given `FACT cold(sample)` and the notation above, write a rule stating that every cold item needs checking, then write a goal asking whether `sample` needs checking. **[2]**
 
 **Total: 10 marks**
 
 ## Quick Check Answers
 
-1. Immediate, direct, indirect, indexed and relative, in that order. One mark each. **[5]**
-2. `LDM #12` **[1]**, `ADD 30` **[1]**, `STO 50` **[1]**. **[3]**
-3. `RULE priority(X) IF refrigerated(X)` **[1]**; `GOAL priority("P17")` **[1]**. **[2]**
-
----
+1. Immediate, direct, indirect, indexed, relative. **[5]**
+2. `LDM #4` **[1]**, `ADD 12` **[1]**, `STO 13` **[1]**. **[3]**
+3. `RULE needs_check(X) IF cold(X)` **[1]**; `GOAL needs_check(sample)` **[1]**. **[2]**
 
 ## 20-Mark Exam Practice
 
-This is Paper 4 practice. It deliberately excludes low-level and declarative programming.
+Write a Java class `SensorReading` and a loader.
 
-A text file contains sensor records in the format `sensor_id,reading`. Design a robust object-oriented loader.
-
-1. Write a Python class `SensorReading` with private sensor ID and reading attributes, a constructor, getters and a validated setter that accepts readings from `-50.0` to `150.0` inclusive. **[8]**
-2. Write `load_readings(filename)` to read valid records into a list of `SensorReading` objects. It must handle a missing file and report malformed/out-of-range records without stopping the remaining load. **[8]**
-3. Give four tests with expected outcomes, including a boundary and a failure case. **[4]**
+1. Create private sensor ID and reading fields, a constructor, getters and a setter accepting readings from `-50.0` to `150.0` inclusive. Invalid readings must throw `IllegalArgumentException`. **[8]**
+2. Write `loadReadings(Path path)` to read `sensorID,reading` records into an `ArrayList<SensorReading>`. Report and skip malformed records; handle an unreadable file without crashing. **[8]**
+3. Give four tests with input, expected result and actual result: both reading boundaries, one rejected value and one malformed file row followed by a valid row. **[4]**
 
 **Total: 20 marks**
 
 ### 20 Marks Practice Mark Scheme
 
-Class header and two private attributes **[2]**; constructor uses the setter **[1]**; two getters **[2]**; inclusive range validation **[2]**; controlled assignment or appropriate exception **[1]**. **[8]**
-
-```python
-class SensorReading:
-    def __init__(self, sensor_id, reading):
-        self.__sensor_id = sensor_id
-        self.__reading = 0.0
-        self.set_reading(reading)
-
-    def get_sensor_id(self):
-        return self.__sensor_id
-
-    def get_reading(self):
-        return self.__reading
-
-    def set_reading(self, new_reading):
-        value = float(new_reading)
-        if value < -50.0 or value > 150.0:
-            raise ValueError("reading outside permitted range")
-        self.__reading = value
-```
-
-Opens and iterates through the file safely **[2]**; splits/validates each record **[1]**; creates and stores objects **[1]**; handles missing file **[1]**; catches malformed conversion/range errors per record **[2]**; returns the completed list **[1]**. **[8]**
-
-```python
-def load_readings(filename):
-    readings = []
-    try:
-        with open(filename, "r", encoding="utf-8") as input_file:
-            for line_number, line in enumerate(input_file, start=1):
-                try:
-                    fields = line.strip().split(",")
-                    if len(fields) != 2 or fields[0] == "":
-                        raise ValueError("record must contain ID and reading")
-                    readings.append(SensorReading(fields[0], fields[1]))
-                except ValueError as error:
-                    print(f"Line {line_number} rejected: {error}")
-    except FileNotFoundError:
-        print("The sensor file was not found")
-    return readings
-```
-
-Tests, one mark each for data plus expected outcome, for example: `-50.0` accepted; `150.0` accepted; `150.1` rejected and later valid lines still load; malformed field count rejected; non-numeric reading rejected; missing file returns an empty list and displays the message. Maximum **[4]**.
-
----
+1. Class and private fields **[2]**; constructor assigns ID and uses validation **[2]**; getters **[1]**; inclusive boundary test **[1]**; valid update **[1]**; throws `IllegalArgumentException` for invalid input **[1]**. **[8]**
+2. Correct return collection and resource handling **[2]**; reads every line **[1]**; splits/checks two fields **[1]**; converts numeric value **[1]**; constructs/adds valid object **[1]**; catches per-record format/range error and continues **[1]**; handles `IOException` **[1]**. **[8]**
+3. One mark for each named test with matching expected and actual evidence. **[4]**
 
 ## Final Revision Checklist
 
-- [ ] I can distinguish all four paradigms and the Paper 4 exclusion boundary.
-- [ ] I can write and trace low-level code using immediate, direct, indirect, indexed and relative addressing.
-- [ ] I can write declarative facts and rules and use them to satisfy a goal.
-- [ ] I can design procedural subroutines with clear parameters and returns.
-- [ ] I can use every required OOP term accurately.
-- [ ] I can implement inheritance, polymorphism, containment and encapsulation.
-- [ ] I can read, write and append text-file records safely.
-- [ ] I can distinguish serial, sequential and random organisation.
-- [ ] I can implement and test hash-based direct access with collisions.
-- [ ] I can catch appropriate exceptions without hiding programming errors.
-- [ ] I completed both marked practice sets before reading the answers.
+- [ ] I can distinguish imperative, Object-Oriented, declarative and low-level paradigms.
+- [ ] I can trace all five addressing modes and conditional jumps.
+- [ ] I can write and evaluate facts, rules, variables and goals.
+- [ ] I can explain encapsulation, containment, inheritance and polymorphism.
+- [ ] I can select serial, sequential or random file organisation.
+- [ ] I can implement Java file handling and specific exception recovery.
+- [ ] I can plan with pseudocode and produce tested Java console programs.

@@ -984,8 +984,8 @@ A hospital uses an AI system to analyse medical images.
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can model graph search and compare traversal strategies.
+- [ ] I can distinguish supervised, unsupervised and reinforcement learning.
+- [ ] I can explain neural-network training and backpropagation.
+- [ ] I can distinguish classification from regression and evaluate results.
+- [ ] I can complete and self-mark both chapter practices.

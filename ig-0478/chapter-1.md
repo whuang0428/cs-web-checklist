@@ -831,8 +831,8 @@ Award up to [3] for correct formula, substitution and final bytes.
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can convert binary, denary and hexadecimal values with working.
+- [ ] I can calculate image and sound sizes with correct units.
+- [ ] I can explain how text, sound and images are represented.
+- [ ] I can choose lossy or lossless compression from the file purpose.
+- [ ] I can complete and self-mark both chapter practices.

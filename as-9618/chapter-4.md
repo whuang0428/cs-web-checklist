@@ -568,6 +568,24 @@ Strong answer:
 
 ---
 
+## Peripheral Ports
+
+A port provides a physical connection and an agreed interface for a peripheral. Select the port from the data and display requirements, not from the connector's appearance alone.
+
+| Port | Principal operation | Suitable use | Selection point |
+|---|---|---|---|
+| USB | transfers serial data and control signals; can also supply electrical power | keyboard, external storage, printer or phone | general-purpose, supports many device types and hot-plugging |
+| HDMI | carries digital video and digital audio together | monitor, projector or television | avoids separate audio cable and preserves a digital signal |
+| VGA | carries an analogue video signal only | connecting an older monitor or projector | useful for legacy equipment, but needs a separate audio connection and conversion may reduce quality |
+
+**Common error:** HDMI and VGA are display interfaces; USB is a general peripheral interface. Do not claim that VGA carries digital audio.
+
+### Worked port selection
+
+A presentation computer must send picture and sound to a modern projector through one cable. **HDMI** is the justified choice because it carries digital video and audio together. VGA would require a separate audio connection; USB is not the stated display input.
+
+---
+
 ## Assembly Language
 
 ### Assembly language vs machine code
@@ -1289,7 +1307,7 @@ The worked calculations, process templates and scenario answers above model the 
 7. In `LDX 20`, if IX = 3, what effective address is used? [1]  
 8. State one use of the status register. [1]  
 9. What bitwise operation is commonly used to test a bit using a mask? [1]  
-10. What is the role of an ISR? [1]
+10. Which port carries digital video and audio to a modern display? [1]
 
 ## Quick Check Answers
 
@@ -1302,7 +1320,7 @@ The worked calculations, process templates and scenario answers above model the 
 7. 23.  
 8. Stores status flags such as zero/carry/overflow/negative as individual bits.  
 9. AND.  
-10. Handles/processes an interrupt.
+10. HDMI.
 
 ---
 
@@ -1310,7 +1328,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 **Total: 20 marks**
 
-### Question 1: Registers and FDE cycle [7]
+### Question 1: Registers, FDE cycle and ports [7]
 
 (a) State the role of each register. [3]
 
@@ -1320,7 +1338,9 @@ The worked calculations, process templates and scenario answers above model the 
 | MDR | |
 | CIR | |
 
-(b) Describe the fetch stage of the fetch-decode-execute cycle. [4]
+(b) Describe the fetch stage of the fetch-decode-execute cycle. [3]
+
+(c) State why HDMI is more suitable than VGA when one cable must carry a presentation's picture and sound. [1]
 
 #### Mark scheme
 
@@ -1334,8 +1354,9 @@ The worked calculations, process templates and scenario answers above model the 
 
 + PC copied to MAR [1]
 + address sent to memory / on address bus and memory read signal sent [1]
-+ instruction copied from memory to MDR / on data bus [1]
-+ instruction copied from MDR to CIR and PC incremented [1]
++ instruction copied through MDR to CIR and PC incremented [1]
+
+(c) HDMI carries both digital video and digital audio, whereas VGA carries analogue video only [1].
 
 ---
 
@@ -1461,8 +1482,8 @@ Explain how the system can test whether the door is open. [2]
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can trace FDE, registers, buses and interrupts accurately.
+- [ ] I can select USB, HDMI or VGA from a stated requirement.
+- [ ] I can trace the current instruction set and five addressing modes.
+- [ ] I can explain two-pass assembly, shifts and bit masks.
+- [ ] I can complete and self-mark both chapter practices.

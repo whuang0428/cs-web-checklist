@@ -840,8 +840,8 @@ Convert to binary [1], correct normalisation / exponent 5 [1], correct mantissa 
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can define and apply enumerated, record, set and pointer types.
+- [ ] I can compare serial, sequential and random file organisation.
+- [ ] I can apply hashing and explain collision handling.
+- [ ] I can normalise and reason about floating-point range/precision.
+- [ ] I can complete and self-mark both chapter practices.

@@ -1,373 +1,291 @@
 # A2 9618 Paper 4 Practical Review — Set B
 
-> **Original practice paper:** an independent second practical set. All scenarios, data and reference solutions are newly written.
+> **Original practice paper:** an independent second practical set written in Java. All scenarios, data and reference solutions are newly written.
 
-**Time:** 2 hours 30 minutes  
-**Total:** **75 marks**  
-**Language:** Python 3 console mode  
-**Required evidence:** complete code, test input, expected result and actual output
+**Time:** 2 hours 30 minutes
 
-This set applies Sections 19–20 and contains no low-level or declarative programming tasks. Do not use a calculator. Work on a centre-provided computer without internet or email access.
+**Total:** **75 marks**
 
----
+**Language:** Java console mode
+
+**Required evidence:** complete code, test input, expected result and actual result
+
+Do not use a calculator. Work on a centre-provided offline computer without internet or email access. Complete every task in Java. Pseudocode may be used to plan before producing executable Java.
+
+This set applies practical Sections 19–20 and contains no low-level or declarative programming tasks.
 
 ## Question 1 — Race Result Processing [25]
 
-Each race result is stored as `[runner_id, finish_time]`, where IDs are unique integers and time is a positive real number.
+Class `RaceResult` stores unique integer `runnerId` and positive real `finishTime`.
 
-1. Write `bubble_sort_results(results)` to sort results into ascending finish-time order. Implement bubble sort with early termination; do not call `sort()` or `sorted()`. **[7]**
-2. Write `linear_search_runner(results, runner_id)` to return the matching record or `None`. **[4]**
-3. Write a recursive function `count_faster(results, limit, index)` that returns how many results from `index` onwards have a finish time below `limit`. **[5]**
-4. Write `load_results(filename)` to read `runner_id,finish_time` records. Report malformed records, reject non-positive times and handle a missing file without crashing. **[5]**
-5. Produce four tests with expected and actual results, including already sorted data, reverse-ordered data, a missing runner and a malformed file record. **[4]**
-
----
+1. Write `bubbleSortResults(RaceResult[] results)` for ascending finish time with early termination. Do not use a library sort. **[7]**
+2. Write `linearSearchRunner(RaceResult[] results, int runnerId)` to return a record or `null`. **[4]**
+3. Write recursive `countFaster(RaceResult[] results, double limit, int index)`. **[5]**
+4. Write `loadResults(Path path)` for `runnerId,finishTime`. Report malformed/non-positive records, continue, and handle an unreadable file. **[5]**
+5. Produce four tests: already sorted data, reverse order, missing runner and malformed row followed by a valid row. **[4]**
 
 ## Question 2 — Ticket Order Objects [26]
 
-Every event ticket has a private code, private event name and non-negative base price. A `GroupTicket` also stores a group size from 2 to 8 and applies a 10% discount to the total `base price * group size`.
+`Ticket` has private code, event name and non-negative base price. `GroupTicket` has group size 2–8 and charges `basePrice × groupSize × 0.90`. `TicketOrder` contains tickets.
 
-An order contains ticket objects and uses their common fee method.
-
-1. Write class `Ticket` with constructor, getters, validated price setter and `calculate_fee()`. **[7]**
-2. Write subclass `GroupTicket`, call the superclass constructor, validate group size and override `calculate_fee()`. **[6]**
-3. Write class `TicketOrder` that contains tickets and implements `add_ticket()` and polymorphic `total_fee()`. **[5]**
-4. Write `append_order(filename, customer, order)` to append the customer and total fee as one comma-separated line. Handle a file-writing error. **[4]**
-5. Produce four tests with expected and actual results: basic ticket, both group-size boundaries, rejected group size and a mixed order. **[4]**
-
----
+1. Implement `Ticket` with constructor, getters, validated setter and `calculateFee()`. **[7]**
+2. Implement `GroupTicket`, use `super`, validate size and override the fee. **[6]**
+3. Implement `TicketOrder` with `addTicket()` and polymorphic `totalFee()`. **[5]**
+4. Write `appendOrder(Path path, String customer, TicketOrder order)` and handle an `IOException`. **[4]**
+5. Produce four tests covering a basic ticket, both valid size boundaries, a rejected size and a mixed order. **[4]**
 
 ## Question 3 — Search Tree Catalogue [24]
 
-A catalogue stores unique integer item IDs in a binary search tree. Each node also stores an item name.
-
-1. Write classes `CatalogueNode` and `CatalogueTree`. Implement iterative `insert(item_id, name)` and `find(item_id)`. Duplicate IDs must update the existing name rather than insert a new node. **[10]**
-2. Write recursive `in_order(node, output)` to append `[item_id, name]` records to `output` in ascending ID order. **[5]**
-3. Write `load_catalogue(filename, tree)` for `item_id,name` text records. Continue after malformed records and handle a missing file. Return the number loaded. **[5]**
-4. Produce four tests with expected and actual results: empty search, root/left/right insertion, duplicate update and malformed input. **[4]**
-
----
+1. Implement `CatalogueNode` and `CatalogueTree`. Write iterative `insert(int id, String name)` and `find(int id)`. A duplicate ID updates its name. **[10]**
+2. Write recursive `inOrder(CatalogueNode node, List<String> output)` to append records in ascending ID order. **[5]**
+3. Write `loadCatalogue(Path path, CatalogueTree tree)`. Continue after malformed rows, handle an unreadable file and return the number loaded. **[5]**
+4. Produce four tests: empty search, root/left/right insertion, duplicate update and malformed row followed by a valid row. **[4]**
 
 ## Mark Scheme
 
-### Question 1 Mark Scheme
+### Question 1 Mark Scheme [25]
 
-#### 1.1 Bubble sort — 7 marks
+- Bubble sort: upper boundary **[1]**; swapped flag **[1]**; passes/termination **[1]**; correct inner bounds **[1]**; compares times **[1]**; swaps records **[1]**; shrinks boundary **[1]**. **[7]**
+- Linear search: iterates records **[1]**; compares ID **[1]**; returns match **[1]**; returns `null` after failure **[1]**. **[4]**
+- Recursion: parameters **[1]**; base case **[1]**; comparison **[1]**; progresses index **[1]**; combines count **[1]**. **[5]**
+- Loader: resource-safe read **[1]**; field conversion **[1]**; positive-time validation **[1]**; bad row reported/continued **[1]**; `IOException` handled/results returned **[1]**. **[5]**
+- Testing: four required matching tests. **[4]**
 
-- function accepts list and sets upper boundary **[1]**
-- swapped flag initialised for first pass **[1]**
-- repeated passes while work remains **[1]**
-- correct adjacent loop bounds **[1]**
-- compares finish-time field **[1]**
-- swaps complete records **[1]**
-- early termination and shrinking boundary **[1]**
+```java
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
-```python
-def bubble_sort_results(results):
-    upper = len(results) - 1
-    swapped = True
-    while upper > 0 and swapped:
-        swapped = False
-        for index in range(upper):
-            if results[index][1] > results[index + 1][1]:
-                results[index], results[index + 1] = results[index + 1], results[index]
-                swapped = True
-        upper -= 1
+class Paper4BQuestion1 {
+    static class RaceResult {
+        private final int runnerId;
+        private final double finishTime;
+        RaceResult(int runnerId, double finishTime) {
+            if (finishTime <= 0) throw new IllegalArgumentException("time must be positive");
+            this.runnerId = runnerId;
+            this.finishTime = finishTime;
+        }
+        int getRunnerId() { return runnerId; }
+        double getFinishTime() { return finishTime; }
+    }
+
+    static void bubbleSortResults(RaceResult[] results) {
+        int upper = results.length - 1;
+        boolean swapped = true;
+        while (upper > 0 && swapped) {
+            swapped = false;
+            for (int index = 0; index < upper; index++) {
+                if (results[index].getFinishTime() > results[index + 1].getFinishTime()) {
+                    RaceResult temp = results[index];
+                    results[index] = results[index + 1];
+                    results[index + 1] = temp;
+                    swapped = true;
+                }
+            }
+            upper--;
+        }
+    }
+
+    static RaceResult linearSearchRunner(RaceResult[] results, int runnerId) {
+        for (RaceResult result : results) if (result.getRunnerId() == runnerId) return result;
+        return null;
+    }
+
+    static int countFaster(RaceResult[] results, double limit, int index) {
+        if (index >= results.length) return 0;
+        int current = results[index].getFinishTime() < limit ? 1 : 0;
+        return current + countFaster(results, limit, index + 1);
+    }
+
+    static List<RaceResult> loadResults(Path path) {
+        List<RaceResult> results = new ArrayList<>();
+        try {
+            int lineNumber = 0;
+            for (String line : Files.readAllLines(path)) {
+                lineNumber++;
+                try {
+                    String[] f = line.split(",", -1);
+                    if (f.length != 2) throw new IllegalArgumentException("two fields required");
+                    results.add(new RaceResult(Integer.parseInt(f[0]), Double.parseDouble(f[1])));
+                } catch (IllegalArgumentException error) {
+                    System.out.println("Line " + lineNumber + " rejected: " + error.getMessage());
+                }
+            }
+        } catch (IOException error) { System.out.println("Result file could not be read: " + error.getMessage()); }
+        return results;
+    }
+
+    public static void main(String[] args) {
+        RaceResult[] results = {new RaceResult(1, 42), new RaceResult(2, 35), new RaceResult(3, 28)};
+        bubbleSortResults(results);
+        if (results[0].getRunnerId() != 3 || linearSearchRunner(results, 2) == null) throw new AssertionError();
+        if (countFaster(results, 40, 0) != 2 || linearSearchRunner(results, 99) != null) throw new AssertionError();
+    }
+}
 ```
 
-#### 1.2 Linear search — 4 marks
+### Question 2 Mark Scheme [26]
 
-- loop through records **[1]**
-- compare ID field **[1]**
-- return matching record immediately **[1]**
-- return `None` after complete failure **[1]**
+- `Ticket`: class/constructor **[1]**; private fields **[1]**; initialisation **[1]**; setter used **[1]**; getters **[1]**; negative rejected **[1]**; fee **[1]**. **[7]**
+- `GroupTicket`: inheritance **[1]**; constructor **[1]**; super call **[1]**; private size **[1]**; inclusive validation **[1]**; overridden fee **[1]**. **[6]**
+- `TicketOrder`: constructor/collection **[2]**; add **[1]**; loops all **[1]**; polymorphic call **[1]**. **[5]**
+- Append: append mode **[1]**; complete record **[1]**; `IOException` **[1]**; success/failure result **[1]**. **[4]**
+- Testing: four required matching tests. **[4]**
 
-```python
-def linear_search_runner(results, runner_id):
-    for result in results:
-        if result[0] == runner_id:
-            return result
-    return None
+```java
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
+
+class Paper4BQuestion2 {
+    static class Ticket {
+        private final String code;
+        private final String eventName;
+        private double basePrice;
+        Ticket(String code, String eventName, double basePrice) {
+            this.code = code; this.eventName = eventName; setBasePrice(basePrice);
+        }
+        String getCode() { return code; }
+        String getEventName() { return eventName; }
+        double getBasePrice() { return basePrice; }
+        void setBasePrice(double value) {
+            if (value < 0) throw new IllegalArgumentException("negative price");
+            basePrice = value;
+        }
+        double calculateFee() { return basePrice; }
+    }
+
+    static class GroupTicket extends Ticket {
+        private final int groupSize;
+        GroupTicket(String code, String event, double price, int groupSize) {
+            super(code, event, price);
+            if (groupSize < 2 || groupSize > 8) throw new IllegalArgumentException("group size 2 to 8");
+            this.groupSize = groupSize;
+        }
+        int getGroupSize() { return groupSize; }
+        @Override double calculateFee() { return getBasePrice() * groupSize * 0.90; }
+    }
+
+    static class TicketOrder {
+        private final List<Ticket> tickets = new ArrayList<>();
+        void addTicket(Ticket ticket) { tickets.add(ticket); }
+        double totalFee() {
+            double total = 0;
+            for (Ticket ticket : tickets) total += ticket.calculateFee();
+            return total;
+        }
+    }
+
+    static boolean appendOrder(Path path, String customer, TicketOrder order) {
+        try (BufferedWriter writer = Files.newBufferedWriter(path,
+                StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
+            writer.write(customer + "," + String.format("%.2f", order.totalFee()));
+            writer.newLine(); return true;
+        } catch (IOException error) {
+            System.out.println("Order could not be saved: " + error.getMessage()); return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        Ticket basic = new Ticket("T1", "Talk", 20);
+        GroupTicket group = new GroupTicket("G1", "Lab", 10, 4);
+        TicketOrder order = new TicketOrder(); order.addTicket(basic); order.addTicket(group);
+        if (Math.abs(order.totalFee() - 56.0) > 0.000001) throw new AssertionError();
+        new GroupTicket("L", "Low", 1, 2); new GroupTicket("H", "High", 1, 8);
+        try { new GroupTicket("X", "Bad", 1, 9); throw new AssertionError(); }
+        catch (IllegalArgumentException expected) { }
+    }
+}
 ```
 
-#### 1.3 Recursive count — 5 marks
+### Question 3 Mark Scheme [24]
 
-- correct parameters **[1]**
-- reachable end-of-list base case **[1]**
-- current record compared with limit **[1]**
-- recursive call progresses to next index **[1]**
-- current contribution combined with returned count **[1]**
+- Tree: node fields **[2]**; empty root **[1]**; empty insertion **[1]**; iterative comparison **[2]**; attaches child **[1]**; duplicate update **[1]**; ordered find **[1]**; returns name/null **[1]**. **[10]**
+- In-order: parameters **[1]**; null base **[1]**; left **[1]**; current append **[1]**; right **[1]**. **[5]**
+- Loader: reads/counts **[1]**; validates fields **[1]**; converts/inserts **[1]**; per-row error continues **[1]**; handles `IOException`/returns count **[1]**. **[5]**
+- Testing: four required matching tests. **[4]**
 
-```python
-def count_faster(results, limit, index):
-    if index >= len(results):
-        return 0
-    current = 1 if results[index][1] < limit else 0
-    return current + count_faster(results, limit, index + 1)
+```java
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+class Paper4BQuestion3 {
+    static class CatalogueNode {
+        int id; String name; CatalogueNode left, right;
+        CatalogueNode(int id, String name) { this.id = id; this.name = name; }
+    }
+
+    static class CatalogueTree {
+        CatalogueNode root;
+        void insert(int id, String name) {
+            if (root == null) { root = new CatalogueNode(id, name); return; }
+            CatalogueNode current = root;
+            while (true) {
+                if (id == current.id) { current.name = name; return; }
+                if (id < current.id) {
+                    if (current.left == null) { current.left = new CatalogueNode(id, name); return; }
+                    current = current.left;
+                } else {
+                    if (current.right == null) { current.right = new CatalogueNode(id, name); return; }
+                    current = current.right;
+                }
+            }
+        }
+        String find(int id) {
+            CatalogueNode current = root;
+            while (current != null) {
+                if (id == current.id) return current.name;
+                current = id < current.id ? current.left : current.right;
+            }
+            return null;
+        }
+    }
+
+    static void inOrder(CatalogueNode node, List<String> output) {
+        if (node == null) return;
+        inOrder(node.left, output); output.add(node.id + "," + node.name); inOrder(node.right, output);
+    }
+
+    static int loadCatalogue(Path path, CatalogueTree tree) {
+        int loaded = 0;
+        try {
+            for (String line : Files.readAllLines(path)) {
+                try {
+                    String[] f = line.split(",", 2);
+                    if (f.length != 2 || f[1].isBlank()) throw new IllegalArgumentException();
+                    tree.insert(Integer.parseInt(f[0]), f[1]); loaded++;
+                } catch (IllegalArgumentException error) { System.out.println("Record skipped"); }
+            }
+        } catch (IOException error) { System.out.println("Catalogue could not be read: " + error.getMessage()); }
+        return loaded;
+    }
+
+    public static void main(String[] args) {
+        CatalogueTree tree = new CatalogueTree();
+        if (tree.find(1) != null) throw new AssertionError();
+        tree.insert(20, "Root"); tree.insert(10, "Left"); tree.insert(30, "Right"); tree.insert(10, "Updated");
+        List<String> output = new ArrayList<>(); inOrder(tree.root, output);
+        if (!"Updated".equals(tree.find(10)) || !output.equals(List.of("10,Updated", "20,Root", "30,Right"))) {
+            throw new AssertionError();
+        }
+    }
+}
 ```
-
-#### 1.4 File loader — 5 marks
-
-- opens/iterates safely **[1]**
-- checks field count and converts values **[1]**
-- rejects non-positive time **[1]**
-- reports a bad record and continues **[1]**
-- handles missing file and returns list **[1]**
-
-```python
-def load_results(filename):
-    results = []
-    try:
-        with open(filename, "r", encoding="utf-8") as input_file:
-            for line_number, line in enumerate(input_file, start=1):
-                try:
-                    fields = line.strip().split(",")
-                    if len(fields) != 2:
-                        raise ValueError("expected two fields")
-                    runner_id = int(fields[0])
-                    finish_time = float(fields[1])
-                    if finish_time <= 0:
-                        raise ValueError("time must be positive")
-                    results.append([runner_id, finish_time])
-                except ValueError as error:
-                    print(f"Line {line_number} rejected: {error}")
-    except FileNotFoundError:
-        print("Result file not found")
-    return results
-```
-
-#### 1.5 Testing — 4 marks
-
-One mark for each required test with input, expected and matching actual result: sorted data stops without changing order; reverse data becomes ascending; missing ID returns `None`; malformed file row is reported while later valid rows still load. **[4]**
-
-**Question 1 total: 25 marks**
-
----
-
-### Question 2 Mark Scheme
-
-#### 2.1 Ticket — 7 marks
-
-- class/constructor **[1]**
-- three private attributes **[1]**
-- code and name initialised **[1]**
-- constructor uses setter **[1]**
-- code/name getters **[1]**
-- price getter/setter rejects negative **[1]**
-- fee returns base price **[1]**
-
-```python
-class Ticket:
-    def __init__(self, code, event_name, base_price):
-        self.__code = code
-        self.__event_name = event_name
-        self.__base_price = 0.0
-        self.set_base_price(base_price)
-
-    def get_code(self):
-        return self.__code
-
-    def get_event_name(self):
-        return self.__event_name
-
-    def get_base_price(self):
-        return self.__base_price
-
-    def set_base_price(self, new_price):
-        value = float(new_price)
-        if value < 0:
-            raise ValueError("price cannot be negative")
-        self.__base_price = value
-
-    def calculate_fee(self):
-        return self.__base_price
-```
-
-#### 2.2 GroupTicket — 6 marks
-
-- inherits from `Ticket` **[1]**
-- constructor receives all fields **[1]**
-- superclass constructor called **[1]**
-- group size stored privately **[1]**
-- inclusive 2–8 validation **[1]**
-- overridden calculation applies size and 10% discount **[1]**
-
-```python
-class GroupTicket(Ticket):
-    def __init__(self, code, event_name, base_price, group_size):
-        super().__init__(code, event_name, base_price)
-        if group_size < 2 or group_size > 8:
-            raise ValueError("group size must be from 2 to 8")
-        self.__group_size = int(group_size)
-
-    def get_group_size(self):
-        return self.__group_size
-
-    def calculate_fee(self):
-        return self.get_base_price() * self.__group_size * 0.90
-```
-
-#### 2.3 TicketOrder — 5 marks
-
-- class/constructor stores customer and empty collection **[2]**
-- add method stores object **[1]**
-- loops over all objects **[1]**
-- calls shared fee method without type tests **[1]**
-
-```python
-class TicketOrder:
-    def __init__(self, customer):
-        self.__customer = customer
-        self.__tickets = []
-
-    def add_ticket(self, ticket):
-        self.__tickets.append(ticket)
-
-    def total_fee(self):
-        return sum(ticket.calculate_fee() for ticket in self.__tickets)
-```
-
-#### 2.4 Append order — 4 marks
-
-- append mode/encoding **[1]**
-- customer and total written as one record **[1]**
-- specific file error handled **[1]**
-- returns success/failure **[1]**
-
-```python
-def append_order(filename, customer, order):
-    try:
-        with open(filename, "a", encoding="utf-8") as output_file:
-            output_file.write(f"{customer},{order.total_fee():.2f}\n")
-        return True
-    except OSError as error:
-        print(f"Order could not be saved: {error}")
-        return False
-```
-
-#### 2.5 Testing — 4 marks
-
-One mark each: basic ticket returns its base fee; group sizes 2 and 8 are accepted with correct discounted totals; size 1 or 9 is rejected; mixed order calls both implementations and returns their sum. Maximum **[4]**.
-
-**Question 2 total: 26 marks**
-
----
-
-### Question 3 Mark Scheme
-
-#### 3.1 Tree classes, insert and find — 10 marks
-
-- node stores ID, name, left and right **[2]**
-- tree initialises empty root **[1]**
-- insert handles empty tree **[1]**
-- iterative comparison selects left/right **[2]**
-- attaches at the correct empty child **[1]**
-- duplicate updates name **[1]**
-- find follows ordering **[1]**
-- find returns name or `None` **[1]**
-
-```python
-class CatalogueNode:
-    def __init__(self, item_id, name):
-        self.item_id = item_id
-        self.name = name
-        self.left = None
-        self.right = None
-
-
-class CatalogueTree:
-    def __init__(self):
-        self.root = None
-
-    def insert(self, item_id, name):
-        if self.root is None:
-            self.root = CatalogueNode(item_id, name)
-            return
-
-        current = self.root
-        while True:
-            if item_id == current.item_id:
-                current.name = name
-                return
-            if item_id < current.item_id:
-                if current.left is None:
-                    current.left = CatalogueNode(item_id, name)
-                    return
-                current = current.left
-            else:
-                if current.right is None:
-                    current.right = CatalogueNode(item_id, name)
-                    return
-                current = current.right
-
-    def find(self, item_id):
-        current = self.root
-        while current is not None:
-            if item_id == current.item_id:
-                return current.name
-            if item_id < current.item_id:
-                current = current.left
-            else:
-                current = current.right
-        return None
-```
-
-#### 3.2 Recursive traversal — 5 marks
-
-- correct parameters **[1]**
-- base case for `None` **[1]**
-- recursively visits left **[1]**
-- appends current record **[1]**
-- recursively visits right **[1]**
-
-```python
-def in_order(node, output):
-    if node is None:
-        return
-    in_order(node.left, output)
-    output.append([node.item_id, node.name])
-    in_order(node.right, output)
-```
-
-#### 3.3 File loader — 5 marks
-
-- opens/loops and counts **[1]**
-- validates two fields **[1]**
-- converts ID and inserts **[1]**
-- malformed-record exception handled per line **[1]**
-- missing-file handling and return **[1]**
-
-```python
-def load_catalogue(filename, tree):
-    loaded = 0
-    try:
-        with open(filename, "r", encoding="utf-8") as input_file:
-            for line_number, line in enumerate(input_file, start=1):
-                try:
-                    fields = line.strip().split(",", 1)
-                    if len(fields) != 2 or fields[1] == "":
-                        raise ValueError("expected ID and name")
-                    tree.insert(int(fields[0]), fields[1])
-                    loaded += 1
-                except ValueError as error:
-                    print(f"Line {line_number} rejected: {error}")
-    except FileNotFoundError:
-        print("Catalogue file not found")
-    return loaded
-```
-
-#### 3.4 Testing — 4 marks
-
-One mark each: empty find returns `None`; root plus smaller/larger IDs appear in sorted traversal; duplicate changes name without another node; malformed row is reported and later valid row loads. **[4]**
-
-**Question 3 total: 24 marks**
-
----
 
 ## Final Check
 
-- [ ] All three questions were attempted in 2 hours 30 minutes.
-- [ ] Required algorithms were implemented without library replacements.
-- [ ] Every exception path was executed at least once.
-- [ ] Evidence states input, expected result and actual output.
+- [ ] Every task was implemented and run in Java console mode.
+- [ ] Pseudocode planning was translated into complete Java with explicit types.
+- [ ] Algorithms were implemented without library replacements.
+- [ ] Exception paths were tested rather than only described.
+- [ ] Evidence states input, expected result and actual result.
 - [ ] Question totals are 25 + 26 + 24 = 75 marks.

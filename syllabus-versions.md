@@ -27,8 +27,14 @@ The 9618 routine `RAND(x)` returns a random real number from `0` up to, but not 
 
 | Course | Included practice |
 |---|---|
-| IGCSE 0478 | Paper 1 Set A; Paper 2 Sets A and B |
-| AS Level 9618 | Paper 1 Set A; Paper 2 Sets A and B |
-| A Level 9618 — A2 / Year 2 | Paper 3 Sets A and B; Paper 4 Sets A and B |
+| IGCSE 0478 | Paper 1 Sets A and B; Paper 2 Sets A and B |
+| AS Level 9618 | Paper 1 Sets A and B; Paper 2 Sets A and B |
+| A Level 9618 — A2 / Year 2 | Paper 3 Sets A and B; Java Paper 4 Sets A and B |
+
+## Pseudocode and Programming-Language Path
+
+- **IGCSE 0478:** every student learns pseudocode; this site's program-code examples use Python.
+- **AS 9618:** every student learns the official Cambridge pseudocode used in Paper 2; any language comparison in this site uses Java only.
+- **A2 9618:** pseudocode remains part of algorithm design and tracing; executable examples and Paper 4 practice in this site use Java console mode only.
 
 This site contains original revision and practice material. It is not an official Cambridge publication and does not reproduce official examination questions or mark schemes.

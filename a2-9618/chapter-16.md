@@ -903,8 +903,8 @@ Description example: lexical analysis breaks code into tokens / syntax analysis 
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can compare scheduling algorithms with correct trace evidence.
+- [ ] I can explain paging, segmentation and replacement policies.
+- [ ] I can trace interrupt and process-state changes.
+- [ ] I can explain compiler stages, syntax notation and RPN evaluation.
+- [ ] I can complete and self-mark both chapter practices.

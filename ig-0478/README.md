@@ -22,6 +22,7 @@ Use this hub to choose the paper, chapter or timed practice you need. The offici
 
 <div class="practice-links">
   <a href="#/ig-0478/paper-1-review"><strong>Paper 1 Mixed Review — Set A</strong><span>Original 75-mark timed practice</span></a>
+  <a href="#/ig-0478/paper-1-review-2"><strong>Paper 1 Mixed Review — Set B</strong><span>Independent 75-mark retest</span></a>
 </div>
 
 ## Paper 2 — Algorithms, Programming and Logic
@@ -30,7 +31,7 @@ Use this hub to choose the paper, chapter or timed practice you need. The offici
 
 <div class="hub-link-list">
   <a href="#/ig-0478/chapter-7"><span>7</span><strong>Algorithm Design and Problem-Solving</strong><small>Algorithms, trace tables, validation and testing</small></a>
-  <a href="#/ig-0478/chapter-8"><span>8</span><strong>Programming</strong><small>Control structures, arrays, subroutines and files</small></a>
+  <a href="#/ig-0478/chapter-8"><span>8</span><strong>Programming</strong><small>Required pseudocode plus Python program-code practice</small></a>
   <a href="#/ig-0478/chapter-9"><span>9</span><strong>Databases</strong><small>Table design, primary keys and SQL</small></a>
   <a href="#/ig-0478/chapter-10"><span>10</span><strong>Boolean Logic</strong><small>Logic gates, expressions, truth tables and circuits</small></a>
 </div>
@@ -42,7 +43,7 @@ Use this hub to choose the paper, chapter or timed practice you need. The offici
 
 ## What Is New at This Level?
 
-IGCSE establishes the core vocabulary and methods used later at AS and A Level: binary data, basic hardware and networks, algorithm tracing, program constructs, single-table databases and Boolean logic.
+IGCSE establishes the core vocabulary and methods used later at AS and A Level: binary data, basic hardware and networks, algorithm tracing, required pseudocode, Python program-code practice, single-table databases and Boolean logic.
 
 ## Shared Resources
 

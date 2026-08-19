@@ -8,7 +8,7 @@
 - Total: **75 marks**
 - Do not use a calculator.
 - Answer all seven questions.
-- Use pseudocode for coding answers, except Question 7 may also be answered in Python, Visual Basic or Java.
+- Use pseudocode for coding answers; Question 7 may instead be answered in Python. Do not mix syntaxes.
 - Complete this set without referring to Set A.
 
 ### Coverage Map
@@ -152,7 +152,7 @@ Write one complete solution that:
 - never allows the total booked to exceed four
 - finally outputs total places booked and total cost
 
-Use pseudocode, Python, Visual Basic or Java. **[15]**
+Use pseudocode or Python. **[15]**
 
 ---
 

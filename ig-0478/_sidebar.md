@@ -8,6 +8,7 @@
   * [5 The Internet and Its Uses](/ig-0478/chapter-5)
   * [6 Automated and Emerging Technologies](/ig-0478/chapter-6)
   * [Paper 1 Mixed Review — Set A](/ig-0478/paper-1-review)
+  * [Paper 1 Mixed Review — Set B](/ig-0478/paper-1-review-2)
 
 * Paper 2 — Algorithms, Programming and Logic
   * [7 Algorithm Design and Problem-Solving](/ig-0478/chapter-7)

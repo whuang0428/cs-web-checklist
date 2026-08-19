@@ -12,6 +12,53 @@ Revise: packet structure and switching; transmission methods; error detection; s
 
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
+<span id="_chapter-2-at-a-glance" class="legacy-anchor" aria-hidden="true"></span>
+
+## Chapter at a Glance
+
+Use this overview to trace transmission, select a method, detect errors and protect data.
+
+### Trace packet delivery
+
+<span lang="zh-CN">从拆包开始，跟踪路由、编号和重组。</span>
+
+- Identify header, payload and trailer information.
+- Explain why packets may take different routes and arrive out of order.
+- Link packet numbers and checks to reassembly and retransmission.
+
+**Exam cue:** describe the journey in sequence, not as disconnected definitions.
+
+### Select transmission
+
+<span lang="zh-CN">根据距离、方向、线路数量和可靠性选择方式。</span>
+
+- Compare serial with parallel transmission using distance and interference.
+- Distinguish simplex, half duplex and full duplex direction.
+- Explain how USB provides serial data transfer and device connection.
+
+**Exam cue:** make the advantage specific to the stated link or device.
+
+### Detect errors
+
+<span lang="zh-CN">说明发送端和接收端分别计算或比较什么。</span>
+
+- Apply parity, checksum, check digit and echo checking correctly.
+- Explain acknowledgements, timeouts and retransmission in ARQ.
+- State what each method can detect and what it cannot guarantee.
+
+**Exam cue:** include the comparison and the response to a mismatch.
+
+### Protect messages
+
+<span lang="zh-CN">区分共享密钥和公钥、私钥的角色。</span>
+
+- Explain why plaintext is converted to ciphertext.
+- Use one shared secret key for symmetric encryption.
+- Use public/private key roles accurately for asymmetric encryption.
+
+**Exam cue:** name which key encrypts and which key decrypts in the scenario.
+
+---
 
 ## 2.1 Types and Methods of Data Transmission
 ---
@@ -710,8 +757,8 @@ Any two:
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can trace packet switching from segmentation to reassembly.
+- [ ] I can select transmission direction and serial/parallel methods.
+- [ ] I can apply parity, checksum, check digit, echo check and ARQ.
+- [ ] I can explain symmetric and asymmetric key roles accurately.
+- [ ] I can complete and self-mark both chapter practices.

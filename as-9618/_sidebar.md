@@ -10,6 +10,7 @@
   * [7 Ethics and Ownership](/as-9618/chapter-7)
   * [8 Databases](/as-9618/chapter-8)
   * [Paper 1 Mixed Review — Set A](/as-9618/paper-1-review)
+  * [Paper 1 Mixed Review — Set B](/as-9618/paper-1-review-2)
 
 * Paper 2 — Problem-Solving and Programming
   * [9 Algorithm Design and Problem-Solving](/as-9618/chapter-9)

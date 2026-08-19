@@ -1218,8 +1218,8 @@ Z = C
 
 ## Final Revision Checklist
 
-- I can define the required terms precisely.
-- I can explain each process in the correct order.
-- I can apply the ideas to an unfamiliar scenario.
-- I can complete the 10-mark check without notes.
-- I can complete and self-mark the 20-mark practice.
+- [ ] I can compare RISC/CISC, architectures and processor systems.
+- [ ] I can explain parallel processing and virtual machines.
+- [ ] I can apply Boolean laws, De Morgan and Karnaugh maps.
+- [ ] I can explain adders, flip-flops and construct logic circuits.
+- [ ] I can complete and self-mark both chapter practices.

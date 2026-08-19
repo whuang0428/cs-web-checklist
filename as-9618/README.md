@@ -24,6 +24,7 @@ This hub covers the AS Level components. Students following an earlier examinati
 
 <div class="practice-links">
   <a href="#/as-9618/paper-1-review"><strong>Paper 1 Mixed Review — Set A</strong><span>Original 75-mark timed practice</span></a>
+  <a href="#/as-9618/paper-1-review-2"><strong>Paper 1 Mixed Review — Set B</strong><span>Independent 75-mark retest</span></a>
 </div>
 
 ## Paper 2 — Fundamental Problem-Solving and Programming Skills
@@ -44,7 +45,7 @@ This hub covers the AS Level components. Students following an earlier examinati
 
 ## What Is New at This Level?
 
-AS extends IGCSE into binary prefixes and complements, CPU architecture and assembly, relational database design, abstraction, records, abstract data types and formal Cambridge pseudocode.
+AS extends IGCSE into binary prefixes and complements, CPU architecture and assembly, relational database design, abstraction, records, abstract data types and formal Cambridge pseudocode. Pseudocode is compulsory for Paper 2; where a programming-language comparison is useful, this project uses Java only.
 
 ## Shared Resources
 
