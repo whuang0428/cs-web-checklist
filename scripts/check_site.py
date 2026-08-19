@@ -49,12 +49,12 @@ SHARED_PAGES = {ROOT / "exam-technique.md", ROOT / "syllabus-versions.md"}
 CONTENT_PAGES = EXPECTED_CHAPTERS | REVIEW_PAGES | HUB_PAGES | SHARED_PAGES
 OVERVIEW_CONTRACTS = {
     ROOT / "ig-0478" / "chapter-1.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         ["Convert values", "Calculate storage", "Represent media", "Choose compression"],
     ),
     ROOT / "ig-0478" / "chapter-4.md": (
-        "## 2. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_2-chapter-4-overall-mind-map",
         ["Select software", "Handle interrupts", "Translate source code", "Use IDE tools"],
     ),
@@ -69,12 +69,12 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "ig-0478" / "chapter-6.md": (
-        "## 9. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_9-final-one-page-revision-map",
         ["Trace an automated system", "Classify robots", "Explain AI", "Evaluate impacts"],
     ),
     ROOT / "as-9618" / "chapter-1.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         [
             "Convert and encode",
@@ -84,12 +84,12 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "as-9618" / "chapter-2.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         ["Choose the network", "Trace the journey", "Select the technology", "Score the marks"],
     ),
     ROOT / "as-9618" / "chapter-3.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         [
             "Classify hardware",
@@ -99,7 +99,7 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "as-9618" / "chapter-4.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         [
             "Trace fetch-decode-execute",
@@ -109,7 +109,7 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "as-9618" / "chapter-5.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         [
             "Explain OS management",
@@ -119,7 +119,7 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "as-9618" / "chapter-6.md": (
-        "## 4. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_4-one-page-mind-map",
         [
             "Distinguish core terms",
@@ -129,7 +129,7 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "as-9618" / "chapter-7.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         [
             "Apply ethical principles",
@@ -139,22 +139,22 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "as-9618" / "chapter-8.md": (
-        "## 4. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_4-one-page-mind-map",
         ["Model the database", "Normalise to 3NF", "Explain DBMS functions", "Write SQL"],
     ),
     ROOT / "a2-9618" / "chapter-13.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         ["Define data types", "Choose file access", "Calculate floating point", "Control range and error"],
     ),
     ROOT / "a2-9618" / "chapter-14.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         ["Trace the TCP/IP stack", "Compare switching", "Route packets", "Match protocols"],
     ),
     ROOT / "a2-9618" / "chapter-15.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         [
             "Compare processors",
@@ -164,12 +164,12 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "a2-9618" / "chapter-16.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         ["Schedule processes", "Manage memory", "Handle interrupts", "Parse and translate code"],
     ),
     ROOT / "a2-9618" / "chapter-17.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         [
             "Choose encryption",
@@ -179,7 +179,7 @@ OVERVIEW_CONTRACTS = {
         ],
     ),
     ROOT / "a2-9618" / "chapter-18.md": (
-        "## 3. Chapter at a Glance",
+        "## Chapter at a Glance",
         "_3-one-page-mind-map",
         [
             "Model graphs and search",
@@ -384,6 +384,73 @@ def check_headings_and_fences(errors: list[str]) -> None:
                     path,
                     f"heading level jumps from H{previous} on line {previous_line} "
                     f"to H{level} on line {number}",
+                )
+
+
+def check_chapter_heading_numbering(errors: list[str]) -> None:
+    artificial_h2 = re.compile(r"^## (\d+)\.\s+\S")
+    three_part_h2 = re.compile(r"^## \d+\.\d+\.\d+\s+\S")
+    numbered_h3 = re.compile(r"^### (\d+\.\d+)\s+\S")
+    bare_section_reference = re.compile(
+        r"\bSections? \d+(?:(?:\s+and\s+|[–-])\d+)*(?=\b)"
+    )
+
+    for path in sorted(EXPECTED_CHAPTERS):
+        h2_titles: dict[str, int] = {}
+        current_h2 = ""
+        in_syllabus_map = False
+        in_fence = False
+        fence_type = ""
+
+        for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            stripped = line.lstrip()
+            marker_match = re.match(r"(`{3,}|~{3,})", stripped)
+            if marker_match:
+                marker_type = marker_match.group(1)[0]
+                if not in_fence:
+                    in_fence = True
+                    fence_type = marker_type
+                elif marker_type == fence_type:
+                    in_fence = False
+                    fence_type = ""
+                continue
+
+            if in_fence:
+                continue
+
+            if line.startswith("## "):
+                current_h2 = line[3:].strip()
+                in_syllabus_map = current_h2 == "Syllabus Map"
+                normalised = " ".join(current_h2.split()).casefold()
+                if normalised in h2_titles:
+                    add_error(
+                        errors,
+                        path,
+                        f"duplicate H2 '{current_h2}' on lines "
+                        f"{h2_titles[normalised]} and {number}",
+                    )
+                else:
+                    h2_titles[normalised] = number
+
+                if artificial_h2.match(line):
+                    add_error(errors, path, f"artificial H2 page number on line {number}")
+                if three_part_h2.match(line):
+                    add_error(errors, path, f"three-part syllabus code must not be H2 on line {number}")
+                continue
+
+            h3_match = numbered_h3.match(line)
+            if h3_match and not (
+                path == ROOT / "as-9618" / "chapter-6.md"
+                and current_h2 == "Syllabus Map"
+                and h3_match.group(1) in {"6.1", "6.2"}
+            ):
+                add_error(errors, path, f"artificial two-part H3 page number on line {number}")
+
+            if in_syllabus_map and bare_section_reference.search(line):
+                add_error(
+                    errors,
+                    path,
+                    f"Syllabus Map uses a bare page-section reference on line {number}",
                 )
 
 
@@ -1221,6 +1288,7 @@ def main() -> int:
     errors: list[str] = []
     check_chapter_inventory(errors)
     check_headings_and_fences(errors)
+    check_chapter_heading_numbering(errors)
     check_references(errors)
     check_navigation(errors)
     check_marked_content(errors)
@@ -1236,6 +1304,7 @@ def main() -> int:
     print("Site checks passed:")
     print("- 30 expected chapter files are present")
     print("- every student content page has one H1 and consistent heading levels")
+    print("- chapter headings contain no page-order numbers, duplicate H2s or bare map references")
     print("- local Markdown/HTML references resolve")
     print("- root navigation is hub-only and course sidebars stay course-only and complete")
     print("- explicit search paths include all student content and exclude coverage.md")

@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to convert, calculate, compare and justify information representation.
 
@@ -61,9 +61,9 @@ Use this overview to convert, calculate, compare and justify information represe
 
 ---
 
-## 4. 1.1 Data Representation
+## 1.1 Data Representation
 
-### 4.1 Binary prefixes vs decimal prefixes
+### Binary prefixes vs decimal prefixes
 
 #### Core idea
 
@@ -105,7 +105,7 @@ Use this overview to convert, calculate, compare and justify information represe
 
 ---
 
-### 4.2 Number systems
+### Number systems
 
 | Number system | Base | Digits used | Key exam point |
 | --- | ---: | --- | --- |
@@ -129,7 +129,7 @@ Use this overview to convert, calculate, compare and justify information represe
 
 ---
 
-### 4.3 Binary ↔ denary
+### Binary ↔ denary
 
 #### Binary to denary example
 
@@ -162,7 +162,7 @@ AS Paper 1 may ask for **12-bit binary**, not only 8-bit. Always count the requi
 
 ---
 
-### 4.4 Binary ↔ hexadecimal
+### Binary ↔ hexadecimal
 
 #### Binary to hexadecimal
 
@@ -211,7 +211,7 @@ Convert `2140` to denary.
 
 ---
 
-### 4.5 One's complement and two's complement
+### One's complement and two's complement
 
 #### One's complement
 
@@ -227,7 +227,7 @@ For AS 9618, understand it, but **two's complement is more exam-heavy**.
 
 ---
 
-### 4.6 Two's complement
+### Two's complement
 
 #### 8-bit range
 
@@ -291,7 +291,7 @@ So:
 
 ---
 
-### 4.7 Binary subtraction using two's complement
+### Binary subtraction using two's complement
 
 Example: subtract denary 23 from `01001010`.
 
@@ -331,7 +331,7 @@ Ignore the 9th carry bit:
 
 ---
 
-### 4.8 Overflow
+### Overflow
 
 #### Definition
 
@@ -355,7 +355,7 @@ Overflow can occur when:
 
 ---
 
-### 4.9 Binary Coded Decimal (BCD)
+### Binary Coded Decimal (BCD)
 
 #### What BCD does
 
@@ -403,7 +403,7 @@ BCD = 0101 0111 0011
 
 ---
 
-### 4.10 Character sets
+### Character sets
 
 #### Character set definition
 
@@ -415,7 +415,7 @@ BCD = 0101 0111 0011
 
 ---
 
-### 4.11 ASCII, extended ASCII and Unicode
+### ASCII, extended ASCII and Unicode
 
 | Character set | Typical bits | Key point |
 | --- | ---: | --- |
@@ -441,7 +441,7 @@ BCD = 0101 0111 0011
 
 ---
 
-### 4.12 Character code conversion
+### Character code conversion
 
 #### Binary Unicode to denary
 
@@ -466,9 +466,9 @@ Convert:
 
 ---
 
-## 5. 1.2 Multimedia — Bitmap Images
+## 1.2 Multimedia — Bitmap Images
 
-### 5.1 Bitmap image keywords
+### Bitmap image keywords
 
 | Term | Meaning |
 | --- | --- |
@@ -482,7 +482,7 @@ Convert:
 
 ---
 
-### 5.2 Bit depth / colour depth
+### Bit depth / colour depth
 
 #### Formula
 
@@ -514,7 +514,7 @@ Examples:
 
 ---
 
-### 5.3 Image file size calculation
+### Image file size calculation
 
 #### Formula
 
@@ -560,7 +560,7 @@ An image has 4000 × 3000 pixels and 4 bits per pixel.
 
 ---
 
-### 5.4 File header
+### File header
 
 A bitmap file header may store:
 
@@ -577,9 +577,9 @@ A bitmap file header may store:
 
 ---
 
-## 6. Vector Graphics
+## Vector Graphics
 
-### 6.1 Vector graphic idea
+### Vector graphic idea
 
 Vector graphics do not store every pixel. They store objects / shapes mathematically.
 
@@ -592,11 +592,11 @@ Examples of objects:
 + polygon
 + text object
 
-### 6.2 Property
+### Property
 
 > A property is an attribute of a vector object, such as position, line colour, fill colour, line thickness, radius or coordinates.
 
-### 6.3 Drawing list
+### Drawing list
 
 > A drawing list stores the objects / commands needed to draw the image and the properties of each object.
 
@@ -608,7 +608,7 @@ LINE from(10,10) to(90,10), thickness 2
 RECTANGLE top-left(20,20), width 40, height 30
 ```
 
-### 6.4 Vector vs bitmap
+### Vector vs bitmap
 
 | Feature | Bitmap | Vector |
 | --- | --- | --- |
@@ -625,21 +625,21 @@ RECTANGLE top-left(20,20), width 40, height 30
 
 ---
 
-## 7. Sound Representation
+## Sound Representation
 
-### 7.1 Analogue sound
+### Analogue sound
 
 Sound is naturally analogue. This means it changes continuously.
 
 A computer must convert it into digital data by sampling.
 
-### 7.2 Sampling
+### Sampling
 
 #### Mark scheme style answer
 
 > The amplitude of the sound wave is measured at regular time intervals. Each sample is converted into a binary value.
 
-### 7.3 Key terms
+### Key terms
 
 | Term | Meaning |
 | --- | --- |
@@ -647,7 +647,7 @@ A computer must convert it into digital data by sampling.
 | Sampling resolution / bit depth | number of bits used to store each amplitude measurement |
 | Analogue | continuously changing sound wave before being recorded by a computer |
 
-### 7.4 Effect of increasing sample rate / resolution
+### Effect of increasing sample rate / resolution
 
 | Increase in... | Effect on sound | Effect on file |
 | --- | --- | --- |
@@ -672,9 +672,9 @@ A 30-second stereo sound has sample rate 44 100 Hz and sampling resolution 16 bi
 
 ---
 
-## 8. 1.3 Compression
+## 1.3 Compression
 
-### 8.1 Why compression is needed
+### Why compression is needed
 
 Compression reduces file size.
 
@@ -692,7 +692,7 @@ Benefits:
 
 ---
 
-### 8.2 Lossy compression
+### Lossy compression
 
 #### Definition
 
@@ -718,7 +718,7 @@ For real-time video conferences, lossy compression is usually more appropriate b
 
 ---
 
-### 8.3 Lossless compression
+### Lossless compression
 
 #### Definition
 
@@ -738,7 +738,7 @@ For real-time video conferences, lossy compression is usually more appropriate b
 
 ---
 
-### 8.4 Run-length encoding (RLE)
+### Run-length encoding (RLE)
 
 #### What RLE does
 
@@ -781,9 +781,9 @@ becomes
 
 ---
 
-## 9. Mark Scheme Keywords
+## Mark Scheme Keywords
 
-### 9.1 Data representation
+### Data representation
 
 + **binary prefix**
 + **decimal prefix**
@@ -799,7 +799,7 @@ becomes
 + **exact decimal digits**
 + **rounding errors**
 
-### 9.2 Character sets
+### Character sets
 
 + **character set**
 + **unique binary code**
@@ -812,7 +812,7 @@ becomes
 + **symbols / emojis**
 + **more bits per character**
 
-### 9.3 Bitmap / vector / sound
+### Bitmap / vector / sound
 
 + **pixel**
 + **bit depth**
@@ -829,7 +829,7 @@ becomes
 + **analogue**
 + **amplitude**
 
-### 9.4 Compression
+### Compression
 
 + **reduces file size**
 + **less storage**
@@ -846,7 +846,7 @@ becomes
 
 ---
 
-## 10. Common Confusions
+## Topic-Specific Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -865,49 +865,49 @@ becomes
 
 ---
 
-## 11. Scenario Answer Bank
+## Scenario Answer Bank
 
-### 11.1 Explain why Unicode is used for a global app
+### Explain why Unicode is used for a global app
 
 > Unicode is suitable because it can represent a wider range of characters than ASCII. This includes characters from more languages and symbols such as emojis, so users from different countries can use the app.
 
-### 11.2 Explain why decreasing bit depth reduces image file size
+### Explain why decreasing bit depth reduces image file size
 
 > Decreasing bit depth means fewer bits are used to store each pixel. This reduces the amount of data stored, so the file size becomes smaller. However, fewer colours or shades can be represented, so image detail may be lost.
 
-### 11.3 Explain why a bitmap image becomes pixelated when enlarged
+### Explain why a bitmap image becomes pixelated when enlarged
 
 > A bitmap image is made from a fixed number of pixels. When the image is enlarged, the same pixels cover a larger area, so individual pixels become more visible and the image appears less sharp.
 
-### 11.4 Explain why vector graphics are suitable for logos
+### Explain why vector graphics are suitable for logos
 
 > Vector graphics store objects and their properties rather than individual pixels. This means the image can be resized without losing quality, which is useful for a logo that may be used at different sizes.
 
-### 11.5 Explain how sound is sampled
+### Explain how sound is sampled
 
 > The amplitude of the analogue sound wave is measured at regular time intervals. Each measurement is converted into a binary value. A higher sampling rate or sampling resolution gives a more accurate digital representation but increases file size.
 
-### 11.6 Justify lossy compression for a video conference
+### Justify lossy compression for a video conference
 
 > Lossy compression is suitable because a video is data-intensive and must be transmitted in real time. Lossy compression reduces the file size more than lossless compression, so less bandwidth is needed and buffering is reduced. Some loss of quality is acceptable because users can still understand the video and audio.
 
-### 11.7 Justify lossless compression for program code
+### Justify lossless compression for program code
 
 > Lossless compression is suitable because the original file can be restored exactly. Program code must not lose any characters or instructions, otherwise the program may not run correctly.
 
-### 11.8 Explain BCD use in financial systems
+### Explain BCD use in financial systems
 
 > BCD is suitable because each decimal digit is stored separately. This helps represent decimal values accurately and avoids accumulating rounding errors that may occur when decimal fractions are stored in normal binary.
 
-### 11.9 Explain RLE using an image
+### Explain RLE using an image
 
 > RLE identifies adjacent pixels with the same colour. It stores the colour and the number of times it is repeated. This reduces file size when the image contains long runs of the same colour.
 
 ---
 
-## 12. Process Diagrams
+## Process Diagrams
 
-### 12.1 Choosing a compression method
+### Choosing a compression method
 
 ```mermaid
 flowchart TD
@@ -922,7 +922,7 @@ C --> G[Examples: text, program code, medical image]
 E --> H[Examples: video call, streaming audio, web photo]
 ```
 
-### 12.2 Bitmap file size calculation
+### Bitmap file size calculation
 
 ```mermaid
 flowchart LR
@@ -933,7 +933,7 @@ D --> E[Bytes]
 E --> F[Divide by 1000 or 1024<br/>depending on unit]
 ```
 
-### 12.3 Sound sampling process
+### Sound sampling process
 
 ```mermaid
 flowchart LR

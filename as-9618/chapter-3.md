@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to classify hardware, compare storage, trace control and solve logic tasks.
 
@@ -70,9 +70,9 @@ Use this overview to classify hardware, compare storage, trace control and solve
 
 ---
 
-## 5. 3.1 Computers and Their Components
+## 3.1 Computers and Their Components
 
-### 5.1 Embedded systems
+### Embedded systems
 
 #### Definition
 
@@ -112,7 +112,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.2 Input, output and storage devices
+### Input, output and storage devices
 
 #### Input devices
 
@@ -145,7 +145,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.3 Sensors
+### Sensors
 
 #### Common sensors and uses
 
@@ -165,7 +165,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.4 Monitoring systems vs control systems
+### Monitoring systems vs control systems
 
 #### Monitoring system
 
@@ -196,7 +196,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.5 Actuators
+### Actuators
 
 #### Definition
 
@@ -214,7 +214,7 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 
 ---
 
-### 5.6 Buffers
+### Buffers
 
 #### Definition
 
@@ -250,9 +250,9 @@ Wrong. A buffer is **temporary storage**.
 
 ---
 
-## 6. Memory
+## Memory
 
-### 6.1 RAM and ROM
+### RAM and ROM
 
 | Feature | RAM | ROM |
 | --- | --- | --- |
@@ -280,7 +280,7 @@ Wrong. A buffer is **temporary storage**.
 
 ---
 
-### 6.2 Effect of RAM on performance
+### Effect of RAM on performance
 
 #### Good answer
 
@@ -294,7 +294,7 @@ This is too vague. Say **why**.
 
 ---
 
-### 6.3 SRAM vs DRAM
+### SRAM vs DRAM
 
 | Feature | SRAM | DRAM |
 | --- | --- | --- |
@@ -330,7 +330,7 @@ This is too vague. Say **why**.
 
 ---
 
-### 6.4 PROM, EPROM and EEPROM
+### PROM, EPROM and EEPROM
 
 | Memory type | Meaning | Key point |
 | --- | --- | --- |
@@ -349,9 +349,9 @@ This is too vague. Say **why**.
 
 ---
 
-## 7. Secondary Storage
+## Secondary Storage
 
-### 7.1 Magnetic hard disk
+### Magnetic hard disk
 
 #### Principal operation
 
@@ -388,7 +388,7 @@ A magnetic hard disk:
 
 ---
 
-### 7.2 Optical storage
+### Optical storage
 
 #### Principal operation
 
@@ -414,7 +414,7 @@ An optical disc reader/writer:
 
 ---
 
-### 7.3 Solid-state storage / flash memory
+### Solid-state storage / flash memory
 
 #### Key features
 
@@ -440,9 +440,9 @@ An optical disc reader/writer:
 
 ---
 
-## 8. Ports and Peripheral Connection
+## Ports and Peripheral Connection
 
-### 8.1 USB
+### USB
 
 #### Why USB is useful
 
@@ -458,7 +458,7 @@ An optical disc reader/writer:
 
 ---
 
-### 8.2 HDMI
+### HDMI
 
 #### Why HDMI may be better than VGA
 
@@ -476,11 +476,11 @@ An optical disc reader/writer:
 
 ---
 
-## 9. Processor-related Hardware Performance
+## Processor-related Hardware Performance
 
 Although detailed CPU architecture is mainly Chapter 4, exam questions can mix hardware performance into Chapter 3-style device comparison questions.
 
-### 9.1 Number of cores
+### Number of cores
 
 | More cores can help when... | Why |
 | --- | --- |
@@ -494,7 +494,7 @@ More cores do not always mean faster performance if the software cannot use them
 
 ---
 
-### 9.2 Clock speed
+### Clock speed
 
 > Clock speed is the number of cycles per second. Higher clock speed may allow more instructions to be processed per second.
 
@@ -508,7 +508,7 @@ Better:
 
 ---
 
-### 9.3 Bus width
+### Bus width
 
 | Bus | Effect |
 | --- | --- |
@@ -522,9 +522,9 @@ Better:
 
 ---
 
-## 10. 3.2 Logic Gates and Logic Circuits
+## 3.2 Logic Gates and Logic Circuits
 
-### 10.1 Basic gates
+### Basic gates
 
 | Gate | Meaning | Output is 1 when... |
 | --- | --- | --- |
@@ -537,7 +537,7 @@ Better:
 
 ---
 
-### 10.2 Truth tables
+### Truth tables
 
 #### NOT
 
@@ -593,7 +593,7 @@ Better:
 
 ---
 
-### 10.3 Writing logic expressions from a circuit
+### Writing logic expressions from a circuit
 
 #### Method
 
@@ -633,7 +633,7 @@ Cambridge accepts word-form expressions such as:
 
 ---
 
-### 10.4 Completing truth tables for complex expressions
+### Completing truth tables for complex expressions
 
 Example:
 
@@ -665,7 +665,7 @@ XOR = 1 only when inputs are different
 
 ---
 
-### 10.5 Drawing logic circuits from expressions
+### Drawing logic circuits from expressions
 
 #### Method
 
@@ -691,7 +691,7 @@ Draw:
 
 ---
 
-## 11. Mark Scheme Keywords
+## Mark Scheme Keywords
 
 ### Embedded systems
 
@@ -752,7 +752,7 @@ Draw:
 
 ---
 
-## 12. Common Confusions
+## Topic-Specific Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -769,51 +769,51 @@ Draw:
 
 ---
 
-## 13. Scenario Answer Bank
+## Scenario Answer Bank
 
-### 13.1 Embedded smart doorbell
+### Embedded smart doorbell
 
 > This is an embedded system because the processor, memory and software are built into the doorbell and are dedicated to specific tasks such as motion detection, video recording and sending notifications. It is not a general-purpose computer.
 
-### 13.2 Security light system
+### Security light system
 
 > This is a control system because sensor readings are processed and used to send a signal to turn on the floodlight. The output changes the environment by increasing the light level.
 
-### 13.3 Temperature monitoring system
+### Temperature monitoring system
 
 > This is a monitoring system if it only records or displays the temperature readings. It becomes a control system if the processor uses the readings to switch on a fan/heater through an actuator.
 
-### 13.4 Buffer for optical writing
+### Buffer for optical writing
 
 > The buffer temporarily stores data before it is written to the optical disc because the computer may send data faster than the disc writer can write it. The data remains in the buffer until the writer is ready.
 
-### 13.5 More RAM
+### More RAM
 
 > More RAM allows more currently running programs, data and instructions to be stored in main memory. This reduces the need to use virtual memory or access slower secondary storage, reducing delay.
 
-### 13.6 Wider data bus
+### Wider data bus
 
 > A wider data bus allows more data to be transferred between components at one time, so there may be less delay when data is fetched or transferred.
 
-### 13.7 USB automatic connection
+### USB automatic connection
 
 > USB supports plug-and-play. When the device is connected, the OS detects it and loads the required driver, allowing the device to be used automatically.
 
-### 13.8 HDMI instead of VGA
+### HDMI instead of VGA
 
 > HDMI is digital and can carry both video and audio. It supports high-resolution displays and does not need a separate audio cable, unlike VGA.
 
-### 13.9 Sensor on shop shelf
+### Sensor on shop shelf
 
 > A pressure sensor can detect that the pressure/weight on the shelf has decreased when an item is removed. This data is sent to the system so it can identify the item taken.
 
-### 13.10 Logic expression answer
+### Logic expression answer
 
 > Work from left to right. Give each gate an intermediate expression, then combine them with brackets. For example: `X = (A AND NOT B) OR C`.
 
 ---
 
-## 14. Process Diagram
+## Process Diagram
 
 ```mermaid
 flowchart TD
@@ -827,7 +827,7 @@ F --> G[Actuator changes environment<br/>control behaviour]
 
 ---
 
-## 15. Logic Circuit Working Process
+## Logic Circuit Working Process
 
 ```mermaid
 flowchart LR

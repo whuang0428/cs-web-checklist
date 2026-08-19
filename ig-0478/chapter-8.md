@@ -20,20 +20,20 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 | Objective | Where it is covered |
 |---|---|
-| Variables, constants and primitive data types | Section 2 |
-| Input, output and assignment | Section 2 |
-| Sequence, selection and iteration | Section 3 |
-| Arithmetic, relational and logical operators | Section 4 |
-| String handling | Section 5 |
-| Procedures, functions, parameters and scope | Section 6 |
-| One-dimensional and two-dimensional arrays | Section 7 |
-| File handling | Section 8 |
-| Maintainable programs | Section 9 |
-| Library routines: MOD, DIV, ROUND and RANDOM | Sections 4 and 10 |
+| Variables, constants and primitive data types | Data and Basic Statements |
+| Input, output and assignment | Data and Basic Statements |
+| Sequence, selection and iteration | Sequence, Selection and Iteration |
+| Arithmetic, relational and logical operators | Operators and Library Routines |
+| String handling | String Handling |
+| Procedures, functions, parameters and scope | Procedures, Functions and Scope |
+| One-dimensional and two-dimensional arrays | Arrays |
+| File handling | File Handling |
+| Maintainable programs | Maintainable Programs |
+| Library routines: MOD, DIV, ROUND and RANDOM | Operators and Library Routines; Worked Example 1 — Menu, Validation and Function |
 
 ---
 
-## 2. Data and Basic Statements
+## Data and Basic Statements
 
 ### Variables and constants
 
@@ -71,7 +71,7 @@ Assignment replaces the previous value of a variable. It is not the same as math
 
 ---
 
-## 3. Sequence, Selection and Iteration
+## Sequence, Selection and Iteration
 
 ### Sequence
 
@@ -155,7 +155,7 @@ UNTIL Choice >= 1 AND Choice <= 3
 
 ---
 
-## 4. Operators and Library Routines
+## Operators and Library Routines
 
 ### Arithmetic operators
 
@@ -195,7 +195,7 @@ Do not assume an unstated `RANDOM` range. Convert it only according to the defin
 
 ---
 
-## 5. String Handling
+## String Handling
 
 Common string operations include:
 
@@ -226,7 +226,7 @@ gives `"AB"`.
 
 ---
 
-## 6. Procedures, Functions and Scope
+## Procedures, Functions and Scope
 
 ### Procedure
 
@@ -273,7 +273,7 @@ Prefer local variables unless several subroutines genuinely need shared state. L
 
 ---
 
-## 7. Arrays
+## Arrays
 
 An array stores multiple values of the same type under one identifier.
 
@@ -323,7 +323,7 @@ Here, `Index` is a variable index. `HighestIndex` preserves the position of the 
 
 ---
 
-## 8. File Handling
+## File Handling
 
 Files preserve data after a program stops.
 
@@ -360,7 +360,7 @@ Opening an existing file for writing may replace its contents. Use the mode stat
 
 ---
 
-## 9. Maintainable Programs
+## Maintainable Programs
 
 A maintainable program is easier to understand, test and change.
 
@@ -384,7 +384,7 @@ This comment adds useful context.
 
 ---
 
-## 10. Worked Example 1 — Menu, Validation and Function
+## Worked Example 1 — Menu, Validation and Function
 
 A program repeatedly displays three menu options. It must reject other choices and use a function to calculate the area of a rectangle.
 
@@ -428,7 +428,7 @@ Why it is robust:
 
 ---
 
-## 11. Worked Example 2 — Two-Dimensional Array
+## Worked Example 2 — Two-Dimensional Array
 
 `Sales[1:3, 1:4]` stores four weekly sales totals for three stores. Find each store total and the largest single value.
 
@@ -456,7 +456,7 @@ OUTPUT "Largest weekly value ", Largest
 
 ---
 
-## 12. Worked Example 3 — Read a File with a Procedure
+## Worked Example 3 — Read a File with a Procedure
 
 The file `temperatures.txt` contains one real temperature per line. Display each temperature with the word `"Cold"` if it is below 10.
 

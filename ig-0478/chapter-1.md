@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to convert, calculate, represent and justify.
 
@@ -61,8 +61,8 @@ Use this overview to convert, calculate, represent and justify.
 
 ---
 
-## 4. 1.1 Number Systems
-### 4.1 Why computers use binary
+## 1.1 Number Systems
+### Why computers use binary
 #### Mark scheme answer
 > Computers use binary because computer circuits / transistors can only represent two states, such as on/off, high/low or 1/0. All data must be converted into binary so it can be processed and stored by the computer.
 >
@@ -83,7 +83,7 @@ This is too vague. It does not explain **why**.
 
 ---
 
-### 4.2 Number system definitions
+### Number system definitions
 | Number system | Base | Digits used | Key point |
 | --- | ---: | --- | --- |
 | Denary | 10 | 0–9 | normal human number system |
@@ -99,7 +99,7 @@ This is too vague. It does not explain **why**.
 
 ---
 
-### 4.3 Binary ↔ denary
+### Binary ↔ denary
 #### Binary to denary
 Example:
 
@@ -135,7 +135,7 @@ Answer = 00110101
 
 ---
 
-### 4.4 Hexadecimal ↔ binary
+### Hexadecimal ↔ binary
 #### Conversion table
 | Binary | Hex | Denary | Binary | Hex | Denary |
 | --- | --- | ---: | --- | --- | ---: |
@@ -188,7 +188,7 @@ Answer = 01111011
 
 ---
 
-### 4.5 Hexadecimal uses
+### Hexadecimal uses
 | Use | Why hexadecimal is suitable |
 | --- | --- |
 | HTML colour codes | 6 hex digits represent RGB values, e.g. `#FF0000` |
@@ -205,8 +205,8 @@ Answer = 01111011
 
 ---
 
-## 5. Binary Operations
-### 5.1 Binary addition
+## Binary Operations
+### Binary addition
 #### Rules
 | Addition | Result |
 | --- | --- |
@@ -233,7 +233,7 @@ Marks are often awarded for:
 
 ---
 
-### 5.2 Overflow
+### Overflow
 #### Definition
 > Overflow occurs when the result is too large to be stored in the number of bits available.
 >
@@ -255,7 +255,7 @@ Not always enough. A carry inside the calculation is normal. You need to say **t
 
 ---
 
-### 5.3 Logical binary shift
+### Logical binary shift
 #### Rules
 | Shift | Effect on positive binary integer |
 | --- | --- |
@@ -288,7 +288,7 @@ Denary:
 
 ---
 
-### 5.4 Two's complement
+### Two's complement
 ### 8-bit two's complement range
 | Bits | Range |
 | --- | --- |
@@ -360,8 +360,8 @@ Use column values:
 
 ---
 
-## 6. 1.2 Text, Sound and Images
-### 6.1 Text representation
+## 1.2 Text, Sound and Images
+### Text representation
 #### Character set
 > A character set is a set of characters and the codes used to represent them.
 >
@@ -380,7 +380,7 @@ D code stored third
 
 ---
 
-### 6.2 ASCII vs Unicode
+### ASCII vs Unicode
 | Feature | ASCII | Unicode |
 | --- | --- | --- |
 | Character range | smaller | much larger |
@@ -402,7 +402,7 @@ Wrong. Unicode has a much larger character set.
 
 ---
 
-### 6.3 Sound representation
+### Sound representation
 #### Key terms
 | Term | Meaning |
 | --- | --- |
@@ -435,7 +435,7 @@ Mark scheme style:
 
 ---
 
-### 6.4 Image representation
+### Image representation
 #### Key terms
 | Term | Meaning |
 | --- | --- |
@@ -457,8 +457,8 @@ Mark scheme style:
 
 ---
 
-## 7. 1.3 Data Storage and File Size
-### 7.1 Units
+## 1.3 Data Storage and File Size
+### Units
 #### Binary units
 | Unit | Size |
 | --- | ---: |
@@ -480,7 +480,7 @@ Do not use 1000 unless the question specifically uses **KB / MB / GB**.
 
 ---
 
-### 7.2 Image file size
+### Image file size
 #### Formula
 ```latex
 Image file size in bits = width × height × colour depth
@@ -520,7 +520,7 @@ KiB = 960 000 ÷ 1024
 
 ---
 
-### 7.3 Sound file size
+### Sound file size
 #### Formula
 ```latex
 Sound file size in bits =
@@ -556,8 +556,8 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-## 8. Compression
-### 8.1 Why compression is needed
+## Compression
+### Why compression is needed
 #### Mark scheme answer
 > Compression reduces file size, so less storage space is needed, less bandwidth is required, and the file can be transmitted / uploaded / downloaded faster.
 >
@@ -571,7 +571,7 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-### 8.2 Lossy vs lossless compression
+### Lossy vs lossless compression
 | Feature | Lossless | Lossy |
 | --- | --- | --- |
 | Data removed? | No permanent data loss | Data permanently removed |
@@ -594,7 +594,7 @@ KiB = 220 160 ÷ 1024
 
 ---
 
-### 8.3 Run-length encoding (RLE)
+### Run-length encoding (RLE)
 #### What it does
 > RLE identifies repeated adjacent data and stores the value with the number of times it is repeated.
 >
@@ -620,7 +620,7 @@ For images, this could mean:
 
 ---
 
-### 8.4 Choosing compression method
+### Choosing compression method
 | Scenario | Best choice | Why |
 | --- | --- | --- |
 | program code | lossless | code must be exactly restored or it may not run |
@@ -643,50 +643,50 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-## 9. Mark Scheme Style Answer Templates
-### 9.1 Why hexadecimal is used
+## Mark Scheme Style Answer Templates
+### Why hexadecimal is used
 > Hexadecimal is a shorter representation of binary. It is easier for humans / programmers to read and understand. It is also easy to convert between hexadecimal and binary because one hexadecimal digit represents four bits.
 >
 
 ---
 
-### 9.2 Explain overflow
+### Explain overflow
 > Overflow occurs when the result of a calculation is too large to be stored in the available number of bits. For an 8-bit unsigned register, any result greater than 255 cannot be stored.
 >
 
 ---
 
-### 9.3 Explain logical shift
+### Explain logical shift
 > In a logical shift, bits are moved left or right. Bits shifted out of the register are lost and zeros are shifted in. A left shift multiplies a positive binary integer by 2 for each shift, while a right shift divides it by 2 for each shift.
 >
 
 ---
 
-### 9.4 Explain Unicode vs ASCII
+### Explain Unicode vs ASCII
 > Unicode can represent more characters than ASCII, including different languages, symbols and emojis. Unicode usually requires more bits per character than ASCII, so files may require more storage.
 >
 
 ---
 
-### 9.5 Explain sampling sound
+### Explain sampling sound
 > The amplitude of the sound wave is measured at regular intervals. Each measurement is converted to a binary value. Increasing the sample rate or sample resolution improves the accuracy of the recording but increases the file size.
 >
 
 ---
 
-### 9.6 Explain image file size change
+### Explain image file size change
 > The image file size increases because there are more pixels / more bits used to store each pixel. Increasing resolution increases the number of pixels, while increasing colour depth increases the number of bits used for each colour.
 >
 
 ---
 
-### 9.7 Explain lossless compression
+### Explain lossless compression
 > Lossless compression reduces the file size without permanently removing data. The original file can be restored after decompression. For example, RLE stores repeated data as a value and the number of repetitions.
 >
 
 ---
 
-## 10. Common Confusions
+## Topic-Specific Common Confusions
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
 | Why binary? | "Computers understand binary" | "Transistors / logic circuits have two states, on/off or 1/0" |
@@ -706,7 +706,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate] -->
 
 ---
 
-## 11. Scenario Answer Bank
+## Scenario Answer Bank
 | Scenario | Answer direction |
 | --- | --- |
 | Artist wants image quality unchanged | use lossless; no data is permanently removed; original image can be restored |

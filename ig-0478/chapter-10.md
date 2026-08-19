@@ -20,16 +20,16 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 | Objective | Where it is covered |
 |---|---|
-| Recognise standard symbols for NOT, AND, OR, NAND, NOR and XOR/EOR | Section 2 |
-| State the function of each gate | Sections 2–3 |
-| Create a circuit from a problem, expression or truth table | Sections 5–6 |
-| Complete a truth table from a problem, expression or circuit | Sections 4–6 |
-| Write an expression from a problem, circuit or truth table | Sections 5–6 |
+| Recognise standard symbols for NOT, AND, OR, NAND, NOR and XOR/EOR | Standard Logic Gates |
+| State the function of each gate | Standard Logic Gates; Gate Functions and Truth Tables |
+| Create a circuit from a problem, expression or truth table | Moving Between Representations; Worked Example 1 — Expression to Truth Table |
+| Complete a truth table from a problem, expression or circuit | Building Truth Tables; Moving Between Representations; Worked Example 1 — Expression to Truth Table |
+| Write an expression from a problem, circuit or truth table | Moving Between Representations; Worked Example 1 — Expression to Truth Table |
 | Work with up to three inputs and one output | Worked Examples and practice sections |
 
 ---
 
-## 2. Standard Logic Gates
+## Standard Logic Gates
 
 ![Standard symbols for NOT, AND, OR, NAND, NOR and XOR gates](../assets/logic-gates.svg)
 
@@ -45,7 +45,7 @@ In an exam, draw the standard shape rather than a rectangle containing the gate 
 
 ---
 
-## 3. Gate Functions and Truth Tables
+## Gate Functions and Truth Tables
 
 ### NOT
 
@@ -77,7 +77,7 @@ Meanings:
 
 ---
 
-## 4. Building Truth Tables
+## Building Truth Tables
 
 For `n` inputs, a complete truth table contains `2^n` input combinations.
 
@@ -104,7 +104,7 @@ Add an intermediate column for every gate or sub-expression. This reduces mental
 
 ---
 
-## 5. Moving Between Representations
+## Moving Between Representations
 
 ### Expression to circuit
 
@@ -131,7 +131,7 @@ flowchart LR
     G3 --> Q[Q]
 ```
 
-The Mermaid diagram shows connectivity. In an exam response, replace the labelled boxes with the standard gate symbols from Section 2.
+The Mermaid diagram shows connectivity. In an exam response, replace the labelled boxes with the standard gate symbols introduced under Standard Logic Gates.
 
 ### Circuit to expression
 
@@ -182,7 +182,7 @@ For a multi-gate table, use intermediate conditions rather than guessing from th
 
 ---
 
-## 6. Worked Example 1 — Expression to Truth Table
+## Worked Example 1 — Expression to Truth Table
 
 Complete the truth table for:
 
@@ -210,7 +210,7 @@ Check:
 
 ---
 
-## 7. Worked Example 2 — Scenario to Circuit
+## Worked Example 2 — Scenario to Circuit
 
 A greenhouse fan runs when:
 
@@ -255,7 +255,7 @@ The output cannot be 1 when `T = 0`, regardless of the other inputs.
 
 ---
 
-## 8. Worked Example 3 — Trace a NAND/NOR Network
+## Worked Example 3 — Trace a NAND/NOR Network
 
 Given:
 

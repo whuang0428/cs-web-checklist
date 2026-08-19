@@ -27,7 +27,7 @@ Chapter 8 contains three syllabus sections:
 
 <span id="_4-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 4. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to model data, normalise relations, explain the DBMS and write SQL.
 
@@ -73,9 +73,9 @@ Use this overview to model data, normalise relations, explain the DBMS and write
 
 ---
 
-## 5. 8.1 Database Concepts
+## 8.1 Database Concepts
 
-### 5.1 File-based approach
+### File-based approach
 
 #### Meaning
 
@@ -102,7 +102,7 @@ A **file-based approach** stores data in separate files, usually created for one
 
 ---
 
-### 5.2 Relational database
+### Relational database
 
 #### Definition
 
@@ -127,7 +127,7 @@ relational database <span lang="zh-CN">的核心就是</span> **<span lang="zh-C
 
 ---
 
-### 5.3 Primary key
+### Primary key
 
 #### Mark scheme answer
 
@@ -150,7 +150,7 @@ CUSTOMER(CustomerID, FirstName, LastName, ContactNumber)
 
 ---
 
-### 5.4 Candidate key
+### Candidate key
 
 #### Mark scheme answer
 
@@ -174,7 +174,7 @@ Only one is chosen as the **primary key**, but all three could uniquely identify
 
 ---
 
-### 5.5 Foreign key
+### Foreign key
 
 #### Mark scheme answer
 
@@ -208,7 +208,7 @@ Foreign keys in `SALE`:
 
 ---
 
-### 5.6 Referential integrity
+### Referential integrity
 
 #### Mark scheme answer
 
@@ -228,7 +228,7 @@ Foreign keys in `SALE`:
 
 ---
 
-### 5.7 Relationships
+### Relationships
 
 #### One-to-one
 
@@ -279,7 +279,7 @@ REPAIR_PART(PartID, RepairNumber, Quantity)
 
 ---
 
-### 5.8 E-R diagrams
+### E-R diagrams
 
 #### What to show
 
@@ -311,9 +311,9 @@ that usually means it is a **linking table** between `REPAIR` and `PART`.
 
 ---
 
-## 6. Normalisation
+## Normalisation
 
-### 6.1 Why normalise?
+### Why normalise?
 
 #### Mark scheme answer
 
@@ -335,7 +335,7 @@ normalisation <span lang="zh-CN">就是把</span>“<span lang="zh-CN">乱的大
 
 ---
 
-### 6.2 First Normal Form: 1NF
+### First Normal Form: 1NF
 
 #### Rule
 
@@ -366,7 +366,7 @@ Problem: `Subjects` contains a repeating group.
 
 ---
 
-### 6.3 Second Normal Form: 2NF
+### Second Normal Form: 2NF
 
 #### Rule
 
@@ -392,7 +392,7 @@ So `ProductName` should be moved to `PRODUCT`.
 
 ---
 
-### 6.4 Third Normal Form: 3NF
+### Third Normal Form: 3NF
 
 #### Rule
 
@@ -421,7 +421,7 @@ TUTOR(TutorID, TutorName)
 
 ---
 
-### 6.5 Normalisation quick exam wording
+### Normalisation quick exam wording
 
 | Question asks | Best answer structure |
 | --- | --- |
@@ -433,9 +433,9 @@ TUTOR(TutorID, TutorName)
 
 ---
 
-## 7. 8.2 Database Management Systems DBMS
+## 8.2 Database Management Systems DBMS
 
-### 7.1 DBMS definition
+### DBMS definition
 
 #### Mark scheme answer
 
@@ -446,7 +446,7 @@ DBMS <span lang="zh-CN">就是管理数据库的软件层</span>。<span lang="z
 
 ---
 
-### 7.2 DBMS features
+### DBMS features
 
 | Feature | What it does | Mark scheme phrase |
 | --- | --- | --- |
@@ -462,7 +462,7 @@ DBMS <span lang="zh-CN">就是管理数据库的软件层</span>。<span lang="z
 
 ---
 
-### 7.3 Data dictionary
+### Data dictionary
 
 #### Definition
 
@@ -488,7 +488,7 @@ Too vague. It stores **data about data**, not normal user records.
 
 ---
 
-### 7.4 Data integrity in DBMS
+### Data integrity in DBMS
 
 DBMS can improve integrity by:
 
@@ -505,7 +505,7 @@ DBMS can improve integrity by:
 
 ---
 
-### 7.5 Data security in DBMS
+### Data security in DBMS
 
 DBMS can improve security by:
 
@@ -523,7 +523,7 @@ DBMS can improve security by:
 
 ---
 
-### 7.6 Developer interface
+### Developer interface
 
 #### Meaning
 
@@ -535,7 +535,7 @@ A developer interface lets developers create and modify database structures and 
 
 ---
 
-### 7.7 Query processor
+### Query processor
 
 #### Meaning
 
@@ -555,9 +555,9 @@ It may:
 
 ---
 
-## 8. 8.3 DDL and DML
+## 8.3 DDL and DML
 
-### 8.1 DDL vs DML
+### DDL vs DML
 
 | Type | Full name | Purpose | Examples |
 | --- | --- | --- | --- |
@@ -570,7 +570,7 @@ It may:
 
 ---
 
-### 8.2 SQL data types
+### SQL data types
 
 | Data type | Use | Example |
 | --- | --- | --- |
@@ -599,7 +599,7 @@ Contact numbers should not be `INTEGER` because they may start with `0` and are 
 
 ---
 
-### 8.3 SQL DDL: `CREATE TABLE`
+### SQL DDL: `CREATE TABLE`
 
 #### General structure
 
@@ -627,7 +627,7 @@ CREATE TABLE REPAIR (
 
 ---
 
-### 8.4 2024-style DDL example: linking table
+### 2024-style DDL example: linking table
 
 Given:
 
@@ -661,7 +661,7 @@ CREATE TABLE REPAIR_PART (
 
 ---
 
-### 8.5 SQL DML: `SELECT`
+### SQL DML: `SELECT`
 
 #### Basic structure
 
@@ -681,7 +681,7 @@ WHERE CustomerID = 'C102';
 
 ---
 
-### 8.6 `SUM`, `COUNT`, `AVG`
+### `SUM`, `COUNT`, `AVG`
 
 | Function | Purpose | Example use |
 | --- | --- | --- |
@@ -702,7 +702,7 @@ This is a very common Paper 1 style: **aggregate function + WHERE condition**.
 
 ---
 
-### 8.7 Date conditions
+### Date conditions
 
 Different SQL systems format dates slightly differently. In Cambridge answers, focus on logic.
 
@@ -728,7 +728,7 @@ If the field is called `Date`, keep it exactly as shown in the question unless t
 
 ---
 
-### 8.8 `GROUP BY`
+### `GROUP BY`
 
 Use `GROUP BY` when the question asks for totals/counts **for each group**.
 
@@ -749,7 +749,7 @@ Usually safer: `COUNT(*)` or `COUNT(PrimaryKey)`.
 
 ---
 
-### 8.9 `INNER JOIN`
+### `INNER JOIN`
 
 Use `INNER JOIN` when data is needed from two tables.
 
@@ -776,7 +776,7 @@ Both express the same basic relationship.
 
 ---
 
-### 8.10 DML maintenance commands
+### DML maintenance commands
 
 #### `INSERT INTO`
 
@@ -812,9 +812,9 @@ unless you want to delete every row.
 
 ---
 
-## 9. Mark Scheme Keywords
+## Mark Scheme Keywords
 
-### 9.1 Database concept keywords
+### Database concept keywords
 
 | Concept | Required ideas / marking points |
 | --- | --- |
@@ -836,7 +836,7 @@ unless you want to delete every row.
 | Query processor | processes / optimises / executes SQL |
 | Developer interface | allows developer to write SQL commands |
 
-### 9.2 SQL keywords
+### SQL keywords
 
 | SQL task | Keywords to include |
 | --- | --- |
@@ -857,7 +857,7 @@ unless you want to delete every row.
 
 ---
 
-## 10. Common Confusions
+## Topic-Specific Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -876,7 +876,7 @@ unless you want to delete every row.
 
 ---
 
-## 11. Scenario Answer Bank
+## Scenario Answer Bank
 
 ### Scenario 1: File-based approach limitation
 
@@ -987,7 +987,7 @@ Describe the purpose of a data dictionary.
 
 ---
 
-## 12. Mermaid Process Diagram: From Scenario to SQL
+## Mermaid Process Diagram: From Scenario to SQL
 
 ```mermaid
 flowchart TD

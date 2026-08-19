@@ -22,20 +22,20 @@ Paper 4 excludes **low-level** and **declarative** programming, but these paradi
 
 | Syllabus objective | Where it is covered |
 |---|---|
-| Define a programming paradigm | Section 3 |
-| Describe low-level, imperative, object-oriented and declarative paradigms | Section 3 |
-| Write procedural code using variables, constructs and subroutines | Section 4 |
-| Use all required OOP terminology accurately | Section 5 |
-| Design classes and write OOP code | Sections 5–6 and Worked Example 1 |
-| Open, read, write, append and close files | Section 7 |
-| Process serial, sequential and random files | Sections 7–8 and Worked Examples 2–3 |
-| Explain exceptions and select when to handle them | Section 9 |
-| Write exception-handling code | Section 9 and Worked Example 4 |
-| Produce complete code and testing evidence | Sections 2 and 10–13 |
+| Define a programming paradigm | Programming Paradigms |
+| Describe low-level, imperative, object-oriented and declarative paradigms | Programming Paradigms |
+| Write procedural code using variables, constructs and subroutines | Imperative and Procedural Design |
+| Use all required OOP terminology accurately | Object-Oriented Terminology |
+| Design classes and write OOP code | Object-Oriented Terminology; Designing and Implementing Classes and Worked Example 1 |
+| Open, read, write, append and close files | File Processing |
+| Process serial, sequential and random files | File Processing; Serial, Sequential and Random Files and Worked Examples 2–3 |
+| Explain exceptions and select when to handle them | Exception Handling |
+| Write exception-handling code | Exception Handling and Worked Example 4 |
+| Produce complete code and testing evidence | Paper 4 Scope and Evidence; Worked Example 1 — OOP Design from Requirements; Worked Example 2 — Sequential File Merge; Worked Example 3 — Hash Collision Trace; Worked Example 4 — Controlled File Failure |
 
 ---
 
-## 2. Paper 4 Scope and Evidence
+## Paper 4 Scope and Evidence
 
 Paper 4 is a practical examination. Candidates use Python, Java or Visual Basic in console mode and submit:
 
@@ -55,7 +55,7 @@ Do not submit only the successful normal case. Include boundary and failure beha
 
 ---
 
-## 3. Programming Paradigms
+## Programming Paradigms
 
 A **programming paradigm** is a general approach to organising computation and expressing solutions.
 
@@ -86,7 +86,7 @@ Low-level and declarative programming can be assessed in Paper 3 theory but must
 
 ---
 
-## 4. Imperative and Procedural Design
+## Imperative and Procedural Design
 
 Use functions and procedures to give each part one responsibility.
 
@@ -118,7 +118,7 @@ Global constants can be appropriate. Mutable global variables usually make testi
 
 ---
 
-## 5. Object-Oriented Terminology
+## Object-Oriented Terminology
 
 | Term | Precise meaning |
 |---|---|
@@ -141,7 +141,7 @@ Distinguish the relationships:
 
 ---
 
-## 6. Designing and Implementing Classes
+## Designing and Implementing Classes
 
 ```python
 class Activity:
@@ -203,7 +203,7 @@ Python does not enforce private access in the same way as every other language. 
 
 ---
 
-## 7. File Processing
+## File Processing
 
 ### Modes and safe closure
 
@@ -261,7 +261,7 @@ Validate:
 
 ---
 
-## 8. Serial, Sequential and Random Files
+## Serial, Sequential and Random Files
 
 | Organisation | Record arrangement | Access pattern |
 |---|---|---|
@@ -315,7 +315,7 @@ This uses **linear probing** to resolve collisions. The loop is bounded by the t
 
 ---
 
-## 9. Exception Handling
+## Exception Handling
 
 An **exception** is an event raised during execution that interrupts the normal control flow.
 
@@ -346,7 +346,7 @@ Use specific exception types because each represents a different failure and may
 
 ---
 
-## 10. Worked Example 1 — OOP Design from Requirements
+## Worked Example 1 — OOP Design from Requirements
 
 Requirements:
 
@@ -403,7 +403,7 @@ Design justification:
 
 ---
 
-## 11. Worked Example 2 — Sequential File Merge
+## Worked Example 2 — Sequential File Merge
 
 Two files contain records sorted by integer ID. Merge them without sorting the combined result again.
 
@@ -443,7 +443,7 @@ Because both inputs are already ordered, the merge is `O(n + m)`. A common error
 
 ---
 
-## 12. Worked Example 3 — Hash Collision Trace
+## Worked Example 3 — Hash Collision Trace
 
 For table size 7, use `key MOD 7` and linear probing.
 
@@ -467,7 +467,7 @@ Tests should include:
 
 ---
 
-## 13. Worked Example 4 — Controlled File Failure
+## Worked Example 4 — Controlled File Failure
 
 ```python
 def average_from_file(filename):

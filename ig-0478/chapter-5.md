@@ -371,8 +371,8 @@ G --> H[Server slows down / crashes / website unavailable]
 
 ---
 
-## 5.3.6 Keeping Data Safe｜Security Solutions
-### Solution Overview
+### 5.3.6 Keeping Data Safe｜Security Solutions
+#### Solution Overview
 | Solution | What it does | Good exam expansion |
 | --- | --- | --- |
 | **Access levels** | Controls which users can access specific data | Users only access data needed for their role |
@@ -504,7 +504,7 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-## 6. Common Confusions
+## Topic-Specific Common Confusions
 | Topic | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | Internet vs WWW | “They are the same.” | <span lang="zh-CN">完全错误</span> | The internet is the infrastructure; the WWW is a collection of web pages accessed using the internet. |
@@ -530,7 +530,7 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-## 7. Command Word Strategy
+## Command Word Strategy
 | Command word | What to do | Example answer style |
 | --- | --- | --- |
 | **State / Give / Identify** | <span lang="zh-CN">短答案</span>，<span lang="zh-CN">给名称即可</span> | `Proxy server`, `persistent cookie`, `DNS` |
@@ -542,7 +542,7 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-## 8. Mark Scheme Style Templates
+## Mark Scheme Style Templates
 ### Template A｜Webpage retrieval
 > When a user enters a URL, the browser sends the domain name to a DNS. The DNS searches for the matching IP address and returns it to the browser. The browser sends a request to the web server at that IP address. The web server sends the web page files back. The browser renders the HTML and displays the web page.
 >

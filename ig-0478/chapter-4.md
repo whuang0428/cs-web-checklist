@@ -335,7 +335,7 @@ An **IDE** is a suite of programs used to write, run, test and debug program cod
 
 <span id="_2-chapter-4-overall-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 2. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to classify software, trace interrupts, translate code and select tools.
 
@@ -381,7 +381,7 @@ Use this overview to classify software, trace interrupts, translate code and sel
 
 ---
 
-## 3. Mark Scheme Style Answer Templates
+## Mark Scheme Style Answer Templates
 ### Template A｜Difference between system software and application software
 > System software provides the services that the computer requires and manages / maintains the hardware and software. An example is an operating system or utility software. Application software provides the services that the user requires and allows the user to perform tasks. An example is a word processor or spreadsheet.
 >
@@ -424,7 +424,7 @@ Use this overview to classify software, trace interrupts, translate code and sel
 
 ---
 
-## 4. Common Confusions
+## Topic-Specific Common Confusions
 | Topic | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | System software | “It is software for computer.” | Too vague | “It provides services the computer requires and manages hardware/software.” |
@@ -451,8 +451,8 @@ Use this overview to classify software, trace interrupts, translate code and sel
 
 ---
 
-## 5. Fast Revision Tables
-### 5.1 Must-know Definitions
+## Fast Revision Tables
+### Must-know Definitions
 | Term | Definition |
 | --- | --- |
 | **System software** | software that provides services required by the computer |
@@ -474,7 +474,7 @@ Use this overview to classify software, trace interrupts, translate code and sel
 
 ---
 
-### 5.2 “Choose the best translator” Table
+### “Choose the best translator” Table
 | Scenario | Best translator | Reason |
 | --- | --- | --- |
 | Debugging during development | Interpreter | stops at the line where an error is found |

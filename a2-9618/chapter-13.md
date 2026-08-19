@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to define data types, choose file access, calculate floating point and control errors.
 
@@ -61,9 +61,9 @@ Use this overview to define data types, choose file access, calculate floating p
 
 ---
 
-## 4. 13.1 User-Defined Data Types
+## 13.1 User-Defined Data Types
 
-### 4.1 Why user-defined data types are necessary
+### Why user-defined data types are necessary
 
 #### Mark scheme answer
 > User-defined data types allow the programmer to create data types that match the needs of a specific problem. They make the program easier to understand, less error-prone and allow related data items to be grouped together under one identifier.
@@ -83,7 +83,7 @@ Too vague. You need to explain **why** a built-in type is not enough.
 
 ---
 
-### 4.2 Composite vs non-composite data types
+### Composite vs non-composite data types
 
 | Type | Meaning | Examples |
 | --- | --- | --- |
@@ -102,7 +102,7 @@ Too vague. You need to explain **why** a built-in type is not enough.
 
 ---
 
-### 4.3 Enumerated type
+### Enumerated type
 
 #### Definition
 > An enumerated data type is a user-defined non-composite data type with a fixed list of possible values.
@@ -138,7 +138,7 @@ DECLARE Gate : GateID
 
 ---
 
-### 4.4 Pointer type
+### Pointer type
 
 #### Definition
 > A pointer data type is a user-defined non-composite data type that stores a memory address and indicates the type of data stored at that location.
@@ -163,7 +163,7 @@ DECLARE CurrentName : TNamePointer
 
 ---
 
-### 4.5 Record type
+### Record type
 
 #### Definition
 > A record is a user-defined composite data type that contains a fixed number of fields, where the fields may be of different data types.
@@ -221,7 +221,7 @@ Flight1.Airline ← "Cambridge Airways"
 
 ---
 
-### 4.6 Set type
+### Set type
 
 #### Definition
 > A set is a user-defined composite data type that contains an unordered list of elements. Set theory operations such as union and intersection can be applied. All elements are of the same data type.
@@ -255,9 +255,9 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ---
 
-## 5. 13.2 File Organisation and Access
+## 13.2 File Organisation and Access
 
-### 5.1 File organisation overview
+### File organisation overview
 
 | File organisation | How records are stored | Common access method | Good for |
 | --- | --- | --- | --- |
@@ -267,7 +267,7 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ---
 
-### 5.2 Serial file organisation
+### Serial file organisation
 
 #### Mark scheme answer
 > In a serial file, records are stored in the order they are added, often chronological order. There is no ordering by key field, so records must be checked one after another until the required record is found or all records have been checked.
@@ -285,7 +285,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ---
 
-### 5.3 Sequential file organisation
+### Sequential file organisation
 
 #### Mark scheme answer
 > In a sequential file, records are stored in order of a key field. The key field is compared as the file is searched, and the search can stop when the required key is found or when the current key is greater than the target key.
@@ -306,7 +306,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ---
 
-### 5.4 Random file organisation
+### Random file organisation
 
 #### Mark scheme answer
 > In a random file, records are stored in no particular sequence. There is a relationship between the record key and its location in the file, often using a hashing algorithm, so records can be accessed directly.
@@ -319,7 +319,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ---
 
-### 5.5 Sequential access
+### Sequential access
 
 #### Mark scheme answer
 > Sequential access searches records one after another from the physical start of the file until the record is found or the end of file is reached.
@@ -338,7 +338,7 @@ CLOSEFILE "Customer.dat"
 
 ---
 
-### 5.6 Direct access
+### Direct access
 
 #### Mark scheme answer
 > Direct access allows a record to be accessed without reading every previous record. A calculation or index can be used to identify the likely record location.
@@ -353,7 +353,7 @@ GETRECORD "AccountRecords.dat", Customer
 
 ---
 
-### 5.7 Hashing algorithm
+### Hashing algorithm
 
 #### Definition
 > A hashing algorithm takes a record key as input and calculates the storage location / address for that record in the file.
@@ -372,7 +372,7 @@ Location ← AccountNumber MOD 1000
 
 ---
 
-### 5.8 Collision and collision resolution
+### Collision and collision resolution
 
 #### Definition
 > A collision occurs when two different record keys are processed by the hashing algorithm and produce the same hash value / storage location.
@@ -393,9 +393,9 @@ Location ← AccountNumber MOD 1000
 
 ---
 
-## 6. 13.3 Floating-Point Numbers
+## 13.3 Floating-Point Numbers
 
-### 6.1 Format of floating-point representation
+### Format of floating-point representation
 
 A binary floating-point number is stored using:
 
@@ -418,7 +418,7 @@ Example mantissa:
 
 ---
 
-### 6.2 Normalisation
+### Normalisation
 
 #### Rule
 A normalised mantissa uses the available bits efficiently.
@@ -440,7 +440,7 @@ A normalised mantissa uses the available bits efficiently.
 
 ---
 
-### 6.3 Positive denary to floating-point
+### Positive denary to floating-point
 
 #### Example: +54.8125 using 12-bit mantissa and 4-bit exponent
 
@@ -470,7 +470,7 @@ If the question gives 10 mantissa bits, write 10 bits. If it gives 12 mantissa b
 
 ---
 
-### 6.4 Negative denary to floating-point
+### Negative denary to floating-point
 
 #### Method
 1. Convert the positive version to binary.  
@@ -514,7 +514,7 @@ Exponent: 000101
 
 ---
 
-### 6.5 Floating-point to denary
+### Floating-point to denary
 
 #### Method
 1. Read the exponent. If MSB is 1, convert from two's complement.  
@@ -553,7 +553,7 @@ Convert as two's complement:
 
 ---
 
-### 6.6 Precision, range, rounding, overflow and underflow
+### Precision, range, rounding, overflow and underflow
 
 | Concept | Meaning | Exam phrase |
 | --- | --- | --- |
@@ -576,9 +576,9 @@ Convert as two's complement:
 
 ---
 
-## 7. Mark Scheme Keywords
+## Mark Scheme Keywords
 
-### 7.1 User-defined data types
+### User-defined data types
 + **user-defined data type**
 + **non-composite**
 + **composite**
@@ -593,7 +593,7 @@ Convert as two's complement:
 + **set is unordered**
 + **set theory operations**
 
-### 7.2 File organisation and access
+### File organisation and access
 + **records stored in chronological order**
 + **records stored in order of a key field**
 + **sequential access searches records one after another**
@@ -608,7 +608,7 @@ Convert as two's complement:
 + **overflow area**
 + **chaining**
 
-### 7.3 Floating-point
+### Floating-point
 + **mantissa**
 + **exponent**
 + **two's complement**
@@ -647,12 +647,12 @@ Use technical terms as part of a complete statement: identify the component or m
 
 ---
 
-## 9. Scenario Answer Bank
+## Scenario Answer Bank
 
-### 9.1 Describe a record data type
+### Describe a record data type
 > A record is a user-defined composite data type. It contains a fixed number of fields, and the fields can be of different data types. The fields are grouped under one identifier.
 
-### 9.2 Declare a record
+### Declare a record
 ```text
 TYPE Order
     DECLARE AccountNumber : STRING
@@ -662,35 +662,35 @@ TYPE Order
 ENDTYPE
 ```
 
-### 9.3 Explain why a field should be enumerated
+### Explain why a field should be enumerated
 > This field has a fixed range of possible values, so an enumerated type would restrict the values to valid options and make the program less error-prone.
 
-### 9.4 Describe a set
+### Describe a set
 > A set is a user-defined composite data type containing unordered elements of the same data type. Set theory operations such as union, intersection and difference can be applied.
 
-### 9.5 Describe sequential access
+### Describe sequential access
 > Sequential access searches records one after another from the physical start of the file until the required record is found or the end of file is reached.
 
-### 9.6 Explain serial vs sequential file search
+### Explain serial vs sequential file search
 > In a serial file, records are stored in chronological order, so every record may need to be checked. In a sequential file, records are stored in order of a key field, so the key can be compared and the search can stop when the current key exceeds the target key.
 
-### 9.7 Explain hashing
+### Explain hashing
 > A hashing algorithm takes a record key and calculates a hash value that gives the storage location of the record. It is used to provide direct access to records in a random or sequential file.
 
-### 9.8 Explain collision resolution
+### Explain collision resolution
 > A collision occurs when two record keys generate the same hash value. It can be resolved by linear probing, by searching an overflow area, or by using a chain of records from the hashed location.
 
-### 9.9 Explain precision and range
+### Explain precision and range
 > Increasing the number of bits in the mantissa increases precision. Increasing the number of bits in the exponent increases the range of numbers that can be represented.
 
-### 9.10 Explain rounding error
+### Explain rounding error
 > Some denary fractions cannot be represented exactly in binary. Because the number of bits is fixed, the value may be rounded or truncated, causing a loss of precision.
 
 ---
 
-## 10. Process Diagrams
+## Process Diagrams
 
-### 10.1 Choosing a user-defined type
+### Choosing a user-defined type
 
 ```mermaid
 flowchart TD
@@ -702,7 +702,7 @@ B -->|Unordered same-type collection| F[Set]
 B -->|Object with attributes and methods| G[Class/Object]
 ```
 
-### 10.2 Floating-point conversion process
+### Floating-point conversion process
 
 ```mermaid
 flowchart TD

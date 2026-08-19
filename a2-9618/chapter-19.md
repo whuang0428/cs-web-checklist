@@ -22,21 +22,21 @@ This chapter uses **Python 3 console-mode code** because Python is one of the la
 
 | Syllabus objective | Where it is covered |
 |---|---|
-| Implement linear and binary searching | Section 3 and Worked Example 1 |
-| State the conditions for binary search and explain its performance | Sections 3 and 7 |
-| Implement insertion sort and bubble sort | Section 4 and Worked Example 2 |
-| Relate sorting performance to input order and size | Sections 4 and 7 |
-| Find, insert and delete items in required ADTs | Sections 5–6 and Worked Example 3 |
-| Describe stacks, queues, linked lists, dictionaries and binary trees | Section 5 |
-| Explain graphs and justify their use without implementing graph code | Section 5 |
-| Implement one ADT using another | Section 6 |
-| Compare time and space complexity using Big O notation | Section 7 |
-| Explain, write and trace recursion | Section 8 and Worked Example 4 |
-| Explain the call stack and unwinding | Section 8 |
+| Implement linear and binary searching | Searching and Worked Example 1 |
+| State the conditions for binary search and explain its performance | Searching; Comparing Algorithms with Big O |
+| Implement insertion sort and bubble sort | Sorting and Worked Example 2 |
+| Relate sorting performance to input order and size | Sorting; Comparing Algorithms with Big O |
+| Find, insert and delete items in required ADTs | Abstract Data Types; Array-Based Linked List and ADT Composition and Worked Example 3 |
+| Describe stacks, queues, linked lists, dictionaries and binary trees | Abstract Data Types |
+| Explain graphs and justify their use without implementing graph code | Abstract Data Types |
+| Implement one ADT using another | Array-Based Linked List and ADT Composition |
+| Compare time and space complexity using Big O notation | Comparing Algorithms with Big O |
+| Explain, write and trace recursion | Recursion and Worked Example 4 |
+| Explain the call stack and unwinding | Recursion |
 
 ---
 
-## 2. Paper 4 Algorithm Workflow
+## Paper 4 Algorithm Workflow
 
 Paper 4 rewards working program code and visible evidence, not an untested algorithm description.
 
@@ -54,7 +54,7 @@ A solution is not complete because it works for one supplied example. It must al
 
 ---
 
-## 3. Searching
+## Searching
 
 ### Linear search
 
@@ -105,7 +105,7 @@ For `n` indexed items, binary search has `O(log n)` worst-case time. Doubling th
 
 ---
 
-## 4. Sorting
+## Sorting
 
 ### Bubble sort
 
@@ -155,7 +155,7 @@ Do not claim insertion sort is always faster. Its advantage is strongest for sma
 
 ---
 
-## 5. Abstract Data Types
+## Abstract Data Types
 
 An **abstract data type (ADT)** defines permitted data and operations independently of its implementation.
 
@@ -287,7 +287,7 @@ Suitable uses include road networks, social connections and dependency networks.
 
 ---
 
-## 6. Array-Based Linked List and ADT Composition
+## Array-Based Linked List and ADT Composition
 
 ### Linked list with a free list
 
@@ -373,7 +373,7 @@ An item may be moved once from `_input` to `_output`, so a sequence of operation
 
 ---
 
-## 7. Comparing Algorithms with Big O
+## Comparing Algorithms with Big O
 
 Big O describes how resource use grows as input size `n` grows. It ignores constant multipliers and small lower-order terms.
 
@@ -396,7 +396,7 @@ Use Big O honestly. A hash-table lookup is average `O(1)`, not guaranteed consta
 
 ---
 
-## 8. Recursion
+## Recursion
 
 A recursive algorithm must contain:
 
@@ -447,7 +447,7 @@ Prefer iteration when it is simpler and deep recursion could exhaust the call st
 
 ---
 
-## 9. Worked Example 1 — Binary Search Trace
+## Worked Example 1 — Binary Search Trace
 
 Search for `42` in:
 
@@ -467,7 +467,7 @@ Failure case: when `low` becomes greater than `high`, return `-1`. Do not access
 
 ---
 
-## 10. Worked Example 2 — Insertion Sort Trace
+## Worked Example 2 — Insertion Sort Trace
 
 Sort `[7, 3, 5, 2]`.
 
@@ -481,7 +481,7 @@ The last insertion performs the most work because `2` is smaller than every item
 
 ---
 
-## 11. Worked Example 3 — Linked-List Allocation and Deletion
+## Worked Example 3 — Linked-List Allocation and Deletion
 
 For capacity 4, the initial free chain is:
 
@@ -518,7 +518,7 @@ Required test cases:
 
 ---
 
-## 12. Worked Example 4 — Recursive Tree Traversal
+## Worked Example 4 — Recursive Tree Traversal
 
 Calculate the number of nodes in a binary tree.
 

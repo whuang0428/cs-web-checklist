@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to model routes, choose learning, train networks and evaluate results.
 
@@ -61,9 +61,9 @@ Use this overview to model routes, choose learning, train networks and evaluate 
 
 ---
 
-## 4. 18.1 Artificial Intelligence Overview
+## 18.1 Artificial Intelligence Overview
 
-### 4.1 What is Artificial Intelligence?
+### What is Artificial Intelligence?
 
 #### Student-friendly explanation
 Artificial Intelligence means using computer systems to carry out tasks that normally need human intelligence.
@@ -87,7 +87,7 @@ This is too vague. You need to explain **what the computer does**.
 
 ---
 
-### 4.2 AI vs Machine Learning vs Deep Learning
+### AI vs Machine Learning vs Deep Learning
 
 | Term | Meaning | Exam focus |
 | --- | --- | --- |
@@ -109,9 +109,9 @@ B --> C[Deep Learning<br/>many hidden layers in neural networks]
 
 ---
 
-## 5. Graphs in Artificial Intelligence
+## Graphs in Artificial Intelligence
 
-### 5.1 What is a graph?
+### What is a graph?
 
 A graph is a data structure used to show relationships between items.
 
@@ -136,7 +136,7 @@ A graph is a data structure used to show relationships between items.
 
 ---
 
-### 5.2 Why graphs are useful in AI
+### Why graphs are useful in AI
 
 Graphs help AI represent a problem as connected possibilities.
 
@@ -156,7 +156,7 @@ Examples:
 
 ---
 
-### 5.3 Directed and undirected graphs
+### Directed and undirected graphs
 
 | Type | Meaning | Example |
 | --- | --- | --- |
@@ -169,7 +169,7 @@ Examples:
 
 ---
 
-### 5.4 Weighted graph
+### Weighted graph
 
 A weighted graph has values on edges.
 
@@ -195,9 +195,9 @@ In this graph:
 
 ---
 
-## 6. A* and Dijkstra's Algorithms
+## A* and Dijkstra's Algorithms
 
-### 6.1 What these algorithms are used for
+### What these algorithms are used for
 
 A* and Dijkstra's algorithm are graph search algorithms.
 They are used to find the best route through a graph.
@@ -215,7 +215,7 @@ They are used to find the best route through a graph.
 
 ---
 
-### 6.2 Dijkstra's algorithm
+### Dijkstra's algorithm
 
 #### Student-friendly explanation
 Dijkstra looks for the shortest path from a starting node by repeatedly choosing the unvisited node with the smallest known cost so far.
@@ -232,7 +232,7 @@ Dijkstra looks for the shortest path from a starting node by repeatedly choosing
 
 ---
 
-### 6.3 A* algorithm
+### A* algorithm
 
 #### Student-friendly explanation
 A* also finds a route, but it uses both:
@@ -253,7 +253,7 @@ This estimate is called a **heuristic**.
 
 ---
 
-### 6.4 Dijkstra vs A*
+### Dijkstra vs A*
 
 | Feature | Dijkstra | A* |
 | --- | --- | --- |
@@ -274,9 +274,9 @@ This estimate is called a **heuristic**.
 
 ---
 
-## 7. Machine Learning
+## Machine Learning
 
-### 7.1 What is machine learning?
+### What is machine learning?
 
 #### Student-friendly explanation
 Machine learning means the computer learns from data. Instead of manually programming every rule, the system finds patterns and improves its predictions or decisions.
@@ -294,7 +294,7 @@ Machine learning means the computer learns from data. Instead of manually progra
 
 ---
 
-### 7.2 Why use machine learning?
+### Why use machine learning?
 
 Machine learning is useful when:
 
@@ -309,9 +309,9 @@ Machine learning is useful when:
 
 ---
 
-## 8. Supervised Learning
+## Supervised Learning
 
-### 8.1 Definition
+### Definition
 
 Supervised learning uses labelled training data.
 
@@ -338,7 +338,7 @@ A label is the correct answer already attached to an example.
 
 ---
 
-### 8.2 When to use supervised learning
+### When to use supervised learning
 
 Use supervised learning when:
 
@@ -351,9 +351,9 @@ Use supervised learning when:
 
 ---
 
-## 9. Unsupervised Learning
+## Unsupervised Learning
 
-### 9.1 Definition
+### Definition
 
 Unsupervised learning uses unlabelled data.
 The system has to find patterns by itself.
@@ -380,7 +380,7 @@ The system has to find patterns by itself.
 
 ---
 
-### 9.2 Supervised vs unsupervised learning
+### Supervised vs unsupervised learning
 
 | Feature | Supervised learning | Unsupervised learning |
 | --- | --- | --- |
@@ -396,9 +396,9 @@ The system has to find patterns by itself.
 
 ---
 
-## 10. Reinforcement Learning
+## Reinforcement Learning
 
-### 10.1 Definition
+### Definition
 
 Reinforcement learning is learning by trial and error.
 
@@ -427,7 +427,7 @@ The AI interacts with an environment, takes actions, and receives rewards or pen
 
 ---
 
-### 10.2 Why use reinforcement learning?
+### Why use reinforcement learning?
 
 Use reinforcement learning when:
 
@@ -442,7 +442,7 @@ Use reinforcement learning when:
 
 ---
 
-### 10.3 Common mistake
+### Common mistake
 
 | Mistake | Correction |
 | --- | --- |
@@ -453,9 +453,9 @@ Use reinforcement learning when:
 
 ---
 
-## 11. Artificial Neural Networks (ANNs)
+## Artificial Neural Networks (ANNs)
 
-### 11.1 What is an artificial neural network?
+### What is an artificial neural network?
 
 An artificial neural network is a computer model inspired by the human brain.
 It uses many connected processing units called nodes / neurons.
@@ -474,7 +474,7 @@ It uses many connected processing units called nodes / neurons.
 
 ---
 
-### 11.2 Structure of an ANN
+### Structure of an ANN
 
 ```mermaid
 flowchart LR
@@ -498,7 +498,7 @@ H2 --> O
 
 ---
 
-### 11.3 Weights and biases
+### Weights and biases
 
 Each connection can have a **weight**.
 The weight controls how strongly one node affects another node.
@@ -516,9 +516,9 @@ During training:
 
 ---
 
-## 12. Deep Learning
+## Deep Learning
 
-### 12.1 Definition
+### Definition
 
 Deep learning is a type of machine learning that uses artificial neural networks with many hidden layers.
 
@@ -535,7 +535,7 @@ Deep learning is a type of machine learning that uses artificial neural networks
 
 ---
 
-### 12.2 Why deep learning is useful
+### Why deep learning is useful
 
 Deep learning is useful when:
 
@@ -559,7 +559,7 @@ Deep learning is useful when:
 
 ---
 
-### 12.3 Deep learning vs normal machine learning
+### Deep learning vs normal machine learning
 
 | Feature | Machine learning | Deep learning |
 | --- | --- | --- |
@@ -572,9 +572,9 @@ Deep learning is useful when:
 
 ---
 
-## 13. Back Propagation of Errors
+## Back Propagation of Errors
 
-### 13.1 What is back propagation?
+### What is back propagation?
 
 Back propagation is a training method used in neural networks.
 
@@ -613,7 +613,7 @@ G --> H[Prediction becomes more accurate]
 
 ---
 
-### 13.2 Common mistake
+### Common mistake
 
 | Mistake | Correction |
 | --- | --- |
@@ -624,9 +624,9 @@ G --> H[Prediction becomes more accurate]
 
 ---
 
-## 14. Regression Methods in Machine Learning
+## Regression Methods in Machine Learning
 
-### 14.1 What is regression?
+### What is regression?
 
 Regression is used to predict a continuous numeric value.
 
@@ -651,7 +651,7 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-### 14.2 Classification vs regression
+### Classification vs regression
 
 | Feature | Classification | Regression |
 | --- | --- | --- |
@@ -667,9 +667,9 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-## 15. Mark Scheme Keywords
+## Mark Scheme Keywords
 
-### 15.1 Graphs in AI
+### Graphs in AI
 + **nodes / vertices**
 + **edges**
 + **relationships**
@@ -678,7 +678,7 @@ Regression is used to predict a continuous numeric value.
 + **shortest route**
 + **optimal path**
 
-### 15.2 A* and Dijkstra
+### A* and Dijkstra
 + **shortest path**
 + **lowest-cost path**
 + **between two nodes**
@@ -686,21 +686,21 @@ Regression is used to predict a continuous numeric value.
 + **heuristic** for A*
 + **known edge costs** for Dijkstra
 
-### 15.3 Supervised learning
+### Supervised learning
 + **labelled data**
 + **known outcomes**
 + **input-output pairs**
 + **training data**
 + **predict outcomes**
 
-### 15.4 Unsupervised learning
+### Unsupervised learning
 + **unlabelled data**
 + **unknown outcomes**
 + **hidden patterns**
 + **clusters**
 + **structures in data**
 
-### 15.5 Reinforcement learning
+### Reinforcement learning
 + **trial and error**
 + **interactive environment**
 + **agent**
@@ -709,7 +709,7 @@ Regression is used to predict a continuous numeric value.
 + **penalty**
 + **learns from experience**
 
-### 15.6 Artificial neural networks
+### Artificial neural networks
 + **human brain**
 + **connected processing units**
 + **nodes / neurons**
@@ -720,14 +720,14 @@ Regression is used to predict a continuous numeric value.
 + **biases**
 + **training**
 
-### 15.7 Deep learning
+### Deep learning
 + **multiple hidden layers**
 + **extract complex features**
 + **large amounts of data**
 + **make predictions**
 + **adjust weights**
 
-### 15.8 Back propagation
+### Back propagation
 + **error**
 + **predicted output**
 + **expected output**
@@ -735,7 +735,7 @@ Regression is used to predict a continuous numeric value.
 + **adjust weights**
 + **reduce error**
 
-### 15.9 Regression
+### Regression
 + **relationship between variables**
 + **continuous numerical value**
 + **prediction**
@@ -744,7 +744,7 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-## 16. Common Confusions
+## Topic-Specific Common Confusions
 
 | Mistake | Why it loses marks | Better answer |
 | --- | --- | --- |
@@ -762,9 +762,9 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-## 17. Scenario Answer Bank
+## Scenario Answer Bank
 
-### 17.1 Route-finding AI
+### Route-finding AI
 #### Scenario
 A delivery company wants to find the fastest route between warehouses.
 
@@ -773,7 +773,7 @@ A delivery company wants to find the fastest route between warehouses.
 
 ---
 
-### 17.2 Game character movement
+### Game character movement
 #### Scenario
 A game enemy needs to move from its current position to the player.
 
@@ -782,7 +782,7 @@ A game enemy needs to move from its current position to the player.
 
 ---
 
-### 17.3 Email spam detection
+### Email spam detection
 #### Scenario
 A company has thousands of emails already labelled as spam or not spam.
 
@@ -791,7 +791,7 @@ A company has thousands of emails already labelled as spam or not spam.
 
 ---
 
-### 17.4 Customer grouping
+### Customer grouping
 #### Scenario
 A shop has customer purchase data but no pre-defined customer categories.
 
@@ -800,7 +800,7 @@ A shop has customer purchase data but no pre-defined customer categories.
 
 ---
 
-### 17.5 Robot learning to navigate
+### Robot learning to navigate
 #### Scenario
 A robot learns to move through a maze.
 
@@ -809,7 +809,7 @@ A robot learns to move through a maze.
 
 ---
 
-### 17.6 Predicting house prices
+### Predicting house prices
 #### Scenario
 A model predicts a house price from size, location and number of bedrooms.
 
@@ -818,7 +818,7 @@ A model predicts a house price from size, location and number of bedrooms.
 
 ---
 
-### 17.7 Medical image recognition
+### Medical image recognition
 #### Scenario
 A system analyses medical scans to detect signs of disease.
 
@@ -827,9 +827,9 @@ A system analyses medical scans to detect signs of disease.
 
 ---
 
-## 18. Mermaid Process Diagrams
+## Mermaid Process Diagrams
 
-### 18.1 Machine learning category decision
+### Machine learning category decision
 
 ```mermaid
 flowchart TD
@@ -840,7 +840,7 @@ D -->|Yes| E[Reinforcement learning<br/>trial and error]
 D -->|No| F[Unsupervised learning<br/>hidden patterns / clusters]
 ```
 
-### 18.2 ANN training process
+### ANN training process
 
 ```mermaid
 flowchart LR
@@ -855,7 +855,7 @@ H --> I[Adjust weights]
 I --> C
 ```
 
-### 18.3 Graph search idea
+### Graph search idea
 
 ```mermaid
 flowchart LR

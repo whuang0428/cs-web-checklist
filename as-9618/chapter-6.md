@@ -68,7 +68,7 @@ Students must be able to:
 
 <span id="_4-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 4. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to distinguish key terms, match controls, verify input and protect integrity.
 
@@ -114,9 +114,9 @@ Use this overview to distinguish key terms, match controls, verify input and pro
 
 ---
 
-## 5. 6.1 Data Security
+## 6.1 Data Security
 
-### 5.1 Security vs Privacy vs Integrity
+### Security vs Privacy vs Integrity
 
 | Term | Meaning | Simple student version |
 | --- | --- | --- |
@@ -140,7 +140,7 @@ Too vague. You must say **safe from what**: unauthorised access, damage, alterat
 
 ---
 
-### 5.2 Why data security is needed
+### Why data security is needed
 
 Data security protects:
 
@@ -165,7 +165,7 @@ When asked "why is data security needed?", write:
 
 ---
 
-### 5.3 User accounts
+### User accounts
 
 A **user account** identifies a user on a system.
 
@@ -191,7 +191,7 @@ It can store:
 
 ---
 
-### 5.4 Passwords
+### Passwords
 
 A password is a secret value used to prove a user’s identity.
 
@@ -225,7 +225,7 @@ If the question gives a weak password like `John2008`, explain:
 
 ---
 
-### 5.5 Authentication
+### Authentication
 
 Authentication checks that a user is who they claim to be.
 
@@ -267,7 +267,7 @@ Examples:
 
 ---
 
-### 5.6 Digital signatures
+### Digital signatures
 
 A digital signature can be used to:
 
@@ -288,7 +288,7 @@ Digital signature <span lang="zh-CN">不等于手写签名图片</span>。<span 
 
 ---
 
-### 5.7 Firewall
+### Firewall
 
 A firewall controls traffic between a private network and external networks.
 
@@ -314,7 +314,7 @@ A firewall controls traffic between a private network and external networks.
 
 ---
 
-### 5.8 Anti-virus and anti-spyware
+### Anti-virus and anti-spyware
 
 #### Anti-virus software
 
@@ -341,7 +341,7 @@ Spyware may:
 
 ---
 
-### 5.9 Encryption
+### Encryption
 
 Encryption converts readable data into unreadable data.
 
@@ -366,7 +366,7 @@ Better wording:
 
 ---
 
-### 5.10 Access rights
+### Access rights
 
 Access rights control what a user can do.
 
@@ -392,9 +392,9 @@ Examples:
 
 ---
 
-## 6. Threats to Computer and Data Security
+## Threats to Computer and Data Security
 
-### 6.1 Malware
+### Malware
 
 **Malware** means malicious software.
 
@@ -410,7 +410,7 @@ For AS 9618, focus mainly on **virus** and **spyware**, because they are directl
 
 ---
 
-### 6.2 Virus
+### Virus
 
 A virus is malware that can replicate and attach itself to files/programs.
 
@@ -432,7 +432,7 @@ A virus is malware that can replicate and attach itself to files/programs.
 
 ---
 
-### 6.3 Spyware
+### Spyware
 
 Spyware secretly monitors user activity or collects data.
 
@@ -453,7 +453,7 @@ Spyware secretly monitors user activity or collects data.
 
 ---
 
-### 6.4 Hackers
+### Hackers
 
 A hacker may try to gain unauthorised access to a system.
 
@@ -476,7 +476,7 @@ A hacker may try to gain unauthorised access to a system.
 
 ---
 
-### 6.5 Phishing
+### Phishing
 
 Phishing uses fake messages to trick users into giving personal information.
 
@@ -495,7 +495,7 @@ Phishing uses fake messages to trick users into giving personal information.
 
 ---
 
-### 6.6 Pharming
+### Pharming
 
 Pharming redirects users to a fake website, often even when the correct URL is typed.
 
@@ -512,9 +512,9 @@ Pharming redirects users to a fake website, often even when the correct URL is t
 
 ---
 
-## 7. 6.2 Data Integrity
+## 6.2 Data Integrity
 
-### 7.1 What is data integrity?
+### What is data integrity?
 
 Data integrity means data is:
 
@@ -529,7 +529,7 @@ Data integrity means data is:
 
 ---
 
-### 7.2 Validation vs Verification
+### Validation vs Verification
 
 | Method | Main purpose | Done by | Can prove data is correct? |
 | --- | --- | --- | --- |
@@ -546,9 +546,9 @@ If age `26` is typed as `62`, range check may accept it because `62` is still re
 
 ---
 
-## 8. Validation Methods
+## Validation Methods
 
-### 8.1 Range check
+### Range check
 
 Checks data is within a lower and upper boundary.
 
@@ -564,7 +564,7 @@ Age must be between 16 and 100.
 
 ---
 
-### 8.2 Limit check
+### Limit check
 
 Checks data does not go beyond one boundary.
 
@@ -583,7 +583,7 @@ Score must be no more than 100.
 
 ---
 
-### 8.3 Length check
+### Length check
 
 Checks the number of characters.
 
@@ -596,7 +596,7 @@ Student ID must be exactly 6 characters.
 
 ---
 
-### 8.4 Format check
+### Format check
 
 Checks the pattern of data.
 
@@ -610,7 +610,7 @@ Postcode must follow a required pattern.
 
 ---
 
-### 8.5 Presence check
+### Presence check
 
 Checks that data has been entered.
 
@@ -622,7 +622,7 @@ Username field cannot be blank.
 
 ---
 
-### 8.6 Existence check
+### Existence check
 
 Checks that data exists in a stored list/file/database.
 
@@ -634,7 +634,7 @@ CustomerID entered must already exist in CUSTOMER table.
 
 ---
 
-### 8.7 Check digit
+### Check digit
 
 A check digit is an extra digit calculated from the other digits in a code.
 
@@ -658,9 +658,9 @@ Used for:
 
 ---
 
-## 9. Verification During Data Entry
+## Verification During Data Entry
 
-### 9.1 Visual check
+### Visual check
 
 A person compares entered data with the original source.
 
@@ -683,7 +683,7 @@ Compare the typed passport number with the passport document.
 
 ---
 
-### 9.2 Double entry
+### Double entry
 
 Data is entered twice and the two entries are compared.
 
@@ -700,9 +700,9 @@ Enter password twice.
 
 ---
 
-## 10. Verification During Data Transfer
+## Verification During Data Transfer
 
-### 10.1 Parity check overview
+### Parity check overview
 
 A parity check adds a **parity bit** to make the number of `1` bits odd or even.
 
@@ -736,7 +736,7 @@ Total 1s = 3 odd
 
 ---
 
-### 10.2 Byte parity
+### Byte parity
 
 Byte parity checks each byte separately.
 
@@ -756,7 +756,7 @@ Byte parity checks each byte separately.
 
 ---
 
-### 10.3 Block parity
+### Block parity
 
 Block parity checks both rows and columns.
 
@@ -775,7 +775,7 @@ Block parity checks both rows and columns.
 
 ---
 
-### 10.4 Checksum
+### Checksum
 
 A checksum is a value calculated from a block of data and sent with the data.
 
@@ -802,9 +802,9 @@ sequenceDiagram
 
 ---
 
-## 11. Mark Scheme Keywords
+## Mark Scheme Keywords
 
-### 11.1 Data security
+### Data security
 
 | Topic | Keywords / phrases |
 | --- | --- |
@@ -820,7 +820,7 @@ sequenceDiagram
 | Phishing | fake email/message, tricks user, confidential information |
 | Pharming | redirects to fake website, captures personal data |
 
-### 11.2 Data integrity
+### Data integrity
 
 | Topic | Keywords / phrases |
 | --- | --- |
@@ -841,7 +841,7 @@ sequenceDiagram
 
 ---
 
-## 12. Common Confusions
+## Topic-Specific Common Confusions
 
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
@@ -862,7 +862,7 @@ sequenceDiagram
 
 ---
 
-## 13. Scenario Answer Bank
+## Scenario Answer Bank
 
 | Scenario | Answer direction |
 | --- | --- |

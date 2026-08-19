@@ -20,24 +20,24 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 | Syllabus objective | Where it is covered |
 |---|---|
-| Implement pseudocode from a flowchart or structured English | Sections 2 and 6 |
-| Declare and initialise constants | Section 2 |
-| Declare variables and assign values | Section 2 |
-| Use arithmetic and logical expressions | Section 3 |
-| Input from keyboard and output to console | Section 2 |
-| Use supplied built-in/library/string routines | Section 4 |
-| Write IF/ELSE, nested IF and CASE | Section 5 |
-| Write count-, pre- and post-condition loops | Section 6 |
-| Justify the choice of loop | Section 6 |
-| Define and use procedures | Section 7 |
-| Pass parameters by value and by reference | Section 8 |
-| Define and use functions in expressions | Section 9 |
-| Use subroutine terminology correctly | Section 10 |
-| Write efficient pseudocode | Section 11 and Worked Example 3 |
+| Implement pseudocode from a flowchart or structured English | Programming Basics; Iteration and Loop Choice |
+| Declare and initialise constants | Programming Basics |
+| Declare variables and assign values | Programming Basics |
+| Use arithmetic and logical expressions | Expressions and Operators |
+| Input from keyboard and output to console | Programming Basics |
+| Use supplied built-in/library/string routines | Built-In and Library Routines |
+| Write IF/ELSE, nested IF and CASE | Selection |
+| Write count-, pre- and post-condition loops | Iteration and Loop Choice |
+| Justify the choice of loop | Iteration and Loop Choice |
+| Define and use procedures | Procedures |
+| Pass parameters by value and by reference | Parameters: By Value and By Reference |
+| Define and use functions in expressions | Functions |
+| Use subroutine terminology correctly | Subroutine Terminology |
+| Write efficient pseudocode | Efficient Pseudocode and Worked Example 3 |
 
 ---
 
-## 2. Programming Basics
+## Programming Basics
 
 ### Constants
 
@@ -79,7 +79,7 @@ Prompts should make the required input clear when user interaction is part of th
 
 ---
 
-## 3. Expressions and Operators
+## Expressions and Operators
 
 ### Arithmetic
 
@@ -114,7 +114,7 @@ Do not assume ambiguous precedence when brackets can state the intention.
 
 ---
 
-## 4. Built-In and Library Routines
+## Built-In and Library Routines
 
 The question or pseudocode guide defines the routines available. Use their stated:
 
@@ -144,7 +144,7 @@ String manipulation routines needed for a question will be supplied.
 
 ---
 
-## 5. Selection
+## Selection
 
 ### IF / ELSE
 
@@ -185,7 +185,7 @@ Use `CASE` when one expression is matched against distinct choices. Use `IF` for
 
 ---
 
-## 6. Iteration and Loop Choice
+## Iteration and Loop Choice
 
 ### Count-controlled loop
 
@@ -236,7 +236,7 @@ Strong:
 
 ---
 
-## 7. Procedures
+## Procedures
 
 A **procedure** performs a task and does not return a value through a function result.
 
@@ -257,7 +257,7 @@ Use a procedure when:
 
 ---
 
-## 8. Parameters: By Value and By Reference
+## Parameters: By Value and By Reference
 
 ### By value
 
@@ -297,7 +297,7 @@ Use reference parameters only when the subroutine is intended to update the call
 
 ---
 
-## 9. Functions
+## Functions
 
 A **function** returns one value and its call is used in an expression.
 
@@ -329,7 +329,7 @@ The returned values replace the function calls in the expression.
 
 ---
 
-## 10. Subroutine Terminology
+## Subroutine Terminology
 
 | Term | Meaning |
 |---|---|
@@ -352,7 +352,7 @@ FUNCTION Larger(First : INTEGER, Second : INTEGER) RETURNS INTEGER
 
 ---
 
-## 11. Efficient Pseudocode
+## Efficient Pseudocode
 
 Efficiency includes using fewer unnecessary operations and writing a solution that is clear enough to maintain.
 
@@ -397,7 +397,7 @@ Do not sacrifice correctness or readability for a tiny reduction in instructions
 
 ---
 
-## 12. Worked Example 1 — Structured English to Pseudocode
+## Worked Example 1 — Structured English to Pseudocode
 
 Design:
 
@@ -433,7 +433,7 @@ The post-condition loop is justified because the menu must appear at least once.
 
 ---
 
-## 13. Worked Example 2 — Trace Value and Reference Parameters
+## Worked Example 2 — Trace Value and Reference Parameters
 
 ```text
 PROCEDURE Change(BYVAL A : INTEGER, BYREF B : INTEGER)
@@ -462,7 +462,7 @@ Output: `3, 9`.
 
 ---
 
-## 14. Worked Example 3 — Refactor Repeated Logic
+## Worked Example 3 — Refactor Repeated Logic
 
 Repeated design:
 

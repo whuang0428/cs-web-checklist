@@ -494,7 +494,7 @@ This makes the data secure because only the receiver has the private key.
 
 ---
 
-## 3. High-score Answer Templates
+## High-score Answer Templates
 ---
 
 ### Template 1 — Packet structure
@@ -554,7 +554,7 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-## 4. Common Confusions
+## Topic-Specific Common Confusions
 | Mistake | Why it loses marks | Better answer |
 | --- | --- | --- |
 | “Packet has address.” | <span lang="zh-CN">太泛</span>，<span lang="zh-CN">没有结构</span> | packet has **header, payload and trailer** |
@@ -574,7 +574,7 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 
 ---
 
-## 5. Scenario Answer Bank
+## Scenario Answer Bank
 | Scenario | Best points to use |
 | --- | --- |
 | Data sent over long distance | serial, less skew, less crosstalk, reliable |

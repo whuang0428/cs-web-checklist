@@ -22,20 +22,20 @@ Use this chapter to check every Topic 7 objective.
 
 | Objective | Where it is covered |
 |---|---|
-| Program development life cycle | Section 2 |
-| Decomposition and subsystem design | Sections 2–3 |
-| Structure diagrams, flowcharts and pseudocode | Section 3 |
-| Algorithm purpose and input-process-output-storage | Section 3 |
-| Linear search, bubble sort, totalling, counting, maximum, minimum and average | Section 4 |
-| Validation and verification | Section 5 |
-| Normal, abnormal, extreme and boundary test data | Section 6 |
-| Trace tables | Section 7 |
-| Find and correct algorithm errors | Section 8 |
+| Program development life cycle | Program Development Life Cycle |
+| Decomposition and subsystem design | Program Development Life Cycle; Describing an Algorithm |
+| Structure diagrams, flowcharts and pseudocode | Describing an Algorithm |
+| Algorithm purpose and input-process-output-storage | Describing an Algorithm |
+| Linear search, bubble sort, totalling, counting, maximum, minimum and average | Standard Algorithm Methods |
+| Validation and verification | Validation and Verification |
+| Normal, abnormal, extreme and boundary test data | Test Data |
+| Trace tables | Trace Tables |
+| Find and correct algorithm errors | Finding and Correcting Errors |
 | Write and amend algorithms | Worked Examples and practice sections |
 
 ---
 
-## 2. Program Development Life Cycle
+## Program Development Life Cycle
 
 A reliable program is developed in four broad stages.
 
@@ -62,7 +62,7 @@ This makes the design easier to understand, code and test.
 
 ---
 
-## 3. Describing an Algorithm
+## Describing an Algorithm
 
 An **algorithm** is a finite sequence of unambiguous steps that solves a problem.
 
@@ -127,7 +127,7 @@ Use indentation to make the logic visible. Every selection and loop must have a 
 
 ---
 
-## 4. Standard Algorithm Methods
+## Standard Algorithm Methods
 
 ### Linear search
 
@@ -202,7 +202,7 @@ This still works when all values are negative.
 
 ---
 
-## 5. Validation and Verification
+## Validation and Verification
 
 **Validation** checks whether input is sensible and follows rules. It does not prove that the value is factually correct.
 
@@ -232,7 +232,7 @@ The condition after `UNTIL` describes valid data because the loop stops when tha
 
 ---
 
-## 6. Test Data
+## Test Data
 
 | Test type | Meaning | Example for valid range 1–120 |
 |---|---|---|
@@ -250,7 +250,7 @@ A useful test plan states the input, test type, expected outcome, actual outcome
 
 ---
 
-## 7. Trace Tables
+## Trace Tables
 
 A trace table records how variables and outputs change after each relevant instruction.
 
@@ -281,7 +281,7 @@ Write a new row only when a relevant value changes or output occurs. Include pro
 
 ---
 
-## 8. Finding and Correcting Errors
+## Finding and Correcting Errors
 
 Three useful error categories are:
 
@@ -311,7 +311,7 @@ Maximum <- Readings[1]
 
 ---
 
-## 9. Worked Example 1 — From Requirements to Design
+## Worked Example 1 — From Requirements to Design
 
 A cinema sells up to six tickets in one booking. Each ticket costs $8. A booking code and ticket quantity are entered. The quantity must be from 1 to 6. The system displays the total and stores the booking.
 
@@ -364,7 +364,7 @@ OUTPUT Total
 
 ---
 
-## 10. Worked Example 2 — Trace a Search and Total
+## Worked Example 2 — Trace a Search and Total
 
 `Codes = ["B4", "A2", "C7", "D1"]` and `Prices = [12, 9, 15, 6]`. The target is `"C7"`.
 
@@ -393,7 +393,7 @@ Final state: `Index = 3`, `Total = 36`, `Found = TRUE`. The total includes only 
 
 ---
 
-## 11. Worked Example 3 — One Bubble-Sort Pass
+## Worked Example 3 — One Bubble-Sort Pass
 
 Sort `[7, 3, 5, 2]` into ascending order. One pass compares positions 1–2, 2–3 and 3–4.
 

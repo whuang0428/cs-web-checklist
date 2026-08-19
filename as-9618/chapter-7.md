@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to apply ethical principles, explain ownership, evaluate AI and balance impacts.
 
@@ -78,9 +78,9 @@ By the end of this chapter, students should be able to:
 
 ---
 
-## 5. Ethics in Computing
+## Ethics in Computing
 
-### 5.1 What is ethics?
+### What is ethics?
 
 #### Student explanation
 
@@ -102,7 +102,7 @@ By the end of this chapter, students should be able to:
 
 ---
 
-### 5.2 Why ethics matters for computing professionals
+### Why ethics matters for computing professionals
 
 Computing professionals often work with:
 
@@ -121,7 +121,7 @@ Computing professionals often work with:
 
 ---
 
-### 5.3 Ethical behaviour towards colleagues
+### Ethical behaviour towards colleagues
 
 A strong response should recognise that <span lang="zh-CN">不仅问</span> “what is ethics”，<span lang="zh-CN">而是问</span> programmer <span lang="zh-CN">为什么要对</span> **colleagues** <span lang="zh-CN">和</span> **the public** <span lang="zh-CN">负责</span>。
 
@@ -148,7 +148,7 @@ A programmer should:
 
 ---
 
-### 5.4 Ethical behaviour towards the public
+### Ethical behaviour towards the public
 
 #### Good points for the public
 
@@ -173,7 +173,7 @@ A programmer should:
 
 ---
 
-### 5.5 Ethical vs legal vs moral
+### Ethical vs legal vs moral
 
 | Term | Meaning | Example |
 | --- | --- | --- |
@@ -195,9 +195,9 @@ A programmer should:
 
 ---
 
-## 6. Professional Ethical Bodies
+## Professional Ethical Bodies
 
-### 6.1 BCS and IEEE
+### BCS and IEEE
 
 The syllabus specifically names:
 
@@ -208,7 +208,7 @@ The syllabus specifically names:
 
 ---
 
-### 6.2 Why join a professional ethical body?
+### Why join a professional ethical body?
 
 #### Main purposes
 
@@ -228,7 +228,7 @@ Professional bodies help computing professionals by providing:
 
 ---
 
-### 6.3 Common weak answer
+### Common weak answer
 
 Weak:
 
@@ -240,9 +240,9 @@ Better:
 
 ---
 
-## 7. Copyright
+## Copyright
 
-### 7.1 What is copyright?
+### What is copyright?
 
 #### Student explanation
 
@@ -264,7 +264,7 @@ Better:
 
 ---
 
-### 7.2 Why copyright legislation is needed
+### Why copyright legislation is needed
 
 Copyright legislation is needed to:
 
@@ -282,7 +282,7 @@ Copyright legislation is needed to:
 
 ---
 
-### 7.3 Copyright in software scenarios
+### Copyright in software scenarios
 
 | Scenario | Good answer direction |
 | --- | --- |
@@ -294,7 +294,7 @@ Copyright legislation is needed to:
 
 ---
 
-### 7.4 Common mistakes
+### Common mistakes
 
 | Weak answer | Why weak | Better answer |
 | --- | --- | --- |
@@ -305,9 +305,9 @@ Copyright legislation is needed to:
 
 ---
 
-## 8. Software Licences
+## Software Licences
 
-### 8.1 What is a software licence?
+### What is a software licence?
 
 #### Definition
 
@@ -327,7 +327,7 @@ A licence may define:
 
 ---
 
-### 8.2 Licence comparison table
+### Licence comparison table
 
 | Licence type | Main idea | Source code? | Payment? | Best scenario |
 | --- | --- | --- | --- | --- |
@@ -338,7 +338,7 @@ A licence may define:
 
 ---
 
-### 8.3 Free Software Foundation licence
+### Free Software Foundation licence
 
 #### Key idea
 
@@ -369,7 +369,7 @@ Better:
 
 ---
 
-### 8.4 Open Source Initiative licence
+### Open Source Initiative licence
 
 #### Key idea
 
@@ -390,7 +390,7 @@ Open source is suitable when:
 
 ---
 
-### 8.5 Shareware licence
+### Shareware licence
 
 #### Key idea
 
@@ -429,7 +429,7 @@ The question may ask for **benefits**. You must explain why that is useful.
 
 ---
 
-### 8.6 Commercial software licence
+### Commercial software licence
 
 #### Key idea
 
@@ -456,7 +456,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-### 8.7 Licence choice scenario bank
+### Licence choice scenario bank
 
 | Scenario | Best licence | Why |
 | --- | --- | --- |
@@ -469,9 +469,9 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-## 9. Artificial Intelligence \(AI\)
+## Artificial Intelligence \(AI\)
 
-### 9.1 What is AI?
+### What is AI?
 
 #### Student explanation
 
@@ -493,7 +493,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-### 9.2 AI applications
+### AI applications
 
 | Application | How AI is used |
 | --- | --- |
@@ -510,7 +510,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 ---
 
-### 9.3 How AI identifies a car registration number
+### How AI identifies a car registration number
 
 This is a very important 2024-style scenario. Many students lose marks by describing only a database search.
 
@@ -539,7 +539,7 @@ Why weak?
 
 ---
 
-### 9.4 AI recognition process diagram
+### AI recognition process diagram
 
 ```mermaid
 flowchart TD
@@ -553,9 +553,9 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 10. Impacts of AI
+## Impacts of AI
 
-### 10.1 Social impacts
+### Social impacts
 
 | Positive social impact | Explanation |
 | --- | --- |
@@ -578,7 +578,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 10.2 Economic impacts
+### Economic impacts
 
 | Positive economic impact | Explanation |
 | --- | --- |
@@ -600,7 +600,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 10.3 Environmental impacts
+### Environmental impacts
 
 | Positive environmental impact | Explanation |
 | --- | --- |
@@ -621,9 +621,9 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 11. Mark Scheme Keywords
+## Mark Scheme Keywords
 
-### 11.1 Ethics keywords
+### Ethics keywords
 
 - **moral principles**
 - **code of conduct**
@@ -636,7 +636,7 @@ F --> G[Optional check<br/>database / human review]
 - **fairness**
 - **accountability**
 
-### 11.2 Copyright keywords
+### Copyright keywords
 
 - **legal protection**
 - **intellectual property**
@@ -648,7 +648,7 @@ F --> G[Optional check<br/>database / human review]
 - **income / revenue**
 - **legal action**
 
-### 11.3 Licence keywords
+### Licence keywords
 
 - **source code available**
 - **modify / adapt**
@@ -660,7 +660,7 @@ F --> G[Optional check<br/>database / human review]
 - **restrict copying**
 - **support and updates**
 
-### 11.4 AI keywords
+### AI keywords
 
 - **training data**
 - **trained model**
@@ -675,7 +675,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 12. Common Confusions
+## Topic-Specific Common Confusions
 
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
@@ -693,9 +693,9 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-## 13. Scenario Answer Bank
+## Scenario Answer Bank
 
-### 13.1 Programmer ethics scenarios
+### Programmer ethics scenarios
 
 | Scenario | Answer direction |
 | --- | --- |
@@ -711,7 +711,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 13.2 Copyright scenarios
+### Copyright scenarios
 
 | Scenario | Answer direction |
 | --- | --- |
@@ -726,7 +726,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 13.3 Licence choice scenarios
+### Licence choice scenarios
 
 | Scenario | Suitable licence | Answer direction |
 | --- | --- | --- |
@@ -742,7 +742,7 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
-### 13.4 AI scenarios
+### AI scenarios
 
 | Scenario | AI application | Answer direction |
 | --- | --- | --- |

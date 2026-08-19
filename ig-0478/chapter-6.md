@@ -255,8 +255,8 @@ It can reason or make decisions, and may learn/adapt from previous results.
 
 ---
 
-## 6.3.3 Expert Systems
-### Core idea
+### 6.3.3 Expert Systems
+#### Core idea
 An **expert system** is a form of AI that mimics the knowledge and decision-making of a human expert in a specific area.
 
 Common scenarios:
@@ -269,7 +269,7 @@ Common scenarios:
 
 ---
 
-### Expert System Components
+#### Expert System Components
 | Component | Role |
 | --- | --- |
 | **User interface / interface** | Allows the user to enter data and receive output. |
@@ -285,7 +285,7 @@ It may appear in textbooks, but the core IGCSE syllabus components are:
 
 ---
 
-### Expert System Operation Flow
+#### Expert System Operation Flow
 ```mermaid
 flowchart TD
 A[User enters symptoms / data] --> B[Interface]
@@ -297,7 +297,7 @@ F --> G[Diagnosis / recommendation]
 G --> H[Output shown on interface]
 ```
 
-#### Mark Scheme Style Answer: Doctor diagnosis
+##### Mark Scheme Style Answer: Doctor diagnosis
 > The doctor enters data about the patient’s symptoms into the **interface**.
 The **inference engine** decides which questions to ask based on the previous answers.
 It compares the symptoms with facts in the **knowledge base**.
@@ -307,8 +307,8 @@ The diagnosis is output through the **interface**.
 
 ---
 
-## 6.3.4 Machine Learning
-### Definition
+### 6.3.4 Machine Learning
+#### Definition
 **Machine learning** is when a program can automatically adapt its own processes and/or data.
 
 A simple exam-friendly explanation:
@@ -318,7 +318,7 @@ A simple exam-friendly explanation:
 
 ---
 
-### Machine Learning Universal Flow
+#### Machine Learning Universal Flow
 ```mermaid
 flowchart LR
 A[Collect data] --> B[Store data]
@@ -331,8 +331,8 @@ F --> G[Make better prediction / decision]
 
 ---
 
-### Machine Learning Answer Bank
-#### 1. Weather prediction AI
+#### Machine Learning Answer Bank
+##### 1. Weather prediction AI
 Use these points:
 
 + It collects weather data over time.
@@ -342,7 +342,7 @@ Use these points:
 + It changes future predictions based on this feedback.
 + It can learn what weather occurs at certain times of year.
 
-#### 2. Game enemy / gaming AI
+##### 2. Game enemy / gaming AI
 Use these points:
 
 + It collects data about the player’s actions.
@@ -353,7 +353,7 @@ Use these points:
 + It stores successful and unsuccessful moves.
 + It learns the most efficient / optimal movement against the player.
 
-#### 3. Smart speaker voice recognition
+##### 3. Smart speaker voice recognition
 Use these points:
 
 + It gathers data from many different voices.
@@ -363,7 +363,7 @@ Use these points:
 + It learns different ways of making the same request.
 + It learns to ignore background noise.
 
-#### 4. Delivery robot / farming robot
+##### 4. Delivery robot / farming robot
 Use these points:
 
 + It collects route / field / obstacle data.
@@ -387,7 +387,7 @@ Use these points:
 
 ---
 
-## 7. High-Frequency Exam Command Words
+## High-Frequency Exam Command Words
 | Command word | What students should do | Example |
 | --- | --- | --- |
 | **State / Give / Identify** | One short point only | “Microprocessor.” |
@@ -448,7 +448,7 @@ Answer
 
 <span id="_9-final-one-page-revision-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 9. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to trace automated control, classify robots, explain AI and evaluate impacts.
 

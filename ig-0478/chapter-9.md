@@ -20,16 +20,16 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 | Objective | Where it is covered |
 |---|---|
-| Define a single-table database from storage requirements | Sections 2–3 |
-| Choose suitable field names and data types | Section 3 |
-| Select and explain a primary key | Section 4 |
-| Read and complete single-table SQL | Sections 5–6 |
-| Use `SELECT`, `FROM`, `WHERE`, `ORDER BY`, `SUM`, `COUNT`, `AND` and `OR` | Sections 5–6 |
-| Identify the output of a query | Section 7 and Worked Example 2 |
+| Define a single-table database from storage requirements | Database Structure; From Requirements to a Table Design |
+| Choose suitable field names and data types | From Requirements to a Table Design |
+| Select and explain a primary key | Primary Keys |
+| Read and complete single-table SQL | SQL Building Blocks; Constructing a Query |
+| Use `SELECT`, `FROM`, `WHERE`, `ORDER BY`, `SUM`, `COUNT`, `AND` and `OR` | SQL Building Blocks; Constructing a Query |
+| Identify the output of a query | Predicting Query Output and Worked Example 2 |
 
 ---
 
-## 2. Database Structure
+## Database Structure
 
 A **database** is an organised collection of data. In Topic 9, questions use a **single table**.
 
@@ -54,7 +54,7 @@ Each row is one record. `Cost` is one field. `EquipmentID` is a suitable primary
 
 ---
 
-## 3. From Requirements to a Table Design
+## From Requirements to a Table Design
 
 Use this method:
 
@@ -99,7 +99,7 @@ A sports centre stores each court's code, sport, hourly charge, indoor status an
 
 ---
 
-## 4. Primary Keys
+## Primary Keys
 
 A primary key must:
 
@@ -123,7 +123,7 @@ If no natural field is reliably unique, create an ID field.
 
 ---
 
-## 5. SQL Building Blocks
+## SQL Building Blocks
 
 SQL queries retrieve or calculate information from a table.
 
@@ -208,7 +208,7 @@ This produces the number of available equipment records.
 
 ---
 
-## 6. Constructing a Query
+## Constructing a Query
 
 Translate the request in a fixed order.
 
@@ -236,7 +236,7 @@ Check that:
 
 ---
 
-## 7. Predicting Query Output
+## Predicting Query Output
 
 Use this sequence:
 
@@ -275,7 +275,7 @@ all three records satisfy at least one condition, so the output is `3`.
 
 ---
 
-## 8. Worked Example 1 — Design a Single Table
+## Worked Example 1 — Design a Single Table
 
 A community garden needs to store:
 
@@ -299,7 +299,7 @@ Why `GardenerName` is not the key: two gardeners may share a name, and one perso
 
 ---
 
-## 9. Worked Example 2 — Query and Output
+## Worked Example 2 — Query and Output
 
 Use the table `Courses`.
 

@@ -20,20 +20,20 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 | Syllabus objective | Where it is covered |
 |---|---|
-| Select suitable data types | Section 2 |
-| Define, read and update records | Section 3 |
-| Use array terminology, bounds and indexes | Section 4 |
-| Select and write 1D/2D arrays | Section 4 |
-| Bubble sort and linear search array data | Section 5 |
-| Explain the need for files and process text files | Section 6 |
-| Define an abstract data type | Section 7 |
-| Describe and justify stacks, queues and linked lists | Sections 8–10 |
-| Add, edit and delete ADT data | Sections 8–10 and Worked Example 3 |
-| Describe array implementations of stacks, queues and linked lists | Section 11 |
+| Select suitable data types | Data Types |
+| Define, read and update records | Records |
+| Use array terminology, bounds and indexes | Arrays |
+| Select and write 1D/2D arrays | Arrays |
+| Bubble sort and linear search array data | Processing Array Data |
+| Explain the need for files and process text files | Text Files |
+| Define an abstract data type | Abstract Data Types |
+| Describe and justify stacks, queues and linked lists | Stacks; Queues; Linked Lists |
+| Add, edit and delete ADT data | Stacks; Queues; Linked Lists and Worked Example 3 |
+| Describe array implementations of stacks, queues and linked lists | Array Implementations of ADTs |
 
 ---
 
-## 2. Data Types
+## Data Types
 
 Choose a data type from what the value represents and how it will be processed.
 
@@ -57,7 +57,7 @@ Examples:
 
 ---
 
-## 3. Records
+## Records
 
 A **record** stores related fields of different data types under one identifier.
 
@@ -97,7 +97,7 @@ Use a record when one entity has several related properties. An array of records
 
 ---
 
-## 4. Arrays
+## Arrays
 
 An array stores elements of the same data type.
 
@@ -143,7 +143,7 @@ Always use the declared bounds. Do not assume the first index is 0 or 1.
 
 ---
 
-## 5. Processing Array Data
+## Processing Array Data
 
 ### Linear search
 
@@ -185,7 +185,7 @@ If parallel arrays or records are used, swap the entire associated item, not jus
 
 ---
 
-## 6. Text Files
+## Text Files
 
 A file preserves data after program execution ends and can hold an unknown number of lines.
 
@@ -232,7 +232,7 @@ File checklist:
 
 ---
 
-## 7. Abstract Data Types
+## Abstract Data Types
 
 An **abstract data type (ADT)** is:
 
@@ -258,7 +258,7 @@ You are not required to write full pseudocode implementations for these ADTs.
 
 ---
 
-## 8. Stacks
+## Stacks
 
 A stack is **LIFO**: last in, first out.
 
@@ -292,7 +292,7 @@ Errors:
 
 ---
 
-## 9. Queues
+## Queues
 
 A queue is **FIFO**: first in, first out.
 
@@ -323,7 +323,7 @@ A circular queue reuses array positions released at the front.
 
 ---
 
-## 10. Linked Lists
+## Linked Lists
 
 A linked list contains nodes. Each node stores:
 
@@ -372,7 +372,7 @@ Costs:
 
 ---
 
-## 11. Array Implementations of ADTs
+## Array Implementations of ADTs
 
 ### Stack
 
@@ -422,7 +422,7 @@ Pointer diagrams should show:
 
 ---
 
-## 12. Worked Example 1 — Array of Records
+## Worked Example 1 — Array of Records
 
 Store four runners. Each runner has an ID, name and time. Display the ID of the fastest runner.
 
@@ -458,7 +458,7 @@ The complete record remains together, while `FastestIndex` identifies the winnin
 
 ---
 
-## 13. Worked Example 2 — File Summary
+## Worked Example 2 — File Summary
 
 `Codes.txt` contains one workshop code string per line. Copy every non-empty
 code to `CleanCodes.txt` and output how many codes were copied.
@@ -493,7 +493,7 @@ The variable receiving `READFILE` data is a string, matching the official text-f
 
 ---
 
-## 14. Worked Example 3 — Trace Three ADTs
+## Worked Example 3 — Trace Three ADTs
 
 ### Stack trace
 

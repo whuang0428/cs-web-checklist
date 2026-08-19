@@ -621,7 +621,7 @@ D --> E[Destination network]
 
 ---
 
-## 4. Mark Scheme Style Answer Templates
+## Mark Scheme Style Answer Templates
 ### Template 1｜Describe the FDE cycle
 + The PC stores the address of the next instruction.
 + The address is copied to the MAR.
@@ -668,7 +668,7 @@ D --> E[Destination network]
 
 ---
 
-## 5. Common Confusions
+## Topic-Specific Common Confusions
 | Question type | Weak answer | Why it loses marks | Better answer |
 | --- | --- | --- | --- |
 | CPU role | “CPU runs the computer” | too vague | CPU processes instructions and data and performs the FDE cycle |
@@ -812,7 +812,7 @@ Any two from:
 
 ---
 
-## 8. Final Revision Checklist
+## Topic Review Checklist
 ### CPU
 + CPU processes instructions and data.
 + CU sends control signals and manages data flow.

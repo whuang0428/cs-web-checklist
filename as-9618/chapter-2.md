@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this map to choose, trace, explain and justify.
 
@@ -69,9 +69,9 @@ Use this map to choose, trace, explain and justify.
 
 ---
 
-## 4. 2.1 Networks including the Internet
+## 2.1 Networks including the Internet
 
-### 4.1 Purpose and benefits of networking devices
+### Purpose and benefits of networking devices
 
 #### Core idea
 
@@ -104,9 +104,9 @@ A network connects computers and devices so that they can communicate and share 
 
 ---
 
-## 5. LAN and WAN
+## LAN and WAN
 
-### 5.1 LAN — Local Area Network
+### LAN — Local Area Network
 
 #### Definition
 
@@ -120,7 +120,7 @@ A network connects computers and devices so that they can communicate and share 
 + Can use wired Ethernet or wireless WiFi
 + Usually easier to manage than a WAN
 
-### 5.2 WAN — Wide Area Network
+### WAN — Wide Area Network
 
 #### Definition
 
@@ -134,7 +134,7 @@ A network connects computers and devices so that they can communicate and share 
 + May use the internet, cell phone network, satellite, fibre links, dedicated lines
 + More complex and more expensive to manage
 
-### 5.3 LAN vs WAN comparison
+### LAN vs WAN comparison
 
 | Point | LAN | WAN |
 | --- | --- | --- |
@@ -159,9 +159,9 @@ A network connects computers and devices so that they can communicate and share 
 
 ---
 
-## 6. Network Models
+## Network Models
 
-### 6.1 Client-server model
+### Client-server model
 
 #### Meaning
 
@@ -199,7 +199,7 @@ A **server** provides services or resources. A **client** requests and uses thos
 
 ---
 
-### 6.2 Peer-to-peer model
+### Peer-to-peer model
 
 #### Meaning
 
@@ -231,7 +231,7 @@ In a **peer-to-peer network**, each computer can act as both client and server. 
 
 ---
 
-### 6.3 Thin client and thick client
+### Thin client and thick client
 
 #### Thin client
 
@@ -270,9 +270,9 @@ A **thick client** can process and store more data locally.
 
 ---
 
-## 7. Network Topologies
+## Network Topologies
 
-### 7.1 Bus topology
+### Bus topology
 
 #### Structure
 
@@ -308,7 +308,7 @@ These describe **bus topology**.
 
 ---
 
-### 7.2 Star topology
+### Star topology
 
 #### Structure
 
@@ -351,7 +351,7 @@ When asked to draw a star topology:
 
 ---
 
-### 7.3 Mesh topology
+### Mesh topology
 
 #### Structure
 
@@ -389,7 +389,7 @@ These describe **mesh topology**.
 
 ---
 
-### 7.4 Hybrid topology
+### Hybrid topology
 
 A **hybrid topology** combines two or more topologies, such as star-bus or star-mesh.
 
@@ -399,7 +399,7 @@ Large real networks often use hybrid layouts because one topology may not fit al
 
 ---
 
-### 7.5 Topology choice scenario bank
+### Topology choice scenario bank
 
 | Scenario | Best topology | Why |
 | --- | --- | --- |
@@ -410,9 +410,9 @@ Large real networks often use hybrid layouts because one topology may not fit al
 
 ---
 
-## 8. Packets and Transmission between Hosts
+## Packets and Transmission between Hosts
 
-### 8.1 Packet basics
+### Packet basics
 
 Data is split into **packets** before being transmitted across a network.
 
@@ -424,14 +424,14 @@ Each packet commonly contains:
 + payload/data
 + error checking data
 
-### 8.2 Why packets are used
+### Why packets are used
 
 + Large data can be split into manageable parts
 + Different packets can take different routes
 + Lost/corrupt packets can be resent
 + Network bandwidth can be shared by many users
 
-### 8.3 Packets in topologies
+### Packets in topologies
 
 | Topology | Packet route idea |
 | --- | --- |
@@ -445,20 +445,20 @@ Each packet commonly contains:
 
 ---
 
-## 9. Cloud Computing
+## Cloud Computing
 
-### 9.1 Meaning
+### Meaning
 
 Cloud computing means using remote servers over a network/internet to store, process or manage data instead of relying only on local hardware.
 
-### 9.2 Public cloud vs private cloud
+### Public cloud vs private cloud
 
 | Type | Meaning | Example scenario |
 | --- | --- | --- |
 | Public cloud | shared cloud infrastructure provided by a third-party provider | small business uses online storage |
 | Private cloud | cloud infrastructure dedicated to one organisation | bank stores sensitive internal data |
 
-### 9.3 Benefits
+### Benefits
 
 + Data can be accessed from different locations
 + Less need to buy local servers
@@ -467,7 +467,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 + Easier collaboration
 + Backup/disaster recovery can be improved
 
-### 9.4 Drawbacks
+### Drawbacks
 
 + Requires reliable internet connection
 + Ongoing subscription cost
@@ -482,9 +482,9 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ---
 
-## 10. Wired and Wireless Networks
+## Wired and Wireless Networks
 
-### 10.1 Wired networks
+### Wired networks
 
 #### Copper cable
 
@@ -505,7 +505,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 | Cost | more expensive and harder to install |
 | Security | harder to tap without detection |
 
-### 10.2 Wireless networks
+### Wireless networks
 
 #### Radio waves / WiFi
 
@@ -528,7 +528,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 + Higher latency because signal travels long distances
 + Can be affected by weather
 
-### 10.3 Wired vs wireless comparison
+### Wired vs wireless comparison
 
 | Point | Wired | Wireless |
 | --- | --- | --- |
@@ -544,9 +544,9 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ---
 
-## 11. Cell Phone Network
+## Cell Phone Network
 
-### 11.1 2025 Paper 1 focus
+### 2025 Paper 1 focus
 
 2025 tested smartphone access to a company WAN using the cell phone network.
 
@@ -573,9 +573,9 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ---
 
-## 12. LAN Hardware
+## LAN Hardware
 
-### 12.1 Switch
+### Switch
 
 #### Role
 
@@ -595,7 +595,7 @@ A switch connects devices in a LAN and forwards frames/packets to the correct de
 
 ---
 
-### 12.2 Router
+### Router
 
 #### Role
 
@@ -616,7 +616,7 @@ A router connects different networks and forwards packets between networks.
 
 ---
 
-### 12.3 Modem
+### Modem
 
 #### Role
 
@@ -635,7 +635,7 @@ Modern network devices often combine router and modem in one box, but in answers
 
 ---
 
-### 12.4 Dedicated lines
+### Dedicated lines
 
 A dedicated line is a private/direct connection between sites.
 
@@ -652,7 +652,7 @@ A dedicated line is a private/direct connection between sites.
 
 ---
 
-### 12.5 Other LAN hardware
+### Other LAN hardware
 
 | Hardware | Role |
 | --- | --- |
@@ -666,17 +666,17 @@ A dedicated line is a private/direct connection between sites.
 
 ---
 
-## 13. Ethernet and CSMA/CD
+## Ethernet and CSMA/CD
 
-### 13.1 Ethernet
+### Ethernet
 
 Ethernet is a set of standards/protocols used for wired LAN communication.
 
-### 13.2 Collision
+### Collision
 
 A collision happens when two devices transmit on the same shared medium at the same time, causing data to interfere.
 
-### 13.3 CSMA/CD
+### CSMA/CD
 
 **CSMA/CD** = Carrier Sense Multiple Access / Collision Detection
 
@@ -699,13 +699,13 @@ Do not spend too long on Ethernet frame fields unless your course specifically r
 
 ---
 
-## 14. Bit Streaming
+## Bit Streaming
 
-### 14.1 Meaning
+### Meaning
 
 Bit streaming is transmitting media as a continuous stream of bits so the user can start watching/listening before the whole file has downloaded.
 
-### 14.2 Real-time bit streaming
+### Real-time bit streaming
 
 Used for live events, video calls and live conferences.
 
@@ -722,7 +722,7 @@ Used for live events, video calls and live conferences.
 
 > The video is transmitted continuously as a series of bits. The video is uploaded to a media server and downloaded by users. The data is sent to a buffer on the user’s device and the user views the stream from the buffer.
 
-### 14.3 On-demand bit streaming
+### On-demand bit streaming
 
 Used for videos/music available at any time.
 
@@ -733,7 +733,7 @@ Used for videos/music available at any time.
 + Less time pressure than live streaming
 + Buffering can occur before playback
 
-### 14.4 Buffer in streaming
+### Buffer in streaming
 
 A buffer temporarily stores data before playback.
 
@@ -744,7 +744,7 @@ A buffer temporarily stores data before playback.
 + Buffer reduces playback interruption
 + Allows smooth streaming
 
-### 14.5 Importance of bit rate and broadband speed
+### Importance of bit rate and broadband speed
 
 | Term | Meaning | Effect |
 | --- | --- | --- |
@@ -752,7 +752,7 @@ A buffer temporarily stores data before playback.
 | Broadband speed | rate at which user can receive data | must be high enough for smooth streaming |
 | Buffering | waiting while enough data is collected | happens when speed is too low/unstable |
 
-### 14.6 Compression and real-time streaming
+### Compression and real-time streaming
 
 2025 tested compression in video conferencing.
 
@@ -780,9 +780,9 @@ For real-time video streaming, **lossy** is usually more appropriate.
 
 ---
 
-## 15. WWW, Internet, URL and DNS
+## WWW, Internet, URL and DNS
 
-### 15.1 Internet vs World Wide Web
+### Internet vs World Wide Web
 
 | Term | Meaning |
 | --- | --- |
@@ -802,7 +802,7 @@ For real-time video streaming, **lossy** is usually more appropriate.
 
 ---
 
-### 15.2 Hardware supporting the internet
+### Hardware supporting the internet
 
 | Hardware / infrastructure | Use |
 | --- | --- |
@@ -816,7 +816,7 @@ For real-time video streaming, **lossy** is usually more appropriate.
 
 ---
 
-### 15.3 IP addresses
+### IP addresses
 
 An IP address identifies a device/interface on a network so packets can be routed.
 
@@ -851,7 +851,7 @@ An IP address identifies a device/interface on a network so packets can be route
 
 ---
 
-### 15.4 Public vs private IP address
+### Public vs private IP address
 
 | Type | Meaning | Security implication |
 | --- | --- | --- |
@@ -868,7 +868,7 @@ An IP address identifies a device/interface on a network so packets can be route
 
 ---
 
-### 15.5 Static vs dynamic IP address
+### Static vs dynamic IP address
 
 | Type | Meaning | Use |
 | --- | --- | --- |
@@ -881,7 +881,7 @@ An IP address identifies a device/interface on a network so packets can be route
 
 ---
 
-### 15.6 Subnetting
+### Subnetting
 
 Subnetting divides a network into smaller subnetworks.
 
@@ -899,7 +899,7 @@ Subnetting divides a network into smaller subnetworks.
 
 ---
 
-### 15.7 URL
+### URL
 
 A **URL** identifies the location of a resource on the World Wide Web.
 
@@ -915,7 +915,7 @@ https://www.example.com/revision/chapter2.html
 | `www.example.com` | domain name / host |
 | `/revision/chapter2.html` | path/resource |
 
-### 15.8 DNS
+### DNS
 
 DNS = **Domain Name Service / Domain Name System**
 
@@ -938,7 +938,7 @@ DNS translates a human-readable domain name into an IP address.
 
 ---
 
-## 16. Mark Scheme Keywords
+## Mark Scheme Keywords
 
 | Topic | Keywords / phrases to memorise |
 | --- | --- |
@@ -968,7 +968,7 @@ DNS translates a human-readable domain name into an IP address.
 
 ---
 
-## 17. Common Confusions
+## Topic-Specific Common Confusions
 
 | Mistake | Why it loses marks | Correct exam wording |
 | --- | --- | --- |
@@ -986,49 +986,49 @@ DNS translates a human-readable domain name into an IP address.
 
 ---
 
-## 18. Scenario Answer Bank
+## Scenario Answer Bank
 
-### 18.1 Company with multiple city offices
+### Company with multiple city offices
 
 > A WAN is suitable because the company has multiple sites in different cities. A WAN covers a large geographical area and can connect LANs at different sites. It may use external transmission media or the internet/cell phone network.
 
-### 18.2 Office LAN with computers, printers and server
+### Office LAN with computers, printers and server
 
 > A star topology is suitable because all devices can connect directly to a central switch. If one cable fails, only that device is affected. The switch can forward data directly to the intended recipient.
 
-### 18.3 Critical network where link failure cannot stop communication
+### Critical network where link failure cannot stop communication
 
 > A mesh topology is suitable because there are multiple paths for packets. If one link fails, packets can be routed through another path, so the network is more robust.
 
-### 18.4 Smartphone driver connecting to company WAN
+### Smartphone driver connecting to company WAN
 
 > The phone communicates wirelessly with a cell tower using low-power radio signals. The land is divided into cells and each cell has a tower/antenna that receives and transmits data to the wider network.
 
-### 18.5 Video conference using real-time streaming
+### Video conference using real-time streaming
 
 > Real-time bit streaming sends video continuously as a series of bits. The stream is uploaded to a media server and users download it. Data is stored in a buffer so the user can view the stream smoothly even if transmission speed varies.
 
-### 18.6 Why compress video conference data?
+### Why compress video conference data?
 
 > Video is data-intensive, so compression reduces the file size/data rate. This reduces bandwidth use and buffering, allowing people with lower bandwidth to take part and reducing delay in the conversation.
 
-### 18.7 Why use lossy compression for real-time streaming?
+### Why use lossy compression for real-time streaming?
 
 > Lossy compression is suitable because it reduces file size more than lossless, so less bandwidth is needed and buffering is reduced. Some data can be removed without noticeably affecting the user experience.
 
-### 18.8 Router has public IP address
+### Router has public IP address
 
 > The router needs a public IP address so that it can be identified and accessed by other devices on the internet. It allows packets from the internet to be routed to the correct network.
 
-### 18.9 DNS used when entering a URL
+### DNS used when entering a URL
 
 > The user enters a URL containing a domain name. DNS translates the domain name into its IP address so the browser can contact the correct web server and request the resource.
 
 ---
 
-## 19. Process Diagrams
+## Process Diagrams
 
-### 19.1 Real-time bit streaming
+### Real-time bit streaming
 
 ```mermaid
 flowchart LR
@@ -1039,7 +1039,7 @@ D --> E[Buffer on user's device]
 E --> F[Video played from buffer]
 ```
 
-### 19.2 DNS lookup
+### DNS lookup
 
 ```mermaid
 sequenceDiagram
@@ -1054,7 +1054,7 @@ sequenceDiagram
     Web-->>Browser: Send web page / resource
 ```
 
-### 19.3 Packet transmission in a star LAN
+### Packet transmission in a star LAN
 
 ```mermaid
 flowchart LR

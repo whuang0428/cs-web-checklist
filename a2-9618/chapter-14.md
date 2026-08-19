@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to trace the TCP/IP stack, compare switching, route packets and match protocols.
 
@@ -61,8 +61,8 @@ Use this overview to trace the TCP/IP stack, compare switching, route packets an
 
 ---
 
-## 4. 14.1 Protocols
-### 4.1 What is a protocol?
+## 14.1 Protocols
+### What is a protocol?
 #### Mark scheme answer
 > A protocol is a standard set of rules that enables successful communication / data transfer between devices.
 
@@ -87,7 +87,7 @@ This is too vague. You need to say **rules** and **successful data transfer / co
 
 ---
 
-### 4.2 Protocol suite
+### Protocol suite
 #### Definition
 > A protocol suite is a collection of related protocols used together to enable communication across a network.
 
@@ -124,8 +124,8 @@ D --> E[Application Layer]
 
 ---
 
-## 5. TCP/IP Four Layers
-### 5.1 Application Layer
+## TCP/IP Four Layers
+### Application Layer
 #### Main purpose
 Application Layer <span lang="zh-CN">是用户和网络服务最接近的一层</span>。<span lang="zh-CN">它为应用程序提供通信服务</span>，<span lang="zh-CN">比如网页访问</span>、<span lang="zh-CN">文件传输</span>、<span lang="zh-CN">电子邮件</span>、peer-to-peer file sharing。
 
@@ -148,7 +148,7 @@ Application Layer <span lang="zh-CN">是用户和网络服务最接近的一层<
 
 ---
 
-### 5.2 Transport Layer
+### Transport Layer
 #### Main purpose
 Transport Layer <span lang="zh-CN">负责</span> source host <span lang="zh-CN">到</span> destination host <span lang="zh-CN">之间的数据传输管理</span>。<span lang="zh-CN">它不关心网页内容是什么</span>，<span lang="zh-CN">而是关心数据如何可靠地送到正确的</span> application process。
 
@@ -167,7 +167,7 @@ Transport Layer <span lang="zh-CN">负责</span> source host <span lang="zh-CN">
 
 ---
 
-### 5.3 Internet Layer
+### Internet Layer
 #### Main purpose
 Internet Layer <span lang="zh-CN">负责</span> IP addressing <span lang="zh-CN">和</span> routing。<span lang="zh-CN">它决定</span> packet <span lang="zh-CN">应该往哪里走</span>。
 
@@ -182,7 +182,7 @@ Internet Layer <span lang="zh-CN">负责</span> IP addressing <span lang="zh-CN"
 
 ---
 
-### 5.4 Link Layer
+### Link Layer
 #### Main purpose
 Link Layer <span lang="zh-CN">负责数据在本地网络中的传输</span>，<span lang="zh-CN">和实际</span> network hardware / physical medium <span lang="zh-CN">接口</span>。
 
@@ -198,7 +198,7 @@ Link Layer <span lang="zh-CN">负责数据在本地网络中的传输</span>，<
 
 ---
 
-### 5.5 How the layers interact
+### How the layers interact
 #### Exam-style answer
 > The TCP/IP suite can be viewed as layers within a stack. Each layer accepts input from the layer above or below it. When a message is sent, it passes from the Application Layer down to the Link Layer. When received, it passes from the Link Layer up to the Application Layer.
 
@@ -228,8 +228,8 @@ sequenceDiagram
 
 ---
 
-## 6. Application Layer Protocols
-### 6.1 Protocol table
+## Application Layer Protocols
+### Protocol table
 | Protocol | Full name | Purpose / mark scheme phrase |
 | --- | --- | --- |
 | HTTP / HTTPS | Hypertext Transfer Protocol / Secure | transfers web pages / hypertext documents on the World Wide Web |
@@ -241,7 +241,7 @@ sequenceDiagram
 
 ---
 
-### 6.2 SMTP vs POP3 vs IMAP
+### SMTP vs POP3 vs IMAP
 #### SMTP
 SMTP is for **sending** email.
 
@@ -266,7 +266,7 @@ IMAP is also for receiving email, but it keeps messages on the server and synchr
 
 ---
 
-### 6.3 BitTorrent
+### BitTorrent
 #### Mark scheme answer
 > BitTorrent provides peer-to-peer file sharing, allowing users to share files directly with each other over the internet without relying on one central web server.
 
@@ -288,8 +288,8 @@ For exam revision, the main phrase is still: **peer-to-peer file sharing**.
 
 ---
 
-## 7. 14.2 Circuit Switching
-### 7.1 What is circuit switching?
+## 14.2 Circuit Switching
+### What is circuit switching?
 Circuit switching <span lang="zh-CN">是在通信开始前</span>，<span lang="zh-CN">先建立一条</span> dedicated path / dedicated channel。<span lang="zh-CN">传输期间</span>，<span lang="zh-CN">数据都沿着同一路径传输</span>，<span lang="zh-CN">直到通信结束</span>。
 
 #### Mark scheme answer
@@ -307,7 +307,7 @@ E --> F[Dedicated path released]
 
 ---
 
-### 7.2 Benefits of circuit switching
+### Benefits of circuit switching
 | Benefit | Mark scheme phrase |
 | --- | --- |
 | stable communication | suitable for long continuous transmission |
@@ -321,7 +321,7 @@ E --> F[Dedicated path released]
 
 ---
 
-### 7.3 Drawbacks of circuit switching
+### Drawbacks of circuit switching
 | Drawback | Mark scheme phrase |
 | --- | --- |
 | setup delay | dedicated connection must be established before transmission starts |
@@ -335,7 +335,7 @@ E --> F[Dedicated path released]
 
 ---
 
-### 7.4 Suitable uses
+### Suitable uses
 | Scenario | Why circuit switching may be suitable |
 | --- | --- |
 | traditional telephone call | continuous real-time communication |
@@ -345,8 +345,8 @@ E --> F[Dedicated path released]
 
 ---
 
-## 8. Packet Switching
-### 8.1 What is packet switching?
+## Packet Switching
+### What is packet switching?
 Packet switching <span lang="zh-CN">是把</span> message <span lang="zh-CN">拆成很多</span> packets，<span lang="zh-CN">每个</span> packet <span lang="zh-CN">有</span> header。Packets <span lang="zh-CN">可以独立走不同路线</span>，<span lang="zh-CN">到达后再重新组合</span>。
 
 #### Mark scheme answer
@@ -354,7 +354,7 @@ Packet switching <span lang="zh-CN">是把</span> message <span lang="zh-CN">拆
 
 ---
 
-### 8.2 Packet switching process
+### Packet switching process
 ```mermaid
 flowchart TD
 A[Original message] --> B[Split into packets]
@@ -377,7 +377,7 @@ G --> H[Missing/damaged packets resent]
 
 ---
 
-### 8.3 Benefits of packet switching
+### Benefits of packet switching
 | Benefit | Mark scheme phrase |
 | --- | --- |
 | efficient bandwidth use | bandwidth can be shared between transmissions |
@@ -391,7 +391,7 @@ G --> H[Missing/damaged packets resent]
 
 ---
 
-### 8.4 Drawbacks of packet switching
+### Drawbacks of packet switching
 | Drawback | Mark scheme phrase |
 | --- | --- |
 | variable delay | packets may take different routes and arrive at different times |
@@ -405,8 +405,8 @@ G --> H[Missing/damaged packets resent]
 
 ---
 
-## 9. Function of a Router in Packet Switching
-### 9.1 What does a router do?
+## Function of a Router in Packet Switching
+### What does a router do?
 A router receives packets, examines the destination address in the packet header, chooses a suitable next hop / route, and forwards the packet.
 
 #### Mark scheme answer
@@ -439,7 +439,7 @@ Better:
 
 ---
 
-## 10. Circuit Switching vs Packet Switching
+## Circuit Switching vs Packet Switching
 | Feature | Circuit switching | Packet switching |
 | --- | --- | --- |
 | Path | dedicated path established first | no dedicated path needed |
@@ -456,15 +456,15 @@ Better:
 
 ---
 
-## 11. Mark Scheme Keywords
-### 11.1 Protocols
+## Mark Scheme Keywords
+### Protocols
 + **standard set of rules**
 + **successful data transfer**
 + **communication between devices**
 + **compatibility between devices / platforms**
 + **independent of hardware / software**
 
-### 11.2 TCP/IP Stack
+### TCP/IP Stack
 + **layers within a stack**
 + **adjacent layer**
 + **Application, Transport, Internet, Link**
@@ -472,13 +472,13 @@ Better:
 + **message passes up the stack when received**
 + **Link Layer interfaces directly with the network**
 
-### 11.3 Application Layer
+### Application Layer
 + **services / interface with the user**
 + **access to applications**
 + **file transfer / email / network file access**
 + **protocols used to exchange data**
 
-### 11.4 Transport Layer
+### Transport Layer
 + **end-to-end delivery**
 + **logical communication between applications**
 + **breaks data into segments**
@@ -487,7 +487,7 @@ Better:
 + **error-free delivery**
 + **retransmits lost packets**
 
-### 11.5 Packet Switching
+### Packet Switching
 + **data broken into packets**
 + **packet header**
 + **source and destination IP address**
@@ -498,7 +498,7 @@ Better:
 + **reassembled at destination**
 + **missing / damaged packets resent**
 
-### 11.6 Circuit Switching
+### Circuit Switching
 + **dedicated path / channel**
 + **established before transmission**
 + **same path for whole communication**
@@ -507,7 +507,7 @@ Better:
 + **setup delay**
 + **no alternative route if failure occurs**
 
-### 11.7 Router
+### Router
 + **reads destination IP address**
 + **uses routing table**
 + **selects next hop**
@@ -516,7 +516,7 @@ Better:
 
 ---
 
-## 12. Common Confusions
+## Topic-Specific Common Confusions
 | Question type | Weak answer | Better answer |
 | --- | --- | --- |
 | Define protocol | “a connection method” | “a standard set of rules for communication / data transfer” |
@@ -534,7 +534,7 @@ Better:
 
 ---
 
-## 13. Scenario Answer Bank
+## Scenario Answer Bank
 | Scenario | Best answer direction |
 | --- | --- |
 | A company wants stable long continuous voice communication | circuit switching; dedicated path; steady rate; same route |

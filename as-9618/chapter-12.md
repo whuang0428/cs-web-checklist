@@ -20,24 +20,24 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 | Syllabus objective | Where it is covered |
 |---|---|
-| Explain the purpose of a program development life cycle | Section 2 |
-| Choose between waterfall, iterative and RAD | Section 3 |
-| Explain principles, benefits and drawbacks of each life cycle | Section 3 and Worked Example 1 |
-| Understand analysis, design, coding, testing and maintenance | Section 4 |
-| Describe and construct structure charts with parameters | Section 5 |
-| Derive pseudocode from a structure chart | Section 5 and Worked Example 2 |
-| Explain and use state-transition diagrams | Section 6 |
-| Identify syntax, logic and run-time errors | Section 7 |
-| Correct identified errors | Section 7 and Worked Example 3 |
-| Select testing methods | Section 8 |
-| Explain test strategies and test plans | Section 9 |
-| Choose normal, abnormal and extreme/boundary data | Section 9 |
-| Distinguish corrective, adaptive and perfective maintenance | Section 10 |
-| Amend an existing program to enhance functionality | Section 11 |
+| Explain the purpose of a program development life cycle | Purpose of a Development Life Cycle |
+| Choose between waterfall, iterative and RAD | Development Life Cycles |
+| Explain principles, benefits and drawbacks of each life cycle | Development Life Cycles and Worked Example 1 |
+| Understand analysis, design, coding, testing and maintenance | Life-Cycle Stages |
+| Describe and construct structure charts with parameters | Structure Charts |
+| Derive pseudocode from a structure chart | Structure Charts and Worked Example 2 |
+| Explain and use state-transition diagrams | State-Transition Diagrams |
+| Identify syntax, logic and run-time errors | Program Faults |
+| Correct identified errors | Program Faults and Worked Example 3 |
+| Select testing methods | Testing Methods |
+| Explain test strategies and test plans | Test Strategy, Test Plan and Test Data |
+| Choose normal, abnormal and extreme/boundary data | Test Strategy, Test Plan and Test Data |
+| Distinguish corrective, adaptive and perfective maintenance | Maintenance |
+| Amend an existing program to enhance functionality | Enhancing Existing Programs |
 
 ---
 
-## 2. Purpose of a Development Life Cycle
+## Purpose of a Development Life Cycle
 
 A **program development life cycle** provides an organised process for moving from a problem to a working, maintainable solution.
 
@@ -54,7 +54,7 @@ Different projects need different life cycles because requirements, risk, deadli
 
 ---
 
-## 3. Development Life Cycles
+## Development Life Cycles
 
 ### Waterfall
 
@@ -109,7 +109,7 @@ Do not claim one life cycle is always best. Link the choice to the scenario:
 
 ---
 
-## 4. Life-Cycle Stages
+## Life-Cycle Stages
 
 | Stage | Main work | Typical output |
 |---|---|---|
@@ -123,7 +123,7 @@ These are stages of work, not necessarily one-directional steps. Iterative and R
 
 ---
 
-## 5. Structure Charts
+## Structure Charts
 
 A structure chart shows:
 
@@ -167,7 +167,7 @@ ENDIF
 
 ---
 
-## 6. State-Transition Diagrams
+## State-Transition Diagrams
 
 A state-transition diagram documents:
 
@@ -197,7 +197,7 @@ When constructing one:
 
 ---
 
-## 7. Program Faults
+## Program Faults
 
 | Error type | Meaning | Example |
 |---|---|---|
@@ -224,7 +224,7 @@ Avoiding faults:
 
 ---
 
-## 8. Testing Methods
+## Testing Methods
 
 | Method | What it does |
 |---|---|
@@ -247,7 +247,7 @@ Selection examples:
 
 ---
 
-## 9. Test Strategy, Test Plan and Test Data
+## Test Strategy, Test Plan and Test Data
 
 ### Test strategy
 
@@ -283,7 +283,7 @@ An expected result must be specific enough to decide pass/fail.
 
 ---
 
-## 10. Maintenance
+## Maintenance
 
 | Type | Purpose | Example |
 |---|---|---|
@@ -303,7 +303,7 @@ Maintenance needs:
 
 ---
 
-## 11. Enhancing Existing Programs
+## Enhancing Existing Programs
 
 When asked to amend a program:
 
@@ -345,7 +345,7 @@ Regression checks must confirm that the original $100 threshold still behaves co
 
 ---
 
-## 12. Worked Example 1 — Choose a Life Cycle
+## Worked Example 1 — Choose a Life Cycle
 
 A hospital replaces a medicine-calculation component. Requirements are formally approved, safety evidence is required and late uncontrolled changes are unacceptable.
 
@@ -367,7 +367,7 @@ By contrast, an internal event-booking interface with available users and a shor
 
 ---
 
-## 13. Worked Example 2 — Structure Chart to Pseudocode
+## Worked Example 2 — Structure Chart to Pseudocode
 
 Structure:
 
@@ -406,7 +406,7 @@ The structure chart determines call relationships and data flow; internal algori
 
 ---
 
-## 14. Worked Example 3 — Expose and Correct a Fault
+## Worked Example 3 — Expose and Correct a Fault
 
 Faulty average algorithm:
 

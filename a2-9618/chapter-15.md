@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to compare processors, explain virtual execution, simplify Boolean expressions and build circuits.
 
@@ -61,9 +61,9 @@ Use this overview to compare processors, explain virtual execution, simplify Boo
 
 ---
 
-## 4. 15.1 Processors, Parallel Processing and Virtual Machines
+## 15.1 Processors, Parallel Processing and Virtual Machines
 
-### 4.1 RISC processors
+### RISC processors
 
 #### Core idea
 RISC means **Reduced Instruction Set Computer**.
@@ -104,7 +104,7 @@ This is too vague. You need features such as **fixed length instructions**, **fe
 
 ---
 
-### 4.2 CISC processors
+### CISC processors
 
 CISC means **Complex Instruction Set Computer**.
 
@@ -135,7 +135,7 @@ CISC processor <span lang="zh-CN">的设计思想是</span>：
 
 ---
 
-### 4.3 Interrupt handling on RISC and CISC processors
+### Interrupt handling on RISC and CISC processors
 
 #### Basic interrupt sequence
 Interrupt handling <span lang="zh-CN">的核心不是</span>“CPU stop”，<span lang="zh-CN">而是</span>：
@@ -168,7 +168,7 @@ Pipelining <span lang="zh-CN">会让</span> interrupt handling <span lang="zh-CN
 
 ---
 
-### 4.4 Pipelining in RISC processors
+### Pipelining in RISC processors
 
 #### Core idea
 Pipelining means different instructions can be at different stages of execution at the same time.
@@ -209,9 +209,9 @@ This makes pipeline stages more regular.
 
 ---
 
-## 5. Parallel Processing Architectures
+## Parallel Processing Architectures
 
-### 5.1 Flynn's four architectures
+### Flynn's four architectures
 
 The four basic computer architectures are:
 
@@ -225,7 +225,7 @@ The key exam skill is:
 
 ---
 
-### 5.2 SISD
+### SISD
 
 #### Full name
 **Single Instruction, Single Data**
@@ -245,7 +245,7 @@ A traditional single-core computer running one instruction at a time.
 
 ---
 
-### 5.3 SIMD
+### SIMD
 
 #### Full name
 **Single Instruction, Multiple Data**
@@ -271,7 +271,7 @@ Wrong. SIMD = one instruction, many data items.
 
 ---
 
-### 5.4 MISD
+### MISD
 
 #### Full name
 **Multiple Instruction, Single Data**
@@ -294,7 +294,7 @@ MISD is less common in real systems, but it is still syllabus content.
 
 ---
 
-### 5.5 MIMD
+### MIMD
 
 #### Full name
 **Multiple Instruction, Multiple Data**
@@ -314,7 +314,7 @@ A multi-core computer running different tasks on different cores.
 
 ---
 
-### 5.6 Quick comparison table
+### Quick comparison table
 
 | Architecture | Instructions | Data | Simple exam phrase |
 | --- | --- | --- | --- |
@@ -325,9 +325,9 @@ A multi-core computer running different tasks on different cores.
 
 ---
 
-## 6. Massively Parallel Computers
+## Massively Parallel Computers
 
-### 6.1 Definition
+### Definition
 A massively parallel computer uses a large number of processors or separate computers to perform coordinated computations at the same time.
 
 #### Mark scheme answer
@@ -359,9 +359,9 @@ Too vague. You must mention **many processors** and **parallel coordinated proce
 
 ---
 
-## 7. Virtual Machines
+## Virtual Machines
 
-### 7.1 Concept of a virtual machine
+### Concept of a virtual machine
 
 A **virtual machine (VM)** is a software-based emulation of a computer system. It runs on a physical computer but behaves like a separate computer.
 
@@ -379,7 +379,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ---
 
-### 7.2 Roles / examples of virtual machines
+### Roles / examples of virtual machines
 
 | Role | Example |
 | --- | --- |
@@ -396,7 +396,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ---
 
-### 7.3 Benefits of virtual machines
+### Benefits of virtual machines
 
 | Benefit | Explanation |
 | --- | --- |
@@ -414,7 +414,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ---
 
-### 7.4 Limitations of virtual machines
+### Limitations of virtual machines
 
 | Limitation | Explanation |
 | --- | --- |
@@ -431,9 +431,9 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ---
 
-## 8. 15.2 Boolean Algebra and Logic Circuits
+## 15.2 Boolean Algebra and Logic Circuits
 
-### 8.1 Boolean algebra notation
+### Boolean algebra notation
 
 | Symbol | Meaning | Logic gate |
 | --- | --- | --- |
@@ -459,7 +459,7 @@ It means **OR**.
 
 ---
 
-### 8.2 Core Boolean laws
+### Core Boolean laws
 
 | Law | AND form | OR form |
 | --- | --- | --- |
@@ -484,7 +484,7 @@ So when showing working, write the law name if possible.
 
 ---
 
-### 8.3 De Morgan's laws
+### De Morgan's laws
 
 #### Law 1
 ```text
@@ -536,9 +536,9 @@ Step:
 
 ---
 
-## 9. Truth Tables
+## Truth Tables
 
-### 9.1 Truth table method
+### Truth table method
 
 For Paper 3, when a circuit or expression is given, do not jump straight to the answer. Make working columns.
 
@@ -573,7 +573,7 @@ So always show working columns.
 
 ---
 
-### 9.2 Sum-of-products
+### Sum-of-products
 
 A **sum-of-products** expression is made by OR-ing together product terms.
 
@@ -624,9 +624,9 @@ Z = C
 
 ---
 
-## 10. Half Adders and Full Adders
+## Half Adders and Full Adders
 
-### 10.1 Half adder
+### Half adder
 
 A half adder adds two one-bit inputs.
 
@@ -660,7 +660,7 @@ C = A.B
 
 ---
 
-### 10.2 Full adder
+### Full adder
 
 A full adder adds three one-bit inputs:
 
@@ -697,9 +697,9 @@ Cout = A.B + A.Cin + B.Cin
 
 ---
 
-## 11. Flip-Flops
+## Flip-Flops
 
-### 11.1 What is a flip-flop?
+### What is a flip-flop?
 
 A flip-flop is a logic circuit that can store one bit of data.
 
@@ -716,7 +716,7 @@ A flip-flop is a logic circuit that can store one bit of data.
 
 ---
 
-### 11.2 SR flip-flop
+### SR flip-flop
 
 SR means:
 
@@ -736,7 +736,7 @@ SR flip-flop can store a bit because when `S = 0` and `R = 0`, the output stays 
 
 ---
 
-### 11.3 JK flip-flop
+### JK flip-flop
 
 JK flip-flop solves the invalid state problem of SR.
 
@@ -754,9 +754,9 @@ JK flip-flop solves the invalid state problem of SR.
 
 ---
 
-## 12. Karnaugh Maps
+## Karnaugh Maps
 
-### 12.1 What is a K-map?
+### What is a K-map?
 
 A Karnaugh map is a visual method for simplifying Boolean expressions.
 
@@ -772,7 +772,7 @@ A Karnaugh map is a visual method for simplifying Boolean expressions.
 
 ---
 
-### 12.2 K-map order
+### K-map order
 
 For two variables:
 
@@ -812,7 +812,7 @@ Not:
 
 ---
 
-### 12.3 Grouping rules
+### Grouping rules
 
 | Rule | Explanation |
 | --- | --- |
@@ -834,7 +834,7 @@ Not:
 
 ---
 
-### 12.4 Reading a group
+### Reading a group
 
 When reading a group:
 
@@ -862,9 +862,9 @@ Z = C
 
 ---
 
-## 13. Mark Scheme Keywords
+## Mark Scheme Keywords
 
-### 13.1 RISC / CISC
+### RISC / CISC
 + **Reduced Instruction Set Computer**
 + **Complex Instruction Set Computer**
 + **few instructions**
@@ -877,7 +877,7 @@ Z = C
 + **variable length instructions**
 + **several clock cycles**
 
-### 13.2 Interrupts
+### Interrupts
 + **interrupt detected**
 + **fetch-execute cycle**
 + **temporarily stopped**
@@ -888,7 +888,7 @@ Z = C
 + **registers restored**
 + **pipeline flushed / discarded instructions**
 
-### 13.3 Parallel processing
+### Parallel processing
 + **SISD**
 + **SIMD**
 + **MISD**
@@ -901,7 +901,7 @@ Z = C
 + **coordinated computations**
 + **message interface**
 
-### 13.4 Virtual machines
+### Virtual machines
 + **software emulation**
 + **host**
 + **guest**
@@ -912,7 +912,7 @@ Z = C
 + **performance overhead**
 + **single point of failure**
 
-### 13.5 Boolean / K-map
+### Boolean / K-map
 + **truth table**
 + **intermediate columns**
 + **sum-of-products**
@@ -928,7 +928,7 @@ Z = C
 + **wrap-around**
 + **simplified expression**
 
-### 13.6 Flip-flops and adders
+### Flip-flops and adders
 + **half adder**
 + **full adder**
 + **sum**
@@ -942,7 +942,7 @@ Z = C
 
 ---
 
-## 14. Common Confusions
+## Topic-Specific Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -961,7 +961,7 @@ Z = C
 
 ---
 
-## 15. Scenario Answer Bank
+## Scenario Answer Bank
 
 ### Scenario 1: A CPU designer chooses RISC for a new embedded processor.
 #### Answer template
@@ -1000,9 +1000,9 @@ Z = C
 
 ---
 
-## 16. Mermaid Process Diagrams
+## Mermaid Process Diagrams
 
-### 16.1 Interrupt handling process
+### Interrupt handling process
 
 ```mermaid
 flowchart TD
@@ -1013,7 +1013,7 @@ D --> E[Restore saved state]
 E --> F[Continue original program]
 ```
 
-### 16.2 VM structure
+### VM structure
 
 ```mermaid
 flowchart TD
@@ -1024,7 +1024,7 @@ C --> E[Guest VM 2<br/>OS + Apps]
 C --> F[Guest VM 3<br/>OS + Apps]
 ```
 
-### 16.3 K-map simplification process
+### K-map simplification process
 
 ```mermaid
 flowchart LR

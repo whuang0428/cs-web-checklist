@@ -15,7 +15,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 <span id="_3-one-page-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
-## 3. Chapter at a Glance
+## Chapter at a Glance
 
 Use this overview to explain management, choose support software, trace translation and use development tools.
 
@@ -61,9 +61,9 @@ Use this overview to explain management, choose support software, trace translat
 
 ---
 
-## 4. 5.1 Operating Systems
+## 5.1 Operating Systems
 
-### 4.1 Why a computer system requires an OS
+### Why a computer system requires an OS
 
 #### Student-friendly explanation
 
@@ -92,7 +92,7 @@ This is too vague. You need to say **what it controls / manages** and **why it i
 
 ---
 
-### 4.2 Key OS management tasks
+### Key OS management tasks
 
 #### Exam structure
 
@@ -107,7 +107,7 @@ C --> D[Apply to device / user / program]
 
 ---
 
-### 4.3 Memory management
+### Memory management
 
 #### Meaning
 
@@ -140,7 +140,7 @@ Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</sp
 
 ---
 
-### 4.4 File management
+### File management
 
 #### Meaning
 
@@ -179,7 +179,7 @@ Backup is usually **utility software**, not the core meaning of file management.
 
 ---
 
-### 4.5 Security management
+### Security management
 
 #### Meaning
 
@@ -210,7 +210,7 @@ Security management <span lang="zh-CN">是</span> OS <span lang="zh-CN">防止</
 
 ---
 
-### 4.6 Hardware / peripheral management
+### Hardware / peripheral management
 
 #### Meaning
 
@@ -240,7 +240,7 @@ A printer is much slower than the CPU.
 
 ---
 
-### 4.7 Process management
+### Process management
 
 #### Meaning
 
@@ -269,9 +269,9 @@ No. It means managing **running programs**.
 
 ---
 
-## 5. Utility Software
+## Utility Software
 
-### 5.1 What is utility software?
+### What is utility software?
 
 Utility software <span lang="zh-CN">是</span> system software <span lang="zh-CN">的一种</span>，<span lang="zh-CN">用来维护</span>、<span lang="zh-CN">保护</span>、<span lang="zh-CN">优化或管理</span> computer system。
 
@@ -290,7 +290,7 @@ Utility software <span lang="zh-CN">是</span> system software <span lang="zh-CN
 
 ---
 
-### 5.2 Back-up software
+### Back-up software
 
 #### Meaning
 
@@ -315,7 +315,7 @@ Back-up software creates copies of files/data so they can be restored if the ori
 
 ---
 
-### 5.3 File compression utility
+### File compression utility
 
 #### Meaning
 
@@ -340,7 +340,7 @@ Do not say “compression makes the file better quality”. It usually reduces s
 
 ---
 
-### 5.4 Virus checker / anti-virus utility
+### Virus checker / anti-virus utility
 
 #### Meaning
 
@@ -361,7 +361,7 @@ No. It reduces risk but cannot guarantee perfect protection.
 
 ---
 
-### 5.5 Defragmentation software
+### Defragmentation software
 
 #### Meaning
 
@@ -378,7 +378,7 @@ Defragmentation is mainly relevant to **magnetic hard disks**, not SSDs.
 
 ---
 
-### 5.6 Disk formatter
+### Disk formatter
 
 #### Meaning
 
@@ -392,7 +392,7 @@ Disk formatter prepares a storage device for use.
 
 ---
 
-### 5.7 Disk contents analysis / disk repair
+### Disk contents analysis / disk repair
 
 #### Meaning
 
@@ -406,9 +406,9 @@ Disk analysis checks storage usage and errors. Disk repair attempts to fix file 
 
 ---
 
-## 6. Program Libraries and DLL Files
+## Program Libraries and DLL Files
 
-### 6.1 What is a program library?
+### What is a program library?
 
 A program library is a collection of pre-written routines/modules that programmers can use in their own software.
 
@@ -433,7 +433,7 @@ A program library is a collection of pre-written routines/modules that programme
 
 ---
 
-### 6.2 Dynamic Link Library (DLL)
+### Dynamic Link Library (DLL)
 
 #### Meaning
 
@@ -456,9 +456,9 @@ A DLL is a library file that is linked/loaded when the program runs, not permane
 
 ---
 
-## 7. 5.2 Language Translators
+## 5.2 Language Translators
 
-### 7.1 Why translators are needed
+### Why translators are needed
 
 Computers execute machine code. Programmers usually write high-level language or assembly language. Translators convert code into a form the processor can execute.
 
@@ -468,7 +468,7 @@ Computers execute machine code. Programmers usually write high-level language or
 
 ---
 
-### 7.2 Assembler
+### Assembler
 
 #### Meaning
 
@@ -484,7 +484,7 @@ Do not say assembler translates Java/Python/C++ high-level code. It translates *
 
 ---
 
-### 7.3 Compiler
+### Compiler
 
 #### Meaning
 
@@ -516,7 +516,7 @@ Compiler translates the whole high-level language program into object code / exe
 
 ---
 
-### 7.4 Interpreter
+### Interpreter
 
 #### Meaning
 
@@ -547,7 +547,7 @@ Interpreter translates and executes high-level language instructions one stateme
 
 ---
 
-### 7.5 Compiler vs interpreter exam comparison
+### Compiler vs interpreter exam comparison
 
 | Feature | Compiler | Interpreter |
 | --- | --- | --- |
@@ -564,7 +564,7 @@ Interpreter translates and executes high-level language instructions one stateme
 
 ---
 
-### 7.6 Java partial compilation and interpretation
+### Java partial compilation and interpretation
 
 #### What AS students need
 
@@ -598,9 +598,9 @@ For AS 9618, remember: **partially compiled and partially interpreted**.
 
 ---
 
-## 8. Integrated Development Environment (IDE)
+## Integrated Development Environment (IDE)
 
-### 8.1 What is an IDE?
+### What is an IDE?
 
 An IDE is software that provides tools to help programmers write, test, debug and maintain programs.
 
@@ -610,7 +610,7 @@ An IDE is software that provides tools to help programmers write, test, debug an
 
 ---
 
-### 8.2 Coding feature: context-sensitive prompts
+### Coding feature: context-sensitive prompts
 
 #### Meaning
 
@@ -627,7 +627,7 @@ If a programmer types `print`, the IDE may suggest the correct function syntax o
 
 ---
 
-### 8.3 Initial error detection: dynamic syntax checks
+### Initial error detection: dynamic syntax checks
 
 #### Meaning
 
@@ -647,7 +647,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-### 8.4 Presentation features
+### Presentation features
 
 2024 Paper 1 asked students to identify and describe presentation features. You need **feature + description**.
 
@@ -665,7 +665,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-### 8.5 Debugging features
+### Debugging features
 
 2024 Paper 1 also asked students to identify and describe debugging features.
 
@@ -693,9 +693,9 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 9. Mark Scheme Keywords
+## Mark Scheme Keywords
 
-### 9.1 Operating System
+### Operating System
 
 + **interface between user/application and hardware**
 + **manages resources**
@@ -711,7 +711,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **allocates processor time**
 + **schedules processes**
 
-### 9.2 Utility Software
+### Utility Software
 
 + **maintain / protect / optimise**
 + **backup copy**
@@ -727,7 +727,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **defragment / contiguous blocks**
 + **disk formatter / file system**
 
-### 9.3 Program Libraries
+### Program Libraries
 
 + **existing code**
 + **pre-written routines**
@@ -740,7 +740,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **loaded at runtime**
 + **shared by multiple programs**
 
-### 9.4 Language Translators
+### Language Translators
 
 + **source code**
 + **object code**
@@ -755,7 +755,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 + **bytecode**
 + **virtual machine**
 
-### 9.5 IDE
+### IDE
 
 + **context-sensitive prompts**
 + **dynamic syntax checks**
@@ -768,7 +768,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 10. Common Confusions
+## Topic-Specific Common Confusions
 
 | Mistake | Why it loses marks | Correct version |
 | --- | --- | --- |
@@ -785,7 +785,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 11. Scenario Answer Bank
+## Scenario Answer Bank
 
 ### Scenario 1: Student writes a program in an IDE
 
@@ -847,7 +847,7 @@ No. It mainly finds **syntax errors**, not all logical errors.
 
 ---
 
-## 12. Process Diagram: OS + Application + Hardware
+## Process Diagram: OS + Application + Hardware
 
 ```mermaid
 flowchart TD
@@ -866,7 +866,7 @@ OS --> HW[Hardware]
 
 ---
 
-## 13. Process Diagram: Translator Choice
+## Process Diagram: Translator Choice
 
 ```mermaid
 flowchart TD

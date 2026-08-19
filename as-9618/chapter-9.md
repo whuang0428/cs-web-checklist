@@ -20,21 +20,21 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 | Syllabus objective | Where it is covered |
 |---|---|
-| Explain and apply abstraction | Section 2 |
-| Produce an abstract model containing essential details | Section 2 and Worked Example 1 |
-| Describe and use decomposition | Section 3 |
-| Understand an algorithm as a sequence of defined steps | Section 4 |
-| Use suitable identifiers and identifier tables | Section 5 |
-| Include input, process and output | Section 6 |
-| Use sequence, selection and iteration | Section 7 |
-| Document algorithms using structured English, flowcharts and pseudocode | Section 8 |
-| Convert between structured English, flowcharts and pseudocode | Section 8 and Worked Example 2 |
-| Use stepwise refinement | Section 9 and Worked Example 3 |
-| Use logic statements to define an algorithm | Sections 7 and 9 |
+| Explain and apply abstraction | Abstraction |
+| Produce an abstract model containing essential details | Abstraction and Worked Example 1 |
+| Describe and use decomposition | Decomposition |
+| Understand an algorithm as a sequence of defined steps | Algorithms |
+| Use suitable identifiers and identifier tables | Identifiers and Identifier Tables |
+| Include input, process and output | Input, Process and Output |
+| Use sequence, selection and iteration | The Three Basic Constructs |
+| Document algorithms using structured English, flowcharts and pseudocode | Algorithm Representations |
+| Convert between structured English, flowcharts and pseudocode | Algorithm Representations and Worked Example 2 |
+| Use stepwise refinement | Stepwise Refinement and Worked Example 3 |
+| Use logic statements to define an algorithm | The Three Basic Constructs; Stepwise Refinement |
 
 ---
 
-## 2. Abstraction
+## Abstraction
 
 **Abstraction** removes irrelevant detail and retains only the information needed to solve the current problem.
 
@@ -62,7 +62,7 @@ An abstract model is not merely “a simpler description”. It must preserve ev
 
 ---
 
-## 3. Decomposition
+## Decomposition
 
 **Decomposition** divides a problem into smaller sub-problems that can become program modules.
 
@@ -97,7 +97,7 @@ Do not confuse decomposition with writing every instruction. It identifies the p
 
 ---
 
-## 4. Algorithms
+## Algorithms
 
 An **algorithm** is a solution expressed as a finite sequence of defined, unambiguous steps.
 
@@ -125,7 +125,7 @@ OUTPUT Total
 
 ---
 
-## 5. Identifiers and Identifier Tables
+## Identifiers and Identifier Tables
 
 An **identifier** is the name used for a variable, constant, array, record or subroutine.
 
@@ -158,7 +158,7 @@ If an array is needed, include its element type and bounds:
 
 ---
 
-## 6. Input, Process and Output
+## Input, Process and Output
 
 Use an IPO table before writing the detailed algorithm.
 
@@ -179,7 +179,7 @@ Questions to ask:
 
 ---
 
-## 7. The Three Basic Constructs
+## The Three Basic Constructs
 
 ### Sequence
 
@@ -226,7 +226,7 @@ Every loop needs:
 
 ---
 
-## 8. Algorithm Representations
+## Algorithm Representations
 
 ### Structured English
 
@@ -290,7 +290,7 @@ Do not add behaviour that was absent from the source representation.
 
 ---
 
-## 9. Stepwise Refinement
+## Stepwise Refinement
 
 **Stepwise refinement** repeatedly replaces a high-level task with more detailed steps until every step can be programmed.
 
@@ -342,7 +342,7 @@ Stop refining when the steps are precise enough to translate directly into code.
 
 ---
 
-## 10. Worked Example 1 — Abstract and Decompose a System
+## Worked Example 1 — Abstract and Decompose a System
 
 A repair workshop records jobs. A customer supplies a device code, fault description and priority. The system allocates a job number and displays an estimated completion category. The colour of the customer's bag and the technician's route to work are also mentioned in the scenario.
 
@@ -383,7 +383,7 @@ This model preserves every detail that affects the result and excludes descripti
 
 ---
 
-## 11. Worked Example 2 — Identifier Table to Pseudocode
+## Worked Example 2 — Identifier Table to Pseudocode
 
 A venue charges $12 per adult ticket and $7 per child ticket. A booking may contain from 1 to 8 tickets.
 
@@ -426,7 +426,7 @@ Every identifier in the pseudocode has a defined role and suitable type.
 
 ---
 
-## 12. Worked Example 3 — Refine a Ranking Algorithm
+## Worked Example 3 — Refine a Ranking Algorithm
 
 Requirement:
 
