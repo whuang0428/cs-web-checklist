@@ -122,8 +122,10 @@ relational database <span lang="zh-CN">的核心就是</span> **<span lang="zh-C
 | Domain | set of allowed values for an attribute | <span lang="zh-CN">一个字段允许的值范围</span> |
 | Primary key | attribute(s) that uniquely identify a record | <span lang="zh-CN">主键</span>，<span lang="zh-CN">唯一识别一行</span> |
 | Candidate key | attribute(s) that could be chosen as primary key | <span lang="zh-CN">候选键</span>，<span lang="zh-CN">可以当主键</span> |
+| Secondary key | attribute used to retrieve a group of records; it does not have to be unique | <span lang="zh-CN">辅助检索键</span>，<span lang="zh-CN">可以重复</span> |
 | Foreign key | attribute that references primary key in another table | <span lang="zh-CN">外键</span>，<span lang="zh-CN">连接另一张表</span> |
 | Referential integrity | foreign key values must match existing primary key values or be null | <span lang="zh-CN">外键必须引用真实存在的主键</span> |
+| Indexing | a separate ordered structure of key values and record pointers | <span lang="zh-CN">用键值和记录位置加快检索</span> |
 
 ---
 
@@ -171,6 +173,18 @@ Possible candidate keys:
 + `PassportNumber`
 
 Only one is chosen as the **primary key**, but all three could uniquely identify a student.
+
+---
+
+### Secondary key
+
+#### Mark scheme answer
+
+> A secondary key is an attribute used to find a group of records and does not have to contain unique values.
+
+For example, `ClassCode` can retrieve every student in one class. Several students may have the same `ClassCode`, so it is not suitable as the primary key.
+
+Do not define a secondary key as “the second candidate key”. Its purpose is retrieval, and duplicate values are allowed.
 
 ---
 
@@ -225,6 +239,24 @@ Foreign keys in `SALE`:
 + keeps relationships valid
 + improves data consistency
 + prevents invalid foreign key values
+
+---
+
+### Indexing
+
+An **index** stores selected key values in an ordered structure together with pointers to the corresponding records.
+
+#### Benefits
+
++ a query can search the smaller ordered index instead of scanning every record
++ records matching a secondary key, such as one postcode or class, can be located more quickly
+
+#### Costs
+
++ the index requires additional storage
++ inserts, deletes and key updates must also update the index
+
+Example: an index on `CustomerID` can point directly to one customer, while an index on the secondary key `Town` can point to every customer in the selected town.
 
 ---
 
@@ -1031,8 +1063,8 @@ The worked calculations, process templates and scenario answers above model the 
 4. Give one limitation of a file-based approach. `[1]`
 5. Give one benefit of normalisation. `[1]`
 6. State the purpose of a data dictionary. `[1]`
-7. Identify a suitable SQL data type for a price such as `22.50`. `[1]`
-8. Write the SQL keyword used to sort query results. `[1]`
+7. Define **secondary key**. `[1]`
+8. State one benefit of **indexing** a frequently searched field. `[1]`
 9. Write the SQL aggregate function used to total values. `[1]`
 10. State what `DML` is used for. `[1]`
 
@@ -1044,8 +1076,8 @@ The worked calculations, process templates and scenario answers above model the 
 4. Data redundancy / inconsistency / difficult access / poor security.
 5. Reduces redundancy / improves consistency / avoids anomalies.
 6. Stores metadata / data about data.
-7. `REAL`.
-8. `ORDER BY`.
+7. A field used to retrieve a group of records; its values do not have to be unique.
+8. It can locate matching records without scanning the entire table / makes suitable searches faster.
 9. `SUM`.
 10. Querying and maintaining data stored in a database.
 

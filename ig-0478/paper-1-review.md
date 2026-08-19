@@ -7,6 +7,7 @@
 - Syllabus: **0478, examinations 2026–2028, Version 5**
 - Recommended time: **1 hour 45 minutes**
 - Total: **75 marks**
+- Do not use a calculator.
 - Answer all six questions.
 - Show working for every calculation.
 - Attempt the complete paper before opening the mark scheme.

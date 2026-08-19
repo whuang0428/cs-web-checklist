@@ -52,3 +52,4 @@ AS extends IGCSE into binary prefixes and complements, CPU architecture and asse
 - [Command words](../exam-technique.md?id=command-words)
 - [Syllabus versions](../syllabus-versions.md)
 - [Official Cambridge 9618 syllabus](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf)
+- [Official Cambridge 9618 pseudocode guide](https://www.cambridgeinternational.org/Images/721401-2027-2029-pseudocode-guide.pdf)

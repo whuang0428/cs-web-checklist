@@ -135,6 +135,52 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 | Actuator | physical movement / action |
 | Light / LED | visual signal |
 
+#### Principal operations of required input and output devices
+
+##### Laser printer
+
+1. A drum is given an electrostatic charge.
+2. A laser changes the charge to form an image on the drum.
+3. Oppositely charged toner is attracted to the image.
+4. The toner is transferred to paper.
+5. Heated pressure rollers fuse the toner permanently to the paper.
+
+##### 3D printer
+
+1. A digital model is divided into thin layers.
+2. The printer deposits, melts or fuses material for one layer.
+3. The platform or print head moves and the process repeats until the physical object is complete.
+
+##### Microphone
+
+1. Sound waves make a diaphragm vibrate.
+2. A transducer converts the vibration into a changing analogue electrical signal.
+3. An ADC samples the signal when digital sound data is required.
+
+##### Speaker
+
+1. A DAC converts digital sound data into an analogue electrical signal when necessary.
+2. The changing current in a coil creates a changing magnetic force.
+3. The attached cone moves the air and produces sound waves.
+
+##### Touchscreen
+
+1. The display presents visual output and a sensing layer detects a touch.
+2. The controller calculates the touch coordinates from a pressure, capacitance or interrupted-beam change.
+3. The coordinates are sent to the processor as input and matched to the displayed control.
+
+##### Virtual reality headset
+
+1. Two slightly different images are displayed through lenses to create a stereoscopic view.
+2. Orientation and motion sensors detect movement of the user's head or controllers.
+3. The processor updates the displayed viewpoint with low delay so the virtual scene follows that movement.
+
+#### Principal-operation drill
+
+- A printer leaves loose toner on a page: the missing final operation is **heating and pressure in the fuser**.
+- A recorded waveform contains only analogue voltages: the microphone signal still needs **analogue-to-digital conversion**.
+- A VR image does not follow a head turn: the system must read its **orientation sensors** and render a new viewpoint.
+
 #### Storage devices
 
 | Device type | Examples | Main idea |
@@ -415,6 +461,14 @@ An optical disc reader/writer:
 ---
 
 ### Solid-state storage / flash memory
+
+#### Principal operation
+
+1. Each memory cell contains a control gate and an electrically isolated floating gate.
+2. An applied voltage adds or removes electrons from the floating gate.
+3. The stored charge changes whether current can pass through the transistor.
+4. The controller interprets the resulting electrical state as stored binary data.
+5. The trapped charge remains when power is removed, so the storage is non-volatile.
 
 #### Key features
 
@@ -864,11 +918,11 @@ The worked calculations, process templates and scenario answers above model the 
 2. Give one drawback of an embedded system. [1]
 3. State what RAM stores while a program is running. [1]
 4. Give one difference between SRAM and DRAM. [1]
-5. State why a buffer is used when writing data to a slow storage device. [1]
+5. State how a microphone first converts sound into an electrical signal. [1]
 6. Identify a suitable sensor to detect whether a door is open. [1]
 7. State the output of `1 XOR 1`. [1]
 8. State the output of `1 NAND 1`. [1]
-9. Explain why HDMI can be better than VGA for a monitor with speakers. [1]
+9. State why a VR headset must track the user's head movement. [1]
 
 ## Quick Check Answers
 
@@ -876,11 +930,11 @@ The worked calculations, process templates and scenario answers above model the 
 2. Difficult to update / limited functionality / specialist repair / e-waste [1].
 3. Current data and instructions / currently running programs [1].
 4. SRAM is faster / more expensive / no refresh; DRAM is cheaper / higher density / needs refresh [1].
-5. It temporarily stores data because devices work at different speeds [1].
+5. Sound waves vibrate a diaphragm / transducer, producing a changing analogue electrical signal [1].
 6. Contact sensor / magnetic sensor [1].
 7. `0` [1].
 8. `0` [1].
-9. HDMI can carry audio and video / is digital / supports high resolution [1].
+9. The processor must update the displayed viewpoint so it follows the user's orientation/movement [1].
 
 ---
 

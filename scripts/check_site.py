@@ -723,6 +723,212 @@ def check_ao_totals(
         add_error(errors, path, "assessment-objective totals do not match the approved allocation")
 
 
+def check_syllabus_alignment_contracts(errors: list[str]) -> None:
+    required_evidence = {
+        ROOT / "ig-0478" / "chapter-3.md": [
+            "**Optical mouse**",
+            "#### Touchscreen types",
+            "**Resistive**",
+            "**Capacitive**",
+            "**DLP projector**",
+            "**LCD projector**",
+            "**LCD screen**",
+            "**LED screen**",
+            "**3D printer**",
+            "**Acoustic**",
+            "**Magnetic field**",
+            "### Required input and output devices",
+            "Optical mouse →",
+            "DLP / LCD projector →",
+            "LCD / LED screen →",
+        ],
+        ROOT / "ig-0478" / "chapter-8.md": [
+            "between `0` and `1` inclusive",
+            "RAND(x)",
+        ],
+        ROOT / "as-9618" / "chapter-3.md": [
+            "##### Laser printer",
+            "##### 3D printer",
+            "##### Microphone",
+            "##### Speaker",
+            "##### Touchscreen",
+            "##### Virtual reality headset",
+            "### Magnetic hard disk",
+            "### Optical storage",
+            "### Solid-state storage / flash memory",
+            "floating gate",
+        ],
+        ROOT / "as-9618" / "chapter-4.md": [
+            "### Current example instruction set",
+            "`LDM #n`",
+            "`LDD address`",
+            "`LDI address`",
+            "`LDX address`",
+            "`LDR #n`",
+            "`MOV IX`",
+            "`STO address`",
+            "`ADD address` / `ADD #n`",
+            "`SUB address` / `SUB #n`",
+            "`INC register` / `DEC register`",
+            "`JMP address`",
+            "`CMP address` / `CMP #n`",
+            "`CMI address`",
+            "`JPE address`",
+            "`JPN address`",
+            "`IN`",
+            "`OUT`",
+            "`END`",
+        ],
+        ROOT / "as-9618" / "chapter-8.md": [
+            "### Secondary key",
+            "### Indexing",
+            "does not have to contain unique values",
+        ],
+        ROOT / "a2-9618" / "chapter-19.md": [
+            "A2 9618 · Papers 3–4",
+            "**Paper 3 focus:**",
+            "**Paper 4 focus:**",
+        ],
+        ROOT / "a2-9618" / "chapter-20.md": [
+            "A2 9618 · Papers 3–4",
+            "## Low-Level Programming for Paper 3",
+            "## Declarative Programming for Paper 3",
+            "immediate",
+            "direct",
+            "indirect",
+            "indexed",
+            "relative",
+            "LDM #n",
+            "LDD address",
+            "LDI address",
+            "LDX address",
+            "JPE",
+            "FACT",
+            "RULE",
+            "GOAL",
+        ],
+        AS_PAPER1_REVIEW_PAGE: [
+            "star topology",
+            "public and a private IP address",
+            "program libraries",
+            "encryption protects appointment data",
+        ],
+        AS_REVIEW_PAGE_2: [
+            "ADT operations and array representation",
+            "Trace these operations in order",
+            "Count = 6` means full",
+        ],
+        A2_PAPER3_REVIEW_PAGE: [
+            "BitTorrent distributes a file between peers",
+            "lexical analysis, syntax analysis and code generation",
+            "RULE priority(X) IF refrigerated(X)",
+        ],
+        A2_PAPER3_REVIEW_PAGE_2: [
+            "Compare POP3 and IMAP",
+            "reinforcement learning uses rewards and penalties",
+            "Using `LDM`, `STO` and `JPE`",
+            "JPE MATCH",
+        ],
+        ROOT / "exam-technique.md": [
+            "## Examination Conditions",
+            "IGCSE 0478 Papers 1 and 2 do not permit calculators",
+            "9618 Papers 1, 2, 3 and 4 do not permit calculators",
+        ],
+        ROOT / "as-9618" / "README.md": [
+            "721401-2027-2029-pseudocode-guide.pdf",
+        ],
+        ROOT / "syllabus-versions.md": [
+            "721401-2027-2029-pseudocode-guide.pdf",
+            "RAND(x)",
+            "RANDOM()",
+        ],
+    }
+
+    for path, evidence_items in required_evidence.items():
+        text = path.read_text(encoding="utf-8")
+        for evidence in evidence_items:
+            if evidence not in text:
+                add_error(errors, path, f"missing syllabus-alignment evidence: {evidence}")
+
+    forbidden_evidence = {
+        ROOT / "as-9618" / "chapter-4.md": ["JPZ", "| Logic / bitwise |"],
+        AS_PAPER1_REVIEW_PAGE: [
+            "packet switching allows a file",
+            "purpose of a MAC address",
+            "linker and a loader",
+            "asymmetric encryption can establish",
+        ],
+        AS_REVIEW_PAGE_2: [
+            "Write pseudocode for `Enqueue",
+            "FUNCTION Enqueue",
+            "Write pseudocode for `Dequeue",
+            "FUNCTION Dequeue",
+        ],
+        A2_PAPER3_REVIEW_PAGE: [
+            "bit streaming and why buffering",
+            "compiler, linker and loader",
+        ],
+        A2_PAPER3_REVIEW_PAGE_2: [
+            "buffering may be needed at the receiver",
+            "training data, validation data and test data",
+            "Distinguish syntax, logic and runtime errors",
+        ],
+    }
+
+    for path, forbidden_items in forbidden_evidence.items():
+        text = path.read_text(encoding="utf-8")
+        for forbidden in forbidden_items:
+            if forbidden.casefold() in text.casefold():
+                add_error(errors, path, f"contains out-of-scope syllabus evidence: {forbidden}")
+
+    for review_page in sorted(REVIEW_PAGES):
+        if "Do not use a calculator." not in review_page.read_text(encoding="utf-8"):
+            add_error(errors, review_page, "full-paper instructions must prohibit calculators")
+
+    for practical_page in (A2_REVIEW_PAGE, A2_REVIEW_PAGE_2):
+        if "without internet or email access" not in practical_page.read_text(encoding="utf-8"):
+            add_error(errors, practical_page, "Paper 4 instructions must require an offline computer")
+
+    coverage = ROOT / "coverage.md"
+    coverage_text = coverage.read_text(encoding="utf-8")
+    if "| ID | Requirement paraphrase | Chapter heading evidence | Practice evidence | Status |" not in coverage_text:
+        add_error(errors, coverage, "alignment register must use the required evidence columns")
+    row_pattern = re.compile(
+        r"^\| ((?:IG|AS|A2)-[^| ]+) \|.*\| (covered|partial|missing) \|$",
+        flags=re.MULTILINE,
+    )
+    alignment_rows = row_pattern.findall(coverage_text)
+    expected_counts = {"IG": 29, "AS": 29, "A2": 15}
+    actual_counts = {course: 0 for course in expected_counts}
+    seen_ids: set[str] = set()
+    for objective_id, status in alignment_rows:
+        course = objective_id.split("-", 1)[0]
+        actual_counts[course] += 1
+        if course == "IG":
+            valid_id = re.fullmatch(r"IG-\d+\.\d+-\d+", objective_id)
+        else:
+            valid_id = re.fullmatch(
+                rf"{course}-\d+\.\d+-[a-z0-9]+(?:-[a-z0-9]+)*",
+                objective_id,
+            )
+        if not valid_id:
+            add_error(errors, coverage, f"invalid syllabus objective ID format: {objective_id}")
+        if objective_id in seen_ids:
+            add_error(errors, coverage, f"duplicate syllabus objective ID: {objective_id}")
+        seen_ids.add(objective_id)
+        if status != "covered":
+            add_error(errors, coverage, f"syllabus objective is not covered: {objective_id}")
+
+    for course, expected_count in expected_counts.items():
+        if actual_counts[course] != expected_count:
+            add_error(
+                errors,
+                coverage,
+                f"{course} alignment register has {actual_counts[course]} rows; "
+                f"expected {expected_count}",
+            )
+
+
 def check_mixed_review(
     errors: list[str],
     review_page: Path,
@@ -1091,6 +1297,7 @@ def check_chapter_overviews(errors: list[str]) -> None:
 
 def check_marked_content(errors: list[str]) -> None:
     check_editorial_contracts(errors)
+    check_syllabus_alignment_contracts(errors)
     check_chapter_overviews(errors)
     check_marked_chapter_contracts(errors, "Phase 2", PHASE2_CHAPTERS)
     check_marked_chapter_contracts(errors, "Phase 3", PHASE3_CHAPTERS)
@@ -1223,6 +1430,7 @@ def check_marked_content(errors: list[str]) -> None:
     check_review_independence(errors, A2_REVIEW_PAGE, A2_REVIEW_PAGE_2)
     check_ao_totals(errors, IG_PAPER1_REVIEW_PAGE, 45, 15, 15)
     check_ao_totals(errors, AS_PAPER1_REVIEW_PAGE, 45, 30)
+    check_ao_totals(errors, A2_PAPER3_REVIEW_PAGE, 45, 30)
     check_ao_totals(errors, A2_PAPER3_REVIEW_PAGE_2, 45, 30)
     check_python_code_blocks(errors)
 
@@ -1367,10 +1575,11 @@ def main() -> int:
     print("- AS Paper 1 Set A has 8 questions, 75 marks and AO1/AO2 45/30")
     print("- AS Paper 2 chapters satisfy worked-example and exact 10/20-mark contracts")
     print("- both AS Paper 2 reviews have 7 questions, 75 marks and 7 mark schemes")
-    print("- both A2 Paper 3 reviews have 8 questions and 75 marks; Set B has AO1/AO2 45/30")
+    print("- both A2 Paper 3 reviews have 8 questions, 75 marks and AO1/AO2 45/30")
     print("- A2 Paper 4 chapters satisfy worked-example and exact 10/20-mark contracts")
     print("- both A2 Paper 4 reviews have 3 questions, 75 marks and 3 mark schemes")
     print("- every A/B review pair remains below the 65% near-duplicate threshold")
+    print("- syllabus-alignment evidence, scope exclusions, exam conditions and objective register pass")
     print("- every A2 fenced Python code block compiles and core examples pass smoke tests")
     print("- jsDelivr npm dependencies use exact versions")
     print("- skip link, keyboard focus, contrast-safe code styling, answer/table/pagination scripting, print and reduced-motion checks pass")

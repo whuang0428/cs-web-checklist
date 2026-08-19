@@ -1,6 +1,6 @@
 # A2 9618 Chapter 19: Computational Thinking and Problem-Solving
 
-<div class="chapter-meta"><strong>A2 9618 · Paper 4</strong><span>9618 · 2027–2029 · Version 2</span></div>
+<div class="chapter-meta"><strong>A2 9618 · Papers 3–4</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
 ## Official Syllabus Checklist
 
@@ -12,9 +12,11 @@ Revise: searching and sorting; abstract data types; algorithm complexity and rec
 
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-> **Paper 4 focus:** implement, test and justify searching, sorting, abstract data types and recursive solutions in a permitted console-mode language.
+> **Paper 3 focus:** explain, trace and compare searching, sorting, abstract data types, complexity and recursion.
+>
+> **Paper 4 focus:** implement, run, test and justify those algorithms in a permitted console-mode language.
 
-This chapter uses **Python 3 console-mode code** because Python is one of the languages permitted for Paper 4. The algorithms and design principles also apply to Java and Visual Basic.
+This chapter uses **Python 3 console-mode code** because Python is one of the languages permitted for Paper 4. The algorithms and design principles also apply to Java and Visual Basic .NET.
 
 ---
 

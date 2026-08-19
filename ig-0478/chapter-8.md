@@ -185,13 +185,14 @@ ENDIF
 ### ROUND and RANDOM
 
 - `ROUND(Number, Places)` rounds a value to a stated number of decimal places.
-- `RANDOM()` produces a pseudo-random value; the exact range or calling form will be stated by the question or language.
+- `RANDOM()` returns a pseudo-random real number between `0` and `1` inclusive.
 
 ```text
 Average <- ROUND(Total / Count, 2)
+DiceValue <- ROUND(RANDOM() * 6, 0)
 ```
 
-Do not assume an unstated `RANDOM` range. Convert it only according to the definition supplied in the question.
+The second example returns a whole number from `0` to `6` inclusive. Do not confuse IGCSE `RANDOM()` with the 9618 routine `RAND(x)`, which has a different name and range.
 
 ---
 

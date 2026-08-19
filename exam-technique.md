@@ -55,6 +55,12 @@ Use this progression when a question asks you to explain, justify or evaluate:
 | Paper 3 | 60% | 40% | 0% |
 | Paper 4 | 0% | 0% | 100% |
 
+## Examination Conditions
+
+- IGCSE 0478 Papers 1 and 2 do not permit calculators.
+- 9618 Papers 1, 2, 3 and 4 do not permit calculators.
+- For 9618 Paper 4, use a centre-provided computer without internet or email access and submit complete program code plus evidence of testing.
+
 ## Timed Practice Routine
 
 1. Confirm the correct paper, time and syllabus range in the course hub.

@@ -6,6 +6,7 @@
 
 - Recommended time: **2 hours**
 - Total: **75 marks**
+- Do not use a calculator.
 - Answer all seven questions in pseudocode where programming is required.
 - Show all trace states and attempt the paper before reading the mark scheme.
 
@@ -16,7 +17,7 @@
 | 1 | Abstraction, decomposition and identifiers | 8 |
 | 2 | Algorithm representation and refinement | 10 |
 | 3 | Arrays, searching and sorting | 12 |
-| 4 | ADT implementation | 10 |
+| 4 | ADT operations and array representation | 10 |
 | 5 | Structured programming and parameters | 12 |
 | 6 | Development, testing and maintenance | 8 |
 | 7 | Integrated pseudocode scenario | 15 |
@@ -54,10 +55,17 @@ Two parallel arrays store eight product codes and matching stock levels.
 
 ## Question 4 — Abstract Data Types [10]
 
-An array-based circular queue has capacity 6. `Front`, `Rear` and `Count` are maintained.
+An array-based circular queue uses indexes `0:5`. Initially:
 
-1. Write pseudocode for `Enqueue(NewItem : STRING) RETURNS BOOLEAN`. Return `FALSE` when full. **[5]**
-2. Write pseudocode for `Dequeue() RETURNS STRING`. Return `""` when empty. **[5]**
+```text
+Queue = ["", "", "B", "C", "D", "E"]
+Front = 2
+Rear = 5
+Count = 4
+```
+
+1. Trace these operations in order: `Dequeue`, `Enqueue("F")`, `Enqueue("G")`, `Dequeue`. After each operation, record any returned value and the values of `Front`, `Rear` and `Count`. **[6]**
+2. Explain how the circular implementation reuses released array positions and how `Count` distinguishes a full queue from an empty queue. **[4]**
 
 ---
 
@@ -180,41 +188,16 @@ Correct bounds/comparison **[2]**; stock swap **[1]**; code swap **[2]**. **[5]*
 
 1.
 
-```text
-FUNCTION Enqueue(NewItem : STRING) RETURNS BOOLEAN
-    IF Count = 6 THEN
-        RETURN FALSE
-    ENDIF
-    Queue[Rear] <- NewItem
-    Rear <- Rear + 1
-    IF Rear = 7 THEN
-        Rear <- 1
-    ENDIF
-    Count <- Count + 1
-    RETURN TRUE
-ENDFUNCTION
-```
+| Operation | Returned value | Front | Rear | Count |
+| --- | --- | ---:| ---:| ---:|
+| `Dequeue` | `"B"` | 3 | 5 | 3 |
+| `Enqueue("F")` | — | 3 | 0 | 4 |
+| `Enqueue("G")` | — | 3 | 1 | 5 |
+| `Dequeue` | `"C"` | 4 | 1 | 4 |
 
-Full test **[1]**; store **[1]**; advance/wrap rear **[1]**; count **[1]**; returns **[1]**. **[5]**
+First dequeue value and state **[2]**; state after enqueueing `F` **[1]**; state after enqueueing `G` **[1]**; final dequeue value and state **[2]**. **[6]**
 
-2.
-
-```text
-FUNCTION Dequeue() RETURNS STRING
-    IF Count = 0 THEN
-        RETURN ""
-    ENDIF
-    Item <- Queue[Front]
-    Front <- Front + 1
-    IF Front = 7 THEN
-        Front <- 1
-    ENDIF
-    Count <- Count - 1
-    RETURN Item
-ENDFUNCTION
-```
-
-Empty test **[1]**; read **[1]**; advance/wrap front **[1]**; count **[1]**; returns **[1]**. **[5]**
+2. Advancing `Rear` beyond index `5` wraps it to index `0`, so released positions at the start of the array can be reused **[1]**; `Front` wraps in the same way when it passes the upper bound **[1]**; `Count = 0` means empty **[1]**; `Count = 6` means full **[1]**. **[4]**
 
 ### Question 5 Mark Scheme [12]
 

@@ -7,7 +7,7 @@
 **Language used in this practice:** Python 3 console mode  
 **Required output:** complete program code and evidence of testing
 
-Paper 4 does not assess low-level or declarative programming. Complete every question on a computer without using internet resources while timing yourself.
+Paper 4 does not assess low-level or declarative programming. Do not use a calculator. Complete every question on a centre-provided computer without internet or email access while timing yourself.
 
 ---
 

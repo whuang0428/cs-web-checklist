@@ -7,6 +7,7 @@
 - Syllabus: **9618, examinations 2027–2029, Version 2**
 - Recommended time: **1 hour 30 minutes**
 - Total: **75 marks**
+- Do not use a calculator.
 - Answer all eight questions.
 - Show every Boolean and floating-point step that is required.
 - Attempt the complete paper before opening the mark scheme.
@@ -40,7 +41,7 @@ A live translation service streams audio between users in different countries.
 
 1. Explain the different responsibilities of TCP and IP. **[3]**
 2. Describe how a router uses a routing table when forwarding a packet. **[2]**
-3. Explain two reasons why buffering may be needed at the receiver and one effect of making the buffer too large. **[3]**
+3. Compare POP3 and IMAP for a user who reads the same mailbox on several devices. **[3]**
 4. State one advantage and one disadvantage of packet switching for this service. **[2]**
 
 ## Question 3 — Parallel Rendering [9]
@@ -74,7 +75,7 @@ A manufacturer distributes a software update over a public network.
 
 A system classifies leaf images and recommends treatment.
 
-1. Distinguish training data, validation data and test data. **[3]**
+1. Explain how reinforcement learning uses rewards and penalties, and state what a regression method predicts. **[3]**
 2. Explain the roles of weights, an activation function and backpropagation in an artificial neural network. **[3]**
 3. Explain how biased training images could affect recommendations. **[2]**
 4. State one reason to retain human review and one measure that could improve future performance. **[2]**
@@ -94,7 +95,7 @@ A booking system contains several ticket classes and imports booking records fro
 
 1. Explain how inheritance and method overriding can support different ticket-price rules. **[3]**
 2. Explain why composition may be preferable to inheritance for representing the tickets contained in an order. **[2]**
-3. Distinguish syntax, logic and runtime errors, giving a relevant example of each. **[3]**
+3. Using `LDM`, `STO` and `JPE`, write the three low-level instructions needed to load the immediate value `12`, store it at address `40`, and jump to label `MATCH` when the preceding comparison was true. **[3]**
 4. State why file resources should be closed even when an exception occurs. **[1]**
 
 ## Mark Scheme
@@ -110,7 +111,7 @@ A booking system contains several ticket classes and imports booking records fro
 
 1. TCP provides end-to-end connection, segmentation/reassembly, ordering, error recovery and flow control **[2]**; IP provides logical addressing and routes datagrams between networks without guaranteeing delivery **[1]**. **[3]**
 2. Router reads destination IP address and matches it to the most specific route **[1]**; forwards packet through the indicated next hop/interface, or uses a default route **[1]**. **[2]**
-3. Buffer absorbs jitter/variable arrival times **[1]** and stores enough audio when delivery momentarily slows **[1]**; an excessively large buffer increases end-to-end delay, harming conversation **[1]**. **[3]**
+3. POP3 downloads messages to a client and may remove the server copy **[1]**; IMAP keeps messages and folders on the server and synchronises their state **[1]**; IMAP is therefore more suitable when read/unread state and folders must remain consistent across devices **[1]**. **[3]**
 4. Advantage: shared routes can adapt to failure/congestion or use capacity efficiently **[1]**; disadvantage: variable delay, loss or reordering can interrupt real-time audio **[1]**. **[2]**
 
 ### Question 3 Mark Scheme [9]
@@ -136,7 +137,7 @@ A booking system contains several ticket classes and imports booking records fro
 
 ### Question 6 Mark Scheme [10]
 
-1. Training data adjusts model parameters **[1]**; validation data tunes/selects the model during development **[1]**; unseen test data estimates final generalisation without further tuning **[1]**. **[3]**
+1. An agent receives a reward for a desirable action **[1]** and a penalty / lower reward for an undesirable action, then adjusts its policy to maximise future reward **[1]**; regression predicts a continuous numerical value from input variables **[1]**. **[3]**
 2. Weights scale connections/signals **[1]**; activation function transforms a neuron's combined input/output and can add non-linearity **[1]**; backpropagation propagates error gradients backwards to update weights/biases **[1]**. **[3]**
 3. Underrepresented crops/conditions may be misclassified **[1]**, producing systematically less accurate or harmful recommendations for those cases **[1]**. **[2]**
 4. Human review can reject unsafe/low-confidence advice or consider missing context **[1]**; collect representative labelled outcomes, monitor errors and retrain/validate the model **[1]**. **[2]**
@@ -152,5 +153,5 @@ A booking system contains several ticket classes and imports booking records fro
 
 1. Common ticket state/behaviour is defined in a superclass **[1]**; subclasses inherit it and override a price method **[1]**; polymorphic calls select the correct rule for the actual ticket object **[1]**. **[3]**
 2. An order **has** a collection of tickets rather than being a kind of ticket **[1]**; composition allows different ticket objects to be added/removed without forcing an invalid class hierarchy **[1]**. **[2]**
-3. Syntax: violates language grammar, for example a missing colon **[1]**; logic: runs but gives a wrong result, for example applying the discount twice **[1]**; runtime: fails during execution, for example opening a missing file or invalid conversion **[1]**. **[3]**
+3. `LDM #12` **[1]**; `STO 40` **[1]**; `JPE MATCH` **[1]**. **[3]**
 4. Closing releases the file handle/lock and ensures buffered data is flushed; use a `finally` block or context manager. **[1]**

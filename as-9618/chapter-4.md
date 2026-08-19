@@ -613,12 +613,39 @@ ADD #5
 
 | Group | Examples | Meaning |
 | --- | --- | --- |
-| Data movement | LDM, LDD, LDI, LDX, STO | move data between memory/registers |
-| Arithmetic | ADD, SUB, INC, DEC | calculations |
-| Logic / bitwise | AND, OR, XOR, NOT | bit manipulation |
-| Branching | JMP, JPN, JPZ | change flow of execution |
-| Compare | CMP | compare values |
+| Data movement | LDM, LDD, LDI, LDX, LDR, MOV, STO | move data between memory/registers |
 | Input/output | IN, OUT | communicate with I/O devices |
+| Arithmetic | ADD, SUB, INC, DEC | calculations |
+| Unconditional/conditional | JMP, JPE, JPN | change flow of execution; `JPE` follows a true comparison and `JPN` a false comparison |
+| Compare | CMP, CMI | compare ACC with an immediate/direct operand or with a value found indirectly |
+| Program control | END | return control to the operating system |
+
+---
+
+### Current example instruction set
+
+| Instruction | Effect |
+| --- | --- |
+| `LDM #n` | load the immediate denary value `n` into ACC |
+| `LDD address` | load the contents of the directly addressed location into ACC |
+| `LDI address` | use the contents of `address` as a second address, then load from that location |
+| `LDX address` | load from the effective address `address + IX` |
+| `LDR #n` | load the immediate denary value `n` into IX |
+| `MOV IX` | copy ACC into IX |
+| `STO address` | store ACC at the directly addressed location |
+| `ADD address` / `ADD #n` | add a directly addressed value / immediate value to ACC |
+| `SUB address` / `SUB #n` | subtract a directly addressed value / immediate value from ACC |
+| `INC register` / `DEC register` | add one to / subtract one from ACC or IX |
+| `JMP address` | jump unconditionally to an absolute or symbolic address |
+| `CMP address` / `CMP #n` | compare ACC with a directly addressed / immediate value |
+| `CMI address` | compare ACC with the value reached through indirect addressing |
+| `JPE address` | jump when the preceding comparison was true |
+| `JPN address` | jump when the preceding comparison was false |
+| `IN` | input a character and store its character code in ACC |
+| `OUT` | output the character represented by the code in ACC |
+| `END` | return control to the operating system |
+
+Binary and hexadecimal immediate operands may be shown in the form defined by the question. An address may be absolute or symbolic.
 
 ---
 

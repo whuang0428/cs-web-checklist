@@ -6,6 +6,7 @@
 
 - Recommended time: **1 hour 45 minutes**
 - Total: **75 marks**
+- Do not use a calculator.
 - Answer all seven questions.
 - Use pseudocode for coding answers, except Question 7 may also be answered in Python, Visual Basic or Java.
 - Complete this set without referring to Set A.

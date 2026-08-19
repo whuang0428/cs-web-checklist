@@ -19,6 +19,10 @@ Students taking 9618 in an earlier examination cycle must compare this material 
 
 [Open the official Cambridge 9618 syllabus](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf)
 
+[Open the official Cambridge 9618 pseudocode guide](https://www.cambridgeinternational.org/Images/721401-2027-2029-pseudocode-guide.pdf)
+
+The 9618 routine `RAND(x)` returns a random real number from `0` up to, but not including, `x`. It is not the same routine as IGCSE 0478 `RANDOM()`, which returns a value from `0` to `1` inclusive.
+
 ## Full-Paper Practice Included
 
 | Course | Included practice |

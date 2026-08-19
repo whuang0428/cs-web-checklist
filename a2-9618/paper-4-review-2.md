@@ -7,7 +7,7 @@
 **Language:** Python 3 console mode  
 **Required evidence:** complete code, test input, expected result and actual output
 
-This set applies Sections 19–20 and contains no low-level or declarative programming tasks.
+This set applies Sections 19–20 and contains no low-level or declarative programming tasks. Do not use a calculator. Work on a centre-provided computer without internet or email access.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## Official Syllabus Checklist
 
-Revise: protocols and the TCP/IP model; circuit and packet switching; routers and streaming.
+Revise: protocols and the TCP/IP model; circuit and packet switching; routers.
 
 > The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 

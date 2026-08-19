@@ -1,10 +1,10 @@
 # A2 9618 Chapter 20: Further Programming
 
-<div class="chapter-meta"><strong>A2 9618 · Paper 4</strong><span>9618 · 2027–2029 · Version 2</span></div>
+<div class="chapter-meta"><strong>A2 9618 · Papers 3–4</strong><span>9618 · 2027–2029 · Version 2</span></div>
 
 ## Official Syllabus Checklist
 
-Revise: programming paradigms; object-oriented design; file organisation and exception handling.
+Revise for Paper 3: all programming paradigms, including writing low-level and declarative code. Revise for Paper 4: procedural and object-oriented programming, file processing and exception handling.
 
 > The checklist paraphrases the syllabus for revision. Use the official syllabus as the final authority.
 
@@ -12,7 +12,9 @@ Revise: programming paradigms; object-oriented design; file organisation and exc
 
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-> **Paper 4 focus:** build procedural and object-oriented Python console programs that process files, handle exceptions and produce test evidence.
+> **Paper 3 focus:** understand all four paradigms and write low-level and declarative code from supplied requirements.
+>
+> **Paper 4 focus:** build procedural and object-oriented console programs that process files, handle exceptions and produce test evidence.
 
 Paper 4 excludes **low-level** and **declarative** programming, but these paradigms remain part of Section 20 theory for Paper 3. This chapter labels that boundary explicitly.
 
@@ -23,7 +25,8 @@ Paper 4 excludes **low-level** and **declarative** programming, but these paradi
 | Syllabus objective | Where it is covered |
 |---|---|
 | Define a programming paradigm | Programming Paradigms |
-| Describe low-level, imperative, object-oriented and declarative paradigms | Programming Paradigms |
+| Explain the four paradigms and write low-level code using five addressing modes | Programming Paradigms; Low-Level Programming for Paper 3 |
+| Write declarative facts and rules, then use them to satisfy a goal | Declarative Programming for Paper 3 |
 | Write procedural code using variables, constructs and subroutines | Imperative and Procedural Design |
 | Use all required OOP terminology accurately | Object-Oriented Terminology |
 | Design classes and write OOP code | Object-Oriented Terminology; Designing and Implementing Classes and Worked Example 1 |
@@ -31,13 +34,15 @@ Paper 4 excludes **low-level** and **declarative** programming, but these paradi
 | Process serial, sequential and random files | File Processing; Serial, Sequential and Random Files and Worked Examples 2–3 |
 | Explain exceptions and select when to handle them | Exception Handling |
 | Write exception-handling code | Exception Handling and Worked Example 4 |
-| Produce complete code and testing evidence | Paper 4 Scope and Evidence; Worked Example 1 — OOP Design from Requirements; Worked Example 2 — Sequential File Merge; Worked Example 3 — Hash Collision Trace; Worked Example 4 — Controlled File Failure |
+| Produce complete code and testing evidence | Paper 3 and Paper 4 Boundary; Worked Example 1 — OOP Design from Requirements; Worked Example 2 — Sequential File Merge; Worked Example 3 — Hash Collision Trace; Worked Example 4 — Controlled File Failure |
 
 ---
 
-## Paper 4 Scope and Evidence
+## Paper 3 and Paper 4 Boundary
 
-Paper 4 is a practical examination. Candidates use Python, Java or Visual Basic in console mode and submit:
+Paper 3 can assess every objective in Sections 13–20. This includes writing low-level code and declarative facts, rules and goals.
+
+Paper 4 is a practical examination. Candidates use Python, Java or Visual Basic .NET in console mode and submit:
 
 - complete program code
 - evidence that the program was executed and tested
@@ -70,6 +75,50 @@ A **programming paradigm** is a general approach to organising computation and e
 
 Low-level code uses operations and addressing modes such as immediate, direct, indirect, indexed and relative. It offers hardware control but is machine-dependent and harder to maintain.
 
+## Low-Level Programming for Paper 3
+
+### Core instruction set
+
+| Instruction | Effect |
+| --- | --- |
+| `LDM #n` | load the immediate value `n` into ACC |
+| `LDD address` | load the contents of `address` into ACC |
+| `LDI address` | treat the contents of `address` as a second address and load from there |
+| `LDX address` | load from `address + IX` into ACC |
+| `LDR #n` | load the immediate value `n` into IX |
+| `MOV register` | copy ACC into the named register |
+| `STO address` | store ACC at the given address |
+| `ADD` / `SUB` | add to or subtract from ACC using the stated operand |
+| `CMP` / `CMI` | compare ACC with a directly or indirectly addressed value |
+| `JMP` | jump unconditionally |
+| `JPE` / `JPN` | jump when the preceding comparison is true / false |
+
+### Addressing modes
+
+| Mode | Where the operand is found | Example |
+| --- | --- | --- |
+| immediate | the value is inside the instruction | `LDM #8` loads `8` |
+| direct | the operand gives the address containing the value | `LDD 40` loads `Memory[40]` |
+| indirect | the stated address contains a second address | `LDI 40` loads `Memory[Memory[40]]` |
+| indexed | the effective address is the stated address plus IX | `LDX 40` loads `Memory[40 + IX]` |
+| relative | a supplied displacement is added to the current / next PC | if a question defines `JMP +3`, execution moves three instructions forward |
+
+For relative addressing, follow the displacement notation defined in the question. Do not silently treat an absolute symbolic address as a relative offset.
+
+### Worked example — write and trace low-level code
+
+Requirement: load `6`, add the value stored at address `25`, store the result at address `40`, compare it with the value at address `41` and jump to `MATCH` when the comparison is true.
+
+```text
+LDM #6
+ADD 25
+STO 40
+CMP 41
+JPE MATCH
+```
+
+If `Memory[25] = 4` and `Memory[41] = 10`, ACC becomes `10`, address `40` receives `10`, the comparison is true and the jump is taken.
+
 ### Imperative programming
 
 An imperative program states **how** to perform a task through an ordered sequence. Procedural programming groups those instructions into reusable procedures and functions.
@@ -83,6 +132,42 @@ OOP models a problem using classes and objects. Each object owns state and expos
 Declarative code describes facts/rules and asks whether a goal can be satisfied. The engine decides the control sequence. For example, a family-relationship system can store a `parent` fact and define an `ancestor` rule.
 
 Low-level and declarative programming can be assessed in Paper 3 theory but must not be made part of a Paper 4 practice task.
+
+## Declarative Programming for Paper 3
+
+Use the syntax supplied by the question. In the neutral notation below:
+
+- a **fact** states a relationship that is known to be true
+- a **variable** such as `X` or `Y` can match a value
+- a **rule** states when another relationship is true
+- a **goal** asks whether the stored facts and rules can satisfy a query
+
+```text
+FACT parent("Asha", "Ben")
+FACT parent("Ben", "Chen")
+
+RULE grandparent(X, Z)
+    IF parent(X, Y) AND parent(Y, Z)
+
+GOAL grandparent("Asha", "Chen")
+```
+
+The goal is satisfied: the first fact can match `parent(X, Y)` with `X = "Asha"` and `Y = "Ben"`; the second fact then matches `parent(Y, Z)` with `Z = "Chen"`.
+
+### Worked example — translate supplied information
+
+Given that every refrigerated parcel is priority and parcel `P17` is refrigerated:
+
+```text
+FACT refrigerated("P17")
+
+RULE priority(X)
+    IF refrigerated(X)
+
+GOAL priority("P17")
+```
+
+The goal is satisfied by applying the rule to the fact. The solution states the required relationship; it does not prescribe an iteration or selection sequence.
 
 ---
 
@@ -521,27 +606,25 @@ The worked calculations, process templates and scenario answers above model the 
 
 ## 10-Mark Quick Check
 
-1. Define a programming paradigm. **[1]**
-2. State the two Section 20 paradigms excluded from Paper 4. **[2]**
-3. Distinguish inheritance from containment. **[2]**
-4. Explain how polymorphism is shown by an overridden method. **[2]**
-5. State the effect of opening an existing file in write mode. **[1]**
-6. Explain why specific exception types should be caught. **[2]**
+This check targets the Section 20 skills that can appear in Paper 3 but are excluded from Paper 4.
+
+1. Identify the addressing mode in each instruction or question-defined operation: `LDM #7`, `LDD 40`, `LDI 40`, `LDX 40`, `JMP +3` where `+3` is added to the next PC. **[5]**
+2. Write three instructions to load the immediate value `12`, add the value stored at address `30`, and store the result at address `50`. **[3]**
+3. Using the notation from this chapter, write a rule stating that every refrigerated parcel is priority and a goal asking whether parcel `P17` is priority. **[2]**
 
 **Total: 10 marks**
 
 ## Quick Check Answers
 
-1. A general approach/style for organising computation and expressing solutions. **[1]**
-2. Low-level **[1]** and declarative **[1]**.
-3. Inheritance models an “is-a” relationship between subclass and superclass **[1]**; containment stores/uses another object in a “has-a” relationship **[1]**.
-4. A subclass supplies a different implementation under the same method name/interface **[1]**; calling the method on different object types selects the appropriate behaviour **[1]**.
-5. The existing contents are truncated/replaced. **[1]**
-6. Different failures can receive appropriate responses **[1]**, while unrelated programming errors are not silently hidden **[1]**.
+1. Immediate, direct, indirect, indexed and relative, in that order. One mark each. **[5]**
+2. `LDM #12` **[1]**, `ADD 30` **[1]**, `STO 50` **[1]**. **[3]**
+3. `RULE priority(X) IF refrigerated(X)` **[1]**; `GOAL priority("P17")` **[1]**. **[2]**
 
 ---
 
 ## 20-Mark Exam Practice
+
+This is Paper 4 practice. It deliberately excludes low-level and declarative programming.
 
 A text file contains sensor records in the format `sensor_id,reading`. Design a robust object-oriented loader.
 
@@ -602,6 +685,8 @@ Tests, one mark each for data plus expected outcome, for example: `-50.0` accept
 ## Final Revision Checklist
 
 - [ ] I can distinguish all four paradigms and the Paper 4 exclusion boundary.
+- [ ] I can write and trace low-level code using immediate, direct, indirect, indexed and relative addressing.
+- [ ] I can write declarative facts and rules and use them to satisfy a goal.
 - [ ] I can design procedural subroutines with clear parameters and returns.
 - [ ] I can use every required OOP term accurately.
 - [ ] I can implement inheritance, polymorphism, containment and encapsulation.

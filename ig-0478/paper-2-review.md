@@ -8,6 +8,7 @@
 
 - Recommended time: **1 hour 45 minutes**
 - Total: **75 marks**
+- Do not use a calculator.
 - Answer all seven questions.
 - Spend about **30 minutes** on Question 7.
 - Use clear pseudocode unless a question asks for another representation.

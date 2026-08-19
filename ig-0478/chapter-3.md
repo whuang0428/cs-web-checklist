@@ -218,12 +218,21 @@ An **embedded system** is a computer system built into a larger device to perfor
 | **Keyboard** | enter text / data |
 | **Microphone** | input sound / voice commands |
 | **Digital camera** | input images / video |
+| **Optical mouse** | detect movement using reflected light and control a pointer |
 | **Barcode scanner** | read barcode data for price / stock control |
 | **QR code scanner** | read QR code to access website / data |
 | **2D scanner** | convert hard-copy documents into digital images |
 | **3D scanner** | captures shape / dimensions to create a digital model |
 | **Touchscreen** | both input and output device |
 | **Actuator** | output device that causes physical movement / action |
+
+#### Touchscreen types
+
+| Type | How the touch is detected | Suitable feature / context |
+| --- | --- | --- |
+| **Resistive** | pressure brings two conductive layers into contact | works with a finger, glove or stylus; useful where physical pressure is acceptable |
+| **Capacitive** | a conductive finger changes the screen's electric field / capacitance | supports a clear, responsive multi-touch interface |
+| **Infra-red** | the touch interrupts a grid of infra-red beams across the screen | detects touch without pressing flexible screen layers |
 
 
 ---
@@ -235,7 +244,9 @@ A **sensor** is an input device that measures physical properties from the envir
 | --- | --- | --- |
 | **Temperature** | temperature | greenhouse, central heating, fridge, engine monitoring |
 | **Light** | light level / brightness | street lights, automatic headlights |
-| **Infra-red / proximity** | movement / presence / distance | security alarm, automatic door, welcome screen |
+| **Acoustic** | sound level / sound energy | noise monitoring, security system |
+| **Infra-red** | infra-red radiation / interruption of an infra-red beam | security alarm, automatic door |
+| **Proximity** | presence / distance of a nearby object | parking sensor, welcome screen |
 | **Pressure** | pressure / force | weighing, mats in games, gas pressure |
 | **Moisture** | water level in soil | plant watering, greenhouse |
 | **Humidity** | water vapour in air | greenhouse, factory air control |
@@ -244,6 +255,7 @@ A **sensor** is an input device that measures physical properties from the envir
 | **Accelerometer** | acceleration / movement | phone rotation, car airbag |
 | **Flow** | flow rate of liquid/gas | pipes, medical breathing devices |
 | **Level** | liquid / powder level | tank, water bowl, production process |
+| **Magnetic field** | strength / presence of a magnetic field | door position, wheel rotation, compass system |
 
 
 #### Core Exam Sentence
@@ -371,6 +383,30 @@ Examples:
 | Running cost | often higher per page | often lower per page |
 | Initial cost | usually cheaper | usually more expensive |
 | Drawback | ink can run out / smudge | toner cartridge expensive; larger footprint; warm-up time |
+
+#### Other required output devices
+
+| Device | Output / operation | Suitable use |
+| --- | --- | --- |
+| **DLP projector** | reflects light using many microscopic mirrors to project an image | large bright presentation image |
+| **LCD projector** | passes light through liquid-crystal panels to project an image | classroom or meeting-room display |
+| **LCD screen** | controls light through liquid-crystal pixels | low-power monitor or portable display |
+| **LED screen** | uses light-emitting diodes, often as an LCD backlight or direct display pixels | bright, efficient visual display |
+| **Speaker** | converts an electrical signal into sound waves | music, speech, alarms |
+| **3D printer** | produces a physical object by adding material layer by layer | prototype, model or customised component |
+
+#### Device selection drill
+
+1. A desktop pointer must detect movement without a rolling ball: choose an **optical mouse** because it measures reflected light from the surface.
+2. A public kiosk must detect a gloved user's selection: choose a **resistive touchscreen** because pressure can be applied through the glove.
+3. A phone needs responsive multi-touch gestures: choose a **capacitive touchscreen** because a conductive finger changes capacitance.
+4. A large information display must detect touches without pressure: choose an **infra-red touchscreen** because a touch interrupts the beam grid.
+5. A cinema needs a bright projected image: choose a **DLP projector** because microscopic mirrors can produce a bright large image.
+6. A classroom needs a conventional projected computer image: choose an **LCD projector** because liquid-crystal panels form the projected image.
+7. A portable monitor needs a low-power flat panel: choose an **LCD screen**; a bright, efficient sign can use an **LED screen**.
+8. A warehouse needs a physical prototype from a digital model: choose a **3D printer** because it builds the object layer by layer.
+9. A factory must detect whether a magnetic safety guard is closed: choose a **magnetic-field sensor**.
+10. A library must measure noise without storing intelligible speech: choose an **acoustic sensor** to measure sound level rather than a microphone to capture sound data.
 
 
 #### Core Exam Sentences
@@ -833,6 +869,17 @@ PC → MAR → RAM → MDR → CIR → PC+1 → CU decodes → opcode/operand �
 
 ### Sensors
 Sensor → ADC → microprocessor → compare with stored value → output warning / actuator → repeat.
+
++ Acoustic sensor → measures sound level; microphone → captures sound data.
++ Magnetic-field sensor → detects the presence or strength of a magnetic field.
++ Touchscreens may be resistive, capacitive or infra-red.
+
+### Required input and output devices
++ Optical mouse → reflected light detects movement.
++ Resistive / capacitive / infra-red touchscreen → pressure contact / capacitance change / interrupted beam grid.
++ DLP / LCD projector → microscopic mirrors / liquid-crystal panels form a large projected image.
++ LCD / LED screen → liquid crystals control light / light-emitting diodes provide the display light.
++ 3D printer → adds material layer by layer to create a physical object.
 
 ### Storage
 + RAM: volatile, current data/instructions/software, directly accessed by CPU.

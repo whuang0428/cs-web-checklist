@@ -8,6 +8,7 @@
 
 - Recommended time: **2 hours**
 - Total: **75 marks**
+- Do not use a calculator.
 - Answer all seven questions.
 - Write programming answers in **pseudocode**.
 - Show intermediate states for traces.

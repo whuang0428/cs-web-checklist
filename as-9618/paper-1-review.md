@@ -7,6 +7,7 @@
 - Syllabus: **9618, examinations 2027–2029, Version 2**
 - Recommended time: **1 hour 30 minutes**
 - Total: **75 marks**
+- Do not use a calculator.
 - Answer all eight questions.
 - Show all working and use precise technical language.
 - Attempt the complete paper before opening the mark scheme.
@@ -39,8 +40,8 @@ A sound library digitises short recordings.
 A college connects two buildings using a network.
 
 1. Distinguish between a LAN and a WAN. **[2]**
-2. Explain how packet switching allows a file to travel across the network. **[3]**
-3. State the purpose of a MAC address and an IP address. **[2]**
+2. Describe how a star topology and its central switch support communication between devices in one building. **[3]**
+3. Explain one difference between a public and a private IP address and one resulting security implication. **[2]**
 4. Give one reason for using fibre-optic cable and one possible limitation. **[2]**
 
 ## Question 3 — Hardware [9]
@@ -66,7 +67,7 @@ A programmer creates a utility that converts image files.
 
 1. State three functions of an operating system. **[3]**
 2. Distinguish between a compiler and an interpreter. **[2]**
-3. Explain the purpose of a linker and a loader. **[2]**
+3. Explain two benefits to a developer of constructing software using program libraries, including a DLL where relevant. **[2]**
 4. State two ways an integrated development environment can help locate a logic error. **[2]**
 
 ## Question 6 — Security, Privacy and Data Integrity [9]
@@ -74,7 +75,7 @@ A programmer creates a utility that converts image files.
 A medical appointment system stores personal data.
 
 1. Distinguish between data security, data privacy and data integrity. **[3]**
-2. Explain how asymmetric encryption can establish a secure exchange of a symmetric session key. **[3]**
+2. Explain how encryption protects appointment data and why encryption alone cannot prevent every unauthorised change or deletion. **[3]**
 3. Describe one access-control measure and one backup measure that reduce different risks to the data. **[2]**
 4. State one limitation of using a checksum to protect data integrity. **[1]**
 
@@ -112,8 +113,8 @@ Each booking is for one event. An event uses one venue. A customer can make many
 ### Question 2 Mark Scheme [9]
 
 1. LAN covers a limited geographic area and is normally owned/managed by one organisation **[1]**; WAN covers a large area and uses third-party telecommunications infrastructure / connects LANs **[1]**. **[2]**
-2. File is divided into packets with addressing/sequence/control data **[1]**; routers can forward packets independently along available routes **[1]**; receiver checks and reorders/reassembles them, requesting retransmission if required **[1]**. **[3]**
-3. MAC identifies a network interface on the local network **[1]**; IP provides a logical address used for routing between networks **[1]**. **[2]**
+2. Each device has a separate link to the central switch **[1]**; a transmitted frame/packet reaches the switch **[1]**; the switch forwards it through the connection leading to the intended destination rather than every link **[1]**. **[3]**
+3. A public IP address is routable/visible on the internet while a private IP address is used inside the local network **[1]**; private addressing reduces direct exposure but does not replace firewall, authentication or other security controls **[1]**. **[2]**
 4. Benefit: high bandwidth, low attenuation or immunity to electromagnetic interference **[1]**; limitation: higher installation/equipment cost or more difficult repair/termination **[1]**. **[2]**
 
 ### Question 3 Mark Scheme [9]
@@ -133,13 +134,13 @@ Each booking is for one event. An event uses one venue. A customer can make many
 
 1. Any three: process scheduling, memory management, peripheral management, file management, security/user management, user interface, platform for applications. **[3]**
 2. Compiler translates a complete program and produces object/executable code **[1]**; interpreter translates and executes one statement at a time without producing a standalone executable **[1]**. **[2]**
-3. Linker combines object modules/libraries and resolves references **[1]**; loader places executable code/data in memory and prepares execution **[1]**. **[2]**
+3. Reusing tested library code reduces development time and duplicated faults **[1]**; a shared DLL avoids embedding the same library in every program and can be maintained separately **[1]**. **[2]**
 4. Any two: breakpoints, single stepping, watch expressions, variable inspection, trace/output window. **[2]**
 
 ### Question 6 Mark Scheme [9]
 
 1. Security protects data from unauthorised access/damage **[1]**; privacy controls lawful/appropriate collection and use of personal data **[1]**; integrity means data remains accurate, complete and unaltered except by authorised action **[1]**. **[3]**
-2. Recipient publishes public key **[1]**; sender encrypts the session key using that public key **[1]**; only the matching private key can decrypt it, after which the faster symmetric key protects the session **[1]**. **[3]**
+2. Encryption converts plaintext data into ciphertext using a key **[1]**; a person without the required key cannot read the stolen or intercepted data **[1]**; encryption alone does not stop an authorised account or attacker with valid access from changing/deleting data, so access controls and backups are still required **[1]**. **[3]**
 3. One explained access control, such as role-based least privilege or multi-factor authentication **[1]**; one backup measure, such as encrypted offline/versioned copies with restoration tests **[1]**. **[2]**
 4. Different corruptions can produce the same checksum / a checksum does not stop deliberate alteration / it detects but does not correct an error. **[1]**
 
