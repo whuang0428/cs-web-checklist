@@ -175,6 +175,127 @@
     });
   }
 
+  var mermaidObserver = null;
+  var mermaidResizeReady = false;
+  var mermaidSettleTimer = null;
+  var mermaidFinalSettleTimer = null;
+
+  function diagramHeading(container) {
+    var node = container.previousElementSibling;
+    while (node && !node.matches('h1, h2, h3, h4')) {
+      node = node.previousElementSibling;
+    }
+    return node ? node.textContent.trim() : '';
+  }
+
+  function tightenMermaidSvg(svg) {
+    if (!svg.matches('.flowchart, .statediagram, .erDiagram')) return;
+
+    var root = svg.querySelector('g.root');
+    var viewBox = svg.viewBox && svg.viewBox.baseVal;
+    if (!root || !viewBox || viewBox.width <= 0 || viewBox.height <= 0) return;
+
+    var bounds;
+    try {
+      bounds = root.getBBox();
+    } catch (error) {
+      return;
+    }
+    if (bounds.width <= 0 || bounds.height <= 0) return;
+
+    var contentRatio = (bounds.width * bounds.height) / (viewBox.width * viewBox.height);
+    var excessWidth = viewBox.width - bounds.width;
+    var excessHeight = viewBox.height - bounds.height;
+    if (contentRatio >= 0.3 || (excessWidth <= 64 && excessHeight <= 64)) return;
+
+    var padding = 16;
+    var width = bounds.width + padding * 2;
+    var height = bounds.height + padding * 2;
+    svg.setAttribute('viewBox', [
+      bounds.x - padding,
+      bounds.y - padding,
+      width,
+      height
+    ].join(' '));
+    svg.setAttribute('width', width);
+    svg.setAttribute('height', height);
+    svg.style.removeProperty('max-width');
+  }
+
+  function updateMermaidOverflow() {
+    document.querySelectorAll('.markdown-section .mermaid').forEach(function (container, index) {
+      var hasOverflow = container.scrollWidth > container.clientWidth + 1;
+      container.classList.toggle('has-overflow', hasOverflow);
+
+      if (hasOverflow) {
+        var heading = diagramHeading(container);
+        container.tabIndex = 0;
+        container.setAttribute('role', 'region');
+        container.setAttribute(
+          'aria-label',
+          heading ? 'Scrollable diagram: ' + heading : 'Scrollable diagram ' + (index + 1)
+        );
+        container.dataset.mermaidA11y = 'true';
+      } else if (container.dataset.mermaidA11y) {
+        container.removeAttribute('tabindex');
+        container.removeAttribute('role');
+        container.removeAttribute('aria-label');
+        delete container.dataset.mermaidA11y;
+      }
+    });
+  }
+
+  function settleMermaidDiagrams() {
+    document.querySelectorAll('.markdown-section .mermaid svg').forEach(tightenMermaidSvg);
+    updateMermaidOverflow();
+  }
+
+  function scheduleMermaidSettle() {
+    window.clearTimeout(mermaidSettleTimer);
+    window.clearTimeout(mermaidFinalSettleTimer);
+    mermaidSettleTimer = window.setTimeout(function () {
+      var settle = function () {
+        window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(function () {
+            settleMermaidDiagrams();
+            mermaidFinalSettleTimer = window.setTimeout(settleMermaidDiagrams, 160);
+          });
+        });
+      };
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(settle, settle);
+      } else {
+        settle();
+      }
+    }, 0);
+  }
+
+  function prepareMermaidDiagrams() {
+    var content = document.querySelector('.markdown-section');
+    if (!content) return;
+
+    if (mermaidObserver) mermaidObserver.disconnect();
+    mermaidObserver = new MutationObserver(function (mutations) {
+      var hasNewDiagram = mutations.some(function (mutation) {
+        return Array.from(mutation.addedNodes).some(function (node) {
+          return node.nodeType === 1 && (
+            node.matches('.mermaid svg') ||
+            (node.querySelector && node.querySelector('.mermaid svg'))
+          );
+        });
+      });
+      if (hasNewDiagram) scheduleMermaidSettle();
+    });
+    mermaidObserver.observe(content, { childList: true, subtree: true });
+
+    if (!mermaidResizeReady) {
+      window.addEventListener('resize', scheduleMermaidSettle, { passive: true });
+      mermaidResizeReady = true;
+    }
+    scheduleMermaidSettle();
+  }
+
   function constrainPagination(path) {
     var course = currentCourse(path);
     if (!course) return;
@@ -240,6 +361,7 @@
         prepareChapterOverviews();
         foldAnswers();
         prepareTables();
+        prepareMermaidDiagrams();
         constrainPagination(path);
         prepareSearch();
         restoreOverviewAnchor();

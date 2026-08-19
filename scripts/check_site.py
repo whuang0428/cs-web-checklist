@@ -1284,6 +1284,47 @@ def check_accessibility_baseline(errors: list[str]) -> None:
             add_error(errors, style, f"missing {description}")
 
 
+def check_mermaid_runtime(errors: list[str]) -> None:
+    index = ROOT / "index.html"
+    index_text = index.read_text(encoding="utf-8")
+    site_script = ROOT / "assets" / "site.js"
+    script_text = site_script.read_text(encoding="utf-8")
+    style = ROOT / "assets" / "style.css"
+    style_text = style.read_text(encoding="utf-8")
+
+    index_contracts = [
+        ("startOnLoad: false", "Docsify-owned Mermaid rendering"),
+        ("flowchart: { useMaxWidth: false }", "natural-width flowcharts"),
+        ("sequence: { useMaxWidth: false }", "natural-width sequence diagrams"),
+        ("state: { useMaxWidth: false }", "natural-width state diagrams"),
+        ("er: { useMaxWidth: false }", "natural-width ER diagrams"),
+    ]
+    for needle, description in index_contracts:
+        if needle not in index_text:
+            add_error(errors, index, f"missing {description}")
+
+    script_contracts = [
+        ("tightenMermaidSvg", "defensive Mermaid viewBox tightening"),
+        ("contentRatio >= 0.3", "Mermaid empty-canvas threshold"),
+        ("excessWidth <= 64 && excessHeight <= 64", "Mermaid excess-space threshold"),
+        ("Scrollable diagram:", "accessible overflowing diagram labels"),
+        ("prepareMermaidDiagrams", "post-render Mermaid preparation"),
+    ]
+    for needle, description in script_contracts:
+        if needle not in script_text:
+            add_error(errors, site_script, f"missing {description}")
+
+    style_contracts = [
+        (".mermaid svg", "Mermaid SVG sizing rules"),
+        ("overflow-x: auto", "local horizontal diagram scrolling"),
+        ("max-width: none", "natural-width Mermaid SVGs"),
+        ("margin-inline: auto", "centred compact Mermaid SVGs"),
+    ]
+    for needle, description in style_contracts:
+        if needle not in style_text:
+            add_error(errors, style, f"missing {description}")
+
+
 def main() -> int:
     errors: list[str] = []
     check_chapter_inventory(errors)
@@ -1294,6 +1335,7 @@ def main() -> int:
     check_marked_content(errors)
     check_cdn_versions(errors)
     check_accessibility_baseline(errors)
+    check_mermaid_runtime(errors)
 
     if errors:
         print(f"Site checks failed with {len(errors)} error(s):")
@@ -1324,6 +1366,7 @@ def main() -> int:
     print("- every A2 fenced Python code block compiles and core examples pass smoke tests")
     print("- jsDelivr npm dependencies use exact versions")
     print("- skip link, keyboard focus, answer/table/pagination scripting, print and reduced-motion checks pass")
+    print("- Mermaid uses one render path, natural SVG sizes and guarded local overflow")
     return 0
 
 

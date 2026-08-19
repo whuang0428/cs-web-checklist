@@ -242,6 +242,10 @@ summary:focus-visible, [tabindex]:focus-visible {
 .mermaid {
   max-width: 100%; margin: 1.4rem 0; padding: 1rem; overflow-x: auto;
   border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+.mermaid svg {
+  display: block; max-width: none; height: auto; margin-inline: auto;
 }
 
 /* Chapter-at-a-glance revision overview */
