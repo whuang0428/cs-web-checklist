@@ -503,6 +503,13 @@ def check_navigation(errors: list[str]) -> None:
 
     index = ROOT / "index.html"
     index_text = index.read_text(encoding="utf-8")
+    submax_levels = re.findall(r"\bsubMaxLevel\s*:\s*(\d+)", index_text)
+    if submax_levels != ["0"]:
+        add_error(
+            errors,
+            index,
+            "Docsify subMaxLevel must be explicitly set to 0 so course sidebars stay course-only",
+        )
     if "paths: 'auto'" in index_text or "paths: \"auto\"" in index_text:
         add_error(errors, index, "search paths must be an explicit list")
     for path in sorted(CONTENT_PAGES):
@@ -1230,7 +1237,7 @@ def main() -> int:
     print("- 30 expected chapter files are present")
     print("- every student content page has one H1 and consistent heading levels")
     print("- local Markdown/HTML references resolve")
-    print("- root navigation is hub-only and every course hub/sidebar is complete")
+    print("- root navigation is hub-only and course sidebars stay course-only and complete")
     print("- explicit search paths include all student content and exclude coverage.md")
     print("- all 30 chapters satisfy the editorial, identity and 10/20-mark contracts")
     print("- all 18 chapter overviews satisfy the title, anchor, four-area and 20-28-unit contracts")
