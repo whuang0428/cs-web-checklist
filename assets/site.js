@@ -322,6 +322,51 @@
 
   function decorateSearchResults() {
     document.querySelectorAll('.matching-post').forEach(function (result) {
+      result.querySelectorAll('p').forEach(function (excerpt) {
+        if (excerpt.dataset.searchExcerptCleaned) return;
+
+        var rawText = excerpt.textContent || '';
+        var hasLeadingEllipsis = /^\s*(?:\.\.\.|…)/.test(rawText);
+        var hasTrailingEllipsis = /(?:\.\.\.|…)\s*$/.test(rawText);
+        var fragments = rawText
+          .replace(/<[^>]*>/g, '')
+          .replace(/(?:^|\s)\/?[a-z][a-z0-9-]*>/gi, ' ')
+          .replace(/\*{2,3}|__|`/g, '')
+          .replace(/^\s*[-+]\s+/gm, '')
+          .split(/(?:\.\.\.|…)+/)
+          .map(function (fragment) {
+            return fragment
+              .replace(/^\/?[a-z][a-z0-9-]*>\s*/i, '')
+              .replace(/^[\s+*.-]+|[\s+*.-]+$/g, '')
+              .replace(/\s+/g, ' ')
+              .trim();
+          })
+          .filter(Boolean);
+        var uniqueFragments = [];
+
+        fragments.forEach(function (fragment) {
+          var key = fragment.toLowerCase();
+          var duplicate = uniqueFragments.some(function (existing, index) {
+            var existingKey = existing.toLowerCase();
+            if (existingKey === key || (key.length > 15 && existingKey.indexOf(key) !== -1)) {
+              return true;
+            }
+            if (existingKey.length > 15 && key.indexOf(existingKey) !== -1) {
+              uniqueFragments[index] = fragment;
+              return true;
+            }
+            return false;
+          });
+          if (!duplicate) uniqueFragments.push(fragment);
+        });
+
+        var cleanedText = uniqueFragments.slice(0, 3).join(' … ');
+        if (hasLeadingEllipsis && cleanedText) cleanedText = '… ' + cleanedText;
+        if (hasTrailingEllipsis && cleanedText) cleanedText += ' …';
+        excerpt.textContent = cleanedText;
+        excerpt.dataset.searchExcerptCleaned = 'true';
+      });
+
       if (result.querySelector('.search-course-label')) return;
       var link = result.querySelector('a');
       var href = link ? link.getAttribute('href') || '' : '';

@@ -87,7 +87,10 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 
 ### 2.1.2 Packet Switching
 #### Core Process
-<!-- <span lang="zh-CN">这是一个文本绘图</span>，<span lang="zh-CN">源码为</span>：flowchart LR
+```mermaid
+flowchart LR
+accTitle: Packet switching and reassembly
+accDescr: A message is split into packets that may take different routes before being reordered and reassembled at the destination.
     A[Original data/message] --> B[Data is split into packets]
     B --> C[Each packet has header, payload and trailer]
     C --> D{Routers choose routes}
@@ -99,8 +102,8 @@ The trailer identifies the **end of the packet** and may contain an **error chec
     G --> H
     H --> I[Packets may arrive out of order]
     I --> J[Packets are reordered using packet number]
-    J --> K[Original message is reassembled] -->
-![](https://cdn.nlark.com/yuque/__mermaid_v3/aaaef26ef98037cde8f83f00a0f3898b.svg)
+    J --> K[Original message is reassembled]
+```
 
 #### Required Process
 1. Data is split into packets.  

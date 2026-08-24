@@ -70,13 +70,12 @@ Revise: algorithm tracing and comparison; linear and binary search; bubble and i
 
 Linear search compares each item in order. It has worst-case time `O(n)` and works without sorting. Binary search compares the middle item, discards half of a **sorted** range and repeats; its worst-case time is `O(log n)`.
 
-Pseudocode for binary search:
+Pseudocode for binary search, with `High` supplied as the final valid array index:
 
 ```text
-FUNCTION BinarySearch(Values, Target) RETURNS INTEGER
+FUNCTION BinarySearch(Values, Target, High) RETURNS INTEGER
     Low <- 0
-    High <- LENGTH(Values) - 1
-    WHILE Low <= High DO
+    WHILE Low <= High
         Middle <- (Low + High) DIV 2
         IF Values[Middle] = Target THEN
             RETURN Middle

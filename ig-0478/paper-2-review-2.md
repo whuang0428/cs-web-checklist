@@ -50,7 +50,7 @@ The following code performs an ascending bubble sort.
 Upper <- 5
 Swapped <- TRUE
 
-WHILE Upper > 1 AND Swapped = TRUE
+WHILE Upper > 1 AND Swapped = TRUE DO
     Swapped <- FALSE
     FOR Index <- 1 TO Upper - 1
         IF Scores[Index] > Scores[Index + 1] THEN
@@ -148,6 +148,7 @@ Write one complete solution that:
 - displays `"Unknown code"` when absent
 - when found, inputs a required number of places from 1 to 3 and validates it
 - displays `"Insufficient places"` if the activity does not have enough places
+- displays `"Booking limit exceeded"` if accepting the request would take the overall total above four
 - otherwise subtracts the required places, adds them to the total booked, adds `required places * price` to total cost and displays `"Booking accepted"`
 - never allows the total booked to exceed four
 - finally outputs total places booked and total cost
@@ -269,7 +270,7 @@ DECLARE ValidCount : INTEGER
 
 ValidCount <- 0
 OPENFILE "Codes.txt" FOR READ
-WHILE NOT EOF("Codes.txt")
+WHILE NOT EOF("Codes.txt") DO
     READFILE "Codes.txt", Code
     IF LENGTH(Code) = 8 AND SUBSTRING(Code, 1, 1) = "X" THEN
         ValidCount <- ValidCount + 1
@@ -290,7 +291,7 @@ Initialise/open **[1]**; EOF loop/read **[1]**; length test **[1]**; first-chara
 - absent-code message **[1]**
 - input and validation of required places **[2]**
 - prevents activity stock and overall limit from being exceeded **[2]**
-- insufficient-places message **[1]**
+- distinct insufficient-places and booking-limit messages **[1]**
 - updates places and total booked **[2]**
 - calculates total cost **[1]**
 - final outputs **[1]**
@@ -306,7 +307,7 @@ REPEAT
     IF RequiredCode <> "END" THEN
         Found <- FALSE
         Index <- 1
-        WHILE Index <= 12 AND Found = FALSE
+        WHILE Index <= 12 AND Found = FALSE DO
             IF Activity[Index].Code = RequiredCode THEN
                 Found <- TRUE
             ELSE
@@ -321,13 +322,17 @@ REPEAT
                 INPUT RequiredPlaces
             UNTIL RequiredPlaces >= 1 AND RequiredPlaces <= 3
 
-            IF RequiredPlaces > Activity[Index].Places OR TotalBooked + RequiredPlaces > 4 THEN
+            IF RequiredPlaces > Activity[Index].Places THEN
                 OUTPUT "Insufficient places"
             ELSE
-                Activity[Index].Places <- Activity[Index].Places - RequiredPlaces
-                TotalBooked <- TotalBooked + RequiredPlaces
-                TotalCost <- TotalCost + RequiredPlaces * Activity[Index].Price
-                OUTPUT "Booking accepted"
+                IF TotalBooked + RequiredPlaces > 4 THEN
+                    OUTPUT "Booking limit exceeded"
+                ELSE
+                    Activity[Index].Places <- Activity[Index].Places - RequiredPlaces
+                    TotalBooked <- TotalBooked + RequiredPlaces
+                    TotalCost <- TotalCost + RequiredPlaces * Activity[Index].Price
+                    OUTPUT "Booking accepted"
+                ENDIF
             ENDIF
         ENDIF
     ENDIF

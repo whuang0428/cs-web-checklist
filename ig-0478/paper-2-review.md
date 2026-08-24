@@ -64,7 +64,7 @@ Count <- 0
 Maximum <- Values[1]
 
 FOR Index <- 1 TO 6
-    IF Values[Index] MOD 2 = 0 THEN
+    IF MOD(Values[Index], 2) = 0 THEN
         Total <- Total + Values[Index]
         Count <- Count + 1
     ENDIF

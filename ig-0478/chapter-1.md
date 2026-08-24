@@ -631,15 +631,18 @@ For images, this could mean:
 | artwork requiring exact detail | lossless | no part of the image should be lost |
 
 
-<!-- <span lang="zh-CN">这是一个文本绘图</span>，<span lang="zh-CN">源码为</span>：flowchart TD
+```mermaid
+flowchart TD
+accTitle: Choosing a compression method
+accDescr: Decide between lossless and lossy compression according to whether exact restoration and small quality loss are acceptable.
 A[Need to compress a file] --> B{Must the original be restored exactly?}
 B -->|Yes| C[Use lossless compression]
 B -->|No| D{Is small quality loss acceptable?}
 D -->|Yes| E[Use lossy compression]
 D -->|No| C
 C --> F[Examples: RLE, lossless image/text compression]
-E --> G[Examples: reducing colour depth, resolution, sample rate] -->
-![](https://cdn.nlark.com/yuque/__mermaid_v3/58060fbf6171f6e9c9ffc60380f26a81.svg)
+E --> G[Examples: reducing colour depth, resolution, sample rate]
+```
 
 ---
 

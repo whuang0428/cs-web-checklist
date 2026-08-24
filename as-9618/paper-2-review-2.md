@@ -101,6 +101,8 @@ An equipment centre stores 20 records in `Equipment[1:20]`:
 - `Available : INTEGER`
 - `DailyRate : REAL`
 
+The supplied function `INTEGER_TO_STRING(Value : INTEGER) RETURNS STRING` converts an integer to its decimal string representation.
+
 Write a complete pseudocode program that:
 
 - repeatedly inputs an equipment code
@@ -110,6 +112,7 @@ Write a complete pseudocode program that:
 - when found, inputs and validates requested days from 1 to 4
 - rejects the request when the requested days would make the overall successful-day total exceed six
 - displays `"Unavailable"` when `Available` is zero
+- displays `"Hire-day limit exceeded"` when accepting the request would take the overall successful-day total above six
 - otherwise decreases `Available`, adds requested days to the successful-day total and adds `days * daily rate` to total income
 - writes each successful hire as one line containing code and days to `Hires.txt`
 - closes the file and outputs hire count, successful-day total and total income. **[15]**
@@ -247,7 +250,7 @@ Correct modes/types **[2]**; total **[1]**; count **[1]**; highest update **[1]*
 - tests availability and produces correct messages **[1]**
 - updates availability, hire count and days **[2]**
 - calculates income **[1]**
-- writes successful code/days, closes file and outputs totals **[2]**
+- writes successful code/days using the supplied conversion function, closes file and outputs totals **[2]**
 
 Indicative solution:
 
@@ -278,14 +281,18 @@ WHILE Code <> "END" AND TotalDays < 6
                 INPUT Days
             UNTIL Days >= 1 AND Days <= 4
 
-            IF Equipment[Index].Available = 0 OR TotalDays + Days > 6 THEN
-                OUTPUT "Unavailable"
+            IF TotalDays + Days > 6 THEN
+                OUTPUT "Hire-day limit exceeded"
             ELSE
-                Equipment[Index].Available <- Equipment[Index].Available - 1
-                HireCount <- HireCount + 1
-                TotalDays <- TotalDays + Days
-                TotalIncome <- TotalIncome + Days * Equipment[Index].DailyRate
-                WRITEFILE "Hires.txt", Code & "," & Days
+                IF Equipment[Index].Available = 0 THEN
+                    OUTPUT "Unavailable"
+                ELSE
+                    Equipment[Index].Available <- Equipment[Index].Available - 1
+                    HireCount <- HireCount + 1
+                    TotalDays <- TotalDays + Days
+                    TotalIncome <- TotalIncome + Days * Equipment[Index].DailyRate
+                    WRITEFILE "Hires.txt", Code & "," & INTEGER_TO_STRING(Days)
+                ENDIF
             ENDIF
         ENDIF
     ENDIF

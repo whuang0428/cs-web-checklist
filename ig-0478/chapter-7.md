@@ -275,7 +275,7 @@ For the algorithm:
 Total <- 0
 FOR Index <- 1 TO 4
     Total <- Total + Numbers[Index]
-    IF Numbers[Index] MOD 2 = 0 THEN
+    IF MOD(Numbers[Index], 2) = 0 THEN
         OUTPUT Numbers[Index]
     ENDIF
 NEXT Index

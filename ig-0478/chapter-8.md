@@ -166,8 +166,8 @@ UNTIL Choice >= 1 AND Choice <= 3
 | `*` | multiplication | `7 * 2 = 14` |
 | `/` | real division | `7 / 2 = 3.5` |
 | `^` | exponent | `3 ^ 2 = 9` |
-| `DIV` | integer quotient | `7 DIV 2 = 3` |
-| `MOD` | remainder | `7 MOD 2 = 1` |
+| `DIV(Value1, Value2)` | integer quotient | `DIV(7, 2) = 3` |
+| `MOD(Value1, Value2)` | remainder | `MOD(7, 2) = 1` |
 
 ### Relational and logical operators
 
@@ -511,7 +511,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 1. State a suitable data type for each value: number of students, average height, one menu letter and a login flag. **[4]**
 2. State one difference between a `WHILE` loop and a `REPEAT ... UNTIL` loop. **[2]**
-3. Evaluate `17 DIV 5` and `17 MOD 5`. **[2]**
+3. Evaluate `DIV(17, 5)` and `MOD(17, 5)`. **[2]**
 4. State one benefit of a local variable and one benefit of using a function. **[2]**
 
 **Total: 10 marks**
@@ -520,7 +520,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 1. Integer; real; character; Boolean. **[4]**
 2. `WHILE` tests before its body and may run zero times; `REPEAT ... UNTIL` tests after its body and therefore runs at least once. **[2]**
-3. `17 DIV 5 = 3`; `17 MOD 5 = 2`. **[2]**
+3. `DIV(17, 5) = 3`; `MOD(17, 5) = 2`. **[2]**
 4. A local variable reduces unintended access/change outside its subroutine; a function packages reusable logic and returns a value. **[2]**
 
 ---
