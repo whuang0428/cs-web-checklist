@@ -171,6 +171,21 @@ The goal succeeds by applying the rule to the matching fact. The variable makes 
 
 ### Encapsulation, containment and polymorphism
 
+| Term | Precise meaning in this chapter |
+|---|---|
+| class | a definition/template that specifies fields and methods for its objects |
+| object | a value with identity, state and behaviour created from a class |
+| instance | one particular object created from a class; `booking` is an instance of `Booking` |
+| property / attribute | named state belonging to an object; in Java it is normally represented by an instance field |
+| method | behaviour defined by a class and invoked on an object or class |
+| constructor | special operation that creates and initialises a valid object |
+| getter / accessor | method that returns a private attribute without exposing direct mutation |
+| setter / mutator | method that validates and changes a private attribute |
+| encapsulation | keeping state and implementation details behind a controlled public interface |
+| inheritance | an is-a relationship in which a subclass receives and specialises superclass behaviour |
+| polymorphism | the same method call can run different overridden implementations according to the object's runtime type |
+| containment / aggregation | a has-a relationship in which one object stores or groups other objects |
+
 - Private fields prevent uncontrolled direct changes.
 - A constructor establishes a valid initial state.
 - A `Booking` containing activities is a has-a relationship.
@@ -241,6 +256,98 @@ The total loop contains no type test. Dynamic dispatch selects the correct `fee(
 
 Java text processing normally uses `BufferedReader`/`BufferedWriter`. For true random access, `RandomAccessFile` supports `seek()` to a byte position. File formats must define field order, delimiter and validation rules.
 
+### Worked file modes — write, append and read
+
+- **write** creates a new file or replaces an existing file when a complete new dataset is produced
+- **append** adds records after existing content without rewriting earlier records, which suits serial logs
+- **read** retrieves records and must detect end-of-file, split fields and validate conversions
+
+```java
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.util.List;
+
+class Ch20TextFileModesDemo {
+    static void writeRecords(Path path, List<String> records) throws Exception {
+        Files.write(path, records); // create or replace
+    }
+    static void appendRecord(Path path, String record) throws Exception {
+        Files.writeString(path, record + System.lineSeparator(),
+                StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+    }
+    static List<String> readRecords(Path path) throws Exception {
+        return Files.readAllLines(path);
+    }
+    public static void main(String[] args) throws Exception {
+        Path path = Files.createTempFile("ch20-records-", ".txt");
+        try {
+            writeRecords(path, List.of("S01,18.5", "S02,21.0"));
+            appendRecord(path, "S03,19.5");
+            List<String> records = readRecords(path);
+            if (records.size() != 3 || !records.get(2).startsWith("S03,")) {
+                throw new AssertionError();
+            }
+        } finally {
+            Files.deleteIfExists(path);
+        }
+    }
+}
+```
+
+Each record has the declared field order `sensorID,reading`. Writing the delimiter and line ending is part of record processing; reading must reverse that format and reject incomplete or invalid records.
+
+### Worked random-file record update
+
+A random file needs fixed-size records or an index that maps each key to a byte position. This example uses 44-byte records: an integer ID, 16 two-byte characters and a double reading. `seek(recordNumber * RECORD_SIZE)` jumps directly to a record; updating only the reading seeks to its field offset.
+
+```java
+import java.io.RandomAccessFile;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+class Ch20RandomFileDemo {
+    static final int NAME_LENGTH = 16;
+    static final int RECORD_SIZE = 4 + NAME_LENGTH * 2 + 8;
+
+    static void writeRecord(RandomAccessFile file, int recordNumber,
+                            int id, String name, double reading) throws Exception {
+        file.seek((long) recordNumber * RECORD_SIZE);
+        file.writeInt(id);
+        String padded = String.format("%-" + NAME_LENGTH + "s", name);
+        for (int index = 0; index < NAME_LENGTH; index++) file.writeChar(padded.charAt(index));
+        file.writeDouble(reading);
+    }
+
+    static void updateReading(RandomAccessFile file, int recordNumber,
+                              double reading) throws Exception {
+        long readingOffset = (long) recordNumber * RECORD_SIZE + 4 + NAME_LENGTH * 2;
+        file.seek(readingOffset);
+        file.writeDouble(reading);
+    }
+
+    static double readReading(RandomAccessFile file, int recordNumber) throws Exception {
+        long readingOffset = (long) recordNumber * RECORD_SIZE + 4 + NAME_LENGTH * 2;
+        file.seek(readingOffset);
+        return file.readDouble();
+    }
+
+    public static void main(String[] args) throws Exception {
+        Path path = Files.createTempFile("ch20-random-", ".dat");
+        try (RandomAccessFile file = new RandomAccessFile(path.toFile(), "rw")) {
+            writeRecord(file, 0, 101, "North", 18.5);
+            writeRecord(file, 1, 102, "South", 20.0);
+            updateReading(file, 1, 22.25);
+            if (readReading(file, 1) != 22.25) throw new AssertionError();
+        } finally {
+            Files.deleteIfExists(path);
+        }
+    }
+}
+```
+
+Random access is appropriate for frequent individual lookup or update. It is not automatically best for a complete ordered batch, where a sequential file can be simpler and more efficient.
+
 ## Worked Example 3 — HashTable with Linear Probing
 
 For size 7, keys 10 and 17 both hash to index 3. Key 10 occupies index 3; key 17 probes index 4. Searches must repeat the identical probe sequence and stop after at most seven attempts.
@@ -282,6 +389,8 @@ class Ch20HashTableDemo {
 ## Exception Handling
 
 Catch exceptions you can handle. Examples include `FileNotFoundException`, `IOException` and `NumberFormatException`. A `finally` block is useful for cleanup, although try-with-resources closes files automatically.
+
+Use exception handling when an operation can fail outside the normal return-value path and the program can recover, report or clean up meaningfully: a missing/unreadable file, malformed numeric input, an invalid object value or an unavailable record. Catch the **most specific** suitable exception at the smallest useful boundary. Do not use exceptions as a substitute for ordinary range tests or loop decisions, and do not catch `Exception` merely to hide a programming fault.
 
 ```java
 import java.io.BufferedReader;

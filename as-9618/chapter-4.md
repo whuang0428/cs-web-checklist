@@ -633,7 +633,7 @@ ADD #5
 | --- | --- | --- |
 | Data movement | LDM, LDD, LDI, LDX, LDR, MOV, STO | move data between memory/registers |
 | Input/output | IN, OUT | communicate with I/O devices |
-| Arithmetic | ADD, SUB, INC, DEC | calculations |
+| Arithmetic and shift | ADD, SUB, INC, DEC, LSL, LSR | calculations and logical bit shifts |
 | Unconditional/conditional | JMP, JPE, JPN | change flow of execution; `JPE` follows a true comparison and `JPN` a false comparison |
 | Compare | CMP, CMI | compare ACC with an immediate/direct operand or with a value found indirectly |
 | Program control | END | return control to the operating system |
@@ -661,6 +661,8 @@ ADD #5
 | `JPN address` | jump when the preceding comparison was false |
 | `IN` | input a character and store its character code in ACC |
 | `OUT` | output the character represented by the code in ACC |
+| `LSL #n` | logically shift ACC left by `n` places; zeros enter at the right and outgoing left bits are lost |
+| `LSR #n` | logically shift ACC right by `n` places; zeros enter at the left and outgoing right bits are lost |
 | `END` | return control to the operating system |
 
 Binary and hexadecimal immediate operands may be shown in the form defined by the question. An address may be absolute or symbolic.
@@ -1045,11 +1047,38 @@ Logical left shift 2:
 11011000
 ```
 
+```text
+Original: 10110110
+Logical right shift 2:
+00101101
+```
+
+On an 8-bit unsigned value, a logical left shift by one is equivalent to multiplying by 2 only when no significant `1` is lost. A logical right shift by one performs integer division by 2 and discards any remainder bit.
+
+The syllabus assembly instructions apply these exact logical operations to ACC:
+
+```text
+ACC = 00110110
+LSL #2          // ACC becomes 11011000
+LSR #3          // ACC becomes 00011011
+```
+
+`LSL #n` and `LSR #n` do not preserve a negative sign: zeros always enter the vacant positions.
+
 ---
 
 ### Arithmetic shift
 
-Arithmetic shift preserves the sign bit when shifting right.
+An arithmetic shift treats the bit pattern as a signed two's-complement integer.
+
+- arithmetic left: bits move left and zeros enter on the right, so its bit movement matches logical left shift; overflow can change the sign or discard a significant bit
+- arithmetic right: bits move right and copies of the original sign bit enter on the left, preserving the sign
+
+```text
+Original: 11110100
+Arithmetic left shift 1:
+11101000
+```
 
 Example:
 
@@ -1085,6 +1114,34 @@ Cyclic left shift 1:
 ```
 
 The leftmost `1` moves to the rightmost position.
+
+```text
+Original: 10110010
+Cyclic right shift 2:
+10101100
+```
+
+For a cyclic right shift, each bit leaving the right end re-enters at the left. No bit is lost and no zero is automatically inserted.
+
+### Choosing the correct shift
+
+| Required behaviour | Correct shift |
+| --- | --- |
+| move bits and fill with zeros | logical left/right |
+| divide a negative signed value while retaining its sign | arithmetic right |
+| move a signed value left while checking for overflow | arithmetic left |
+| rotate a fixed-width bit pattern without losing a bit | cyclic left/right |
+
+### Worked monitor-and-control mask
+
+Suppose ACC stores eight sensor flags and bit 2 is a door sensor while bit 3 controls an alarm.
+
+1. Test the door with `ACC AND 00000100`; a non-zero result means the door is open.
+2. Set the alarm with `ACC OR 00001000`.
+3. Clear the alarm with `ACC AND 11110111`.
+4. Toggle the alarm with `ACC XOR 00001000`.
+
+The mask preserves unrelated bits. A monitor-only program may test and report bit 2; a control program can use that result to set or clear the actuator bit.
 
 ---
 
@@ -1307,7 +1364,7 @@ The worked calculations, process templates and scenario answers above model the 
 7. In `LDX 20`, if IX = 3, what effective address is used? [1]  
 8. State one use of the status register. [1]  
 9. What bitwise operation is commonly used to test a bit using a mask? [1]  
-10. Which port carries digital video and audio to a modern display? [1]
+10. ACC contains `10110110`. State the result after `LSR #2`. [1]
 
 ## Quick Check Answers
 
@@ -1320,7 +1377,7 @@ The worked calculations, process templates and scenario answers above model the 
 7. 23.  
 8. Stores status flags such as zero/carry/overflow/negative as individual bits.  
 9. AND.  
-10. HDMI.
+10. `00101101`.
 
 ---
 
@@ -1342,7 +1399,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 (c) State why HDMI is more suitable than VGA when one cable must carry a presentation's picture and sound. [1]
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 (a)
 
@@ -1446,7 +1503,7 @@ ACC = 15 [2]
 
 ### Question 3: Interrupts and bit manipulation [7]
 
-(a) A keyboard interrupt occurs while the CPU is running another process. Describe how the interrupt is handled. [5]
+(a) A keyboard interrupt occurs while the CPU is running another process. Describe how the interrupt is handled. [3]
 
 (b) A sensor byte is stored in ACC:
 
@@ -1463,20 +1520,18 @@ Use the mask:
 
 Explain how the system can test whether the door is open. [2]
 
-#### Mark scheme
+(c) ACC contains `11110100`. Give the result of a logical right shift by two and an arithmetic right shift by two. Explain the difference. [2]
 
-(a)
+#### Question 3 mark scheme
 
-+ interrupt flag is raised [1]
-+ CPU completes current FDE cycle / checks at end of cycle [1]
-+ checks priority / interrupt register [1]
-+ saves current register contents on stack [1]
-+ calls ISR and later restores register contents / returns to previous process [1]
+(a) Award up to [3]: interrupt request/flag is raised and checked after the current instruction/FDE cycle [1]; CPU checks priority and saves the current process/register state [1]; ISR runs, then saved state is restored and the interrupted process can resume [1].
 
 (b)
 
 + AND ACC with mask `00000100` to isolate bit 2 [1]
 + result is non-zero / `00000100`, so bit 2 is 1 and the door is open [1]
+
+(c) Logical right gives `00111101` [1]; arithmetic right gives `11111101` because it copies the original sign bit rather than inserting zeros [1].
 
 ---
 

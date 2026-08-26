@@ -67,6 +67,8 @@ Use this overview to convert, calculate, represent and justify.
 > Computers use binary because computer circuits / transistors can only represent two states, such as on/off, high/low or 1/0. All data must be converted into binary so it can be processed and stored by the computer.
 >
 
+Inside the processor, **logic gates process these binary values** and **registers store the current data, instructions or intermediate results as bit patterns**. This is why the same two-state representation is used for both processing and temporary storage.
+
 #### Required ideas / marking points
 + **transistors**
 + **logic circuits**
@@ -741,7 +743,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 **Total: 10 marks**
 ### Questions
-1. State the base of the binary number system. [1]  
+1. Explain how logic gates and registers use binary while a computer processes data. [1]
 2. State the largest denary value that can be stored in an unsigned 8-bit register. [1]  
 3. Convert `10101110` to hexadecimal. [1]  
 4. Convert `3F` to binary. [1]  
@@ -752,7 +754,7 @@ The worked calculations, process templates and scenario answers above model the 
 9. Give one reason why compression is used. [1]
 
 ## Quick Check Answers
-1. Base 2  
+1. Logic gates process binary values and registers store binary data/instructions/intermediate results. Award for both linked ideas.
 2. 255  
 3. AE  
 4. 00111111  

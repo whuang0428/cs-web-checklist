@@ -225,7 +225,7 @@ This still works when all values are negative.
 |---|---|
 | Range | Mark must be from 0 to 100 inclusive |
 | Length | Product code must contain 8 characters |
-| Type | Quantity must be an integer |
+| Type check | Quantity must be an integer |
 | Presence | Name must not be empty |
 | Format | Date must follow DD/MM/YYYY |
 | Check digit | Recalculate and compare the final digit of an identification code |
@@ -274,6 +274,8 @@ For the algorithm:
 ```text
 Total <- 0
 FOR Index <- 1 TO 4
+    OUTPUT "Value ", Index, ":"
+    INPUT Numbers[Index]
     Total <- Total + Numbers[Index]
     IF MOD(Numbers[Index], 2) = 0 THEN
         OUTPUT Numbers[Index]
@@ -282,17 +284,17 @@ NEXT Index
 OUTPUT Total
 ```
 
-and `Numbers = [5, 2, 7, 4]`:
+and the inputs `5, 2, 7, 4`:
 
-| Index | Numbers[Index] | Total | Output |
-|---:|---:|---:|---:|
-| 1 | 5 | 5 | |
-| 2 | 2 | 7 | 2 |
-| 3 | 7 | 14 | |
-| 4 | 4 | 18 | 4 |
-| after loop | | 18 | 18 |
+| Index | Prompt | Numbers[Index] | Total | Output |
+|---:|---|---:|---:|---:|
+| 1 | `Value 1:` | 5 | 5 | |
+| 2 | `Value 2:` | 2 | 7 | 2 |
+| 3 | `Value 3:` | 7 | 14 | |
+| 4 | `Value 4:` | 4 | 18 | 4 |
+| after loop | | | 18 | 18 |
 
-Write a new row only when a relevant value changes or output occurs. Include prompts if the question asks for all output.
+Write a new row only when a relevant value changes or output occurs. A prompt is output too, so give it its own column when the trace must show all output.
 
 ---
 

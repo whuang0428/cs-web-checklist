@@ -433,6 +433,25 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ## 15.2 Boolean Algebra and Logic Circuits
 
+At AS level, basic gate questions normally use gates with no more than two inputs. At A2, an AND, OR, NAND or NOR gate may have **more than two inputs**. Apply the gate rule across every input; NOT remains a single-input gate and XOR questions should follow the definition supplied by the circuit.
+
+### Worked three-input gate example
+
+For `X = (A AND B AND C) OR (NOT C)`, the three-input AND gate outputs 1 only when all three inputs are 1. Its output and `NOT C` feed the final OR gate.
+
+| A | B | C | A AND B AND C | NOT C | X |
+|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 | 1 | 1 |
+| 0 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 0 | 1 |
+
+When drawing the circuit, show `A`, `B` and `C` entering one three-input AND symbol. Send `C` through NOT, then join both intermediate outputs at OR. Do not silently replace the three-input gate with an unexplained two-input symbol.
+
 ### Boolean algebra notation
 
 | Symbol | Meaning | Logic gate |
@@ -1061,7 +1080,7 @@ The worked calculations, process templates and scenario answers above model the 
 3. What does SIMD stand for? `[1]`
 4. Describe MIMD. `[2]`
 5. State one benefit of a virtual machine. `[1]`
-6. State one limitation of a virtual machine. `[1]`
+6. A three-input AND gate receives `1, 1, 0`. State its output. `[1]`
 7. Write De Morgan's law for `(A + B)'`. `[1]`
 8. In a K-map, why is the order `00, 01, 11, 10` used? `[1]`
 
@@ -1072,7 +1091,7 @@ The worked calculations, process templates and scenario answers above model the 
 3. Single Instruction, Multiple Data.
 4. Multiple processors execute different instruction streams on different data streams independently/asynchronously.
 5. Isolation / cost saving / portability / allows different OS / safer testing.
-6. Performance overhead / resource sharing / host failure affects VMs / management complexity.
+6. `0`, because every input must be `1` for a multi-input AND gate to output `1`.
 7. `(A + B)' = A'.B'`
 8. It is Gray code, so only one bit changes between adjacent cells.
 

@@ -54,6 +54,37 @@ HUB_PAGES = {ROOT / course / "README.md" for course in COURSE_RANGES}
 COURSE_SIDEBARS = {ROOT / course / "_sidebar.md" for course in COURSE_RANGES}
 SHARED_PAGES = {ROOT / "exam-technique.md", ROOT / "syllabus-versions.md"}
 CONTENT_PAGES = EXPECTED_CHAPTERS | REVIEW_PAGES | HUB_PAGES | SHARED_PAGES
+
+# One ID for every top-level "Candidates should be able to" action in the
+# syllabus versions recorded in coverage.md. Notes and guidance remain part of
+# the corresponding requirement rather than becoming independent objectives.
+SYLLABUS_OBJECTIVE_COUNTS = {
+    "IG": {
+        "1.1": 6, "1.2": 3, "1.3": 4, "2.1": 3, "2.2": 4, "2.3": 2,
+        "3.1": 5, "3.2": 3, "3.3": 6, "3.4": 4, "4.1": 4, "4.2": 5,
+        "5.1": 6, "5.2": 2, "5.3": 2, "6.1": 2, "6.2": 3, "6.3": 3,
+        "7": 9, "8.1": 8, "8.2": 3, "8.3": 2, "9": 4, "10": 3,
+    },
+    "AS": {
+        "1.1": 6, "1.2": 7, "1.3": 3, "2.1": 15, "3.1": 8, "3.2": 6,
+        "4.1": 8, "4.2": 5, "4.3": 2, "5.1": 4, "5.2": 4, "6.1": 6,
+        "6.2": 3, "7.1": 5, "8.1": 7, "8.2": 2, "8.3": 5, "9.1": 2,
+        "9.2": 9, "10.1": 2, "10.2": 4, "10.3": 2, "10.4": 4,
+        "11.1": 3, "11.2": 2, "11.3": 7, "12.1": 4, "12.2": 2,
+        "12.3": 8,
+    },
+    "A2": {
+        "13.1": 4, "13.2": 3, "13.3": 5, "14.1": 4, "14.2": 4,
+        "15.1": 5, "15.2": 4, "16.1": 4, "16.2": 4, "17.1": 3,
+        "18.1": 4, "19.1": 5, "19.2": 2, "20.1": 2, "20.2": 2,
+    },
+}
+EXPECTED_SYLLABUS_OBJECTIVE_IDS = frozenset(
+    f"{course}-{section}-{number:02d}"
+    for course, sections in SYLLABUS_OBJECTIVE_COUNTS.items()
+    for section, count in sections.items()
+    for number in range(1, count + 1)
+)
 OVERVIEW_CONTRACTS = {
     ROOT / "ig-0478" / "chapter-1.md": (
         "## Chapter at a Glance",
@@ -1001,42 +1032,137 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
 
     coverage = ROOT / "coverage.md"
     coverage_text = coverage.read_text(encoding="utf-8")
-    if "| ID | Requirement paraphrase | Chapter heading evidence | Practice evidence | Status |" not in coverage_text:
-        add_error(errors, coverage, "alignment register must use the required evidence columns")
-    row_pattern = re.compile(
-        r"^\| ((?:IG|AS|A2)-[^| ]+) \|.*\| (covered|partial|missing) \|$",
-        flags=re.MULTILINE,
+    required_header = (
+        "| ID | Requirement paraphrase | Teaching evidence | "
+        "Practice evidence | Status |"
     )
-    alignment_rows = row_pattern.findall(coverage_text)
-    expected_counts = {"IG": 29, "AS": 29, "A2": 15}
-    actual_counts = {course: 0 for course in expected_counts}
-    seen_ids: set[str] = set()
-    for objective_id, status in alignment_rows:
-        course = objective_id.split("-", 1)[0]
-        actual_counts[course] += 1
-        if course == "IG":
-            valid_id = re.fullmatch(r"IG-\d+\.\d+-\d+", objective_id)
-        else:
-            valid_id = re.fullmatch(
-                rf"{course}-\d+\.\d+-[a-z0-9]+(?:-[a-z0-9]+)*",
-                objective_id,
+    if required_header not in coverage_text:
+        add_error(errors, coverage, "alignment register must use the required evidence columns")
+
+    def heading_slug(heading: str) -> str:
+        heading = re.sub(r"<[^>]+>", "", heading)
+        heading = re.sub(r"\[([^]]+)\]\([^)]+\)", r"\1", heading)
+        heading = heading.replace("&", " and ")
+        heading = re.sub(r"[^\w\s-]", "", heading, flags=re.UNICODE)
+        return re.sub(r"[-\s]+", "-", heading.strip().casefold())
+
+    def validate_evidence_link(
+        objective_id: str,
+        field_name: str,
+        reference: str,
+    ) -> Path | None:
+        target = resolve_reference(coverage, reference)
+        if target is None or not target.exists():
+            add_error(
+                errors,
+                coverage,
+                f"{objective_id} has missing {field_name} target: {reference}",
             )
-        if not valid_id:
+            return None
+        try:
+            target.relative_to(ROOT)
+        except ValueError:
+            add_error(
+                errors,
+                coverage,
+                f"{objective_id} has out-of-repository {field_name} target: {reference}",
+            )
+            return None
+        fragment = unquote(reference.split("#", 1)[1]) if "#" in reference else ""
+        if not fragment:
+            add_error(
+                errors,
+                coverage,
+                f"{objective_id} {field_name} evidence must include a heading anchor",
+            )
+            return target
+        target_text = target.read_text(encoding="utf-8")
+        heading_slugs = {
+            heading_slug(match.group(1))
+            for match in re.finditer(r"^#{1,6}\s+(.+?)\s*$", target_text, re.MULTILINE)
+        }
+        expected_fragment = heading_slug(fragment)
+        if not any(
+            slug == expected_fragment or slug.endswith(f"-{expected_fragment}")
+            for slug in heading_slugs
+        ):
+            add_error(
+                errors,
+                coverage,
+                f"{objective_id} has stale {field_name} anchor: {reference}",
+            )
+        return target
+
+    rows: list[tuple[str, str, str, str, str]] = []
+    for line in coverage_text.splitlines():
+        if not re.match(r"^\| (?:IG|AS|A2)-", line):
+            continue
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if len(cells) != 5:
+            add_error(errors, coverage, f"malformed alignment row: {line}")
+            continue
+        rows.append((cells[0], cells[1], cells[2], cells[3], cells[4]))
+
+    seen_ids: set[str] = set()
+    link_pattern = re.compile(r"\[[^]]+\]\(([^)]+)\)")
+    for objective_id, requirement, teaching, practice, status in rows:
+        if not re.fullmatch(r"(?:IG|AS|A2)-\d+(?:\.\d+)?-\d{2}", objective_id):
             add_error(errors, coverage, f"invalid syllabus objective ID format: {objective_id}")
         if objective_id in seen_ids:
             add_error(errors, coverage, f"duplicate syllabus objective ID: {objective_id}")
         seen_ids.add(objective_id)
+        if objective_id not in EXPECTED_SYLLABUS_OBJECTIVE_IDS:
+            add_error(errors, coverage, f"unknown syllabus objective ID: {objective_id}")
+        if not requirement or requirement.casefold().startswith("objective "):
+            add_error(errors, coverage, f"{objective_id} lacks a substantive paraphrase")
         if status != "covered":
             add_error(errors, coverage, f"syllabus objective is not covered: {objective_id}")
 
-    for course, expected_count in expected_counts.items():
-        if actual_counts[course] != expected_count:
+        teaching_links = link_pattern.findall(teaching)
+        practice_links = link_pattern.findall(practice)
+        if not teaching_links:
+            add_error(errors, coverage, f"{objective_id} lacks linked teaching evidence")
+        if len(practice_links) < 2 or not re.search(r"— Q\d+", practice):
             add_error(
                 errors,
                 coverage,
-                f"{course} alignment register has {actual_counts[course]} rows; "
-                f"expected {expected_count}",
+                f"{objective_id} practice evidence must name a question and its answers",
             )
+        for reference in teaching_links:
+            validate_evidence_link(objective_id, "teaching", reference)
+        practice_targets = [
+            validate_evidence_link(objective_id, "practice", reference)
+            for reference in practice_links
+        ]
+        question_targets = {
+            target
+            for reference, target in zip(practice_links, practice_targets)
+            if target is not None and "mark-scheme" not in reference
+            and "answers" not in reference
+        }
+        answer_targets = {
+            target
+            for reference, target in zip(practice_links, practice_targets)
+            if target is not None
+            and ("mark-scheme" in reference or "answers" in reference)
+        }
+        for target in question_targets - answer_targets:
+            add_error(
+                errors,
+                coverage,
+                f"{objective_id} has a practice question without an answer on {target.name}",
+            )
+        if not any(
+            "#quick-check-answers" in reference
+            or "#20-marks-practice-mark-scheme" in reference
+            or "mark-scheme" in reference
+            for reference in practice_links
+        ):
+            add_error(errors, coverage, f"{objective_id} practice evidence lacks an answer anchor")
+
+    missing_ids = EXPECTED_SYLLABUS_OBJECTIVE_IDS - seen_ids
+    for objective_id in sorted(missing_ids):
+        add_error(errors, coverage, f"missing syllabus objective ID: {objective_id}")
 
 
 def check_mixed_review(
@@ -1662,7 +1788,10 @@ def main() -> int:
     print("- A2 Paper 4 chapters satisfy worked-example and exact 10/20-mark contracts")
     print("- both A2 Paper 4 reviews have 3 questions, 75 marks and 3 mark schemes")
     print("- every A/B review pair remains below the 65% near-duplicate threshold")
-    print("- syllabus-alignment evidence, scope exclusions, exam conditions and objective register pass")
+    print(
+        f"- all {len(EXPECTED_SYLLABUS_OBJECTIVE_IDS)} atomic syllabus objectives "
+        "have valid teaching, question and answer evidence"
+    )
     print("- every A2 fenced Java code block compiles and all Java smoke tests pass")
     print("- jsDelivr npm dependencies use exact versions")
     print("- skip link, keyboard focus, contrast-safe code styling, answer/table/pagination scripting, print and reduced-motion checks pass")

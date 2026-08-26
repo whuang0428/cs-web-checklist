@@ -63,6 +63,8 @@ Use this overview to convert, calculate, compare and justify information represe
 
 ## 1.1 Data Representation
 
+> **Scope link:** Binary shifts are assessed in syllabus section 4.3, not section 1.1. Revise logical, arithmetic and cyclic shifts, including `LSL` and `LSR`, in [Chapter 4](chapter-4.md#bit-manipulation).
+
 ### Binary prefixes vs decimal prefixes
 
 #### Core idea

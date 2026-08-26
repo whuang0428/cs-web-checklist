@@ -173,6 +173,8 @@ Blocked <span lang="zh-CN">通常不是</span>“<span lang="zh-CN">坏了</span
 + supports multi-tasking
 + improves response time for interactive systems
 
+Scheduling maximises resource use by allocating the CPU to another ready process when the running process blocks for I/O. The CPU therefore does useful work instead of waiting for a slower device; queues and process states also let the OS coordinate memory and I/O access among competing processes.
+
 ---
 
 ### First Come First Served / FCFS
@@ -286,6 +288,16 @@ G --> H[Process continues or scheduler chooses next process]
 #### Mark scheme answer
 > When an interrupt is detected, the current process is temporarily stopped and the contents of registers / process status are stored. The kernel runs the interrupt service routine. After the interrupt is serviced, the saved register values / process status can be restored.
 >
+
+#### Interrupts as part of low-level scheduling
+
+1. A timer or I/O device raises an interrupt while a process is running.
+2. The processor enters kernel mode, saves the current process context and runs the kernel's ISR.
+3. The ISR records the event: for example, a completed I/O operation can move a process from **Blocked** to **Ready**, while a timer expiry can move the running process to **Ready**.
+4. The kernel invokes the low-level scheduler to select one process from the ready queue.
+5. The dispatcher restores that process's context and changes it to **Running**.
+
+The ISR handles the cause of the interrupt; the scheduler makes the separate allocation decision. Together they allow pre-emption, rapid response to completed I/O and high CPU utilisation.
 
 #### Common mistake
 | Mistake | Correction |
@@ -804,20 +816,20 @@ The worked calculations, process templates and scenario answers above model the 
 
 ### Questions
 
-1. State two purposes of an operating system. [2]  
+1. Explain how an operating system can keep the CPU in use when the running process blocks for input. [2]
 2. Name the three process states in the syllabus. [3]  
 3. Explain why a blocked process cannot continue. [1]  
-4. Give one benefit of round robin scheduling. [1]  
+4. State what the kernel does after a timer interrupt makes the running process ready. [1]
 5. Define virtual memory. [1]  
 6. State one difference between paging and segmentation. [1]  
 7. What does an interpreter do? [1]
 
 ## Quick Check Answers
 
-1. Any two: manages resources, provides user interface, hides hardware complexity, process management, memory management, file management, I/O management.  
+1. It records/moves the blocked process out of the running state [1] and the scheduler allocates the CPU to a ready process instead of leaving it idle [1].
 2. Running, ready, blocked.  
 3. It is waiting for an event / I/O operation to complete.  
-4. It gives fair CPU access / each process gets a time slice / supports time-sharing.  
+4. It invokes the low-level scheduler, which selects a process from the ready queue for dispatch.
 5. Secondary storage is used as an extension of main memory / RAM.  
 6. Paging uses fixed-size pages; segmentation uses variable-sized logical segments.  
 7. It translates and executes source code one line at a time without producing a stored executable.

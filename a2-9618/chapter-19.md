@@ -70,6 +70,19 @@ Revise: algorithm tracing and comparison; linear and binary search; bubble and i
 
 Linear search compares each item in order. It has worst-case time `O(n)` and works without sorting. Binary search compares the middle item, discards half of a **sorted** range and repeats; its worst-case time is `O(log n)`.
 
+Pseudocode for linear search:
+
+```text
+FUNCTION LinearSearch(Values, Target, High) RETURNS INTEGER
+    FOR Index <- 0 TO High
+        IF Values[Index] = Target THEN
+            RETURN Index
+        ENDIF
+    NEXT Index
+    RETURN -1
+ENDFUNCTION
+```
+
 Pseudocode for binary search, with `High` supplied as the final valid array index:
 
 ```text
@@ -92,6 +105,41 @@ ENDFUNCTION
 ```
 
 Bubble sort repeatedly compares neighbours and swaps them. Insertion sort maintains a sorted prefix and shifts larger values before inserting the current value. Both are `O(n²)` in the worst case; insertion sort can be efficient for small or nearly sorted data.
+
+Pseudocode for bubble sort, using a flag to stop after a pass with no swap:
+
+```text
+PROCEDURE BubbleSort(Values, High)
+    REPEAT
+        Swapped <- FALSE
+        FOR Index <- 0 TO High - 1
+            IF Values[Index] > Values[Index + 1] THEN
+                Temp <- Values[Index]
+                Values[Index] <- Values[Index + 1]
+                Values[Index + 1] <- Temp
+                Swapped <- TRUE
+            ENDIF
+        NEXT Index
+        High <- High - 1
+    UNTIL Swapped = FALSE OR High = 0
+ENDPROCEDURE
+```
+
+Pseudocode for insertion sort:
+
+```text
+PROCEDURE InsertionSort(Values, High)
+    FOR Current <- 1 TO High
+        Item <- Values[Current]
+        Position <- Current - 1
+        WHILE Position >= 0 AND Values[Position] > Item
+            Values[Position + 1] <- Values[Position]
+            Position <- Position - 1
+        ENDWHILE
+        Values[Position + 1] <- Item
+    NEXT Current
+ENDPROCEDURE
+```
 
 ```java
 import java.util.Arrays;
@@ -157,6 +205,109 @@ An ADT defines permitted operations independently of its representation.
 | Linked list | pointer order | insert, delete, find | data and next arrays, start/free pointers |
 | Binary search tree | smaller left, larger right | insert, find, traverse | linked nodes or array records |
 | Graph | vertices and edges | add edge, breadth/depth traversal | adjacency matrix/list |
+
+### Required operations in pseudocode
+
+These templates expose the boundary checks and pointer/index changes that an ADT trace must show.
+
+```text
+PROCEDURE Push(Item)
+    IF Top = MaxIndex THEN
+        OUTPUT "Stack full"
+    ELSE
+        Top <- Top + 1
+        Stack[Top] <- Item
+    ENDIF
+ENDPROCEDURE
+
+FUNCTION Pop() RETURNS ItemType
+    IF Top = -1 THEN
+        OUTPUT "Stack empty"
+    ELSE
+        Item <- Stack[Top]
+        Top <- Top - 1
+        RETURN Item
+    ENDIF
+ENDFUNCTION
+
+PROCEDURE Enqueue(Item)
+    IF Count = Capacity THEN
+        OUTPUT "Queue full"
+    ELSE
+        Rear <- (Rear + 1) MOD Capacity
+        Queue[Rear] <- Item
+        Count <- Count + 1
+    ENDIF
+ENDPROCEDURE
+
+FUNCTION Dequeue() RETURNS ItemType
+    IF Count = 0 THEN
+        OUTPUT "Queue empty"
+    ELSE
+        Item <- Queue[Front]
+        Front <- (Front + 1) MOD Capacity
+        Count <- Count - 1
+        RETURN Item
+    ENDIF
+ENDFUNCTION
+```
+
+For an array linked list, insertion removes the first node from the free list and connects it into the live chain. Search follows `Next` until the item or null pointer is reached. Deletion reconnects the previous node around the target and returns the removed node to the free list; the `ArrayLinkedList` example below implements all three operations.
+
+For a binary search tree:
+
+```text
+FUNCTION TreeFind(Node, Target) RETURNS BOOLEAN
+    WHILE Node <> NULL
+        IF Target = Node.Key THEN RETURN TRUE
+        IF Target < Node.Key THEN Node <- Node.Left ELSE Node <- Node.Right
+    ENDWHILE
+    RETURN FALSE
+ENDFUNCTION
+
+FUNCTION TreeInsert(Node, Item) RETURNS NodeType
+    IF Node = NULL THEN RETURN NEW NodeType(Item)
+    IF Item < Node.Key THEN Node.Left <- TreeInsert(Node.Left, Item)
+    IF Item > Node.Key THEN Node.Right <- TreeInsert(Node.Right, Item)
+    RETURN Node
+ENDFUNCTION
+
+FUNCTION TreeDelete(Node, Target) RETURNS NodeType
+    IF Node = NULL THEN RETURN NULL
+    IF Target < Node.Key THEN
+        Node.Left <- TreeDelete(Node.Left, Target)
+    ELSE IF Target > Node.Key THEN
+        Node.Right <- TreeDelete(Node.Right, Target)
+    ELSE
+        IF Node.Left = NULL THEN RETURN Node.Right
+        IF Node.Right = NULL THEN RETURN Node.Left
+        Successor <- SmallestNode(Node.Right)
+        Node.Key <- Successor.Key
+        Node.Right <- TreeDelete(Node.Right, Successor.Key)
+    ENDIF
+    RETURN Node
+ENDFUNCTION
+```
+
+The delete cases are: leaf (replace by null), one child (replace by that child), and two children (copy the in-order successor/predecessor, then delete that copied node).
+
+### Dictionary ADT
+
+A dictionary stores **key–value pairs** and supports `insert(key, value)`, `find(key)` and `delete(key)`. Keys are unique even when values repeat. It may be represented by parallel key/value arrays, a binary search tree, or a hash table. With open-address hashing, insertion and search must use the same probe sequence; deletion uses a tombstone rather than an empty slot so later colliding keys remain reachable.
+
+```text
+FUNCTION DictionaryFind(TargetKey) RETURNS ValueType
+    Index <- Hash(TargetKey)
+    FOR Count <- 1 TO Capacity
+        IF State[Index] = EMPTY THEN RETURN NOT_FOUND
+        IF State[Index] = OCCUPIED AND Keys[Index] = TargetKey THEN
+            RETURN Values[Index]
+        ENDIF
+        Index <- (Index + 1) MOD Capacity
+    NEXT Count
+    RETURN NOT_FOUND
+ENDFUNCTION
+```
 
 ### ArrayLinkedList
 
@@ -307,6 +458,10 @@ Space complexity counts additional storage. Recursion may use `O(n)` call-stack 
 
 ## Recursion
 
+Recursion is suitable when a problem is naturally defined in smaller versions of itself, such as tree traversal, divide-and-conquer search, directory traversal or processing a recursively defined grammar. Prefer iteration when a simple loop expresses the task clearly and deep recursion could exhaust stack memory.
+
+At each recursive call, the compiler/runtime creates a **stack frame** containing the return address, parameters and local variables. Frames are pushed while calls descend. When the base case returns, frames are popped in reverse order and each suspended calculation continues; this is **unwinding**. Missing progress causes infinite recursion, while excessive depth can cause stack overflow.
+
 ```java
 class Ch19RecursionDemo {
     static long factorial(int value) {
@@ -350,7 +505,7 @@ The four worked examples model trace evidence, pointer reasoning, complexity lan
 
 1. State the precondition and worst-case time complexity of binary search. **[2]**
 2. State the removal order of a stack and a queue. **[2]**
-3. Explain why a visited set is required in graph traversal. **[2]**
+3. State what a dictionary stores and name one operation other than insertion. **[2]**
 4. State the time complexity of two full nested loops and explain it. **[2]**
 5. State the two requirements that make recursion terminate. **[2]**
 
@@ -360,7 +515,7 @@ The four worked examples model trace evidence, pointer reasoning, complexity lan
 
 1. Data must be sorted **[1]**; worst case `O(log n)` **[1]**. **[2]**
 2. Stack LIFO **[1]**; queue FIFO **[1]**. **[2]**
-3. It prevents repeated processing **[1]** and endless cycles/redundant traversal **[1]**. **[2]**
+3. Key–value pairs with unique keys **[1]**; `find`/lookup or `delete` **[1]**. **[2]**
 4. `O(n²)` **[1]** because the inner loop runs about `n` times for each outer iteration **[1]**. **[2]**
 5. Reachable base case **[1]** and progress towards it **[1]**. **[2]**
 

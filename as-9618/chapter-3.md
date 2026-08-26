@@ -65,7 +65,7 @@ Use this overview to classify hardware, compare storage, trace control and solve
 
 | Syllabus area | What to know | Revision priority |
 | --- | --- | --- |
-| 3.1 Computers and their components | Input/output/storage devices, embedded systems, main memory, secondary storage, ports, buffers, monitoring/control | Very high |
+| 3.1 Computers and their components | Input/output/storage devices, embedded systems, main memory, secondary/removable storage, buffers, monitoring/control | Very high |
 | 3.2 Logic Gates and Logic Circuits | Logic gate symbols, truth tables, logic expressions, logic circuits | Very high |
 
 ---
@@ -94,6 +94,18 @@ Use this overview to classify hardware, compare storage, trace control and solve
 
 > The device is an embedded system because the processor, memory and software are built into the device and are dedicated to a specific task, such as detecting motion / recording video / controlling the device.
 
+#### Benefits of embedded systems
+
+| Benefit | Why it follows from the design |
+| --- | --- |
+| efficient and responsive | hardware and firmware are optimised for a small set of known tasks |
+| compact | only the processing, memory and interfaces needed by the device are included |
+| low power | limited, specialised hardware can consume less energy than a general-purpose computer |
+| reliable | fewer unrelated programs and user changes reduce possible failure paths |
+| lower unit cost | mass-produced devices need only sufficient processing and memory for the dedicated task |
+
+Do not claim that every embedded system is cheap, small or low-power. Link the benefit to the named device and its dedicated workload.
+
 #### Drawbacks of embedded systems
 
 | Drawback | Mark scheme style explanation |
@@ -113,6 +125,8 @@ This may be true in some cases, but it does not prove “embedded”. Use **spec
 ---
 
 ### Input, output and storage devices
+
+A complete computer system needs devices for **input**, **output** and **storage**. It also needs **primary storage** for data and instructions currently in use and **secondary storage** for non-volatile, long-term retention. Removable secondary storage, such as an optical disc or USB flash drive, can transfer data physically between systems or provide offline backup; an internal HDD or SSD is normally fixed inside the computer.
 
 #### Input devices
 
@@ -494,91 +508,19 @@ An optical disc reader/writer:
 
 ---
 
-## Ports and Peripheral Connection
+## Chapter 4 Cross-Reference
 
-### USB
-
-#### Why USB is useful
-
-+ widely used for peripherals
-+ supports plug-and-play
-+ can provide power
-+ can transfer data
-+ device can be automatically recognised
-
-#### Mark scheme answer
-
-> USB supports plug-and-play. When the device is connected, the OS detects it and loads / installs the appropriate driver so it can be used automatically.
-
----
-
-### HDMI
-
-#### Why HDMI may be better than VGA
-
-| HDMI | VGA |
-| --- | --- |
-| digital | analogue |
-| carries video and audio | video only |
-| supports higher resolution | lower quality for modern high-res displays |
-| less interference | more prone to signal degradation |
-| no need for separate audio cable | needs separate audio cable |
-
-#### Mark scheme style
-
-> HDMI can transmit both video and audio, so a separate sound cable is not needed. It is a digital interface, so there is no analogue conversion loss and it can support high-resolution displays.
-
----
-
-## Processor-related Hardware Performance
-
-Although detailed CPU architecture is mainly Chapter 4, exam questions can mix hardware performance into Chapter 3-style device comparison questions.
-
-### Number of cores
-
-| More cores can help when... | Why |
-| --- | --- |
-| software supports parallel processing | different cores can process different tasks |
-| multitasking | several processes can run at the same time |
-| suitable workload | tasks can be divided between cores |
-
-#### Warning
-
-More cores do not always mean faster performance if the software cannot use them.
-
----
-
-### Clock speed
-
-> Clock speed is the number of cycles per second. Higher clock speed may allow more instructions to be processed per second.
-
-#### Weak answer
-
-> Higher GHz is better.
-
-Better:
-
-> A higher clock speed means more clock cycles per second, so the processor may fetch/decode/execute instructions more quickly.
-
----
-
-### Bus width
-
-| Bus | Effect |
-| --- | --- |
-| Data bus | wider data bus transfers more data at one time |
-| Address bus | wider address bus allows more memory locations to be directly addressed |
-| Control bus | carries control signals |
-
-#### Exam-style answer
-
-> A wider data bus means more data can be transferred between components at one time, reducing delay. A wider address bus means more memory locations can be addressed directly.
+USB, HDMI, VGA and processor-performance factors belong to syllabus section 4.1. Revise their operation and comparisons in [Chapter 4 — Processor Fundamentals](chapter-4.md#peripheral-ports). This chapter uses them only when a device scenario needs a connection; it does not duplicate the Chapter 4 teaching.
 
 ---
 
 ## 3.2 Logic Gates and Logic Circuits
 
 ### Basic gates
+
+The standard logic-gate symbols must be recognised and drawn accurately, including the inversion circle used by NOT, NAND and NOR.
+
+![Standard symbols for NOT, AND, OR, NAND, NOR and XOR gates](../assets/logic-gates.svg)
 
 | Gate | Meaning | Output is 1 when... |
 | --- | --- | --- |
@@ -648,6 +590,37 @@ Better:
 ---
 
 ### Writing logic expressions from a circuit
+
+### Official Conversion Matrix
+
+The syllabus requires every direction between the four representations below, not only expression-to-table work.
+
+| Starting representation | Required output | Reliable method |
+| --- | --- | --- |
+| problem statement | logic circuit | identify each condition, write its gate operation, then connect gates in dependency order |
+| problem statement | logic expression | translate words such as both, either and not into bracketed Boolean operations |
+| problem statement | truth table | list every input combination, then apply the stated output condition |
+| logic circuit | problem statement | describe what makes each intermediate gate and the final output equal to 1 |
+| logic circuit | logic expression | label intermediate outputs and combine them from inputs to output |
+| logic circuit | truth table | evaluate every gate in a separate working column for every input row |
+| logic expression | problem statement | read brackets from the inside out and state the output condition in words |
+| logic expression | logic circuit | draw one gate for each operation, respecting brackets and NOT first |
+| logic expression | truth table | add working columns for each sub-expression |
+| truth table | problem statement | describe exactly the rows for which the output is 1 |
+| truth table | logic expression | write one AND term for each output-1 row, negate zero inputs, then OR the terms |
+| truth table | logic circuit | derive the expression, then implement each term and the final OR with gates |
+
+#### Worked conversion from a problem statement
+
+A warning sounds when the system is armed (`A = 1`) and either a door is open (`D = 1`) or motion is detected (`M = 1`).
+
+- expression: `W = A AND (D OR M)`
+- circuit: feed `D` and `M` into OR, then feed that result and `A` into AND
+- truth table: evaluate `D OR M` first; `W` is 1 only in rows `101`, `110` and `111` when inputs are ordered `A,D,M`
+
+#### Worked conversion from a truth table
+
+If a two-input truth table has output 1 only for `A,B = 0,1` and `1,0`, its problem statement is “the output is 1 when the inputs differ”. Its expression is `(NOT A AND B) OR (A AND NOT B)`, which is equivalent to `A XOR B`; the circuit can therefore use one XOR gate.
 
 #### Method
 
@@ -845,18 +818,6 @@ Draw:
 
 > More RAM allows more currently running programs, data and instructions to be stored in main memory. This reduces the need to use virtual memory or access slower secondary storage, reducing delay.
 
-### Wider data bus
-
-> A wider data bus allows more data to be transferred between components at one time, so there may be less delay when data is fetched or transferred.
-
-### USB automatic connection
-
-> USB supports plug-and-play. When the device is connected, the OS detects it and loads the required driver, allowing the device to be used automatically.
-
-### HDMI instead of VGA
-
-> HDMI is digital and can carry both video and audio. It supports high-resolution displays and does not need a separate audio cable, unlike VGA.
-
 ### Sensor on shop shelf
 
 > A pressure sensor can detect that the pressure/weight on the shelf has decreased when an item is removed. This data is sent to the system so it can identify the item taken.
@@ -915,7 +876,7 @@ The worked calculations, process templates and scenario answers above model the 
 ### Questions
 
 1. Define an embedded system. [2]
-2. Give one drawback of an embedded system. [1]
+2. Give one benefit of an embedded system and link it to the dedicated design. [1]
 3. State what RAM stores while a program is running. [1]
 4. Give one difference between SRAM and DRAM. [1]
 5. State how a microphone first converts sound into an electrical signal. [1]
@@ -927,7 +888,7 @@ The worked calculations, process templates and scenario answers above model the 
 ## Quick Check Answers
 
 1. Built into a larger device [1], performs a specific/dedicated task [1].
-2. Difficult to update / limited functionality / specialist repair / e-waste [1].
+2. One linked benefit, such as efficient/responsive because hardware and firmware are optimised for the dedicated task; compact/low-power because unnecessary general-purpose components are not required; reliable because fewer unrelated programs can interfere [1].
 3. Current data and instructions / currently running programs [1].
 4. SRAM is faster / more expensive / no refresh; DRAM is cheaper / higher density / needs refresh [1].
 5. Sound waves vibrate a diaphragm / transducer, producing a changing analogue electrical signal [1].
@@ -948,16 +909,17 @@ A smart security doorbell has a camera, motion sensor, speaker and network conne
 
 (a) Explain why the smart doorbell is an embedded system. [2]
 (b) Identify a suitable sensor for detecting movement near the door. [1]
-(c) Explain whether the doorbell is a monitoring system or a control system. [3]
+(c) Explain whether the doorbell is a monitoring system or a control system. [2]
+(d) Explain one benefit of using an embedded system for this doorbell. [1]
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 (a) Built into a larger device / doorbell [1], performs specific tasks such as motion detection / video recording / notification [1].
 (b) Infrared / motion / proximity sensor [1].
-(c) Award up to [3]:
+(c) Award up to [2]:
 + monitoring if it records/transmits video without affecting the sensor input [1]
 + control if it processes data and sends a signal to an output device such as speaker/light [1]
-+ must justify using the given scenario: data from sensor causes output/action or only records/transmits [1]
+(d) One benefit linked to its dedicated workload, for example low power because it contains only the components needed for sensing/recording/communication, or responsive because firmware is optimised for those tasks [1].
 
 ---
 
@@ -982,53 +944,35 @@ A computer has 2 GB RAM, ROM, a magnetic hard disk and a USB flash drive.
 
 ---
 
-### Question 3: Buffers and ports [4]
+### Question 3: Buffers and removable storage [4]
 
-A computer writes sensor readings to an optical disc. The computer also connects to a monitor with built-in speakers.
+A computer writes sensor readings to an optical disc. It also has an internal magnetic hard disk and a USB flash drive.
 
 (a) Explain why a buffer may be used when writing to the optical disc. [2]
-(b) Explain one benefit of using HDMI to connect the monitor instead of VGA. [2]
+(b) Identify the removable secondary-storage device and explain one reason it may be selected instead of the internal hard disk. [2]
 
 #### Mark scheme
 
 (a) Temporary storage [1] because the computer and optical disc writer work at different speeds / data is stored until writer is ready [1].
-(b) HDMI carries audio and video so no separate audio cable is needed [1] OR HDMI is digital / supports higher resolution [1], with a clear comparison to VGA [1].
+(b) USB flash drive [1]; it can be physically removed to transfer data between systems or kept separately as an offline backup [1].
 
 ---
 
 ### Question 4: Logic gates [4]
 
-Complete the truth table for:
+An alarm output `X` is 1 when the system is armed (`A = 1`) and either a door is open (`D = 1`) or motion is detected (`M = 1`).
 
-```text
-X = (A AND NOT B) OR (B XOR C)
-```
+(a) Write the logic expression for `X`. [1]
+(b) Draw the corresponding logic circuit using standard gate symbols. [1]
+(c) State the three input rows `A,D,M` for which `X = 1`. [1]
+(d) A separate truth table outputs 1 only for two-input rows `0,1` and `1,0`. Name the single gate that implements it. [1]
 
-| A | B | C | X |
-| --- | --- | --- | --- |
-| 0 | 0 | 0 |   |
-| 0 | 0 | 1 |   |
-| 0 | 1 | 0 |   |
-| 0 | 1 | 1 |   |
-| 1 | 0 | 0 |   |
-| 1 | 0 | 1 |   |
-| 1 | 1 | 0 |   |
-| 1 | 1 | 1 |   |
+#### Question 4 mark scheme
 
-#### Mark scheme
-
-| A | B | C | X |
-| --- | --- | --- | --- |
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 1 |
-| 0 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 1 |
-| 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 0 |
-
-Award [2] for first four rows correct and [2] for second four rows correct.
+(a) `X = A AND (D OR M)` [1].
+(b) `D` and `M` enter an OR gate; its output and `A` enter an AND gate; output labelled `X`, with recognisable standard symbols [1].
+(c) `101`, `110`, `111` in `A,D,M` order [1].
+(d) XOR [1].
 
 ---
 

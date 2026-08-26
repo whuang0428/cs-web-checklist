@@ -58,7 +58,7 @@ A research station sends data to a city laboratory.
 ## Question 5 — System Software [9]
 
 1. Explain how virtual memory allows a program to continue when RAM is insufficient, and state one performance cost. **[3]**
-2. Describe the two passes used by an assembler. **[3]**
+2. Explain how a program library and a dynamically linked library (DLL) can support application development and execution. **[3]**
 3. Explain why Java is described as partially compiled and partially interpreted/executed by a virtual machine. **[3]**
 
 ## Question 6 — Security, Privacy and Data Integrity [9]
@@ -120,7 +120,7 @@ The database contains `MEMBER(MemberID, Name, Region)` and `LOAN(LoanID, MemberI
 ### Question 5 Mark Scheme [9]
 
 1. Inactive pages are moved from RAM to secondary storage **[1]** and restored when needed, freeing RAM for active pages **[1]**; page swapping is much slower than RAM and may cause thrashing **[1]**. **[3]**
-2. Pass 1 creates a symbol table of labels/addresses **[1]**; pass 2 translates mnemonics/opcodes **[1]** and substitutes symbol addresses to produce machine/object code **[1]**. **[3]**
+2. A program library supplies pre-written, tested routines that can be reused rather than rewritten **[1]**; a DLL is linked/loaded when the program runs instead of being copied into every executable **[1]**; one shared DLL can therefore reduce duplicated storage or be updated independently for applications that use its compatible interface **[1]**. **[3]**
 3. Java source is compiled to platform-independent bytecode **[1]**; the JVM interprets/executes or just-in-time compiles bytecode **[1]**; the same bytecode can run where a compatible JVM exists **[1]**. **[3]**
 
 ### Question 6 Mark Scheme [9]
