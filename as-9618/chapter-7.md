@@ -802,7 +802,7 @@ Explain why the programmer needs to act ethically towards:
 (a) colleagues working on the project [2]  
 (b) the public / patients who use the hospital service [3]
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 (a) Award up to [2]:
 
@@ -827,7 +827,7 @@ A programmer creates an application and sells it online. Another person copies t
 
 Explain why copyright legislation is needed in this situation. [4]
 
-#### Mark scheme
+#### Question 2 mark scheme
 
 Award up to [4]:
 
@@ -846,7 +846,7 @@ A small business pays a programmer to create a program for its internal use. The
 
 Identify a suitable type of licence and justify your choice. [5]
 
-#### Mark scheme
+#### Question 3 mark scheme
 
 Award marks as follows:
 
@@ -867,7 +867,7 @@ A city uses AI cameras to identify vehicles entering a restricted traffic zone.
 (a) Describe how AI can identify a vehicle registration number from a camera image. [3]  
 (b) Explain one social impact and one economic impact of using this AI system. [3]
 
-#### Mark scheme
+#### Question 4 mark scheme
 
 (a) Award up to [3]:
 

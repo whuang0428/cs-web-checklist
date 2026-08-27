@@ -137,6 +137,8 @@ CISC processor <span lang="zh-CN">的设计思想是</span>：
 
 ### Interrupt handling on RISC and CISC processors
 
+The save–service–restore sequence below applies to both RISC and CISC processors. The processor must finish or stop at a defined instruction boundary, preserve the state needed to resume, execute the ISR and then restore the saved state. The architecture changes the detail: a RISC pipeline commonly contains several simple instructions at different stages, while a CISC processor may be part-way through a longer, more complex instruction. In either case the processor must preserve a precise restart point and must not execute an instruction twice or skip it after the ISR.
+
 #### Basic interrupt sequence
 Interrupt handling <span lang="zh-CN">的核心不是</span>“CPU stop”，<span lang="zh-CN">而是</span>：
 
@@ -1077,8 +1079,8 @@ The worked calculations, process templates and scenario answers above model the 
 
 1. State two features of a RISC processor. `[2]`
 2. Give one difference between RISC and CISC. `[1]`
-3. What does SIMD stand for? `[1]`
-4. Describe MIMD. `[2]`
+3. A full adder receives `A=1`, `B=1`, `CarryIn=0`. State `Sum` and `CarryOut`. `[2]`
+4. A JK flip-flop currently stores `0`. State its next value when `J=1` and `K=0`. `[1]`
 5. State one benefit of a virtual machine. `[1]`
 6. A three-input AND gate receives `1, 1, 0`. State its output. `[1]`
 7. Write De Morgan's law for `(A + B)'`. `[1]`
@@ -1088,8 +1090,8 @@ The worked calculations, process templates and scenario answers above model the 
 
 1. Any two: few/simple instructions; fixed length instructions; single-cycle instructions; many registers; easier pipelining.
 2. RISC has fewer/simple instructions, while CISC has more/complex instructions.
-3. Single Instruction, Multiple Data.
-4. Multiple processors execute different instruction streams on different data streams independently/asynchronously.
+3. `Sum = 0`; `CarryOut = 1`.
+4. `1` / set.
 5. Isolation / cost saving / portability / allows different OS / safer testing.
 6. `0`, because every input must be `1` for a multi-input AND gate to output `1`.
 7. `(A + B)' = A'.B'`
@@ -1104,9 +1106,9 @@ The worked calculations, process templates and scenario answers above model the 
 ### Question 1: RISC, interrupts and pipelining `[6]`
 
 (a) Identify four features of a RISC processor. `[4]`
-(b) Explain why interrupt handling can be more complex when pipelining is used. `[2]`
+(b) State one step that both RISC and CISC processors must perform when handling an interrupt, then state one reason interrupt handling can be more complex when pipelining is used. `[2]`
 
-#### Mark scheme
+#### Question 1 mark scheme
 (a) One mark each, max 4:
 
 + uses few instructions
@@ -1118,10 +1120,16 @@ The worked calculations, process templates and scenario answers above model the 
 + hard-wired control unit
 + design emphasis on software / compiler
 
-(b)
+(b) One mark for any one shared step:
 
-+ several instructions may already be in the pipeline when the interrupt is detected `[1]`
-+ instructions may need to be discarded / pipeline flushed / processor restarts at correct next instruction after ISR `[1]`
++ save the current processor state / registers / program counter
++ run the interrupt service routine
++ restore the saved state
++ resume from a precise instruction boundary without skipping or repeating an instruction
+
+One mark for a pipelining issue:
+
++ several instructions may already be in the pipeline when the interrupt is detected / instructions may need to be discarded / pipeline flushed / processor restarts at the correct next instruction after the ISR `[1]`
 
 ---
 
@@ -1136,7 +1144,7 @@ Complete the table.
 | MISD |  |  |
 | MIMD |  |  |
 
-#### Mark scheme
+#### Question 2 mark scheme
 One mark per correct row, max 4:
 
 + SISD = Single Instruction, Single Data; one instruction stream on one data stream / sequential execution
@@ -1152,7 +1160,7 @@ A school wants students to test different operating systems without changing the
 
 Explain two benefits and two limitations of using virtual machines. `[4]`
 
-#### Mark scheme
+#### Question 3 mark scheme
 Benefits, max 2:
 
 + different operating systems can run on one host machine
@@ -1171,31 +1179,21 @@ Limitations, max 2:
 
 ---
 
-### Question 4: Boolean algebra `[3]`
+### Question 4: Flip-flops and Boolean algebra `[3]`
 
-Simplify the expression:
+(a) Draw an SR latch using two cross-coupled NOR gates. Label `S`, `R`, `Q` and `Q'`. `[1]`
 
-```text
-(A + B)'.B + A.B
-```
+(b) For a NOR-gate SR latch, state the next value of `Q` for `S=1, R=0` and for `S=0, R=1`. `[1]`
 
-Show working.
+(c) Simplify `(A + B)'.B + A.B`. `[1]`
 
-#### Mark scheme
+#### Question 4 mark scheme
 
-```text
-(A + B)'.B + A.B
-= A'.B'.B + A.B      De Morgan
-= A'.0 + A.B         Complement
-= 0 + A.B            Null
-= A.B                Identity
-```
+**(a)** Two NOR gates with each output fed back to one input of the other; external inputs and complementary outputs correctly labelled. `[1]`
 
-Marks:
+**(b)** `S=1, R=0` sets `Q` to `1`; `S=0, R=1` resets `Q` to `0`. Both required. `[1]`
 
-+ correct De Morgan application `[1]`
-+ correct use of complement/null law `[1]`
-+ final answer `A.B` `[1]`
+**(c)** `(A + B)'.B + A.B = A'.B'.B + A.B = A.B`. `[1]`
 
 ---
 
@@ -1214,7 +1212,7 @@ A B C
 (a) Write the full sum-of-products expression. `[2]`
 (b) Simplify the expression. `[1]`
 
-#### Mark scheme
+#### Question 5 mark scheme
 
 (a)
 

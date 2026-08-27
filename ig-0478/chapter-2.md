@@ -658,7 +658,7 @@ The worked calculations, process templates and scenario answers above model the 
 3. State one reason why packets may arrive out of order. `[1]`  
 4. State one difference between serial and parallel transmission. `[1]`  
 5. What two things are used in ARQ? `[2]`  
-6. State what is meant by cipher text. `[1]`
+6. State how a check digit is used to detect a data-entry error. `[1]`
 
 ## Quick Check Answers
 1. Header, payload, trailer.  
@@ -666,7 +666,7 @@ The worked calculations, process templates and scenario answers above model the 
 3. Each packet can take a different route.  
 4. Serial sends one bit at a time; parallel sends multiple bits at the same time.  
 5. Acknowledgement and timeout.  
-6. Encrypted data / data made meaningless by encryption.
+6. The check digit is recalculated from the entered digits and compared with the entered/stored check digit; a mismatch indicates an entry error.
 
 ---
 
@@ -678,44 +678,38 @@ The worked calculations, process templates and scenario answers above model the 
 ### Question 1 — Packet switching `[5]`
 A student sends a large video file to a friend over the internet.
 
-Describe how packet switching is used to send the file.
+(a) Explain why the file is divided into packets. `[1]`
 
-#### Mark scheme
-Any five:
+(b) Describe the structure of one packet. `[2]`
+(c) Describe how packet switching delivers and reconstructs the file. `[2]`
 
-+ Data is split into packets.
-+ Each packet has a header / payload / trailer.
-+ The payload contains the actual data.
-+ The header contains destination address / originator address / packet number.
-+ A router directs each packet.
-+ Each packet may take a different route.
-+ Packets may arrive out of order.
-+ Packets are reordered/reassembled at the destination.
-+ Lost/corrupted packets can be requested again.
+#### Question 1 mark scheme
+**(a)** Smaller units can be routed/shared/retransmitted independently rather than reserving one complete path. `[1]`
+
+**(b)** Header, payload and trailer identified `[1]`; header example such as destination/originator address or packet number `[1]`.
+
+**(c)** Routers may send packets by different routes `[1]`; packet numbers are used to reorder/reassemble them at the destination `[1]`.
 
 ---
 
 ### Question 2 — Transmission method `[4]`
 A sensor sends temperature readings to a microprocessor in an automated greenhouse. The microprocessor does not need to send data back to the sensor.
 
-Explain why serial simplex transmission is suitable.
+(a) Explain why serial simplex transmission is suitable. `[3]`
 
-#### Mark scheme
-Any four:
+(b) State one benefit of using a USB interface when transferring stored readings to a computer. `[1]`
 
-+ Serial sends data one bit at a time.
-+ Serial uses a single wire/channel.
-+ Serial is sufficient because small amounts of data are being sent.
-+ Serial has less chance of skew/crosstalk.
-+ Simplex is suitable because data only needs to be sent in one direction.
-+ The sensor only sends readings to the microprocessor.
+#### Question 2 mark scheme
+**(a)** Any three: serial sends one bit at a time; uses one data channel; is sufficient for small readings; has less skew/crosstalk; simplex is appropriate because readings travel only from sensor to microprocessor. `[3]`
+
+**(b)** One valid benefit, such as automatic device recognition, a common standard connector, high transfer rate, or support for plug-and-play. `[1]`
 
 ---
 
 ### Question 3 — Checksum `[5]`
 Describe how checksum is used to detect errors after data transmission.
 
-#### Mark scheme
+#### Question 3 mark scheme
 + Checksum is calculated from the data.
 + An algorithm is used.
 + Checksum value is transmitted with the data.
@@ -733,7 +727,7 @@ A data transmission uses even parity.
 
 Describe how parity check works.
 
-#### Mark scheme
+#### Question 4 mark scheme
 + A parity bit is added to each byte.
 + It makes the number of 1s even.
 + The receiver counts/checks the number of 1s in each byte.
@@ -744,7 +738,7 @@ Describe how parity check works.
 ### Question 5 — Encryption `[2]`
 Explain why asymmetric encryption is secure.
 
-#### Mark scheme
+#### Question 5 mark scheme
 Any two:
 
 + It uses a public key and a private key.

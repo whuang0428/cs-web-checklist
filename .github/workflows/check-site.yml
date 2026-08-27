@@ -19,3 +19,9 @@ jobs:
 
       - name: Run structural checks
         run: python3 scripts/check_site.py
+
+      - name: Run checker negative controls
+        run: python3 scripts/test_check_site_negative.py
+
+      - name: Check JavaScript syntax
+        run: node --check assets/site.js

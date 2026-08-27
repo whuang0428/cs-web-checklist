@@ -90,8 +90,10 @@ Use these points:
 + It **deallocates memory** when a process is finished.
 + It checks that processes have enough memory available.
 + It makes sure two processes do not try to access the same memory location.
-+ It moves data between **RAM and secondary storage / virtual memory**.
-+ It may create / manage **virtual memory** when RAM is full.
++ It keeps track of which memory locations are free or in use.
++ It protects the memory allocated to one process from access by another process.
+
+Virtual memory itself belongs to Topic 3.3. Revise its purpose and operation in [Chapter 3](chapter-3.md#334-virtual-memory).
 
 #### Core Exam Sentences
 + The OS provides a **platform for running application software**.
@@ -189,19 +191,6 @@ J --> K[Continue original process]
 
 #### One-Minute Version
 > The OS checks the priority of the interrupt. If it has higher priority, the current process is halted and its status is saved. The OS then calls the interrupt service routine to service the interrupt. Once complete, the saved status is restored and the original process continues.
->
-
----
-
-### 4.1.7 Buffer｜Low Priority but Useful
-A **buffer** is a temporary memory area used to store data while it is being transferred.
-
-#### Why Buffers Are Needed
-+ Devices often work at a slower speed than the CPU.
-+ A buffer allows the CPU to continue with other tasks instead of waiting.
-+ Buffers can help smooth playback when streaming.
-
-> **Exam-safe sentence**：A buffer temporarily stores data so that the CPU does not have to wait for a slower input/output device.
 >
 
 ---
@@ -389,7 +378,7 @@ Use this overview to classify software, trace interrupts, translate code and sel
 ---
 
 ### Template B｜Operating system memory management
-> The operating system allocates memory to processes and deallocates memory when processes are finished. It checks that processes have enough memory available and makes sure two processes do not try to access the same memory location. It can also move data between RAM and virtual memory.
+> The operating system allocates memory to processes and deallocates it when processes finish. It keeps track of free and occupied locations, checks that enough memory is available and prevents one process from accessing memory allocated to another.
 >
 
 ---
@@ -462,7 +451,6 @@ Use this overview to classify software, trace interrupts, translate code and sel
 | **Firmware** | software/instructions programmed into hardware, often stored in ROM |
 | **Interrupt** | a signal sent to the processor to request attention |
 | **ISR / interrupt handler** | program/routine that services an interrupt |
-| **Buffer** | temporary memory area used to store data during transfer |
 | **High-level language** | language closer to human language and easier to read/write/debug |
 | **Low-level language** | language closer to machine code and hardware |
 | **Assembly language** | low-level language that uses mnemonics |
@@ -512,9 +500,8 @@ Answer these in exam style.
 5. Give one example of a hardware interrupt. **[1]**
 6. Give one example of a software interrupt. **[1]**
 7. Give the name of the translator used for assembly language. **[1]**
-8. State one advantage of using a high-level language. **[1]**
-9. State one function of an IDE. **[1]**
-10. State what is meant by a buffer. **[1]**
+8. State one advantage of a high-level language and one advantage of a low-level language. **[2]**
+9. State one IDE function and explain how it helps a programmer. **[1]**
 
 ## Quick Check Answers
 1. Operating system / utility software / device driver.
@@ -524,9 +511,8 @@ Answer these in exam style.
 5. Key press / mouse click / printer out of paper / printer out of ink.
 6. Division by zero / two processes trying to access same memory location.
 7. Assembler.
-8. Easier to read/write/debug / portable / machine independent.
-9. Code editor / run-time environment / error diagnostics / auto-completion / auto-correction / prettyprint.
-10. A temporary memory area used to store data during transfer.
+8. High level: easier to read/write/debug or portable; low level: direct hardware/register control, compact code or potentially efficient execution. Award one for each side.
+9. One valid linked pair, for example error diagnostics identify/report an error and help locate it, or a run-time environment executes the program so its behaviour can be tested.
 
 ---
 
@@ -537,7 +523,7 @@ Answer these in exam style.
 A student uses a computer to complete homework.
 Describe the difference between system software and application software. Give one example of each.
 
-#### Mark Scheme
+#### Question 1 Mark Scheme
 Any four from:
 
 + System software provides the services the computer requires.
@@ -552,16 +538,15 @@ Any four from:
 ### Question 2｜Operating System Memory Management **[3]**
 Describe the role of the operating system in managing memory.
 
-#### Mark Scheme
+#### Question 2 Mark Scheme
 Any three from:
 
 + Allocates memory to processes.
 + Deallocates memory when processes are finished.
 + Checks that processes have enough memory available.
 + Makes sure memory is used efficiently.
-+ Moves data between memory and storage / RAM and virtual memory.
 + Makes sure two processes do not access the same memory location.
-+ Creates / manages virtual memory.
++ Keeps track of free and occupied memory locations.
 
 ---
 
@@ -572,7 +557,7 @@ A key is pressed on a keyboard while a computer is running another process.
 (b) Give the name of the program/routine used to service the interrupt. **[1]**
 (c) Describe how the interrupt is handled. **[3]**
 
-#### Mark Scheme
+#### Question 3 Mark Scheme
 (a) Hardware interrupt.
 (b) Interrupt service routine / interrupt handler.
 (c) Any three from:
@@ -591,7 +576,7 @@ A key is pressed on a keyboard while a computer is running another process.
 ### Question 4｜Compiler and Interpreter **[4]**
 Explain why a programmer may use an interpreter during development but a compiler for the final program.
 
-#### Mark Scheme
+#### Question 4 Mark Scheme
 Any four from:
 
 + Interpreter translates and executes code line by line.
@@ -609,7 +594,7 @@ Any four from:
 A programmer uses an IDE to create a program.
 Describe two functions of an IDE and explain how each helps the programmer.
 
-#### Mark Scheme
+#### Question 5 Mark Scheme
 One mark for function + one mark for matching role description, max four:
 
 + Code editor: allows the programmer to write/change code.

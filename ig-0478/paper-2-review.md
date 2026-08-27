@@ -12,7 +12,7 @@
 - Answer all seven questions.
 - Spend about **30 minutes** on Question 7.
 - Use clear pseudocode unless a question asks for another representation.
-- For Question 7, use pseudocode or Python. Do not mix the two syntaxes in one solution.
+- For Question 7, use pseudocode, Python, Visual Basic or Java. Use one language consistently.
 - Attempt the complete paper before opening the mark scheme.
 
 ### Coverage Map
@@ -64,12 +64,14 @@ Count <- 0
 Maximum <- Values[1]
 
 FOR Index <- 1 TO 6
-    IF MOD(Values[Index], 2) = 0 THEN
+    IF MOD(Values[Index], 2) = 0
+    THEN
         Total <- Total + Values[Index]
         Count <- Count + 1
     ENDIF
 
-    IF Values[Index] > Maximum THEN
+    IF Values[Index] > Maximum
+    THEN
         Maximum <- Values[Index]
     ENDIF
 NEXT Index
@@ -154,14 +156,14 @@ Q = (A XOR B) AND (NOT C)
 
 The file `readings.txt` contains one valid real temperature on each line. The number of lines is not known.
 
-1. Write pseudocode to:
+1. State why a file is needed rather than storing the readings only in variables while the program is running. **[1]**
+2. Write pseudocode to:
    - open the file
    - read every temperature
    - calculate the total and count
    - close the file
-   - output the average if at least one value was read. **[6]**
-2. Explain why a `WHILE NOT EOF` loop is suitable. **[1]**
-3. State one way to make this program easier to maintain. **[1]**
+   - if at least one value was read, write the average to `summary.txt` and close that file. **[6]**
+3. Explain why a `WHILE NOT EOF` loop is suitable. **[1]**
 
 ---
 
@@ -183,7 +185,7 @@ Write one complete solution that:
 - displays `"Code not found"` when the code is absent
 - outputs the final number of books borrowed
 
-Use pseudocode or Python. **[15]**
+Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ---
 
@@ -224,7 +226,9 @@ Use pseudocode or Python. **[15]**
 
 ### Question 3 Mark Scheme [12]
 
-1. Example:
+1. A file stores the readings persistently, so they remain available after the program ends / can be processed in a later run. **[1]**
+
+2. Example:
 
    ```text
    FOR Exhibition <- 1 TO 3
@@ -261,7 +265,8 @@ Use pseudocode or Python. **[15]**
 
    FOR Exhibition <- 2 TO 3
        CurrentTotal <- ExhibitionTotal(Exhibition)
-       IF CurrentTotal > HighestTotal THEN
+       IF CurrentTotal > HighestTotal
+       THEN
            HighestTotal <- CurrentTotal
            HighestExhibition <- Exhibition
        ENDIF
@@ -284,7 +289,7 @@ Use pseudocode or Python. **[15]**
    SELECT VisitorName, Cost
    FROM Visits
    WHERE Member = FALSE AND Age < 20
-   ORDER BY Cost DESC;
+   ORDER BY Cost DESCENDING;
    ```
 
    Correct selected fields **[1]**, table **[1]**, both conditions joined by `AND` **[1]**, descending cost order **[1]**. **[4]**
@@ -342,15 +347,17 @@ Use pseudocode or Python. **[15]**
 
    CLOSEFILE "readings.txt"
 
-   IF Count > 0 THEN
+   IF Count > 0
+   THEN
        Average <- Total / Count
-       OUTPUT Average
+       OPENFILE "summary.txt" FOR WRITE
+       WRITEFILE "summary.txt", Average
+       CLOSEFILE "summary.txt"
    ENDIF
    ```
 
-   Initialise total and count **[1]**; open correct file for reading **[1]**; loop to end of file **[1]**; read each value **[1]**; total and count correctly **[1]**; close file and safely output average **[1]**. **[6]**
-2. The number of records is unknown, and the loop stops when no unread line remains. **[1]**
-3. Any one: meaningful identifiers, useful comments, consistent indentation, a function for average, or a procedure for file processing. **[1]**
+   Initialise total/count and open the input file for reading **[1]**; loop to end of file **[1]**; read each value **[1]**; total and count correctly **[1]**; close the input file and guard against division by zero **[1]**; open `summary.txt` for writing, write the average and close it **[1]**. **[6]**
+3. The number of records is unknown, and the loop stops when no unread line remains. **[1]**
 
 ---
 
@@ -369,20 +376,24 @@ UNTIL LENGTH(MemberCode) > 0
 REPEAT
     INPUT RequestedCode
 
-    IF RequestedCode <> "END" THEN
+    IF RequestedCode <> "END"
+    THEN
         Found <- FALSE
         Index <- 1
 
         WHILE Index <= 20 AND Found = FALSE DO
-            IF BookCode[Index] = RequestedCode THEN
+            IF BookCode[Index] = RequestedCode
+            THEN
                 Found <- TRUE
             ELSE
                 Index <- Index + 1
             ENDIF
         ENDWHILE
 
-        IF Found = TRUE THEN
-            IF Available[Index] = TRUE THEN
+        IF Found = TRUE
+        THEN
+            IF Available[Index] = TRUE
+            THEN
                 Available[Index] <- FALSE
                 Borrowed <- Borrowed + 1
                 OUTPUT "Loan recorded"

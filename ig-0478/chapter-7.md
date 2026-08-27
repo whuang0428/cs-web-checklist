@@ -43,7 +43,7 @@ A reliable program is developed in four broad stages.
 |---|---|---|
 | Analysis | What problem must be solved? What are the inputs, outputs and constraints? | Requirements, input/output list, validation rules |
 | Design | How will the solution work? How can it be divided into smaller parts? | Structure diagram, flowchart, pseudocode, data design |
-| Coding | How is the design translated into a programming language? | Source code with meaningful identifiers and comments |
+| Coding | How is the design translated into a programming language and checked as it is built? | Source code with meaningful identifiers, comments and iterative tests |
 | Testing | Does every part work for valid and invalid cases? | Test plan, expected results, actual results, corrections |
 
 ### Decomposition
@@ -131,7 +131,8 @@ flowchart TD
 INPUT Age
 NextAge <- Age + 1
 
-IF NextAge >= 18 THEN
+IF NextAge >= 18
+THEN
     OUTPUT "Adult"
 ELSE
     OUTPUT "Under 18"
@@ -139,6 +140,27 @@ ENDIF
 ```
 
 Use indentation to make the logic visible. Every selection and loop must have a clear ending.
+
+The same algorithm can be expressed as program code. For example, in Python:
+
+```python
+age = int(input())
+next_age = age + 1
+
+if next_age >= 18:
+    print("Adult")
+else:
+    print("Under 18")
+```
+
+When changing representation, preserve the inputs, calculation, condition and both outputs; language punctuation may change, but behaviour must not.
+
+When explaining a supplied algorithm, separate two ideas:
+
+- **purpose:** state the overall result that the algorithm achieves
+- **processes:** describe the important inputs, calculations, decisions, repetitions, storage changes and outputs that produce that result
+
+Do not answer a purpose question by copying one instruction. Do not answer a process question with only a general purpose.
 
 ---
 
@@ -153,7 +175,8 @@ Found <- FALSE
 Index <- 1
 
 WHILE Index <= 6 AND Found = FALSE DO
-    IF Names[Index] = Target THEN
+    IF Names[Index] = Target
+    THEN
         Found <- TRUE
     ELSE
         Index <- Index + 1
@@ -168,7 +191,8 @@ Compare adjacent elements and swap them when they are in the wrong order. Repeat
 ```text
 FOR Pass <- 1 TO 5
     FOR Index <- 1 TO 6 - Pass
-        IF Scores[Index] > Scores[Index + 1] THEN
+        IF Scores[Index] > Scores[Index + 1]
+        THEN
             Temp <- Scores[Index]
             Scores[Index] <- Scores[Index + 1]
             Scores[Index + 1] <- Temp
@@ -187,7 +211,8 @@ Count <- 0
 
 FOR Index <- 1 TO 8
     Total <- Total + Values[Index]
-    IF Values[Index] >= 50 THEN
+    IF Values[Index] >= 50
+    THEN
         Count <- Count + 1
     ENDIF
 NEXT Index
@@ -204,10 +229,12 @@ Maximum <- Values[1]
 Minimum <- Values[1]
 
 FOR Index <- 2 TO 8
-    IF Values[Index] > Maximum THEN
+    IF Values[Index] > Maximum
+    THEN
         Maximum <- Values[Index]
     ENDIF
-    IF Values[Index] < Minimum THEN
+    IF Values[Index] < Minimum
+    THEN
         Minimum <- Values[Index]
     ENDIF
 NEXT Index
@@ -277,7 +304,8 @@ FOR Index <- 1 TO 4
     OUTPUT "Value ", Index, ":"
     INPUT Numbers[Index]
     Total <- Total + Numbers[Index]
-    IF MOD(Numbers[Index], 2) = 0 THEN
+    IF MOD(Numbers[Index], 2) = 0
+    THEN
         OUTPUT Numbers[Index]
     ENDIF
 NEXT Index
@@ -392,7 +420,8 @@ Total <- 0
 
 WHILE Index <= 4 AND Found = FALSE DO
     Total <- Total + Prices[Index]
-    IF Codes[Index] = "C7" THEN
+    IF Codes[Index] = "C7"
+    THEN
         Found <- TRUE
     ELSE
         Index <- Index + 1
@@ -430,6 +459,50 @@ Values[Index + 1] <- Values[Index]
 ```
 
 The original first value is lost. A temporary variable is necessary.
+
+---
+
+## Targeted Syllabus Drill
+
+These short tasks separate syllabus actions that are easy to merge accidentally.
+
+1. For each development stage, state one required action or product:
+   - analysis
+   - design
+   - coding
+   - testing. **[4]**
+2. A library system is divided into `Loans` and `Members`; `Loans` is further divided into `IssueBook` and `ReturnBook`.
+   - state what this hierarchy demonstrates **[1]**
+   - list one input, one process, one output and one item of storage for `IssueBook` **[4]**
+   - name the representation best suited to showing the hierarchy and one representation best suited to showing the detailed control flow **[2]**.
+3. A supplied algorithm inputs six temperatures, totals them and outputs the average. State its purpose, then describe its main processes. **[2]**
+4. Select or complete the required standard method:
+   - find a target in an unsorted list **[1]**
+   - arrange values by repeated adjacent comparisons **[1]**
+   - write one totalling statement and one conditional counting statement **[2]**
+   - write pseudocode that finds the maximum, minimum and average of `Values[1:Count]`, where `Count > 0` **[4]**.
+5. State why validation is needed, then name the validation check used by each rule: value from 1 to 20; exactly eight characters; integer only; must not be blank; `LL999` pattern; recalculated final digit. **[7]**
+6. State why verification is needed, then state when a visual check is used and when double entry is used. **[3]**
+7. A faulty flowchart inputs `Mark`, sends a valid value back to the input and sends an invalid value to output. Draw the corrected flowchart so it repeatedly inputs until `0 <= Mark <= 100`, then outputs `Mark`. Include labelled decision branches. **[2]**
+8. Amend this Python condition so that it accepts both endpoints of the valid range 0 to 100. **[2]**
+
+   ```python
+   if mark > 0 and mark < 100:
+       print("Accepted")
+   ```
+
+**Total: 28 marks**
+
+### Targeted Syllabus Drill Answers
+
+1. Analysis identifies the problem and requirements, using decomposition and abstraction where needed **[1]**; design decomposes the solution and produces a structure diagram, flowchart or pseudocode **[1]**; coding translates the design into program code and tests it iteratively **[1]**; testing applies planned test data and compares actual with expected results **[1]**. **[4]**
+2. The system has been decomposed into subsystems and then further subsystems **[1]**. Suitable `IssueBook` answers include member/book identifiers as input, checking eligibility and updating loan status as processes, confirmation as output, and the loan record as storage **[4]**. A structure diagram shows the hierarchy **[1]**; a flowchart or pseudocode shows detailed control flow **[1]**. **[7]**
+3. Purpose: calculate and display the average of six temperatures **[1]**. Processes: input six values, accumulate a total, divide by six and output the result **[1]**. **[2]**
+4. Linear search **[1]**; bubble sort **[1]**; for example `Total <- Total + Value` and `IF condition THEN Count <- Count + 1` **[2]**. For the final part, award initialising `Maximum`, `Minimum` and `Total` from real data/zero as appropriate **[1]**, processing every remaining item **[1]**, updating both extrema correctly **[1]**, and calculating `Average <- Total / Count` **[1]**. **[8]**
+5. Validation rejects data that does not satisfy the stated rules before it is processed **[1]**; range; length; type check; presence; format; check digit **[6]**. **[7]**
+6. Verification is needed to detect inaccurate copying or entry **[1]**; a visual check compares entered data with its source **[1]**; double entry inputs the same data twice and compares the two entries **[1]**. **[3]**
+7. Award for an input followed by a decision that loops on the labelled `No` branch **[1]**, and an output reached on the labelled `Yes` branch **[1]**. **[2]**
+8. `if mark >= 0 and mark <= 100:` **[1]**, with the existing output kept in the selection **[1]**. **[2]**
 
 ---
 
@@ -486,7 +559,8 @@ A running club records eight lap times in seconds in the array `LapTime[1:8]`. E
    ```text
    Fastest <- 0
    FOR Index <- 1 TO 8
-       IF LapTime[Index] > Fastest THEN
+       IF LapTime[Index] > Fastest
+       THEN
            Fastest <- LapTime[Index]
        ENDIF
    NEXT Index
@@ -519,7 +593,8 @@ A running club records eight lap times in seconds in the array `LapTime[1:8]`. E
        UNTIL LapTime[Index] >= 30 AND LapTime[Index] <= 180
 
        Total <- Total + LapTime[Index]
-       IF LapTime[Index] < 60 THEN
+       IF LapTime[Index] < 60
+       THEN
            Under60 <- Under60 + 1
        ENDIF
    NEXT Index

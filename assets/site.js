@@ -30,10 +30,33 @@
     }
   }
 
+  function prepareSkipLink() {
+    if (document.documentElement.dataset.skipLinkReady) return;
+    document.documentElement.dataset.skipLinkReady = 'true';
+
+    var focusMain = function (event) {
+      var link = event.target.closest && event.target.closest('.skip-link');
+      if (!link) return;
+      var main = document.getElementById('main-content');
+      if (!main) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      main.scrollIntoView({ block: 'start' });
+      window.setTimeout(function () { main.focus(); }, 0);
+    };
+
+    document.addEventListener('click', focusMain, true);
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') focusMain(event);
+    }, true);
+  }
+
   function isAnswerHeading(heading) {
     var text = heading.textContent.trim().toLowerCase();
     return text.indexOf('quick check answers') !== -1 ||
       text.indexOf('practice mark scheme') !== -1 ||
+      text.endsWith(' drill answers') ||
+      text === 'file-operation check answers' ||
       text === 'mark scheme' || text.endsWith(' mark scheme') ||
       text.indexOf('model answers') !== -1;
   }
@@ -50,6 +73,11 @@
       details.className = 'answer-disclosure';
       var summary = document.createElement('summary');
       summary.textContent = heading.textContent.trim();
+      summary.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        details.open = !details.open;
+      });
       details.appendChild(summary);
       heading.parentNode.insertBefore(details, heading);
 
@@ -402,6 +430,7 @@
       window.setTimeout(function () {
         var path = vm.route.path || '/';
         prepareMain();
+        prepareSkipLink();
         applyCourseIdentity(path);
         prepareChapterOverviews();
         foldAnswers();

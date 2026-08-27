@@ -747,8 +747,8 @@ The worked calculations, process templates and scenario answers above model the 
 2. State the largest denary value that can be stored in an unsigned 8-bit register. [1]  
 3. Convert `10101110` to hexadecimal. [1]  
 4. Convert `3F` to binary. [1]  
-5. Explain why overflow occurs in 8-bit binary addition. [2]  
-6. State the effect of a logical left shift by two places on a positive binary integer. [1]  
+5. Explain why overflow occurs in 8-bit binary addition. [1]
+6. State the effect on a positive binary integer of a logical left shift by two places and a logical right shift by one place. [2]
 7. State one advantage of Unicode over ASCII. [1]  
 8. State what is meant by colour depth. [1]  
 9. Give one reason why compression is used. [1]
@@ -759,7 +759,7 @@ The worked calculations, process templates and scenario answers above model the 
 3. AE  
 4. 00111111  
 5. The result is too large / greater than 255 / cannot be stored in 8 bits.  
-6. It multiplies the value by 4.  
+6. Left by two multiplies by 4 [1]; right by one performs integer division by 2 [1]. Bits shifted out are lost and zeros enter at the other end.
 7. It can represent more characters / languages / symbols / emojis.  
 8. Number of bits used to represent the colour of one pixel.  
 9. Reduces file size / reduces storage / faster transmission / less bandwidth.
@@ -773,21 +773,28 @@ The worked calculations, process templates and scenario answers above model the 
 (a) Convert the denary number 182 to 8-bit binary. [1]  
 (b) Convert `10110110` to hexadecimal. [1]  
 (c) Convert `9C` to binary. [1]  
-(d) Add the two binary numbers. Show working. [3]
+(d) Add the two binary numbers. Show working. [2]
 
 ```latex
   11010101
 + 00101111
 ```
 
-(e) State whether overflow has occurred. Give a reason. [2]
+(e) State why overflow has occurred. [1]
 
-#### Mark scheme
+(f) Explain one benefit of using hexadecimal rather than binary. [1]
+(g) Write denary `-18` as an 8-bit two's-complement integer. [1]
+
+#### Question 1 mark scheme
 (a) `10110110` [1]  
 (b) `B6` [1]  
 (c) `10011100` [1]  
-(d) Correct answer `1 00000100` / lower 8 bits `00000100`; method/carries shown [3]  
-(e) Overflow occurred [1] because the result needs more than 8 bits / is greater than 255 [1]
+(d) Correct answer `1 00000100` / lower 8 bits `00000100` [1]; working/carries shown [1]
+
+(e) The result needs more than 8 bits / is greater than 255 and cannot fit in the register [1]
+
+(f) It is shorter/easier for a human to read, while each hexadecimal digit maps exactly to four binary bits [1]
+(g) `11101110` [1]
 
 ---
 
@@ -798,7 +805,7 @@ An image has a resolution of 1024 × 768 pixels and a colour depth of 16 bits.
 (b) Explain the effect of increasing the colour depth. [2]  
 (c) Name one lossless compression method. [1]
 
-#### Mark scheme
+#### Question 2 mark scheme
 (a)
 
 ```latex
@@ -819,7 +826,7 @@ An image has a resolution of 1024 × 768 pixels and a colour depth of 16 bits.
 (b) Explain why increasing the sample rate improves the accuracy of the recording. [2]  
 (c) Give one difference between ASCII and Unicode. [1]
 
-#### Mark scheme
+#### Question 3 mark scheme
 (a)
 
 ```latex

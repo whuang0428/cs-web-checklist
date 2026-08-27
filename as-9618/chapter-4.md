@@ -1362,7 +1362,7 @@ The worked calculations, process templates and scenario answers above model the 
 5. What does the system clock do? [1]  
 6. In `LDM #12`, identify the addressing mode. [1]  
 7. In `LDX 20`, if IX = 3, what effective address is used? [1]  
-8. State one use of the status register. [1]  
+8. If the PC contains `120` and a relative branch has operand `-8`, state the target address. [1]
 9. What bitwise operation is commonly used to test a bit using a mask? [1]  
 10. ACC contains `10110110`. State the result after `LSR #2`. [1]
 
@@ -1375,7 +1375,7 @@ The worked calculations, process templates and scenario answers above model the 
 5. Generates timing signals / synchronises CPU operations.  
 6. Immediate addressing.  
 7. 23.  
-8. Stores status flags such as zero/carry/overflow/negative as individual bits.  
+8. `112`.
 9. AND.  
 10. `00101101`.
 
@@ -1385,15 +1385,14 @@ The worked calculations, process templates and scenario answers above model the 
 
 **Total: 20 marks**
 
-### Question 1: Registers, FDE cycle and ports [7]
+### Question 1: Registers, FDE cycle and ports [6]
 
-(a) State the role of each register. [3]
+(a) State the role of each register. [2]
 
 | Register | Role |
 | --- | --- |
 | PC | |
 | MDR | |
-| CIR | |
 
 (b) Describe the fetch stage of the fetch-decode-execute cycle. [3]
 
@@ -1405,7 +1404,6 @@ The worked calculations, process templates and scenario answers above model the 
 
 + PC stores address of next instruction [1]
 + MDR stores data/instruction being transferred to/from memory [1]
-+ CIR stores current instruction being decoded/executed [1]
 
 (b)
 
@@ -1417,7 +1415,20 @@ The worked calculations, process templates and scenario answers above model the 
 
 ---
 
-### Question 2: Assembly trace [6]
+### Question 2: Two-pass assembly and trace [7]
+
+(a) A two-pass assembler receives this source program. Apply the two passes. [3]
+
+```text
+00  JMP START
+01  VALUE: 5
+02  START: LDD VALUE
+03  END
+```
+
+State the two symbol-table entries created in pass one, the numeric operands substituted in pass two, and what pass two produces. [3]
+
+(b) Complete the final ACC for each program. [4]
 
 Memory:
 
@@ -1450,8 +1461,6 @@ Instruction set:
 | `ADD address` | add contents of address to ACC |
 | `SUB #n` | subtract value n from ACC |
 
-Complete the final ACC for each program.
-
 | Program | Code | ACC |
 | --- | --- | --- |
 | 1 | `LDM #20`<br>`ADD #5` | |
@@ -1459,7 +1468,11 @@ Complete the final ACC for each program.
 | 3 | `LDI 23`<br>`ADD #1` | |
 | 4 | `LDR #2`<br>`LDX 20`<br>`ADD 25` | |
 
-#### Mark scheme
+#### Question 2 mark scheme
+
+**(a)** Pass one records `VALUE = 01` and `START = 02` in the symbol table **[1]**; pass two replaces `START` in `JMP START` with `02` and `VALUE` in `LDD VALUE` with `01` **[1]**; pass two translates the resolved instructions/data into machine/object code **[1]**. **[3]**
+
+**(b)**
 
 Program 1:
 
@@ -1487,7 +1500,7 @@ ACC = 7
 ADD #1 → ACC = 8
 ```
 
-ACC = 8 [2]
+ACC = 8 [1]
 
 Program 4:
 
@@ -1497,7 +1510,7 @@ LDX 20 → Memory[20 + 2] = Memory[22] = 12
 ADD 25 → ACC = 12 + Memory[25] = 15
 ```
 
-ACC = 15 [2]
+ACC = 15 [1]
 
 ---
 

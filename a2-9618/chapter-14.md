@@ -599,7 +599,7 @@ The worked calculations, process templates and scenario answers above model the 
 (c) Describe the purpose of the Transport Layer. [2]  
 (d) Name the protocol used to send email. [1]
 
-#### Mark scheme
+#### Question 1 mark scheme
 (a) Protocols establish a standard set of rules [1] so devices on different platforms / from different manufacturers can communicate successfully [1].  
 (b) Application → Transport → Internet → Link. [2] Award [1] for two or three layers in correct order.  
 (c) Provides end-to-end delivery / logical communication between hosts [1]; breaks data into segments / adds sequence numbers / reassembles data / retransmits lost packets [1].  
@@ -614,7 +614,7 @@ A student sends a large file across the internet.
 (b) State two benefits of using packet switching. [2]  
 (c) State one drawback of packet switching. [1]
 
-#### Mark scheme
+#### Question 2 mark scheme
 (a) File/data is split into packets [1]. Each packet has a header containing information such as source/destination IP address or sequence number [1]. Packets are sent independently and may take different routes [1]. Packets are reassembled in the correct order at the destination / missing or damaged packets are resent [1].  
 (b) Any two: bandwidth can be shared; packets can be rerouted if a link fails; efficient for high-volume internet data; missing/damaged packets can be resent. [2]  
 (c) Packets may arrive out of order / variable delay / headers add overhead / packets may be lost or delayed. [1]
@@ -626,7 +626,7 @@ A student sends a large file across the internet.
 (b) Give one benefit and one drawback of circuit switching. [2]  
 (c) Describe the function of a router in packet switching. [1]
 
-#### Mark scheme
+#### Question 3 mark scheme
 (a) A dedicated path/channel is established before data transmission begins [1]. The same path is used for the whole communication [1]. The path is released when communication ends [1].  
 (b) Benefit: steady data rate / whole bandwidth available / data follows same path / suitable for continuous real-time communication. [1] Drawback: setup delay / bandwidth cannot be shared / inefficient if not fully used / no alternative route if line fails. [1]  
 (c) Router reads destination IP address and forwards packet to next hop / best available route using routing table. [1]

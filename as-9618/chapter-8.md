@@ -672,7 +672,7 @@ A good answer:
 ```sql
 CREATE TABLE REPAIR_PART (
     PartID VARCHAR(10) NOT NULL,
-    RepairNumber VARCHAR(4) NOT NULL,
+    RepairNumber VARCHAR(6) NOT NULL,
     Quantity INTEGER,
     PRIMARY KEY (PartID, RepairNumber),
     FOREIGN KEY (PartID) REFERENCES PART(PartID),
@@ -987,7 +987,7 @@ Write SQL to create `REPAIR_PART(PartID, RepairNumber, Quantity)`.
 ```sql
 CREATE TABLE REPAIR_PART (
     PartID VARCHAR(10) NOT NULL,
-    RepairNumber VARCHAR(4) NOT NULL,
+    RepairNumber VARCHAR(6) NOT NULL,
     Quantity INTEGER,
     PRIMARY KEY (PartID, RepairNumber),
     FOREIGN KEY (PartID) REFERENCES PART(PartID),
@@ -1105,7 +1105,7 @@ BOOKING(MemberID, ClassID, BookingDate, Paid)
 
 #### (b) Identify the foreign keys in `BOOKING` and state which table each one references. `[2]`
 
-#### (c) Explain why `BOOKING` is needed in this database design. `[3]`
+#### (c) Draw an entity-relationship diagram for `MEMBER`, `CLASS` and `BOOKING`, showing the two one-to-many relationships, and explain why the linking entity is needed. `[3]`
 
 #### (d) Write an SQL script to create the table `BOOKING`. Include suitable data types and constraints. `[5]`
 
@@ -1113,7 +1113,7 @@ BOOKING(MemberID, ClassID, BookingDate, Paid)
 
 #### (f) Explain two benefits of using a relational database instead of a file-based approach. `[4]`
 
-#### (g) Describe the purpose of a data dictionary in a DBMS. `[2]`
+#### (g) State the purpose of a data dictionary and describe how a query or report tool helps a user obtain information. `[2]`
 
 ---
 
@@ -1140,17 +1140,11 @@ One mark for each correct foreign key + referenced table.
 
 #### (c) `[3]`
 
-Award up to 3 marks:
+Award one mark for each:
 
-+ `MEMBER` and `CLASS` have a many-to-many relationship.
-+ One member can book many classes.
-+ One class can be booked by many members.
-+ `BOOKING` acts as a linking table.
-+ It stores data about each booking, such as `BookingDate` and `Paid`.
-
-Example answer:
-
-> `BOOKING` is needed because a member can book many classes and each class can be booked by many members. This is a many-to-many relationship, so a linking table is used. The linking table also stores data about the relationship, such as the booking date and whether it has been paid.
++ `MEMBER` shown in a one-to-many relationship with `BOOKING`
++ `CLASS` shown in a one-to-many relationship with `BOOKING`
++ explanation that `BOOKING` resolves the original many-to-many relationship and can store relationship data such as `BookingDate` and `Paid`
 
 ---
 
@@ -1224,14 +1218,8 @@ Example answer:
 
 #### (g) `[2]`
 
-Award up to 2 marks:
-
-+ stores metadata / data about data
-+ examples: table names, field names, data types, keys, relationships, validation rules
-
-Example answer:
-
-> A data dictionary stores metadata about the database, such as table names, field names, data types, primary keys, foreign keys and validation rules.
++ A data dictionary stores metadata such as table/field names, data types, keys, relationships and validation rules. `[1]`
++ A query tool lets the user select/filter/join stored data, or a report tool formats selected query results for readable output. `[1]`
 
 ---
 

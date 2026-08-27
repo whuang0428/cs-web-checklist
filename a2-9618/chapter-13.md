@@ -767,7 +767,7 @@ A travel company stores booking data. Each booking has:
 (b) Define a record type `Booking` for the booking data. [4]  
 (c) Explain why `Vehicle` is suitable as an enumerated type. [2]
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 (a)
 ```text
@@ -800,7 +800,7 @@ A stock file stores 100 000 records. Each stock item has a unique stock code. Th
 (b) Explain how a hashing algorithm can be used to access a stock record. [3]  
 (c) Describe one way to deal with a collision. [2]
 
-#### Mark scheme
+#### Question 2 mark scheme
 
 (a) Random file organisation / direct access file [1]
 
@@ -823,7 +823,7 @@ A number is stored using:
 (a) Convert `+26.5` into normalised floating-point representation. Show working. [4]  
 (b) Explain the effect of using fewer mantissa bits. [2]
 
-#### Mark scheme
+#### Question 3 mark scheme
 
 (a)
 ```text

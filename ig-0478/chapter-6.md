@@ -545,7 +545,11 @@ The worked calculations, process templates and scenario answers above model the 
 
 ### Question 1 — Automated Warehouse [6]
 
-A warehouse uses a light sensor and motorised lamps to maintain a minimum light level. Describe the complete feedback process. **[6]**
+A warehouse uses a light sensor and motorised lamps to maintain a minimum light level.
+
+(a) Describe the complete feedback process. **[4]**
+
+(b) Explain one benefit and one limitation of using this automated system rather than relying on a worker to control every lamp. **[2]**
 
 ### Question 2 — Agricultural Robot [6]
 
@@ -553,13 +557,19 @@ Evaluate the use of a robot to inspect crops and remove weeds. Give two benefits
 
 ### Question 3 — Machine-Learning Prediction [8]
 
-A water company wants a machine-learning system to predict pipe failures. Explain how data would be used to train and improve the system, and identify one risk that must be controlled. **[8]**
+A water company wants an artificial-intelligence system to predict pipe failures.
+
+(a) Define artificial intelligence. **[1]**
+
+(b) Explain how data would be used to train and improve the machine-learning system, and identify one risk that must be controlled. **[7]**
 
 ## Practice Mark Scheme
 
 ### Question 1 Mark Scheme [6]
 
-Sensor repeatedly measures light level **[1]**; analogue reading is converted to digital if required **[1]**; data is sent to the microprocessor **[1]**; reading is compared with the stored minimum **[1]**; if below the minimum, a signal switches/brightens the lamps **[1]**; new readings provide feedback and lamps are reduced/switched off when the target is reached **[1]**. **[6]**
+**(a)** Any four: sensor repeatedly measures light level; analogue reading is converted to digital if required; data is sent to the microprocessor; reading is compared with the stored minimum; if below the minimum, a signal switches/brightens the lamps; new readings provide feedback and lamps are reduced/switched off when the target is reached. **[4]**
+
+**(b)** One contextual benefit, such as consistent continuous control or reduced routine labour **[1]**; one contextual limitation, such as sensor failure, setup cost or the need for maintenance/manual override **[1]**. **[2]**
 
 ### Question 2 Mark Scheme [6]
 
@@ -567,7 +577,9 @@ Benefits: any two contextual points, such as continuous operation, consistent de
 
 ### Question 3 Mark Scheme [8]
 
-Collect historical labelled examples containing pipe condition, sensor readings and whether/when failure occurred **[2]**; clean and divide representative data into training and test/validation sets **[1]**; train the model to find patterns linking inputs to failures **[1]**; compare predictions with known outcomes and calculate error **[1]**; adjust the model and repeat with further outcomes/feedback **[1]**; test on unseen data before operational use **[1]**; control a relevant risk such as biased/incomplete data, false alarms, missed failures or insecure sensor data **[1]**. **[8]**
+**(a)** AI is the use of a computer system to perform tasks that normally require human intelligence, such as learning, reasoning or decision-making. **[1]**
+
+**(b)** Collect relevant labelled examples containing pipe condition, sensor readings and whether/when failure occurred **[1]**; clean and divide representative data into training and test/validation sets **[1]**; train the model to find patterns linking inputs to failures **[1]**; compare predictions with known outcomes and calculate error **[1]**; adjust the model and repeat with further outcomes/feedback **[1]**; test on unseen data before operational use **[1]**; control a relevant risk such as biased/incomplete data, false alarms, missed failures or insecure sensor data **[1]**. **[7]**
 
 ## Final Revision Checklist
 

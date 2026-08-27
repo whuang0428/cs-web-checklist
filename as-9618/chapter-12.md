@@ -24,8 +24,9 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 | Choose between waterfall, iterative and RAD | Development Life Cycles |
 | Explain principles, benefits and drawbacks of each life cycle | Development Life Cycles and Worked Example 1 |
 | Understand analysis, design, coding, testing and maintenance | Life-Cycle Stages |
-| Describe and construct structure charts with parameters | Structure Charts |
-| Derive pseudocode from a structure chart | Structure Charts and Worked Example 2 |
+| Explain the purpose of a structure chart | Structure Charts; Quick Check |
+| Construct structure charts that decompose a problem and show parameters | Structure Charts and Worked Example 2 |
+| Derive equivalent pseudocode from a structure chart | Structure Charts and Worked Example 2 |
 | Explain and use state-transition diagrams | State-Transition Diagrams |
 | Identify syntax, logic and run-time errors | Program Faults |
 | Correct identified errors | Program Faults and Worked Example 3 |
@@ -205,6 +206,14 @@ When constructing one:
 | Logic | executes but produces an incorrect result | uses `>` instead of `<` |
 | Run-time | fails during execution | division by zero or invalid array index |
 
+Exposing faults means making an existing defect observable. Useful methods include:
+
+- compiling or interpreting to report syntax errors
+- dry-running with normal and boundary data to expose wrong state changes
+- walkthroughs that inspect each step and assumption
+- white-box tests that execute branches and loop paths
+- black-box tests that compare actual results with the specification
+
 Correction process:
 
 1. reproduce the fault with a small input
@@ -259,9 +268,13 @@ A test strategy is the high-level approach:
 - entry/exit criteria
 - how faults and retests will be recorded
 
+It is needed so the team agrees the scope, responsibilities and completion criteria before isolated test cases are written.
+
 ### Test plan
 
 A test plan contains specific cases.
+
+It is needed so each input has a reproducible expected result and the actual result can be recorded consistently.
 
 | Test ID | Purpose | Data | Type | Expected result | Actual result | Pass/fail |
 |---|---|---|---|---|---|---|
@@ -284,6 +297,8 @@ An expected result must be specific enough to decide pass/fail.
 ---
 
 ## Maintenance
+
+A program that currently works still needs maintenance because faults may be discovered, user requirements may change, and hardware, operating systems or data formats may change.
 
 | Type | Purpose | Example |
 |---|---|---|
@@ -438,6 +453,51 @@ A white-box review confirms the loop totals five elements. Black-box tests confi
 
 ---
 
+## Targeted Testing and Maintenance Drill
+
+1. State one method that can expose a fault and one development practice that can avoid a fault. **[2]**
+2. Select the testing method for each purpose:
+   - (a) manually trace an algorithm using a trace table
+   - (b) inspect code step by step with another developer
+   - (c) exercise each internal branch
+   - (d) compare input/output behaviour with requirements without reading the code
+   - (e) test interfaces between combined modules
+   - (f) test under developer control before wider release
+   - (g) let selected external users test a near-final version
+   - (h) let the customer check the agreed requirements
+   - (i) temporarily replace an unfinished module. **[9]**
+
+   (j) Then, for `IF Age >= 18 THEN OUTPUT "Adult" ELSE OUTPUT "Minor"`, give two white-box test values that exercise different branches and state each expected output. **[2]**
+3. State one item found in a test strategy and one item found in a specific test-plan row. **[2]**
+4. State why a working program still needs continuing maintenance, then distinguish corrective maintenance from perfective maintenance. **[2]**
+5. Existing code gives every order a 10% discount only when `Total >= 100`. A new requirement gives members a 5% discount when the total is below 100. State the existing behaviour and write the amended selection. **[2]**
+
+**Total: 19 marks**
+
+### Targeted Testing and Maintenance Drill Answers
+
+1. Any exposure method such as a dry run, walkthrough or suitable test **[1]**; any avoidance practice such as stepwise refinement, meaningful identifiers, modular design, validation or early interface testing **[1]**. **[2]**
+2. Dry run; walkthrough; white-box; black-box; integration; alpha; beta; acceptance; stub **[9]**. For example, `18` → `"Adult"` **[1]** and `17` → `"Minor"` **[1]**. The data must execute both branches and include expected results. **[11]**
+3. A strategy item such as testing levels/methods, responsibilities, environment or exit criteria **[1]**; a plan-row item such as test data, test type, expected result, actual result or pass/fail **[1]**. **[2]**
+4. Maintenance is needed because faults, requirements or the operating environment continue to change **[1]**; corrective fixes a fault, whereas perfective improves functionality, usability or performance **[1]**. **[2]**
+5. Existing behaviour: totals of at least 100 receive 10%; lower totals receive no discount **[1]**. One valid amendment is **[1]**:
+
+   ```text
+   IF Total >= 100 THEN
+       Discount <- Total * 0.10
+   ELSE
+       IF IsMember = TRUE THEN
+           Discount <- Total * 0.05
+       ELSE
+           Discount <- 0
+       ENDIF
+   ENDIF
+   ```
+
+   **[2]**
+
+---
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -488,7 +548,9 @@ The worked calculations, process templates and scenario answers above model the 
 A sports centre is developing an appointment app. Users are available weekly to review prototypes, the interface is modular and the first usable version is needed quickly.
 
 1. Select a suitable development life cycle and justify it with three scenario details. **[4]**
-2. Describe a structure chart containing a controlling module and three submodules. Name one parameter/result passed for each submodule. **[4]**
+2. A booking solution must input booking data, validate it and save a valid booking.
+   - construct a structure chart with one controlling module and three submodules; label the data/result passed for each call **[3]**
+   - write the equivalent controlling pseudocode, including the validity decision **[1]**
 3. Select a suitable testing method for each purpose:
    - exercise every branch of the validation module
    - test data passed between booking and payment modules
@@ -503,7 +565,17 @@ A sports centre is developing an appointment app. Users are available weekly to 
 ### 20 Marks Practice Mark Scheme
 
 1. RAD or iterative **[1]**; justification linked to any three of weekly users/feedback, modular interface, rapid prototype/short deadline **[3]**. RAD is the strongest answer when all details are used. **[4]**
-2. Controlling module such as `ProcessBooking` **[1]**; three suitable submodules **[1]**; suitable parameter/result for at least two modules **[1]**; clear hierarchy/data flow **[1]**. Example: `GetBooking -> BookingData`, `ValidateBooking(BookingData) -> IsValid`, `SaveBooking(BookingData)`. **[4]**
+2. Structure chart: controlling module such as `ProcessBooking` with direct calls to `GetBooking`, `ValidateBooking` and `SaveBooking` **[1]**; `BookingData` returned/passed to the relevant modules **[1]**; `IsValid` returned by validation and the save call shown as conditional **[1]**. Equivalent pseudocode **[1]**, for example:
+
+   ```text
+   BookingData <- GetBooking()
+   IsValid <- ValidateBooking(BookingData)
+   IF IsValid = TRUE THEN
+       CALL SaveBooking(BookingData)
+   ENDIF
+   ```
+
+   **[4]**
 3. White-box; integration; beta; acceptance. **[4]**
 4. Normal such as 3, accepted **[1]**; lower extreme 1, accepted **[1]**; upper extreme 6, accepted **[1]**; abnormal boundary 0 or 7, rejected **[1]**. **[4]**
 5. Corrective; adaptive; perfective. **[3]**

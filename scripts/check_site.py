@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import xml.etree.ElementTree as ET
 from difflib import SequenceMatcher
 from pathlib import Path
 from urllib.parse import unquote
@@ -55,18 +56,20 @@ COURSE_SIDEBARS = {ROOT / course / "_sidebar.md" for course in COURSE_RANGES}
 SHARED_PAGES = {ROOT / "exam-technique.md", ROOT / "syllabus-versions.md"}
 CONTENT_PAGES = EXPECTED_CHAPTERS | REVIEW_PAGES | HUB_PAGES | SHARED_PAGES
 
-# One ID for every top-level "Candidates should be able to" action in the
-# syllabus versions recorded in coverage.md. Notes and guidance remain part of
-# the corresponding requirement rather than becoming independent objectives.
+# One base ID for every top-level "Candidates should be able to" action in the
+# locked syllabus versions. High-risk compound actions are replaced below by
+# child IDs so independently assessable operations cannot share one opaque row.
+# This remains a structural inventory: semantic sufficiency is still reviewed
+# against the official PDFs.
 SYLLABUS_OBJECTIVE_COUNTS = {
     "IG": {
-        "1.1": 6, "1.2": 3, "1.3": 4, "2.1": 3, "2.2": 4, "2.3": 2,
+        "1.1": 10, "1.2": 3, "1.3": 4, "2.1": 6, "2.2": 4, "2.3": 2,
         "3.1": 5, "3.2": 3, "3.3": 6, "3.4": 4, "4.1": 4, "4.2": 5,
         "5.1": 6, "5.2": 2, "5.3": 2, "6.1": 2, "6.2": 3, "6.3": 3,
-        "7": 9, "8.1": 8, "8.2": 3, "8.3": 2, "9": 4, "10": 3,
+        "7": 9, "8.1": 15, "8.2": 3, "8.3": 2, "9": 4, "10": 3,
     },
     "AS": {
-        "1.1": 6, "1.2": 7, "1.3": 3, "2.1": 15, "3.1": 8, "3.2": 6,
+        "1.1": 7, "1.2": 7, "1.3": 3, "2.1": 15, "3.1": 8, "3.2": 6,
         "4.1": 8, "4.2": 5, "4.3": 2, "5.1": 4, "5.2": 4, "6.1": 6,
         "6.2": 3, "7.1": 5, "8.1": 7, "8.2": 2, "8.3": 5, "9.1": 2,
         "9.2": 9, "10.1": 2, "10.2": 4, "10.3": 2, "10.4": 4,
@@ -76,15 +79,193 @@ SYLLABUS_OBJECTIVE_COUNTS = {
     "A2": {
         "13.1": 4, "13.2": 3, "13.3": 5, "14.1": 4, "14.2": 4,
         "15.1": 5, "15.2": 4, "16.1": 4, "16.2": 4, "17.1": 3,
-        "18.1": 4, "19.1": 5, "19.2": 2, "20.1": 2, "20.2": 2,
+        "18.1": 4, "19.1": 5, "19.2": 2, "20.1": 5, "20.2": 2,
     },
 }
-EXPECTED_SYLLABUS_OBJECTIVE_IDS = frozenset(
+BASE_SYLLABUS_OBJECTIVE_IDS = frozenset(
     f"{course}-{section}-{number:02d}"
     for course, sections in SYLLABUS_OBJECTIVE_COUNTS.items()
     for section, count in sections.items()
     for number in range(1, count + 1)
 )
+REPLACED_COMPOUND_OBJECTIVE_IDS = frozenset({
+    "IG-3.2-03",
+    "IG-7-01", "IG-7-02", "IG-7-03", "IG-7-04", "IG-7-05", "IG-7-09",
+    "IG-8.3-02",
+    "IG-10-03",
+    "AS-2.1-03", "AS-2.1-05",
+    "AS-9.1-01",
+    "AS-9.2-05", "AS-9.2-06", "AS-9.2-07",
+    "AS-10.4-02", "AS-10.4-03", "AS-10.4-04",
+    "AS-11.1-01", "AS-11.1-02", "AS-11.2-01",
+    "AS-11.3-01", "AS-11.3-03", "AS-11.3-04",
+    "AS-12.2-01",
+    "AS-12.3-01", "AS-12.3-04", "AS-12.3-05", "AS-12.3-07", "AS-12.3-08",
+    "A2-19.1-01", "A2-19.1-02", "A2-19.1-03", "A2-19.1-04",
+    "A2-19.2-01",
+    "A2-20.1-02", "A2-20.1-03", "A2-20.1-04", "A2-20.1-05",
+    "A2-20.2-01", "A2-20.2-02",
+})
+ATOMIC_CHILD_OBJECTIVE_IDS = frozenset({
+    "IG-3.2-03a", "IG-3.2-03b",
+    "IG-7-01a", "IG-7-01b", "IG-7-01c", "IG-7-01d",
+    "IG-7-02a", "IG-7-02b", "IG-7-02c",
+    "IG-7-03a", "IG-7-03b",
+    "IG-7-04a", "IG-7-04b", "IG-7-04c", "IG-7-04d",
+    "IG-7-05a", "IG-7-05b",
+    "IG-7-09a", "IG-7-09b", "IG-7-09c",
+    "IG-8.3-02a", "IG-8.3-02b", "IG-8.3-02c",
+    "IG-10-03a", "IG-10-03b", "IG-10-03c",
+    "IG-10-03d", "IG-10-03e", "IG-10-03f",
+    "IG-10-03g", "IG-10-03h", "IG-10-03i",
+    "AS-2.1-03a", "AS-2.1-03b", "AS-2.1-05a", "AS-2.1-05b",
+    "AS-9.1-01a", "AS-9.1-01b", "AS-9.1-01c",
+    "AS-9.2-05a", "AS-9.2-05b", "AS-9.2-05c",
+    "AS-9.2-06a", "AS-9.2-06b", "AS-9.2-07a", "AS-9.2-07b",
+    "AS-10.4-02a", "AS-10.4-02b",
+    "AS-10.4-03a", "AS-10.4-03b", "AS-10.4-03c",
+    "AS-10.4-04a", "AS-10.4-04b", "AS-10.4-04c",
+    "AS-11.1-01a", "AS-11.1-01b",
+    "AS-11.1-02a", "AS-11.1-02b", "AS-11.1-02c",
+    "AS-11.1-02d", "AS-11.1-02e",
+    "AS-11.2-01a", "AS-11.2-01b", "AS-11.2-01c",
+    "AS-11.2-01d", "AS-11.2-01e",
+    "AS-11.3-01a", "AS-11.3-01b",
+    "AS-11.3-03a", "AS-11.3-03b",
+    "AS-11.3-04a", "AS-11.3-04b",
+    "AS-12.2-01a", "AS-12.2-01b", "AS-12.2-01c",
+    "AS-12.3-01a", "AS-12.3-01b",
+    "AS-12.3-04a", "AS-12.3-04b",
+    "AS-12.3-05a", "AS-12.3-05b",
+    "AS-12.3-07a", "AS-12.3-07b",
+    "AS-12.3-08a", "AS-12.3-08b",
+    "A2-19.1-01a", "A2-19.1-01b",
+    "A2-19.1-02a", "A2-19.1-02b",
+    "A2-19.1-03a", "A2-19.1-03b", "A2-19.1-03c", "A2-19.1-03d",
+    "A2-19.1-03e", "A2-19.1-03f", "A2-19.1-03g", "A2-19.1-03h",
+    "A2-19.1-03i", "A2-19.1-03j",
+    "A2-19.1-04a", "A2-19.1-04b", "A2-19.1-04c", "A2-19.1-04d",
+    "A2-19.1-04e",
+    "A2-19.2-01a", "A2-19.2-01b", "A2-19.2-01c",
+    "A2-20.1-02a", "A2-20.1-02b",
+    "A2-20.1-03a", "A2-20.1-03b",
+    "A2-20.1-04a", "A2-20.1-04b", "A2-20.1-04c",
+    "A2-20.1-05a", "A2-20.1-05b",
+    "A2-20.2-01a", "A2-20.2-01b", "A2-20.2-01c",
+    "A2-20.2-02a", "A2-20.2-02b",
+})
+EXPECTED_SYLLABUS_OBJECTIVE_IDS = (
+    BASE_SYLLABUS_OBJECTIVE_IDS - REPLACED_COMPOUND_OBJECTIVE_IDS
+) | ATOMIC_CHILD_OBJECTIVE_IDS
+
+# High-risk Notes-and-guidance lists that must remain explicit in the register.
+# This protects the independently reviewed scope wording from later being
+# collapsed back to phrases such as "required devices" or "specified set".
+OBJECTIVE_REQUIREMENT_TERMS = {
+    "IG-2.1-02": ("header", "payload", "trailer", "destination", "packet number", "originator"),
+    "IG-3.2-01": ("barcode", "qr", "digital camera", "keyboard", "microphone", "optical mouse", "resistive", "capacitive", "infra-red", "2d", "3d"),
+    "IG-3.2-02": ("actuator", "dlp", "lcd", "inkjet", "laser", "3d", "led", "speaker"),
+    "IG-3.2-03a": ("acoustic", "accelerometer", "flow", "gas", "humidity", "infra-red", "level", "light", "magnetic-field", "moisture", "ph", "pressure", "proximity", "temperature"),
+    "IG-3.3-03": ("hdd", "platters", "tracks", "sectors", "cd", "dvd", "blu-ray", "pits", "lands", "nand", "nor", "ssd", "sd card", "usb drive"),
+    "IG-4.1-02": ("file", "interrupt", "interface", "peripheral", "driver", "memory", "multitasking", "application-platform", "security", "user-account"),
+    "IG-4.2-05": ("code editor", "run-time", "translator", "diagnostics", "auto-completion", "auto-correction", "prettyprint"),
+    "IG-5.3-01": ("brute force", "interception", "ddos", "hacking", "virus", "worm", "trojan", "spyware", "adware", "ransomware", "pharming", "phishing", "social engineering"),
+    "IG-5.3-02": ("access levels", "anti-malware", "username", "password", "biometric", "two-step", "updates", "spelling", "tone", "url", "firewalls", "privacy", "proxy", "ssl"),
+    "IG-6.1-02": ("industry", "transport", "agriculture", "weather", "gaming", "lighting", "science"),
+    "IG-6.2-03": ("industry", "transport", "agriculture", "medicine", "domestic", "entertainment"),
+    "IG-7-01a": ("analysis", "abstraction", "decomposition", "problem", "requirements"),
+    "IG-7-01b": ("design", "decomposition", "structure diagrams", "flowcharts", "pseudocode"),
+    "IG-7-01c": ("coding", "program code", "iterative testing"),
+    "IG-7-01d": ("testing", "test data"),
+    "IG-7-02a": ("system", "subsystems", "further subsystems"),
+    "IG-7-02b": ("inputs", "processes", "outputs", "storage"),
+    "IG-7-02c": ("design", "construct", "structure diagrams", "flowcharts", "pseudocode"),
+    "IG-7-03a": ("purpose", "algorithm"),
+    "IG-7-03b": ("processes", "algorithm"),
+    "IG-7-04a": ("linear search",),
+    "IG-7-04b": ("bubble sort",),
+    "IG-7-04c": ("totalling", "counting"),
+    "IG-7-04d": ("maximum", "minimum", "average"),
+    "IG-7-05a": ("need", "range", "length", "type", "presence", "format", "check-digit"),
+    "IG-7-05b": ("need", "visual-check", "double-entry"),
+    "IG-7-06": ("normal", "abnormal", "extreme", "boundary"),
+    "IG-7-07": ("variables", "outputs", "user prompts", "each step"),
+    "IG-7-09a": ("write", "amend", "pseudocode"),
+    "IG-7-09b": ("write", "amend", "program code"),
+    "IG-7-09c": ("write", "amend", "flowcharts"),
+    "IG-8.3-02a": ("open", "close", "mode"),
+    "IG-8.3-02b": ("read", "write", "single", "items"),
+    "IG-8.3-02c": ("read", "write", "lines", "text"),
+    "IG-9-02": ("text", "character", "boolean", "integer", "real", "date/time"),
+    "IG-9-04": ("select", "from", "where", "order by", "ascending", "descending", "sum", "count", "and", "or", "output"),
+    "IG-10-02": ("not", "and", "or", "nand", "nor", "xor", "binary", "input"),
+    "IG-10-03a": ("circuit", "problem statement", "unsimplified"),
+    "IG-10-03b": ("circuit", "logic expression", "unsimplified"),
+    "IG-10-03c": ("circuit", "truth table", "unsimplified"),
+    "IG-10-03d": ("truth table", "problem statement"),
+    "IG-10-03e": ("truth table", "logic expression"),
+    "IG-10-03f": ("truth table", "logic circuit"),
+    "IG-10-03g": ("logic expression", "problem statement"),
+    "IG-10-03h": ("logic expression", "logic circuit"),
+    "IG-10-03i": ("logic expression", "truth table"),
+    "AS-2.1-03a": ("client-server", "peer-to-peer", "subnetwork", "roles", "benefits", "drawbacks"),
+    "AS-2.1-03b": ("justify", "situation"),
+    "AS-2.1-05a": ("bus", "star", "mesh", "hybrid", "packets"),
+    "AS-2.1-05b": ("justify", "situation"),
+    "AS-2.1-06": ("public", "private", "benefits", "drawbacks"),
+    "AS-2.1-07": ("copper", "fibre", "radio", "wi-fi", "microwave", "satellite"),
+    "AS-2.1-08": ("switch", "server", "nic", "wnic", "wap", "cables", "bridge", "repeater"),
+    "AS-2.1-11": ("real-time", "on-demand", "bit rate", "broadband", "buffer"),
+    "AS-2.1-13": ("modem", "pstn", "dedicated", "cell-phone"),
+    "AS-2.1-14": ("ipv4", "ipv6", "subnet", "device", "public", "private", "security", "static", "dynamic"),
+    "AS-3.1-03": ("laser", "3d", "microphone", "speaker", "magnetic", "solid-state", "optical", "touchscreen", "vr"),
+    "AS-4.2-04": ("data-movement", "input/output", "arithmetic", "unconditional", "conditional", "compare", "ldm", "ldd", "ldi", "ldx", "ldr", "mov", "sto", "add", "sub", "inc", "dec", "jmp", "cmp", "cmi", "jpe", "jpn", "in", "out", "end"),
+    "AS-9.1-01a": ("need", "benefits", "abstraction"),
+    "AS-9.2-05a": ("document", "algorithm", "structured english"),
+    "AS-9.2-05b": ("document", "algorithm", "flowchart"),
+    "AS-9.2-05c": ("document", "algorithm", "pseudocode"),
+    "AS-9.2-06a": ("pseudocode", "structured english"),
+    "AS-9.2-06b": ("pseudocode", "flowchart"),
+    "AS-9.2-07a": ("flowchart", "structured english"),
+    "AS-9.2-07b": ("flowchart", "pseudocode"),
+    "AS-11.3-03a": ("no", "one", "more than one", "parameter"),
+    "AS-11.3-03b": ("by value", "by reference"),
+    "AS-11.3-04b": ("returned value", "replaces", "call", "expression"),
+    "AS-11.3-06": ("procedure", "function", "header", "interface", "parameter", "argument", "return-value"),
+    "AS-12.3-04a": ("dry-run", "walkthrough", "white-box", "black-box", "integration", "alpha", "beta", "acceptance", "stub"),
+    "AS-12.3-04b": ("select", "test data", "testing method"),
+    "AS-12.3-05a": ("need", "contents", "test strategy"),
+    "AS-12.3-05b": ("need", "contents", "test plan"),
+    "AS-12.3-07a": ("need", "continuing", "maintenance"),
+    "AS-12.3-07b": ("corrective", "adaptive", "perfective"),
+    "AS-12.3-08a": ("analyse", "existing program"),
+    "AS-12.3-08b": ("amend", "existing program", "enhance", "functionality"),
+    "AS-9.1-01b": ("purpose", "abstraction"),
+    "AS-9.1-01c": ("abstract", "model", "essential"),
+    "AS-10.4-02a": ("features", "stack", "queue", "linked list"),
+    "AS-10.4-02b": ("justify", "stack", "queue", "linked-list", "situation"),
+    "AS-10.4-03a": ("add", "edit", "delete", "stack"),
+    "AS-10.4-03b": ("add", "edit", "delete", "queue"),
+    "AS-10.4-03c": ("add", "edit", "delete", "linked-list"),
+    "AS-10.4-04a": ("array", "stack"),
+    "AS-10.4-04b": ("array", "queue"),
+    "AS-10.4-04c": ("array", "linked list"),
+    "AS-11.1-01a": ("pseudocode", "flowchart"),
+    "AS-11.1-01b": ("pseudocode", "structured english"),
+    "AS-11.1-02a": ("declare", "initialise", "constants"),
+    "AS-11.1-02b": ("declare", "variables"),
+    "AS-11.1-02c": ("assign", "variables"),
+    "AS-11.1-02d": ("arithmetic", "logical", "expressions"),
+    "AS-11.1-02e": ("keyboard", "console"),
+    "AS-11.2-01a": ("if", "else", "nested"),
+    "AS-11.2-01b": ("case",),
+    "AS-11.2-01c": ("count-controlled", "loops"),
+    "AS-11.2-01d": ("post-condition", "loops"),
+    "AS-11.2-01e": ("pre-condition", "loops"),
+    "AS-12.2-01a": ("purpose", "structure chart"),
+    "AS-12.2-01b": ("construct", "structure chart", "decompose", "parameters", "modules", "procedures", "functions"),
+    "AS-12.2-01c": ("derive", "pseudocode", "structure chart"),
+}
 OVERVIEW_CONTRACTS = {
     ROOT / "ig-0478" / "chapter-1.md": (
         "## Chapter at a Glance",
@@ -932,8 +1113,8 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "Trace these operations in order",
             "Count = 6` means full",
         ],
-        IG_REVIEW_PAGE: ["Use pseudocode or Python"],
-        IG_REVIEW_PAGE_2: ["Use pseudocode or Python"],
+        IG_REVIEW_PAGE: ["Use pseudocode, Python, Visual Basic or Java"],
+        IG_REVIEW_PAGE_2: ["Use pseudocode, Python, Visual Basic or Java"],
         A2_PAPER3_REVIEW_PAGE: [
             "BitTorrent distributes a file between peers",
             "lexical analysis, syntax analysis and code generation",
@@ -999,8 +1180,6 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "Write pseudocode for `Dequeue",
             "FUNCTION Dequeue",
         ],
-        IG_REVIEW_PAGE: ["Visual Basic", "Use pseudocode, Python, Visual Basic or Java"],
-        IG_REVIEW_PAGE_2: ["Visual Basic", "Use pseudocode, Python, Visual Basic or Java"],
         A2_PAPER3_REVIEW_PAGE: [
             "bit streaming and why buffering",
             "compiler, linker and loader",
@@ -1104,9 +1283,15 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
         rows.append((cells[0], cells[1], cells[2], cells[3], cells[4]))
 
     seen_ids: set[str] = set()
+    imprecise_practice_ids: list[str] = []
     link_pattern = re.compile(r"\[[^]]+\]\(([^)]+)\)")
+    precise_locator_pattern = re.compile(
+        r"— (?:Q\d+\.\d+(?:[–-]\d+)?|Q\d+ \(whole task\)|"
+        r"QC\d+(?:[–-]\d+)?|EP\d+(?:\([a-z](?:[–-][a-z])?\))?|"
+        r"TD\d+(?:[–-]\d+)?(?:\([a-z](?:[–-][a-z])?\))?)"
+    )
     for objective_id, requirement, teaching, practice, status in rows:
-        if not re.fullmatch(r"(?:IG|AS|A2)-\d+(?:\.\d+)?-\d{2}", objective_id):
+        if not re.fullmatch(r"(?:IG|AS|A2)-\d+(?:\.\d+)?-\d{2}[a-z]?", objective_id):
             add_error(errors, coverage, f"invalid syllabus objective ID format: {objective_id}")
         if objective_id in seen_ids:
             add_error(errors, coverage, f"duplicate syllabus objective ID: {objective_id}")
@@ -1115,6 +1300,18 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             add_error(errors, coverage, f"unknown syllabus objective ID: {objective_id}")
         if not requirement or requirement.casefold().startswith("objective "):
             add_error(errors, coverage, f"{objective_id} lacks a substantive paraphrase")
+        missing_requirement_terms = [
+            term
+            for term in OBJECTIVE_REQUIREMENT_TERMS.get(objective_id, ())
+            if term.casefold() not in requirement.casefold()
+        ]
+        if missing_requirement_terms:
+            add_error(
+                errors,
+                coverage,
+                f"{objective_id} omits reviewed Notes-and-guidance scope: "
+                + ", ".join(missing_requirement_terms),
+            )
         if status != "covered":
             add_error(errors, coverage, f"syllabus objective is not covered: {objective_id}")
 
@@ -1122,12 +1319,14 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
         practice_links = link_pattern.findall(practice)
         if not teaching_links:
             add_error(errors, coverage, f"{objective_id} lacks linked teaching evidence")
-        if len(practice_links) < 2 or not re.search(r"— Q\d+", practice):
+        if len(practice_links) < 2 or not precise_locator_pattern.search(practice):
             add_error(
                 errors,
                 coverage,
                 f"{objective_id} practice evidence must name a question and its answers",
             )
+        if not precise_locator_pattern.search(practice):
+            imprecise_practice_ids.append(objective_id)
         for reference in teaching_links:
             validate_evidence_link(objective_id, "teaching", reference)
         practice_targets = [
@@ -1156,6 +1355,10 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             "#quick-check-answers" in reference
             or "#20-marks-practice-mark-scheme" in reference
             or "mark-scheme" in reference
+            or (
+                "#" in reference
+                and reference.rsplit("#", 1)[1].endswith("-answers")
+            )
             for reference in practice_links
         ):
             add_error(errors, coverage, f"{objective_id} practice evidence lacks an answer anchor")
@@ -1163,6 +1366,14 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
     missing_ids = EXPECTED_SYLLABUS_OBJECTIVE_IDS - seen_ids
     for objective_id in sorted(missing_ids):
         add_error(errors, coverage, f"missing syllabus objective ID: {objective_id}")
+    if imprecise_practice_ids:
+        sample = ", ".join(imprecise_practice_ids[:5])
+        add_error(
+            errors,
+            coverage,
+            f"{len(imprecise_practice_ids)} objectives lack exact question-subpart evidence "
+            f"(examples: {sample})",
+        )
 
 
 def check_mixed_review(
@@ -1657,6 +1868,48 @@ def check_cdn_versions(errors: list[str]) -> None:
             add_error(errors, index, f"CDN dependency is not pinned to an exact version: {package}")
 
 
+def check_syllabus_conventions(errors: list[str]) -> None:
+    ig_pages = sorted((ROOT / "ig-0478").glob("*.md"))
+    for path in ig_pages:
+        text = path.read_text(encoding="utf-8")
+        if re.search(r"^\s*IF\b.*\bTHEN\s*$", text, re.MULTILINE):
+            add_error(errors, path, "uses same-line IF ... THEN instead of the 0478 pseudocode format")
+        if re.search(r"ORDER BY[^;\n]*\b(?:ASC|DESC)\s*;", text, re.IGNORECASE):
+            add_error(errors, path, "uses ASC/DESC instead of the active 0478 ASCENDING/DESCENDING notation")
+
+    forbidden_regressions = {
+        AS_PAPER1_REVIEW_PAGE_2: [
+            "Add hexadecimal `9A` and `37`",
+            "Compare POP3 and IMAP",
+            "virtual memory allows a program",
+        ],
+        IG_PAPER1_REVIEW_PAGE_2: ["artificial neural network may learn"],
+        ROOT / "ig-0478" / "chapter-4.md": ["State what is meant by a buffer"],
+        ROOT / "ig-0478" / "chapter-5.md": [
+            "browser can use the server’s public key to encrypt data",
+            "server uses its private key to decrypt",
+        ],
+        ROOT / "a2-9618" / "chapter-19.md": [
+            "THEN RETURN",
+            "THEN Node <-",
+            "ELSE Node <-",
+        ],
+    }
+    for path, phrases in forbidden_regressions.items():
+        text = path.read_text(encoding="utf-8")
+        for phrase in phrases:
+            if phrase.casefold() in text.casefold():
+                add_error(errors, path, f"contains a known syllabus/content regression: {phrase}")
+
+
+def check_svg_xml(errors: list[str]) -> None:
+    for path in sorted((ROOT / "assets").glob("*.svg")):
+        try:
+            ET.parse(path)
+        except ET.ParseError as error:
+            add_error(errors, path, f"invalid SVG XML: {error}")
+
+
 def check_accessibility_baseline(errors: list[str]) -> None:
     index = ROOT / "index.html"
     index_text = index.read_text(encoding="utf-8")
@@ -1676,7 +1929,15 @@ def check_accessibility_baseline(errors: list[str]) -> None:
     script_contracts = [
         ("main.id = 'main-content'", "a persistent main content target"),
         ("main.tabIndex = -1", "a programmatically focusable main target"),
+        ("prepareSkipLink", "route-safe skip-link processing"),
+        ("event.preventDefault()", "skip-link hash-router protection"),
+        ("event.stopImmediatePropagation()", "skip-link router-event isolation"),
+        ("main.focus()", "skip-link focus transfer"),
+        ("event.key === 'Enter'", "skip-link keyboard activation"),
         ("answer-disclosure", "native answer disclosure processing"),
+        ("text.endsWith(' drill answers')", "targeted-drill answer disclosure processing"),
+        ("text === 'file-operation check answers'", "file-operation answer disclosure processing"),
+        ("details.open = !details.open", "answer-disclosure keyboard toggling"),
         ("table-scroll", "focusable horizontal table processing"),
         ("course-hub-return", "course-bounded pagination return"),
         ("prepareChapterOverviews", "chapter overview preparation"),
@@ -1759,6 +2020,8 @@ def main() -> int:
     check_navigation(errors)
     check_marked_content(errors)
     check_cdn_versions(errors)
+    check_syllabus_conventions(errors)
+    check_svg_xml(errors)
     check_accessibility_baseline(errors)
     check_mermaid_runtime(errors)
 
@@ -1789,11 +2052,13 @@ def main() -> int:
     print("- both A2 Paper 4 reviews have 3 questions, 75 marks and 3 mark schemes")
     print("- every A/B review pair remains below the 65% near-duplicate threshold")
     print(
-        f"- all {len(EXPECTED_SYLLABUS_OBJECTIVE_IDS)} atomic syllabus objectives "
-        "have valid teaching, question and answer evidence"
+        f"- all {len(EXPECTED_SYLLABUS_OBJECTIVE_IDS)} objective/atomic-child rows "
+        "have structurally valid teaching, question and answer links"
     )
+    print("- known 0478 pseudocode/SQL and syllabus-scope regressions are rejected")
     print("- every A2 fenced Java code block compiles and all Java smoke tests pass")
     print("- jsDelivr npm dependencies use exact versions")
+    print("- all SVG assets contain well-formed XML")
     print("- skip link, keyboard focus, contrast-safe code styling, answer/table/pagination scripting, print and reduced-motion checks pass")
     print("- Mermaid uses one render path, natural SVG sizes and guarded local overflow")
     return 0

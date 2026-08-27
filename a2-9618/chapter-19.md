@@ -220,15 +220,15 @@ PROCEDURE Push(Item)
     ENDIF
 ENDPROCEDURE
 
-FUNCTION Pop() RETURNS ItemType
+PROCEDURE Pop(BYREF Item : ItemType, BYREF Success : BOOLEAN)
     IF Top = -1 THEN
-        OUTPUT "Stack empty"
+        Success <- FALSE
     ELSE
         Item <- Stack[Top]
         Top <- Top - 1
-        RETURN Item
+        Success <- TRUE
     ENDIF
-ENDFUNCTION
+ENDPROCEDURE
 
 PROCEDURE Enqueue(Item)
     IF Count = Capacity THEN
@@ -240,50 +240,77 @@ PROCEDURE Enqueue(Item)
     ENDIF
 ENDPROCEDURE
 
-FUNCTION Dequeue() RETURNS ItemType
+PROCEDURE Dequeue(BYREF Item : ItemType, BYREF Success : BOOLEAN)
     IF Count = 0 THEN
-        OUTPUT "Queue empty"
+        Success <- FALSE
     ELSE
         Item <- Queue[Front]
         Front <- (Front + 1) MOD Capacity
         Count <- Count - 1
-        RETURN Item
+        Success <- TRUE
     ENDIF
-ENDFUNCTION
+ENDPROCEDURE
 ```
+
+`Success` makes the empty-structure contract explicit: the caller uses `Item` only when `Success = TRUE`. This avoids a function path that has no return value.
 
 For an array linked list, insertion removes the first node from the free list and connects it into the live chain. Search follows `Next` until the item or null pointer is reached. Deletion reconnects the previous node around the target and returns the removed node to the free list; the `ArrayLinkedList` example below implements all three operations.
 
 For a binary search tree:
 
 ```text
-FUNCTION TreeFind(Node, Target) RETURNS BOOLEAN
+FUNCTION TreeFind(Node : NodeType, Target : KeyType) RETURNS BOOLEAN
     WHILE Node <> NULL
-        IF Target = Node.Key THEN RETURN TRUE
-        IF Target < Node.Key THEN Node <- Node.Left ELSE Node <- Node.Right
+        IF Target = Node.Key THEN
+            RETURN TRUE
+        ELSE
+            IF Target < Node.Key THEN
+                Node <- Node.Left
+            ELSE
+                Node <- Node.Right
+            ENDIF
+        ENDIF
     ENDWHILE
     RETURN FALSE
 ENDFUNCTION
 
-FUNCTION TreeInsert(Node, Item) RETURNS NodeType
-    IF Node = NULL THEN RETURN NEW NodeType(Item)
-    IF Item < Node.Key THEN Node.Left <- TreeInsert(Node.Left, Item)
-    IF Item > Node.Key THEN Node.Right <- TreeInsert(Node.Right, Item)
+FUNCTION TreeInsert(Node : NodeType, Item : KeyType) RETURNS NodeType
+    DECLARE NewNode : NodeType
+    IF Node = NULL THEN
+        NewNode <- NEW NodeType(Item)
+        RETURN NewNode
+    ENDIF
+    IF Item < Node.Key THEN
+        Node.Left <- TreeInsert(Node.Left, Item)
+    ELSE
+        IF Item > Node.Key THEN
+            Node.Right <- TreeInsert(Node.Right, Item)
+        ENDIF
+    ENDIF
     RETURN Node
 ENDFUNCTION
 
-FUNCTION TreeDelete(Node, Target) RETURNS NodeType
-    IF Node = NULL THEN RETURN NULL
+FUNCTION TreeDelete(Node : NodeType, Target : KeyType) RETURNS NodeType
+    DECLARE Successor : NodeType
+    IF Node = NULL THEN
+        RETURN NULL
+    ENDIF
     IF Target < Node.Key THEN
         Node.Left <- TreeDelete(Node.Left, Target)
-    ELSE IF Target > Node.Key THEN
-        Node.Right <- TreeDelete(Node.Right, Target)
     ELSE
-        IF Node.Left = NULL THEN RETURN Node.Right
-        IF Node.Right = NULL THEN RETURN Node.Left
-        Successor <- SmallestNode(Node.Right)
-        Node.Key <- Successor.Key
-        Node.Right <- TreeDelete(Node.Right, Successor.Key)
+        IF Target > Node.Key THEN
+            Node.Right <- TreeDelete(Node.Right, Target)
+        ELSE
+            IF Node.Left = NULL THEN
+                RETURN Node.Right
+            ENDIF
+            IF Node.Right = NULL THEN
+                RETURN Node.Left
+            ENDIF
+            Successor <- SmallestNode(Node.Right)
+            Node.Key <- Successor.Key
+            Node.Right <- TreeDelete(Node.Right, Successor.Key)
+        ENDIF
     ENDIF
     RETURN Node
 ENDFUNCTION
@@ -296,10 +323,14 @@ The delete cases are: leaf (replace by null), one child (replace by that child),
 A dictionary stores **key–value pairs** and supports `insert(key, value)`, `find(key)` and `delete(key)`. Keys are unique even when values repeat. It may be represented by parallel key/value arrays, a binary search tree, or a hash table. With open-address hashing, insertion and search must use the same probe sequence; deletion uses a tombstone rather than an empty slot so later colliding keys remain reachable.
 
 ```text
-FUNCTION DictionaryFind(TargetKey) RETURNS ValueType
+FUNCTION DictionaryFind(TargetKey : KeyType) RETURNS ValueType
+    DECLARE Index : INTEGER
+    DECLARE Count : INTEGER
     Index <- Hash(TargetKey)
     FOR Count <- 1 TO Capacity
-        IF State[Index] = EMPTY THEN RETURN NOT_FOUND
+        IF State[Index] = EMPTY THEN
+            RETURN NOT_FOUND
+        ENDIF
         IF State[Index] = OCCUPIED AND Keys[Index] = TargetKey THEN
             RETURN Values[Index]
         ENDIF
@@ -521,21 +552,40 @@ The four worked examples model trace evidence, pointer reasoning, complexity lan
 
 ## 20-Mark Exam Practice
 
-A Java program stores unique integer catalogue keys in a binary search tree.
+An inventory program needs searching, sorting and several ADTs. Answer in pseudocode or precise algorithm steps unless Java is requested.
 
-1. Write Java method `boolean find(int target)` using iteration. **[5]**
-2. Write Java method `void insert(int key)` that preserves tree ordering and ignores a duplicate. **[7]**
-3. Write recursive Java method `int count(Node node)` that returns the number of nodes. **[4]**
-4. State the average search time for a balanced tree and worst-case search time for a fully skewed tree, with reasons. **[4]**
+1. Write the essential comparison/update steps for:
+   - **(a)** a linear search and a binary search, including the binary-search precondition **[2]**
+   - **(b)** bubble sort and insertion sort **[2]**
+2. For array or linked implementations, write the essential state changes for:
+   - **(a)** push and pop on a stack **[2]**
+   - **(b)** enqueue and dequeue on a circular queue **[2]**
+   - **(c)** find, insert and delete on a linked list **[3]**
+   - **(d)** find and insert in a binary search tree **[2]**
+   - **(e)** dictionary lookup by key **[1]**
+3. State two defining features of a graph and justify using one for a route network. **[2]**
+4. Give the time complexity of linear search and binary search, and state one auxiliary-space cost that could differ between two algorithms. **[2]**
+5. State the base case and progressing recursive call for a recursive tree-node count, then state what happens while the calls unwind. **[2]**
 
 **Total: 20 marks**
 
 ### 20 Marks Practice Mark Scheme
 
-1. Starts at root **[1]**; continues while non-null **[1]**; equality returns true **[1]**; selects correct child **[1]**; returns false after failure **[1]**. **[5]**
-2. Handles empty root **[1]**; creates node **[1]**; traverses from root **[1]**; compares key **[1]**; follows correct child **[1]**; attaches at null child **[1]**; ignores duplicate **[1]**. **[7]**
-3. Null base case **[1]**; counts left **[1]**; counts right **[1]**; returns `1 + left + right` **[1]**. **[4]**
-4. Balanced average `O(log n)` because a comparison discards about half a subtree **[2]**; skewed worst case `O(n)` because nodes form one chain **[2]**. **[4]**
+1. **(a)** Linear search compares items in sequence until found/end **[1]**; binary search requires sorted data and compares the middle item before moving a bound **[1]**. **[2]**
+
+   **(b)** Bubble sort compares and swaps adjacent out-of-order items over repeated passes **[1]**; insertion sort saves the next item, shifts larger prefix items and inserts into the gap **[1]**. **[2]**
+2. **(a)** Push checks full, increments `Top` and stores; pop checks empty, returns the top item and decrements `Top` **[2]**.
+
+   **(b)** Enqueue advances `Rear` modulo capacity and increments `Count`; dequeue reads at `Front`, advances it modulo capacity and decrements `Count`, with full/empty checks **[2]**.
+
+   **(c)** Find follows `Next` until match/null **[1]**; insertion takes a free node and reconnects it into the live chain **[1]**; deletion bypasses the target and returns its node to the free list **[1]**. **[3]**
+
+   **(d)** Both operations compare keys and follow left for smaller/right for larger **[1]**; find ends at match/null, while insert attaches a new node at the null link **[1]**. **[2]**
+
+   **(e)** Hash/find the key and return its associated value, using the representation's defined collision/search rule **[1]**.
+3. Vertices represent items/places and edges represent connections **[1]**; a route network is naturally modelled because edges can store direct connections/weights and graph search can find a route **[1]**. **[2]**
+4. Linear search `O(n)` and binary search `O(log n)` **[1]**; a valid separate space comparison, such as recursive traversal using `O(n)` call-stack space while an iterative version uses `O(1)` auxiliary space **[1]**. **[2]**
+5. Null node returns `0`, otherwise call on smaller left/right subtrees **[1]**; stack frames pop in reverse order and combine `1 + left + right` **[1]**. **[2]**
 
 ## Final Revision Checklist
 

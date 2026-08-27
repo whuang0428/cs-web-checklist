@@ -969,7 +969,7 @@ The worked calculations, process templates and scenario answers above model the 
 1. State the difference between a kilobyte and a kibibyte. [1]  
 2. Convert `110001100111` to hexadecimal. [1]  
 3. Convert `11100010` from 8-bit two's complement to denary. [1]  
-4. Write the smallest 8-bit two's complement binary value. [1]  
+4. Convert positive binary `00101101` to its 8-bit one's-complement representation. [1]
 5. Convert BCD `0101 0111 0011` to denary. [1]  
 6. State one advantage of Unicode over ASCII. [1]  
 7. State the formula for bitmap file size in bits. [1]  
@@ -982,7 +982,7 @@ The worked calculations, process templates and scenario answers above model the 
 1. KB = 1000 bytes; KiB = 1024 bytes.  
 2. `C67`  
 3. `-30`  
-4. `10000000`  
+4. `11010010`
 5. `573`  
 6. Unicode represents more characters/languages/symbols/emojis.  
 7. `number of pixels × bit depth` or `width × height × bit depth`  
@@ -1002,18 +1002,20 @@ The worked calculations, process templates and scenario answers above model the 
 (b) Convert the denary integer 558 into 12-bit binary. [1]  
 (c) Convert your answer in part (b) into hexadecimal. [1]  
 (d) Convert the 8-bit two's complement binary integer `11100010` into denary. [1]  
-(e) Write the smallest and largest 8-bit two's complement binary integers. [2]  
-(f) Give one advantage of Unicode over ASCII. [1]  
+(e) Perform both calculations, giving 8-bit results: add two's-complement `00101101` (+45) and `11101110` (-18); subtract unsigned `00110101` from `10010110`. [2]
+
+(f) Explain why adding two binary integers can cause overflow. [1]
 (g) Explain one reason why BCD is used in financial calculations. [1]
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 (a) Tebibyte uses binary prefix / powers of 2 / 1024, terabyte uses decimal prefix / powers of 10 / 1000. [1]  
 (b) `0010 0010 1110` [1]  
 (c) `22E` [1]  
 (d) `-30` [1]  
-(e) Smallest `10000000` [1], largest `01111111` [1]  
-(f) Unicode can represent more characters / more languages / symbols / emojis. [1]  
+(e) `00011011` (+27) [1]; `01100001` [1]
+
+(f) The result is outside the range/needs more bits than the fixed-size register can store [1]
 (g) Decimal values must be accurate / avoids rounding errors / stores each denary digit separately. [1]
 
 ---
@@ -1026,7 +1028,7 @@ A digital camera creates an image with 2 000 000 pixels and a bit depth of 16 bi
 (b) Explain the effect of decreasing the bit depth on the image and on the image file. [4]  
 (c) Give the term for the number of times the amplitude of a sound wave is measured per second. [1]
 
-#### Mark scheme
+#### Question 2 mark scheme
 
 (a)
 
@@ -1056,7 +1058,7 @@ A school uses live video conferencing. The video is compressed before being tran
 (a) Explain why the video is compressed before transmission. [2]  
 (b) Identify whether lossy or lossless compression is more appropriate. Justify your answer. [3]
 
-#### Mark scheme
+#### Question 3 mark scheme
 
 (a)
 

@@ -27,9 +27,10 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 | Bubble sort and linear search array data | Processing Array Data |
 | Explain the need for files and process text files | Text Files |
 | Define an abstract data type | Abstract Data Types |
-| Describe and justify stacks, queues and linked lists | Stacks; Queues; Linked Lists |
-| Add, edit and delete ADT data | Stacks; Queues; Linked Lists and Worked Example 3 |
-| Describe array implementations of stacks, queues and linked lists | Array Implementations of ADTs |
+| Describe the key features of stacks, queues and linked lists | Stacks; Queues; Linked Lists |
+| Justify a suitable ADT for a given situation | Stacks; Queues; Linked Lists; Quick Check |
+| Add, edit and delete data in each required ADT | Stacks; Queues; Linked Lists and Worked Example 3 |
+| Describe separate array implementations of stacks, queues and linked lists | Array Implementations of ADTs |
 
 ---
 
@@ -278,6 +279,8 @@ PUSH C: [A, B, C]
 POP: returns C, leaves [A, B]
 ```
 
+In an array implementation, editing the item at `TopPointer` changes its data without moving the pointer. Adding uses `PUSH`; deleting uses `POP`. If the stack is treated only through its logical interface, do not edit a buried item by bypassing LIFO order.
+
 Suitable uses:
 
 - undo history
@@ -320,6 +323,8 @@ Suitable uses:
 - keyboard buffers
 
 A circular queue reuses array positions released at the front.
+
+In an array implementation, editing a located queued record changes its data but not `FrontPointer`, `RearPointer` or the processing order. Adding uses `ENQUEUE`; deleting uses `DEQUEUE`.
 
 ---
 
@@ -569,7 +574,7 @@ The worked calculations, process templates and scenario answers above model the 
 1. State suitable types for a product code, quantity and measured mass. **[3]**
 2. State why a record is suitable for storing one student's ID, name and mark. **[2]**
 3. Define an ADT. **[2]**
-4. State the processing order of a stack and a queue, and name the queue operation that removes an item. **[3]**
+4. For each situation, select and justify one suitable ADT: undoing the most recent edit; processing print jobs in arrival order; inserting and deleting records without shifting every later record. **[3]**
 
 **Total: 10 marks**
 
@@ -578,7 +583,7 @@ The worked calculations, process templates and scenario answers above model the 
 1. STRING, INTEGER and REAL. **[3]**
 2. It groups related fields under one identifier **[1]** and allows the fields to have different data types **[1]**. **[2]**
 3. A collection of data **[1]** together with a defined set of operations on the data **[1]**. **[2]**
-4. Stack: LIFO **[1]**; queue: FIFO **[1]**; `dequeue` **[1]**. **[3]**
+4. Stack because the most recent action is removed first/LIFO **[1]**; queue because the earliest job is processed first/FIFO **[1]**; linked list because links can be changed without shifting every following record **[1]**. **[3]**
 
 ---
 
@@ -588,8 +593,8 @@ A clinic stores six appointments in an array of records. Each appointment has a 
 
 1. Define a suitable record type and declare `Appointment[1:6]`. **[5]**
 2. Write pseudocode to use a linear search for an input appointment code and output the matching patient name or `"Not found"`. **[6]**
-3. A queue contains appointments front-to-rear as `[A1, A2, A3]`. State the queue after `ENQUEUE A4`, `DEQUEUE`, `DEQUEUE`; also state both returned codes. **[4]**
-4. Explain how an array can implement a linked list, naming three required components. **[3]**
+3. A queue contains appointments front-to-rear as `[A1, A2, A3]`. Apply `ENQUEUE A4`, edit the stored code `A3` to `A3R`, then apply `DEQUEUE`, `DEQUEUE`. State the final queue and both returned codes. **[4]**
+4. For each ADT, state the named array/pointer components needed for an array implementation: stack; queue; linked list. **[3]**
 5. State two actions required after opening a text file for reading an unknown number of lines. **[2]**
 
 **Total: 20 marks**
@@ -635,8 +640,8 @@ A clinic stores six appointments in an array of records. Each appointment has a 
 
    Input target **[1]**; initialise flag and index **[1]**; bounded loop **[1]**; correct field comparison **[1]**; progress/termination **[1]**; correct two-way output **[1]**. **[6]**
 
-3. After enqueue: `[A1, A2, A3, A4]` **[1]**; first dequeue returns `A1` **[1]**; second returns `A2` **[1]**; final queue `[A3, A4]` **[1]**. **[4]**
-4. An array stores nodes/records **[1]**; each node contains data and a next pointer/index **[1]**; a start pointer identifies the first node, with a free-list pointer or null value also named **[1]**. **[3]**
+3. After enqueue and edit: `[A1, A2, A3R, A4]` **[1]**; first dequeue returns `A1` **[1]**; second returns `A2` **[1]**; final queue `[A3R, A4]` **[1]**. **[4]**
+4. Stack: data array and `TopPointer` **[1]**; queue: data array plus `FrontPointer` and `RearPointer` (a count may also distinguish full from empty) **[1]**; linked list: node array containing data/next-pointer fields plus `StartPointer` and a null/free-list convention **[1]**. **[3]**
 5. Any two: loop until `EOF`, read each line with `READFILE`, process/store each value, close the file after the loop. **[2]**
 
 ---

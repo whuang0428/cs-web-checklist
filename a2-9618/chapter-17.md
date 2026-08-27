@@ -728,7 +728,7 @@ A hospital wants patients to send confidential medical information through a web
 
 Explain how asymmetric cryptography can be used so that only the hospital can read the message.
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 One mark per point, max 5:
 
@@ -745,7 +745,7 @@ One mark per point, max 5:
 
 Compare symmetric key cryptography and asymmetric key cryptography.
 
-#### Mark scheme
+#### Question 2 mark scheme
 
 One mark per comparison, max 4:
 
@@ -763,7 +763,7 @@ A user logs in to an online banking website using HTTPS.
 
 Explain how SSL/TLS helps protect the communication.
 
-#### Mark scheme
+#### Question 3 mark scheme
 
 One mark per point, max 4:
 
@@ -781,7 +781,7 @@ One mark per point, max 4:
 
 Explain the difference between a digital certificate and a digital signature.
 
-#### Mark scheme
+#### Question 4 mark scheme
 
 One mark per point, max 4:
 
@@ -798,7 +798,7 @@ One mark per point, max 4:
 
 State one benefit and two drawbacks of quantum cryptography.
 
-#### Mark scheme
+#### Question 5 mark scheme
 
 Max 3:
 

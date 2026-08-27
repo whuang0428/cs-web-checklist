@@ -78,7 +78,7 @@ A recycling centre uses a conveyor, cameras and robotic arms to separate materia
 
 1. Describe how the monitoring and control loop moves an identified item into the correct container. **[4]**
 2. State two characteristics of the robotic arm. **[2]**
-3. Explain how an artificial neural network may learn to classify camera images. **[3]**
+3. Explain how a machine-learning system can use labelled camera images to improve its classification decisions. **[3]**
 4. Evaluate replacing all manual checking with the trained system. Give one benefit, one limitation and a justified conclusion. **[3]**
 
 ## Mark Scheme
@@ -126,5 +126,5 @@ A recycling centre uses a conveyor, cameras and robotic arms to separate materia
 
 1. Camera/sensor captures the item **[1]**; processor compares/classifies the input using stored rules/model **[1]**; control signal operates the appropriate arm/actuator **[1]**; repeated sensing confirms the result and supplies feedback **[1]**. **[4]**
 2. Any two: programmable, senses its environment, moves/manipulates objects, performs more than one task, can act automatically. **[2]**
-3. Labelled examples are supplied during training **[1]**; weights/connections are adjusted when output differs from the target **[1]**; repeated training reduces error and learned weights classify unseen images **[1]**. **[3]**
+3. Labelled examples provide the expected material category **[1]**; the system identifies patterns/features associated with those examples **[1]**; using more suitable data or feedback allows later decisions to become more accurate **[1]**. **[3]**
 4. One contextual benefit such as faster continuous sorting **[1]**; one limitation such as unusual/dirty items being misclassified **[1]**; conclusion linked to the evidence, such as retain sampled human checks until accuracy is demonstrated **[1]**. **[3]**

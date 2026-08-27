@@ -1087,29 +1087,25 @@ The worked calculations, process templates and scenario answers above model the 
 
 ### Questions
 
-1. State one difference between a LAN and a WAN. [1]
-2. Give one benefit of using a client-server network. [1]
-3. State one drawback of a peer-to-peer network. [1]
-4. Identify the topology where all devices connect to a central switch. [1]
-5. State one benefit of a mesh topology. [1]
-6. State the role of a switch. [1]
-7. State the role of a router. [1]
-8. State one difference between IPv4 and IPv6. [1]
-9. What does DNS do? [1]
-10. Why is a buffer used in bit streaming? [1]
+1. State one difference between a thin client and a thick client. [1]
+2. State one difference between client-server and peer-to-peer networking. [1]
+3. Distinguish a public cloud from a private cloud and state one drawback of cloud computing. [2]
+4. Explain how CSMA/CD responds when two Ethernet devices transmit at the same time. [2]
+5. State one difference between the internet and the World Wide Web. [1]
+6. State one difference between IPv4 and IPv6. [1]
+7. What does DNS do? [1]
+8. Why is a buffer used in bit streaming? [1]
 
 ## Quick Check Answers
 
-1. A WAN covers a larger geographical area / may use external transmission media.
-2. Centralised backup/security/management.
-3. Harder to manage security / no central backup / not suitable for large networks.
-4. Star topology.
-5. Multiple paths / robust if a link fails.
-6. Stores MAC addresses and forwards data to intended recipient.
-7. Connects networks and forwards packets using IP addresses.
-8. IPv4 is 32 bits; IPv6 is 128 bits / IPv4 uses full stops; IPv6 uses colons.
-9. Translates domain names into IP addresses.
-10. Temporarily stores data to allow smooth playback when transmission speed varies.
+1. A thin client depends mainly on server processing/storage; a thick client performs more processing and storage locally.
+2. Client-server uses dedicated central servers; in peer-to-peer, devices provide resources directly to one another without a dedicated central server.
+3. A public cloud is shared infrastructure supplied to customers, whereas a private cloud is dedicated to one organisation **[1]**; one drawback such as dependence on network/provider availability, ongoing fees, migration difficulty or reduced direct control **[1]**. **[2]**
+4. Each device listens before transmitting [1]; after detecting a collision, both stop, wait for a random back-off time and try again [1].
+5. The internet is the global network infrastructure; the WWW is a collection of linked web resources accessed over it.
+6. IPv4 is 32 bits; IPv6 is 128 bits / IPv4 uses full stops; IPv6 uses colons.
+7. Translates domain names into IP addresses.
+8. Temporarily stores data to allow smooth playback when transmission speed varies.
 
 ---
 
@@ -1117,14 +1113,14 @@ The worked calculations, process templates and scenario answers above model the 
 
 **Total: 20 marks**
 
-### Question 1 — WAN and cell phone network [6]
+### Question 1 — WAN and cell phone network [5]
 
 A delivery company has offices in three cities. Drivers use smartphones to connect to the company network while travelling.
 
 **(a)** State two ways a WAN is different from a LAN. [2]  
-**(b)** Explain how data is transmitted from a smartphone using the cell phone network. [4]
+**(b)** Explain how data is transmitted from a smartphone using the cell phone network. [3]
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 **(a)** Award 1 mark each:
 
@@ -1132,7 +1128,7 @@ A delivery company has offices in three cities. Drivers use smartphones to conne
 + WAN may use external / non-company-owned transmission media; LAN usually uses dedicated / company-owned hardware or media.
 + WAN may connect several LANs.
 
-**(b)** Award up to 4 marks:
+**(b)** Award up to 3 marks:
 
 + Land/area is divided into cells.
 + Each cell has a tower/base station/antenna.
@@ -1143,15 +1139,15 @@ A delivery company has offices in three cities. Drivers use smartphones to conne
 
 ---
 
-### Question 2 — Star topology and switch [7]
+### Question 2 — Star topology and switch [8]
 
 A school office has six computers, one server, two printers and one router for internet access. The network uses a star topology.
 
 **(a)** Describe how the devices are connected in this topology. [3]  
 **(b)** Describe the role of the switch in this network. [3]  
-**(c)** Give one drawback of using a star topology. [1]
+**(c)** Give one drawback of using a star topology and explain why it is nevertheless suitable for this office. [2]
 
-#### Mark scheme
+#### Question 2 mark scheme
 
 **(a)** Award up to 3 marks:
 
@@ -1168,10 +1164,12 @@ A school office has six computers, one server, two printers and one router for i
 + Provides central point of connection.
 + Allows connected devices to communicate.
 
-**(c)** Award 1 mark:
+**(c)** Award 1 mark for a drawback:
 
 + If central switch fails, the network is affected.
 + More cable/cost than bus.
+
+Award 1 mark for a contextual justification, such as a cable failure affects only one office device, the switch forwards traffic directly, or the server/printers can all connect through one managed central device. **[2]**
 
 ---
 
@@ -1181,11 +1179,11 @@ A school office has six computers, one server, two printers and one router for i
 
 IPv4 is made of four groups separated by __________.  
 IPv6 is made of eight groups of __________ numbers.  
-A __________ IP address can change each time a device connects to a network.
+DHCP can associate a __________ IP address with a device when it joins a network.
 
-**(b)** Explain the role of DNS when a user enters a URL. [1]
+**(b)** Explain one purpose of subnetting. [1]
 
-#### Mark scheme
+#### Question 3 mark scheme
 
 **(a)** Award 1 mark each:
 
@@ -1193,25 +1191,21 @@ A __________ IP address can change each time a device connects to a network.
 + hexadecimal
 + dynamic
 
-**(b)** Award 1 mark:
-
-+ DNS translates/resolves the domain name into an IP address.
+**(b)** Subnetting divides a network into smaller subnetworks to reduce local traffic or allow security/access controls between subnets. [1]
 
 ---
 
 ### Question 4 — Real-time bit streaming [3]
 
-A video conference uses real-time bit streaming. Explain why lossy compression is suitable for the video conference.
+(a) Distinguish real-time bit streaming from on-demand bit streaming. [1]
 
-#### Mark scheme
+(b) Explain how source bit rate, broadband speed and buffering affect whether a stream plays smoothly. [2]
 
-Award up to 3 marks:
+#### Question 4 mark scheme
 
-+ Lossy compression reduces file size more than lossless.
-+ Less bandwidth/data is needed.
-+ Buffering/delay is reduced.
-+ Some removed data may not be noticed by users.
-+ Quality reduction is acceptable for video conference.
+(a) Real-time streaming is captured/transmitted while the event occurs, whereas on-demand content is already stored and starts when requested. [1]
+
+(b) The connection must deliver data at least as quickly as the source consumes its bit rate **[1]**; a buffer stores data ahead of playback to absorb short speed variations, but sustained broadband speed below the required bit rate eventually empties it and causes interruption **[1]**. **[2]**
 
 ---
 
@@ -1220,5 +1214,5 @@ Award up to 3 marks:
 - [ ] I can compare network models, topologies and transmission media.
 - [ ] I can trace switching, routing, DNS and internet communication.
 - [ ] I can explain Ethernet, IP addressing and cloud services.
-- [ ] I can select application protocols including POP3 and IMAP.
+- [ ] I can explain the protocols and communication technologies specified for AS Section 2.1.
 - [ ] I can complete and self-mark both chapter practices.

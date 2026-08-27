@@ -77,6 +77,31 @@ OUTPUT "Total: ", Total
 
 Prompts should make the required input clear when user interaction is part of the design.
 
+### Flowchart to pseudocode
+
+Read each flowchart symbol in control-flow order and preserve every branch:
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input Score/]
+    B --> C{Score >= 50?}
+    C -- Yes --> D[/"Pass"/]
+    C -- No --> E[/"Not yet"/]
+    D --> F([Stop])
+    E --> F
+```
+
+```text
+INPUT Score
+IF Score >= 50 THEN
+    OUTPUT "Pass"
+ELSE
+    OUTPUT "Not yet"
+ENDIF
+```
+
+For structured English, apply the same rule: preserve the stated input, processing order, conditions, repetition and output without adding new behaviour.
+
 ---
 
 ## Expressions and Operators
@@ -259,6 +284,14 @@ Use a procedure when:
 
 ## Parameters: By Value and By Reference
 
+A procedure or function may have no parameters, one parameter or more than one parameter. Use only the parameters the subroutine needs; a parameter list is not compulsory when the routine needs no caller data.
+
+```text
+PROCEDURE ShowHeading()
+    OUTPUT "Parcel report"
+ENDPROCEDURE
+```
+
 ### By value
 
 A copy of the argument is passed. Changing the parameter does not change the original variable.
@@ -339,6 +372,18 @@ The returned values replace the function calls in the expression.
 | argument | actual value or variable supplied in a call |
 | return value | result produced by a function |
 | call | instruction that transfers control to the subroutine |
+
+### Subroutine precision drill
+
+1. Define a procedure `ShowReady` with no parameters that outputs `"Ready"`, then write its call. **[2]**
+2. Define a function `Double` with one integer parameter that returns twice the parameter, then use its call in the expression `Result <- ... + 1`. **[2]**
+3. A routine receives `Mark` without changing the caller's value, but must update caller variables `Total` and `Count`. State the parameter mode for each parameter. **[2]**
+
+#### Subroutine precision drill answers
+
+1. A correct `PROCEDURE ShowReady()` ... `ENDPROCEDURE` definition **[1]** and `CALL ShowReady()` **[1]**. **[2]**
+2. A correct `FUNCTION Double(Value : INTEGER) RETURNS INTEGER` returning `Value * 2` **[1]** and `Result <- Double(Value) + 1` **[1]**. **[2]**
+3. `Mark` is passed by value **[1]**; `Total` and `Count` are passed by reference **[1]**. **[2]**
 
 For:
 
@@ -527,21 +572,21 @@ The worked calculations, process templates and scenario answers above model the 
 
 ## 10-Mark Quick Check
 
-1. State one difference between a constant and a variable. **[2]**
-2. Give one situation suitable for each loop: `FOR`, `WHILE`, `REPEAT ... UNTIL`. **[3]**
-3. Distinguish a parameter from an argument. **[2]**
-4. State the effect of passing a parameter by reference and state one appropriate use. **[2]**
-5. State how a function call is used. **[1]**
+1. Write pseudocode to declare and initialise integer constant `MAX_ITEMS` to 50, then declare integer variable `ItemCount`. **[2]**
+2. Write the opening and closing lines for: a count-controlled loop from 1 to 10; a pre-condition loop while `Found = FALSE`; a post-condition input loop that stops when `Choice = "X"`. **[3]**
+3. Write a `CASE` structure that outputs `"Add"` for choice 1, `"Exit"` for choice 2 and `"Invalid"` otherwise. **[2]**
+4. Convert this flowchart path to pseudocode: input `Age`; if `Age >= 18`, output `"Adult"`; otherwise output `"Minor"`. **[2]**
+5. The supplied routine is `ROUND(Value, Places)`. Write one statement that outputs `Average` rounded to two decimal places. **[1]**
 
 **Total: 10 marks**
 
 ## Quick Check Answers
 
-1. A constant cannot change during execution, while a variable can; both should be named. **[2]**
-2. `FOR`: known repetition count; `WHILE`: condition tested first/zero repetitions possible; `REPEAT`: body must execute at least once. **[3]**
-3. A parameter is the named placeholder in a subroutine definition; an argument is the actual value/variable supplied in a call. **[2]**
-4. It allows the subroutine to modify the caller's original variable **[1]**; suitable for swapping or returning an additional updated value **[1]**. **[2]**
-5. Its return value replaces the call within an expression. **[1]**
+1. `CONSTANT MAX_ITEMS = 50` **[1]**; `DECLARE ItemCount : INTEGER` **[1]**. **[2]**
+2. `FOR Index <- 1 TO 10` ... `NEXT Index` **[1]**; `WHILE Found = FALSE` ... `ENDWHILE` **[1]**; `REPEAT` / `INPUT Choice` ... `UNTIL Choice = "X"` **[1]**. **[3]**
+3. Correct `CASE OF Choice` with cases `1` and `2` **[1]** and `OTHERWISE`, output statements and `ENDCASE` **[1]**. **[2]**
+4. `INPUT Age`; a correctly formed `IF Age >= 18 THEN ... ELSE ... ENDIF` with the two stated outputs. Award input/condition **[1]** and complete branches **[1]**. **[2]**
+5. `OUTPUT ROUND(Average, 2)`. **[1]**
 
 ---
 
@@ -561,7 +606,7 @@ A delivery program processes an unknown number of parcel masses. Entry stops whe
    - reject other invalid values with a message
    - call `UpdateTotals` for valid values
    - output the count and average, avoiding division by zero. **[8]**
-5. State one reason this modular solution is more maintainable than duplicating the update logic. **[2]**
+5. Explain why `UpdateTotals` is appropriately a procedure and why `IsValidMass` is appropriately a function. **[2]**
 
 **Total: 20 marks**
 
@@ -619,7 +664,7 @@ A delivery program processes an unknown number of parcel masses. Entry stops whe
 
    Initialise both accumulators **[1]**; priming input **[1]**; correct sentinel loop **[1]**; function call/selection **[1]**; update call for valid data **[1]**; invalid message **[1]**; next input **[1]**; safe count/average output **[1]**. **[8]**
 
-5. Any valid reason, such as one update module can be changed/tested once **[1]** and every call uses the corrected behaviour **[1]**. **[2]**
+5. `UpdateTotals` is appropriately a procedure because it performs updates through reference parameters and no function result is required **[1]**. `IsValidMass` is appropriately a function because it returns one Boolean value that replaces the call in the `IF` expression **[1]**. **[2]**
 
 ---
 

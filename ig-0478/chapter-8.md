@@ -87,7 +87,8 @@ OUTPUT FinalPrice
 ### IF selection
 
 ```text
-IF Temperature < 0 THEN
+IF Temperature < 0
+THEN
     OUTPUT "Freezing"
 ELSE
     OUTPUT "Not freezing"
@@ -99,8 +100,10 @@ Questions may include statements nested up to three levels. Indent once for each
 open block and close the blocks in reverse order.
 
 ```text
-IF Mark >= 40 THEN
-    IF Mark >= 70 THEN
+IF Mark >= 40
+THEN
+    IF Mark >= 70
+    THEN
         Grade <- "Distinction"
     ELSE
         Grade <- "Pass"
@@ -175,7 +178,8 @@ UNTIL Choice >= 1 AND Choice <= 3
 - logical: `AND`, `OR`, `NOT`
 
 ```text
-IF Age >= 12 AND Age <= 17 THEN
+IF Age >= 12 AND Age <= 17
+THEN
     OUTPUT "Teen ticket"
 ENDIF
 ```
@@ -313,7 +317,8 @@ Highest <- Scores[1]
 HighestIndex <- 1
 
 FOR Index <- 2 TO 5
-    IF Scores[Index] > Highest THEN
+    IF Scores[Index] > Highest
+    THEN
         Highest <- Scores[Index]
         HighestIndex <- Index
     ENDIF
@@ -328,6 +333,22 @@ Here, `Index` is a variable index. `HighestIndex` preserves the position of the 
 
 Files preserve data after a program stops.
 
+Opening and closing control access to the file. Reading and writing may handle either a single data item or a complete line of text. Keep the intended record layout clear: a single numeric item can be read into a numeric variable, while a complete text line may include spaces and is read into a string.
+
+### Read and write single items
+
+```text
+OPENFILE "score.txt" FOR READ
+READFILE "score.txt", Score
+CLOSEFILE "score.txt"
+
+OPENFILE "result.txt" FOR WRITE
+WRITEFILE "result.txt", Score
+CLOSEFILE "result.txt"
+```
+
+Here one file item is transferred to or from one variable.
+
 ### Write lines
 
 ```text
@@ -336,6 +357,8 @@ WRITEFILE "results.txt", StudentName
 WRITEFILE "results.txt", Score
 CLOSEFILE "results.txt"
 ```
+
+Each `WRITEFILE` statement writes the supplied item as one line in this layout. A program can instead write a complete prepared string, such as `SummaryLine`, as one line of text.
 
 ### Read lines until end of file
 
@@ -358,6 +381,16 @@ Always:
 4. close the file
 
 Opening an existing file for writing may replace its contents. Use the mode stated in the question.
+
+### File-operation check
+
+1. Write pseudocode to open `name.txt`, read one complete line into `FullName`, close it, then write `FullName` as one complete line to `copy.txt` and close that file. **[3]**
+2. Write pseudocode to open `count.txt`, read the single integer item `Count`, close it, then write that item to `saved-count.txt` and close that file. **[3]**
+
+#### File-operation check answers
+
+1. Open/read/close `name.txt` **[1]**; open `copy.txt` for writing and write `FullName` **[1]**; close `copy.txt` **[1]**. **[3]**
+2. Open/read/close `count.txt` into integer variable `Count` **[1]**; open `saved-count.txt` for writing and write `Count` **[1]**; close `saved-count.txt` **[1]**. **[3]**
 
 ---
 
@@ -442,7 +475,8 @@ FOR Store <- 1 TO 3
     FOR Week <- 1 TO 4
         StoreTotal <- StoreTotal + Sales[Store, Week]
 
-        IF Sales[Store, Week] > Largest THEN
+        IF Sales[Store, Week] > Largest
+        THEN
             Largest <- Sales[Store, Week]
         ENDIF
     NEXT Week
@@ -463,7 +497,8 @@ The file `temperatures.txt` contains one real temperature per line. Display each
 
 ```text
 PROCEDURE DisplayTemperature(Value : REAL)
-    IF Value < 10 THEN
+    IF Value < 10
+    THEN
         OUTPUT Value, " Cold"
     ELSE
         OUTPUT Value
@@ -510,7 +545,7 @@ The worked calculations, process templates and scenario answers above model the 
 ## 10-Mark Quick Check
 
 1. State a suitable data type for each value: number of students, average height, one menu letter and a login flag. **[4]**
-2. State one difference between a `WHILE` loop and a `REPEAT ... UNTIL` loop. **[2]**
+2. For `Code <- "AB219"`, state the results of `LENGTH(Code)` and `SUBSTRING(Code, 2, 3)` when the first character is position 1. **[2]**
 3. Evaluate `DIV(17, 5)` and `MOD(17, 5)`. **[2]**
 4. State one benefit of a local variable and one benefit of using a function. **[2]**
 
@@ -519,7 +554,7 @@ The worked calculations, process templates and scenario answers above model the 
 ## Quick Check Answers
 
 1. Integer; real; character; Boolean. **[4]**
-2. `WHILE` tests before its body and may run zero times; `REPEAT ... UNTIL` tests after its body and therefore runs at least once. **[2]**
+2. `5`; `"B21"`. **[2]**
 3. `DIV(17, 5) = 3`; `MOD(17, 5) = 2`. **[2]**
 4. A local variable reduces unintended access/change outside its subroutine; a function packages reusable logic and returns a value. **[2]**
 
@@ -595,7 +630,8 @@ A wildlife station stores the number of birds seen at four sites on seven days i
 
    FOR Site <- 2 TO 4
        CurrentTotal <- SiteTotal(Site)
-       IF CurrentTotal > HighestTotal THEN
+       IF CurrentTotal > HighestTotal
+       THEN
            HighestTotal <- CurrentTotal
            HighestSite <- Site
        ENDIF

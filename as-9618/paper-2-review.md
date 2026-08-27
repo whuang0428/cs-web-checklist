@@ -67,14 +67,14 @@ A weather station stores a code, location, active flag and latest real temperatu
    - `PUSH C`
    - `PUSH D`
    - `POP`
-   - `PEEK`  
-   State the final stack and both returned values. **[4]**
+   - edit the current top item from `C` to `E`
+   State the final stack and the value returned by `POP`. **[4]**
 2. A queue contains `[J1, J2, J3]` from front to rear. Trace:
    - `ENQUEUE J4`
    - `DEQUEUE`
    - `DEQUEUE`  
    State the final queue and both returned values. **[3]**
-3. A linked list is `Start -> K -> M -> P -> NULL`. Describe the pointer changes needed to delete `M` and state the resulting list. **[3]**
+3. A linked list is `Start -> K -> M -> P -> NULL`. Apply these changes: insert `L` between `K` and `M`; edit the data in `P` to `Q`; delete `M`. State the resulting list and one pointer change required for the insertion and deletion. **[3]**
 
 ---
 
@@ -212,9 +212,9 @@ Write one complete pseudocode solution that:
 
 ### Question 4 Mark Scheme [10]
 
-1. After pushes: `[A, B, C, D]` **[1]**; `POP` returns `D` **[1]**; `PEEK` returns `C` **[1]**; final stack `[A, B, C]` **[1]**. **[4]**
+1. After pushes: `[A, B, C, D]` **[1]**; `POP` returns `D` **[1]**; editing the current top changes `C` to `E` **[1]**; final stack `[A, B, E]` **[1]**. **[4]**
 2. After enqueue: `[J1, J2, J3, J4]` **[1]**; dequeues return `J1` then `J2` **[1]**; final queue `[J3, J4]` **[1]**. **[3]**
-3. Set `K.Next` to the node containing `P` / to `M.Next` **[1]**; return the removed `M` node to the free list **[1]**; result `Start -> K -> P -> NULL` **[1]**. **[3]**
+3. Set `L.Next` to the node containing `M` and `K.Next` to the new `L` node for insertion **[1]**; change `P`'s data to `Q`, then set `L.Next` to the node after `M` / the node now containing `Q` for deletion **[1]**; result `Start -> K -> L -> Q -> NULL` **[1]**. **[3]**
 
 ---
 

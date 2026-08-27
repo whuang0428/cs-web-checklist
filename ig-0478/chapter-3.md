@@ -467,7 +467,7 @@ Examples:
 | Storage type | Meaning | Examples |
 | --- | --- | --- |
 | **Primary storage** | directly accessible by the CPU | RAM, ROM, cache, registers |
-| **Secondary storage** | not directly accessible by the CPU; usually non-volatile | HDD, SSD, optical disk, USB flash drive |
+| **Secondary storage** | not directly accessible by the CPU; usually non-volatile | HDD, SSD, optical disc, SD card, USB flash drive |
 
 
 #### RAM vs ROM
@@ -499,6 +499,8 @@ Examples:
 ---
 
 ### 3.3.2 Magnetic, Optical and Solid-state Storage
+
+Required examples are **HDD** for magnetic storage; **CD, DVD and Blu-ray** for optical storage; and **SSD, SD card and USB flash drive** for solid-state storage. An SD card and a USB flash drive use the same flash-memory principles described below; their removable form makes them suitable for transferring or carrying data.
 #### Magnetic Storage｜HDD
 How it works:
 
@@ -797,9 +799,9 @@ The worked calculations, process templates and scenario answers above model the 
 **Total: 10 marks**
 1. State the purpose of the **program counter**. `[1]`
 2. State the purpose of the **memory data register**. `[1]`
-3. Define **instruction set**. `[1]`
+3. State one difference between RAM and ROM. `[1]`
 4. Give two characteristics of an embedded system. `[2]`
-5. State the device used to convert analogue sensor readings into digital data. `[1]`
+5. State how an optical disc stores data and how the data is read. `[1]`
 6. Give one difference between RAM and secondary storage. `[1]`
 7. Give one feature of an SSD. `[1]`
 8. State the purpose of a NIC. `[1]`
@@ -808,9 +810,9 @@ The worked calculations, process templates and scenario answers above model the 
 ## Quick Check Answers
 1. Stores the address of the next instruction to be fetched.
 2. Stores data immediately before it is written to RAM or immediately after it is read from RAM.
-3. A list of machine code commands that can be processed by a CPU.
+3. RAM is volatile and stores current programs/data; ROM is non-volatile and stores firmware/start-up instructions.
 4. Any two: dedicated/single function; dedicated hardware; contains a microprocessor; not easily reprogrammed; built into larger device.
-5. ADC / analogue-to-digital converter.
+5. Data is represented by pits and lands / changes in reflectivity and is read using a laser.
 6. RAM is directly accessed by the CPU / volatile; secondary storage is not directly accessed by CPU / non-volatile.
 7. Any one: no moving parts; uses flash memory; uses semiconductor chips; uses NAND/NOR; uses transistors.
 8. Allows a device to connect to a network / send and receive network data.
@@ -821,11 +823,11 @@ The worked calculations, process templates and scenario answers above model the 
 ## 20-Mark Exam Practice
 
 **Total: 20 marks**
-### Question 1｜CPU and FDE `[6]`
+### Question 1｜CPU and FDE `[5]`
 A CPU uses a Von Neumann architecture. Describe how the CPU fetches and decodes an instruction.
 
-#### Mark Scheme
-Any six from:
+#### Question 1 Mark Scheme
+Any five from:
 
 + PC stores the address of the next instruction.
 + Address is copied from PC to MAR.
@@ -842,7 +844,7 @@ Any six from:
 ### Question 2｜CPU Performance `[4]`
 Explain how increasing the number of cores and increasing the cache size can improve CPU performance.
 
-#### Mark Scheme
+#### Question 2 Mark Scheme
 + Increasing the number of cores can improve performance. `[1]`
 + More instructions can be processed simultaneously. `[1]`
 + Increasing cache size can improve performance. `[1]`
@@ -850,11 +852,11 @@ Explain how increasing the number of cores and increasing the cache size can imp
 
 ---
 
-### Question 3｜Control System `[5]`
+### Question 3｜Control System `[4]`
 A greenhouse uses a temperature sensor and a microprocessor to keep the temperature between 20°C and 28°C. Describe how this system works.
 
-#### Mark Scheme
-Any five from:
+#### Question 3 Mark Scheme
+Any four from:
 
 + Temperature sensor measures the temperature.
 + Sensor data is sent to the microprocessor.
@@ -870,7 +872,7 @@ Any five from:
 ### Question 4｜Virtual Memory `[3]`
 Describe how virtual memory is created and used.
 
-#### Mark Scheme
+#### Question 4 Mark Scheme
 Any three from:
 
 + Secondary storage is partitioned to create virtual memory.
@@ -880,11 +882,12 @@ Any three from:
 
 ---
 
-### Question 5｜Network Hardware `[2]`
-Describe two features of a MAC address.
+### Question 5｜Network Hardware `[4]`
+(a) Describe two features of a MAC address. `[2]`
+(b) Explain how a router uses an IP address and a routing table to forward a packet. `[2]`
 
-#### Mark Scheme
-Any two from:
+#### Question 5 Mark Scheme
+**(a)** Any two from:
 
 + It is represented in hexadecimal.
 + It is usually 48 bits / 12 hexadecimal digits.
@@ -892,6 +895,8 @@ Any two from:
 + Groups are separated by colons / hyphens.
 + It contains manufacturer ID and unique device number.
 + It is static / cannot normally be changed.
+
+**(b)** The router reads the destination IP address `[1]` and uses a matching routing-table entry to choose the next hop / outgoing interface `[1]`.
 
 ---
 

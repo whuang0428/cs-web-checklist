@@ -875,26 +875,26 @@ The worked calculations, process templates and scenario answers above model the 
 
 ### Questions
 
-1. Define an embedded system. [2]
-2. Give one benefit of an embedded system and link it to the dedicated design. [1]
+1. State one defining characteristic of an embedded system. [1]
+2. Give one benefit and one drawback of an embedded system. [2]
 3. State what RAM stores while a program is running. [1]
 4. Give one difference between SRAM and DRAM. [1]
 5. State how a microphone first converts sound into an electrical signal. [1]
 6. Identify a suitable sensor to detect whether a door is open. [1]
-7. State the output of `1 XOR 1`. [1]
-8. State the output of `1 NAND 1`. [1]
+7. State one difference between RAM and ROM. [1]
+8. State how PROM, EPROM and EEPROM differ in whether and how they can be rewritten. [1]
 9. State why a VR headset must track the user's head movement. [1]
 
 ## Quick Check Answers
 
-1. Built into a larger device [1], performs a specific/dedicated task [1].
-2. One linked benefit, such as efficient/responsive because hardware and firmware are optimised for the dedicated task; compact/low-power because unnecessary general-purpose components are not required; reliable because fewer unrelated programs can interfere [1].
+1. Built into a larger device or performs a specific/dedicated task. [1]
+2. One valid benefit, such as efficient/responsive, compact/low-power or reliable for its dedicated workload **[1]**; one valid drawback, such as difficult to upgrade/repair, limited flexibility, dependence on the whole device, or constrained processing/storage **[1]**. **[2]**
 3. Current data and instructions / currently running programs [1].
 4. SRAM is faster / more expensive / no refresh; DRAM is cheaper / higher density / needs refresh [1].
 5. Sound waves vibrate a diaphragm / transducer, producing a changing analogue electrical signal [1].
 6. Contact sensor / magnetic sensor [1].
-7. `0` [1].
-8. `0` [1].
+7. RAM is volatile/read-write working memory; ROM is non-volatile and normally stores fixed firmware/start-up instructions [1].
+8. PROM is programmed once; EPROM is erased with ultraviolet light; EEPROM is erased and rewritten electrically [1].
 9. The processor must update the displayed viewpoint so it follows the user's orientation/movement [1].
 
 ---
@@ -903,36 +903,34 @@ The worked calculations, process templates and scenario answers above model the 
 
 **Total: 20 marks**
 
-### Question 1: Embedded system and sensors [6]
+### Question 1: Embedded system and sensors [5]
 
 A smart security doorbell has a camera, motion sensor, speaker and network connection. It detects movement and sends a video notification to a user’s phone.
 
 (a) Explain why the smart doorbell is an embedded system. [2]
 (b) Identify a suitable sensor for detecting movement near the door. [1]
-(c) Explain whether the doorbell is a monitoring system or a control system. [2]
+(c) State whether the described notification use is monitoring or control, and give the reason. [1]
 (d) Explain one benefit of using an embedded system for this doorbell. [1]
 
 #### Question 1 mark scheme
 
 (a) Built into a larger device / doorbell [1], performs specific tasks such as motion detection / video recording / notification [1].
 (b) Infrared / motion / proximity sensor [1].
-(c) Award up to [2]:
-+ monitoring if it records/transmits video without affecting the sensor input [1]
-+ control if it processes data and sends a signal to an output device such as speaker/light [1]
+(c) Monitoring, because it records/transmits information without using an actuator to change the measured condition [1]. Accept control only if the answer explicitly introduces an actuator that changes the environment.
 (d) One benefit linked to its dedicated workload, for example low power because it contains only the components needed for sensing/recording/communication, or responsive because firmware is optimised for those tasks [1].
 
 ---
 
-### Question 2: Memory and storage [6]
+### Question 2: Memory and storage [5]
 
 A computer has 2 GB RAM, ROM, a magnetic hard disk and a USB flash drive.
 
-(a) Explain how more RAM can improve performance. [3]
+(a) Explain how more RAM can improve performance. [2]
 (b) Describe the principal operation of a magnetic hard disk. [3]
 
-#### Mark scheme
+#### Question 2 mark scheme
 
-(a) Award up to [3]:
+(a) Award up to [2]:
 + more current data/instructions/programs can be stored in main memory [1]
 + less need for virtual memory / secondary storage access [1]
 + secondary storage has slower access time, so there is less delay/latency [1]
@@ -951,28 +949,37 @@ A computer writes sensor readings to an optical disc. It also has an internal ma
 (a) Explain why a buffer may be used when writing to the optical disc. [2]
 (b) Identify the removable secondary-storage device and explain one reason it may be selected instead of the internal hard disk. [2]
 
-#### Mark scheme
+#### Question 3 mark scheme
 
 (a) Temporary storage [1] because the computer and optical disc writer work at different speeds / data is stored until writer is ready [1].
 (b) USB flash drive [1]; it can be physically removed to transfer data between systems or kept separately as an offline backup [1].
 
 ---
 
-### Question 4: Logic gates [4]
+### Question 4: Logic gates and representation conversions [6]
 
 An alarm output `X` is 1 when the system is armed (`A = 1`) and either a door is open (`D = 1`) or motion is detected (`M = 1`).
 
-(a) Write the logic expression for `X`. [1]
-(b) Draw the corresponding logic circuit using standard gate symbols. [1]
-(c) State the three input rows `A,D,M` for which `X = 1`. [1]
-(d) A separate truth table outputs 1 only for two-input rows `0,1` and `1,0`. Name the single gate that implements it. [1]
+(a) State the output condition for each gate: `NOT`, `AND`, `OR`, `NAND`, `NOR` and `XOR`. [1]
+
+(b) Write the logic expression for `X`. [1]
+
+(c) Draw the corresponding logic circuit using standard gate symbols. [1]
+
+(d) Construct the final output column of the truth table for all eight input rows `A,D,M`. [1]
+
+(e) In another circuit, `P` and `Q` enter a `NAND` gate; its output and `NOT R` enter an `OR` gate. Write its expression and construct its final output column. [1]
+
+(f) A truth table outputs 1 only for two-input rows `0,1` and `1,0`. Write the expression and draw the single standard gate that implements it. [1]
 
 #### Question 4 mark scheme
 
-(a) `X = A AND (D OR M)` [1].
-(b) `D` and `M` enter an OR gate; its output and `A` enter an AND gate; output labelled `X`, with recognisable standard symbols [1].
-(c) `101`, `110`, `111` in `A,D,M` order [1].
-(d) XOR [1].
+(a) `NOT` inverts one input; `AND` is 1 only when both inputs are 1; `OR` is 1 when at least one input is 1; `NAND` and `NOR` invert `AND` and `OR`; `XOR` is 1 when the two inputs differ. All six required [1].
+(b) `X = A AND (D OR M)` [1].
+(c) `D` and `M` enter an OR gate; its output and `A` enter an AND gate; output labelled `X`, with recognisable standard symbols [1].
+(d) In `000, 001, 010, 011, 100, 101, 110, 111` order: `0, 0, 0, 0, 0, 1, 1, 1` [1].
+(e) `Y = (P NAND Q) OR (NOT R)`; in `000, 001, 010, 011, 100, 101, 110, 111` order: `1, 1, 1, 1, 1, 1, 1, 0`. Both required [1].
+(f) `Z = U XOR V` and one recognisable XOR symbol with inputs `U,V` and output `Z` [1].
 
 ---
 

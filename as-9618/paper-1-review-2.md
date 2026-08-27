@@ -28,7 +28,7 @@
 ## Question 1 — Information Representation [9]
 
 1. Convert denary `-52` to 8-bit two's complement. **[2]**
-2. Add hexadecimal `9A` and `37`, giving the hexadecimal result. **[2]**
+2. Subtract binary `00110101` from `10010110`, giving an 8-bit binary result. **[2]**
 3. A bitmap is `800 × 600` pixels with 24-bit colour. Calculate its uncompressed size in MiB using binary prefixes. **[3]**
 4. Explain one reason to choose vector graphics for a logo and one reason not to use lossy compression for source program text. **[2]**
 
@@ -37,7 +37,7 @@
 A research station sends data to a city laboratory.
 
 1. Explain why client-server networking is appropriate for centrally managed user accounts. **[2]**
-2. Compare POP3 and IMAP when researchers use several devices. **[3]**
+2. Compare circuit switching and packet switching when the station sends data to the laboratory. **[3]**
 3. Describe how a router uses an IP address and a routing table to forward a packet. **[2]**
 4. Give one benefit and one limitation of using satellite communication at the remote station. **[2]**
 
@@ -57,7 +57,7 @@ A research station sends data to a city laboratory.
 
 ## Question 5 — System Software [9]
 
-1. Explain how virtual memory allows a program to continue when RAM is insufficient, and state one performance cost. **[3]**
+1. Explain how backup software and disk defragmentation software perform different utility tasks. **[3]**
 2. Explain how a program library and a dynamically linked library (DLL) can support application development and execution. **[3]**
 3. Explain why Java is described as partially compiled and partially interpreted/executed by a virtual machine. **[3]**
 
@@ -92,14 +92,14 @@ The database contains `MEMBER(MemberID, Name, Region)` and `LOAN(LoanID, MemberI
 ### Question 1 Mark Scheme [9]
 
 1. `52 = 00110100`; invert/add one gives `11001100`. **[2]**
-2. `9A + 37 = D1`; correct method **[1]**, answer **[1]**. **[2]**
+2. `10010110 - 00110101 = 01100001`; correct binary subtraction method **[1]**, answer **[1]**. **[2]**
 3. `800 × 600 × 24 = 11 520 000` bits **[1]**; `÷ 8 = 1 440 000` bytes **[1]**; `÷ 1 048 576 ≈ 1.37 MiB` **[1]**. **[3]**
 4. Vector shapes scale without pixelation / usually suit simple geometric logos **[1]**; lossy compression could remove/change source characters so the exact program cannot be reconstructed **[1]**. **[2]**
 
 ### Question 2 Mark Scheme [9]
 
 1. Server centrally stores/authenticates account data **[1]**, so policies, permissions and backups can be applied consistently to clients **[1]**. **[2]**
-2. POP3 commonly downloads messages to a device and may remove server copies **[1]**; IMAP keeps mail/folders on the server **[1]**; IMAP therefore synchronises read state and organisation across devices **[1]**. **[3]**
+2. Circuit switching reserves one end-to-end communication path for the session **[1]**; packet switching divides data into addressed packets that may use different routes **[1]**; packet switching shares network capacity efficiently, whereas a reserved circuit gives predictable capacity but may be idle **[1]**. **[3]**
 3. Router reads destination IP **[1]** and uses the routing table/next-hop entry to select an outgoing interface **[1]**. **[2]**
 4. Benefit such as coverage where cables are unavailable **[1]**; limitation such as high latency, weather interference or cost **[1]**. **[2]**
 
@@ -119,7 +119,7 @@ The database contains `MEMBER(MemberID, Name, Region)` and `LOAN(LoanID, MemberI
 
 ### Question 5 Mark Scheme [9]
 
-1. Inactive pages are moved from RAM to secondary storage **[1]** and restored when needed, freeing RAM for active pages **[1]**; page swapping is much slower than RAM and may cause thrashing **[1]**. **[3]**
+1. Backup software copies selected data so it can be restored after loss or corruption **[1]**; disk defragmentation software rearranges file fragments into contiguous blocks on a magnetic disk **[1]**; this reduces head movement and can improve access speed **[1]**. **[3]**
 2. A program library supplies pre-written, tested routines that can be reused rather than rewritten **[1]**; a DLL is linked/loaded when the program runs instead of being copied into every executable **[1]**; one shared DLL can therefore reduce duplicated storage or be updated independently for applications that use its compatible interface **[1]**. **[3]**
 3. Java source is compiled to platform-independent bytecode **[1]**; the JVM interprets/executes or just-in-time compiles bytecode **[1]**; the same bytecode can run where a compatible JVM exists **[1]**. **[3]**
 

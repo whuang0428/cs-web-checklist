@@ -20,8 +20,8 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 | Syllabus objective | Where it is covered |
 |---|---|
-| Explain and apply abstraction | Abstraction |
-| Produce an abstract model containing essential details | Abstraction and Worked Example 1 |
+| Explain the need for, benefits and purpose of abstraction | Abstraction |
+| Produce an abstract model containing only essential details | Abstraction and Worked Example 1 |
 | Describe and use decomposition | Decomposition |
 | Understand an algorithm as a sequence of defined steps | Algorithms |
 | Use suitable identifiers and identifier tables | Identifiers and Identifier Tables |
@@ -37,6 +37,8 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 ## Abstraction
 
 **Abstraction** removes irrelevant detail and retains only the information needed to solve the current problem.
+
+Its purpose is to produce a usable model of the problem at the required level of detail. Abstraction is needed when the real system contains more information than the current solution requires.
 
 For a bus-fare program, essential details may include:
 
@@ -290,6 +292,39 @@ Do not add behaviour that was absent from the source representation.
 
 ---
 
+## Representation Transfer Drill
+
+Use the rule: input `Score`; output `"Pass"` when `Score >= 50`, otherwise output `"Retry"`.
+
+1. Document that complete algorithm as:
+   - structured English **[2]**
+   - a flowchart with labelled decision branches **[2]**
+   - pseudocode **[2]**.
+2. Convert this structured English to pseudocode: input `Quantity` until it is from 1 to 10 inclusive; output `Quantity * 4`. **[2]**
+3. Convert this flowchart path to pseudocode: Start → input `Age` → decision `Age >= 18?` → output `"Adult"` on Yes or `"Minor"` on No → Stop. **[2]**
+4. Draw a flowchart for this structured English: input `Temperature`; if it is below 0 output `"Ice"`, otherwise output `"Water"`. **[2]**
+5. Draw a flowchart equivalent to this pseudocode. **[2]**
+
+   ```text
+   INPUT Value
+   WHILE Value < 0 DO
+       INPUT Value
+   ENDWHILE
+   OUTPUT Value
+   ```
+
+**Total: 14 marks**
+
+### Representation Transfer Drill Answers
+
+1. Each representation must preserve one input, the `Score >= 50` decision and both outputs. Structured English earns one mark for the input/decision and one for both branches **[2]**. The flowchart earns one mark for correct input/decision shapes and one for labelled branches leading to the two outputs **[2]**. Pseudocode earns one mark for `INPUT Score` and the condition, and one for a complete `IF ... ELSE ... ENDIF` with both outputs **[2]**.
+2. Award one mark for a post-condition input loop ending with `UNTIL Quantity >= 1 AND Quantity <= 10`, and one for `OUTPUT Quantity * 4`. **[2]**
+3. `INPUT Age`, followed by a complete `IF Age >= 18 THEN ... ELSE ... ENDIF` with the two stated outputs. Award input/condition **[1]** and complete branches **[1]**. **[2]**
+4. Start → input `Temperature` → decision `Temperature < 0?`; labelled Yes leads to output `"Ice"`, labelled No leads to output `"Water"`; both paths reach Stop. Award correct symbols/condition **[1]** and labelled complete paths **[1]**. **[2]**
+5. Start → input `Value` → decision `Value < 0?`; Yes returns to input, while No leads to output `Value` and Stop. Award the correctly labelled loop **[1]** and the exit/output path **[1]**. **[2]**
+
+---
+
 ## Stepwise Refinement
 
 **Stepwise refinement** repeatedly replaces a high-level task with more detailed steps until every step can be programmed.
@@ -492,7 +527,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 ## 10-Mark Quick Check
 
-1. Define abstraction and state one benefit. **[2]**
+1. State the purpose of abstraction and one benefit of using it. **[2]**
 2. Define decomposition and state one benefit. **[2]**
 3. State the three columns normally required in an identifier table. **[3]**
 4. Name the three basic programming constructs. **[3]**
@@ -501,7 +536,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 ## Quick Check Answers
 
-1. Abstraction removes irrelevant details while retaining essential details **[1]**; it reduces complexity or focuses the solution on required data/rules **[1]**. **[2]**
+1. Its purpose is to model the problem using only details needed by the solution **[1]**; this reduces complexity, exposes the relevant data/rules or avoids work on irrelevant detail **[1]**. **[2]**
 2. Decomposition divides a problem into smaller sub-problems/modules **[1]**; it improves independent design, testing, reuse or maintenance **[1]**. **[2]**
 3. Identifier, data type and purpose. **[3]**
 4. Sequence, selection and iteration/repetition. **[3]**
@@ -512,7 +547,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 A cycling event system records a rider number, age category, distance completed and completion time. It displays an award category. A scenario description also gives the rider's shirt colour and preferred music.
 
-1. Identify two essential details and two irrelevant details for calculating the award. **[4]**
+1. Produce an abstract model for calculating the award by listing two essential details and two details that must be excluded as irrelevant. **[4]**
 2. Give four suitable modules for the system. **[4]**
 3. Create four identifier-table rows for data used by the solution. Include identifier, data type and purpose. **[4]**
 4. Write pseudocode to:

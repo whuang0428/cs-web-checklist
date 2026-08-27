@@ -118,7 +118,7 @@ Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</sp
 > The OS allocates memory to programs and data.  
 > It keeps track of which memory locations are in use.  
 > It prevents one process from accessing memory allocated to another process.  
-> It may use virtual memory when RAM is insufficient.
+> It protects memory allocated to one process from unauthorised access by another process.
 
 #### What to remember
 
@@ -128,7 +128,7 @@ Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</sp
 | Deallocate memory | <span lang="zh-CN">程序结束后释放</span> RAM |
 | Track memory | <span lang="zh-CN">记录哪些</span> memory locations <span lang="zh-CN">正在被用</span> |
 | Memory protection | <span lang="zh-CN">防止一个</span> program <span lang="zh-CN">改到另一个</span> program <span lang="zh-CN">的</span> memory |
-| Virtual memory | RAM <span lang="zh-CN">不够时</span>，<span lang="zh-CN">用</span> secondary storage <span lang="zh-CN">的一部分临时代替</span> |
+| Memory protection | <span lang="zh-CN">防止一个</span> process <span lang="zh-CN">读取或改写分配给另一个</span> process <span lang="zh-CN">的内存</span> |
 
 #### Common mistake
 
@@ -136,7 +136,9 @@ Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</sp
 | --- | --- |
 | “Memory management stores files permanently.” | Permanent files are stored on secondary storage; memory management mainly controls RAM. |
 | “RAM is unlimited.” | RAM is limited; OS must allocate it carefully. |
-| “Virtual memory makes computer faster.” | Not always. It allows more programs to run but is slower than RAM. |
+| “Memory management only stores data.” | It allocates, tracks, deallocates and protects main memory used by processes. |
+
+Virtual memory and paging are A2 Section 16.1 topics. They are taught in [A2 Chapter 16](../a2-9618/chapter-16.md#virtual-memory), not assessed as AS Section 5.1 content.
 
 ---
 
@@ -220,7 +222,6 @@ The OS manages input/output devices and peripherals. It allows communication bet
 
 > The OS uses device drivers to allow communication with peripheral devices.  
 > It sends data to output devices and receives data from input devices.  
-> It uses buffers to manage different data transfer speeds.  
 > It handles interrupts from devices.
 
 #### Important terms
@@ -228,7 +229,6 @@ The OS manages input/output devices and peripherals. It allows communication bet
 | Term | Meaning |
 | --- | --- |
 | Device driver | Software that allows OS to communicate with a hardware device |
-| Buffer | Temporary storage used when two devices work at different speeds |
 | Interrupt | Signal sent to CPU/OS when a device needs attention |
 | Spooling | Storing print jobs in a queue before sending them to printer |
 
@@ -236,7 +236,7 @@ The OS manages input/output devices and peripherals. It allows communication bet
 
 A printer is much slower than the CPU.
 
-> The OS sends print data to a buffer/spool. The printer takes data from the buffer at its own speed. This allows the CPU/program to continue with other tasks.
+> The OS uses a device driver to communicate with the printer and handles an interrupt when the device needs attention. Buffer operation belongs to AS Section 3.1 and is revised in [Chapter 3](chapter-3.md#input-output-and-storage-devices).
 
 ---
 
@@ -706,7 +706,6 @@ For each debugging feature, identify it and describe what it does.
 + **hardware/peripheral management**
 + **process management**
 + **device drivers**
-+ **buffers**
 + **interrupts**
 + **allocates processor time**
 + **schedules processes**
@@ -859,7 +858,6 @@ OS --> S[Security Management]
 OS --> H[Hardware / Peripheral Management]
 OS --> P[Process Management]
 H --> D[Device Drivers]
-H --> B[Buffers]
 H --> I[Interrupts]
 OS --> HW[Hardware]
 ```

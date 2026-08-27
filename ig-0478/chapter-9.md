@@ -178,15 +178,17 @@ Text values use quotation marks. Numeric and Boolean values normally do not.
 ```sql
 SELECT ItemName, Cost
 FROM Equipment
-ORDER BY Cost ASC;
+ORDER BY Cost ASCENDING;
 ```
 
-`ASC` means ascending and `DESC` means descending. Ascending is normally the default, but writing the required direction makes the intention clear.
+`ASCENDING` means ascending and `DESCENDING` means descending. Ascending is normally the default, but writing the required direction makes the intention clear.
+
+This chapter follows the SQL notation printed in the active 0478 syllabus. Some database products use the shorter keywords `ASC` and `DESC`; use the syllabus form in IGCSE answers.
 
 ```sql
 SELECT ItemName, Cost
 FROM Equipment
-ORDER BY Cost DESC;
+ORDER BY Cost DESCENDING;
 ```
 
 ### SUM and COUNT
@@ -223,7 +225,7 @@ Translate the request in a fixed order.
 SELECT ItemName, Cost
 FROM Equipment
 WHERE Category = 'Camera' AND Available = TRUE
-ORDER BY Cost DESC;
+ORDER BY Cost DESCENDING;
 ```
 
 Check that:
@@ -251,7 +253,7 @@ For the sample `Equipment` table:
 SELECT ItemName, Cost
 FROM Equipment
 WHERE Available = TRUE
-ORDER BY Cost DESC;
+ORDER BY Cost DESCENDING;
 ```
 
 Output:
@@ -329,7 +331,7 @@ Query:
 SELECT CourseName, Fee
 FROM Courses
 WHERE Online = TRUE OR Fee < 35
-ORDER BY Fee DESC;
+ORDER BY Fee DESCENDING;
 ```
 
 Filtering:
@@ -421,7 +423,7 @@ Assume the table is named `Bicycles` and uses these fields: `BikeCode`, `ModelNa
    SELECT BikeCode, ModelName, HourlyRate
    FROM Bicycles
    WHERE Available = TRUE AND HourlyRate < 12.50
-   ORDER BY HourlyRate ASC;
+   ORDER BY HourlyRate ASCENDING;
    ```
 
    Correct selected fields **[1]**; table **[1]**; availability condition **[1]**; rate condition joined with `AND` **[1]**; ascending rate order **[1]**. **[5]**

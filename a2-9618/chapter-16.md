@@ -822,7 +822,7 @@ The worked calculations, process templates and scenario answers above model the 
 4. State what the kernel does after a timer interrupt makes the running process ready. [1]
 5. Define virtual memory. [1]  
 6. State one difference between paging and segmentation. [1]  
-7. What does an interpreter do? [1]
+7. Explain one way an operating-system user interface hides hardware details from a user. [1]
 
 ## Quick Check Answers
 
@@ -832,7 +832,7 @@ The worked calculations, process templates and scenario answers above model the 
 4. It invokes the low-level scheduler, which selects a process from the ready queue for dispatch.
 5. Secondary storage is used as an extension of main memory / RAM.  
 6. Paging uses fixed-size pages; segmentation uses variable-sized logical segments.  
-7. It translates and executes source code one line at a time without producing a stored executable.
+7. It presents standard controls such as files, icons, menus or commands and converts the user's request into device-specific operations through the OS and device drivers.
 
 ---
 
@@ -849,7 +849,7 @@ A computer is running several processes at the same time.
 (c) Describe how round robin scheduling works. [2]  
 (d) State one benefit and one drawback of shortest job first scheduling. [2]
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 (a) A process is a program currently being executed. [1]
 
@@ -875,7 +875,7 @@ A student opens many large programs at the same time. The computer becomes very 
 (b) State one difference between paging and segmentation. [2]  
 (c) Explain what is meant by disk thrashing. [2]
 
-#### Mark scheme
+#### Question 2 mark scheme
 
 (a)  
 + Secondary storage is used as an extension of RAM. [1]  
@@ -898,7 +898,7 @@ A student opens many large programs at the same time. The computer becomes very 
 (c) Convert the infix expression `(A + B) * C` into RPN. [1]  
 (d) State the data structure normally used to evaluate RPN expressions. [1]
 
-#### Mark scheme
+#### Question 3 mark scheme
 
 (a)  
 + Translates source code one line / statement at a time. [1]  

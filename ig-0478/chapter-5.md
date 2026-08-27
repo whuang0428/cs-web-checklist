@@ -132,18 +132,18 @@ Use this structure:
 2. Data is **encrypted** before it is transmitted.
 3. If the data is intercepted, it cannot be understood without the key.
 4. A **digital certificate** can be used to authenticate the web server.
-5. The browser can use the server’s **public key** to encrypt data.
-6. The server uses its **private key** to decrypt the data.
+5. During the secure connection setup, the browser and server establish temporary **traffic keys**.
+6. Those traffic keys protect the web data sent in both directions.
 
 ```mermaid
 sequenceDiagram
     participant B as Browser
     participant S as Web Server
     B->>S: Request secure HTTPS page
-    S->>B: Send digital certificate + public key
+    S->>B: Send certificate information
     B->>B: Check certificate is trustworthy
-    B->>S: Send encrypted data
-    S->>S: Decrypt using private key
+    B->>S: Establish shared traffic keys securely
+    B->>S: Send data protected with traffic keys
 ```
 
 > **Exam-safe sentence**：HTTPS uses SSL/TLS to encrypt data, so if the data is intercepted it cannot be understood.
@@ -558,7 +558,7 @@ A **proxy server** sits between the user/client and the web server.
 | Browser | “It searches websites.” | <span lang="zh-CN">混淆</span> browser <span lang="zh-CN">和</span> search engine | A web browser renders HTML and displays web pages. |
 | DNS | “DNS finds the website.” | <span lang="zh-CN">太泛</span> | DNS stores domain names and matching IP addresses, then returns the IP address to the browser. |
 | HTTPS | “It is secure.” | <span lang="zh-CN">太泛</span>，<span lang="zh-CN">没有得分关键词</span> | HTTPS uses SSL/TLS to encrypt data so intercepted data cannot be understood. |
-| SSL certificate | “It makes website safe.” | <span lang="zh-CN">不具体</span> | A digital certificate authenticates the web server and contains the server’s public key. |
+| SSL/TLS certificate | “It makes website safe.” | <span lang="zh-CN">不具体</span> | A digital certificate helps the browser authenticate the web server during secure connection setup. |
 | Cookies | “Cookies are viruses.” | <span lang="zh-CN">错误</span> | Cookies are small text files stored/managed by the browser to store login details, preferences or shopping cart items. |
 | Session cookie | “Temporary cookie.” | <span lang="zh-CN">可以得</span> 1 <span lang="zh-CN">分但不完整</span> | Session cookies are deleted when the browser is closed and are stored temporarily / in RAM. |
 | Persistent cookie | “Permanent cookie.” | <span lang="zh-CN">不完整</span> | Persistent cookies remain after the browser is closed and are deleted by the user or when they expire. |
@@ -595,7 +595,7 @@ A **proxy server** sits between the user/client and the web server.
 >
 
 ### Template B｜HTTPS / SSL/TLS
-> HTTPS uses SSL/TLS to encrypt data before transmission. If the data is intercepted, it cannot be understood. A digital certificate can authenticate the web server. The browser can use the web server’s public key to encrypt data, and the web server uses its private key to decrypt it.
+> HTTPS uses SSL/TLS to encrypt data in transit, so intercepted web data cannot be understood without the traffic key. A digital certificate helps the browser authenticate the web server. The secure setup establishes temporary traffic keys that protect the application data sent in both directions.
 >
 
 ### Template C｜DDoS attack
@@ -644,7 +644,7 @@ The worked calculations, process templates and scenario answers above model the 
 5. Give one use of cookies. `[1]`
 6. State one difference between session cookies and persistent cookies. `[1]`
 7. State what is meant by social engineering. `[2]`
-8. Give one benefit of a proxy server. `[1]`
+8. State one security difference between HTTP and HTTPS. `[1]`
 
 ## Quick Check Answers
 1. Internet is the infrastructure; WWW is a collection of web pages accessed using the internet.
@@ -654,7 +654,7 @@ The worked calculations, process templates and scenario answers above model the 
 5. Stores login details / preferences / payment details / shopping cart / targeted advertising.
 6. Session cookies are deleted when the browser is closed; persistent cookies remain until deleted or expired.
 7. Manipulating/deceiving people to obtain confidential/personal/valuable data.
-8. Caching / hiding IP address / blocking requests / limiting requests / protecting web server from DDoS.
+8. HTTPS uses TLS to encrypt traffic and authenticate the server with a certificate; HTTP does not provide those protections.
 
 ---
 
@@ -666,7 +666,7 @@ A user enters a URL into a web browser to visit a website.
 
 Describe how the web page is located, retrieved and displayed on the user’s device.
 
-#### Mark Scheme
+#### Question 1 Mark Scheme
 Any five from:
 
 + Browser sends URL/domain name to DNS.
@@ -685,7 +685,7 @@ A shopping website uses both session cookies and persistent cookies.
 
 Explain how these two types of cookies may be used.
 
-#### Mark Scheme
+#### Question 2 Mark Scheme
 Any four from:
 
 + Session cookies can store items in a shopping cart during one visit.
@@ -702,7 +702,7 @@ A school wants to protect student records from unauthorised access.
 
 Suggest three security solutions and explain how each one helps protect the records.
 
-#### Mark Scheme
+#### Question 3 Mark Scheme
 One mark for solution + one mark for matching explanation, up to 6:
 
 + Strong password: uses letters/numbers/symbols, making it difficult to guess.
@@ -719,7 +719,7 @@ One mark for solution + one mark for matching explanation, up to 6:
 ### Question 4｜DDoS attack `[5]`
 Describe how a DDoS attack can cause a web server to fail.
 
-#### Mark Scheme
+#### Question 4 Mark Scheme
 Any five from:
 
 + Attacker sends malware to many computers.

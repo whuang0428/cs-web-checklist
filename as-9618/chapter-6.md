@@ -940,7 +940,7 @@ A bank allows customers to access accounts using a mobile application. Customer 
 (c) Explain how encryption protects customer data during transfer. [2]  
 (d) The bank verifies transferred data using a checksum. Describe how this works. [2]
 
-#### Mark scheme
+#### Question 1 mark scheme
 
 (a)  
 - Security protects data/system from unauthorised access / damage / misuse. [1]  
@@ -986,7 +986,7 @@ A website lets users create accounts and play quizzes. A user must enter:
 (c) Describe two verification methods used during data entry. [2]  
 (d) Give one benefit of using access rights for this website database. [1]
 
-#### Mark scheme
+#### Question 2 mark scheme
 
 (a)  
 - age over 16: limit check / range check. [1]  

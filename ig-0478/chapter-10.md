@@ -255,7 +255,7 @@ The output cannot be 1 when `T = 0`, regardless of the other inputs.
 
 ---
 
-## Worked Example 3 — Trace a NAND/NOR Network
+## Worked Example 3 — Circuit to a Complete Truth Table
 
 Given:
 
@@ -271,16 +271,55 @@ For `A = 1`, `B = 0`, `C = 0`:
 2. `B OR C = 0`, so `Y = 1`
 3. `X AND Y = 1`, so `Q = 1`
 
-Relevant rows:
+Complete every input combination rather than testing only convenient cases:
 
 | A | B | C | X = A NAND B | Y = B NOR C | Q |
 |---:|---:|---:|---:|---:|---:|
 | 0 | 0 | 0 | 1 | 1 | 1 |
 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 | 0 |
 | 1 | 0 | 0 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 0 |
 
 Do not replace the given network with a simplified alternative when the task asks you to reproduce the stated circuit. Follow each gate exactly.
+
+---
+
+## Worked Example 4 — Truth Table to Expression and Circuit
+
+The output is 1 for exactly two input combinations:
+
+| A | B | C | Q |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 |
+
+Write one condition for each row where `Q = 1`, then join the conditions with `OR`:
+
+```text
+Q = ((NOT A) AND B AND C) OR (A AND (NOT B) AND C)
+```
+
+To keep every required gate to two inputs, build each three-part condition in stages:
+
+```text
+X = (NOT A) AND B
+P = X AND C
+Y = A AND (NOT B)
+R = Y AND C
+Q = P OR R
+```
+
+The circuit therefore uses two `NOT` gates, four two-input `AND` gates and one two-input `OR` gate. This direct construction preserves the given truth table; do not simplify it unless the question asks you to.
 
 ---
 
@@ -309,91 +348,80 @@ The worked calculations, process templates and scenario answers above model the 
 
 ## 10-Mark Quick Check
 
-1. State the output of an `AND` gate and a `NAND` gate when both inputs are 1. **[2]**
+1. State the output of `NOT` when its input is 0, `AND` and `NAND` when both inputs are 1, and `NOR` when both inputs are 0. **[4]**
 2. State the output of an `OR` gate and an `XOR` gate when both inputs are 1. **[2]**
 3. State how the `NAND` symbol differs from the `AND` symbol, and how the `XOR` symbol differs from the `OR` symbol. **[2]**
-4. State how many rows are needed for a truth table with three inputs. **[1]**
-5. Write an expression for: “The lamp is on when switch A is on and switch B is not on.” **[2]**
-6. State why intermediate columns are useful in a truth table. **[1]**
+4. Write an expression for: “The lamp is on when switch A is on and switch B is not on.” **[2]**
 
 **Total: 10 marks**
 
 ## Quick Check Answers
 
-1. `AND = 1`; `NAND = 0`. **[2]**
+1. `NOT(0) = 1`; `AND(1,1) = 1`; `NAND(1,1) = 0`; `NOR(0,0) = 1`. **[4]**
 2. `OR = 1`; `XOR = 0`. **[2]**
 3. `NAND` has an inversion circle at the output of an `AND` symbol; `XOR` has an extra curved line at the input side of an `OR` symbol. **[2]**
-4. Eight rows. **[1]**
-5. `Lamp = A AND (NOT B)`. **[2]**
-6. They separate the result of each gate/sub-expression, making the process traceable and reducing errors. **[1]**
+4. `Lamp = A AND (NOT B)`. **[2]**
 
 ---
 
 ## 20-Mark Exam Practice
 
-1. State the output condition for each gate: `NOT`, `AND`, `OR`, `NAND`, `NOR`, `XOR`. **[6]**
-2. Complete the outputs:
+1. The expression is `Q = (A OR B) AND (NOT C)`.
+   - draw the circuit using standard gate symbols **[2]**
+   - complete the final output column for all eight input combinations **[2]**
 
-   | A | B | A NAND B | A NOR B |
+2. Use this circuit:
+
+   ![Inputs A and B enter a NAND gate; its output X and input C enter an OR gate to produce Q](../assets/logic-circuit-nand-or.svg)
+
+   - write the Boolean expression for `Q` **[1]**
+   - complete the truth table, including the intermediate column `X` **[3]**
+
+3. An alarm sounds when the door is open, `D = 1`, and either the system is armed, `A = 1`, or a manual test is active, `T = 1`.
+   - write the Boolean expression **[1]**
+   - draw the circuit using standard gate symbols **[2]**
+   - complete the final output column for all eight input combinations **[3]**
+
+4. Use the following truth table:
+
+   | A | B | C | Q |
    |---:|---:|---:|---:|
-   | 0 | 0 | ? | ? |
-   | 0 | 1 | ? | ? |
-   | 1 | 0 | ? | ? |
-   | 1 | 1 | ? | ? |
+   | 0 | 0 | 0 | 0 |
+   | 0 | 0 | 1 | 0 |
+   | 0 | 1 | 0 | 0 |
+   | 0 | 1 | 1 | 1 |
+   | 1 | 0 | 0 | 0 |
+   | 1 | 0 | 1 | 1 |
+   | 1 | 1 | 0 | 0 |
+   | 1 | 1 | 1 | 0 |
 
-   **[4]**
-3. For `Q = (A NAND B) OR (NOT C)`, find `Q` for:
-   - `A=0, B=0, C=1`
-   - `A=0, B=1, C=1`
-   - `A=1, B=1, C=0`
-   - `A=1, B=1, C=1`
-
-   **[4]**
-4. A security light turns on when motion is detected, `M=1`, and it is either dark, `D=1`, or the test switch is active, `T=1`.
-   - write the Boolean expression **[2]**
-   - state the two gates required and their connection order **[2]**
-   - find the output for `M=1, D=0, T=1` and for `M=0, D=1, T=1` **[2]**
+   - write a Boolean expression that reproduces the table without simplification **[3]**
+   - draw the corresponding circuit using only one-input `NOT` gates and two-input gates **[3]**
 
 **Total: 20 marks**
 
 ### 20 Marks Practice Mark Scheme
 
-1.
-   - `NOT`: output is the inverse of its one input
-   - `AND`: 1 only when both inputs are 1
-   - `OR`: 1 when at least one input is 1
-   - `NAND`: inverse of `AND`
-   - `NOR`: inverse of `OR`
-   - `XOR`: 1 when the inputs are different
+1. Connect `A` and `B` to an `OR` gate; connect `C` to a `NOT` gate; connect both results to an `AND` gate **[2]**. In row order `000` to `111`, the output column is `0, 0, 1, 0, 1, 0, 1, 0`; award one mark for each correct half-column **[2]**. **[4]**
 
-   One mark each. **[6]**
+2. `Q = (A NAND B) OR C` **[1]**.
 
-2.
+   | A | B | C | X = A NAND B | Q = X OR C |
+   |---:|---:|---:|---:|---:|
+   | 0 | 0 | 0 | 1 | 1 |
+   | 0 | 0 | 1 | 1 | 1 |
+   | 0 | 1 | 0 | 1 | 1 |
+   | 0 | 1 | 1 | 1 | 1 |
+   | 1 | 0 | 0 | 1 | 1 |
+   | 1 | 0 | 1 | 1 | 1 |
+   | 1 | 1 | 0 | 0 | 0 |
+   | 1 | 1 | 1 | 0 | 1 |
 
-   | A | B | A NAND B | A NOR B |
-   |---:|---:|---:|---:|
-   | 0 | 0 | 1 | 1 |
-   | 0 | 1 | 1 | 0 |
-   | 1 | 0 | 1 | 0 |
-   | 1 | 1 | 0 | 0 |
+   Correct `X` column **[1]**; correct first and second halves of `Q` **[2]**. **[4]**
 
-   Award one mark per correct row. **[4]**
+3. `Alarm = D AND (A OR T)` **[1]**. Connect `A` and `T` to an `OR` gate, then connect its result and `D` to an `AND` gate **[2]**. In row order `DAT = 000` to `111`, the output column is `0, 0, 0, 0, 0, 1, 1, 1`; award one mark for rows with `D = 0` and two marks for the four rows with `D = 1` **[3]**. **[6]**
 
-3.
-
-   | A | B | C | A NAND B | NOT C | Q |
-   |---:|---:|---:|---:|---:|---:|
-   | 0 | 0 | 1 | 1 | 0 | 1 |
-   | 0 | 1 | 1 | 1 | 0 | 1 |
-   | 1 | 1 | 0 | 0 | 1 | 1 |
-   | 1 | 1 | 1 | 0 | 0 | 0 |
-
-   One mark per correct final output. **[4]**
-
-4.
-   - `Light = M AND (D OR T)`. **[2]**
-   - Connect `D` and `T` to an `OR` gate, then connect its output and `M` to an `AND` gate. **[2]**
-   - For `1,0,1`, output `1`; for `0,1,1`, output `0`. **[2]**
+4. `Q = ((NOT A) AND B AND C) OR (A AND (NOT B) AND C)` **[3]**. Award one mark for each correct row-condition and one for joining them with `OR`. For the circuit: invert `A` and `B` **[1]**; build both three-part conditions using pairs of two-input `AND` gates **[1]**; join the two results with an `OR` gate **[1]**. **[6]**
 
 ---
 

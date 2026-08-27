@@ -8,7 +8,7 @@
 - Total: **75 marks**
 - Do not use a calculator.
 - Answer all seven questions.
-- Use pseudocode for coding answers; Question 7 may instead be answered in Python. Do not mix syntaxes.
+- Use pseudocode for coding answers; Question 7 may instead be answered in Python, Visual Basic or Java. Use one language consistently.
 - Complete this set without referring to Set A.
 
 ### Coverage Map
@@ -53,7 +53,8 @@ Swapped <- TRUE
 WHILE Upper > 1 AND Swapped = TRUE DO
     Swapped <- FALSE
     FOR Index <- 1 TO Upper - 1
-        IF Scores[Index] > Scores[Index + 1] THEN
+        IF Scores[Index] > Scores[Index + 1]
+        THEN
             Temp <- Scores[Index]
             Scores[Index] <- Scores[Index + 1]
             Scores[Index + 1] <- Temp
@@ -153,7 +154,7 @@ Write one complete solution that:
 - never allows the total booked to exceed four
 - finally outputs total places booked and total cost
 
-Use pseudocode or Python. **[15]**
+Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ---
 
@@ -210,7 +211,8 @@ LowestTotal <- ProductTotal(1)
 
 FOR Product <- 2 TO 4
     CurrentTotal <- ProductTotal(Product)
-    IF CurrentTotal < LowestTotal THEN
+    IF CurrentTotal < LowestTotal
+    THEN
         LowestTotal <- CurrentTotal
         LowestProduct <- Product
     ENDIF
@@ -272,7 +274,8 @@ ValidCount <- 0
 OPENFILE "Codes.txt" FOR READ
 WHILE NOT EOF("Codes.txt") DO
     READFILE "Codes.txt", Code
-    IF LENGTH(Code) = 8 AND SUBSTRING(Code, 1, 1) = "X" THEN
+    IF LENGTH(Code) = 8 AND SUBSTRING(Code, 1, 1) = "X"
+    THEN
         ValidCount <- ValidCount + 1
     ENDIF
 ENDWHILE
@@ -304,28 +307,33 @@ TotalCost <- 0
 
 REPEAT
     INPUT RequiredCode
-    IF RequiredCode <> "END" THEN
+    IF RequiredCode <> "END"
+    THEN
         Found <- FALSE
         Index <- 1
         WHILE Index <= 12 AND Found = FALSE DO
-            IF Activity[Index].Code = RequiredCode THEN
+            IF Activity[Index].Code = RequiredCode
+            THEN
                 Found <- TRUE
             ELSE
                 Index <- Index + 1
             ENDIF
         ENDWHILE
 
-        IF Found = FALSE THEN
+        IF Found = FALSE
+        THEN
             OUTPUT "Unknown code"
         ELSE
             REPEAT
                 INPUT RequiredPlaces
             UNTIL RequiredPlaces >= 1 AND RequiredPlaces <= 3
 
-            IF RequiredPlaces > Activity[Index].Places THEN
+            IF RequiredPlaces > Activity[Index].Places
+            THEN
                 OUTPUT "Insufficient places"
             ELSE
-                IF TotalBooked + RequiredPlaces > 4 THEN
+                IF TotalBooked + RequiredPlaces > 4
+                THEN
                     OUTPUT "Booking limit exceeded"
                 ELSE
                     Activity[Index].Places <- Activity[Index].Places - RequiredPlaces

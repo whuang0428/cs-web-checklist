@@ -922,7 +922,7 @@ A delivery company uses an AI system to find routes between towns.
 (b) State the purpose of A* and Dijkstra's algorithms. [2]
 (c) State one reason why a weighted graph is useful in this scenario. [1]
 
-#### Mark scheme
+#### Question 1 mark scheme
 (a)
 + towns represented as nodes / vertices [1]
 + roads represented as edges [1]
@@ -944,7 +944,7 @@ A website wants to recommend products to users. It has a large amount of shoppin
 (b) Explain your answer. [3]
 (c) Explain why supervised learning may not be suitable. [2]
 
-#### Mark scheme
+#### Question 2 mark scheme
 (a) Unsupervised learning [1]
 
 (b)
@@ -965,7 +965,7 @@ A hospital uses an AI system to analyse medical images.
 (b) Explain what is meant by deep learning. [3]
 (c) Explain how back propagation helps the model improve. [2]
 
-#### Mark scheme
+#### Question 3 mark scheme
 (a)
 + has connected processing units / nodes / neurons [1]
 + arranged in layers: input, hidden and output [1]

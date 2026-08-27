@@ -453,24 +453,32 @@ The four examples cover Paper 3 low-level/declarative reasoning and Paper 4 Java
 
 ## 10-Mark Quick Check
 
-1. Identify the addressing mode in each instruction: `LDM #5`, `LDD 20`, `LDI 20`, `LDX 20`, `JMP +3`. **[5]**
-2. Write three instructions to load immediate 4, add the value at address 12 and store the result at address 13. **[3]**
-3. Given `FACT cold(sample)` and the notation above, write a rule stating that every cold item needs checking, then write a goal asking whether `sample` needs checking. **[2]**
+1. Define a programming paradigm. **[1]**
+2. State one characteristic of low-level programming. **[1]**
+3. State one characteristic of imperative programming. **[1]**
+4. Distinguish a class, an object instance and a property/attribute. **[3]**
+5. State one characteristic of declarative programming. **[1]**
+6. Identify the addressing modes in `LDM #5`, `LDI 20` and `LDX 20`. **[3]**
 
 **Total: 10 marks**
 
 ## Quick Check Answers
 
-1. Immediate, direct, indirect, indexed, relative. **[5]**
-2. `LDM #4` **[1]**, `ADD 12` **[1]**, `STO 13` **[1]**. **[3]**
-3. `RULE needs_check(X) IF cold(X)` **[1]**; `GOAL needs_check(sample)` **[1]**. **[2]**
+1. A recognised approach/style for expressing and structuring programs. **[1]**
+2. It uses instructions close to machine operations / exposes registers, memory or addressing modes / is machine dependent. **[1]**
+3. It changes program state through an ordered sequence of commands, using variables and control structures. **[1]**
+4. A class is a blueprint/type **[1]**; an object is one instance created from that class **[1]**; a property/attribute stores state belonging to the object **[1]**. **[3]**
+5. It states facts/rules/goals describing what must be true rather than an ordered procedure for how to achieve it. **[1]**
+6. Immediate, indirect, indexed. **[3]**
 
 ## 20-Mark Exam Practice
 
 Write a Java class `SensorReading` and a loader.
 
 1. Create private sensor ID and reading fields, a constructor, getters and a setter accepting readings from `-50.0` to `150.0` inclusive. Invalid readings must throw `IllegalArgumentException`. **[8]**
-2. Write `loadReadings(Path path)` to read `sensorID,reading` records into an `ArrayList<SensorReading>`. Report and skip malformed records; handle an unreadable file without crashing. **[8]**
+2. File processing:
+   - **(a)** Write `loadReadings(Path path)` to read `sensorID,reading` records into an `ArrayList<SensorReading>`. Report and skip malformed records; handle an unreadable file without crashing. **[5]**
+   - **(b)** A fixed-length random file stores each record in 24 bytes: a 16-byte ID followed by an 8-byte `double`. Write `updateReading(RandomAccessFile file, long recordIndex, double newReading)` to validate the reading, seek directly to its value field and overwrite it. **[3]**
 3. Give four tests with input, expected result and actual result: both reading boundaries, one rejected value and one malformed file row followed by a valid row. **[4]**
 
 **Total: 20 marks**
@@ -478,7 +486,9 @@ Write a Java class `SensorReading` and a loader.
 ### 20 Marks Practice Mark Scheme
 
 1. Class and private fields **[2]**; constructor assigns ID and uses validation **[2]**; getters **[1]**; inclusive boundary test **[1]**; valid update **[1]**; throws `IllegalArgumentException` for invalid input **[1]**. **[8]**
-2. Correct return collection and resource handling **[2]**; reads every line **[1]**; splits/checks two fields **[1]**; converts numeric value **[1]**; constructs/adds valid object **[1]**; catches per-record format/range error and continues **[1]**; handles `IOException` **[1]**. **[8]**
+2. **(a)** Correct return collection and try-with-resources **[1]**; reads and splits every line **[1]**; converts and adds a valid object **[1]**; catches a per-record format/range error and continues **[1]**; handles `IOException` **[1]**. **[5]**
+
+   **(b)** Rejects a reading outside `-50.0` to `150.0` **[1]**; seeks to `recordIndex * 24L + 16L` **[1]**; calls `writeDouble(newReading)` at that position **[1]**. **[3]**
 3. One mark for each named test with matching expected and actual evidence. **[4]**
 
 ## Final Revision Checklist
