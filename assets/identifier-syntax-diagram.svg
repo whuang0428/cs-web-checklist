@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+  <title id="title">Syntax diagram for an identifier</title>
+  <desc id="desc">The path starts with one letter. It can then finish or repeatedly pass through another letter or digit before reaching the end.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#183153"/>
+    </marker>
+  </defs>
+  <style>
+    .wire { fill: none; stroke: #183153; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+    .box { fill: #ffffff; stroke: #183153; stroke-width: 4; }
+    .start-end { fill: #ffffff; stroke: #183153; stroke-width: 4; }
+    .label { fill: #183153; font: 700 24px system-ui, sans-serif; text-anchor: middle; }
+    .caption { fill: #425466; font: 18px system-ui, sans-serif; }
+    .panel { fill: #f7f9fc; stroke: #d9e2ef; stroke-width: 2; }
+  </style>
+
+  <rect width="760" height="480" fill="#ffffff"/>
+  <rect class="panel" x="20" y="20" width="720" height="440" rx="18"/>
+
+  <circle class="start-end" cx="60" cy="120" r="15"/>
+  <line class="wire" x1="75" y1="120" x2="130" y2="120"/>
+  <rect class="box" x="140" y="82" width="170" height="76" rx="16"/>
+  <text class="label" x="225" y="129">&lt;letter&gt;</text>
+  <line class="wire" x1="310" y1="120" x2="645" y2="120"/>
+  <circle class="start-end" cx="680" cy="120" r="15"/>
+  <circle class="start-end" cx="680" cy="120" r="7" fill="#183153"/>
+
+  <path class="wire" d="M360 120 V235 H420"/>
+  <path class="wire" d="M360 235 V320 H420"/>
+  <rect class="box" x="430" y="197" width="160" height="76" rx="16"/>
+  <text class="label" x="510" y="244">&lt;letter&gt;</text>
+  <rect class="box" x="430" y="285" width="160" height="70" rx="16"/>
+  <text class="label" x="510" y="329">&lt;digit&gt;</text>
+  <path class="wire" d="M590 235 H620 V180 H360 V130"/>
+  <path class="wire" d="M590 320 H640 V180 H620"/>
+
+  <text class="caption" x="48" y="55">Start with exactly one letter; then either finish or repeat letter/digit.</text>
+  <text class="caption" x="48" y="435">Rounded boxes are non-terminals defined by another grammar rule.</text>
+</svg>

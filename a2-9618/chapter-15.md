@@ -735,6 +735,10 @@ A flip-flop is a logic circuit that can store one bit of data.
 + **state**
 + **output retained**
 
+The left-hand circuit below is a gate-level NOR SR latch. The right-hand diagram is the standard block symbol for an edge-triggered JK flip-flop. Use the representation requested in the question and label every input, clock signal and output.
+
+![A cross-coupled NOR SR latch and a standard edge-triggered JK flip-flop symbol](../assets/flip-flop-circuits.svg)
+
 ---
 
 ### SR flip-flop
@@ -743,6 +747,22 @@ SR means:
 
 + `S` = Set
 + `R` = Reset
+
+#### Deriving the SR truth table from the circuit
+
+For the NOR latch shown above:
+
+```text
+Q(next)  = NOT(R OR Q')
+Q'(next) = NOT(S OR Q)
+```
+
+Trace one input pair at a time:
+
+- `S=0, R=0`: neither input forces a change, so the cross-coupled feedback retains the previous `Q`.
+- `S=1, R=0`: the lower NOR output `Q'` becomes `0`, allowing the upper NOR output `Q` to become `1`.
+- `S=0, R=1`: the upper NOR output `Q` becomes `0`, allowing `Q'` to become `1`.
+- `S=1, R=1`: both NOR outputs are forced to `0`; when both inputs return to `0`, the final stored state is not predictable, so this input is invalid.
 
 #### Basic SR truth table
 | S | R | Q next | Meaning |
@@ -760,6 +780,8 @@ SR flip-flop can store a bit because when `S = 0` and `R = 0`, the output stays 
 ### JK flip-flop
 
 JK flip-flop solves the invalid state problem of SR.
+
+The block symbol shows `J`, `K`, the active clock edge and complementary outputs `Q` and `Q'`. The stored value changes only at the active clock edge. Internal feedback uses the current outputs so that `J=1, K=1` toggles the state instead of producing the invalid SR input combination.
 
 #### JK truth table
 | J | K | Q next | Meaning |
@@ -1034,12 +1056,14 @@ D --> E[Restore saved state]
 E --> F[Continue original program]
 ```
 
-### VM structure
+### Hosted (type-2) VM example
+
+This diagram shows one possible VM arrangement: a hosted, or type-2, hypervisor runs above a host operating system. It is not the only VM structure; a type-1 hypervisor can run directly on the physical hardware.
 
 ```mermaid
 flowchart TD
 A[Physical Hardware<br/>CPU RAM Storage] --> B[Host Operating System]
-B --> C[Hypervisor]
+B --> C[Hosted / type-2 hypervisor]
 C --> D[Guest VM 1<br/>OS + Apps]
 C --> E[Guest VM 2<br/>OS + Apps]
 C --> F[Guest VM 3<br/>OS + Apps]
@@ -1103,22 +1127,20 @@ The worked calculations, process templates and scenario answers above model the 
 
 **Total: 20 marks**
 
-### Question 1: RISC, interrupts and pipelining `[6]`
+### Question 1: RISC, interrupts and pipelining `[5]`
 
-(a) Identify four features of a RISC processor. `[4]`
+(a) Compare RISC and CISC processors in three ways. `[3]`
 (b) State one step that both RISC and CISC processors must perform when handling an interrupt, then state one reason interrupt handling can be more complex when pipelining is used. `[2]`
 
 #### Question 1 mark scheme
-(a) One mark each, max 4:
+(a) One mark for each paired comparison, max 3:
 
-+ uses few instructions
-+ uses simple instructions
-+ fixed length / fixed format instructions
-+ instructions often execute in a single cycle
-+ uses general-purpose registers
-+ pipelining is easier to apply
-+ hard-wired control unit
-+ design emphasis on software / compiler
++ RISC uses fewer, simpler instructions, whereas CISC uses more, more complex instructions
++ RISC instructions are usually fixed length/fixed format, whereas CISC instructions may have variable lengths/formats
++ RISC instructions often execute in one cycle, whereas a CISC instruction may take several cycles
++ RISC commonly uses many general-purpose registers, whereas CISC may use fewer
++ regular RISC instructions make pipelining easier, whereas varied CISC instructions make it more complex
++ RISC design places more emphasis on software/the compiler, whereas CISC places more emphasis on hardware
 
 (b) One mark for any one shared step:
 
@@ -1133,35 +1155,48 @@ One mark for a pipelining issue:
 
 ---
 
-### Question 2: Parallel architectures `[4]`
+### Question 2: Parallel architectures and massively parallel systems `[4]`
 
-Complete the table.
+(a) Complete the table to compare the instruction and data streams used by each architecture. Write `single` or `multiple` in every empty cell. `[2]`
 
-| Architecture | Full name | Description |
+| Architecture | Instruction streams | Data streams |
 | --- | --- | --- |
 | SISD |  |  |
 | SIMD |  |  |
 | MISD |  |  |
 | MIMD |  |  |
 
-#### Question 2 mark scheme
-One mark per correct row, max 4:
+(b) A weather model divides a large simulation into many smaller grid calculations. These calculations run at the same time on a connected system.
 
-+ SISD = Single Instruction, Single Data; one instruction stream on one data stream / sequential execution
-+ SIMD = Single Instruction, Multiple Data; same instruction applied to multiple data items
-+ MISD = Multiple Instruction, Single Data; different instructions applied to same data stream
-+ MIMD = Multiple Instruction, Multiple Data; different processors execute different instructions on different data streams
+Explain two features that make this a massively parallel system. `[2]`
+
+#### Question 2 mark scheme
+
+(a) Award one mark for any two completely correct rows and two marks for all four completely correct rows. `[2]`
+
+| Architecture | Instruction streams | Data streams |
+| --- | --- | --- |
+| SISD | single | single |
+| SIMD | single | multiple |
+| MISD | multiple | single |
+| MIMD | multiple | multiple |
+
+(b) One mark for each explained feature, max 2:
+
++ a large number of processors / separate computers are connected `[1]`
++ processors perform the smaller grid calculations simultaneously `[1]`
++ the work is divided into coordinated sub-problems / processors communicate results using messages `[1]`
 
 ---
 
-### Question 3: Virtual machines `[4]`
+### Question 3: Virtual machines `[2]`
 
 A school wants students to test different operating systems without changing the computers in the classroom.
 
-Explain two benefits and two limitations of using virtual machines. `[4]`
+Explain one benefit and one limitation of using virtual machines. `[2]`
 
 #### Question 3 mark scheme
-Benefits, max 2:
+Benefit, max 1:
 
 + different operating systems can run on one host machine
 + isolated from the host / other VMs
@@ -1169,7 +1204,7 @@ Benefits, max 2:
 + VM can be restored from snapshot / backup
 + reduces need for extra physical machines
 
-Limitations, max 2:
+Limitation, max 1:
 
 + performance overhead due to hypervisor
 + VMs share CPU/RAM/storage resources
@@ -1179,25 +1214,37 @@ Limitations, max 2:
 
 ---
 
-### Question 4: Flip-flops and Boolean algebra `[3]`
+### Question 4: Flip-flops and Boolean algebra `[5]`
 
 (a) Draw an SR latch using two cross-coupled NOR gates. Label `S`, `R`, `Q` and `Q'`. `[1]`
 
-(b) For a NOR-gate SR latch, state the next value of `Q` for `S=1, R=0` and for `S=0, R=1`. `[1]`
+(b) Complete the `Q next` column for a NOR-gate SR latch for inputs `00`, `01`, `10` and `11`, in `S,R` order. `[1]`
 
-(c) Simplify `(A + B)'.B + A.B`. `[1]`
+(c) Draw the standard block symbol for an edge-triggered JK flip-flop. Label `J`, `K`, the clock input, `Q` and `Q'`. `[1]`
+
+(d) A JK flip-flop currently stores `Q=0`. State its next value and the operation performed when `J=1, K=1` at the active clock edge. `[1]`
+
+(e) Simplify `(A + B)'.B + A.B`. `[1]`
 
 #### Question 4 mark scheme
 
-**(a)** Two NOR gates with each output fed back to one input of the other; external inputs and complementary outputs correctly labelled. `[1]`
+**(a) and (c) reference diagrams**
 
-**(b)** `S=1, R=0` sets `Q` to `1`; `S=0, R=1` resets `Q` to `0`. Both required. `[1]`
+![Reference SR latch circuit and JK flip-flop block symbol](../assets/flip-flop-circuits.svg)
 
-**(c)** `(A + B)'.B + A.B = A'.B'.B + A.B = A.B`. `[1]`
+**(a)** Two recognisable NOR gates with each output fed back to one input of the other; external inputs and complementary outputs correctly labelled. `[1]`
+
+**(b)** `Q`, `0`, `1`, `invalid / undefined`, in `00`, `01`, `10`, `11` order. All four required. `[1]`
+
+**(c)** A labelled JK block with `J` and `K` inputs, a clock/edge input and complementary `Q`, `Q'` outputs. `[1]`
+
+**(d)** `Q next = 1`; the stored value toggles. Both required. `[1]`
+
+**(e)** `(A + B)'.B + A.B = A'.B'.B + A.B = A.B`. `[1]`
 
 ---
 
-### Question 5: K-map and sum-of-products `[3]`
+### Question 5: K-map construction and simplification `[4]`
 
 A logic function has output 1 for:
 
@@ -1209,27 +1256,29 @@ A B C
 1 1 1
 ```
 
-(a) Write the full sum-of-products expression. `[2]`
-(b) Simplify the expression. `[1]`
+(a) Copy and complete this K-map by entering all eight output values. Use Gray-code column order. `[1]`
+
+| A\BC | 00 | 01 | 11 | 10 |
+| --- | --- | --- | --- | --- |
+| 0 |  |  |  |  |
+| 1 |  |  |  |  |
+
+(b) On the completed K-map, draw the largest possible group containing all the `1` cells. Explain why this grouping is valid. `[2]`
+
+(c) Use the group to write the simplified Boolean expression for `Z`. `[1]`
 
 #### Question 5 mark scheme
 
-(a)
+(a) All eight values must be correct. `[1]`
 
-```text
-Z = A'.B'.C + A'.B.C + A.B'.C + A.B.C
-```
+| A\BC | 00 | 01 | 11 | 10 |
+| --- | --- | --- | --- | --- |
+| 0 | 0 | **1 ①** | **1 ①** | 0 |
+| 1 | 0 | **1 ①** | **1 ①** | 0 |
 
-Award:
+(b) Enclose the four cells marked `①` in one group. `[1]` The group is valid because it contains four adjacent cells, a power of two; `A` and `B` change within the group while `C` remains `1`. `[1]` **[2]**
 
-+ any two correct minterms `[1]`
-+ all four correct minterms and OR operators `[1]`
-
-(b)
-
-```text
-Z = C
-```
+(c) `Z = C` because `C` is the only variable that remains constant throughout the group. `[1]`
 
 ---
 

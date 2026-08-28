@@ -321,12 +321,14 @@ sequenceDiagram
     participant C as Client
     participant S as Server
     C->>S: Request secure connection
-    S->>C: Send digital certificate + public key
-    C->>C: Validate certificate using CA
-    C->>S: Send encrypted data for session key setup
-    S->>S: Decrypt using server private key
-    C->>S: Encrypted session starts
-    S->>C: Data exchanged using symmetric session key
+    S->>C: Send digital certificate and connection information
+    C->>C: Validate certificate, identity and CA signature
+    C->>S: Exchange key-agreement information
+    S->>C: Complete key agreement
+    C->>C: Derive session keys
+    S->>S: Derive matching session keys
+    C->>S: Send data protected with session keys
+    S->>C: Return protected data
 ```
 
 #### Step-by-step version
@@ -338,18 +340,18 @@ sequenceDiagram
 5. The session key is used for symmetric encryption during the session.
 6. Encrypted data is exchanged.
 
-#### Why both asymmetric and symmetric are used
+#### Why the handshake and data-transfer stages differ
 
 | Stage | Method | Reason |
 | --- | --- | --- |
-| initial handshake | asymmetric | allows secure key exchange and server authentication |
-| data transfer | symmetric session key | faster for large amounts of data |
+| initial handshake | certificate authentication and key agreement | authenticates the server and establishes session keys |
+| data transfer | symmetric session keys | efficient for protecting large amounts of data |
 
 #### Common mistake
 
 | Mistake | Correction |
 | --- | --- |
-| SSL/TLS only uses asymmetric encryption | it normally uses asymmetric for setup and symmetric for session data |
+| SSL/TLS only uses asymmetric encryption | certificate authentication and key agreement establish session keys; session data is then protected symmetrically |
 | certificate encrypts the data | certificate helps authenticate identity and provide public key |
 | TLS only checks password | TLS secures communication, not just passwords |
 

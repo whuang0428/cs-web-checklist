@@ -30,7 +30,7 @@ Revise: algorithm tracing and comparison; linear and binary search; bubble and i
 
 - A stack is LIFO; a queue is FIFO.
 - A linked list uses data and pointer arrays with start and free-list pointers.
-- Trees and graphs require explicit traversal rules and visited-state control.
+- A binary search tree follows an ordering rule; a graph models items as vertices and connections as edges.
 
 **Exam cue:** explain both the operation and the pointer/index change.
 
@@ -62,7 +62,7 @@ Revise: algorithm tracing and comparison; linear and binary search; bubble and i
 | Trace and compare searching/sorting | Worked Examples 1 and 2 |
 | Use pseudocode and Java implementations | Search and Sort Patterns |
 | Explain stack, queue and linked-list operations | Abstract Data Types and Worked Example 3 |
-| Explain tree and graph traversal | Trees and Graphs |
+| Explain tree operations and graph features/use | Trees and Graphs |
 | Use Big O time and space | Complexity and Worked Example 4 |
 | Write and trace recursion | Recursion and practice |
 
@@ -204,7 +204,7 @@ An ADT defines permitted operations independently of its representation.
 | Queue | FIFO | enqueue, dequeue | circular array plus front/rear/count |
 | Linked list | pointer order | insert, delete, find | data and next arrays, start/free pointers |
 | Binary search tree | smaller left, larger right | insert, find, traverse | linked nodes or array records |
-| Graph | vertices and edges | add edge, breadth/depth traversal | adjacency matrix/list |
+| Graph | vertices and edges | describe connections; justify use | graph ADT |
 
 ### Required operations in pseudocode
 
@@ -437,7 +437,9 @@ If `StartPointer = 2` and the live chain is `2 → 5 → 1 → -1`, deleting nod
 
 ## Trees and Graphs
 
-A **BinarySearchTree** follows an ordering rule. In-order traversal visits left subtree, node, right subtree and produces ascending keys. A graph may use an adjacency matrix or adjacency list. Breadth-first traversal uses a queue; depth-first traversal uses recursion or a stack. Both need a visited set.
+A **BinarySearchTree** follows an ordering rule. In-order traversal visits the left subtree, then the node, then the right subtree and produces ascending keys.
+
+A **graph** is an ADT that represents items or places as **vertices** and their relationships as **edges**. An edge may be directed or undirected and may store a weight such as distance, time or cost. A graph is suitable when a problem involves many-to-many connections, such as a route network, social network or dependency map. Candidates need to describe these key features and justify graph use for a situation; they are not required to write code for a graph structure in Section 19.
 
 ```java
 import java.util.ArrayList;
@@ -523,7 +525,7 @@ For `factorial(4)` the calls descend as `4 → 3 → 2 → 1`. The base case ret
 - [ ] I do not use binary search on unsorted data.
 - [ ] I distinguish the ADT interface from its representation.
 - [ ] I return deleted nodes to the free list.
-- [ ] I mark graph vertices as visited.
+- [ ] I describe graph vertices, edges, direction/weights where relevant, and justify using a graph for the scenario.
 - [ ] I state time and auxiliary space separately.
 - [ ] I include a reachable base case and progress towards it.
 - [ ] I use pseudocode for language-neutral design and Java for executable implementation.
@@ -592,7 +594,7 @@ An inventory program needs searching, sorting and several ADTs. Answer in pseudo
 - [ ] I can express an algorithm in pseudocode before implementing it in Java.
 - [ ] I can trace and compare required searches and sorts.
 - [ ] I can implement stack, queue, linked-list and tree operations safely.
-- [ ] I can choose a graph representation and control repeated visits.
+- [ ] I can describe the key features of a graph and justify its use for a given situation.
 - [ ] I can justify time and auxiliary-space complexity.
 - [ ] I can trace recursive calls and unwinding.
 - [ ] I can test empty, boundary, duplicate and full-structure cases.

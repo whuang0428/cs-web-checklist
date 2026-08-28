@@ -6,14 +6,14 @@ Use the command word, mark allocation and context to decide how much to write. T
 
 | Command word | What your answer must do |
 |---|---|
-| State / Identify | Give one precise fact, value or name. |
+| State / Identify | Give the precise fact(s), value(s) or name(s) requested. |
 | Describe | Give the relevant features, stages or behaviour. |
 | Explain | State a point and show why or how it produces the result. |
 | Compare | Give linked similarities or differences covering both sides. |
 | Justify | Choose an option and support it with the stated context. |
 | Discuss | Develop relevant arguments, including different sides where appropriate. |
 | Evaluate | Weigh evidence or trade-offs and reach a supported judgement. |
-| Calculate | Show the method, substitutions, units and final value. |
+| Calculate | Work out the value; show method, substitutions and units when the question or mark allocation requires them. |
 | Trace | Follow the algorithm exactly and record each required state change. |
 | Write pseudocode | Use consistent Cambridge-style logic, clear identifiers and correct control structures. |
 

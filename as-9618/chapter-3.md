@@ -834,10 +834,10 @@ Draw:
 flowchart TD
 A[Physical change in environment] --> B[Sensor detects measurement]
 B --> C[Analogue/digital data sent to processor]
-C --> D{Condition met?}
-D -- No --> E[Store/display data only<br/>monitoring behaviour]
-D -- Yes --> F[Send signal to output device / actuator]
-F --> G[Actuator changes environment<br/>control behaviour]
+C --> D{Does the system send a signal<br/>to an actuator?}
+D -- No --> E[Store, display or transmit data<br/>monitoring system]
+D -- Yes --> F[Actuator changes the environment<br/>control system]
+F --> B
 ```
 
 ---
@@ -966,9 +966,9 @@ An alarm output `X` is 1 when the system is armed (`A = 1`) and either a door is
 
 (c) Draw the corresponding logic circuit using standard gate symbols. [1]
 
-(d) Construct the final output column of the truth table for all eight input rows `A,D,M`. [1]
+(d) Complete the final output column of the truth table for all eight input rows `A,D,M`. [1]
 
-(e) In another circuit, `P` and `Q` enter a `NAND` gate; its output and `NOT R` enter an `OR` gate. Write its expression and construct its final output column. [1]
+(e) In another circuit, `P` and `Q` enter a `NAND` gate; its output and `NOT R` enter an `OR` gate. Write its expression and complete its final output column. [1]
 
 (f) A truth table outputs 1 only for two-input rows `0,1` and `1,0`. Write the expression and draw the single standard gate that implements it. [1]
 

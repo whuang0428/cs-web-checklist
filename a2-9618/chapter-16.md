@@ -583,7 +583,7 @@ E --> F[Object code / executable]
 
 <letter> ::= A | B | C | D
 
-<identifier> ::= <letter> | <letter><identifier> | <identifier><digit>
+<identifier> ::= <letter> | <identifier><letter> | <identifier><digit>
 ```
 
 #### How to read
@@ -613,6 +613,26 @@ When checking if a string is valid:
 3. Check every character in order.
 4. If a character cannot follow any path, it is invalid.
 5. Make sure the string ends at the diagram exit.
+
+### Worked syntax diagram — identifier
+
+The diagram below expresses the same identifier rule as the BNF example. Follow the arrows from the start circle to the end circle. The first path must pass through `<letter>`. The lower loop may then be followed zero or more times, consuming one additional `<letter>` or `<digit>` each time.
+
+![Syntax diagram for an identifier that starts with a letter and may continue with letters or digits](../assets/identifier-syntax-diagram.svg)
+
+| String | Valid? | Reason |
+| --- | --- | --- |
+| `A` | yes | follows `<letter>` and then exits |
+| `B7` | yes | starts with `<letter>`, then loops through `<digit>` |
+| `A3D` | yes | starts with `<letter>`, then follows digit and letter loop paths |
+| `7A` | no | the first item cannot be `<digit>` |
+| `AB-2` | no | there is no path for `-` |
+
+To convert the diagram into BNF, identify the compulsory first item and the repeated alternatives. One equivalent rule is:
+
+```bnf
+<identifier> ::= <letter> | <identifier><letter> | <identifier><digit>
+```
 
 ---
 
@@ -844,7 +864,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 A computer is running several processes at the same time.
 
-(a) Explain what is meant by a process. [1]  
+(a) Define a process. [1]
 (b) Describe the difference between the ready and blocked states. [2]  
 (c) Describe how round robin scheduling works. [2]  
 (d) State one benefit and one drawback of shortest job first scheduling. [2]
@@ -893,23 +913,30 @@ A student opens many large programs at the same time. The computer becomes very 
 
 ### Question 3: Translation software, BNF and RPN [7]
 
-(a) Describe how an interpreter executes a program. [3]  
-(b) Name two stages of compilation and describe one of them. [2]  
-(c) Convert the infix expression `(A + B) * C` into RPN. [1]  
-(d) State the data structure normally used to evaluate RPN expressions. [1]
+(a) Describe how an interpreter executes a program. [2]
+
+(b) Name two stages of compilation and describe one of them. [2]
+
+(c) Use the identifier syntax diagram in this chapter. State whether `A7` and `7A` are valid identifiers. [1]
+
+(d) Write a BNF rule named `<bit>` that allows either `0` or `1`. [1]
+
+(e) Calculate the value of the RPN expression `5 2 - 4 *`. [1]
 
 #### Question 3 mark scheme
 
 (a)  
 + Translates source code one line / statement at a time. [1]  
-+ Executes the line if it has no syntax error. [1]  
-+ Does not produce / store an executable file, and translation is repeated each time it runs. [1]
++ Executes each valid line immediately and does not produce / store an executable file. [1]
 
 (b) Any two stages: lexical analysis, syntax analysis, code generation, optimisation. [1]  
 Description example: lexical analysis breaks code into tokens / syntax analysis checks grammar rules / code generation produces object code / optimisation improves efficiency. [1]
 
-(c) `A B + C *` [1]  
-(d) Stack. [1]
+(c) `A7` is valid; `7A` is invalid because the first path must be `<letter>`. Both required. [1]
+
+(d) `<bit> ::= 0 | 1` [1]
+
+(e) `12`: subtract `2` from `5`, then multiply the result by `4`. [1]
 
 ---
 

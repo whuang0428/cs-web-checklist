@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1080" viewBox="0 0 760 1080" role="img" aria-labelledby="title desc">
+  <title id="title">SR latch circuit and JK flip-flop symbol</title>
+  <desc id="desc">A cross-coupled NOR-gate SR latch with labelled S, R, Q and Q prime, followed by a standard edge-triggered JK flip-flop block symbol with J, K, clock, Q and Q prime.</desc>
+  <style>
+    .panel { fill: #f7f9fc; stroke: #d9e2ef; stroke-width: 2; }
+    .gate, .block { fill: #ffffff; stroke: #183153; stroke-width: 4; stroke-linejoin: round; }
+    .wire { fill: none; stroke: #183153; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .bubble { fill: #ffffff; stroke: #183153; stroke-width: 4; }
+    .title { fill: #183153; font: 700 28px system-ui, sans-serif; }
+    .subtitle { fill: #425466; font: 18px system-ui, sans-serif; }
+    .label { fill: #183153; font: 700 24px system-ui, sans-serif; }
+    .gate-label { fill: #183153; font: 700 18px system-ui, sans-serif; }
+    .note { fill: #425466; font: 17px system-ui, sans-serif; }
+  </style>
+
+  <rect width="760" height="1080" fill="#ffffff"/>
+  <rect class="panel" x="20" y="20" width="720" height="500" rx="18"/>
+  <rect class="panel" x="20" y="550" width="720" height="510" rx="18"/>
+
+  <text class="title" x="50" y="65">SR latch using two NOR gates</text>
+  <text class="subtitle" x="50" y="95">The outputs are cross-coupled to retain one bit.</text>
+
+  <text class="label" x="58" y="160">R</text>
+  <line class="wire" x1="92" y1="153" x2="245" y2="153"/>
+  <path class="gate" d="M245 120 Q278 175 245 230 Q330 230 390 175 Q330 120 245 120 Z"/>
+  <circle class="bubble" cx="402" cy="175" r="12"/>
+  <line class="wire" x1="414" y1="175" x2="540" y2="175"/>
+  <text class="gate-label" x="292" y="183">NOR</text>
+  <text class="label" x="500" y="160">Q</text>
+
+  <text class="label" x="58" y="370">S</text>
+  <line class="wire" x1="92" y1="363" x2="245" y2="363"/>
+  <path class="gate" d="M245 330 Q278 385 245 440 Q330 440 390 385 Q330 330 245 330 Z"/>
+  <circle class="bubble" cx="402" cy="385" r="12"/>
+  <line class="wire" x1="414" y1="385" x2="540" y2="385"/>
+  <text class="gate-label" x="292" y="393">NOR</text>
+  <text class="label" x="488" y="420">Q'</text>
+
+  <path class="wire" d="M470 175 H550 V415 H245 V405"/>
+  <path class="wire" d="M470 385 H530 V270 H220 V195 H245"/>
+  <circle cx="470" cy="175" r="5" fill="#183153"/>
+  <circle cx="470" cy="385" r="5" fill="#183153"/>
+  <text class="note" x="52" y="485">R=0, S=0: the feedback keeps the previous value of Q.</text>
+
+  <g transform="translate(-550 530)">
+  <text class="title" x="650" y="65">JK flip-flop block symbol</text>
+  <text class="subtitle" x="650" y="95">The clock edge controls when the stored state changes.</text>
+
+  <rect class="block" x="805" y="135" width="250" height="300" rx="8"/>
+  <text class="title" x="904" y="185">JK</text>
+  <text class="note" x="865" y="215">edge-triggered</text>
+
+  <text class="label" x="675" y="200">J</text>
+  <line class="wire" x1="710" y1="192" x2="805" y2="192"/>
+  <text class="label" x="675" y="382">K</text>
+  <line class="wire" x1="710" y1="374" x2="805" y2="374"/>
+
+  <text class="label" x="650" y="292">Clock</text>
+  <line class="wire" x1="730" y1="285" x2="805" y2="285"/>
+  <path class="wire" d="M805 265 L832 285 L805 305"/>
+
+  <line class="wire" x1="1055" y1="192" x2="1130" y2="192"/>
+  <text class="label" x="1090" y="177">Q</text>
+  <line class="wire" x1="1055" y1="374" x2="1130" y2="374"/>
+  <text class="label" x="1080" y="410">Q'</text>
+
+  <text class="note" x="690" y="472">J=K=0 hold · J=1,K=0 set · J=0,K=1 reset</text>
+  <text class="note" x="795" y="500">J=K=1 toggle</text>
+  </g>
+</svg>

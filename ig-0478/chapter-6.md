@@ -378,7 +378,7 @@ Use these points:
 ### 6.3.5 Expert System vs Machine Learning
 | Feature | Expert system | Machine learning |
 | --- | --- | --- |
-| Main basis | Human expert knowledge | Data and training examples |
+| Main basis | Human expert knowledge | Data, previous examples and feedback |
 | Uses rules? | Yes, rule base is central | May create/adapt rules from data |
 | Learns automatically? | Usually no, unless ML is added | Yes |
 | Best for | Clear decision problems with expert rules | Pattern recognition and prediction |
@@ -390,7 +390,7 @@ Use these points:
 ## High-Frequency Exam Command Words
 | Command word | What students should do | Example |
 | --- | --- | --- |
-| **State / Give / Identify** | One short point only | “Microprocessor.” |
+| **State / Give / Identify** | Give the precise term or clear point(s) requested | “Microprocessor.” |
 | **Describe** | Give features or steps | “The sensor sends data to the microprocessor.” |
 | **Explain** | Point + reason / effect | “The robot can work 24/7, so production can continue overnight.” |
 | **Suggest** | Apply knowledge to the given scenario | “A humidity sensor could be used because it measures water vapour in the air.” |
@@ -478,7 +478,7 @@ Use this overview to trace automated control, classify robots, explain AI and ev
 
 - AI systems use data and rules to reason, learn, adapt or make predictions.
 - An expert system combines a user interface, knowledge base, rule base and inference engine.
-- Machine learning analyses training data and feedback to improve future outputs.
+- Machine learning uses previous data and feedback to adapt its processes and/or data.
 
 **Exam cue:** Describe the mechanism, not just the phrase “the computer learns”.
 
@@ -561,7 +561,9 @@ A water company wants an artificial-intelligence system to predict pipe failures
 
 (a) Define artificial intelligence. **[1]**
 
-(b) Explain how data would be used to train and improve the machine-learning system, and identify one risk that must be controlled. **[7]**
+(b) Explain how the program could use data and results to adapt its own processes and/or data when predicting pipe failures. **[5]**
+
+(c) Explain one benefit and one risk of using this machine-learning system. **[2]**
 
 ## Practice Mark Scheme
 
@@ -579,12 +581,14 @@ Benefits: any two contextual points, such as continuous operation, consistent de
 
 **(a)** AI is the use of a computer system to perform tasks that normally require human intelligence, such as learning, reasoning or decision-making. **[1]**
 
-**(b)** Collect relevant labelled examples containing pipe condition, sensor readings and whether/when failure occurred **[1]**; clean and divide representative data into training and test/validation sets **[1]**; train the model to find patterns linking inputs to failures **[1]**; compare predictions with known outcomes and calculate error **[1]**; adjust the model and repeat with further outcomes/feedback **[1]**; test on unseen data before operational use **[1]**; control a relevant risk such as biased/incomplete data, false alarms, missed failures or insecure sensor data **[1]**. **[7]**
+**(b)** Collect previous pipe-condition and sensor data together with the later result, such as whether a failure occurred **[1]**; analyse the data for patterns linking readings to failures **[1]**; use those patterns to predict a future failure **[1]**; compare the prediction with the actual result or other feedback **[1]**; automatically adapt the program's processes and/or stored data so later predictions use what was learned **[1]**. **[5]**
+
+**(c)** One contextual benefit, such as warning engineers earlier so maintenance can happen before a burst **[1]**; one relevant risk, such as incomplete data causing false alarms or missed failures, or insecure sensor data being altered **[1]**. **[2]**
 
 ## Final Revision Checklist
 
 - I can describe a sensor–processor–actuator feedback loop in order.
 - I can distinguish an automated system, a robot, an expert system and machine learning.
 - I can apply benefits and limitations to a named scenario.
-- I can explain how training data and feedback change a machine-learning model.
+- I can explain how data and feedback allow a machine-learning program to adapt its processes and/or data.
 - I can complete and self-mark both assessment sections.

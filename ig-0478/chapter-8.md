@@ -193,10 +193,32 @@ ENDIF
 
 ```text
 Average <- ROUND(Total / Count, 2)
-DiceValue <- ROUND(RANDOM() * 6, 0)
+
+RandomValue <- RANDOM()
+DiceValue <- 1
+IF RandomValue >= 1 / 6
+THEN
+    DiceValue <- 2
+ENDIF
+IF RandomValue >= 2 / 6
+THEN
+    DiceValue <- 3
+ENDIF
+IF RandomValue >= 3 / 6
+THEN
+    DiceValue <- 4
+ENDIF
+IF RandomValue >= 4 / 6
+THEN
+    DiceValue <- 5
+ENDIF
+IF RandomValue >= 5 / 6
+THEN
+    DiceValue <- 6
+ENDIF
 ```
 
-The second example returns a whole number from `0` to `6` inclusive. Do not confuse IGCSE `RANDOM()` with the 9618 routine `RAND(x)`, which has a different name and range.
+The second example divides the `0` to `1` range into six equal intervals, so `DiceValue` is always from `1` to `6`. Do not confuse IGCSE `RANDOM()` with the 9618 routine `RAND(x)`, which has a different name and range.
 
 ---
 
@@ -546,7 +568,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 1. State a suitable data type for each value: number of students, average height, one menu letter and a login flag. **[4]**
 2. For `Code <- "AB219"`, state the results of `LENGTH(Code)` and `SUBSTRING(Code, 2, 3)` when the first character is position 1. **[2]**
-3. Evaluate `DIV(17, 5)` and `MOD(17, 5)`. **[2]**
+3. Calculate `DIV(17, 5)` and `MOD(17, 5)`. **[2]**
 4. State one benefit of a local variable and one benefit of using a function. **[2]**
 
 **Total: 10 marks**

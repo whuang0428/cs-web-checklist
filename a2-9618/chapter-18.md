@@ -203,11 +203,11 @@ A* and Dijkstra's algorithm are graph search algorithms.
 They are used to find the best route through a graph.
 
 #### Mark scheme answer
-> A* and Dijkstra's algorithms are used to find the shortest / optimal / lowest-cost route between two nodes in a graph, based on distance, cost, or time.
+> A* and Dijkstra's algorithms search for a shortest / lowest-cost route between two nodes in a weighted graph. Dijkstra uses accumulated edge costs; A* also uses a heuristic estimate to guide the search.
 
 #### Required ideas / marking points
 + **shortest route**
-+ **optimal route**
++ **optimal route when the required conditions are met**
 + **lowest cost**
 + **between two nodes**
 + **graph**
@@ -243,13 +243,14 @@ A* also finds a route, but it uses both:
 This estimate is called a **heuristic**.
 
 #### What students need to know
-+ It is used to find an optimal route.
++ It searches for a lowest-cost route using the cost so far and an estimate of the remaining cost.
 + It uses a heuristic estimate.
 + It can be faster than Dijkstra when a good heuristic is used.
++ It is guaranteed to find an optimal route only when the heuristic does not overestimate the remaining cost.
 + It is common in game AI and route planning.
 
 #### Mark scheme style answer
-> A* is used to find the optimal path between nodes in a graph. It uses the cost so far and a heuristic estimate of the remaining cost to guide the search.
+> A* searches for a lowest-cost path between nodes in a graph. It uses the cost so far and a heuristic estimate of the remaining cost to guide the search. It is guaranteed to find an optimal path when the heuristic does not overestimate the remaining cost.
 
 ---
 
@@ -257,11 +258,12 @@ This estimate is called a **heuristic**.
 
 | Feature | Dijkstra | A* |
 | --- | --- | --- |
-| Main purpose | shortest path | shortest / optimal path |
+| Main purpose | shortest path | lowest-cost path guided by an estimate |
 | Uses edge weights | yes | yes |
 | Uses heuristic | no | yes |
-| Typical strength | guaranteed shortest path with non-negative weights | can be faster if heuristic is good |
-| Exam wording | shortest / lowest-cost route | optimal route using heuristic |
+| Typical strength | guaranteed shortest path with non-negative weights | can be faster if the heuristic guides the search well |
+| Optimality condition | edge weights are non-negative | heuristic does not overestimate remaining cost |
+| Exam wording | shortest / lowest-cost route | cost so far plus heuristic estimate |
 
 
 #### Common mistake
@@ -269,8 +271,75 @@ This estimate is called a **heuristic**.
 | --- | --- |
 | saying A* is only for games | It can be used for any suitable graph pathfinding problem |
 | saying Dijkstra uses trial and error | It systematically selects smallest known cost |
+| saying A* is always optimal | Its optimality guarantee depends on a heuristic that does not overestimate remaining cost |
 | forgetting graph keywords | Always mention **nodes / edges / weights** |
 | writing full code | Not required by syllabus |
+
+---
+
+## Worked Graph Searches
+
+Use the same directed weighted graph for both methods. The numbers on the edges are travel costs.
+
+```mermaid
+graph LR
+S((Start S)) -- 2 --> A((A))
+S -- 5 --> B((B))
+A -- 1 --> B
+A -- 4 --> C((C))
+B -- 1 --> C
+B -- 7 --> G((Goal G))
+C -- 3 --> G
+```
+
+### Dijkstra worked search
+
+Record a tentative cost and predecessor for every discovered node. Always select the unvisited node with the smallest tentative cost.
+
+| Selected node | Cost made final | Updates after following its outgoing edges |
+| --- | ---: | --- |
+| `S` | `0` | `A=2 via S`; `B=5 via S` |
+| `A` | `2` | improve `B` to `3 via A`; set `C=6 via A` |
+| `B` | `3` | improve `C` to `4 via B`; set `G=10 via B` |
+| `C` | `4` | improve `G` to `7 via C` |
+| `G` | `7` | goal selected; stop |
+
+The predecessor chain is `G ← C ← B ← A ← S`, so reverse it to obtain:
+
+```text
+S → A → B → C → G
+total cost = 2 + 1 + 1 + 3 = 7
+```
+
+Do not stop when the goal is first discovered with cost `10`. Stop when it is selected as the lowest-cost unvisited node; by then its cost has improved to `7`.
+
+### A* worked search
+
+For A*, calculate:
+
+```text
+f(node) = g(node) + h(node)
+```
+
+- `g` is the known cost from `S`.
+- `h` is the heuristic estimate from the node to `G`.
+- Select the open node with the smallest `f`.
+
+Use these non-overestimating heuristic values:
+
+| Node | `S` | `A` | `B` | `C` | `G` |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `h` | 6 | 4 | 3 | 2 | 0 |
+
+| Selected node | `g` | `h` | `f` | Important open-list update |
+| --- | ---: | ---: | ---: | --- |
+| `S` | 0 | 6 | 6 | add `A: g=2, f=6`; `B: g=5, f=8` |
+| `A` | 2 | 4 | 6 | improve `B: g=3, f=6`; add `C: g=6, f=8` |
+| `B` | 3 | 3 | 6 | improve `C: g=4, f=6`; add `G: g=10, f=10` |
+| `C` | 4 | 2 | 6 | improve `G: g=7, f=7` |
+| `G` | 7 | 0 | 7 | goal selected; stop |
+
+A* therefore reconstructs the same route `S → A → B → C → G`, with total cost `7`. The heuristic changes which open node is preferred; it does not replace the accumulated cost or predecessor record.
 
 ---
 
@@ -676,7 +745,7 @@ Regression is used to predict a continuous numeric value.
 + **weighted edges**
 + **cost / distance / time**
 + **shortest route**
-+ **optimal path**
++ **optimal path when the algorithm conditions are met**
 
 ### A* and Dijkstra
 + **shortest path**
@@ -751,7 +820,7 @@ Regression is used to predict a continuous numeric value.
 | AI = robot | Too narrow | AI performs tasks requiring human intelligence |
 | graph = chart | Wrong meaning in CS | graph = nodes and edges |
 | edge = node | Confuses graph structure | node = entity, edge = connection |
-| A* and Dijkstra are sorting algorithms | Wrong topic | They find shortest / optimal routes in graphs |
+| A* and Dijkstra are sorting algorithms | Wrong topic | They search for shortest / lowest-cost routes in graphs |
 | supervised learning = someone gives the computer answers | Too vague | supervised learning uses labelled data |
 | unsupervised learning = no training | Wrong | it uses unlabelled data and finds hidden patterns |
 | reinforcement learning = repeating practice | Too vague | trial and error with rewards/penalties |
@@ -916,32 +985,45 @@ The worked calculations, process templates and scenario answers above model the 
 **Total: 20 marks**
 
 ### Question 1: Graphs and route searching [6]
-A delivery company uses an AI system to find routes between towns.
+A delivery company uses the following directed weighted graph. Edge weights represent travel time.
 
-(a) Explain how a graph can represent the towns and roads. [3]
-(b) State the purpose of A* and Dijkstra's algorithms. [2]
-(c) State one reason why a weighted graph is useful in this scenario. [1]
+```mermaid
+graph LR
+P((P)) -- 2 --> Q((Q))
+P -- 6 --> R((R))
+Q -- 1 --> R
+Q -- 7 --> T((T))
+R -- 3 --> T
+```
+
+(a) Explain how the graph represents the route problem, including the meaning of its weights. [2]
+
+(b) Use Dijkstra's algorithm from `P` to `T`. State the order in which nodes become final, then give the lowest-cost route and total cost. [2]
+
+(c) For A*, use `h(P)=5`, `h(Q)=4`, `h(R)=2`, `h(T)=0`. State the order in which nodes are selected, then give the route and total cost. [2]
 
 #### Question 1 mark scheme
 (a)
-+ towns represented as nodes / vertices [1]
-+ roads represented as edges [1]
-+ weights can represent distance / time / cost [1]
++ towns/locations are represented as nodes and possible routes as directed edges [1]
++ weights represent travel time / the cost of following each route [1]
 
 (b)
-+ to find the shortest / optimal / lowest-cost route [1]
-+ between two nodes in a graph [1]
++ selected/final order `P, Q, R, T`; valid tentative updates include `Q=2`, `R` improving from `6` to `3`, and `T` improving from `9` to `6` [1]
++ route `P → Q → R → T`, total cost `2 + 1 + 3 = 6` [1]
 
 (c)
-+ allows AI to compare possible routes by distance / time / cost [1]
++ selected order `P, Q, R, T`, using the smallest `f=g+h` at each step [1]
++ route `P → Q → R → T`, total cost `6` [1]
 
 ---
 
-### Question 2: Machine learning categories [6]
+### Question 2: Machine learning categories [5]
 A website wants to recommend products to users. It has a large amount of shopping data but no pre-defined customer categories.
 
 (a) Identify the most suitable machine learning category. [1]
-(b) Explain your answer. [3]
+
+(b) Explain your answer. [2]
+
 (c) Explain why supervised learning may not be suitable. [2]
 
 #### Question 2 mark scheme
@@ -949,8 +1031,7 @@ A website wants to recommend products to users. It has a large amount of shoppin
 
 (b)
 + data is unlabelled / categories are not already known [1]
-+ system can find hidden patterns / structures [1]
-+ customers can be grouped into clusters based on behaviour [1]
++ system can find hidden patterns / group customers into clusters based on behaviour [1]
 
 (c)
 + supervised learning needs labelled data / known outcomes [1]
@@ -958,12 +1039,16 @@ A website wants to recommend products to users. It has a large amount of shoppin
 
 ---
 
-### Question 3: Neural networks and deep learning [8]
+### Question 3: Neural networks, deep learning and regression [9]
 A hospital uses an AI system to analyse medical images.
 
 (a) Describe the structure of an artificial neural network. [3]
-(b) Explain what is meant by deep learning. [3]
+
+(b) Explain what is meant by deep learning. [2]
+
 (c) Explain how back propagation helps the model improve. [2]
+
+(d) A second model uses patient age, treatment data and test results to predict the number of recovery days. Explain why regression is suitable for this prediction. [2]
 
 #### Question 3 mark scheme
 (a)
@@ -973,12 +1058,15 @@ A hospital uses an AI system to analyse medical images.
 
 (b)
 + uses artificial neural networks [1]
-+ with multiple hidden layers [1]
-+ to extract complex features / make predictions from data [1]
++ uses multiple hidden layers to extract increasingly complex features [1]
 
 (c)
 + error between predicted and expected output is calculated and passed backwards [1]
 + weights are adjusted to reduce future error / improve accuracy [1]
+
+(d)
++ regression models the relationship between the patient input variables and the predicted result [1]
++ recovery time is a continuous numerical value rather than a class / category [1]
 
 ---
 
