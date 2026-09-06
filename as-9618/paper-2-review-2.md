@@ -71,12 +71,11 @@ Count = 4
 
 ## Question 5 — Structured Programming [12]
 
-1. Write a function `ValidMark(Mark : INTEGER) RETURNS BOOLEAN` for marks from 0 to 100 inclusive. **[3]**
-2. Write a procedure `UpdateStatistics` with:
-   - mark passed by value
-   - total and count passed by reference
-   - highest mark passed by reference. **[5]**
-3. Trace the call for `Mark = 72`, `Total = 130`, `Count = 2`, `Highest = 68`. State the final caller values and explain which variable is unchanged. **[4]**
+The following string functions are supplied for this question: `LENGTH(Text : STRING) RETURNS INTEGER`; `CHAR_AT(Text : STRING, Position : INTEGER) RETURNS CHAR` returns the character at a one-based position; `TO_UPPER(Text : STRING) RETURNS STRING` returns the whole string in uppercase, leaving non-letters unchanged. The latter two are functions supplied by this question, not additional standard Cambridge pseudocode keywords.
+
+1. Write `ValidCode(Code : STRING) RETURNS BOOLEAN`. A code has exactly six characters: the first two must be uppercase letters A–Z and the remaining four must be digits 0–9. Reject every other character. **[5]**
+2. Write `NormaliseCode(BYREF Code : STRING, BYREF Valid : BOOLEAN)`. Convert the whole string to uppercase, then call `ValidCode` and store its Boolean result in `Valid`. **[3]**
+3. Trace the call with `Code="ab0123"` and `Valid=FALSE`. State the two final caller values, explain why they change, and give one test that violates only the digit rule. **[4]**
 
 ---
 
@@ -95,27 +94,19 @@ A hospital requires a medication system with stable, formally approved requireme
 
 ## Question 7 — Integrated Pseudocode Scenario [15]
 
-An equipment centre stores 20 records in `Equipment[1:20]`:
+A sensor log `Events.txt` contains one line per reading. Each valid line has exactly eight characters: a two-digit sensor ID, a colon, a three-digit non-negative reading, a colon and status `V` or `E`. For example `03:127:V`. Sensor IDs must be 01–12. Other lines are malformed. Status `E` records are well-formed but must not contribute to averages.
 
-- `Code : STRING`
-- `Available : INTEGER`
-- `DailyRate : REAL`
+The supplied functions `STRING_TO_INTEGER(Text : STRING) RETURNS INTEGER`, `INTEGER_TO_STRING(Value : INTEGER) RETURNS STRING` and `REAL_TO_STRING(Value : REAL) RETURNS STRING` convert valid numeric text/values. Do not attempt numeric conversion before validating the characters. Also use the supplied `CHAR_AT` function from Question 5, `LENGTH(Text : STRING) RETURNS INTEGER` and `MID(Text : STRING, Start : INTEGER, Count : INTEGER) RETURNS STRING`, with one-based positions.
 
-The supplied function `INTEGER_TO_STRING(Value : INTEGER) RETURNS STRING` converts an integer to its decimal string representation.
+Write a complete program that:
 
-Write a complete pseudocode program that:
-
-- repeatedly inputs an equipment code
-- stops for `"END"` or after six successful hire days have been recorded
-- searches for the code using linear search
-- displays `"Unknown"` when absent
-- when found, inputs and validates requested days from 1 to 4
-- rejects the request when the requested days would make the overall successful-day total exceed six
-- displays `"Unavailable"` when `Available` is zero
-- displays `"Hire-day limit exceeded"` when accepting the request would take the overall successful-day total above six
-- otherwise decreases `Available`, adds requested days to the successful-day total and adds `days * daily rate` to total income
-- writes each successful hire as one line containing code and days to `Hires.txt`
-- closes the file and outputs hire count, successful-day total and total income. **[15]**
+- reads to end of file, including an empty file
+- validates each line's length, separators, status and digit positions before conversion
+- rejects IDs outside 01–12 and counts malformed lines
+- accumulates a total and count for each sensor's valid `V` readings
+- counts well-formed `E` records separately
+- writes exactly twelve lines to `Summary.txt` in sensor-ID order, each containing ID and mean, or ID and `No valid readings`
+- closes both files and outputs malformed-line count and `E`-record count. **[15]**
 
 ---
 
@@ -204,35 +195,41 @@ First dequeue value and state **[2]**; state after enqueueing `F` **[1]**; state
 
 ### Question 5 Mark Scheme [12]
 
-1.
+1. Typed header and Boolean result **[1]**; exact length check before indexing **[1]**; checks both letter positions **[1]**; checks all four digit positions **[1]**; rejects invalid characters and accepts only a complete match **[1]**. **[5]**
 
 ```text
-FUNCTION ValidMark(Mark : INTEGER) RETURNS BOOLEAN
-    RETURN Mark >= 0 AND Mark <= 100
+FUNCTION ValidCode(Code : STRING) RETURNS BOOLEAN
+    DECLARE Position : INTEGER
+    DECLARE Symbol : CHAR
+    IF LENGTH(Code) <> 6 THEN
+        RETURN FALSE
+    ENDIF
+    FOR Position <- 1 TO 2
+        Symbol <- CHAR_AT(Code, Position)
+        IF Symbol < 'A' OR Symbol > 'Z' THEN
+            RETURN FALSE
+        ENDIF
+    NEXT Position
+    FOR Position <- 3 TO 6
+        Symbol <- CHAR_AT(Code, Position)
+        IF Symbol < '0' OR Symbol > '9' THEN
+            RETURN FALSE
+        ENDIF
+    NEXT Position
+    RETURN TRUE
 ENDFUNCTION
 ```
 
-Header/type **[1]**; both limits **[1]**; Boolean return **[1]**. **[3]**
-
-2.
+2. Correct reference modes/types **[1]**; conversion of the string **[1]**; calls the function and assigns its result **[1]**. **[3]**
 
 ```text
-PROCEDURE UpdateStatistics(
-    BYVAL Mark : INTEGER,
-    BYREF Total : INTEGER,
-    BYREF Count : INTEGER,
-    BYREF Highest : INTEGER
-)
-    Total <- Total + Mark
-    Count <- Count + 1
-    IF Mark > Highest THEN
-        Highest <- Mark
-    ENDIF
+PROCEDURE NormaliseCode(BYREF Code : STRING, BYREF Valid : BOOLEAN)
+    Code <- TO_UPPER(Code)
+    Valid <- ValidCode(Code)
 ENDPROCEDURE
 ```
 
-Correct modes/types **[2]**; total **[1]**; count **[1]**; highest update **[1]**. **[5]**
-3. `Total = 202` **[1]**; `Count = 3` **[1]**; `Highest = 72` **[1]**; caller's `Mark` remains 72 because it is passed by value/not assigned **[1]**. **[4]**
+3. `Code="AB0123"` **[1]**, `Valid=TRUE` **[1]**. Both parameters refer to caller variables, so the procedure's assignments update them **[1]**. For example `"AB01X3"` has the correct length and uppercase prefix, but a non-digit in the suffix, so it is rejected **[1]**. **[4]**
 
 ### Question 6 Mark Scheme [8]
 
@@ -242,64 +239,76 @@ Correct modes/types **[2]**; total **[1]**; count **[1]**; highest update **[1]*
 
 ### Question 7 Mark Scheme [15]
 
-- initialise counters/totals and open output file **[2]**
-- repetition with both stop conditions **[2]**
-- complete linear search including not-found state **[3]**
-- validates requested days **[1]**
-- enforces overall six-day limit **[1]**
-- tests availability and produces correct messages **[1]**
-- updates availability, hire count and days **[2]**
-- calculates income **[1]**
-- writes successful code/days using the supplied conversion function, closes file and outputs totals **[2]**
-
-Indicative solution:
+- Initialises twelve sensor totals/counts and both diagnostic counters **[2]**.
+- Opens/reads/closes the input using an EOF loop **[2]**.
+- Validates length before indexing, both separators and status **[2]**.
+- Validates all digit positions before conversion and validates ID range **[2]**.
+- Counts malformed and well-formed E records separately **[2]**.
+- Accumulates only V readings into the correct sensor's total/count **[2]**.
+- Writes all twelve IDs in order, calculates means with an empty-count guard **[2]**.
+- Closes output and outputs both diagnostic counts **[1]**.
 
 ```text
-HireCount <- 0
-TotalDays <- 0
-TotalIncome <- 0
-Code <- ""
-OPENFILE "Hires.txt" FOR WRITE
+DECLARE Totals : ARRAY[1:12] OF INTEGER
+DECLARE Counts : ARRAY[1:12] OF INTEGER
+DECLARE Sensor, Reading, Position, Malformed, ErrorRecords : INTEGER
+DECLARE Line, Result : STRING
+DECLARE Valid : BOOLEAN
 
-WHILE Code <> "END" AND TotalDays < 6
-    INPUT Code
-    IF Code <> "END" THEN
-        Found <- FALSE
-        Index <- 1
-        WHILE Index <= 20 AND Found = FALSE
-            IF Equipment[Index].Code = Code THEN
-                Found <- TRUE
-            ELSE
-                Index <- Index + 1
-            ENDIF
-        ENDWHILE
-
-        IF Found = FALSE THEN
-            OUTPUT "Unknown"
-        ELSE
-            REPEAT
-                INPUT Days
-            UNTIL Days >= 1 AND Days <= 4
-
-            IF TotalDays + Days > 6 THEN
-                OUTPUT "Hire-day limit exceeded"
-            ELSE
-                IF Equipment[Index].Available = 0 THEN
-                    OUTPUT "Unavailable"
-                ELSE
-                    Equipment[Index].Available <- Equipment[Index].Available - 1
-                    HireCount <- HireCount + 1
-                    TotalDays <- TotalDays + Days
-                    TotalIncome <- TotalIncome + Days * Equipment[Index].DailyRate
-                    WRITEFILE "Hires.txt", Code & "," & INTEGER_TO_STRING(Days)
+FOR Sensor <- 1 TO 12
+    Totals[Sensor] <- 0
+    Counts[Sensor] <- 0
+NEXT Sensor
+Malformed <- 0
+ErrorRecords <- 0
+OPENFILE "Events.txt" FOR READ
+WHILE NOT EOF("Events.txt")
+    READFILE "Events.txt", Line
+    Valid <- FALSE
+    IF LENGTH(Line) = 8 THEN
+        Valid <- CHAR_AT(Line, 3) = ':' AND CHAR_AT(Line, 7) = ':'
+                 AND (CHAR_AT(Line, 8) = 'V' OR CHAR_AT(Line, 8) = 'E')
+        FOR Position <- 1 TO 6
+            IF Position <> 3 THEN
+                IF CHAR_AT(Line, Position) < '0' OR CHAR_AT(Line, Position) > '9' THEN
+                    Valid <- FALSE
                 ENDIF
+            ENDIF
+        NEXT Position
+        IF Valid = TRUE THEN
+            Sensor <- STRING_TO_INTEGER(MID(Line, 1, 2))
+            IF Sensor < 1 OR Sensor > 12 THEN
+                Valid <- FALSE
             ENDIF
         ENDIF
     ENDIF
+    IF Valid = FALSE THEN
+        Malformed <- Malformed + 1
+    ELSE
+        IF CHAR_AT(Line, 8) = 'E' THEN
+            ErrorRecords <- ErrorRecords + 1
+        ELSE
+            Reading <- STRING_TO_INTEGER(MID(Line, 4, 3))
+            Totals[Sensor] <- Totals[Sensor] + Reading
+            Counts[Sensor] <- Counts[Sensor] + 1
+        ENDIF
+    ENDIF
 ENDWHILE
+CLOSEFILE "Events.txt"
 
-CLOSEFILE "Hires.txt"
-OUTPUT HireCount, TotalDays, TotalIncome
+OPENFILE "Summary.txt" FOR WRITE
+FOR Sensor <- 1 TO 12
+    IF Counts[Sensor] = 0 THEN
+        Result <- "No valid readings"
+    ELSE
+        Result <- REAL_TO_STRING(Totals[Sensor] / Counts[Sensor])
+    ENDIF
+    WRITEFILE "Summary.txt", INTEGER_TO_STRING(Sensor) & "," & Result
+NEXT Sensor
+CLOSEFILE "Summary.txt"
+OUTPUT Malformed, ErrorRecords
 ```
+
+Check `03:127:V`, `03:129:V`, `03:999:E`, `13:100:V` and an empty line: sensor 3 mean = 128, malformed = 2, E records = 1; the other eleven sensors have no valid readings. For an empty input, both diagnostic counts are zero and all twelve summaries say `No valid readings`.
 
 **Total: 75 marks**

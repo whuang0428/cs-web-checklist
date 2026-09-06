@@ -546,6 +546,76 @@ The function:
 
 ---
 
+## Java Constructs and Parameter Behaviour
+
+| Cambridge pseudocode | Java | Difference to retain |
+|---|---|---|
+| `INTEGER`, `REAL`, `BOOLEAN`, `CHAR`, `STRING` | `int`, `double`, `boolean`, `char`, `String` | use `.equals()` for string contents |
+| `FOR Index <- 1 TO 5` | `for (int index = 0; index < 5; index++)` | Java array indexes begin at zero |
+| `REPEAT ... UNTIL Valid` | `do { ... } while (!valid);` | Java repeats while its condition is true |
+| `CASE OF` | `switch` | a traditional case needs `break` to prevent fall-through |
+| `MID(Code, 2, 3)` | `code.substring(1, 4)` | Java's second argument is the exclusive end index |
+| `DIV`, `MOD`, `&` | `/` on integers, `%`, `+` for strings | cast before division when a fractional answer is required |
+| procedure / function | `void` method / method with a result type | a result is returned with `return` |
+
+**Java always passes arguments by value.** For an object or array, the copied value is a reference to the same object. Changing that object's fields or array elements is visible to the caller; assigning the parameter a different object is not. This is different from Cambridge `BYREF`, which gives a procedure access to the caller's variable itself.
+
+```java
+class Ch11JavaParameters {
+    static class Statistics {
+        int total;
+        int count;
+        int highest = -1;
+    }
+
+    static int increment(int value) {
+        value++;
+        return value;
+    }
+
+    static void addMark(int mark, Statistics statistics) {
+        if (mark < 0 || mark > 100) throw new IllegalArgumentException("invalid mark");
+        statistics.total += mark;
+        statistics.count++;
+        if (mark > statistics.highest) statistics.highest = mark;
+        mark = 0; // Only the local copy changes.
+    }
+
+    static void replaceLocally(Statistics statistics) {
+        statistics = new Statistics(); // Does not replace the caller's variable.
+        statistics.total = 999;
+    }
+
+    static String resultCode(int mark) {
+        if (mark < 0 || mark > 100) throw new IllegalArgumentException();
+        return mark >= 40 ? "PASS" : "FAIL";
+    }
+
+    public static void main(String[] args) {
+        int value = 7;
+        int changed = increment(value);
+        if (value != 7 || changed != 8) throw new AssertionError();
+        Statistics statistics = new Statistics();
+        int mark = 72;
+        addMark(mark, statistics);
+        addMark(0, statistics);
+        replaceLocally(statistics);
+        if (mark != 72 || statistics.total != 72 || statistics.count != 2
+                || statistics.highest != 72) throw new AssertionError();
+        if (!resultCode(39).equals("FAIL") || !resultCode(40).equals("PASS"))
+            throw new AssertionError();
+        String code = "aB73x";
+        if (!code.substring(1, 4).equals("B73") || code.length() != 5
+                || !code.toUpperCase().equals("AB73X")) throw new AssertionError();
+        double average = (double) statistics.total / statistics.count;
+        if (average != 36.0) throw new AssertionError();
+        System.out.println("Parameter tests passed");
+    }
+}
+```
+
+Before running the program, predict all caller values after `addMark` and `replaceLocally`. Then write the equivalent pseudocode procedure with `BYVAL Mark` and `BYREF Total`, `Count` and `Highest`. Use the [Paper 2 parameter exercise](paper-2-review.md#question-5-structured-programming-12) to practise the examination notation.
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.

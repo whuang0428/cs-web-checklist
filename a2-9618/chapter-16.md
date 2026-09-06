@@ -570,7 +570,7 @@ E --> F[Object code / executable]
 | Symbol | Meaning |
 | --- | --- |
 | `::=` | is defined as |
-| `|` | OR / alternative |
+| `\|` | OR / alternative |
 | `<digit>` | non-terminal symbol |
 | `A` or `+` | terminal symbol |
 

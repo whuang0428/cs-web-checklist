@@ -93,7 +93,7 @@ Use these points:
 + It keeps track of which memory locations are free or in use.
 + It protects the memory allocated to one process from access by another process.
 
-Virtual memory itself belongs to Topic 3.3. Revise its purpose and operation in [Chapter 3](chapter-3.md#334-virtual-memory).
+Virtual memory itself belongs to Topic 3.3. Revise its purpose and operation in [Chapter 3](chapter-3.md#_334-virtual-memory).
 
 #### Core Exam Sentences
 + The OS provides a **platform for running application software**.

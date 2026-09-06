@@ -16,24 +16,23 @@
 
 | Question | Section | Marks | AO1 | AO2 |
 |---:|---|---:|---:|---:|
-| 1 | 13 Data representation | 9 | 5 | 4 |
-| 2 | 14 Communication and internet technologies | 10 | 6 | 4 |
-| 3 | 15 Hardware and virtual machines | 9 | 5 | 4 |
-| 4 | 16 System software | 10 | 6 | 4 |
-| 5 | 17 Security | 9 | 5 | 4 |
-| 6 | 18 Artificial intelligence | 10 | 6 | 4 |
-| 7 | 19 Computational thinking and problem-solving | 9 | 6 | 3 |
-| 8 | 20 Further programming | 9 | 6 | 3 |
+| 1 | 13 Data representation | 9 | 4 | 5 |
+| 2 | 14 Communication and internet technologies | 10 | 8 | 2 |
+| 3 | 15 Hardware and virtual machines | 9 | 3 | 6 |
+| 4 | 16 System software | 10 | 8 | 2 |
+| 5 | 17 Security | 9 | 7 | 2 |
+| 6 | 18 Artificial intelligence | 10 | 8 | 2 |
+| 7 | 19 Computational thinking and problem-solving | 9 | 0 | 9 |
+| 8 | 20 Further programming | 9 | 7 | 2 |
 | **Total** | **Sections 13–20** | **75** | **45** | **30** |
 
 ## Question 1 — Scientific Data [9]
 
-A satellite stores signed sensor readings using normalised floating-point values.
+A satellite uses an 8-bit two's-complement mantissa (binary point after the sign bit) and a 5-bit two's-complement exponent. A stored value has mantissa `11101000` and exponent `00101`.
 
-1. State the purpose of the mantissa and exponent. **[2]**
-2. Explain why normalisation gives the greatest precision available for a fixed number of bits. **[2]**
-3. A calculation produces a value too small for the available exponent. Name this condition and explain one consequence. **[2]**
-4. Compare random and sequential file organisation for retrieving one named satellite record and processing every record in key order. **[3]**
+1. Calculate the denary value and then normalise the representation without changing that value. Show the new mantissa and exponent. **[4]**
+2. The 13-bit format is redesigned with a 10-bit mantissa and a 3-bit exponent. Explain the effects on precision and range. **[2]**
+3. Compare random and sequential file organisation for retrieving one named satellite record and processing every record in key order. **[3]**
 
 ## Question 2 — Resilient Communication [10]
 
@@ -48,10 +47,15 @@ A live translation service streams audio between users in different countries.
 
 A studio uses virtual machines on a multicore server to render animation frames.
 
-1. Explain why rendering separate frames can benefit from parallel processing. **[2]**
-2. State two factors that limit the speed-up obtained by adding processor cores. **[2]**
-3. Give three benefits of running each rendering job in a separate virtual machine. **[3]**
-4. Simplify `X AND (X OR Y)` and name the Boolean law used. **[2]**
+1. Explain why separate frames can benefit from parallel processing and give one factor limiting the speed-up. **[3]**
+2. A four-input control circuit has the following Karnaugh map. Derive a minimal sum-of-products expression, identifying each group and the variables removed. Explain the wrap-around adjacency used. **[6]**
+
+   | AB \ CD | 00 | 01 | 11 | 10 |
+   |---|---:|---:|---:|---:|
+   | 00 | 1 | 0 | 0 | 1 |
+   | 01 | 0 | 0 | 0 | 0 |
+   | 11 | 0 | 1 | 1 | 0 |
+   | 10 | 1 | 0 | 0 | 1 |
 
 ## Question 4 — Memory and Scheduling [10]
 
@@ -82,12 +86,10 @@ A system classifies leaf images and recommends treatment.
 
 ## Question 7 — Choosing Algorithms [9]
 
-A warehouse maintains a changing list of product codes and a tree-shaped map of storage locations.
+A warehouse stores unique integer product codes in an array-based linked list. Global arrays `Data[0:5]` and `Link[0:5]` hold values and next indexes. `Head` identifies the active list, `Free` identifies the free list, and −1 terminates either list. The active and free lists together contain every array position exactly once.
 
-1. Give the precondition for binary search and explain why frequent insertions may make maintaining it costly. **[3]**
-2. Compare the worst-case time complexity of linear search and binary search. **[2]**
-3. Explain how depth-first traversal can be implemented using recursion or a stack. **[2]**
-4. State two properties of a well-defined algorithm. **[2]**
+1. Write complete pseudocode for `RemoveKey(BYVAL Target : INTEGER, BYREF Removed : BOOLEAN)`. Search the active list; return false without changing either list if absent. Otherwise unlink the matching node, return it to the front of the free list and return true. Handle deletion of the head and of the only active node. **[7]**
+2. Initially `Head=2`, `Free=0`, `Data=[0, 50, 20, 0, 35, 0]` and `Link=[3, -1, 4, 5, 1, -1]`. Trace removal of 20, then removal of 50. Give `Head`, `Free` and the active chain after each call. **[2]**
 
 ## Question 8 — Program Design [9]
 
@@ -102,10 +104,9 @@ A booking system contains several ticket classes and imports booking records fro
 
 ### Question 1 Mark Scheme [9]
 
-1. Mantissa stores significant digits/fraction **[1]**; exponent gives the scale/position of the binary point **[1]**. **[2]**
-2. A normalised non-zero mantissa uses the available significant-bit positions rather than wasting leading bits **[1]**, so the representation retains as many significant bits as the format permits **[1]**. **[2]**
-3. Underflow **[1]**; value may be represented as zero/the smallest available value or lose significant accuracy **[1]**. **[2]**
-4. Random organisation calculates/directly locates a record from its key and is suitable for one named item **[1]**; sequential organisation stores records in key order and supports ordered batch processing **[1]**; finding one item sequentially may require reading preceding records **[1]**. **[3]**
+1. Mantissa = −24/128 = −0.1875 **[1]**; exponent = 5, so the value is −6 **[1]**. Normalised mantissa `10100000` = −0.75 **[1]**; exponent `00011` = 3 **[1]**. Two left shifts remove redundant sign bits, so decrease the exponent by two. **[4]**
+2. More mantissa bits allow finer distinctions/more significant bits **[1]**; fewer exponent bits reduce the range of magnitudes, making overflow/underflow more likely **[1]**. **[2]**
+3. Random organisation calculates a location from the key, supporting direct retrieval **[1]**; sequential organisation stores records in key order for ordered batch processing **[1]**; a sequential search may read preceding records before finding one target **[1]**. **[3]**
 
 ### Question 2 Mark Scheme [10]
 
@@ -116,10 +117,8 @@ A booking system contains several ticket classes and imports booking records fro
 
 ### Question 3 Mark Scheme [9]
 
-1. Frames can be computed largely independently **[1]**, so different cores process different frames simultaneously and reduce elapsed time/increase throughput **[1]**. **[2]**
-2. Any two: serial portions, communication/synchronisation overhead, shared-memory/bandwidth contention, uneven tasks, limited number of independent frames. **[2]**
-3. Any three: isolation between jobs, different operating systems/dependencies, snapshots/rollback, resource limits, server consolidation, repeatable environments, safer testing. **[3]**
-4. Absorption law: `X AND (X OR Y) = X` **[1]**; law correctly named **[1]**. **[2]**
+1. Different frames are largely independent **[1]**, so cores can compute them simultaneously **[1]**. One limit: serial work, communication/synchronisation overhead, shared-resource contention or uneven task sizes **[1]**. **[3]**
+2. Group the four corner cells **[1]**; A and C vary, leaving `NOT B AND NOT D` **[1]**. Group row `AB=11`, columns `01` and `11` **[1]**; C varies, leaving `A AND B AND D` **[1]**. The complete expression is `(NOT B AND NOT D) OR (A AND B AND D)` **[1]**. In Gray-code order, first/last rows and first/last columns differ in only one variable and are adjacent across the edges **[1]**. **[6]**
 
 ### Question 4 Mark Scheme [10]
 
@@ -144,10 +143,38 @@ A booking system contains several ticket classes and imports booking records fro
 
 ### Question 7 Mark Scheme [9]
 
-1. List must be sorted on the search key **[1]**; insertion may require finding a position and shifting/rebuilding/rebalancing data **[1]**, so repeated updates can offset faster searches **[1]**. **[3]**
-2. Linear search worst case `O(n)` **[1]**; binary search worst case `O(log n)` **[1]**. **[2]**
-3. Visit a node, mark it and continue down an unvisited child **[1]**; recursive calls use the call stack, while an iterative solution explicitly pushes/pops nodes on a stack **[1]**. **[2]**
-4. Any two: finite/terminates, unambiguous steps, defined inputs, defined outputs, effective/executable operations. **[2]**
+1. Initialises current/previous and false result **[1]**; follows links and stops at a match/end without indexing −1 **[2]**; handles absent key without mutation **[1]**; unlinks head or predecessor link correctly **[1]**; returns node to free list in the correct order **[1]**; sets true result **[1]**. **[7]**
+
+```text
+PROCEDURE RemoveKey(BYVAL Target : INTEGER, BYREF Removed : BOOLEAN)
+    DECLARE Current, Previous : INTEGER
+    DECLARE Found : BOOLEAN
+    Current <- Head
+    Previous <- -1
+    Found <- FALSE
+    Removed <- FALSE
+    WHILE Current <> -1 AND Found = FALSE
+        IF Data[Current] = Target THEN
+            Found <- TRUE
+        ELSE
+            Previous <- Current
+            Current <- Link[Current]
+        ENDIF
+    ENDWHILE
+    IF Found = TRUE THEN
+        IF Previous = -1 THEN
+            Head <- Link[Current]
+        ELSE
+            Link[Previous] <- Link[Current]
+        ENDIF
+        Link[Current] <- Free
+        Free <- Current
+        Removed <- TRUE
+    ENDIF
+ENDPROCEDURE
+```
+
+2. Remove 20: `Head=4`, `Free=2`, active chain `4→1→−1` (35, 50) **[1]**. Remove 50: `Head=4`, `Free=1`, active chain `4→−1` (35) **[1]**. Final free chain: `1→2→0→3→5→−1`. **[2]**
 
 ### Question 8 Mark Scheme [9]
 

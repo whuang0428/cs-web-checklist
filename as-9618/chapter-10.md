@@ -546,6 +546,114 @@ Only links change; `C` does not need to move physically.
 
 ---
 
+## Java Records, Arrays and Files
+
+An ordinary class can represent an AS record: each object groups related fields. The example uses a `Result[]` array of records and swaps whole records when sorting. Both file fields are integers; the specified text format is exactly `id,mark` per line. Malformed lines are rejected individually, while an unreadable file raises `IOException` for the caller to handle.
+
+```java
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+class Ch10JavaData {
+    static class Result {
+        final int id;
+        final int mark;
+        Result(int id, int mark) {
+            if (id < 1 || mark < 0 || mark > 100) throw new IllegalArgumentException();
+            this.id = id;
+            this.mark = mark;
+        }
+    }
+
+    static int find(Result[] results, int target) {
+        for (int index = 0; index < results.length; index++)
+            if (results[index].id == target) return index;
+        return -1;
+    }
+
+    static void sortByMark(Result[] results) {
+        boolean swapped = true;
+        int high = results.length - 1;
+        while (high > 0 && swapped) {
+            swapped = false;
+            for (int index = 0; index < high; index++) {
+                if (results[index].mark > results[index + 1].mark) {
+                    Result temporary = results[index];
+                    results[index] = results[index + 1];
+                    results[index + 1] = temporary;
+                    swapped = true;
+                }
+            }
+            high--;
+        }
+    }
+
+    static Result[] load(Path path) throws IOException {
+        List<Result> accepted = new ArrayList<>();
+        for (String line : Files.readAllLines(path)) {
+            try {
+                String[] fields = line.split(",", -1);
+                if (fields.length != 2) throw new IllegalArgumentException();
+                accepted.add(new Result(Integer.parseInt(fields[0]), Integer.parseInt(fields[1])));
+            } catch (IllegalArgumentException error) {
+                System.out.println("Rejected: " + line);
+            }
+        }
+        return accepted.toArray(new Result[0]);
+    }
+
+    static void save(Path path, Result[] results) throws IOException {
+        List<String> lines = new ArrayList<>();
+        for (Result result : results) lines.add(result.id + "," + result.mark);
+        Files.write(path, lines);
+    }
+
+    static int[] rowTotals(int[][] marks) {
+        int[] totals = new int[marks.length];
+        for (int row = 0; row < marks.length; row++)
+            for (int column = 0; column < marks[row].length; column++)
+                totals[row] += marks[row][column];
+        return totals;
+    }
+
+    public static void main(String[] args) throws IOException {
+        Path directory = Files.createTempDirectory("as-data-");
+        Path input = directory.resolve("input.txt");
+        Path output = directory.resolve("output.txt");
+        try {
+            Files.write(input, List.of("3,80", "wrong", "4,101", "1,0", "2,80"));
+            Result[] results = load(input);
+            sortByMark(results);
+            if (results.length != 3 || results[0].id != 1 || results[1].id != 3
+                    || results[2].id != 2 || find(results, 2) != 2 || find(results, 9) != -1)
+                throw new AssertionError();
+            save(output, results);
+            if (!Files.readAllLines(output).equals(List.of("1,0", "3,80", "2,80")))
+                throw new AssertionError();
+            Result[] empty = new Result[0];
+            sortByMark(empty);
+            if (find(empty, 1) != -1) throw new AssertionError();
+            save(output, empty);
+            if (load(output).length != 0) throw new AssertionError();
+            if (!java.util.Arrays.equals(rowTotals(new int[][]{{2, 3}, {0, 4}}), new int[]{5, 4}))
+                throw new AssertionError();
+            System.out.println("Data tests passed");
+        } finally {
+            Files.deleteIfExists(input);
+            Files.deleteIfExists(output);
+            Files.delete(directory);
+        }
+    }
+}
+```
+
+`ArrayList` temporarily collects an unknown number of file records; the algorithm then receives a fixed-length array. `Files.readAllLines` and `Files.write` open and close their resources. `Files.write` replaces an existing output file by default. For large files, use buffered line-by-line processing, as in [A2 Chapter 20](../a2-9618/chapter-20.md).
+
+Transfer task: write the search and sort in Cambridge pseudocode, using the declared array bounds and a `BYREF` array parameter for the sorting procedure. Explain why a swap of only `mark` would corrupt the association with `id`.
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.

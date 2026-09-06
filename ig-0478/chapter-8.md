@@ -12,7 +12,7 @@ Revise: data types and control structures; strings; arrays; subroutines; files a
 
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
-> **Paper 2 focus:** translate an algorithm into clear pseudocode or program code by choosing suitable data, control structures, arrays, subroutines and file operations.
+> **Paper 2 focus:** choose suitable data, control structures, arrays, subroutines and file operations. Use pseudocode when requested; the final 15-mark scenario also permits program code. This chapter uses Python for the program-code route.
 
 ---
 
@@ -540,6 +540,198 @@ CLOSEFILE "temperatures.txt"
 The file loop handles an unknown number of lines. The procedure separates display logic from file access.
 
 ---
+
+## Python Programming Route
+
+Write the algorithm in pseudocode first, then implement it in Python 3. Save each complete block below in its own `.py` file and run it. The assertions check the stated outcomes. For Paper 2, Python is an option for the final 15-mark scenario; use the notation requested in other questions.
+
+| Cambridge pseudocode | Python | Point to check |
+|---|---|---|
+| `INPUT Value` | `value = input()` | `input()` returns a string; convert before arithmetic |
+| `DIV`, `MOD`, `^` | `//`, `%`, `**` | use integer operands for integer division/remainder |
+| `AND`, `OR`, `NOT` | `and`, `or`, `not` | Boolean values are `True` and `False` |
+| `FOR Index <- 1 TO 5` | `for index in range(5):` | Python indexes here are 0–4; the stop is excluded |
+| `SUBSTRING(Code, 2, 3)` | `code[1:4]` | IGCSE start position 2 becomes Python index 1 |
+| `LENGTH(Code)` | `len(code)` | Python also permits `len(list)`; Cambridge `LENGTH` is for strings |
+| `LCASE(Code)`, `UCASE(Code)` | `code.lower()`, `code.upper()` | the methods return a new string |
+| function / procedure | `def`, with / without a result | use `return` for a result; keep names and indentation clear |
+
+### Python Example 1 — Input, Validation and a Menu
+
+This menu repeats until `Q`. Each accepted `A` operation records one integer mark from 0 to 100. The post-condition input loop is written as `while True` with `break` after validation. The two input/output parameters make the same program testable without typing every value again.
+
+```python
+def read_mark(read, write):
+    while True:
+        try:
+            mark = int(read("Mark (0–100): "))
+            if 0 <= mark <= 100:
+                return mark
+        except ValueError:
+            pass
+        write("Invalid mark")
+
+
+def run_menu(read=input, write=print):
+    total = 0
+    count = 0
+    while True:
+        choice = read("A: add mark; Q: quit: ").upper()
+        if choice == "Q":
+            break
+        if choice == "A":
+            mark = read_mark(read, write)
+            total += mark
+            count += 1
+            write("Pass" if mark >= 40 else "Fail")
+        else:
+            write("Unknown option")
+    write(total / count if count > 0 else "No marks")
+    return count, total
+
+
+if __name__ == "__main__":
+    from sys import argv
+    if "--interactive" in argv:
+        run_menu()
+    else:
+        entries = iter(["X", "a", "bad", "-1", "101", "0", "A", "100", "Q"])
+        output = []
+        assert run_menu(lambda prompt: next(entries), output.append) == (2, 100)
+        assert output == ["Unknown option", "Invalid mark", "Invalid mark",
+                          "Invalid mark", "Fail", "Pass", 50.0]
+        output = []
+        assert run_menu(lambda prompt: "Q", output.append) == (0, 0)
+        assert output == ["No marks"]
+        print("Menu tests passed")
+```
+
+Run with `python example.py --interactive` to enter your own data. `try/except` handles a conversion failure; the range check handles a converted integer outside the permitted interval.
+
+### Python Example 2 — Arrays, Search and Sort
+
+Use a list to implement the one-dimensional array. A list of separate row lists represents the two-dimensional array. Do not initialise a matrix with `[[0] * 3] * 4`: its rows refer to the same list.
+
+```python
+def linear_search(values, target):
+    for index in range(len(values)):
+        if values[index] == target:
+            return index
+    return -1
+
+
+def bubble_sort(values):
+    high = len(values) - 1
+    swapped = True
+    while high > 0 and swapped:
+        swapped = False
+        for index in range(high):
+            if values[index] > values[index + 1]:
+                temporary = values[index]
+                values[index] = values[index + 1]
+                values[index + 1] = temporary
+                swapped = True
+        high -= 1
+
+
+def row_totals(matrix):
+    totals = []
+    for row in matrix:
+        total = 0
+        for value in row:
+            total += value
+        totals.append(total)
+    return totals
+
+
+if __name__ == "__main__":
+    for original, expected in [([], []), ([4], [4]), ([3, -1, 3, 0], [-1, 0, 3, 3])]:
+        values = original.copy()
+        bubble_sort(values)
+        assert values == expected
+    assert linear_search([7, 2, 7], 7) == 0
+    assert linear_search([7, 2], 8) == -1
+    assert linear_search([], 7) == -1
+    assert row_totals([[2, 0, 4], [1, 3, 5]]) == [6, 9]
+    assert row_totals([]) == []
+    print("Array tests passed")
+```
+
+### Python Example 3 — File Processing
+
+The input contains one integer mark per line. Count rejected lines, copy valid marks to a new file and return their count and average. Use a different output path: opening a file in `w` mode replaces its previous contents. `with` closes a file when its block finishes, including when an exception is raised.
+
+```python
+def summarise_marks(source_path, destination_path):
+    count = 0
+    total = 0
+    rejected = 0
+    with open(source_path, "r", encoding="utf-8") as source:
+        with open(destination_path, "w", encoding="utf-8") as destination:
+            for line in source:
+                try:
+                    mark = int(line.strip())
+                    if not 0 <= mark <= 100:
+                        raise ValueError("out of range")
+                except ValueError:
+                    rejected += 1
+                    continue
+                destination.write(str(mark) + "\n")
+                total += mark
+                count += 1
+    average = total / count if count > 0 else None
+    return count, average, rejected
+
+
+if __name__ == "__main__":
+    from pathlib import Path
+    from tempfile import TemporaryDirectory
+    with TemporaryDirectory() as directory:
+        source = Path(directory) / "marks.txt"
+        destination = Path(directory) / "accepted.txt"
+        source.write_text("0\nwrong\n101\n100\n\n", encoding="utf-8")
+        assert summarise_marks(source, destination) == (2, 50.0, 3)
+        assert destination.read_text(encoding="utf-8") == "0\n100\n"
+        source.write_text("", encoding="utf-8")
+        assert summarise_marks(source, destination) == (0, None, 0)
+        assert destination.read_text(encoding="utf-8") == ""
+    print("File tests passed")
+```
+
+### Python Transfer Drill
+
+1. Change the menu's accepted interval to 1–50 and pass threshold to 25. Give tests for both accepted endpoints and the adjacent rejected values. **[4]**
+2. Write a function that returns the index of the row with the greatest total, retaining the first row on a tie and returning `-1` for an empty matrix. **[4]**
+3. Adapt the file program to append a single summary line to a separate log, including `No marks` for an empty input. Explain why the log must use append mode. **[4]**
+
+**Total: 12 marks**
+
+#### Python Transfer Drill Answers
+
+1. Change the validation to `1 <= mark <= 50` **[1]** and the pass test to `mark >= 25` **[1]**. Accept 1 and 50 **[1]**; reject 0 and 51 **[1]**. Also check 24 gives Fail and 25 gives Pass.
+2. The following function handles empty input **[1]**, visits every row **[1]**, replaces the selected index only for a strictly greater total **[1]** and returns the correct index **[1]**.
+
+```python
+def greatest_row(matrix):
+    best_index = -1
+    best_total = 0
+    for index in range(len(matrix)):
+        total = 0
+        for value in matrix[index]:
+            total += value
+        if best_index == -1 or total > best_total:
+            best_index = index
+            best_total = total
+    return best_index
+
+
+if __name__ == "__main__":
+    assert greatest_row([]) == -1
+    assert greatest_row([[-4, -2], [-1, -3], [-2, -2]]) == 1
+    assert greatest_row([[2], [2]]) == 0
+```
+
+3. Open the separate log with `with open(log_path, "a", encoding="utf-8") as log:` **[1]**; select the average or `No marks` according to the count **[1]**; write the result plus `"\n"` and close via `with` **[1]**. Append preserves previous summaries; write mode would replace them **[1]**. The log must differ from both the input and accepted-mark output paths.
 
 ## Required Ideas and Exam Language
 

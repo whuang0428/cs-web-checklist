@@ -552,6 +552,30 @@ Better:
 
 ---
 
+## Protocol Selection Drill
+
+For each situation, name the most suitable protocol from HTTP, FTP, SMTP, POP3, IMAP and BitTorrent, and explain its role. Use each once. **[12]**
+
+1. A browser requests a web page from a web server.
+2. A user transfers files between a client and a remote file server.
+3. An outgoing mail server passes a message towards its recipient's mail server.
+4. A client downloads messages for local storage; synchronising server folders is not required.
+5. A user needs consistent server folders and read/unread states on a phone and laptop.
+6. Peers exchange pieces of a large shared file, with clients also uploading pieces they hold.
+
+**Total: 12 marks**
+
+### Protocol Selection Drill Answers
+
+Award one mark for each protocol and one for its linked role.
+
+1. HTTP: client requests and server responses transfer web resources; HTTPS adds TLS protection.
+2. FTP: a client sends/retrieves files using a file-transfer service.
+3. SMTP: sends/relays outgoing email between mail systems.
+4. POP3: downloads mailbox messages to a client; server copies may be retained or removed according to settings.
+5. IMAP: manages messages/folders on the server and synchronises their state across clients.
+6. BitTorrent: peers download and upload file pieces within a swarm, distributing transfer load.
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.

@@ -98,6 +98,74 @@
     return Number(heading.tagName.substring(1));
   }
 
+  function revealContentAnchor(id, focus) {
+    var target = document.getElementById(id);
+    if (!target || !target.closest('.markdown-section')) return;
+    var parent = target.parentElement;
+    while (parent) {
+      if (parent.tagName === 'DETAILS') parent.open = true;
+      parent = parent.parentElement;
+    }
+    // Answer headings are visually replaced by their disclosure summary.
+    var destination = isAnswerHeading(target) && target.closest('.answer-disclosure') ?
+      target.closest('.answer-disclosure').querySelector('summary') : target;
+    destination.scrollIntoView({ block: 'start' });
+    if (focus) {
+      if (!destination.hasAttribute('tabindex') && destination.tagName !== 'SUMMARY') {
+        destination.tabIndex = -1;
+      }
+      destination.focus({ preventScroll: true });
+    }
+  }
+
+  function restoreContentAnchor() {
+    var query = window.location.hash.split('?')[1];
+    var id = query && new URLSearchParams(query).get('id');
+    if (id) revealContentAnchor(id, false);
+  }
+
+  function preparePageContents(path) {
+    if (!/\/(?:chapter-\d+|paper-\d-review(?:-2)?)(?:\.md)?$/.test(path)) return;
+    var section = document.querySelector('.markdown-section');
+    if (!section || section.querySelector('.page-contents')) return;
+    var omitted = ['Official Syllabus Checklist', 'Core Knowledge',
+      'Required Ideas and Exam Language', 'Worked Examples'];
+    var headings = Array.from(section.querySelectorAll('h2[id]')).filter(function (heading) {
+      return omitted.indexOf(heading.textContent.trim()) === -1;
+    });
+    if (!headings.length) return;
+
+    var details = document.createElement('details');
+    details.className = 'page-contents';
+    var summary = document.createElement('summary');
+    summary.textContent = 'On this page · ' + headings.length + ' sections';
+    details.appendChild(summary);
+    var nav = document.createElement('nav');
+    nav.setAttribute('aria-label', 'On this page');
+    var list = document.createElement('ul');
+    headings.forEach(function (heading) {
+      var item = document.createElement('li');
+      var link = document.createElement('a');
+      link.textContent = heading.textContent.trim();
+      link.href = window.location.hash.split('?')[0] + '?id=' + encodeURIComponent(heading.id);
+      link.addEventListener('click', function () {
+        window.setTimeout(function () { revealContentAnchor(heading.id, true); }, 0);
+      });
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+    nav.appendChild(list);
+    details.appendChild(nav);
+    var metadata = section.querySelector('.chapter-meta');
+    var title = section.querySelector('h1');
+    var preceding = metadata || title;
+    if (preceding) preceding.after(details);
+  }
+
+  window.addEventListener('hashchange', function () {
+    window.setTimeout(restoreContentAnchor, 0);
+  });
+
   function isOverviewHeading(heading) {
     var text = heading.textContent.trim();
     return text.endsWith('Chapter at a Glance') || text.endsWith('Threats at a Glance');
@@ -434,11 +502,13 @@
         applyCourseIdentity(path);
         prepareChapterOverviews();
         foldAnswers();
+        preparePageContents(path);
         prepareTables();
         prepareMermaidDiagrams();
         constrainPagination(path);
         prepareSearch();
         restoreOverviewAnchor();
+        window.setTimeout(restoreContentAnchor, 700);
       }, 0);
     });
   };

@@ -136,6 +136,42 @@ def mutate_markdown_fence(root: Path) -> None:
     write_text(path, path.read_text(encoding="utf-8") + "\n```\n")
 
 
+def mutate_answer_part(root: Path) -> None:
+    path = root / "ig-0478" / "paper-2-review.md"
+    text = path.read_text(encoding="utf-8")
+    original = "### Question 6 Mark Scheme [8]\n\n1."
+    assert original in text
+    write_text(path, text.replace(original, "### Question 6 Mark Scheme [8]\n\n2.", 1))
+
+
+def mutate_drill_total(root: Path) -> None:
+    path = root / "ig-0478" / "chapter-7.md"
+    text = path.read_text(encoding="utf-8")
+    assert "**Total: 35 marks**" in text
+    write_text(path, text.replace("**Total: 35 marks**", "**Total: 28 marks**", 1))
+
+
+def mutate_python_behaviour(root: Path) -> None:
+    path = root / "ig-0478" / "chapter-8.md"
+    text = path.read_text(encoding="utf-8")
+    assert "0 <= mark <= 100" in text
+    write_text(path, text.replace("0 <= mark <= 100", "0 < mark < 100", 1))
+
+
+def mutate_as_java_behaviour(root: Path) -> None:
+    path = root / "as-9618" / "chapter-11.md"
+    text = path.read_text(encoding="utf-8")
+    assert "statistics.total += mark;" in text
+    write_text(path, text.replace("statistics.total += mark;", "statistics.total = mark;", 1))
+
+
+def mutate_relative_links(root: Path) -> None:
+    path = root / "index.html"
+    text = path.read_text(encoding="utf-8")
+    assert "relativePath: true" in text
+    write_text(path, text.replace("relativePath: true", "relativePath: false", 1))
+
+
 def mutate_semantic_blind_spot(root: Path) -> None:
     path = root / "a2-9618" / "chapter-19.md"
     text = path.read_text(encoding="utf-8")
@@ -181,6 +217,11 @@ def main() -> int:
         ("missing storage example", "coverage.md", mutate_remove_storage_example, "omits reviewed Notes-and-guidance scope"),
         ("missing targeted answer", "coverage.md", mutate_remove_targeted_answer, "practice evidence must name a question and its answers"),
         ("unbalanced Markdown fence", "a2-9618/chapter-19.md", mutate_markdown_fence, "unclosed fenced code block"),
+        ("misnumbered answer", "ig-0478/paper-2-review.md", mutate_answer_part, "answer part numbers do not match"),
+        ("wrong drill total", "ig-0478/chapter-7.md", mutate_drill_total, "marks total 35, expected 28"),
+        ("Python endpoint regression", "ig-0478/chapter-8.md", mutate_python_behaviour, "Python example 1 failed"),
+        ("AS Java parameter regression", "as-9618/chapter-11.md", mutate_as_java_behaviour, "Java smoke test Ch11JavaParameters failed"),
+        ("relative link regression", "index.html", mutate_relative_links, "missing relative Markdown link resolution"),
     ]
 
     with tempfile.TemporaryDirectory(prefix="cs-web-checklist-negative-") as temp_dir:
@@ -204,6 +245,7 @@ def main() -> int:
                 )
             else:
                 print(f"PASS (rejected): {name}")
+            restore(copy_root, relative_path)
 
         restore(copy_root, "coverage.md")
         restore(copy_root, "a2-9618/chapter-19.md")

@@ -86,7 +86,7 @@ Revise: programming paradigms; low-level programming and five addressing modes; 
 | direct | memory address | `LDD 20` | `ACC ← Memory[20]` |
 | indirect | address holding another address | `LDI 20` | `ACC ← Memory[Memory[20]]` |
 | indexed | base address plus IX | `LDX 20` | `ACC ← Memory[20 + IX]` |
-| relative | offset from current PC | `JMP +4` | branch relative to current instruction position |
+| relative | signed offset from a specified PC value | question-supplied relative-branch notation | effective address = specified PC + signed offset |
 
 ### Current example instruction set
 
@@ -118,6 +118,20 @@ STO 31
 ```
 
 For conditional flow, `CMP #10` records whether ACC equals 10. `JPE MATCH` follows the true/equal path; `JPN OTHER` follows the false/not-equal path. Both depend on the preceding compare.
+
+### Addressing Transfer Drill
+
+The standard example instruction set above uses an address or label with `JMP`. For this exercise only, an additional instruction `JREL Offset` is supplied: after fetching it, the processor adds the signed offset to the already-incremented PC. Do not assume this notation or PC convention unless a question supplies it.
+
+1. Write instructions to load literal 9 into ACC, then load from address 24 directly, indirectly through address 24, and using address 24 plus IX. **[4]**
+2. A `JREL` instruction is at address 200. Instructions occupy one address each, and PC is 201 after fetch. Write the instruction that branches to address 196 and show the address calculation. **[3]**
+
+**Total: 7 marks**
+
+#### Addressing Transfer Drill Answers
+
+1. `LDM #9`, `LDD 24`, `LDI 24`, `LDX 24`, in order; one mark each.
+2. Offset −5 **[1]**; `JREL -5` **[1]**; `201 + (-5) = 196` **[1]**. A direct `JMP 196` names the target instead of storing a PC-relative displacement.
 
 ## Worked Example 1 — Addressing and Memory Trace
 

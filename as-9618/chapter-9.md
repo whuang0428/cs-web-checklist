@@ -502,6 +502,56 @@ The refined version defines validation, bounds, initialisation, comparison and o
 
 ---
 
+## Java Starter — From an Algorithm to a Console Program
+
+Use Java for classroom programming and Cambridge pseudocode for Paper 2 answers. Save this block as `Ch9JavaStarter.java`, compile with `javac Ch9JavaStarter.java`, then run `java Ch9JavaStarter`. Use `java Ch9JavaStarter --interactive` to enter marks yourself. Java 17 or later can run the examples in this course.
+
+The algorithm inputs integer marks until −1, rejects other values outside 0–100, and outputs the number of passes. Decompose it into validation, classification and the input loop. A semicolon ends a Java statement; braces delimit a block; `==` compares values and `=` assigns a value.
+
+```java
+import java.util.Scanner;
+
+class Ch9JavaStarter {
+    static boolean validMark(int mark) {
+        return mark >= 0 && mark <= 100;
+    }
+
+    static int countPasses(Scanner input) {
+        int passes = 0;
+        while (input.hasNext()) {
+            if (!input.hasNextInt()) {
+                input.next(); // Consume a rejected token so the loop progresses.
+                continue;
+            }
+            int mark = input.nextInt();
+            if (mark == -1) break;
+            if (validMark(mark) && mark >= 40) passes++;
+        }
+        return passes;
+    }
+
+    public static void main(String[] args) {
+        if (args.length > 0 && args[0].equals("--interactive")) {
+            System.out.println("Enter marks, then -1:");
+            Scanner input = new Scanner(System.in);
+            System.out.println(countPasses(input));
+        } else {
+            try (Scanner input = new Scanner("bad 101 0 39 40 100 -1 90")) {
+                if (countPasses(input) != 2) throw new AssertionError();
+            }
+            try (Scanner input = new Scanner("-1")) {
+                if (countPasses(input) != 0) throw new AssertionError();
+            }
+            if (!validMark(0) || !validMark(100) || validMark(-2) || validMark(101))
+                throw new AssertionError();
+            System.out.println("Starter tests passed");
+        }
+    }
+}
+```
+
+Trace the sample before running it: `40` and `100` count; `90` is after the sentinel and is not processed. Then change the task to output the number of valid marks and their average. Keep the zero-count case explicit. See [Java constructs and parameters](chapter-11.md#java-constructs-and-parameter-behaviour) and [Java records, arrays and files](chapter-10.md#java-records-arrays-and-files).
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.

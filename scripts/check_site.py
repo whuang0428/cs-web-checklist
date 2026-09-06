@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import textwrap
 import xml.etree.ElementTree as ET
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -1496,98 +1497,149 @@ def check_review_independence(
                 )
 
 
+def code_blocks(text: str, language: str) -> list[str]:
+    """Include fenced examples indented inside numbered Markdown answers."""
+    pattern = re.compile(
+        rf"^[ \t]*```{re.escape(language)}[ \t]*\n(.*?)^[ \t]*```[ \t]*$",
+        flags=re.MULTILINE | re.DOTALL,
+    )
+    return [textwrap.dedent(code) for code in pattern.findall(text)]
+
+
 def check_java_code_blocks(errors: list[str]) -> None:
-    java_pages = set(PHASE4_CHAPTERS) | {A2_REVIEW_PAGE, A2_REVIEW_PAGE_2}
     javac = shutil.which("javac")
     java = shutil.which("java")
     if javac is None or java is None:
         errors.append("Java validation requires both javac and java on PATH")
         return
 
-    smoke_classes = {
-        ROOT / "a2-9618" / "chapter-19.md": [
-            "Ch19SearchSortDemo",
-            "Ch19ArrayLinkedListDemo",
-            "Ch19TwoStackQueueDemo",
-            "Ch19TreeDemo",
-            "Ch19RecursionDemo",
-        ],
-        ROOT / "a2-9618" / "chapter-20.md": [
-            "Ch20OopDemo",
-            "Ch20HashTableDemo",
-            "Ch20FileDemo",
-        ],
-        A2_REVIEW_PAGE: [
-            "Paper4AQuestion1",
-            "Paper4AQuestion2",
-            "Paper4AQuestion3",
-        ],
-        A2_REVIEW_PAGE_2: [
-            "Paper4BQuestion1",
-            "Paper4BQuestion2",
-            "Paper4BQuestion3",
-        ],
-    }
-
-    for path in sorted(java_pages):
-        text = path.read_text(encoding="utf-8")
-        blocks = JAVA_FENCE_RE.findall(text)
-        if not blocks:
+    for path in sorted(CONTENT_PAGES):
+        source_text = path.read_text(encoding="utf-8")
+        blocks = code_blocks(source_text, "java")
+        if path in set(PHASE4_CHAPTERS) | {A2_REVIEW_PAGE, A2_REVIEW_PAGE_2} and not blocks:
             add_error(errors, path, "expected at least one fenced Java code block")
-            continue
-        if "```python" in text.casefold() or "Python 3 console mode" in text:
-            add_error(errors, path, "A2 executable content must be Java-only")
-
-        with tempfile.TemporaryDirectory(prefix="cs-check-java-") as temp_name:
-            temp = Path(temp_name)
-            output = temp / "classes"
-            output.mkdir()
-            compilation_failed = False
-            for block_number, code in enumerate(blocks, 1):
-                source = temp / f"Snippet{block_number}.java"
+        for block_number, code in enumerate(blocks, 1):
+            with tempfile.TemporaryDirectory(prefix="cs-check-java-") as temp_name:
+                temp = Path(temp_name)
+                classes = re.findall(r"^(?:public +)?(?:final +)?class +(\w+)", code, re.MULTILINE)
+                if not classes:
+                    add_error(errors, path, f"Java block {block_number} needs a standalone class")
+                    continue
+                source = temp / (classes[0] + ".java")
                 source.write_text(code, encoding="utf-8")
-                result = subprocess.run(
-                    [javac, "-encoding", "UTF-8", "-d", str(output), str(source)],
-                    capture_output=True,
-                    text=True,
-                    timeout=20,
-                    check=False,
-                )
-                if result.returncode != 0:
-                    compilation_failed = True
-                    detail = (result.stderr or result.stdout).strip().splitlines()
-                    add_error(
-                        errors,
-                        path,
-                        f"Java block {block_number} failed to compile: "
-                        + (detail[-1] if detail else "unknown javac error"),
+                try:
+                    result = subprocess.run(
+                        [javac, "--release", "17", "-encoding", "UTF-8", "-d", str(temp), str(source)],
+                        cwd=temp, capture_output=True, text=True, timeout=20, check=False,
                     )
-
-            if compilation_failed:
-                continue
-
-            for class_name in smoke_classes[path]:
-                result = subprocess.run(
-                    [java, "-cp", str(output), class_name],
-                    capture_output=True,
-                    text=True,
-                    timeout=20,
-                    check=False,
-                )
-                if result.returncode != 0:
-                    detail = (result.stderr or result.stdout).strip().splitlines()
-                    add_error(
-                        errors,
-                        path,
-                        f"Java smoke test {class_name} failed: "
-                        + (detail[-1] if detail else f"exit {result.returncode}"),
-                    )
+                    if result.returncode != 0:
+                        add_error(errors, path, f"Java block {block_number} failed to compile: "
+                                  + (result.stderr or result.stdout).strip())
+                        continue
+                    if re.search(r"public\s+static\s+void\s+main\s*\(", code):
+                        result = subprocess.run(
+                            [java, "-ea", "-cp", str(temp), classes[0]], cwd=temp,
+                            stdin=subprocess.DEVNULL, capture_output=True, text=True,
+                            timeout=20, check=False,
+                        )
+                        if result.returncode != 0:
+                            add_error(errors, path, f"Java smoke test {classes[0]} failed: "
+                                      + (result.stderr or result.stdout).strip())
+                except subprocess.TimeoutExpired:
+                    add_error(errors, path, f"Java block {block_number} timed out")
 
     for course in (ROOT / "as-9618", ROOT / "a2-9618"):
         for path in sorted(course.glob("*.md")):
             text = path.read_text(encoding="utf-8")
             if re.search(r"\bpython\b", text, flags=re.IGNORECASE):
                 add_error(errors, path, "AS/A2 student content must use Java, not Python")
+
+
+def check_python_code_blocks(errors: list[str]) -> None:
+    for path in sorted(CONTENT_PAGES):
+        for block_number, code in enumerate(code_blocks(path.read_text(encoding="utf-8"), "python"), 1):
+            try:
+                compile(code, str(path), "exec")
+            except SyntaxError as error:
+                add_error(errors, path, f"Python block {block_number} syntax error: {error.msg}")
+                continue
+            # Short fragments are syntax-checked. Complete examples declare a main
+            # entry point that runs deterministic checks; interactive mode is opt-in.
+            if not re.search(r"^if __name__ == [\"']__main__[\"']:", code, re.MULTILINE):
+                continue
+            with tempfile.TemporaryDirectory(prefix="cs-check-python-") as temp_name:
+                temp = Path(temp_name)
+                source = temp / "example.py"
+                source.write_text(code, encoding="utf-8")
+                try:
+                    result = subprocess.run(
+                        [sys.executable, "-I", str(source)], cwd=temp,
+                        stdin=subprocess.DEVNULL, capture_output=True, text=True,
+                        timeout=10, check=False,
+                    )
+                    if result.returncode != 0:
+                        add_error(errors, path, f"Python example {block_number} failed: "
+                                  + (result.stderr or result.stdout).strip())
+                except subprocess.TimeoutExpired:
+                    add_error(errors, path, f"Python example {block_number} timed out")
+
+
+def without_code(text: str) -> str:
+    return re.sub(r"^[ \t]*```[^\n]*\n.*?^[ \t]*```[ \t]*$", "", text,
+                  flags=re.MULTILINE | re.DOTALL)
+
+
+def numbered_parts(text: str) -> list[tuple[int, str]]:
+    text = without_code(text)
+    matches = list(re.finditer(r"^(\d+)\.(?:[ \t]+|$)", text, flags=re.MULTILINE))
+    return [(int(match.group(1)), text[match.end():matches[index + 1].start()
+             if index + 1 < len(matches) else len(text)]) for index, match in enumerate(matches)]
+
+
+def answer_marks(text: str) -> int:
+    total = 0
+    for line in text.splitlines():
+        marks = [int(mark) for mark in BOLD_MARK_RE.findall(line)]
+        # A final subtotal repeats the preceding point allocations on that line.
+        total += marks[-1] if len(marks) > 1 and sum(marks[:-1]) == marks[-1] else sum(marks)
+    return total
+
+
+def check_assessment_alignment(errors: list[str]) -> None:
+    for path in sorted(REVIEW_PAGES):
+        text = path.read_text(encoding="utf-8")
+        for match in re.finditer(r"^## Question (\d+) [^\n]*\n(.*?)(?=^## |\Z)", text, re.M | re.S):
+            number = match.group(1)
+            questions = numbered_parts(match.group(2))
+            answer = re.search(rf"^### Question {number} Mark Scheme[^\n]*\n(.*?)(?=^##[#]? |\Z)",
+                               text, re.M | re.S)
+            if not answer:
+                continue
+            answers = numbered_parts(answer.group(1))
+            # Whole-response level schemes and bullet rubrics have no numbered
+            # parts. Numbered schemes must match both part order and allocation.
+            if questions and answers:
+                expected = list(range(1, len(questions) + 1))
+                if [n for n, _ in questions] != expected or [n for n, _ in answers] != expected:
+                    add_error(errors, path, f"Question {number} answer part numbers do not match question parts")
+                    continue
+                for (part, question), (_, response) in zip(questions, answers):
+                    expected_marks = sum(int(mark) for mark in BOLD_MARK_RE.findall(question))
+                    actual = answer_marks(response)
+                    if actual != expected_marks:
+                        add_error(errors, path, f"Question {number}.{part} answer marks total {actual}, expected {expected_marks}")
+
+    for path in sorted(EXPECTED_CHAPTERS):
+        text = path.read_text(encoding="utf-8")
+        for match in re.finditer(r"^#{2,4} ([^\n]*[Dd]rill)\s*$", text, re.MULTILINE):
+            remaining = text[match.end():]
+            end = re.search(r"^#{2,6} ", remaining, re.MULTILINE)
+            questions = remaining[:end.start()] if end else remaining
+            total = re.search(r"\*\*Total: (\d+) marks\*\*", questions)
+            if total:
+                actual = sum(int(mark) for mark in BOLD_MARK_RE.findall(without_code(questions[:total.start()])) )
+                if actual != int(total.group(1)):
+                    add_error(errors, path, f"{match.group(1)} marks total {actual}, expected {total.group(1)}")
 
 
 def check_chapter_overviews(errors: list[str]) -> None:
@@ -1853,6 +1905,8 @@ def check_marked_content(errors: list[str]) -> None:
     check_ao_totals(errors, A2_PAPER3_REVIEW_PAGE, 45, 30)
     check_ao_totals(errors, A2_PAPER3_REVIEW_PAGE_2, 45, 30)
     check_java_code_blocks(errors)
+    check_python_code_blocks(errors)
+    check_assessment_alignment(errors)
 
 
 def check_cdn_versions(errors: list[str]) -> None:
@@ -1919,6 +1973,7 @@ def check_accessibility_baseline(errors: list[str]) -> None:
     style_text = style.read_text(encoding="utf-8")
 
     index_contracts = [
+        ('relativePath: true', "relative Markdown link resolution"),
         ('class="skip-link"', "a keyboard skip link"),
         ('href="#main-content"', "a skip-link target"),
     ]
@@ -1935,6 +1990,8 @@ def check_accessibility_baseline(errors: list[str]) -> None:
         ("main.focus()", "skip-link focus transfer"),
         ("event.key === 'Enter'", "skip-link keyboard activation"),
         ("answer-disclosure", "native answer disclosure processing"),
+        ("preparePageContents", "chapter and paper contents navigation"),
+        ("revealContentAnchor", "answer-aware anchor navigation"),
         ("text.endsWith(' drill answers')", "targeted-drill answer disclosure processing"),
         ("text === 'file-operation check answers'", "file-operation answer disclosure processing"),
         ("details.open = !details.open", "answer-disclosure keyboard toggling"),
@@ -2056,7 +2113,8 @@ def main() -> int:
         "have structurally valid teaching, question and answer links"
     )
     print("- known 0478 pseudocode/SQL and syllabus-scope regressions are rejected")
-    print("- every A2 fenced Java code block compiles and all Java smoke tests pass")
+    print("- all AS/A2 Java examples compile for Java 17 and every main runs; Python blocks compile and complete examples run")
+    print("- numbered review answers match their questions and allocations; declared drill totals agree")
     print("- jsDelivr npm dependencies use exact versions")
     print("- all SVG assets contain well-formed XML")
     print("- skip link, keyboard focus, contrast-safe code styling, answer/table/pagination scripting, print and reduced-motion checks pass")

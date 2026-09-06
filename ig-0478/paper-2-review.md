@@ -169,7 +169,7 @@ The file `readings.txt` contains one valid real temperature on each line. The nu
 
 ## Question 7 — Integrated Programming Scenario [15]
 
-A small library stores 20 book codes in `BookCode[1:20]`. The matching Boolean value in `Available[1:20]` is `TRUE` when that book can be borrowed.
+A small library stores 20 unique book codes in `BookCode[1:20]`; none is `"END"`. The matching Boolean value in `Available[1:20]` is `TRUE` when that book can be borrowed.
 
 Write one complete solution that:
 
@@ -226,9 +226,7 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ### Question 3 Mark Scheme [12]
 
-1. A file stores the readings persistently, so they remain available after the program ends / can be processed in a later run. **[1]**
-
-2. Example:
+1. Example:
 
    ```text
    FOR Exhibition <- 1 TO 3
@@ -331,7 +329,9 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ### Question 6 Mark Scheme [8]
 
-1. Example:
+1. A file stores the readings persistently, so they remain available after the program ends / can be processed in a later run. **[1]**
+
+2. Example:
 
    ```text
    Total <- 0
@@ -366,9 +366,10 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 Example pseudocode:
 
 ```text
-CONSTANT MaxLoans <- 3
+CONSTANT MaxLoans = 3
 Borrowed <- 0
 
+// Obtain a non-empty member code before processing requests.
 REPEAT
     INPUT MemberCode
 UNTIL LENGTH(MemberCode) > 0
@@ -378,6 +379,7 @@ REPEAT
 
     IF RequestedCode <> "END"
     THEN
+        // Find the matching index so the two arrays remain associated.
         Found <- FALSE
         Index <- 1
 
@@ -394,6 +396,7 @@ REPEAT
         THEN
             IF Available[Index] = TRUE
             THEN
+                // Only a successful loan changes availability and the count.
                 Available[Index] <- FALSE
                 Borrowed <- Borrowed + 1
                 OUTPUT "Loan recorded"
@@ -409,21 +412,61 @@ UNTIL RequestedCode = "END" OR Borrowed = MaxLoans
 OUTPUT Borrowed
 ```
 
-Award marks for:
+Assess this response using the [IGCSE scenario levels](../exam-technique.md#igcse-15-mark-scenario-assessment): AO2 /9 and AO3 /6.
 
-| Requirement | Marks |
-|---|---:|
-| initialise borrowed count and use a three-loan limit | 1 |
-| reject an empty member code | 1 |
-| repeat requests and stop on `"END"` or three successful loans | 2 |
-| initialise and perform a bounded linear search | 3 |
-| distinguish found and available states correctly | 2 |
-| set availability false and increase count only on a valid loan | 2 |
-| produce the two distinct failure messages | 2 |
-| output final count and maintain coherent control structure | 2 |
-| **Total** | **15** |
+Look for evidence of: non-empty member input; both stopping conditions; a bounded search; matched book/availability arrays; separate absent/unavailable outcomes; updates only after a successful loan; final count. Use these requirements to judge completeness, not as an additive point scheme.
 
-Equivalent correct solutions in an allowed language receive credit. Exact syntax may vary, but the logic and array matching must be correct.
+The following Python version uses the same data and decisions. Arrays must already contain twenty corresponding entries. Save the block as a file and run it to check invalid member input, absent and unavailable codes, the three-loan limit and immediate termination.
+
+```python
+def borrow_books(book_codes, available, read=input, write=print):
+    if len(book_codes) != 20 or len(available) != 20:
+        raise ValueError("twenty matching entries required")
+    # Validate the member before accepting any borrowing requests.
+    member_code = read("Member code: ")
+    while len(member_code) == 0:
+        member_code = read("Member code: ")
+    borrowed = 0
+    while borrowed < 3:
+        requested = read("Book code or END: ")
+        if requested == "END":
+            break
+        # Keep the matched index to access the corresponding availability.
+        found_index = -1
+        for index in range(20):
+            if book_codes[index] == requested:
+                found_index = index
+                break
+        if found_index == -1:
+            write("Code not found")
+        elif not available[found_index]:
+            write("Not available")
+        else:
+            # Only successful loans change the arrays and the limit counter.
+            available[found_index] = False
+            borrowed += 1
+            write("Loan recorded")
+    write(borrowed)
+    return borrowed
+
+
+if __name__ == "__main__":
+    codes = ["B" + str(index) for index in range(20)]
+    available = [True] * 20
+    entries = iter(["", "M1", "missing", "B0", "B0", "B1", "B2"])
+    output = []
+    assert borrow_books(codes, available, lambda prompt: next(entries), output.append) == 3
+    assert output == ["Code not found", "Loan recorded", "Not available",
+                      "Loan recorded", "Loan recorded", 3]
+    assert available == [False, False, False] + [True] * 17
+    entries = iter(["M2", "END"])
+    output = []
+    assert borrow_books(codes, available, lambda prompt: next(entries), output.append) == 0
+    assert output == [0]
+    print("Borrowing tests passed")
+```
+
+Call `borrow_books(book_codes, available)` with your preloaded arrays to use interactive input. Equivalent correct solutions in an allowed language receive credit; assess the logic, completeness and clarity of the whole response.
 
 ---
 

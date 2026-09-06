@@ -430,10 +430,10 @@ Total <- 0
 FOR Index <- 1 TO 5
     Total <- Total + Score[Index]
 NEXT Index
-Average <- Total / (Index - 1)
+Average <- Total / 4
 ```
 
-Depending on the loop convention, `Index` after the loop is easy to misinterpret. The count is already known.
+The loop totals five scores, but the divisor is four. For scores 10, 20, 30, 40 and 50, the faulty result is 37.5 instead of 30. Use the actual number of scores; do not depend on the final value of a loop-control variable.
 
 Correction:
 
@@ -497,6 +497,48 @@ A white-box review confirms the loop totals five elements. Black-box tests confi
    **[2]**
 
 ---
+
+## Java Testing Workshop
+
+Specify expected results before executing a program. This example implements an average for integer observations; negative observations are valid. An empty array has no average and must raise `IllegalArgumentException`. Widen to `double` before division to avoid truncating a fractional mean.
+
+```java
+class Ch12JavaTests {
+    static double average(int[] observations) {
+        if (observations.length == 0) throw new IllegalArgumentException("no observations");
+        double total = 0;
+        for (int observation : observations) total += observation;
+        return total / observations.length;
+    }
+
+    public static void main(String[] args) {
+        int[][] inputs = {{1, 2}, {-5, -3}, {0}, {100, 100, 100}};
+        double[] expected = {1.5, -4.0, 0.0, 100.0};
+        for (int index = 0; index < inputs.length; index++) {
+            double actual = average(inputs[index]);
+            boolean passed = Math.abs(actual - expected[index]) < 0.000001;
+            System.out.println(java.util.Arrays.toString(inputs[index]) + " | expected "
+                    + expected[index] + " | actual " + actual + " | " + passed);
+            if (!passed) throw new AssertionError("test " + index);
+        }
+        try {
+            average(new int[0]);
+            throw new AssertionError("empty input accepted");
+        } catch (IllegalArgumentException expectedFailure) {
+            System.out.println("[] | expected rejection | actual rejection | true");
+        }
+    }
+}
+```
+
+| Fault to introduce during practice | Test that exposes it | Reason |
+|---|---|---|
+| use integer division for the result | `[1, 2]` → 1.5 | a fractional mean must be preserved |
+| divide by one fewer than the count | `[-5, -3]` → −4 | a non-zero total reveals the wrong divisor |
+| start the loop at index 1 | `[100, 100, 100]` → 100 | the first observation must be included |
+| remove the empty-input check | `[]` → rejection | an undefined average must not appear as a result |
+
+For each temporary fault, record the failed test, diagnose the cause, restore the correction and run the complete test set again. This is regression testing. Passing these cases demonstrates the specified behaviours; it does not prove every possible program input correct.
 
 ## Required Ideas and Exam Language
 

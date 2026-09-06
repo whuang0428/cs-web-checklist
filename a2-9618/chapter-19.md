@@ -70,10 +70,13 @@ Revise: algorithm tracing and comparison; linear and binary search; bubble and i
 
 Linear search compares each item in order. It has worst-case time `O(n)` and works without sorting. Binary search compares the middle item, discards half of a **sorted** range and repeats; its worst-case time is `O(log n)`.
 
+These pseudocode examples use an array with capacity 100. `High` is the final occupied index (−1 for an empty array, otherwise 0–99). A function receives an array parameter; a sorting procedure uses `BYREF` so that its changes affect the caller's array. The local `High` parameter is passed by value.
+
 Pseudocode for linear search:
 
 ```text
-FUNCTION LinearSearch(Values, Target, High) RETURNS INTEGER
+FUNCTION LinearSearch(Values : ARRAY[0:99] OF INTEGER, Target : INTEGER, High : INTEGER) RETURNS INTEGER
+    DECLARE Index : INTEGER
     FOR Index <- 0 TO High
         IF Values[Index] = Target THEN
             RETURN Index
@@ -86,7 +89,8 @@ ENDFUNCTION
 Pseudocode for binary search, with `High` supplied as the final valid array index:
 
 ```text
-FUNCTION BinarySearch(Values, Target, High) RETURNS INTEGER
+FUNCTION BinarySearch(Values : ARRAY[0:99] OF INTEGER, Target : INTEGER, High : INTEGER) RETURNS INTEGER
+    DECLARE Low, Middle : INTEGER
     Low <- 0
     WHILE Low <= High
         Middle <- (Low + High) DIV 2
@@ -109,8 +113,11 @@ Bubble sort repeatedly compares neighbours and swaps them. Insertion sort mainta
 Pseudocode for bubble sort, using a flag to stop after a pass with no swap:
 
 ```text
-PROCEDURE BubbleSort(Values, High)
-    REPEAT
+PROCEDURE BubbleSort(BYREF Values : ARRAY[0:99] OF INTEGER, BYVAL High : INTEGER)
+    DECLARE Index, Temp : INTEGER
+    DECLARE Swapped : BOOLEAN
+    Swapped <- TRUE
+    WHILE High > 0 AND Swapped = TRUE
         Swapped <- FALSE
         FOR Index <- 0 TO High - 1
             IF Values[Index] > Values[Index + 1] THEN
@@ -121,20 +128,27 @@ PROCEDURE BubbleSort(Values, High)
             ENDIF
         NEXT Index
         High <- High - 1
-    UNTIL Swapped = FALSE OR High = 0
+    ENDWHILE
 ENDPROCEDURE
 ```
 
 Pseudocode for insertion sort:
 
 ```text
-PROCEDURE InsertionSort(Values, High)
+PROCEDURE InsertionSort(BYREF Values : ARRAY[0:99] OF INTEGER, BYVAL High : INTEGER)
+    DECLARE Current, Item, Position : INTEGER
+    DECLARE Moving : BOOLEAN
     FOR Current <- 1 TO High
         Item <- Values[Current]
         Position <- Current - 1
-        WHILE Position >= 0 AND Values[Position] > Item
-            Values[Position + 1] <- Values[Position]
-            Position <- Position - 1
+        Moving <- TRUE
+        WHILE Position >= 0 AND Moving = TRUE
+            IF Values[Position] > Item THEN
+                Values[Position + 1] <- Values[Position]
+                Position <- Position - 1
+            ELSE
+                Moving <- FALSE
+            ENDIF
         ENDWHILE
         Values[Position + 1] <- Item
     NEXT Current
@@ -208,10 +222,10 @@ An ADT defines permitted operations independently of its representation.
 
 ### Required operations in pseudocode
 
-These templates expose the boundary checks and pointer/index changes that an ADT trace must show.
+These templates expose the boundary checks and pointer/index changes that an ADT trace must show. Here the payload is an integer, `MaxIndex=9`, `Capacity=10`, and the arrays use indexes 0–9. Initially `Top=-1`, `Front=0`, `Rear=9` and `Count=0`. The complete construction tasks below require the declarations and success contracts as well.
 
 ```text
-PROCEDURE Push(Item)
+PROCEDURE Push(Item : INTEGER)
     IF Top = MaxIndex THEN
         OUTPUT "Stack full"
     ELSE
@@ -220,7 +234,7 @@ PROCEDURE Push(Item)
     ENDIF
 ENDPROCEDURE
 
-PROCEDURE Pop(BYREF Item : ItemType, BYREF Success : BOOLEAN)
+PROCEDURE Pop(BYREF Item : INTEGER, BYREF Success : BOOLEAN)
     IF Top = -1 THEN
         Success <- FALSE
     ELSE
@@ -230,7 +244,7 @@ PROCEDURE Pop(BYREF Item : ItemType, BYREF Success : BOOLEAN)
     ENDIF
 ENDPROCEDURE
 
-PROCEDURE Enqueue(Item)
+PROCEDURE Enqueue(Item : INTEGER)
     IF Count = Capacity THEN
         OUTPUT "Queue full"
     ELSE
@@ -240,7 +254,7 @@ PROCEDURE Enqueue(Item)
     ENDIF
 ENDPROCEDURE
 
-PROCEDURE Dequeue(BYREF Item : ItemType, BYREF Success : BOOLEAN)
+PROCEDURE Dequeue(BYREF Item : INTEGER, BYREF Success : BOOLEAN)
     IF Count = 0 THEN
         Success <- FALSE
     ELSE
@@ -254,9 +268,9 @@ ENDPROCEDURE
 
 `Success` makes the empty-structure contract explicit: the caller uses `Item` only when `Success = TRUE`. This avoids a function path that has no return value.
 
-For an array linked list, insertion removes the first node from the free list and connects it into the live chain. Search follows `Next` until the item or null pointer is reached. Deletion reconnects the previous node around the target and returns the removed node to the free list; the `ArrayLinkedList` example below implements all three operations.
+For an array linked list, insertion removes the first node from the free list and connects it into the live chain. Search follows `NextPointer` until the item or null pointer is reached. Deletion reconnects the previous node around the target and returns the removed node to the free list; the `ArrayLinkedList` example below implements all three operations.
 
-For a binary search tree:
+For these object-based binary-search-tree templates, `KeyType` represents INTEGER. The supplied class `NodeType` has accessible fields `Key`, `Left` and `Right`; its constructor stores the given key and sets both child references to `NULL`. A variable of this class holds a reference to a node. The [construction drill](#algorithm-construction-drill) and [Paper 3 insertion task](paper-3-review.md#question-7-algorithms-and-recursion-10) use fully specified array representations.
 
 ```text
 FUNCTION TreeFind(Node : NodeType, Target : KeyType) RETURNS BOOLEAN
@@ -314,9 +328,16 @@ FUNCTION TreeDelete(Node : NodeType, Target : KeyType) RETURNS NodeType
     ENDIF
     RETURN Node
 ENDFUNCTION
+
+FUNCTION SmallestNode(Node : NodeType) RETURNS NodeType
+    WHILE Node.Left <> NULL
+        Node <- Node.Left
+    ENDWHILE
+    RETURN Node
+ENDFUNCTION
 ```
 
-The delete cases are: leaf (replace by null), one child (replace by that child), and two children (copy the in-order successor/predecessor, then delete that copied node).
+`SmallestNode` requires a non-null node; `TreeDelete` calls it only when both children exist. Tree deletion is an extension: leaf (replace by null), one child (replace by that child), and two children (copy the in-order successor/predecessor, then delete that copied node). Required binary-tree algorithm construction focuses on finding and inserting items.
 
 ### Dictionary ADT
 
@@ -433,7 +454,7 @@ class Ch19TwoStackQueueDemo {
 
 ## Worked Example 3 — Delete from an Array Linked List
 
-If `StartPointer = 2` and the live chain is `2 → 5 → 1 → -1`, deleting node `5` sets `Next[2] = Next[5]`, then `Next[5] = FreeListPointer`, then `FreeListPointer = 5`. The first change repairs the live chain; the last two recycle the node.
+If `StartPointer = 2` and the live chain is `2 → 5 → 1 → -1`, deleting node `5` sets `NextPointer[2] = NextPointer[5]`, then `NextPointer[5] = FreeListPointer`, then `FreeListPointer = 5`. The first change repairs the live chain; the last two recycle the node.
 
 ## Trees and Graphs
 
@@ -512,6 +533,175 @@ class Ch19RecursionDemo {
 
 For `factorial(4)` the calls descend as `4 → 3 → 2 → 1`. The base case returns `1`. Unwinding gives `2`, then `6`, then `24`. The base case prevents infinite recursion; the reducing parameter makes that case reachable.
 
+## Algorithm Construction Drill
+
+Write complete algorithms before opening the answers. `-1` is the null index. Unless stated otherwise, arrays and control variables below are global and already initialised. A failed operation must preserve the stored structure.
+
+- Linked list: integer `Data[0:9]`, `NextPointer[0:9]`, `Start` and `Free`. The active list is in ascending order with unique values. Free nodes form a second chain using `NextPointer`; together both chains contain all ten positions.
+- Binary search tree: records `Tree[0:9]`, each with integer `Key`, `Left`, `Right`; `Root` identifies the root. Keys are unique.
+- Stack: integer `Stack[0:9]`; `Top=-1` when empty.
+- Circular queue: integer `Queue[0:9]`; initially `Front=0`, `Rear=9`, `Count=0`. `Rear` denotes the most recently occupied position.
+
+1. Write `FindList(Target : INTEGER) RETURNS INTEGER`, returning the matching node index or −1. **[5]**
+2. Write `InsertList(BYVAL Item : INTEGER, BYREF Success : BOOLEAN)`. Preserve sorted order and allocate from the free list. Assume `Item` is absent. **[8]**
+3. Write `DeleteList(BYVAL Target : INTEGER, BYREF Success : BOOLEAN)`. Handle absent, first, middle, last and only-node cases; return a removed node to the free list. **[8]**
+4. Write `FindTree(Target : INTEGER) RETURNS INTEGER`, returning a matching index or −1. **[5]**
+5. Write `Push` and `Pop` using the given stack representation. Both return success through a reference parameter; `Pop` also returns the removed item through a reference parameter. **[8]**
+6. Write `Enqueue` and `Dequeue` using the circular queue representation. Handle full/empty cases, wrap both indexes, update `Count` and report success; `Dequeue` also returns an item. **[8]**
+
+**Total: 42 marks**
+
+### Algorithm Construction Drill Answers
+
+1. Typed header/result **[1]**; start index **[1]**; safe traversal **[1]**; comparison and found return **[1]**; not-found return **[1]**.
+
+```text
+FUNCTION FindList(Target : INTEGER) RETURNS INTEGER
+    DECLARE Current : INTEGER
+    Current <- Start
+    WHILE Current <> -1
+        IF Data[Current] = Target THEN
+            RETURN Current
+        ENDIF
+        Current <- NextPointer[Current]
+    ENDWHILE
+    RETURN -1
+ENDFUNCTION
+```
+
+2. Rejects full structure without mutation **[1]**; follows ordered links to locate predecessor/successor **[2]**; takes a free node and advances `Free` **[2]**; stores data and successor **[1]**; updates `Start` or predecessor link **[1]**; success result **[1]**.
+
+```text
+PROCEDURE InsertList(BYVAL Item : INTEGER, BYREF Success : BOOLEAN)
+    DECLARE Previous, Current, NewNode : INTEGER
+    DECLARE PositionFound : BOOLEAN
+    Success <- FALSE
+    IF Free <> -1 THEN
+        Previous <- -1
+        Current <- Start
+        PositionFound <- FALSE
+        WHILE Current <> -1 AND PositionFound = FALSE
+            IF Data[Current] > Item THEN
+                PositionFound <- TRUE
+            ELSE
+                Previous <- Current
+                Current <- NextPointer[Current]
+            ENDIF
+        ENDWHILE
+        NewNode <- Free
+        Free <- NextPointer[Free]
+        Data[NewNode] <- Item
+        NextPointer[NewNode] <- Current
+        IF Previous = -1 THEN
+            Start <- NewNode
+        ELSE
+            NextPointer[Previous] <- NewNode
+        ENDIF
+        Success <- TRUE
+    ENDIF
+ENDPROCEDURE
+```
+
+3. Initialises search and false result **[1]**; follows links with correct predecessor tracking and safe stopping **[2]**; absent case preserves structure **[1]**; unlinks first/only node **[1]**; unlinks other nodes **[1]**; returns node to free list **[1]**; success result **[1]**.
+
+```text
+PROCEDURE DeleteList(BYVAL Target : INTEGER, BYREF Success : BOOLEAN)
+    DECLARE Previous, Current : INTEGER
+    DECLARE Found : BOOLEAN
+    Previous <- -1
+    Current <- Start
+    Found <- FALSE
+    Success <- FALSE
+    WHILE Current <> -1 AND Found = FALSE
+        IF Data[Current] = Target THEN
+            Found <- TRUE
+        ELSE
+            Previous <- Current
+            Current <- NextPointer[Current]
+        ENDIF
+    ENDWHILE
+    IF Found = TRUE THEN
+        IF Previous = -1 THEN
+            Start <- NextPointer[Current]
+        ELSE
+            NextPointer[Previous] <- NextPointer[Current]
+        ENDIF
+        NextPointer[Current] <- Free
+        Free <- Current
+        Success <- TRUE
+    ENDIF
+ENDPROCEDURE
+```
+
+4. Typed header and starts at root **[1]**; loops safely **[1]**; equal-key return **[1]**; chooses the correct child **[1]**; returns −1 if absent **[1]**.
+
+```text
+FUNCTION FindTree(Target : INTEGER) RETURNS INTEGER
+    DECLARE Current : INTEGER
+    Current <- Root
+    WHILE Current <> -1
+        IF Tree[Current].Key = Target THEN
+            RETURN Current
+        ELSE
+            IF Target < Tree[Current].Key THEN
+                Current <- Tree[Current].Left
+            ELSE
+                Current <- Tree[Current].Right
+            ENDIF
+        ENDIF
+    ENDWHILE
+    RETURN -1
+ENDFUNCTION
+```
+
+5. Push: full detection **[1]**, advances top **[1]**, stores item **[1]**, success contract **[1]**. Pop: empty detection **[1]**, reads current top **[1]**, reduces top **[1]**, success contract **[1]**.
+
+```text
+PROCEDURE Push(BYVAL Item : INTEGER, BYREF Success : BOOLEAN)
+    Success <- FALSE
+    IF Top < 9 THEN
+        Top <- Top + 1
+        Stack[Top] <- Item
+        Success <- TRUE
+    ENDIF
+ENDPROCEDURE
+
+PROCEDURE Pop(BYREF Item : INTEGER, BYREF Success : BOOLEAN)
+    Success <- FALSE
+    IF Top <> -1 THEN
+        Item <- Stack[Top]
+        Top <- Top - 1
+        Success <- TRUE
+    ENDIF
+ENDPROCEDURE
+```
+
+6. Enqueue: full detection/success contract **[1]**, wraps rear **[1]**, stores item **[1]**, increments count **[1]**. Dequeue: empty detection/success contract **[1]**, retrieves front **[1]**, wraps front **[1]**, decrements count **[1]**. On failure, the caller must not use `Item` as a returned result.
+
+```text
+PROCEDURE Enqueue(BYVAL Item : INTEGER, BYREF Success : BOOLEAN)
+    Success <- FALSE
+    IF Count < 10 THEN
+        Rear <- (Rear + 1) MOD 10
+        Queue[Rear] <- Item
+        Count <- Count + 1
+        Success <- TRUE
+    ENDIF
+ENDPROCEDURE
+
+PROCEDURE Dequeue(BYREF Item : INTEGER, BYREF Success : BOOLEAN)
+    Success <- FALSE
+    IF Count > 0 THEN
+        Item <- Queue[Front]
+        Front <- (Front + 1) MOD 10
+        Count <- Count - 1
+        Success <- TRUE
+    ENDIF
+ENDPROCEDURE
+```
+
+Check the linked-list algorithms with an empty list, insertions before/between/after existing nodes, a full array, deletion of every position and an absent target. After each successful deletion, a later insertion must be able to reuse the released position. For a queue, fill ten slots, remove two, enqueue two, then verify FIFO order across the wrap. For a tree, check empty, root, both branches and absent targets. Use the Java ADT examples to compare behaviour, and the two Paper 3 sets to practise complete algorithms under time pressure.
+
 ## Required Ideas and Exam Language
 
 - State the algorithm's precondition, such as sorted data for binary search.
@@ -580,13 +770,13 @@ An inventory program needs searching, sorting and several ADTs. Answer in pseudo
 
    **(b)** Enqueue advances `Rear` modulo capacity and increments `Count`; dequeue reads at `Front`, advances it modulo capacity and decrements `Count`, with full/empty checks **[2]**.
 
-   **(c)** Find follows `Next` until match/null **[1]**; insertion takes a free node and reconnects it into the live chain **[1]**; deletion bypasses the target and returns its node to the free list **[1]**. **[3]**
+   **(c)** Find follows `NextPointer` until match/null **[1]**; insertion takes a free node and reconnects it into the live chain **[1]**; deletion bypasses the target and returns its node to the free list **[1]**. **[3]**
 
    **(d)** Both operations compare keys and follow left for smaller/right for larger **[1]**; find ends at match/null, while insert attaches a new node at the null link **[1]**. **[2]**
 
    **(e)** Hash/find the key and return its associated value, using the representation's defined collision/search rule **[1]**.
 3. Vertices represent items/places and edges represent connections **[1]**; a route network is naturally modelled because edges can store direct connections/weights and graph search can find a route **[1]**. **[2]**
-4. Linear search `O(n)` and binary search `O(log n)` **[1]**; a valid separate space comparison, such as recursive traversal using `O(n)` call-stack space while an iterative version uses `O(1)` auxiliary space **[1]**. **[2]**
+4. Linear search `O(n)` and binary search `O(log n)` **[1]**; a valid separate space comparison, such as recursive linear search using `O(n)` call-stack space while iterative linear search uses `O(1)` auxiliary space **[1]**. **[2]**
 5. Null node returns `0`, otherwise call on smaller left/right subtrees **[1]**; stack frames pop in reverse order and combine `1 + left + right` **[1]**. **[2]**
 
 ## Final Revision Checklist

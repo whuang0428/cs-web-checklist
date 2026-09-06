@@ -45,6 +45,10 @@ Use this hub to choose the paper, chapter or timed practice you need. The offici
 
 IGCSE establishes the core vocabulary and methods used later at AS and A Level: binary data, basic hardware and networks, algorithm tracing, required pseudocode, Python program-code practice, single-table databases and Boolean logic.
 
+## Programming Practice Route
+
+Use [Chapter 8's Python route](chapter-8.md#python-programming-route) to practise console input, validation, functions, arrays, search, sort and files. Then complete the two Paper 2 scenarios independently: Set A uses an interactive borrowing system; Set B processes competitors' attempts. Both include pseudocode and Python reference solutions.
+
 ## Shared Resources
 
 - [Exam technique](../exam-technique.md)

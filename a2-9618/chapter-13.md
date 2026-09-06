@@ -224,7 +224,7 @@ Flight1.Airline ← "Cambridge Airways"
 ### Set type
 
 #### Definition
-> A set is a user-defined composite data type that contains an unordered list of elements. Set theory operations such as union and intersection can be applied. All elements are of the same data type.
+> A set is a user-defined composite data type that contains an unordered collection of distinct elements. Set theory operations such as union and intersection can be applied. All elements are of the same data type.
 
 #### Required ideas / marking points
 + **composite data type**
@@ -623,6 +623,89 @@ Convert as two's complement:
 + **underflow**
 
 ---
+
+## Type Operations and File Selection Drill
+
+Pointers store addresses. In Cambridge notation `^Score` obtains an address and `Current^` accesses the value at the stored address. Assigning one pointer to another copies an address, so both can refer to the same variable. Do not dereference an uninitialised pointer.
+
+```text
+TYPE TIntPointer = ^INTEGER
+DECLARE Score : INTEGER
+DECLARE Current, Other : TIntPointer
+Score <- 12
+Current <- ^Score
+Other <- Current
+Other^ <- Other^ + 5
+OUTPUT Score, Current^, Other^
+```
+
+All three outputs are 17. No separate copy of `Score` was created.
+
+A set has no order and contains no duplicate elements. Union includes elements in either set; intersection includes elements in both; difference `A − B` includes elements in A but not B. The mathematical symbols ∪, ∩, − and ∈ below specify set operations and membership for this exercise.
+
+1. Define an enumerated type for states `Waiting`, `Running` and `Complete`; declare a variable and assign `Running` to it. **[2]**
+2. Define a pointer to `REAL`, declare `Price` and two pointers to it, initialise `Price` to 8.5, and use the second pointer to increase the referenced value by 1.5. State the final value read through each pointer. **[6]**
+3. Define an integer set type and sets `A={2,4,6}` and `B={4,7}`. Give `A ∪ B`, `A ∩ B`, `A − B`, and the truth value of `7 ∈ A`. **[5]**
+4. Select file organisation for (a) appending events in arrival order, (b) processing all customer records in customer-ID order, and (c) locating one fixed-size record directly from a key. Explain the order/access distinction between the first two choices. **[4]**
+
+**Total: 17 marks**
+
+### Type Operations and File Selection Drill Answers
+
+1. `TYPE JobState = (Waiting, Running, Complete)` **[1]**; `DECLARE State : JobState` and `State <- Running` **[1]**.
+2. A suitable solution is below. Pointer type **[1]**; variable/pointer declarations **[1]**; initial value and correct address assignment **[1]**; pointer copy **[1]**; update through dereference **[1]**; both final dereferences equal 10.0 **[1]**.
+
+```text
+TYPE TRealPointer = ^REAL
+DECLARE Price : REAL
+DECLARE First, Second : TRealPointer
+Price <- 8.5
+First <- ^Price
+Second <- First
+Second^ <- Second^ + 1.5
+OUTPUT First^, Second^
+```
+
+3. `TYPE IntSet = SET OF INTEGER`, `DEFINE A (2, 4, 6) : IntSet`, `DEFINE B (4, 7) : IntSet` **[1]**. Union `{2,4,6,7}` **[1]**; intersection `{4}` **[1]**; difference `{2,6}` **[1]**; membership is FALSE **[1]**. Set display order is irrelevant; the union contains 4 only once.
+4. (a) Serial **[1]**; (b) sequential **[1]**; (c) random, with a key-to-location calculation and a collision policy where hashing is used **[1]**. Serial stores arrival order whereas sequential stores key order; both can be read from the start in sequence **[1]**.
+
+## Ordered File Processing Drill
+
+`Keys.txt` contains unique integer keys, one per line, in ascending order. `NewKey` is an integer that is not already present. The input may be empty.
+
+1. Write pseudocode to create `UpdatedKeys.txt`, inserting `NewKey` while preserving ascending order. Process the input sequentially; do not load all keys into an array. Close both files. **[6]**
+2. A random file has slots 0–9. Its hash is `Key MOD 10`; collisions use linear probing with wrap-around. Starting empty, trace writes of keys 18, 28 and 38, then a read of key 38. Give the stored slots and the complete read probe sequence. **[4]**
+
+**Total: 10 marks**
+
+### Ordered File Processing Drill Answers
+
+1. Opens both files in appropriate modes **[1]**; initialises insertion flag and reads to EOF **[1]**; writes new key before the first greater key **[1]**; copies every original key once **[1]**; handles insertion at the end or into an empty file **[1]**; closes both files **[1]**.
+
+```text
+DECLARE Key : INTEGER
+DECLARE Inserted : BOOLEAN
+Inserted <- FALSE
+OPENFILE "Keys.txt" FOR READ
+OPENFILE "UpdatedKeys.txt" FOR WRITE
+WHILE NOT EOF("Keys.txt")
+    READFILE "Keys.txt", Key
+    IF Inserted = FALSE AND NewKey < Key THEN
+        WRITEFILE "UpdatedKeys.txt", NewKey
+        Inserted <- TRUE
+    ENDIF
+    WRITEFILE "UpdatedKeys.txt", Key
+ENDWHILE
+IF Inserted = FALSE THEN
+    WRITEFILE "UpdatedKeys.txt", NewKey
+ENDIF
+CLOSEFILE "Keys.txt"
+CLOSEFILE "UpdatedKeys.txt"
+```
+
+Test empty input; insertion before, between and after existing keys. For input `12, 31, 47` and new key 25, output is `12, 25, 31, 47`. Writing a new file avoids overwriting unread source data.
+
+2. 18 → slot 8 **[1]**; 28 → slot 9 **[1]**; 38 → slot 0 **[1]**. Reading 38 probes 8, 9, 0 and compares the stored key at each slot **[1]**. A read must use the same hash and probe rule as a write. An unsuccessful search stops at an unused slot or after ten probes; deletions would require a marker that preserves probe chains.
 
 ## Required Ideas and Exam Language
 

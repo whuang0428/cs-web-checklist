@@ -1082,6 +1082,38 @@ E --> F[Write simplified expression]
 
 ---
 
+## Flip-Flop Circuit Construction Drill
+
+To construct a clocked JK circuit, use two gated SR storage stages so that a change at the final output cannot repeatedly feed through the same open stage. The following worked connection plan uses NOR storage gates. A bar in an identifier means the complementary output. The input values are held stable through the high-clock phase and the falling transition.
+
+| Stage | Gate output | Gate and its inputs |
+|---|---|---|
+| Master input | `SM` | AND of `J`, `Clock`, `Qbar` |
+| Master input | `RM` | AND of `K`, `Clock`, `Q` |
+| Master storage | `M` | NOR of `RM`, `Mbar` |
+| Master storage | `Mbar` | NOR of `SM`, `M` |
+| Clock | `LowClock` | NOT of `Clock` |
+| Slave input | `SS` | AND of `M`, `LowClock` |
+| Slave input | `RS` | AND of `Mbar`, `LowClock` |
+| Slave storage | `Q` | NOR of `RS`, `Qbar` |
+| Slave storage | `Qbar` | NOR of `SS`, `Q` |
+
+This table specifies every gate and wire for a master–slave implementation. When the clock is high, the slave holds Q while the master responds to J, K and that held state. When the clock falls, the master holds its result and the slave copies it to Q. For J=K=1, the held Q selects set or reset in the master, so the next output is the opposite state. Separating the phases prevents repeated toggling during one clock pulse. In a real circuit, propagation delays and input timing requirements must also be satisfied.
+
+1. Draw the two cross-coupled NOR gates of the master storage stage, labelling `SM`, `RM`, `M` and `Mbar`. **[3]**
+2. Extend it to the complete circuit using the connection plan. Label the four input-gating AND gates, the inverted clock and the slave feedback pair. **[4]**
+3. Starting with Q=0, trace the next Q values for J,K pairs 1,0; 0,0; 1,1; 0,1 at successive falling clock edges. **[3]**
+4. Explain why the circuit stores one bit and why J=K=1 does not produce the invalid simultaneous-set/reset state of a NOR SR latch. **[2]**
+
+**Total: 12 marks**
+
+### Flip-Flop Circuit Construction Drill Answers
+
+1. Two NOR gates **[1]**; each output feeds the other gate's second input **[1]**; `RM` enters the gate producing M and `SM` enters the gate producing Mbar, with all four labels correct **[1]**.
+2. Master gates have `J AND Clock AND Qbar` and `K AND Clock AND Q` **[1]**; inverted clock drives both slave input gates **[1]**; slave inputs are gated M and Mbar **[1]**; slave NOR pair is cross-coupled, outputs are labelled, and its Q/Qbar feed the correct master gates **[1]**. The connection table above is the complete reference wiring.
+3. After set: 1 **[1]**; after hold: 1 **[1]**; after toggle and reset: 0, 0 **[1]**.
+4. Feedback preserves either of two stable states while input gates are disabled **[1]**. Complementary Q/Qbar allow only one of the master set/reset inputs to be active when J=K=1, so the next stored state is the complement **[1]**.
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.

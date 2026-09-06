@@ -476,9 +476,7 @@ Mark scheme style:
 
 
 #### Exam warning
-Cambridge often uses **KiB / MiB / GiB** for binary calculations.
-
-Do not use 1000 unless the question specifically uses **KB / MB / GB**.
+For IGCSE 0478, use **1024** when converting between successive storage units, as specified in the syllabus. Use **KiB / MiB / GiB** for these binary multiples; for example, 1 MiB = 1024 KiB = 1 048 576 bytes.
 
 ---
 

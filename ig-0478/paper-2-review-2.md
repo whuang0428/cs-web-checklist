@@ -74,11 +74,11 @@ ENDWHILE
 
 ## Question 3 — Arrays and Functions [12]
 
-`Sales[1:4, 1:3]` stores sales for four products over three months. Every value is an integer from 0 to 500 inclusive.
+`Seats[1:4, 1:6]` stores four rows of six seats: 0 means free and 1 means occupied. The array is already populated.
 
-1. Write pseudocode to input and validate all 12 values. **[4]**
-2. Write a function `ProductTotal(ProductNumber : INTEGER) RETURNS INTEGER` that returns the three-month total for one product. **[4]**
-3. Write pseudocode that calls the function for all four products and outputs the product number with the lowest total. If totals are equal, keep the first product. **[4]**
+1. Write `FindPair(RowNumber : INTEGER) RETURNS INTEGER`. Return the column number of the first pair of adjacent free seats in that row, or −1 if no pair exists. **[4]**
+2. Write pseudocode that inputs and validates a row number, calls `FindPair`, reserves both seats if possible, and outputs their column numbers or `"No pair"`. **[6]**
+3. Give a six-seat row that tests a pair at the final possible position, and state the expected function result. **[2]**
 
 ---
 
@@ -106,18 +106,18 @@ The table `Bookings` contains:
 A warning output is defined by:
 
 ```text
-W = (A NAND B) AND (C OR NOT D)
+W = (A NAND B) AND (C OR NOT A)
 ```
 
 1. Name the four gate operations used. **[2]**
 2. Calculate `W` for each input set. **[4]**
 
-   | A | B | C | D | W |
-   |---:|---:|---:|---:|---:|
-   | 0 | 0 | 0 | 0 | |
-   | 1 | 1 | 0 | 0 | |
-   | 1 | 0 | 0 | 1 | |
-   | 1 | 0 | 1 | 1 | |
+   | A | B | C | W |
+   |---:|---:|---:|---:|
+   | 0 | 0 | 0 | |
+   | 1 | 1 | 0 | |
+   | 1 | 0 | 0 | |
+   | 1 | 0 | 1 | |
 
 3. Describe how to construct the circuit, including the intermediate connections. **[4]**
 
@@ -135,24 +135,16 @@ The file `Codes.txt` contains one code per line. A valid code has exactly eight 
 
 ## Question 7 — Integrated Programming Scenario [15]
 
-A school event stores 12 activity records. Each record has:
+Six competitors each make three long-jump attempts. Store non-empty names in `Names[1:6]` and real distances in `Attempts[1:6, 1:3]`. A distance from 0.0 to 10.0 inclusive is valid; −1 records a foul. Reject and re-input every other value.
 
-- `Code : STRING`
-- `Places : INTEGER`
-- `Price : REAL`
+Write a complete solution that:
 
-Write one complete solution that:
-
-- repeatedly inputs an activity code
-- stops when `"END"` is entered or four places have been booked in total
-- uses linear search to find the activity
-- displays `"Unknown code"` when absent
-- when found, inputs a required number of places from 1 to 3 and validates it
-- displays `"Insufficient places"` if the activity does not have enough places
-- displays `"Booking limit exceeded"` if accepting the request would take the overall total above four
-- otherwise subtracts the required places, adds them to the total booked, adds `required places * price` to total cost and displays `"Booking accepted"`
-- never allows the total booked to exceed four
-- finally outputs total places booked and total cost
+- inputs and validates all six names and eighteen distances
+- finds each competitor's greatest valid distance
+- outputs each name with that distance, or `"No valid attempt"` if all three attempts are fouls
+- finds the overall winner, retaining the first competitor on a tie
+- outputs the winner's name and distance, or `"No winner"` if all attempts are fouls
+- calculates and outputs the mean of all valid attempts, excluding fouls and avoiding division by zero.
 
 Use pseudocode, Python, Visual Basic or Java. **[15]**
 
@@ -175,53 +167,38 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ### Question 3 Mark Scheme [12]
 
-1.
+1. Correct function and row parameter **[1]**; checks columns 1–5 without exceeding bounds **[1]**; tests both seats and returns the first match **[1]**; returns −1 if none **[1]**. **[4]**
 
 ```text
-FOR Product <- 1 TO 4
-    FOR Month <- 1 TO 3
-        REPEAT
-            INPUT Sales[Product, Month]
-        UNTIL Sales[Product, Month] >= 0 AND Sales[Product, Month] <= 500
-    NEXT Month
-NEXT Product
-```
-
-Nested loops **[2]**; input correct element **[1]**; both validation limits **[1]**. **[4]**
-
-2.
-
-```text
-FUNCTION ProductTotal(ProductNumber : INTEGER) RETURNS INTEGER
-    Total <- 0
-    FOR Month <- 1 TO 3
-        Total <- Total + Sales[ProductNumber, Month]
-    NEXT Month
-    RETURN Total
+FUNCTION FindPair(RowNumber : INTEGER) RETURNS INTEGER
+    FOR Column <- 1 TO 5
+        IF Seats[RowNumber, Column] = 0 AND Seats[RowNumber, Column + 1] = 0
+        THEN
+            RETURN Column
+        ENDIF
+    NEXT Column
+    RETURN -1
 ENDFUNCTION
 ```
 
-Header/return type **[1]**; initialisation and loop **[1]**; correct accumulation **[1]**; return **[1]**. **[4]**
-
-3.
+2. Repeated input **[1]**; both row limits **[1]**; calls function with selected row **[1]**; handles −1 without indexing it **[1]**; updates both seats **[1]**; correct seat output **[1]**. **[6]**
 
 ```text
-LowestProduct <- 1
-LowestTotal <- ProductTotal(1)
-
-FOR Product <- 2 TO 4
-    CurrentTotal <- ProductTotal(Product)
-    IF CurrentTotal < LowestTotal
-    THEN
-        LowestTotal <- CurrentTotal
-        LowestProduct <- Product
-    ENDIF
-NEXT Product
-
-OUTPUT LowestProduct
+REPEAT
+    INPUT RowNumber
+UNTIL RowNumber >= 1 AND RowNumber <= 4
+Column <- FindPair(RowNumber)
+IF Column = -1
+THEN
+    OUTPUT "No pair"
+ELSE
+    Seats[RowNumber, Column] <- 1
+    Seats[RowNumber, Column + 1] <- 1
+    OUTPUT Column, Column + 1
+ENDIF
 ```
 
-Initial first product **[1]**; loop/calls function **[1]**; strict comparison preserves first tie **[1]**; updates/outputs correct identifier **[1]**. **[4]**
+3. For example `[1, 0, 1, 1, 0, 0]` **[1]**; return 5 **[1]**. **[2]**
 
 ### Question 4 Mark Scheme [10]
 
@@ -252,15 +229,15 @@ Correct aggregate **[1]** and condition **[1]**. **[2]**
 1. NAND, AND, OR and NOT; all four for two marks, two or three for one. **[2]**
 2.
 
-   | A | B | C | D | W |
-   |---:|---:|---:|---:|---:|
-   | 0 | 0 | 0 | 0 | 1 |
-   | 1 | 1 | 0 | 0 | 0 |
-   | 1 | 0 | 0 | 1 | 0 |
-   | 1 | 0 | 1 | 1 | 1 |
+   | A | B | C | W |
+   |---:|---:|---:|---:|
+   | 0 | 0 | 0 | 1 |
+   | 1 | 1 | 0 | 0 |
+   | 1 | 0 | 0 | 0 |
+   | 1 | 0 | 1 | 1 |
 
    One mark per row. **[4]**
-3. Connect A and B to NAND **[1]**; invert D with NOT **[1]**; connect C and `NOT D` to OR **[1]**; connect NAND output and OR output to final AND **[1]**. **[4]**
+3. Connect A and B to NAND **[1]**; branch A to NOT **[1]**; connect C and `NOT A` to OR **[1]**; connect NAND output and OR output to final AND **[1]**. **[4]**
 
 ### Question 6 Mark Scheme [10]
 
@@ -289,65 +266,132 @@ Initialise/open **[1]**; EOF loop/read **[1]**; length test **[1]**; first-chara
 
 ### Question 7 Mark Scheme [15]
 
-- repetition and input with both stop conditions **[2]**
-- linear search with found/index state **[3]**
-- absent-code message **[1]**
-- input and validation of required places **[2]**
-- prevents activity stock and overall limit from being exceeded **[2]**
-- distinct insufficient-places and booking-limit messages **[1]**
-- updates places and total booked **[2]**
-- calculates total cost **[1]**
-- final outputs **[1]**
-
-Indicative pseudocode:
+Apply the [IGCSE scenario levels](../exam-technique.md#igcse-15-mark-scenario-assessment): AO2 /9 and AO3 /6. Judge the whole solution, using the following evidence of completeness: correct array storage and nested loops; non-empty names and permitted distances; fouls excluded; per-competitor maximum; first winner retained on ties; all-foul handling; total/count and guarded mean. Do not award these as separate automatic points.
 
 ```text
-TotalBooked <- 0
-TotalCost <- 0
+DECLARE Names : ARRAY[1:6] OF STRING
+DECLARE Attempts : ARRAY[1:6, 1:3] OF REAL
+DECLARE Competitor, Attempt, Winner, ValidCount : INTEGER
+DECLARE Best, WinningDistance, Total : REAL
 
-REPEAT
-    INPUT RequiredCode
-    IF RequiredCode <> "END"
-    THEN
-        Found <- FALSE
-        Index <- 1
-        WHILE Index <= 12 AND Found = FALSE DO
-            IF Activity[Index].Code = RequiredCode
-            THEN
-                Found <- TRUE
-            ELSE
-                Index <- Index + 1
-            ENDIF
-        ENDWHILE
-
-        IF Found = FALSE
+Winner <- 0
+WinningDistance <- -1
+Total <- 0
+ValidCount <- 0
+FOR Competitor <- 1 TO 6
+    // Store each competitor's attempts in a separate row.
+    REPEAT
+        INPUT Names[Competitor]
+    UNTIL LENGTH(Names[Competitor]) > 0
+    Best <- -1
+    FOR Attempt <- 1 TO 3
+        REPEAT
+            INPUT Attempts[Competitor, Attempt]
+        UNTIL Attempts[Competitor, Attempt] = -1 OR
+              (Attempts[Competitor, Attempt] >= 0 AND Attempts[Competitor, Attempt] <= 10)
+        IF Attempts[Competitor, Attempt] <> -1
         THEN
-            OUTPUT "Unknown code"
-        ELSE
-            REPEAT
-                INPUT RequiredPlaces
-            UNTIL RequiredPlaces >= 1 AND RequiredPlaces <= 3
-
-            IF RequiredPlaces > Activity[Index].Places
+            // Exclude fouls from both the mean and the competitor's best result.
+            Total <- Total + Attempts[Competitor, Attempt]
+            ValidCount <- ValidCount + 1
+            IF Attempts[Competitor, Attempt] > Best
             THEN
-                OUTPUT "Insufficient places"
-            ELSE
-                IF TotalBooked + RequiredPlaces > 4
-                THEN
-                    OUTPUT "Booking limit exceeded"
-                ELSE
-                    Activity[Index].Places <- Activity[Index].Places - RequiredPlaces
-                    TotalBooked <- TotalBooked + RequiredPlaces
-                    TotalCost <- TotalCost + RequiredPlaces * Activity[Index].Price
-                    OUTPUT "Booking accepted"
-                ENDIF
+                Best <- Attempts[Competitor, Attempt]
             ENDIF
         ENDIF
+    NEXT Attempt
+    IF Best = -1
+    THEN
+        OUTPUT Names[Competitor], "No valid attempt"
+    ELSE
+        OUTPUT Names[Competitor], Best
+        IF Best > WinningDistance
+        THEN
+            // A strict comparison retains the first competitor on a tie.
+            Winner <- Competitor
+            WinningDistance <- Best
+        ENDIF
     ENDIF
-UNTIL RequiredCode = "END" OR TotalBooked = 4
+NEXT Competitor
+IF Winner = 0
+THEN
+    // No name is indexed when every attempt was a foul.
+    OUTPUT "No winner"
+ELSE
+    OUTPUT Names[Winner], WinningDistance
+ENDIF
+IF ValidCount > 0
+THEN
+    OUTPUT Total / ValidCount
+ELSE
+    OUTPUT "No valid attempts for a mean"
+ENDIF
+```
 
-OUTPUT TotalBooked
-OUTPUT TotalCost
+Python reference program (six competitors by default). The optional smaller size makes boundary cases concise to test; it does not change the algorithm.
+
+```python
+def run_competition(read=input, write=print, competitors=6):
+    names = [""] * competitors
+    attempts = [[0.0] * 3 for index in range(competitors)]
+    winner = -1
+    winning_distance = -1.0
+    total = 0.0
+    valid_count = 0
+    for competitor in range(competitors):
+        # Each row stores the three attempts belonging to this name.
+        names[competitor] = read("Name: ")
+        while len(names[competitor]) == 0:
+            names[competitor] = read("Name: ")
+        best = -1.0
+        for attempt in range(3):
+            while True:
+                try:
+                    distance = float(read("Distance or -1: "))
+                    if distance == -1 or 0 <= distance <= 10:
+                        break
+                except ValueError:
+                    pass
+                write("Invalid distance")
+            attempts[competitor][attempt] = distance
+            if distance != -1:
+                # Fouls must not contribute to the mean or the maximum.
+                total += distance
+                valid_count += 1
+                if distance > best:
+                    best = distance
+        write((names[competitor], best if best != -1 else "No valid attempt"))
+        # Strictly greater retains the first competitor on equal distances.
+        if best > winning_distance:
+            winner = competitor
+            winning_distance = best
+    write((names[winner], winning_distance) if winner != -1 else "No winner")
+    # An all-foul competition has neither a winner nor a defined mean.
+    mean = total / valid_count if valid_count > 0 else None
+    write(mean if mean is not None else "No valid attempts for a mean")
+    return winner, winning_distance, mean, names, attempts
+
+
+if __name__ == "__main__":
+    from sys import argv
+    if "--interactive" in argv:
+        run_competition()
+    else:
+        entries = iter(["", "A", "bad", "-2", "11", "0", "10", "-1",
+                        "B", "10", "-1", "-1"])
+        output = []
+        result = run_competition(lambda prompt: next(entries), output.append, 2)
+        assert result[:3] == (0, 10.0, 20.0 / 3)
+        assert result[3:] == (["A", "B"], [[0.0, 10.0, -1.0], [10.0, -1.0, -1.0]])
+        assert output[:3] == ["Invalid distance"] * 3
+        assert output[-2] == ("A", 10.0)
+        entries = iter(["C", "-1", "-1", "-1"])
+        output = []
+        assert run_competition(lambda prompt: next(entries), output.append, 1)[:3] == (-1, -1.0, None)
+        assert output == [("C", "No valid attempt"), "No winner", "No valid attempts for a mean"]
+        entries = iter(sum(([str(index), "0", "0", "0"] for index in range(6)), []))
+        assert run_competition(lambda prompt: next(entries), lambda value: None)[:3] == (0, 0.0, 0.0)
+        print("Competition tests passed")
 ```
 
 **Total: 75 marks**

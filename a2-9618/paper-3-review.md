@@ -16,23 +16,25 @@
 
 | Question | Section | Marks | AO1 | AO2 |
 |---:|---|---:|---:|---:|
-| 1 | 13 Data Representation | 10 | 6 | 4 |
-| 2 | 14 Communication and Internet Technologies | 9 | 5 | 4 |
-| 3 | 15 Hardware and Virtual Machines | 10 | 6 | 4 |
-| 4 | 16 System Software | 9 | 5 | 4 |
-| 5 | 17 Security | 9 | 5 | 4 |
-| 6 | 18 Artificial Intelligence | 9 | 5 | 4 |
-| 7 | 19 Computational Thinking and Problem-Solving | 10 | 7 | 3 |
-| 8 | 20 Further Programming | 9 | 6 | 3 |
+| 1 | 13 Data Representation | 10 | 4 | 6 |
+| 2 | 14 Communication and Internet Technologies | 9 | 7 | 2 |
+| 3 | 15 Hardware and Virtual Machines | 10 | 4 | 6 |
+| 4 | 16 System Software | 9 | 7 | 2 |
+| 5 | 17 Security | 9 | 6 | 3 |
+| 6 | 18 Artificial Intelligence | 9 | 7 | 2 |
+| 7 | 19 Computational Thinking and Problem-Solving | 10 | 3 | 7 |
+| 8 | 20 Further Programming | 9 | 7 | 2 |
 | **Total** | **Sections 13–20** | **75** | **45** | **30** |
 
 ---
 
 ## Question 1 — Data Representation [10]
 
-1. Distinguish an enumerated type, a record type and a pointer type. **[3]**
-2. Compare serial, sequential and random file organisation in terms of record order and access. **[3]**
-3. Explain four reasons why storing a real number in a fixed-size floating-point representation can produce an inaccurate result. **[4]**
+A format stores an 8-bit two's-complement mantissa with the binary point immediately after its sign bit, and a 5-bit two's-complement exponent. Value = mantissa × 2^exponent.
+
+1. Represent +6.75 and −6.75 in normalised form. Show the mantissa and exponent for each. **[4]**
+2. Explain how to recognise a normalised non-zero mantissa and why normalisation improves the precision available. **[2]**
+3. Explain approximation when storing 0.1, overflow, underflow and how repeated arithmetic can accumulate rounding error. Give a distinct explanation for each. **[4]**
 
 ---
 
@@ -46,9 +48,15 @@
 
 ## Question 3 — Hardware and Virtual Machines [10]
 
-1. Explain two benefits and two limitations of parallel processing. **[4]**
-2. Explain three reasons for using a virtual machine. **[3]**
-3. Simplify the Boolean expression `(A AND B) OR (A AND NOT B)` and show the two algebraic steps used. **[3]**
+1. A simulation divides work among several processors. Explain one benefit and one limitation of parallel processing, then give two reasons to run its operating system in a virtual machine. **[4]**
+2. A three-input circuit outputs 1 for input values `ABC = 001, 011, 100, 101` and 0 otherwise. Copy and complete this Karnaugh map. **[2]**
+
+   | A \ BC | 00 | 01 | 11 | 10 |
+   |---|---:|---:|---:|---:|
+   | 0 | | | | |
+   | 1 | | | | |
+
+3. Mark the largest valid groups covering all the 1s and derive a minimal sum-of-products expression. Identify the constant variables in each group. **[4]**
 
 ---
 
@@ -78,10 +86,10 @@
 
 ## Question 7 — Algorithms and Recursion [10]
 
-1. State the precondition for binary search and explain why its time complexity is `O(log n)`. **[3]**
-2. Explain why insertion sort can perform well on a nearly sorted list. **[2]**
-3. A binary search tree is built by inserting already sorted keys. Explain the resulting shape and its effect on search complexity. **[3]**
-4. State the purpose of the base case and call-stack unwinding in recursion. **[2]**
+A binary search tree stores unique integer keys in the global array `Nodes[0:19]`. Each record has integer fields `Key`, `Left` and `Right`; −1 means no child. `Root = -1` and `NextFree = 0` initially. Nodes are allocated consecutively; this task does not delete nodes.
+
+1. Write the complete procedure `InsertKey(BYVAL NewKey : INTEGER, BYREF Inserted : BOOLEAN)`. Reject insertion if the array is full. Otherwise allocate a node, link it into the correct position (including an empty tree), update `NextFree`, and set `Inserted`. Do not call an unspecified insertion helper. Assume the new key is not already present. **[7]**
+2. Write recursive `InOrder(Position : INTEGER)` to output the keys in ascending order. Include the empty-subtree case. **[3]**
 
 ---
 
@@ -102,9 +110,9 @@ Use the low-level instruction set and the declarative notation shown in the ques
 
 ### Question 1 Mark Scheme [10]
 
-1. Enumerated: a fixed named set of allowed values **[1]**; record: related fields, possibly of different types, grouped into one item **[1]**; pointer: stores/references a memory address or another data item **[1]**. **[3]**
-2. Serial: records in arrival order, normally scanned **[1]**; sequential: records stored in key order and processed in that order **[1]**; random: record location is calculated from a key so earlier records need not be read **[1]**. **[3]**
-3. Any four: finite mantissa bits; finite exponent range; rounding/truncation of excess bits; many decimal fractions have no finite binary representation; overflow/underflow; accumulated rounding error during repeated operations. **[4]**
+1. `6.75 = 110.11₂ = 0.11011₂ × 2³`. Positive mantissa `01101100` **[1]**, exponent `00011` **[1]**. Negate the mantissa using two's complement: `10010100` **[1]**, with the same exponent `00011` **[1]**. The negative mantissa has value −108/128, giving −6.75 after scaling. **[4]**
+2. The first two bits differ: `01` for positive and `10` for negative **[1]**; redundant leading sign bits are removed so available positions carry as many significant bits as possible **[1]**. **[2]**
+3. 0.1 has a recurring binary expansion and a finite mantissa must approximate it **[1]**; overflow occurs when the result exceeds the representable magnitude/range **[1]**; underflow occurs when a non-zero magnitude is too small for the format's exponent range **[1]**; rounding at successive operations can compound rather than reproduce exact arithmetic **[1]**. **[4]**
 
 ### Question 2 Mark Scheme [9]
 
@@ -114,9 +122,15 @@ Use the low-level instruction set and the declarative notation shown in the ques
 
 ### Question 3 Mark Scheme [10]
 
-1. Benefits: reduced execution time and/or greater throughput, multiple tasks/data items processed together **[2]**. Limitations: problem may not be divisible, communication/synchronisation overhead, serial sections, extra hardware/cost or race conditions **[2]**. **[4]**
-2. Any three: run another operating system; isolate applications; consolidate servers; test safely; support legacy software; allocate resources flexibly; create repeatable environments. **[3]**
-3. Factor `A`: `A AND (B OR NOT B)` **[1]**; complement law gives `B OR NOT B = 1` **[1]**; identity law gives `A AND 1 = A` **[1]**. **[3]**
+1. Independent work can execute simultaneously, reducing elapsed time/increasing throughput **[1]**; serial sections, synchronisation or communication overhead limit the improvement **[1]**. Any two distinct VM uses: isolate the simulation, run a different/legacy OS, restore a test snapshot, or share physical hardware between separate environments **[2]**. **[4]**
+2. One mark for each complete row. **[2]**
+
+   | A \ BC | 00 | 01 | 11 | 10 |
+   |---|---:|---:|---:|---:|
+   | 0 | 0 | 1 | 1 | 0 |
+   | 1 | 1 | 1 | 0 | 0 |
+
+3. Group row `A=0`, columns `01` and `11` **[1]**, giving `NOT A AND C` because B varies **[1]**. Group row `A=1`, columns `00` and `01` **[1]**, giving `A AND NOT B` because C varies **[1]**. Combine with OR: `(NOT A AND C) OR (A AND NOT B)`. No valid group of four exists. **[4]**
 
 ### Question 4 Mark Scheme [9]
 
@@ -138,10 +152,54 @@ Use the low-level instruction set and the declarative notation shown in the ques
 
 ### Question 7 Mark Scheme [10]
 
-1. Data is sorted using the search key **[1]**; each comparison removes approximately half the remaining items **[1]**; therefore comparison count grows with the number of halvings, `O(log n)` **[1]**. **[3]**
-2. The sorted section needs only a few comparisons/shifts for each new item **[1]**, so behaviour can approach `O(n)` **[1]**. **[2]**
-3. Sorted insertion produces a skewed chain with each node on the same side **[1]**; tree height becomes `n` **[1]**; search degrades from average `O(log n)` to worst-case `O(n)` **[1]**. **[3]**
-4. Base case terminates recursion without another call **[1]**; unwinding pops saved call frames in reverse order and combines/returns results **[1]**. **[2]**
+1. Full check with false result **[1]**; initialises new key and both child links **[1]**; handles empty root **[1]**; traverses from root and selects left/right by comparison **[2]**; attaches to the correct parent link **[1]**; updates allocation index and success result **[1]**. Accept equivalent complete algorithms. **[7]**
+
+```text
+PROCEDURE InsertKey(BYVAL NewKey : INTEGER, BYREF Inserted : BOOLEAN)
+    DECLARE Current, Parent : INTEGER
+    Inserted <- FALSE
+    IF NextFree < 20 THEN
+        Nodes[NextFree].Key <- NewKey
+        Nodes[NextFree].Left <- -1
+        Nodes[NextFree].Right <- -1
+        IF Root = -1 THEN
+            Root <- NextFree
+        ELSE
+            Current <- Root
+            Parent <- -1
+            WHILE Current <> -1
+                Parent <- Current
+                IF NewKey < Nodes[Current].Key THEN
+                    Current <- Nodes[Current].Left
+                ELSE
+                    Current <- Nodes[Current].Right
+                ENDIF
+            ENDWHILE
+            IF NewKey < Nodes[Parent].Key THEN
+                Nodes[Parent].Left <- NextFree
+            ELSE
+                Nodes[Parent].Right <- NextFree
+            ENDIF
+        ENDIF
+        NextFree <- NextFree + 1
+        Inserted <- TRUE
+    ENDIF
+ENDPROCEDURE
+```
+
+2. Guards the null index **[1]**; recursive visit of left child before output **[1]**; output followed by recursive visit of right child **[1]**. **[3]**
+
+```text
+PROCEDURE InOrder(Position : INTEGER)
+    IF Position <> -1 THEN
+        CALL InOrder(Nodes[Position].Left)
+        OUTPUT Nodes[Position].Key
+        CALL InOrder(Nodes[Position].Right)
+    ENDIF
+ENDPROCEDURE
+```
+
+For keys `42, 18, 60, 27`, the traversal is `18, 27, 42, 60`. A call with −1 outputs nothing. A full tree must leave all stored nodes, `Root` and `NextFree` unchanged.
 
 ### Question 8 Mark Scheme [9]
 

@@ -31,8 +31,8 @@ Class `Delivery` stores an integer `id`, integer `zone` and real `weight`.
 1. Implement `Course` with constructor, getters, validated setter and `calculateFee()`. **[8]**
 2. Implement subclass `Workshop`, use the superclass constructor, validate hours and override `calculateFee()`. **[6]**
 3. Implement `Booking` containment with `addCourse()` and polymorphic `totalFee()`. **[4]**
-4. Write `saveCourses(Path, List<Course>)` and `loadCourses(Path)` using a type marker and specific exception handling. **[5]**
-5. Produce four tests: normal course, workshop, rejected negative fee and mixed booking total. **[4]**
+4. Write `saveCourses(Path, List<Course>)` and `loadCourses(Path)` using a type marker and specific exception handling. Preserve text containing commas, quotes and line breaks. Use a binary file: format identifier, record count, then each record's type, ID, title, base fee and (for a workshop) hours. Store strings with `writeUTF`/`readUTF`; IDs and titles contain 1–1000 characters. Reject invalid or incomplete files without returning a partial list. **[5]**
+5. Produce four tests: normal course, workshop, rejected negative fee and mixed booking total. Also exercise file round trips, including punctuation in titles, while developing part 4. **[4]**
 
 ## Question 3 — Clinic Queue and Direct Lookup [24]
 
@@ -143,7 +143,8 @@ class Paper4AQuestion1 {
 - Testing: four required matching tests. **[4]**
 
 ```java
-import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -156,13 +157,17 @@ class Paper4AQuestion2 {
         private final String title;
         private double baseFee;
         Course(String id, String title, double baseFee) {
+            if (id == null || title == null || id.isEmpty() || title.isEmpty()
+                    || id.length() > 1000 || title.length() > 1000)
+                throw new IllegalArgumentException("ID/title length must be 1–1000");
             this.id = id; this.title = title; setBaseFee(baseFee);
         }
         String getId() { return id; }
         String getTitle() { return title; }
         double getBaseFee() { return baseFee; }
         void setBaseFee(double value) {
-            if (value < 0) throw new IllegalArgumentException("negative fee");
+            if (!Double.isFinite(value) || value < 0)
+                throw new IllegalArgumentException("fee must be finite and non-negative");
             baseFee = value;
         }
         double calculateFee() { return baseFee; }
@@ -189,36 +194,43 @@ class Paper4AQuestion2 {
         }
     }
 
-    static void saveCourses(Path path, List<Course> courses) {
-        try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+    static void saveCourses(Path path, List<Course> courses) throws IOException {
+        try (DataOutputStream writer = new DataOutputStream(Files.newOutputStream(path))) {
+            writer.writeUTF("COURSES1");
+            writer.writeInt(courses.size());
             for (Course course : courses) {
+                writer.writeUTF(course instanceof Workshop ? "WORKSHOP" : "COURSE");
+                writer.writeUTF(course.getId());
+                writer.writeUTF(course.getTitle());
+                writer.writeDouble(course.getBaseFee());
                 if (course instanceof Workshop) {
                     Workshop workshop = (Workshop) course;
-                    writer.write("WORKSHOP," + course.getId() + "," + course.getTitle() + ","
-                            + course.getBaseFee() + "," + workshop.getPracticalHours());
-                } else {
-                    writer.write("COURSE," + course.getId() + "," + course.getTitle() + ","
-                            + course.getBaseFee());
+                    writer.writeInt(workshop.getPracticalHours());
                 }
-                writer.newLine();
             }
-        } catch (IOException error) { System.out.println("Save failed: " + error.getMessage()); }
+        }
     }
 
-    static List<Course> loadCourses(Path path) {
+    static List<Course> loadCourses(Path path) throws IOException {
         List<Course> courses = new ArrayList<>();
-        try {
-            for (String line : Files.readAllLines(path)) {
-                try {
-                    String[] f = line.split(",", -1);
-                    if (f[0].equals("COURSE") && f.length == 4)
-                        courses.add(new Course(f[1], f[2], Double.parseDouble(f[3])));
-                    else if (f[0].equals("WORKSHOP") && f.length == 5)
-                        courses.add(new Workshop(f[1], f[2], Double.parseDouble(f[3]), Integer.parseInt(f[4])));
-                    else throw new IllegalArgumentException("invalid record");
-                } catch (IllegalArgumentException error) { System.out.println("Record skipped"); }
+        try (DataInputStream reader = new DataInputStream(Files.newInputStream(path))) {
+            if (!reader.readUTF().equals("COURSES1")) throw new IOException("unknown format");
+            int count = reader.readInt();
+            if (count < 0) throw new IOException("negative record count");
+            for (int index = 0; index < count; index++) {
+                String type = reader.readUTF();
+                String id = reader.readUTF();
+                String title = reader.readUTF();
+                double fee = reader.readDouble();
+                if (type.equals("COURSE")) courses.add(new Course(id, title, fee));
+                else if (type.equals("WORKSHOP"))
+                    courses.add(new Workshop(id, title, fee, reader.readInt()));
+                else throw new IOException("unknown record type");
             }
-        } catch (IOException error) { System.out.println("Load failed: " + error.getMessage()); }
+            if (reader.read() != -1) throw new IOException("unexpected trailing data");
+        } catch (IllegalArgumentException error) {
+            throw new IOException("invalid course data", error);
+        }
         return courses;
     }
 
@@ -229,6 +241,40 @@ class Paper4AQuestion2 {
         if (Math.abs(booking.totalFee() - 68.0) > 0.000001) throw new AssertionError();
         try { new Course("X", "Bad", -1); throw new AssertionError(); }
         catch (IllegalArgumentException expected) { }
+        // A caller catches the specific file exception. It never treats failure as an empty file.
+        try {
+            Path directory = Files.createTempDirectory("course-test-");
+            Path file = directory.resolve("courses.dat");
+            try {
+                String title = "Robotics, \"Level 1\"\n机器人";
+                List<Course> original = List.of(new Course("C,1", title, 0),
+                        new Workshop("W1", title, 30, 4));
+                saveCourses(file, original);
+                List<Course> loaded = loadCourses(file);
+                if (loaded.size() != 2 || !loaded.get(0).getId().equals("C,1")
+                        || !loaded.get(0).getTitle().equals(title)
+                        || !loaded.get(1).getTitle().equals(title)
+                        || !(loaded.get(1) instanceof Workshop)
+                        || loaded.get(0).calculateFee() != 0
+                        || loaded.get(1).calculateFee() != 48) throw new AssertionError();
+                byte[] complete = Files.readAllBytes(file);
+                Files.write(file, java.util.Arrays.copyOf(complete, complete.length - 1));
+                try { loadCourses(file); throw new AssertionError("truncation accepted"); }
+                catch (IOException expected) { }
+                Files.write(file, new byte[]{0, 1, 88});
+                try { loadCourses(file); throw new AssertionError("bad format accepted"); }
+                catch (IOException expected) { }
+                saveCourses(file, List.of());
+                if (!loadCourses(file).isEmpty()) throw new AssertionError();
+                try { loadCourses(directory.resolve("missing.dat")); throw new AssertionError(); }
+                catch (java.nio.file.NoSuchFileException expected) { }
+            } finally {
+                Files.deleteIfExists(file);
+                Files.delete(directory);
+            }
+        } catch (IOException error) {
+            throw new AssertionError("File test failed", error);
+        }
     }
 }
 ```

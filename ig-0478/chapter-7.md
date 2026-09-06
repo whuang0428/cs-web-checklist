@@ -491,7 +491,7 @@ These short tasks separate syllabus actions that are easy to merge accidentally.
        print("Accepted")
    ```
 
-**Total: 28 marks**
+**Total: 35 marks**
 
 ### Targeted Syllabus Drill Answers
 

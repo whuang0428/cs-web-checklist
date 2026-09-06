@@ -45,7 +45,16 @@ This hub covers the AS Level components. Students following an earlier examinati
 
 ## What Is New at This Level?
 
-AS extends IGCSE into binary prefixes and complements, CPU architecture and assembly, relational database design, abstraction, records, abstract data types and formal Cambridge pseudocode. Pseudocode is compulsory for Paper 2; where a programming-language comparison is useful, this project uses Java only.
+AS extends IGCSE into binary prefixes and complements, CPU architecture and assembly, relational database design, abstraction, records, abstract data types and formal Cambridge pseudocode. Pseudocode is compulsory for Paper 2; classroom programming uses Java alongside the pseudocode throughout Sections 9–12.
+
+## Programming Practice Route
+
+1. [Compile and run a Java console program](chapter-9.md#java-starter-from-an-algorithm-to-a-console-program).
+2. [Translate constructs and parameter behaviour](chapter-11.md#java-constructs-and-parameter-behaviour).
+3. [Process records, arrays and files](chapter-10.md#java-records-arrays-and-files).
+4. [Run tests, expose faults and retest](chapter-12.md#java-testing-workshop).
+
+Write the corresponding Cambridge pseudocode before attempting the timed Paper 2 sets. Java execution checks the algorithm; the written paper requires its own notation.
 
 ## Shared Resources
 

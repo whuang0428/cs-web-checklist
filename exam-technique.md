@@ -73,17 +73,35 @@ All three courses require pseudocode. Before writing the body:
 5. close every construct and return on every required path
 
 ```text
-FUNCTION FindCode(Codes, Target) RETURNS INTEGER
-    FOR Index <- 0 TO LENGTH(Codes) - 1
+FUNCTION FindCode(Codes : ARRAY[0:99] OF STRING, Target : STRING, Count : INTEGER) RETURNS INTEGER
+    DECLARE Index : INTEGER
+    Index <- 0
+    WHILE Index < Count
         IF Codes[Index] = Target THEN
             RETURN Index
         ENDIF
-    NEXT Index
+        Index <- Index + 1
+    ENDWHILE
     RETURN -1
 ENDFUNCTION
 ```
 
-IGCSE may also use Python program code; AS Paper 2 uses Cambridge pseudocode; A2 executable examples and Paper 4 practice in this site use Java. Do not mix syntax within one answer. See [IGCSE Chapter 7](ig-0478/chapter-7.md), [AS Chapter 11](as-9618/chapter-11.md) and [A2 Chapter 19](a2-9618/chapter-19.md).
+Here `Count` is the number of occupied elements (0–100); `LENGTH` is a string function, not an array-size function in Cambridge pseudocode. The example uses the AS/A2 typed-parameter convention.
+
+For IGCSE Paper 2, the final 15-mark scenario permits pseudocode or an approved programming language; this site's program-code route is Python. For the other questions, follow the requested notation and write pseudocode when required. AS Paper 2 requires Cambridge pseudocode, while AS classroom programming on this site uses Java. A2 retains pseudocode and uses Java for executable work and Paper 4 practice. Do not mix syntax within one answer. See [IGCSE Chapter 7](ig-0478/chapter-7.md), [AS Chapter 11](as-9618/chapter-11.md) and [A2 Chapter 19](a2-9618/chapter-19.md).
+
+### IGCSE 15-Mark Scenario Assessment
+
+Assess the complete response in two areas: **AO2 /9** and **AO3 /6**. Select a level in each area, then a mark within that level; award 0 where there is no creditable evidence. Do not turn a checklist of individual requirements into fifteen automatic points.
+
+| Area | Lower level | Middle level | Upper level |
+|---|---|---|---|
+| AO2: solution design and application | 1–3: limited suitable techniques; little effective use of the required data | 4–6: several appropriate techniques and useful data handling | 7–9: appropriate techniques work together across the problem, using the required data structures effectively |
+| AO3: program quality and accuracy | 1–2: little working logic or readable organisation | 3–4: some requirements work; organisation, identifiers and comments provide some clarity | 5–6: the solution is largely or fully correct, with clear organisation, meaningful identifiers and helpful comments |
+
+Use the paper's task-specific checklist to locate evidence, then judge the whole answer. These are original practice descriptors aligned to the official specimen assessment approach.
+
+Within a level, use the extent and consistency of the evidence to select the mark. The highest mark requires the strongest fulfilment of that area's criteria; merely reaching the upper level does not automatically earn 9 or 6.
 
 ### 4. Evaluate: benefits and limitations must lead to a decision
 
@@ -151,3 +169,15 @@ Use Java console mode throughout this site's A2 practical route. Include normal,
 3. Show working and record testing evidence where required.
 4. Open the folded mark scheme only after finishing.
 5. Correct each response by adding the missing idea, link or context—not by copying keywords alone.
+
+## High-Mark Practice Route
+
+Use three passes through a topic: explain it without notes, solve a marked task, then transfer the method to a different situation. Keep a short error log with the faulty step, its cause and a fresh test or question that would expose it again.
+
+| Level | Construction and transfer work | Evidence of readiness |
+|---|---|---|
+| IGCSE | [Python programming route](ig-0478/chapter-8.md#python-programming-route), then both Paper 2 scenarios | handle endpoints, missing items, repeated requests, ties, fouls and empty-data cases; explain each decision in pseudocode |
+| AS | [Java testing workshop](as-9618/chapter-12.md#java-testing-workshop), then the [file-processing scenario](as-9618/paper-2-review-2.md#question-7-integrated-pseudocode-scenario-15) | validate before conversion, maintain per-item totals, preserve record associations, and write typed pseudocode with correct parameter modes |
+| A2 | [42-mark algorithm construction](a2-9618/chapter-19.md#algorithm-construction-drill), both Paper 3 sets and both Java Paper 4 practicals | derive floating-point/K-map results, construct complete algorithms, justify time and space, and supply reproducible practical test evidence |
+
+For theory answers, check that every claimed advantage has a mechanism and a consequence in the question's context. For programming, test normal data and cases that exercise different branches; a program that works on one typical input is not ready for a new scenario. Retest on the other set after a gap, then use further official papers for unfamiliar applications. This site is a revision and marked-practice hub; the course syllabus and independent examination practice remain the wider study framework.

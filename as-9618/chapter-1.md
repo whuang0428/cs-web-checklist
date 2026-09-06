@@ -783,6 +783,37 @@ becomes
 
 ---
 
+## Compression by File Type
+
+The method acts on a file's representation. Identify what is repeated or what information is discarded; naming a file format alone does not explain compression.
+
+| File | What is stored | How compression can reduce it |
+|---|---|---|
+| Text | character codes | a lossless dictionary can replace repeated sequences with shorter references, with enough information to restore the original |
+| Bitmap | pixel colour values | RLE can replace long adjacent runs of one colour with a count and colour; alternating colours can make the result larger |
+| Vector | drawing commands, coordinates and attributes | lossless dictionary coding can encode repeated command/attribute sequences using references; decompression restores the complete command stream |
+| Sound | sampled amplitudes | lossless coding preserves samples exactly; perceptual lossy compression removes selected audio information considered less audible, so exact original samples cannot be recovered |
+
+A vector diagram might repeat the same colour and line-style text for many shapes. A dictionary stores the repeated sequence once and references it in the compressed stream. Shape coordinates remain recoverable. Compression is a separate operation from scaling a vector drawing or converting a bitmap into vectors. For a short file, dictionary overhead may outweigh the saving.
+
+### Compression Transfer Drill
+
+1. Explain why dictionary compression can be suitable for an exact transcript with repeated phrases. **[3]**
+2. Encode the pixel row `red, red, red, red, blue, blue` with RLE. Explain why a row alternating red and blue may not get smaller. **[3]**
+3. Explain how repeated drawing-command text in a vector file can be compressed without changing any shape. State one reason the compressed file may not be smaller. **[3]**
+4. Select a compression approach for streamed music where some loss is acceptable, and explain the trade-off. **[3]**
+
+**Total: 12 marks**
+
+#### Compression Transfer Drill Answers
+
+1. Store repeated sequences in a dictionary **[1]** and use references rather than repeating the full sequence **[1]**; the original character sequence can be restored exactly **[1]**.
+2. `(4, red), (2, blue)` **[1]**; alternating colours create runs of length one **[1]**, so storing counts as well as colours can increase the size **[1]**.
+3. Replace repeated command/attribute sequences with dictionary references **[1]**; restore the original commands, attributes and coordinates during decompression **[1]**. Overhead for the dictionary/references may exceed the saving in a short or non-repetitive file **[1]**.
+4. Perceptual lossy compression **[1]**; fewer transmitted bits reduce the data rate needed for the stream **[1]**; some audio information is discarded permanently, so quality may fall and the original samples cannot be reconstructed exactly **[1]**.
+
+---
+
 ## Mark Scheme Keywords
 
 ### Data representation
