@@ -7,6 +7,8 @@
 
 This hub covers the AS Level components. Students following an earlier examination cycle must use the syllabus for their own examination year.
 
+> **Source labels:** “Exam-style answer” and “Indicative marking points” identify original revision guidance, not official Cambridge wording. Any official or MS-aligned wording must name a source ID under the rules on the [syllabus versions page](../syllabus-versions.md#source-labels-used-on-this-site).
+
 ## Paper 1 — Theory Fundamentals
 
 **1 hour 30 minutes · 75 marks · Sections 1–8**

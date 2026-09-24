@@ -78,7 +78,7 @@ Von Neumann architecture <span lang="zh-CN">的核心是</span> **stored program
 + <span lang="zh-CN">每条指令经过</span> fetch → decode → execute。
 + <span lang="zh-CN">同一套</span> buses <span lang="zh-CN">用来传输地址</span>、<span lang="zh-CN">数据和控制信号</span>。
 
-#### Mark scheme keywords
+#### Key exam terms
 
 + **stored program concept**
 + **instructions and data stored in memory**
@@ -97,7 +97,7 @@ Too vague. <span lang="zh-CN">必须说出</span> **stored program** <span lang=
 
 ### CPU main components
 
-| Component | Chinese explanation | Mark scheme style phrase |
+| Component | Chinese explanation | Exam-style phrasing |
 | --- | --- | --- |
 | ALU | <span lang="zh-CN">进行算术和逻辑运算</span> | carries out arithmetic and logical operations |
 | CU | <span lang="zh-CN">控制</span> CPU <span lang="zh-CN">内部数据流和指令执行</span> | controls and coordinates the operation of the CPU |
@@ -119,13 +119,13 @@ It carries out:
 
 CU = **Control Unit**
 
-Mark scheme answer:
+Exam-style answer:
 
 > The control unit decodes instructions and sends control signals to coordinate the movement of data and the execution of instructions.
 
 #### System clock
 
-Mark scheme answer:
+Exam-style answer:
 
 > The system clock generates timing pulses / timing signals used to synchronise processor operations.
 
@@ -271,7 +271,7 @@ If `LDX 14` means load from address `14 + IX`, then effective address = 16.
 | Negative flag | result is negative |
 | Interrupt flag | interrupt has occurred / interrupt requested |
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > The SR stores flags, where each flag is represented by an individual bit. These bits indicate conditions such as zero, carry, overflow, negative or interrupt status.
 
@@ -279,7 +279,7 @@ If `LDX 14` means load from address `14 + IX`, then effective address = 16.
 
 > The SR stores the status of the CPU.
 
-This usually loses marks because it repeats the name. Add **flags** and **individual bits**.
+This is too vague because it repeats the name. Add **flags** and **individual bits**.
 
 ---
 
@@ -290,7 +290,7 @@ This usually loses marks because it repeats the name. Add **flags** and **indivi
 | General purpose register | used by programmers/instructions to temporarily store different data values | R1, R2, R3 |
 | Special purpose register | has a fixed role in CPU operation | PC, MAR, MDR, CIR, ACC, IX, SR |
 
-#### Mark scheme distinction
+#### Exam-style distinction
 
 A strong answer says:
 
@@ -302,7 +302,7 @@ Weak answer:
 
 > General purpose is general and special purpose is special.
 
-No marks / very weak.
+Too vague to demonstrate the required distinction.
 
 ---
 
@@ -322,7 +322,7 @@ A bus is a set of parallel wires / communication pathways used to transfer data,
 
 ### Address bus
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The address bus carries the address of the memory location or I/O device to be accessed.
 
@@ -341,7 +341,7 @@ Example:
 
 ### Data bus
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The data bus carries data or instructions between CPU, memory and I/O devices.
 
@@ -355,7 +355,7 @@ Example:
 
 ### Control bus
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The control bus carries control signals used to coordinate operations, such as read, write, interrupt and clock signals.
 
@@ -401,7 +401,7 @@ I --> A
 5. The instruction is copied from **MDR to CIR**.
 6. The **PC is incremented**.
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > The address in the PC is copied to the MAR. The instruction at that address is fetched from memory into the MDR and then copied to the CIR. The PC is incremented.
 
@@ -496,7 +496,7 @@ J --> K[Return to previous process]
 
 ---
 
-### Mark scheme answer
+### Exam-style answer
 
 > An interrupt flag is raised. At the end of the current fetch-execute cycle, the processor checks whether the interrupt has higher priority. If it does, the current contents of registers are saved on the stack. The appropriate ISR is called. After the interrupt is processed, the register contents are restored and control returns to the previous process.
 
@@ -519,14 +519,11 @@ J --> K[Return to previous process]
 
 | Factor | How it affects performance |
 | --- | --- |
-| Clock speed | more cycles per second, so more instructions may be processed per second |
+| Processor type | different processor designs can complete different operations or amounts of work per cycle |
 | Number of cores | can process more tasks in parallel if software supports it |
-| Cache size | more frequently used data/instructions stored close to CPU |
-| Cache speed | faster access than RAM |
-| Bus width | more bits transferred at once |
-| Word length | more bits processed in one operation |
-| Processor architecture | more efficient instruction execution |
-| RAM size | less need to use slower secondary storage / virtual memory |
+| Bus width | more bits can be transferred at once |
+| Clock speed | more cycles per second, so more instructions may be processed per second |
+| Cache memory | a larger or faster cache can reduce accesses to slower main memory |
 
 ---
 
@@ -541,7 +538,7 @@ Example:
 4.0 GHz = 4.0 billion cycles per second
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A higher clock speed means more clock cycles per second, so more instructions can be fetched/decoded/executed per second.
 
@@ -557,7 +554,7 @@ Strong answer:
 
 > A dual-core processor can run tasks in parallel, but the program must be written to use multiple cores. Some tasks are sequential and cannot be split. The operating system and other processes also create overhead, so performance is not exactly doubled.
 
-#### Mark scheme keywords
+#### Key exam terms
 
 + **parallel processing**
 + **software must support multiple cores**
@@ -597,7 +594,7 @@ A presentation computer must send picture and sound to a modern projector throug
 | Translation | needs assembler | no translation needed |
 | Example | `LDM #10` | binary opcode + operand |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > Assembly language uses mnemonics and symbolic addresses. It must be translated by an assembler into machine code, which is binary and can be executed by the processor.
 
@@ -738,7 +735,7 @@ LDI 10
 
 loads `99` into ACC.
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > The address to be used is stored at the given address.
 
@@ -896,7 +893,7 @@ Pass 1 usually:
 + calculates addresses
 + reports some syntax errors
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > Pass 1 builds the symbol table by storing labels and their corresponding memory addresses.
 
@@ -912,7 +909,7 @@ Pass 2 usually:
 + generates object code / machine code
 + reports remaining errors
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > Pass 2 uses the symbol table to translate mnemonics and symbolic addresses into machine code.
 
@@ -969,7 +966,7 @@ AND  = 00000100
 
 Result is not zero, so bit 2 was set.
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > AND with a mask is used to isolate/check a specific bit.
 
@@ -1145,7 +1142,7 @@ The mask preserves unrelated bits. A monitor-only program may test and report bi
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### CPU / architecture
 
@@ -1212,7 +1209,7 @@ The mask preserves unrelated bits. A monitor-only program may test and report bi
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Correct version |
+| Mistake | Why it is weak | Correct version |
 | --- | --- | --- |
 | PC stores the instruction | PC stores address, not instruction | PC stores address of next instruction |
 | MDR stores memory address | That is MAR | MDR stores data/instruction transferred |
@@ -1336,6 +1333,40 @@ E --> H[Selected bit changes]
 
 ---
 
+---
+
+## Targeted Syllabus Drill
+
+1. Distinguish a general-purpose register from a special-purpose register. State the purpose of `PC`, `MAR`, `MDR`, `ACC`, `IX`, `CIR` and the status register. **[9]**
+2. State the roles of the ALU, control unit, system clock and immediate access store. Explain what the address, data and control buses carry and give the direction of each transfer where appropriate. **[10]**
+3. Explain how processor type, number of cores, bus width, clock speed and cache memory can affect computer performance. **[5]**
+4. Select USB, HDMI or VGA for each requirement: a general-purpose hot-pluggable peripheral; digital video with audio; connection to an older analogue monitor. Justify each choice. **[6]**
+5. Use register-transfer notation to describe a complete fetch, decode and execute cycle. **[8]**
+6. Name the five required instruction groups, then state the effect of every instruction in this example set: `LDM`, `LDD`, `LDI`, `LDX`, `LDR`, `MOV`, `STO`, `ADD`, `SUB`, `INC`, `DEC`, `JMP`, `CMP`, `CMI`, `JPE`, `JPN`, `IN`, `OUT`, `END`. **[24]**
+7. Starting with the 8-bit pattern `10110011`, give the result of: logical left by one; logical right by one; arithmetic left by one; arithmetic right by one; cyclic left by one; cyclic right by one. Then use an AND mask to test bit 2 and an OR mask to set bit 3. **[10]**
+
+### Targeted Syllabus Drill Answers
+
+1. A general-purpose register holds working data/results for different instructions; a special-purpose register has a defined control/processor role **[2]**. `PC`: address of the next instruction **[1]**; `MAR`: address currently being accessed **[1]**; `MDR`: data/instruction moving to or from memory **[1]**; `ACC`: operand/intermediate ALU result **[1]**; `IX`: offset used in indexed addressing **[1]**; `CIR`: current instruction being decoded/executed **[1]**; status register: condition/interrupt flags **[1]**. **[9]**
+2. ALU performs arithmetic, logic and shift operations; CU decodes instructions and issues control signals; clock supplies timing pulses; IAS holds instructions/data currently needed by the processor **[4]**. Address bus carries an address from processor to memory/device and is normally one-way **[2]**. Data bus carries data/instructions in either direction **[2]**. Control bus carries control/timing/status signals, with direction depending on the signal **[2]**. **[10]**
+3. Processor type affects the work/instructions a design can complete per cycle **[1]**. More cores can execute more work in parallel when software supports it **[1]**. A wider bus transfers more bits in one operation **[1]**. A higher clock speed supplies more cycles per second **[1]**. A larger/faster cache can satisfy more accesses without waiting for slower main memory **[1]**. **[5]**
+4. USB for a general-purpose hot-pluggable peripheral because it carries data and can provide power using a standard connection **[2]**. HDMI for digital video with audio because it carries both digitally **[2]**. VGA for the older analogue display because VGA carries analogue video **[2]**. **[6]**
+5. One valid sequence is **[8]**:
+
+   ```text
+   MAR <- [PC]
+   MDR <- [[MAR]]
+   CIR <- [MDR]
+   PC <- [PC] + 1
+   decode [CIR]
+   fetch any required operand
+   execute the instruction in the ALU/CU
+   store the result and update status flags if required
+   ```
+
+6. Groups: data movement; input/output; arithmetic; unconditional/conditional; compare **[5]**. Effects **[19]**: `LDM` loads an immediate value into ACC; `LDD` loads a directly addressed value; `LDI` follows a stored address and loads the indirectly addressed value; `LDX` loads from address plus IX; `LDR` loads an immediate value into IX; `MOV` copies ACC to the named register; `STO` stores ACC; `ADD` adds to ACC; `SUB` subtracts from ACC; `INC` adds one to ACC/IX; `DEC` subtracts one; `JMP` jumps unconditionally; `CMP` compares ACC with a direct/immediate operand; `CMI` compares ACC with an indirectly addressed value; `JPE` jumps after a true comparison; `JPN` jumps after a false comparison; `IN` inputs a character code to ACC; `OUT` outputs the character whose code is in ACC; `END` returns control to the OS. **[24]**
+7. Logical left: `01100110`; logical right: `01011001`; arithmetic left: `01100110`; arithmetic right: `11011001`; cyclic left: `01100111`; cyclic right: `11011001` **[6]**. `10110011 AND 00000100 = 00000000`, so bit 2 is clear **[2]**. `10110011 OR 00001000 = 10111011`, so bit 3 is set **[2]**. **[10]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -1398,7 +1429,9 @@ The worked calculations, process templates and scenario answers above model the 
 
 (c) State why HDMI is more suitable than VGA when one cable must carry a presentation's picture and sound. [1]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 
 (a)
 
@@ -1468,7 +1501,9 @@ Instruction set:
 | 3 | `LDI 23`<br>`ADD #1` | |
 | 4 | `LDR #2`<br>`LDX 20`<br>`ADD 25` | |
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 
 **(a)** Pass one records `VALUE = 01` and `START = 02` in the symbol table **[1]**; pass two replaces `START` in `JMP START` with `02` and `VALUE` in `LDD VALUE` with `01` **[1]**; pass two translates the resolved instructions/data into machine/object code **[1]**. **[3]**
 
@@ -1535,9 +1570,11 @@ Explain how the system can test whether the door is open. [2]
 
 (c) ACC contains `11110100`. Give the result of a logical right shift by two and an arithmetic right shift by two. Explain the difference. [2]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-(a) Award up to [3]: interrupt request/flag is raised and checked after the current instruction/FDE cycle [1]; CPU checks priority and saves the current process/register state [1]; ISR runs, then saved state is restored and the interrupted process can resume [1].
+#### Question 3 Indicative Marking Points
+
+(a) Suggested allocation: up to [3]: interrupt request/flag is raised and checked after the current instruction/FDE cycle [1]; CPU checks priority and saves the current process/register state [1]; ISR runs, then saved state is restored and the interrupted process can resume [1].
 
 (b)
 

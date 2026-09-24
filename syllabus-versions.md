@@ -4,7 +4,7 @@ The syllabus year is the calendar year in which the examination is taken. Check 
 
 ## IGCSE Computer Science 0478
 
-**Site baseline:** Examinations 2026–2028 · Version 5
+**Site baseline:** Examinations 2026–2028 · Version 6
 **Coverage:** Topics 1–10 · Papers 1 and 2
 
 [Open the official Cambridge IGCSE 0478 syllabus](https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf)
@@ -22,6 +22,17 @@ Students taking 9618 in an earlier examination cycle must compare this material 
 [Open the official Cambridge 9618 pseudocode guide](https://www.cambridgeinternational.org/Images/721401-2027-2029-pseudocode-guide.pdf)
 
 The 9618 routine `RAND(x)` returns a random real number from `0` up to, but not including, `x`. It is not the same routine as IGCSE 0478 `RANDOM()`, which returns a value from `0` to `1` inclusive.
+
+## Source Labels Used on This Site
+
+| Label | Meaning |
+|---|---|
+| **Official wording — source ID** | A short passage checked directly against the named official document in the maintainer source register. This label must include a source ID. |
+| **MS-aligned explanation — source ID** | Original paraphrase checked against the named official mark scheme. It is not a quotation and must include a source ID. |
+| **Exam-style answer** | Original revision wording showing the expected precision and structure. It is not official Cambridge wording. |
+| **Indicative marking points** | Original self-assessment guidance for this site's original questions. The allocation is not an official Cambridge mark scheme. |
+
+Unlabelled teaching explanations are original revision material. Phrases such as “Cambridge accepts”, “no marks” or “must mention” are not used unless a specific official source supports that exact claim.
 
 ## Full-Paper Practice Included
 

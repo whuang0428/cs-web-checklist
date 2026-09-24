@@ -41,9 +41,13 @@ Class `Delivery` stores an integer `id`, integer `zone` and real `weight`.
 3. Implement `PatientTable` with integer IDs and names using modulo hashing and bounded linear probing for `insert` and `find`. **[6]**
 4. Produce four tests: queue overflow, empty dequeue, collision between IDs 10 and 17 in size 7, and missing-ID lookup. **[4]**
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [24]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-24" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [24]
 
 - Insertion sort: outer loop and saved record **[2]**; correct shifting condition **[2]**; shifts whole records **[1]**; inserts saved record **[1]**; all bounds correct **[1]**. **[7]**
 - Binary search: low/high **[1]**; valid loop/middle **[1]**; equality return **[1]**; correct half selected **[1]**; failure returns `-1` **[1]**. **[5]**
@@ -134,7 +138,9 @@ class Paper4AQuestion1 {
 }
 ```
 
-### Question 2 Mark Scheme [27]
+<span id="question-2-mark-scheme-27" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [27]
 
 - `Course`: class/three private fields **[2]**; constructor uses validation **[2]**; getters **[1]**; setter rejects negative **[2]**; fee method **[1]**. **[8]**
 - `Workshop`: inheritance/constructor/super call **[3]**; positive hours **[1]**; override **[1]**; correct fee **[1]**. **[6]**
@@ -279,7 +285,9 @@ class Paper4AQuestion2 {
 }
 ```
 
-### Question 3 Mark Scheme [24]
+<span id="question-3-mark-scheme-24" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [24]
 
 - Queue: fixed array **[1]**; initial state **[1]**; full detection **[1]**; store/rear wrap/count **[2]**; empty detection **[1]**; retrieve/front wrap/count **[2]**. **[8]**
 - Loader: reads records **[1]**; checks two fields **[1]**; validates numeric ID/name **[1]**; enqueues/counts **[1]**; stops/reports when full/bad row **[1]**; handles `IOException` **[1]**. **[6]**

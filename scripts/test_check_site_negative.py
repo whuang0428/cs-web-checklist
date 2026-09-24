@@ -139,9 +139,9 @@ def mutate_markdown_fence(root: Path) -> None:
 def mutate_answer_part(root: Path) -> None:
     path = root / "ig-0478" / "paper-2-review.md"
     text = path.read_text(encoding="utf-8")
-    original = "### Question 6 Mark Scheme [8]\n\n1."
+    original = "### Question 6 Indicative Marking Points [8]\n\n1."
     assert original in text
-    write_text(path, text.replace(original, "### Question 6 Mark Scheme [8]\n\n2.", 1))
+    write_text(path, text.replace(original, "### Question 6 Indicative Marking Points [8]\n\n2.", 1))
 
 
 def mutate_drill_total(root: Path) -> None:
@@ -170,6 +170,85 @@ def mutate_relative_links(root: Path) -> None:
     text = path.read_text(encoding="utf-8")
     assert "relativePath: true" in text
     write_text(path, text.replace("relativePath: true", "relativePath: false", 1))
+
+
+def mutate_duplicate_source_id(root: Path) -> None:
+    path = root / "audit" / "source-manifest.csv"
+    lines = path.read_text(encoding="utf-8").splitlines()
+    write_text(path, "\n".join(lines + [lines[1]]) + "\n")
+
+
+def mutate_invalid_source_hash(root: Path) -> None:
+    path = root / "audit" / "source-manifest.csv"
+    text = path.read_text(encoding="utf-8")
+    original = "e89c9629185d75b7e182e74460f1b0fd62e30c71f2ae4d67c9563123ca0558d1"
+    assert original in text
+    write_text(path, text.replace(original, "not-a-sha256", 1))
+
+
+def mutate_missing_registered_source(root: Path) -> None:
+    path = root / "audit" / "source-manifest.csv"
+    lines = path.read_text(encoding="utf-8").splitlines()
+    write_text(path, "\n".join(line for line in lines if not line.startswith("9618-MS-41-MJ24,")) + "\n")
+
+
+def mutate_unsupported_source_phrase(root: Path) -> None:
+    path = root / "ig-0478" / "chapter-1.md"
+    write_text(path, path.read_text(encoding="utf-8") + "\nCambridge accepts any equivalent wording.\n")
+
+
+def mutate_unregistered_official_label(root: Path) -> None:
+    path = root / "ig-0478" / "chapter-1.md"
+    write_text(path, path.read_text(encoding="utf-8") + "\n## MS-aligned answer\n")
+
+
+def mutate_subject_version(root: Path) -> None:
+    path = root / "ig-0478" / "chapter-1.md"
+    text = path.read_text(encoding="utf-8")
+    assert "0478 · 2026–2028 · Version 6" in text
+    write_text(path, text.replace("0478 · 2026–2028 · Version 6", "0478 · 2026–2028 · Version 5", 1))
+
+
+def mutate_round_arity(root: Path) -> None:
+    path = root / "ig-0478" / "chapter-8.md"
+    text = path.read_text(encoding="utf-8")
+    assert "ROUND(Area, 2)" in text
+    write_text(path, text.replace("ROUND(Area, 2)", "ROUND(Area)", 1))
+
+
+def mutate_9618_random_name(root: Path) -> None:
+    path = root / "as-9618" / "chapter-1.md"
+    write_text(path, path.read_text(encoding="utf-8") + "\nUse `RANDOM()` to obtain a random value.\n")
+
+
+def mutate_ig_language_scope(root: Path) -> None:
+    path = root / "ig-0478" / "paper-2-review.md"
+    text = path.read_text(encoding="utf-8")
+    original = "Use pseudocode, Python, Visual Basic or Java."
+    assert original in text
+    write_text(path, text.replace(original, "Use pseudocode or Python.", 1))
+
+
+def mutate_missing_semantic_audit_row(root: Path) -> None:
+    path = root / "audit" / "stage7-a2-semantic-audit.csv"
+    lines = path.read_text(encoding="utf-8").splitlines()
+    write_text(path, "\n".join(line for line in lines if not line.startswith("A2-13.1-01,")) + "\n")
+
+
+def mutate_unverified_semantic_audit(root: Path) -> None:
+    path = root / "audit" / "stage7-a2-semantic-audit.csv"
+    text = path.read_text(encoding="utf-8")
+    original = "A2-13.1-01,verified,verified,"
+    assert original in text
+    write_text(path, text.replace(original, "A2-13.1-01,verified,partial,", 1))
+
+
+def mutate_unknown_audit_source(root: Path) -> None:
+    path = root / "audit" / "stage7-a2-semantic-audit.csv"
+    text = path.read_text(encoding="utf-8")
+    original = "9618-SYL-2027-2029-V2"
+    assert original in text
+    write_text(path, text.replace(original, "9618-SYL-UNKNOWN", 1))
 
 
 def mutate_semantic_blind_spot(root: Path) -> None:
@@ -222,6 +301,18 @@ def main() -> int:
         ("Python endpoint regression", "ig-0478/chapter-8.md", mutate_python_behaviour, "Python example 1 failed"),
         ("AS Java parameter regression", "as-9618/chapter-11.md", mutate_as_java_behaviour, "Java smoke test Ch11JavaParameters failed"),
         ("relative link regression", "index.html", mutate_relative_links, "missing relative Markdown link resolution"),
+        ("duplicate source ID", "audit/source-manifest.csv", mutate_duplicate_source_id, "duplicate source ID"),
+        ("invalid source hash", "audit/source-manifest.csv", mutate_invalid_source_hash, "invalid SHA-256"),
+        ("missing registered source", "audit/source-manifest.csv", mutate_missing_registered_source, "missing registered source ID: 9618-MS-41-MJ24"),
+        ("unsupported Cambridge claim", "ig-0478/chapter-1.md", mutate_unsupported_source_phrase, "student page contains banned editorial text: Cambridge accepts"),
+        ("unregistered official label", "ig-0478/chapter-1.md", mutate_unregistered_official_label, "official/MS-aligned label lacks a registered source ID"),
+        ("subject version regression", "ig-0478/chapter-1.md", mutate_subject_version, "missing course/Paper/syllabus-version metadata"),
+        ("0478 ROUND arity regression", "ig-0478/chapter-8.md", mutate_round_arity, "0478 ROUND must use ROUND(value, places)"),
+        ("9618 random routine regression", "as-9618/chapter-1.md", mutate_9618_random_name, "9618 content must use RAND(x), not 0478 RANDOM()"),
+        ("IGCSE language-scope regression", "ig-0478/paper-2-review.md", mutate_ig_language_scope, "missing syllabus-alignment evidence"),
+        ("missing semantic audit row", "audit/stage7-a2-semantic-audit.csv", mutate_missing_semantic_audit_row, "semantic audit has 82 rows, expected 83"),
+        ("unverified semantic audit row", "audit/stage7-a2-semantic-audit.csv", mutate_unverified_semantic_audit, "final status must be verified"),
+        ("unknown semantic audit source", "audit/stage7-a2-semantic-audit.csv", mutate_unknown_audit_source, "unknown official source ID"),
     ]
 
     with tempfile.TemporaryDirectory(prefix="cs-web-checklist-negative-") as temp_dir:

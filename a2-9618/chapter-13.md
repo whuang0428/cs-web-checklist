@@ -65,7 +65,7 @@ Use this overview to define data types, choose file access, calculate floating p
 
 ### Why user-defined data types are necessary
 
-#### Mark scheme answer
+#### Exam-style answer
 > User-defined data types allow the programmer to create data types that match the needs of a specific problem. They make the program easier to understand, less error-prone and allow related data items to be grouped together under one identifier.
 
 #### Required ideas / marking points
@@ -90,7 +90,7 @@ Too vague. You need to explain **why** a built-in type is not enough.
 | Non-composite data type | Defined without referencing another data type / contains one data type | enumerated, pointer |
 | Composite data type | Refers to other data types in its definition / contains multiple elements | record, set, class/object |
 
-#### Mark scheme style
+#### Exam-style wording
 > A non-composite data type can be defined without referencing another data type. A composite data type is a collection of data that may contain multiple elements of the same or different data types, grouped under one identifier.
 
 #### Common mistake
@@ -155,7 +155,7 @@ TYPE TNamePointer = ^STRING
 DECLARE CurrentName : TNamePointer
 ```
 
-#### Mark scheme keywords
+#### Key exam terms
 + **stores address / memory location**
 + **points to data**
 + **indicates type of data stored at the memory location**
@@ -255,6 +255,39 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ---
 
+### Class and object types
+
+A class defines the properties and methods shared by its objects. Each object is one instance of the class and stores its own property values.
+
+```text
+CLASS Reading
+    PRIVATE SensorID : STRING
+    PRIVATE Value : REAL
+
+    PUBLIC PROCEDURE NEW(GivenID : STRING, GivenValue : REAL)
+        SensorID <- GivenID
+        Value <- GivenValue
+    ENDPROCEDURE
+
+    PUBLIC FUNCTION GetValue() RETURNS REAL
+        RETURN Value
+    ENDFUNCTION
+
+    PUBLIC PROCEDURE SetValue(NewValue : REAL)
+        Value <- NewValue
+    ENDPROCEDURE
+ENDCLASS
+
+DECLARE CurrentReading : Reading
+CurrentReading <- NEW Reading("S17", 18.5)
+CurrentReading.SetValue(19.0)
+OUTPUT CurrentReading.GetValue()
+```
+
+`PRIVATE` prevents code outside the class from changing a property directly. The constructor `NEW` creates and initialises an object; public methods provide controlled access to its state.
+
+---
+
 ## 13.2 File Organisation and Access
 
 ### File organisation overview
@@ -269,7 +302,7 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ### Serial file organisation
 
-#### Mark scheme answer
+#### Exam-style answer
 > In a serial file, records are stored in the order they are added, often chronological order. There is no ordering by key field, so records must be checked one after another until the required record is found or all records have been checked.
 
 #### Suitable uses
@@ -287,7 +320,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ### Sequential file organisation
 
-#### Mark scheme answer
+#### Exam-style answer
 > In a sequential file, records are stored in order of a key field. The key field is compared as the file is searched, and the search can stop when the required key is found or when the current key is greater than the target key.
 
 #### Key points
@@ -308,7 +341,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ### Random file organisation
 
-#### Mark scheme answer
+#### Exam-style answer
 > In a random file, records are stored in no particular sequence. There is a relationship between the record key and its location in the file, often using a hashing algorithm, so records can be accessed directly.
 
 #### Suitable uses
@@ -321,7 +354,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ### Sequential access
 
-#### Mark scheme answer
+#### Exam-style answer
 > Sequential access searches records one after another from the physical start of the file until the record is found or the end of file is reached.
 
 #### Pseudocode idea
@@ -340,7 +373,7 @@ CLOSEFILE "Customer.dat"
 
 ### Direct access
 
-#### Mark scheme answer
+#### Exam-style answer
 > Direct access allows a record to be accessed without reading every previous record. A calculation or index can be used to identify the likely record location.
 
 #### Typical pseudocode keywords
@@ -363,7 +396,7 @@ GETRECORD "AccountRecords.dat", Customer
 Location ← AccountNumber MOD 1000
 ```
 
-#### Mark scheme keywords
+#### Key exam terms
 + **record key**
 + **hash value**
 + **storage location**
@@ -431,7 +464,7 @@ A normalised mantissa uses the available bits efficiently.
 #### Why normalise?
 > Normalisation gives the maximum precision for the number of bits available in the mantissa.
 
-#### Mark scheme keywords
+#### Key exam terms
 + **maximum precision**
 + **full use of mantissa bits**
 + **two most significant bits are different**
@@ -545,7 +578,7 @@ Convert as two's complement:
 = -46.65625
 ```
 
-#### Mark scheme answer structure
+#### Exam-style answer structure
 1. Show exponent conversion.  
 2. Show binary point movement.  
 3. Show denary calculation.  
@@ -563,7 +596,7 @@ Convert as two's complement:
 | Overflow | Number too large to be represented | exponent / storage range not enough |
 | Underflow | Number too close to zero to be represented | very small value cannot be stored |
 
-#### Mark scheme style
+#### Exam-style wording
 > If the number of bits in the mantissa is increased, precision increases. If the number of bits in the exponent is increased, the range of possible numbers increases.
 
 #### Common mistake
@@ -576,7 +609,7 @@ Convert as two's complement:
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### User-defined data types
 + **user-defined data type**
@@ -707,6 +740,18 @@ Test empty input; insertion before, between and after existing keys. For input `
 
 2. 18 → slot 8 **[1]**; 28 → slot 9 **[1]**; 38 → slot 0 **[1]**. Reading 38 probes 8, 9, 0 and compares the stored key at each slot **[1]**. A read must use the same hash and probe rule as a write. An unsuccessful search stops at an unused slot or after ten probes; deletions would require a marker that preserves probe chains.
 
+## Class Object and Hashing Methods Drill
+
+1. Define a class `Reading` with private properties `SensorID : STRING` and `Value : REAL`, a constructor, a function returning `Value`, and a procedure changing `Value`. Declare and create one object. **[8]**
+2. For key `123456` and 100 file slots, calculate the address using (a) remainder hashing with `Key MOD 100`, and (b) folding into two-digit groups followed by `MOD 100`. Explain one rule that both reading and writing must follow. **[4]**
+
+**Total: 12 marks**
+
+### Class Object and Hashing Methods Drill Answers
+
+1. `CLASS Reading` and both private typed properties **[2]**; `PUBLIC PROCEDURE NEW` assigns both supplied values **[2]**; public getter returns `Value` **[1]**; public setter assigns `Value` **[1]**; typed declaration and `NEW Reading(...)` object creation **[2]**. The class pattern above is one complete solution. **[8]**
+2. Remainder hashing gives `123456 MOD 100 = 56` **[1]**. Folding gives `(12 + 34 + 56) MOD 100 = 102 MOD 100 = 2` **[2]**. A read must use the same hashing algorithm and collision-resolution rule as the corresponding write **[1]**. **[4]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -724,7 +769,7 @@ Use technical terms as part of a complete statement: identify the component or m
 | Sequential file | Saying sequential file means random order | Sequential file is ordered by key field |
 | Serial file | Saying serial file is sorted | Serial file is stored in order of arrival / chronological order |
 | Hashing | Saying no collisions occur | Collisions can occur and must be handled |
-| Floating-point | Forgetting to show working | Marks often require binary conversion / point movement |
+| Floating-point | Forgetting to show working | show the binary conversion / point movement |
 | Floating-point | Wrong normalisation pattern | Positive starts `01`, negative starts `10` |
 | Mantissa/exponent | Mixing precision and range | Mantissa → precision; exponent → range |
 
@@ -850,7 +895,9 @@ A travel company stores booking data. Each booking has:
 (b) Define a record type `Booking` for the booking data. [4]  
 (c) Explain why `Vehicle` is suitable as an enumerated type. [2]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 
 (a)
 ```text
@@ -883,7 +930,9 @@ A stock file stores 100 000 records. Each stock item has a unique stock code. Th
 (b) Explain how a hashing algorithm can be used to access a stock record. [3]  
 (c) Describe one way to deal with a collision. [2]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 
 (a) Random file organisation / direct access file [1]
 
@@ -891,7 +940,7 @@ A stock file stores 100 000 records. Each stock item has a unique stock code. Th
 
 (c) Linear probing: start at the original hash location [1], then search following locations until an empty slot / matching record is found [1]
 
-Alternative: overflow area / chaining accepted with correct explanation.
+Alternative: an overflow area or chaining is also valid when explained correctly.
 
 ---
 
@@ -906,7 +955,9 @@ A number is stored using:
 (a) Convert `+26.5` into normalised floating-point representation. Show working. [4]  
 (b) Explain the effect of using fewer mantissa bits. [2]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 
 (a)
 ```text

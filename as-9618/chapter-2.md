@@ -79,7 +79,7 @@ A network connects computers and devices so that they can communicate and share 
 
 #### Benefits of networking
 
-| Benefit | Student-friendly explanation | Mark scheme phrase |
+| Benefit | Student-friendly explanation | Exam-style phrasing |
 | --- | --- | --- |
 | Share hardware | <span lang="zh-CN">多台电脑可以共用</span> printers / storage | **share resources / peripherals** |
 | Share data | <span lang="zh-CN">用户可以访问共同文件</span> | **share files / data** |
@@ -98,7 +98,7 @@ A network connects computers and devices so that they can communicate and share 
 | Server failure | if central server fails, many users may be affected |
 | Dependency | users may lose access when network connection fails |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A network allows devices to share resources, share data and communicate. It can also allow centralised backup, centralised security and centralised software management.
 
@@ -193,7 +193,7 @@ A **server** provides services or resources. A **client** requests and uses thos
 | Network manager needed | needs specialist maintenance |
 | Bottleneck | server may become overloaded |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > In a client-server network, clients request services or data from a central server. This allows centralised management, backup and security, but the server can be expensive and may become a single point of failure.
 
@@ -264,7 +264,7 @@ A **thick client** can process and store more data locally.
 | Central management | easier | harder |
 | Offline use | poor | better |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A thin client relies on the server for most processing and storage. A thick client performs more processing locally and can store more data locally.
 
@@ -439,7 +439,7 @@ Each packet commonly contains:
 | Star | device sends packet to switch; switch forwards to intended device |
 | Mesh | packets can use different routes; alternative path if a link fails |
 
-#### Mark scheme wording
+#### Exam-style wording
 
 > Packets include a destination address. Network devices use the destination address to forward the packet to the correct device or next network.
 
@@ -538,7 +538,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 | Security | harder to intercept physically | easier to intercept if not secured |
 | Cost | cabling can cost more initially | fewer cables, but WAPs/security needed |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > Wired networks usually provide faster and more reliable transmission, but cabling can be expensive and limits mobility. Wireless networks allow mobile devices to connect more easily, but may suffer from interference and security risks.
 
@@ -559,7 +559,7 @@ You should be able to explain how a smartphone accesses a company WAN using the 
 5. Multiple devices can communicate with the same tower at the same time.
 6. As the user moves, connection can be handed over to another cell/tower.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The area is divided into cells. Each cell has a tower with an antenna. The smartphone communicates wirelessly with the tower using low-power radio signals. The tower transmits the data to the wider network.
 
@@ -581,7 +581,7 @@ You should be able to explain how a smartphone accesses a company WAN using the 
 
 A switch connects devices in a LAN and forwards frames/packets to the correct device.
 
-#### Mark scheme wording
+#### Exam-style wording
 
 + stores MAC addresses of connected devices
 + receives packets/frames from devices
@@ -622,7 +622,7 @@ A router connects different networks and forwards packets between networks.
 
 A modem converts signals so data can be sent over transmission media such as phone lines.
 
-#### Mark scheme wording
+#### Exam-style wording
 
 > Converts digital data into analogue for transmission down phone lines, or converts analogue data into digital after transmission.
 
@@ -689,7 +689,7 @@ A collision happens when two devices transmit on the same shared medium at the s
 5. Each waits a random time.
 6. Devices try again.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A device checks whether the medium is free before transmitting. If a collision is detected, devices stop transmitting, wait for a random time and retransmit.
 
@@ -789,7 +789,7 @@ For real-time video streaming, **lossy** is usually more appropriate.
 | Internet | global network of interconnected networks using TCP/IP |
 | World Wide Web | collection of web pages/websites accessed using the internet |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The internet is the physical/global network infrastructure. The WWW is a service that runs on the internet and consists of websites and web pages.
 
@@ -875,7 +875,7 @@ An IP address identifies a device/interface on a network so packets can be route
 | Static IP | does not change each time the device connects | useful for servers, printers, remote access |
 | Dynamic IP | can change when device connects | common for normal client devices |
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > A dynamic IP address can change each time the computer connects to a network.
 
@@ -932,13 +932,13 @@ DNS translates a human-readable domain name into an IP address.
 5. Browser uses the IP address to contact the web server.
 6. Web server sends the requested web page/resource.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > DNS resolves/translates a domain name into the corresponding IP address so the browser can locate and request the resource from the correct web server.
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 | Topic | Keywords / phrases to memorise |
 | --- | --- |
@@ -970,7 +970,7 @@ DNS translates a human-readable domain name into an IP address.
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Correct exam wording |
+| Mistake | Why it is weak | Correct exam wording |
 | --- | --- | --- |
 | Saying WAN is always wireless | WAN can be wired/wireless | WAN covers large geographical area |
 | Saying LAN is always one room | too narrow | LAN covers small area such as building/site |
@@ -978,7 +978,7 @@ DNS translates a human-readable domain name into an IP address.
 | Saying switch sends data to all devices | confused with hub | switch forwards to intended recipient using MAC address |
 | Saying router connects devices in same LAN | incomplete | router connects different networks / LAN to internet |
 | Saying modem “gives internet” only | too vague | converts digital/analogue signals for transmission |
-| Saying IPv6 is just “newer” | no marks for detail | 128 bits, 8 groups, hex, colons |
+| Saying IPv6 is just “newer” | does not state an examinable difference | 128 bits, 8 groups, hex, colons |
 | Saying private IP is safer only | vague | private IP is only accessible within same LAN |
 | Saying DNS “stores websites” | wrong | DNS maps domain names to IP addresses |
 | Saying streaming downloads whole file first | wrong | data is played from a continuous stream/buffer |
@@ -1068,6 +1068,28 @@ R --> I[Internet]
 
 ---
 
+---
+
+## Targeted Syllabus Drill
+
+1. Compare client-server and peer-to-peer networks. Include the role of a client, server and peer, one benefit and one drawback of each model, and explain why a large network may be divided into subnetworks. **[10]**
+2. Describe bus, star, mesh and hybrid topologies. For a mesh, explain how packet routing and alternative routes provide resilience. **[8]**
+3. Distinguish public and private cloud storage, then give two benefits and two drawbacks of storing organisational data in the cloud. **[6]**
+4. Compare copper cable, fibre-optic cable, radio/Wi-Fi, microwave and satellite as transmission media. Give one relevant strength or limitation for each. **[5]**
+5. State the purpose of each LAN component: switch, server, network interface card, wireless network interface card, wireless access point, cables, bridge and repeater. **[8]**
+6. Explain how a modem, the PSTN, a dedicated line and a cellular network can support access to the internet. **[4]**
+7. For IP addressing, distinguish IPv4 from IPv6, explain the purposes of subnetting and associating an address with a device, compare public and private addresses in terms of internet visibility/security, and distinguish static from dynamic allocation. **[10]**
+
+### Targeted Syllabus Drill Answers
+
+1. A client requests a service/resource and a server provides/manages it centrally **[2]**. Central administration, security or backup is a benefit, while server cost/dependence or a bottleneck is a drawback **[2]**. In peer-to-peer networking, each peer can request and provide resources **[1]**. Low setup cost/direct sharing is a benefit, while inconsistent security, backup or availability is a drawback **[2]**. Subnetworks divide a larger network into manageable broadcast/address groups, reducing unnecessary traffic or separating departments/security zones **[2]**. One further developed comparison earns **[1]**. **[10]**
+2. A bus uses one shared backbone **[1]**; a star gives each node a separate link to a central device **[1]**; a mesh provides multiple interconnections/routes **[1]**; a hybrid combines two or more topology types **[1]**. A packet carries destination information **[1]**, an intermediate device selects a next hop/route **[1]**, and different packets or later transmissions may use different routes **[1]**. If one link fails, an alternative route can remain available **[1]**. **[8]**
+3. Public cloud infrastructure is shared between customers and operated by a provider, whereas a private cloud is dedicated to one organisation **[2]**. Benefits include access from different locations, scalable capacity, provider-managed maintenance or off-site resilience **[2]**. Drawbacks include dependence on connectivity/provider availability, recurring cost, migration/lock-in, or confidentiality/control concerns **[2]**. **[6]**
+4. Copper is inexpensive and simple but has lower bandwidth/more electromagnetic interference than fibre **[1]**. Fibre has high bandwidth, low attenuation and immunity to electromagnetic interference but can cost more to install/terminate **[1]**. Radio/Wi-Fi supports mobility without cabling but is affected by interference, range and interception **[1]**. Terrestrial microwave can provide a high-capacity point-to-point link but normally needs line of sight **[1]**. Satellite covers remote/wide areas but has high latency, weather effects or high cost **[1]**. **[5]**
+5. Switch: forwards frames to the appropriate LAN port **[1]**. Server: provides centrally managed services/resources to clients **[1]**. NIC: provides a device's wired network interface **[1]**. WNIC: provides its wireless network interface **[1]**. Wireless access point: connects wireless devices to the LAN **[1]**. Cables: carry signals between wired devices **[1]**. Bridge: connects/filters traffic between LAN segments **[1]**. Repeater: regenerates a weakened signal to extend distance **[1]**. **[8]**
+6. A modem converts between the signalling required by the access link and the computer/network's digital data **[1]**. The PSTN can carry an internet connection over the public telephone network **[1]**. A dedicated line provides an always-available link reserved for the customer **[1]**. A cellular network provides internet access using a mobile radio connection to a base station **[1]**. **[4]**
+7. IPv4 uses 32-bit addresses; IPv6 uses 128-bit addresses and supplies a much larger address space **[2]**. Subnetting divides an address/network into smaller logical networks for management, routing, traffic or security **[2]**. An IP address identifies/locates a network interface so packets can be delivered **[1]**. A public address is globally routable on the internet; a private address is used internally and is not directly routed across the public internet, reducing direct exposure but not replacing security controls **[3]**. A static address remains assigned unless changed; a dynamic address is allocated for a period, commonly by DHCP **[2]**. **[10]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -1120,15 +1142,17 @@ A delivery company has offices in three cities. Drivers use smartphones to conne
 **(a)** State two ways a WAN is different from a LAN. [2]  
 **(b)** Explain how data is transmitted from a smartphone using the cell phone network. [3]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-**(a)** Award 1 mark each:
+#### Question 1 Indicative Marking Points
+
+**(a)** Suggested allocation: 1 mark each:
 
 + WAN covers larger geographical area; LAN covers smaller area.
 + WAN may use external / non-company-owned transmission media; LAN usually uses dedicated / company-owned hardware or media.
 + WAN may connect several LANs.
 
-**(b)** Award up to 3 marks:
+**(b)** Suggested allocation: up to 3 marks:
 
 + Land/area is divided into cells.
 + Each cell has a tower/base station/antenna.
@@ -1147,16 +1171,18 @@ A school office has six computers, one server, two printers and one router for i
 **(b)** Describe the role of the switch in this network. [3]  
 **(c)** Give one drawback of using a star topology and explain why it is nevertheless suitable for this office. [2]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-**(a)** Award up to 3 marks:
+#### Question 2 Indicative Marking Points
+
+**(a)** Suggested allocation: up to 3 marks:
 
 + Switch is central device.
 + Each computer connects directly to the switch.
 + Server/printers connect directly to switch or server/computer as appropriate.
 + Router/modem connects to switch/server for internet access.
 
-**(b)** Award up to 3 marks:
+**(b)** Suggested allocation: up to 3 marks:
 
 + Stores MAC addresses of connected devices.
 + Receives packets/frames from devices.
@@ -1164,12 +1190,12 @@ A school office has six computers, one server, two printers and one router for i
 + Provides central point of connection.
 + Allows connected devices to communicate.
 
-**(c)** Award 1 mark for a drawback:
+**(c)** Suggested allocation: 1 mark for a drawback:
 
 + If central switch fails, the network is affected.
 + More cable/cost than bus.
 
-Award 1 mark for a contextual justification, such as a cable failure affects only one office device, the switch forwards traffic directly, or the server/printers can all connect through one managed central device. **[2]**
+Suggested allocation: 1 mark for a contextual justification, such as a cable failure affects only one office device, the switch forwards traffic directly, or the server/printers can all connect through one managed central device. **[2]**
 
 ---
 
@@ -1183,9 +1209,11 @@ DHCP can associate a __________ IP address with a device when it joins a network
 
 **(b)** Explain one purpose of subnetting. [1]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-**(a)** Award 1 mark each:
+#### Question 3 Indicative Marking Points
+
+**(a)** Suggested allocation: 1 mark each:
 
 + full stops
 + hexadecimal
@@ -1201,7 +1229,9 @@ DHCP can associate a __________ IP address with a device when it joins a network
 
 (b) Explain how source bit rate, broadband speed and buffering affect whether a stream plays smoothly. [2]
 
-#### Question 4 mark scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 4 Indicative Marking Points
 
 (a) Real-time streaming is captured/transmitted while the event occurs, whereas on-demand content is already stored and starts when requested. [1]
 

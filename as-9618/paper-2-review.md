@@ -12,7 +12,7 @@
 - Answer all seven questions.
 - Write programming answers in **pseudocode**.
 - Show intermediate states for traces.
-- Attempt the complete paper before opening the mark scheme.
+- Attempt the complete paper before opening the indicative marking points.
 
 ### Coverage Map
 
@@ -127,9 +127,13 @@ Write one complete pseudocode solution that:
 
 ---
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [8]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-8" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [8]
 
 1. Essential: any two of member code, tool code, hire days, insurance choice **[2]**. Irrelevant: favourite colour and travel method **[2]**. **[4]**
 2. Any two distinct modules with linked purposes, for example `GetHireDetails` inputs the required values; `CalculateCharge` calculates the cost; `SaveHire` stores the record; `DisplayConfirmation` outputs the result. **[2]**
@@ -144,7 +148,9 @@ Write one complete pseudocode solution that:
 
 ---
 
-### Question 2 Mark Scheme [10]
+<span id="question-2-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [10]
 
 1. Stepwise refinement repeatedly replaces a high-level task with more detailed steps **[1]** until each step can be programmed **[1]**. **[2]**
 2. For example: input mark; validate mark; select result; display result. One mark each in a logical order. **[4]**
@@ -166,9 +172,11 @@ Write one complete pseudocode solution that:
 
 ---
 
-### Question 3 Mark Scheme [12]
+<span id="question-3-mark-scheme-12" class="legacy-anchor" aria-hidden="true"></span>
 
-1. Code: STRING; location: STRING; active flag: BOOLEAN; temperature: REAL. Award all four correct for three marks, three correct for two, two correct for one. **[3]**
+### Question 3 Indicative Marking Points [12]
+
+1. Code: STRING; location: STRING; active flag: BOOLEAN; temperature: REAL. Suggested allocation: all four correct for three marks, three correct for two, two correct for one. **[3]**
 2.
 
    ```text
@@ -210,7 +218,9 @@ Write one complete pseudocode solution that:
 
 ---
 
-### Question 4 Mark Scheme [10]
+<span id="question-4-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 4 Indicative Marking Points [10]
 
 1. After pushes: `[A, B, C, D]` **[1]**; `POP` returns `D` **[1]**; editing the current top changes `C` to `E` **[1]**; final stack `[A, B, E]` **[1]**. **[4]**
 2. After enqueue: `[J1, J2, J3, J4]` **[1]**; dequeues return `J1` then `J2` **[1]**; final queue `[J3, J4]` **[1]**. **[3]**
@@ -218,7 +228,9 @@ Write one complete pseudocode solution that:
 
 ---
 
-### Question 5 Mark Scheme [12]
+<span id="question-5-mark-scheme-12" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 5 Indicative Marking Points [12]
 
 1. The body executes before the condition is tested **[1]**, so input occurs at least once and stops when the valid condition becomes true **[1]**. **[2]**
 2.
@@ -248,7 +260,9 @@ Write one complete pseudocode solution that:
 
 ---
 
-### Question 6 Mark Scheme [8]
+<span id="question-6-mark-scheme-8" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 6 Indicative Marking Points [8]
 
 1. RAD or iterative **[1]**; linked to rapid prototype/short deadline **[1]** and weekly feedback/changing requirements **[1]**. **[3]**
 2. White-box; integration; acceptance. **[3]**
@@ -256,7 +270,9 @@ Write one complete pseudocode solution that:
 
 ---
 
-### Question 7 Mark Scheme [15]
+<span id="question-7-mark-scheme-15" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 7 Indicative Marking Points [15]
 
 Example:
 
@@ -323,7 +339,7 @@ ENDIF
 | output final count/income and guard average against zero | 2 |
 | **Total** | **15** |
 
-Equivalent correct pseudocode receives credit. The search must not access `Workshop[11]`.
+Equivalent correct pseudocode is also valid. The search must not access `Workshop[11]`.
 
 ---
 

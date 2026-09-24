@@ -1,0 +1,84 @@
+objective_id,initial_status,final_status,official_source,official_pages,audit_finding,repair
+A2-13.1-01,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,32; PSG 26-29,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.1-02,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,32; PSG 26,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.1-03,missing_teaching,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,32; PSG 28-29,"Set and record evidence was present, but Chapter 13 did not define and use a class/object type in current pseudocode notation.",Added original class/object teaching plus a marked construction drill and answer evidence.
+A2-13.1-04,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,32; PSG 26-29,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.2-01,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,32; PSG 25,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.2-02,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,32; PSG 25,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.2-03,partial,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,32; PSG 25,Practice used one remainder hash and did not explicitly assess different hashing algorithms.,Added remainder and folding calculations plus the required matching read/write rule.
+A2-13.3-01,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.3-02,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.3-03,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.3-04,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-13.3-05,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-14.1-01,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-14.1-02,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-14.1-03,partial,verified,9618-SYL-2027-2029-V2,33,Existing practice named layer functions but did not trace a complete host-to-host transfer down and up all four layers.,Added an eight-point sender-to-receiver TCP/IP transfer drill and answers.
+A2-14.1-04,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-14.2-01,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-14.2-02,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-14.2-03,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-14.2-04,verified,verified,9618-SYL-2027-2029-V2,33,Teaching and practice evidence already supported the complete current objective.,none
+A2-15.1-01,verified,verified,9618-SYL-2027-2029-V2,34,Teaching and practice evidence already supported the complete current objective.,none
+A2-15.1-02,partial,verified,9618-SYL-2027-2029-V2,34,Practice did not isolate why RISC instruction form and register use support pipelining.,Added a targeted RISC pipeline/register explanation with branch and interrupt effects.
+A2-15.1-03,verified,verified,9618-SYL-2027-2029-V2,34,Teaching and practice evidence already supported the complete current objective.,none
+A2-15.1-04,verified,verified,9618-SYL-2027-2029-V2,34,Teaching and practice evidence already supported the complete current objective.,none
+A2-15.1-05,verified,verified,9618-SYL-2027-2029-V2,34,Teaching and practice evidence already supported the complete current objective.,none
+A2-15.2-01,partial,verified,9618-SYL-2027-2029-V2,34,Existing checks did not require complete multi-input and half/full-adder truth tables.,Added complete construction tasks and reference rows for a three-input circuit and both adders.
+A2-15.2-02,verified,verified,9618-SYL-2027-2029-V2,34,Teaching and practice evidence already supported the complete current objective.,none
+A2-15.2-03,verified,verified,9618-SYL-2027-2029-V2,34,Teaching and practice evidence already supported the complete current objective.,none
+A2-15.2-04,verified,verified,9618-SYL-2027-2029-V2,34,Teaching and practice evidence already supported the complete current objective.,none
+A2-16.1-01,partial,verified,9618-SYL-2027-2029-V2,35,Practice focused on CPU scheduling and did not assess coordinated CPU memory and I/O resource use.,Added a resource-maximisation task covering scheduling memory allocation and I/O buffering.
+A2-16.1-02,verified,verified,9618-SYL-2027-2029-V2,35,Teaching and practice evidence already supported the complete current objective.,none
+A2-16.1-03,partial,verified,9618-SYL-2027-2029-V2,35,Practice did not compare FCFS round robin SJF and SRT together with kernel interrupt handling.,Added a marked four-scheduler comparison and interrupt-to-kernel sequence.
+A2-16.1-04,partial,verified,9618-SYL-2027-2029-V2,35,Practice did not explicitly assess the page-replacement process and policy outcome.,Added a page-fault replacement task covering victim choice write-back table update and thrashing.
+A2-16.2-01,verified,verified,9618-SYL-2027-2029-V2,35,Teaching and practice evidence already supported the complete current objective.,none
+A2-16.2-02,partial,verified,9618-SYL-2027-2029-V2,35,Practice did not require explanation of all four listed compiler stages.,Added a task and answer for lexical analysis syntax analysis code generation and optimisation.
+A2-16.2-03,verified,verified,9618-SYL-2027-2029-V2,35,Teaching and practice evidence already supported the complete current objective.,none
+A2-16.2-04,verified,verified,9618-SYL-2027-2029-V2,35,Teaching and practice evidence already supported the complete current objective.,none
+A2-17.1-01,verified,verified,9618-SYL-2027-2029-V2,36,Teaching and practice evidence already supported the complete current objective.,none
+A2-17.1-02,verified,verified,9618-SYL-2027-2029-V2,36,Teaching and practice evidence already supported the complete current objective.,none
+A2-17.1-03,out_of_scope_practice,verified,9618-SYL-2027-2029-V2,36,"Certificate teaching was present, but the review substituted a password-limitation item and did not directly assess certificate acquisition.",Replaced the out-of-scope item and added focused acquisition/signature practice with answers.
+A2-18.1-01,verified,verified,9618-SYL-2027-2029-V2,36,Teaching and practice evidence already supported the complete current objective.,none
+A2-18.1-02,verified,verified,9618-SYL-2027-2029-V2,36,Teaching and practice evidence already supported the complete current objective.,none
+A2-18.1-03,out_of_scope_practice,verified,9618-SYL-2027-2029-V2,36,"Practice under-tested reinforcement/deep-learning selection and used two social-impact items outside the listed A2 AI content.",Replaced both items and added a four-method selection drill with reasons.
+A2-18.1-04,verified,verified,9618-SYL-2027-2029-V2,36,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-01a,partial,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Practice required linear-search code but did not require an explicit comparison trace or scaling statement.,Added a comparison-by-comparison trace and item-count effect.
+A2-19.1-01b,partial,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Practice covered code and the sorted precondition but not an explicit trace with scaling as item count changes.,Added low/high/mid trace evidence and logarithmic scaling.
+A2-19.1-02a,partial,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Practice required insertion-sort code but not a full pass trace linked to initial order and item count.,Added an insertion-sort pass trace and best/worst input-order reasoning.
+A2-19.1-02b,partial,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Practice required bubble-sort code but not a full pass trace linked to initial order and item count.,Added a flagged bubble-sort pass trace and order/size reasoning.
+A2-19.1-03a,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03b,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03c,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03d,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03e,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03f,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03g,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03h,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03i,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-03j,verified,verified,9618-SYL-2027-2029-V2,37,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-04a,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-04b,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-04c,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-04d,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-04e,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.1-05,verified,verified,9618-SYL-2027-2029-V2,37,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.2-01a,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.2-01b,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,37; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.2-01c,verified,verified,9618-SYL-2027-2029-V2,37,Teaching and practice evidence already supported the complete current objective.,none
+A2-19.2-02,verified,verified,9618-SYL-2027-2029-V2,37,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-01,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-02a,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-02b,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,38; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-03a,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-03b,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,38; PSG 5-24,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-04a,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-04b,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-04c,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-05a,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.1-05b,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.2-01a,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,38; PSG 25,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.2-01b,verified,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,38; PSG 25,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.2-01c,partial,verified,9618-SYL-2027-2029-V2; 9618-PSG-2027-2029-V1,38; PSG 25,Practice explicitly assessed random access but did not isolate serial sequential and random processing together.,Added a three-part file-organisation transfer drill and marked answers.
+A2-20.2-02a,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none
+A2-20.2-02b,verified,verified,9618-SYL-2027-2029-V2,38,Teaching and practice evidence already supported the complete current objective.,none

@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 4: Software
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -66,7 +66,7 @@ Software that provides the services that the user requires.
 An **operating system (OS)** is system software that manages the main functions of a computer.
 
 #### OS Function Table
-| Function | Mark scheme style role description |
+| Function | Exam-style role description |
 | --- | --- |
 | **Managing files** | allows users to create, store, delete, move, copy and organise files |
 | **Handling interrupts** | assigns priority to interrupts and uses an ISR / interrupt handler to process them |
@@ -179,7 +179,7 @@ I --> J[Restore saved status]
 J --> K[Continue original process]
 ```
 
-#### Full Mark Sentences
+#### Complete interrupt-handling sequence
 + The CPU / OS checks the **priority** of the interrupt.
 + If the interrupt has higher priority, the current process is halted.
 + The status of the current process is saved, often on a **stack**.
@@ -295,7 +295,7 @@ Assembly language  --assembler-->  Machine code
 An **IDE** is a suite of programs used to write, run, test and debug program code.
 
 #### IDE Functions and Roles
-| IDE function | Mark scheme style role description |
+| IDE function | Exam-style role description |
 | --- | --- |
 | **Code editor** | allows the programmer to write / change program code |
 | **Run-time environment** | allows the programmer to run the code and see the output |
@@ -370,7 +370,7 @@ Use this overview to classify software, trace interrupts, translate code and sel
 
 ---
 
-## Mark Scheme Style Answer Templates
+## Exam-Style Answer Templates
 ### Template A｜Difference between system software and application software
 > System software provides the services that the computer requires and manages / maintains the hardware and software. An example is an operating system or utility software. Application software provides the services that the user requires and allows the user to perform tasks. An example is a word processor or spreadsheet.
 >
@@ -414,7 +414,7 @@ Use this overview to classify software, trace interrupts, translate code and sel
 ---
 
 ## Topic-Specific Common Confusions
-| Topic | Weak answer | Why it loses marks | Better answer |
+| Topic | Weak answer | Why it is weak | Better answer |
 | --- | --- | --- | --- |
 | System software | “It is software for computer.” | Too vague | “It provides services the computer requires and manages hardware/software.” |
 | Application software | “Software on computer.” | Too vague | “It provides services the user requires and allows the user to perform tasks.” |
@@ -475,6 +475,20 @@ Use this overview to classify software, trace interrupts, translate code and sel
 
 ---
 
+## Targeted Syllabus Drill
+
+1. Match each requirement to an operating-system function and explain the match: organise stored documents; let a user select commands; share RAM between programs; restrict one pupil from another pupil's files. **[8]**
+2. Describe the dependency chain from hardware to firmware/bootloader to operating system to an application. **[4]**
+3. Explain what assembly language is and why an assembler is required. **[3]**
+
+### Targeted Syllabus Drill Answers
+
+1. File management organises/stores/retrieves the documents **[2]**; the user interface accepts and presents commands **[2]**; memory management allocates/deallocates RAM and keeps processes separate **[2]**; user-account/security management applies permissions/access levels **[2]**. **[8]**
+2. Hardware provides the physical processor/storage **[1]**; firmware/bootloader stored in non-volatile memory starts and initialises the machine **[1]**; it loads the operating system **[1]**; the application then runs on the services/platform supplied by the operating system **[1]**. **[4]**
+3. Assembly is a low-level language that represents machine operations with mnemonics **[1]**; the CPU executes machine code rather than mnemonics **[1]**; an assembler translates the assembly program into machine code **[1]**. **[3]**
+
+---
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -511,7 +525,7 @@ Answer these in exam style.
 5. Key press / mouse click / printer out of paper / printer out of ink.
 6. Division by zero / two processes trying to access same memory location.
 7. Assembler.
-8. High level: easier to read/write/debug or portable; low level: direct hardware/register control, compact code or potentially efficient execution. Award one for each side.
+8. High level: easier to read/write/debug or portable; low level: direct hardware/register control, compact code or potentially efficient execution. Suggested allocation: one mark for each side.
 9. One valid linked pair, for example error diagnostics identify/report an error and help locate it, or a run-time environment executes the program so its behaviour can be tested.
 
 ---
@@ -523,7 +537,9 @@ Answer these in exam style.
 A student uses a computer to complete homework.
 Describe the difference between system software and application software. Give one example of each.
 
-#### Question 1 Mark Scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 Any four from:
 
 + System software provides the services the computer requires.
@@ -538,7 +554,9 @@ Any four from:
 ### Question 2｜Operating System Memory Management **[3]**
 Describe the role of the operating system in managing memory.
 
-#### Question 2 Mark Scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 Any three from:
 
 + Allocates memory to processes.
@@ -557,7 +575,9 @@ A key is pressed on a keyboard while a computer is running another process.
 (b) Give the name of the program/routine used to service the interrupt. **[1]**
 (c) Describe how the interrupt is handled. **[3]**
 
-#### Question 3 Mark Scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 (a) Hardware interrupt.
 (b) Interrupt service routine / interrupt handler.
 (c) Any three from:
@@ -576,7 +596,9 @@ A key is pressed on a keyboard while a computer is running another process.
 ### Question 4｜Compiler and Interpreter **[4]**
 Explain why a programmer may use an interpreter during development but a compiler for the final program.
 
-#### Question 4 Mark Scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 4 Indicative Marking Points
 Any four from:
 
 + Interpreter translates and executes code line by line.
@@ -594,7 +616,9 @@ Any four from:
 A programmer uses an IDE to create a program.
 Describe two functions of an IDE and explain how each helps the programmer.
 
-#### Question 5 Mark Scheme
+<span id="question-5-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 5 Indicative Marking Points
 One mark for function + one mark for matching role description, max four:
 
 + Code editor: allows the programmer to write/change code.

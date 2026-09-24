@@ -702,6 +702,22 @@ ENDPROCEDURE
 
 Check the linked-list algorithms with an empty list, insertions before/between/after existing nodes, a full array, deletion of every position and an absent target. After each successful deletion, a later insertion must be able to reuse the released position. For a queue, fill ten slots, remove two, enqueue two, then verify FIFO order across the wrap. For a tree, check empty, root, both branches and absent targets. Use the Java ADT examples to compare behaviour, and the two Paper 3 sets to practise complete algorithms under time pressure.
 
+## Search and Sort Trace Drill
+
+1. Trace a linear search for 31 in `[12, 18, 25, 31, 47]`, listing every index/value comparison. State the worst-case effect of doubling the item count. **[3]**
+2. Trace a binary search for 31 in the same array, listing `low`, `high`, `mid` and the inspected value at each step. State the precondition and the worst-case effect of doubling the item count. **[5]**
+3. Trace insertion sort on `[4, 2, 3, 1]`, showing the array after each insertion. Relate its work to initial order and item count. **[5]**
+4. Trace ascending bubble sort on `[4, 2, 3, 1]`, showing the array after each complete pass and using an early-stop flag. Relate its work to initial order and item count. **[5]**
+
+**Total: 18 marks**
+
+### Search and Sort Trace Drill Answers
+
+1. Comparisons are `(0,12)`, `(1,18)`, `(2,25)`, `(3,31)` and the result is index 3 **[2]**. Worst-case linear work is proportional to `n`, so doubling `n` approximately doubles the comparisons **[1]**. **[3]**
+2. With indexes 0–4: `low=0, high=4, mid=2, value=25`; then `low=3, high=4, mid=3, value=31` **[2]**. Data must be sorted by the searched key **[1]**. Binary search halves the remaining interval each comparison, so doubling `n` adds about one worst-case comparison; time is `O(log n)` **[2]**. **[5]**
+3. After inserting 2: `[2,4,3,1]`; after inserting 3: `[2,3,4,1]`; after inserting 1: `[1,2,3,4]` **[3]**. Already/nearly sorted input needs few shifts and can approach linear work **[1]**; reverse order causes many shifts and, as `n` grows, worst-case work is quadratic **[1]**. **[5]**
+4. After pass 1: `[2,3,1,4]`; pass 2: `[2,1,3,4]`; pass 3: `[1,2,3,4]` **[3]**. An already sorted pass makes no swaps, so the flag permits early termination **[1]**; reverse order/increasing `n` leads to many comparisons and swaps, with quadratic worst-case work **[1]**. **[5]**
+
 ## Required Ideas and Exam Language
 
 - State the algorithm's precondition, such as sorted data for binary search.
@@ -761,7 +777,9 @@ An inventory program needs searching, sorting and several ADTs. Answer in pseudo
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 1. **(a)** Linear search compares items in sequence until found/end **[1]**; binary search requires sorted data and compares the middle item before moving a bound **[1]**. **[2]**
 

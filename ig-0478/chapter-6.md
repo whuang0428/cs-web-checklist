@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 6: Automated and Emerging Technologies
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -55,12 +55,12 @@ G --> A
 
 ---
 
-### 6.1.3 Mark Scheme Style Sentences
+### 6.1.3 Exam-style sentences
 #### Example A: Automatic weather alert system
 > **Describe how the system uses a sensor and microprocessor to trigger an alert.**
 >
 
-High-scoring answer:
+Exam-style answer:
 
 + A sensor, such as a **temperature / humidity / light / level sensor**, collects environmental data.
 + The data is sent to the **microprocessor**.
@@ -77,7 +77,7 @@ High-scoring answer:
 
 ### 6.1.4 Advantages and Disadvantages of Automated Systems
 #### General Advantages
-| Advantage | Mark scheme expansion |
+| Advantage | Exam-style explanation |
 | --- | --- |
 | Faster response | The system can react more quickly than a human. |
 | Works continuously | It can work 24/7 without breaks. |
@@ -88,7 +88,7 @@ High-scoring answer:
 
 
 #### General Disadvantages
-| Disadvantage | Mark scheme expansion |
+| Disadvantage | Exam-style explanation |
 | --- | --- |
 | Expensive setup | Sensors, microprocessors, actuators and software cost money. |
 | Maintenance cost | The system needs checking, repairs and updates. |
@@ -297,7 +297,7 @@ F --> G[Diagnosis / recommendation]
 G --> H[Output shown on interface]
 ```
 
-##### Mark Scheme Style Answer: Doctor diagnosis
+##### Exam-style answer: Doctor diagnosis
 > The doctor enters data about the patient’s symptoms into the **interface**.
 The **inference engine** decides which questions to ask based on the previous answers.
 It compares the symptoms with facts in the **knowledge base**.
@@ -510,6 +510,18 @@ Before the exam, students should be able to answer:
 - [ ] Can I apply machine learning to weather, gaming, voice recognition and robot navigation?
 
 ---
+
+## Targeted Syllabus Drill
+
+1. Define robotics, then name the three syllabus characteristics of a robot. **[4]**
+2. Explain why a programmable factory arm with a mechanical frame, sensors and motors is a robot. **[3]**
+
+### Targeted Syllabus Drill Answers
+
+1. Robotics is the branch of computer science concerned with the design, construction and operation of robots **[1]**; a robot has a mechanical structure/framework **[1]**, electrical components such as sensors, a processor and actuators **[1]**, and is programmable **[1]**. **[4]**
+2. It has a mechanical framework **[1]**, electrical sensing/processing/actuating components **[1]**, and programmable control **[1]**. **[3]**
+
+---
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -534,7 +546,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 ## Quick Check Answers
 
-1. Sensor/input, microprocessor/controller and actuator/output. Award any two correctly ordered stages. **[2]**
+1. Sensor/input, microprocessor/controller and actuator/output. Suggested allocation: any two correctly ordered stages. **[2]**
 2. A sensor measures temperature and sends the reading to the microprocessor **[1]**; the reading is compared with the stored maximum **[1]**; the processor signals an actuator such as a fan or vent to reduce the temperature **[1]**. **[3]**
 3. Any two: mechanical structure, electrical components, programmable control, movement or manipulation, sensing its environment. **[2]**
 4. The knowledge base stores facts **[1]**; the rule base stores conditional expert rules **[1]**; the inference engine matches the entered symptoms to facts/rules to produce questions and a possible diagnosis **[1]**. **[3]**
@@ -565,19 +577,25 @@ A water company wants an artificial-intelligence system to predict pipe failures
 
 (c) Explain one benefit and one risk of using this machine-learning system. **[2]**
 
-## Practice Mark Scheme
+## Practice Indicative Marking Points
 
-### Question 1 Mark Scheme [6]
+<span id="question-1-mark-scheme-6" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [6]
 
 **(a)** Any four: sensor repeatedly measures light level; analogue reading is converted to digital if required; data is sent to the microprocessor; reading is compared with the stored minimum; if below the minimum, a signal switches/brightens the lamps; new readings provide feedback and lamps are reduced/switched off when the target is reached. **[4]**
 
 **(b)** One contextual benefit, such as consistent continuous control or reduced routine labour **[1]**; one contextual limitation, such as sensor failure, setup cost or the need for maintenance/manual override **[1]**. **[2]**
 
-### Question 2 Mark Scheme [6]
+<span id="question-2-mark-scheme-6" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [6]
 
 Benefits: any two contextual points, such as continuous operation, consistent detection, reduced chemical use, less repetitive labour or access to large fields **[2]**. Limitations: any two contextual points, such as purchase/maintenance cost, crop-recognition errors, damage from malfunction, weather/terrain limits or cyber attack **[2]**. Conclusion compares the evidence and proposes a justified condition, such as supervised trials and a manual stop before full deployment **[2]**. **[6]**
 
-### Question 3 Mark Scheme [8]
+<span id="question-3-mark-scheme-8" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [8]
 
 **(a)** AI is the use of a computer system to perform tasks that normally require human intelligence, such as learning, reasoning or decision-making. **[1]**
 

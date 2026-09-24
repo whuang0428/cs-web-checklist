@@ -69,7 +69,7 @@ Use this overview to explain management, choose support software, trace translat
 
 Operating System <span lang="zh-CN">就像电脑的</span>“<span lang="zh-CN">总管</span>”。<span lang="zh-CN">没有</span> OS，<span lang="zh-CN">普通用户和</span> application software <span lang="zh-CN">很难直接控制硬件</span>。OS <span lang="zh-CN">提供一个环境</span>，<span lang="zh-CN">让程序可以运行</span>，<span lang="zh-CN">也帮用户和硬件之间进行沟通</span>。
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > An operating system is needed to provide an interface between the user/application software and the hardware, to manage hardware and system resources, and to provide an environment in which applications can run.
 
@@ -113,7 +113,7 @@ C --> D[Apply to device / user / program]
 
 Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</span> main memory / RAM <span lang="zh-CN">的过程</span>。<span lang="zh-CN">它决定哪些</span> programs <span lang="zh-CN">和</span> data <span lang="zh-CN">放进</span> RAM，<span lang="zh-CN">分配多少</span> memory，<span lang="zh-CN">并防止程序互相破坏数据</span>。
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > The OS allocates memory to programs and data.  
 > It keeps track of which memory locations are in use.  
@@ -148,7 +148,7 @@ Virtual memory and paging are A2 Section 16.1 topics. They are taught in [A2 Cha
 
 File management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</span> files <span lang="zh-CN">和</span> folders/directories <span lang="zh-CN">的功能</span>。
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The OS manages files and directories by allowing files to be created, named, opened, saved, copied, moved, deleted and organised. It keeps track of file locations and controls access permissions.
 
@@ -187,7 +187,7 @@ Backup is usually **utility software**, not the core meaning of file management.
 
 Security management <span lang="zh-CN">是</span> OS <span lang="zh-CN">防止</span> unauthorised access，<span lang="zh-CN">保护</span> data <span lang="zh-CN">和</span> resources。
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > The OS manages user accounts and passwords.  
 > It controls access rights / permissions.  
@@ -218,7 +218,7 @@ Security management <span lang="zh-CN">是</span> OS <span lang="zh-CN">防止</
 
 The OS manages input/output devices and peripherals. It allows communication between hardware and software.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > The OS uses device drivers to allow communication with peripheral devices.  
 > It sends data to output devices and receives data from input devices.  
@@ -246,7 +246,7 @@ A printer is much slower than the CPU.
 
 Process management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理正在运行的</span> programs/processes。<span lang="zh-CN">它决定哪个</span> process <span lang="zh-CN">使用</span> CPU，<span lang="zh-CN">什么时候运行</span>，<span lang="zh-CN">以及如何切换</span>。
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The OS schedules processes, allocates processor time, manages multitasking, changes process states and ensures that processes do not interfere with each other.
 
@@ -275,7 +275,7 @@ No. It means managing **running programs**.
 
 Utility software <span lang="zh-CN">是</span> system software <span lang="zh-CN">的一种</span>，<span lang="zh-CN">用来维护</span>、<span lang="zh-CN">保护</span>、<span lang="zh-CN">优化或管理</span> computer system。
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > Utility software is system software used to maintain, protect, analyse or improve the operation of a computer system.
 
@@ -296,7 +296,7 @@ Utility software <span lang="zh-CN">是</span> system software <span lang="zh-CN
 
 Back-up software creates copies of files/data so they can be restored if the original is lost or damaged.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > It creates a copy of data/files.  
 > The copy can be used to restore data after accidental deletion, corruption, hardware failure or malware attack.
@@ -330,7 +330,7 @@ File compression software reduces file size.
 | Less bandwidth | Useful when emailing/transmitting files |
 | Easier to send as attachment | May fit within file size limit |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > Compression reduces the file size, so the file needs less storage space and can be transmitted/downloaded faster using less bandwidth.
 
@@ -346,7 +346,7 @@ Do not say “compression makes the file better quality”. It usually reduces s
 
 A virus checker scans files/programs for malware.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > It scans files for known malware signatures.  
 > It can quarantine/delete infected files.  
@@ -367,7 +367,7 @@ No. It reduces risk but cannot guarantee perfect protection.
 
 Defragmentation reorganises file fragments on a magnetic hard disk so parts of a file are stored contiguously.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > It rearranges file fragments so each file is stored in contiguous blocks.  
 > This reduces disk head movement and can improve access speed on an HDD.
@@ -384,7 +384,7 @@ Defragmentation is mainly relevant to **magnetic hard disks**, not SSDs.
 
 Disk formatter prepares a storage device for use.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > It prepares the disk for storing files.  
 > It creates a file system / directory structure.  
@@ -398,7 +398,7 @@ Disk formatter prepares a storage device for use.
 
 Disk analysis checks storage usage and errors. Disk repair attempts to fix file system errors or mark bad sectors.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > It analyses how storage space is used.  
 > It checks the disk for errors.  
@@ -412,7 +412,7 @@ Disk analysis checks storage usage and errors. Disk repair attempts to fix file 
 
 A program library is a collection of pre-written routines/modules that programmers can use in their own software.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A program library contains existing code/routines that can be reused by programmers when developing software.
 
@@ -439,7 +439,7 @@ A program library is a collection of pre-written routines/modules that programme
 
 A DLL is a library file that is linked/loaded when the program runs, not permanently copied into every executable.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > A DLL can be shared by several programs.  
 > It is loaded at run time when required.  
@@ -462,7 +462,7 @@ A DLL is a library file that is linked/loaded when the program runs, not permane
 
 Computers execute machine code. Programmers usually write high-level language or assembly language. Translators convert code into a form the processor can execute.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A translator converts a program written in assembly language or a high-level language into machine code/object code so it can be executed by the processor.
 
@@ -474,7 +474,7 @@ Computers execute machine code. Programmers usually write high-level language or
 
 Assembler translates assembly language into machine code.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > An assembler translates assembly language instructions into machine code.
 
@@ -490,7 +490,7 @@ Do not say an assembler translates Java or other high-level source code. It tran
 
 Compiler translates the whole high-level language program into object code / executable code before it is run.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > Translates the whole program before execution.  
 > Produces object code / executable code.  
@@ -522,7 +522,7 @@ Compiler translates the whole high-level language program into object code / exe
 
 Interpreter translates and executes high-level language instructions one statement at a time.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > Translates and executes one line/statement at a time.  
 > Stops when it finds an error.  
@@ -558,7 +558,7 @@ Interpreter translates and executes high-level language instructions one stateme
 | Source code needed to run | Not usually | Usually yes |
 | Good for | Final distributed program | Development/testing/debugging |
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > A compiler is suitable for a finished program because it produces executable code that runs faster and can be distributed without source code. An interpreter is suitable during development because it executes code statement by statement and stops at the line where an error occurs, making debugging easier.
 
@@ -578,7 +578,7 @@ C --> D[Virtual Machine]
 D --> E[Interpreted / executed on target computer]
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A Java program may be compiled into bytecode. The bytecode is then interpreted/executed by a virtual machine on the target computer.
 
@@ -604,7 +604,7 @@ For AS 9618, remember: **partially compiled and partially interpreted**.
 
 An IDE is software that provides tools to help programmers write, test, debug and maintain programs.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > An IDE provides tools for coding, error detection, presentation and debugging when developing programs.
 
@@ -616,7 +616,7 @@ An IDE is software that provides tools to help programmers write, test, debug an
 
 Context-sensitive prompts suggest possible commands, variables, functions or parameters depending on where the programmer is typing.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > Suggests valid keywords/functions/variables while code is being typed.  
 > Reduces typing errors and speeds up coding.
@@ -633,7 +633,7 @@ If a programmer types `print`, the IDE may suggest the correct function syntax o
 
 Dynamic syntax checking checks code while it is being typed or before full execution.
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 > Highlights syntax errors as code is typed.  
 > Identifies missing brackets, incorrect keywords or invalid punctuation.  
@@ -655,10 +655,9 @@ For each presentation feature, give the **feature + description**.
 | --- | --- |
 | Prettyprint | Automatically formats code using indentation, spacing and layout |
 | Expand / collapse code blocks | Hides or shows sections of code such as procedures or loops |
-| Line numbering | Displays line numbers to help locate code/errors |
 | Colour coding / syntax highlighting | Shows keywords, strings, comments in different colours/styles |
 
-#### Mark scheme style
+#### Exam-style wording
 
 > Prettyprint formats code with indentation and spacing so the program is easier to read.  
 > Collapse code blocks hides sections of code so the programmer can focus on one part of the program.
@@ -677,7 +676,7 @@ For each debugging feature, identify it and describe what it does.
 | Error report window | Displays error messages and sometimes line numbers |
 | Trace | Shows sequence of statements executed |
 
-#### Mark scheme style
+#### Exam-style wording
 
 > A breakpoint stops the program at a chosen line so the programmer can inspect variable values at that point.  
 > A watch window displays the value of selected variables or expressions while the program is running.
@@ -693,7 +692,7 @@ For each debugging feature, identify it and describe what it does.
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Operating System
 
@@ -769,7 +768,7 @@ For each debugging feature, identify it and describe what it does.
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Correct version |
+| Mistake | Why it is weak | Correct version |
 | --- | --- | --- |
 | OS is “software that controls computer” only | Too vague | Say interface + manages resources + lets applications run |
 | Confusing file management with backup | Different syllabus areas | File management organises files; backup copies/restores data |
@@ -881,6 +880,20 @@ I --> J[Virtual machine interprets / executes bytecode]
 
 ---
 
+---
+
+## Targeted Syllabus Drill
+
+1. Explain how an operating system carries out memory management, file management, security management, hardware/input-output/peripheral management and process management. **[10]**
+2. For each utility, state its purpose and justify when it would be used: disk formatter, virus checker, defragmentation software, disk contents analysis/repair software, file compression and backup software. **[12]**
+3. Classify and explain these IDE features: context-sensitive prompts; dynamic syntax checks; prettyprint; expand/collapse code blocks; single stepping; breakpoints; inspecting variables/expressions; report window. Use the categories coding, initial error detection, presentation and debugging. **[12]**
+
+### Targeted Syllabus Drill Answers
+
+1. Memory management allocates/deallocates RAM and prevents processes from corrupting one another **[2]**. File management organises named files/directories and controls operations or metadata **[2]**. Security management authenticates users and enforces permissions **[2]**. Hardware management uses drivers, buffering and scheduling to coordinate input/output/peripherals **[2]**. Process management creates, schedules, suspends and terminates processes while sharing processor time **[2]**. **[10]**
+2. Disk formatter prepares a storage medium with the structures needed by a file system **[2]**. Virus checker detects, quarantines or removes known/suspicious malware **[2]**. Defragmentation software rearranges fragments into more contiguous regions on a magnetic disk to reduce head movement **[2]**. Disk analysis/repair checks storage/file-system structures, reports faults and repairs recoverable errors **[2]**. Compression encodes files using fewer bits for storage or transfer and later decompression **[2]**. Backup software makes recoverable copies so data can be restored after loss, damage or corruption **[2]**. **[12]**
+3. Coding: context-sensitive prompts suggest valid language elements for the current position **[2]**. Initial error detection: dynamic syntax checks identify syntax faults while code is entered/before a full run **[2]**. Presentation: prettyprint applies consistent indentation/layout, while expand/collapse hides or reveals code blocks **[2]**. Debugging: single stepping executes one statement at a time; a breakpoint pauses at a chosen point; variable/expression inspection shows current values; a report window presents diagnostic/output information **[4]**. Correctly associating all four categories with their examples earns **[2]**. **[12]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -924,7 +937,7 @@ The worked calculations, process templates and scenario answers above model the 
 5. Example:
    + Prettyprint: automatically formats code with indentation and spacing.
    + Expand/collapse: hides or shows code blocks to make code easier to navigate.
-   + Line numbering: shows line numbers to help find errors.  
+   + Colour coding: displays language elements in different colours/styles so they are easier to distinguish.
 6. Translates assembly language into machine code.
 
 ---
@@ -969,13 +982,15 @@ A programmer writes a high-level language program.
 
 ---
 
-## Practice Mark Scheme
+## Practice Indicative Marking Points
 
-### Question 1 Mark Scheme **[8]**
+<span id="question-1-mark-scheme-8" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points **[8]**
 
 #### (a) OS purpose **[3]**
 
-Award 1 mark each:
+Suggested allocation: 1 mark each:
 
 + provides an interface between user/application software and hardware
 + manages system resources / hardware / memory / files / processes
@@ -985,7 +1000,7 @@ Award 1 mark each:
 
 #### (b) File management **[2]**
 
-Award 1 mark each:
+Suggested allocation: 1 mark each:
 
 + create / open / save / copy / move / rename / delete files
 + organise files into directories/folders
@@ -994,7 +1009,7 @@ Award 1 mark each:
 
 #### (c) Backup software **[3]**
 
-Award 1 mark each:
+Suggested allocation: 1 mark each:
 
 + creates copies of files/data
 + backup copy can be restored
@@ -1002,11 +1017,13 @@ Award 1 mark each:
 
 ---
 
-### Question 2 Mark Scheme **[7]**
+<span id="question-2-mark-scheme-7" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points **[7]**
 
 #### (a) Program libraries **[3]**
 
-Award 1 mark each:
+Suggested allocation: 1 mark each:
 
 + reuse existing code/routines
 + saves development time
@@ -1033,11 +1050,13 @@ Award 1 mark each:
 
 ---
 
-### Question 3 Mark Scheme **[5]**
+<span id="question-3-mark-scheme-5" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points **[5]**
 
 #### (a) Compiler benefit **[2]**
 
-Award 1 mark each:
+Suggested allocation: 1 mark each:
 
 + produces object/executable code
 + executable runs faster because it does not need statement-by-statement translation
@@ -1046,7 +1065,7 @@ Award 1 mark each:
 
 #### (b) Interpreter benefit **[2]**
 
-Award 1 mark each:
+Suggested allocation: 1 mark each:
 
 + translates/executes one statement at a time
 + stops at line with error

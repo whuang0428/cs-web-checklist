@@ -81,7 +81,7 @@ Use this overview to classify hardware, compare storage, trace control and solve
 <span lang="zh-CN">中文理解</span>：
 <span lang="zh-CN">嵌入式系统不是一台</span>“<span lang="zh-CN">通用电脑</span>”，<span lang="zh-CN">而是放在某个设备里面</span>，<span lang="zh-CN">只负责几个固定任务</span>。<span lang="zh-CN">比如</span> smart doorbell、washing machine、car braking system、microwave controller。
 
-#### Mark scheme keywords
+#### Key exam terms
 
 + **built into a larger device**
 + **specific task**
@@ -108,7 +108,7 @@ Do not claim that every embedded system is cheap, small or low-power. Link the b
 
 #### Drawbacks of embedded systems
 
-| Drawback | Mark scheme style explanation |
+| Drawback | Exam-style explanation |
 | --- | --- |
 | difficult to update | firmware cannot be easily changed by the user |
 | difficult to repair | troubleshooting may need a specialist |
@@ -242,7 +242,7 @@ A complete computer system needs devices for **input**, **output** and **storage
 | Monitoring | sensor data is observed / stored / transmitted |
 | Control | sensor data causes an action that changes something |
 
-#### Mark scheme style
+#### Exam-style wording
 
 > This is a control system because the sensor data is processed and used to send a signal to an output device / actuator, such as turning on a light or sounding an alarm.
 
@@ -289,7 +289,7 @@ Buffers are used when:
 + data must be written in blocks
 + streaming needs temporary data before playback
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The buffer temporarily stores data because the sending device and receiving device work at different speeds. Data can be stored in the buffer until the receiving device is ready to process / write / display it.
 
@@ -322,7 +322,7 @@ Wrong. A buffer is **temporary storage**.
 | Can be changed? | read/write | normally read-only / difficult to change |
 | Used for | active processing | start-up and fixed instructions |
 
-#### RAM mark scheme phrases
+#### RAM Exam-style phrasing
 
 + **currently running data and instructions**
 + **programs in use**
@@ -330,7 +330,7 @@ Wrong. A buffer is **temporary storage**.
 + **faster access than secondary storage**
 + **more RAM reduces need for virtual memory**
 
-#### ROM mark scheme phrases
+#### ROM Exam-style phrasing
 
 + **firmware**
 + **bootstrap program**
@@ -424,7 +424,7 @@ A magnetic hard disk:
 5. data is stored using changes in **magnetic field / magnetised areas**
 6. when reading, changes in magnetic field produce a change in electric current
 
-#### Mark scheme keywords
+#### Key exam terms
 
 + **platters**
 + **spindle**
@@ -460,7 +460,7 @@ An optical disc reader/writer:
 4. reflected light is detected by a sensor
 5. differences in reflection are interpreted as binary data
 
-#### Mark scheme keywords
+#### Key exam terms
 
 + **laser**
 + **reflected light**
@@ -502,7 +502,7 @@ An optical disc reader/writer:
 | control gate | allows or stops current from passing |
 | cell | stores a bit / value |
 
-#### Mark scheme style
+#### Exam-style wording
 
 > Flash memory is non-volatile because the floating gate can retain electrons even when power is removed.
 
@@ -650,9 +650,9 @@ or in symbolic form:
 X = A . (B̅ + C)
 ```
 
-#### Mark scheme style
+#### Exam-style wording
 
-Cambridge accepts word-form expressions such as:
+Word-form Boolean expressions can be written as:
 
 + `A AND B`
 + `A OR NOT B`
@@ -718,7 +718,7 @@ Draw:
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Embedded systems
 
@@ -781,7 +781,7 @@ Draw:
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Correct version |
+| Mistake | Why it is weak | Correct version |
 | --- | --- | --- |
 | “Embedded system is a small computer.” | Too vague | built into a larger device and performs a specific task |
 | “RAM stores files permanently.” | RAM is volatile | RAM stores current data/instructions while in use |
@@ -856,6 +856,39 @@ F --> G[Check XOR and NOT carefully]
 
 ---
 
+---
+
+## Targeted Syllabus Drill
+
+1. Explain why a computer system needs input devices, output devices, primary memory, secondary storage and removable storage. **[5]**
+2. State the principal operation of each device: laser printer, 3D printer, microphone, speaker, hard disk drive, solid-state drive, optical disc reader/writer, touchscreen and virtual-reality headset. **[9]**
+3. Compare RAM and ROM and give a use of each. Then select SRAM or DRAM for CPU cache and for main memory, justifying both choices. **[8]**
+4. Distinguish monitoring from control. Design a control loop that uses one of temperature, pressure, infra-red or sound sensing; include input, comparison, feedback and an actuator. State a suitable monitoring-only use for a different sensor from the list. **[8]**
+5. Draw the standard logic symbol for each gate: NOT, AND, OR, NAND, NOR and XOR. **[6]**
+6. For `Q = (A AND NOT B) OR C`, draw the logic circuit and complete its truth table for all eight input combinations. **[10]**
+
+### Targeted Syllabus Drill Answers
+
+1. Input devices capture data/instructions **[1]**; output devices present information or cause a physical effect **[1]**; primary memory holds instructions/data directly in use by the processor **[1]**; secondary storage retains programs/data without power **[1]**; removable storage allows data to be transported, transferred or kept separately for backup **[1]**. **[5]**
+2. Laser printer: electrostatic drum attracts toner, which is transferred and fused to paper **[1]**. 3D printer: deposits/cures material in successive layers from a digital model **[1]**. Microphone: a transducer turns sound vibration into an electrical signal for digitisation **[1]**. Speaker: a varying electrical signal moves a cone/diaphragm to create sound waves **[1]**. HDD: a moving head magnetises/senses areas on rotating platters **[1]**. SSD: a controller stores and senses charge states in flash-memory cells **[1]**. Optical reader/writer: a laser senses reflection changes when reading and changes a recording layer when writing **[1]**. Touchscreen: a sensor grid detects a touch position and sends its coordinates/input **[1]**. VR headset: separate displays create a stereoscopic view and motion sensors update the rendered viewpoint **[1]**. **[9]**
+3. RAM is volatile read/write working memory; ROM is non-volatile memory normally used for fixed start-up/firmware instructions **[4]**. SRAM uses flip-flop cells, is fast and does not require refresh, so it suits cache despite higher cost/lower density **[2]**. DRAM stores charge in capacitors and requires refresh, but is denser/cheaper, so it suits larger main memory **[2]**. **[8]**
+4. Monitoring collects/records readings and may alert a user; control also changes the process automatically **[2]**. Example: a temperature sensor supplies a reading **[1]**; the controller compares it with a target **[1]**; it drives a heater/fan actuator **[1]**; a later sensor reading provides feedback so the output can be adjusted **[1]**. A different valid monitoring example, such as a microphone recording noise level, a pressure sensor logging pipe pressure or an infra-red sensor logging occupancy, earns **[2]**. **[8]**
+5. One mark is available for each correctly drawn standard symbol. NOT has one input and an inversion bubble; NAND is AND plus an output bubble; NOR is OR plus an output bubble; XOR is OR plus the additional curved input line. Compare all six drawings with the gate-symbol table earlier in this chapter. **[6]**
+6. The circuit sends `B` through NOT, combines `A` and `NOT B` with AND, then combines that result with `C` using OR **[2]**. Correct truth table **[8]**:
+
+   | A | B | C | Q |
+   |---:|---:|---:|---:|
+   | 0 | 0 | 0 | 0 |
+   | 0 | 0 | 1 | 1 |
+   | 0 | 1 | 0 | 0 |
+   | 0 | 1 | 1 | 1 |
+   | 1 | 0 | 0 | 1 |
+   | 1 | 0 | 1 | 1 |
+   | 1 | 1 | 0 | 0 |
+   | 1 | 1 | 1 | 1 |
+
+   **[10]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -912,11 +945,13 @@ A smart security doorbell has a camera, motion sensor, speaker and network conne
 (c) State whether the described notification use is monitoring or control, and give the reason. [1]
 (d) Explain one benefit of using an embedded system for this doorbell. [1]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 
 (a) Built into a larger device / doorbell [1], performs specific tasks such as motion detection / video recording / notification [1].
 (b) Infrared / motion / proximity sensor [1].
-(c) Monitoring, because it records/transmits information without using an actuator to change the measured condition [1]. Accept control only if the answer explicitly introduces an actuator that changes the environment.
+(c) Monitoring, because it records/transmits information without using an actuator to change the measured condition [1]. A control answer is valid only if it explicitly introduces an actuator that changes the environment.
 (d) One benefit linked to its dedicated workload, for example low power because it contains only the components needed for sensing/recording/communication, or responsive because firmware is optimised for those tasks [1].
 
 ---
@@ -928,14 +963,16 @@ A computer has 2 GB RAM, ROM, a magnetic hard disk and a USB flash drive.
 (a) Explain how more RAM can improve performance. [2]
 (b) Describe the principal operation of a magnetic hard disk. [3]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-(a) Award up to [2]:
+#### Question 2 Indicative Marking Points
+
+(a) Suggested allocation: up to [2]:
 + more current data/instructions/programs can be stored in main memory [1]
 + less need for virtual memory / secondary storage access [1]
 + secondary storage has slower access time, so there is less delay/latency [1]
 
-(b) Award up to [3]:
+(b) Suggested allocation: up to [3]:
 + platters are magnetised and rotate on a spindle [1]
 + read/write head moves across the surface [1]
 + changes in magnetic field are detected / used to read binary data [1]
@@ -949,7 +986,9 @@ A computer writes sensor readings to an optical disc. It also has an internal ma
 (a) Explain why a buffer may be used when writing to the optical disc. [2]
 (b) Identify the removable secondary-storage device and explain one reason it may be selected instead of the internal hard disk. [2]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 
 (a) Temporary storage [1] because the computer and optical disc writer work at different speeds / data is stored until writer is ready [1].
 (b) USB flash drive [1]; it can be physically removed to transfer data between systems or kept separately as an offline backup [1].
@@ -972,7 +1011,9 @@ An alarm output `X` is 1 when the system is armed (`A = 1`) and either a door is
 
 (f) A truth table outputs 1 only for two-input rows `0,1` and `1,0`. Write the expression and draw the single standard gate that implements it. [1]
 
-#### Question 4 mark scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 4 Indicative Marking Points
 
 (a) `NOT` inverts one input; `AND` is 1 only when both inputs are 1; `OR` is 1 when at least one input is 1; `NAND` and `NOR` invert `AND` and `OR`; `XOR` is 1 when the two inputs differ. All six required [1].
 (b) `X = A AND (D OR M)` [1].

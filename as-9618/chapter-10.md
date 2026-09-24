@@ -654,6 +654,56 @@ class Ch10JavaData {
 
 Transfer task: write the search and sort in Cambridge pseudocode, using the declared array bounds and a `BYREF` array parameter for the sorting procedure. Explain why a swap of only `mark` would corrupt the association with `id`.
 
+---
+
+## Targeted Syllabus Drill
+
+1. Select a suitable type from `INTEGER`, `REAL`, `CHAR`, `STRING`, `BOOLEAN`, `DATE`, `ARRAY` and `FILE` for each item: number of pupils; measured mass; one menu letter; full name; paid/not paid; date of birth; thirty marks; a persistent text stream. Justify any two choices. **[10]**
+2. Define a record type `BookRecord` containing code, title, price and availability. Declare `CurrentBook`, input values into its fields and then output its title and price. **[10]**
+3. Define index, lower bound and upper bound. Declare a one-dimensional array for 30 integer scores and a two-dimensional real array for temperatures over 4 weeks and 7 days. Write pseudocode to total the first score array and to visit every temperature. **[12]**
+
+### Targeted Syllabus Drill Answers
+
+1. `INTEGER`, `REAL`, `CHAR`, `STRING`, `BOOLEAN`, `DATE`, `ARRAY`, `FILE` in the order given **[8]**. Justifications must link representation to need, for example `REAL` permits a fractional mass and `BOOLEAN` stores either of two logical states **[2]**. **[10]**
+2. One valid definition and use is **[10]**:
+
+   ```text
+   TYPE BookRecord
+       DECLARE Code : STRING
+       DECLARE Title : STRING
+       DECLARE Price : REAL
+       DECLARE Available : BOOLEAN
+   ENDTYPE
+
+   DECLARE CurrentBook : BookRecord
+   INPUT CurrentBook.Code
+   INPUT CurrentBook.Title
+   INPUT CurrentBook.Price
+   INPUT CurrentBook.Available
+   OUTPUT CurrentBook.Title
+   OUTPUT CurrentBook.Price
+   ```
+
+3. An index selects an array element; the lower bound is the smallest valid index and the upper bound is the largest valid index **[3]**. One valid answer is **[9]**:
+
+   ```text
+   DECLARE Score : ARRAY[1:30] OF INTEGER
+   DECLARE Temperature : ARRAY[1:4, 1:7] OF REAL
+
+   Total <- 0
+   FOR Index <- 1 TO 30
+       Total <- Total + Score[Index]
+   NEXT Index
+
+   FOR Week <- 1 TO 4
+       FOR Day <- 1 TO 7
+           OUTPUT Temperature[Week, Day]
+       NEXT Day
+   NEXT Week
+   ```
+
+   **[12]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -707,7 +757,9 @@ A clinic stores six appointments in an array of records. Each appointment has a 
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 1. Example:
 

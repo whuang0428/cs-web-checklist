@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 1: Data Representation
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -63,7 +63,7 @@ Use this overview to convert, calculate, represent and justify.
 
 ## 1.1 Number Systems
 ### Why computers use binary
-#### Mark scheme answer
+#### Exam-style answer
 > Computers use binary because computer circuits / transistors can only represent two states, such as on/off, high/low or 1/0. All data must be converted into binary so it can be processed and stored by the computer.
 >
 
@@ -98,6 +98,8 @@ This is too vague. It does not explain **why**.
 + 1 hexadecimal digit = **4 bits**
 + A in hexadecimal = **10**
 + F in hexadecimal = **15**
+
+For syllabus conversion questions, positive binary values may be up to **16 bits** long. Keep every bit given in the question and preserve leading zeros when a fixed width is required.
 
 ---
 
@@ -181,7 +183,7 @@ Answer = 01111011
 ```
 
 #### Common mistake
-| Mistake | Why it loses marks |
+| Mistake | Why it is weak |
 | --- | --- |
 | not grouping into 4 bits | hex conversion depends on nibbles |
 | writing A as 11 | A = 10, B = 11 |
@@ -201,7 +203,7 @@ Answer = 01111011
 | Assembly / machine code | shorter representation of binary instructions |
 
 
-#### Mark scheme answer
+#### Exam-style answer
 > Hexadecimal is used because it is a shorter representation of binary, easier for humans / programmers to read, and easier to convert to binary than denary.
 >
 
@@ -226,8 +228,8 @@ Answer = 01111011
  = 11010101
 ```
 
-#### Mark scheme focus
-Marks are often awarded for:
+#### Assessment focus
+A complete solution should show:
 
 1. correct nibbles / final binary answer  
 2. correct working / carries  
@@ -245,7 +247,7 @@ Marks are often awarded for:
 + If result is greater than 255, overflow occurs.
 + If a 9th bit is produced in an 8-bit register, overflow occurs.
 
-#### Mark scheme answer
+#### Exam-style answer
 > Overflow occurs because the result is greater than 255 / too large to be stored in 8 bits.
 >
 
@@ -283,7 +285,7 @@ Denary:
 16 + 8 + 4 + 2 = 30
 ```
 
-#### Mark scheme answer structure
+#### Exam-style answer structure
 1. Show the binary number after the shift.  
 2. Convert to denary if asked.  
 3. Explain ×2 / ÷2 effect if asked.
@@ -392,7 +394,7 @@ D code stored third
 | File size | smaller | may be larger |
 
 
-#### Mark scheme answer
+#### Exam-style answer
 > Unicode can represent more characters, symbols, emojis and languages than ASCII, but it requires more bits per character.
 >
 
@@ -415,7 +417,7 @@ Wrong. Unicode has a much larger character set.
 
 
 #### How sound is sampled
-Mark scheme style:
+Exam-style wording:
 
 > The amplitude / height of the sound wave is measured at regular time intervals. Each sample is converted into a binary value. The sequence of binary values gives an approximation of the original sound wave.
 >
@@ -453,7 +455,7 @@ Mark scheme style:
 | colour depth | more colours available, larger file size |
 
 
-#### Mark scheme style
+#### Exam-style wording
 > The file size increases because more bits are needed to store the image.
 >
 
@@ -558,7 +560,7 @@ KiB = 220 160 ÷ 1024
 
 ## Compression
 ### Why compression is needed
-#### Mark scheme answer
+#### Exam-style answer
 > Compression reduces file size, so less storage space is needed, less bandwidth is required, and the file can be transmitted / uploaded / downloaded faster.
 >
 
@@ -581,7 +583,7 @@ KiB = 220 160 ÷ 1024
 | Example | RLE | JPEG / MP3 style compression |
 
 
-#### Mark scheme wording
+#### Exam-style wording
 **Lossless:**
 
 > The file size is reduced without permanently removing any data.
@@ -614,7 +616,7 @@ For images, this could mean:
 5 red pixels, 3 blue pixels, 2 black pixels
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 > Repeating pixels / patterns are identified and grouped. The colour / value is stored with the number of times it is repeated.
 >
 
@@ -646,7 +648,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate]
 
 ---
 
-## Mark Scheme Style Answer Templates
+## Exam-Style Answer Templates
 ### Why hexadecimal is used
 > Hexadecimal is a shorter representation of binary. It is easier for humans / programmers to read and understand. It is also easy to convert between hexadecimal and binary because one hexadecimal digit represents four bits.
 >
@@ -724,6 +726,32 @@ E --> G[Examples: reducing colour depth, resolution, sample rate]
 
 ---
 
+## Targeted Syllabus Drill
+
+These questions check syllabus details that the fixed 10-mark and 20-mark sets do not isolate.
+
+1. State the base and permitted digits for denary, binary and hexadecimal. **[3]**
+2. Convert the 16-bit binary integer `1000000000000011` to denary, then convert denary `4097` to 16-bit binary. **[4]**
+3. Convert hexadecimal `B6` to denary and denary `94` to hexadecimal. **[2]**
+4. State two computer-science uses of hexadecimal and explain why hexadecimal is preferable to binary for a human reader. **[3]**
+5. Starting separately with the positive 8-bit value `10110001` for each operation, perform a logical left shift by two places and a logical right shift by one place. For each result, state the lost bits, inserted zeros and arithmetic effect. **[6]**
+6. Convert denary `-42` to 8-bit two's complement, and convert the 8-bit two's-complement value `11100110` to denary. **[4]**
+7. Explain how a character set represents text, then give one difference between ASCII and Unicode. **[3]**
+8. Describe how a sound wave is converted into binary samples, including sample rate and sample resolution. **[4]**
+
+### Targeted Syllabus Drill Answers
+
+1. Denary: base 10, digits 0–9; binary: base 2, digits 0 and 1; hexadecimal: base 16, digits 0–9 and A–F. **[3]**
+2. `1000000000000011 = 32771` **[2]**; `4097 = 0001000000000001` **[2]**. **[4]**
+3. `B6 = 11 × 16 + 6 = 182` **[1]**; `94 = 5E` **[1]**. **[2]**
+4. Any two suitable uses, such as memory addresses, colour codes, MAC addresses or error/debug values **[2]**; hexadecimal is shorter and easier for a human to read while each digit maps to four bits **[1]**. **[3]**
+5. Left shift: `11000100`; the two leftmost bits `10` are lost and two zeros enter on the right. A two-place left shift corresponds to multiplication by four, but the fixed-width stored result is 196 because overflow bits are discarded **[3]**. Right shift: `01011000`; the rightmost bit `1` is lost, one zero enters on the left, and the value is integer-divided by two to 88 **[3]**. **[6]**
+6. `-42 = 11010110` **[2]**; `11100110 = -26` **[2]**. **[4]**
+7. Each character is assigned a unique binary code and the codes are stored in sequence **[2]**; Unicode supports a larger range of characters/languages/symbols than ASCII and generally uses more bits per character **[1]**. **[3]**
+8. Measure the wave amplitude at regular intervals **[1]**; convert each measurement to a binary value **[1]**; sample rate is the number of samples per second **[1]**; sample resolution is the number of bits used for each sample **[1]**. **[4]**
+
+---
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -752,7 +780,7 @@ The worked calculations, process templates and scenario answers above model the 
 9. Give one reason why compression is used. [1]
 
 ## Quick Check Answers
-1. Logic gates process binary values and registers store binary data/instructions/intermediate results. Award for both linked ideas.
+1. Logic gates process binary values and registers store binary data/instructions/intermediate results. Both linked ideas are needed.
 2. 255  
 3. AE  
 4. 00111111  
@@ -783,7 +811,9 @@ The worked calculations, process templates and scenario answers above model the 
 (f) Explain one benefit of using hexadecimal rather than binary. [1]
 (g) Write denary `-18` as an 8-bit two's-complement integer. [1]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 (a) `10110110` [1]  
 (b) `B6` [1]  
 (c) `10011100` [1]  
@@ -803,7 +833,9 @@ An image has a resolution of 1024 × 768 pixels and a colour depth of 16 bits.
 (b) Explain the effect of increasing the colour depth. [2]  
 (c) Name one lossless compression method. [1]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 (a)
 
 ```latex
@@ -824,7 +856,9 @@ An image has a resolution of 1024 × 768 pixels and a colour depth of 16 bits.
 (b) Explain why increasing the sample rate improves the accuracy of the recording. [2]  
 (c) Give one difference between ASCII and Unicode. [1]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 (a)
 
 ```latex
@@ -832,7 +866,7 @@ An image has a resolution of 1024 × 768 pixels and a colour depth of 16 bits.
 28 224 000 ÷ 8 = 3 528 000 bytes
 ```
 
-Award up to [3] for correct formula, substitution and final bytes.
+Suggested allocation: up to [3] for correct formula, substitution and final bytes.
 
 (b) More samples are taken each second [1], so the digital version is a closer approximation of the original sound wave [1].  
 (c) Unicode represents more characters/languages/symbols/emojis than ASCII / Unicode uses more bits per character [1].

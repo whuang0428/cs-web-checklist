@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 3: Hardware
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -86,7 +86,7 @@ A type of integrated circuit on a single chip.
 
 
 #### CPU Registers
-| Register | Full name | Mark scheme style function |
+| Register | Full name | Exam-style function |
 | --- | --- | --- |
 | **PC** | Program Counter | stores the address of the next instruction to be fetched |
 | **MAR** | Memory Address Register | stores the address of the memory location currently being read from or written to |
@@ -218,7 +218,7 @@ Use paired points:
 An **embedded system** is a computer system built into a larger device to perform a **dedicated / limited / single function**.
 
 #### Characteristics of Embedded Systems
-| Scoring point | Mark scheme phrase |
+| Scoring point | Exam-style phrasing |
 | --- | --- |
 | Function | has a single / limited / dedicated function |
 | Hardware | has dedicated hardware |
@@ -706,7 +706,7 @@ D --> E[Destination network]
 
 ---
 
-## Mark Scheme Style Answer Templates
+## Exam-Style Answer Templates
 ### Template 1｜Describe the FDE cycle
 + The PC stores the address of the next instruction.
 + The address is copied to the MAR.
@@ -754,7 +754,7 @@ D --> E[Destination network]
 ---
 
 ## Topic-Specific Common Confusions
-| Question type | Weak answer | Why it loses marks | Better answer |
+| Question type | Weak answer | Why it is weak | Better answer |
 | --- | --- | --- | --- |
 | CPU role | “CPU runs the computer” | too vague | CPU processes instructions and data and performs the FDE cycle |
 | MAR vs MDR | “MAR stores data” | wrong register | MAR stores address; MDR stores data/instruction |
@@ -778,6 +778,32 @@ D --> E[Destination network]
 | MAC vs IP | “both identify device” | not precise | MAC identifies NIC/device; IP identifies network location |
 | Router | “connects devices” | closer to switch | router forwards packets between networks using IP addresses |
 
+
+---
+
+## Targeted Syllabus Drill
+
+1. State the role of the CPU and define a microprocessor. **[2]**
+2. Explain how a higher clock speed can improve CPU performance and state one reason why it does not guarantee that every program completes proportionally faster. **[2]**
+3. Define an instruction set and explain how the control unit uses it during decoding. **[2]**
+4. For each context, select a suitable output device and justify it: a cinema image for a large audience; a physical prototype from a digital model; opening a greenhouse vent automatically. **[6]**
+5. Name the data captured by an acoustic sensor, a pH sensor and an accelerometer, then select one suitable use for each. **[6]**
+6. Explain why RAM and ROM are primary storage and why a computer needs both. **[4]**
+7. Describe how an HDD, an optical disc and solid-state flash memory store or read data. **[6]**
+8. Explain the purpose and structure of a MAC address, including when it is assigned. **[3]**
+9. Explain the purpose of an IP address, distinguish static from dynamic allocation, and give one structural difference between IPv4 and IPv6. **[4]**
+
+### Targeted Syllabus Drill Answers
+
+1. The CPU processes instructions and data so results can be produced **[1]**; a microprocessor is a CPU implemented on a single integrated-circuit chip **[1]**. **[2]**
+2. A higher clock speed allows more clock/FDE cycles per second **[1]**; performance also depends on factors such as the task, number of cores, cache, memory and architecture **[1]**. **[2]**
+3. An instruction set is the list of machine-code commands the CPU can process **[1]**; the control unit matches/decodes the current instruction using that set **[1]**. **[2]**
+4. DLP or LCD projector because it projects a large image **[2]**; 3D printer because it builds the physical model layer by layer **[2]**; actuator because it converts the control signal into physical movement of the vent **[2]**. **[6]**
+5. Acoustic: sound level, for example monitoring noise **[2]**; pH: acidity/alkalinity, for example monitoring soil or water **[2]**; accelerometer: acceleration/orientation/change in motion, for example detecting device movement **[2]**. **[6]**
+6. Both are directly accessed by the CPU **[1]**; RAM provides volatile working storage for current programs/data **[1]**; ROM provides non-volatile start-up instructions/firmware **[1]**; both working data and retained start-up instructions are required **[1]**. **[4]**
+7. HDD: magnetic fields on platter tracks/sectors, read/written by a head **[2]**; optical: laser distinguishes pits and lands **[2]**; flash: charge is stored using transistor cells with control/floating gates using NAND or NOR technology **[2]**. **[6]**
+8. A MAC address identifies the network interface **[1]**; it is assigned at manufacture and normally written in hexadecimal **[1]**; it contains a manufacturer code and serial/unique device code **[1]**. **[3]**
+9. An IP address identifies a network location and is used for routing **[1]**; static remains fixed while dynamic can change/is assigned automatically **[1]**; IPv4 is 32-bit/four denary groups whereas IPv6 is 128-bit/eight hexadecimal groups **[2]**. **[4]**
 
 ---
 
@@ -826,7 +852,9 @@ The worked calculations, process templates and scenario answers above model the 
 ### Question 1｜CPU and FDE `[5]`
 A CPU uses a Von Neumann architecture. Describe how the CPU fetches and decodes an instruction.
 
-#### Question 1 Mark Scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 Any five from:
 
 + PC stores the address of the next instruction.
@@ -844,7 +872,9 @@ Any five from:
 ### Question 2｜CPU Performance `[4]`
 Explain how increasing the number of cores and increasing the cache size can improve CPU performance.
 
-#### Question 2 Mark Scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 + Increasing the number of cores can improve performance. `[1]`
 + More instructions can be processed simultaneously. `[1]`
 + Increasing cache size can improve performance. `[1]`
@@ -855,7 +885,9 @@ Explain how increasing the number of cores and increasing the cache size can imp
 ### Question 3｜Control System `[4]`
 A greenhouse uses a temperature sensor and a microprocessor to keep the temperature between 20°C and 28°C. Describe how this system works.
 
-#### Question 3 Mark Scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 Any four from:
 
 + Temperature sensor measures the temperature.
@@ -872,7 +904,9 @@ Any four from:
 ### Question 4｜Virtual Memory `[3]`
 Describe how virtual memory is created and used.
 
-#### Question 4 Mark Scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 4 Indicative Marking Points
 Any three from:
 
 + Secondary storage is partitioned to create virtual memory.
@@ -886,7 +920,9 @@ Any three from:
 (a) Describe two features of a MAC address. `[2]`
 (b) Explain how a router uses an IP address and a routing table to forward a packet. `[2]`
 
-#### Question 5 Mark Scheme
+<span id="question-5-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 5 Indicative Marking Points
 **(a)** Any two from:
 
 + It is represented in hexadecimal.

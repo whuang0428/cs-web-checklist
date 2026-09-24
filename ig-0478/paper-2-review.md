@@ -13,7 +13,7 @@
 - Spend about **30 minutes** on Question 7.
 - Use clear pseudocode unless a question asks for another representation.
 - For Question 7, use pseudocode, Python, Visual Basic or Java. Use one language consistently.
-- Attempt the complete paper before opening the mark scheme.
+- Attempt the complete paper before opening the indicative marking points.
 
 ### Coverage Map
 
@@ -189,9 +189,13 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ---
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [10]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [10]
 
 1. Input: locker code or parcel mass **[1]**; output: calculated charge or collection receipt information **[1]**. **[2]**
 2. Any two appropriate decomposed parts, for example input parcel details, validate data, calculate charge, allocate/store locker data, display receipt. **[2]**
@@ -201,11 +205,13 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
    - lower extreme: `0.10` kg
    - lower-boundary abnormal: a representable value below 0.10, such as `0.09` kg
    - upper-boundary abnormal: a representable value above 20.00, such as `20.01` kg  
-   Award one mark for each suitable, correctly labelled value. **[4]**
+   Suggested allocation: one mark for each suitable, correctly labelled value. **[4]**
 
 ---
 
-### Question 2 Mark Scheme [10]
+<span id="question-2-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [10]
 
 1.
 
@@ -224,7 +230,9 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ---
 
-### Question 3 Mark Scheme [12]
+<span id="question-3-mark-scheme-12" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [12]
 
 1. Example:
 
@@ -239,7 +247,7 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
    NEXT Exhibition
    ```
 
-   Award for correct outer loop **[1]**, inner loop and indexed input **[1]**, lower limit **[1]**, upper limit and correct repetition **[1]**. **[4]**
+   Suggested allocation: correct outer loop **[1]**, inner loop and indexed input **[1]**, lower limit **[1]**, upper limit and correct repetition **[1]**. **[4]**
 
 2. Example:
 
@@ -277,7 +285,9 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ---
 
-### Question 4 Mark Scheme [10]
+<span id="question-4-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 4 Indicative Marking Points [10]
 
 1. `VisitID` **[1]** because it uniquely identifies each visit/record **[1]**. **[2]**
 2. `Age`: integer **[1]**; `Member`: Boolean **[1]**. **[2]**
@@ -306,7 +316,7 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ---
 
-### Question 5 Mark Scheme [10]
+### Question 5 Indicative Marking Points [10]
 
 1. Connect `A` and `B` to an `XOR` gate **[1]**; connect `C` to a `NOT` gate **[1]**; connect both intermediate outputs to an `AND` gate **[1]**. **[3]**
 2.
@@ -322,12 +332,14 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
    | 1 | 1 | 0 | 0 | 1 | 0 |
    | 1 | 1 | 1 | 0 | 0 | 0 |
 
-   Award one mark for each pair of correct final `Q` values. **[4]**
+   Suggested allocation: one mark for each pair of correct final `Q` values. **[4]**
 3. `A XOR B` is 1 only when exactly one button is pressed **[1]**; `NOT C` is 1 only when safety switch C is off **[1]**; the final `AND` requires both conditions **[1]**. **[3]**
 
 ---
 
-### Question 6 Mark Scheme [8]
+<span id="question-6-mark-scheme-8" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 6 Indicative Marking Points [8]
 
 1. A file stores the readings persistently, so they remain available after the program ends / can be processed in a later run. **[1]**
 
@@ -361,7 +373,9 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ---
 
-### Question 7 Mark Scheme [15]
+<span id="question-7-mark-scheme-15" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 7 Indicative Marking Points [15]
 
 Example pseudocode:
 
@@ -466,7 +480,7 @@ if __name__ == "__main__":
     print("Borrowing tests passed")
 ```
 
-Call `borrow_books(book_codes, available)` with your preloaded arrays to use interactive input. Equivalent correct solutions in an allowed language receive credit; assess the logic, completeness and clarity of the whole response.
+Call `borrow_books(book_codes, available)` with your preloaded arrays to use interactive input. Equivalent correct solutions in an allowed language are also valid; assess the logic, completeness and clarity of the whole response.
 
 ---
 

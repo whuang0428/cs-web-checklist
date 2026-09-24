@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 5: The Internet and Its Uses
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -159,7 +159,7 @@ A **web browser** is software used to **retrieve, render and display web pages**
 >
 
 #### Functions of a Web Browser
-| Function | Mark scheme wording |
+| Function | Exam-style wording |
 | --- | --- |
 | Display web pages | renders HTML and displays web pages |
 | Send requests | sends a request to the web server / IP address |
@@ -357,14 +357,14 @@ Use this overview to identify an attack, recognise evidence, choose protection a
 
 ---
 
-### 5.3.3 DDoS / Botnet Diagram Template
-> **Describe / draw how a DDoS attack is carried out.**
+### 5.3.3 DDoS / Botnet Example
+> **Describe one common botnet-based way of carrying out a DDoS attack.**
 >
 
 ```mermaid
 flowchart LR
-A[Attacker / third party] --> B[Sends malware]
-B --> C[Computers infected]
+A[Attacker / third party] --> B[Compromises or controls many devices]
+B --> C[Devices become bots]
 C --> D[Each computer becomes a bot]
 D --> E[Botnet created]
 E --> F[All bots send requests at once]
@@ -373,9 +373,8 @@ G --> H[Server slows down / crashes / website unavailable]
 ```
 
 #### Core Exam Sentences
-+ A third party sends malware to many computers.
-+ The malware turns the computers into **bots**.
-+ The bots form a **botnet**.
++ A common method is for a third party to compromise or control many devices as **bots**.
++ The bots form a **botnet**; other distributed sources can also be used.
 + The attacker instructs the botnet to send requests to a web server at the same time.
 + The web server cannot respond to all requests and crashes / times out.
 
@@ -476,7 +475,7 @@ A strong password should:
 
 ### 5.3.8 Anti-malware
 #### Anti-virus
-| Function | Mark scheme wording |
+| Function | Exam-style wording |
 | --- | --- |
 | Scans files/system | scans the computer system for viruses |
 | Known virus database | compares files with known virus signatures |
@@ -486,7 +485,7 @@ A strong password should:
 
 
 #### Anti-spyware
-| Function | Mark scheme wording |
+| Function | Exam-style wording |
 | --- | --- |
 | Detects spyware | scans the system for spyware |
 | Removes/quarantines | removes or quarantines spyware found |
@@ -552,7 +551,7 @@ A **proxy server** sits between the user/client and the web server.
 ---
 
 ## Topic-Specific Common Confusions
-| Topic | Weak answer | Why it loses marks | Better answer |
+| Topic | Weak answer | Why it is weak | Better answer |
 | --- | --- | --- | --- |
 | Internet vs WWW | “They are the same.” | <span lang="zh-CN">完全错误</span> | The internet is the infrastructure; the WWW is a collection of web pages accessed using the internet. |
 | Browser | “It searches websites.” | <span lang="zh-CN">混淆</span> browser <span lang="zh-CN">和</span> search engine | A web browser renders HTML and displays web pages. |
@@ -562,7 +561,7 @@ A **proxy server** sits between the user/client and the web server.
 | Cookies | “Cookies are viruses.” | <span lang="zh-CN">错误</span> | Cookies are small text files stored/managed by the browser to store login details, preferences or shopping cart items. |
 | Session cookie | “Temporary cookie.” | <span lang="zh-CN">可以得</span> 1 <span lang="zh-CN">分但不完整</span> | Session cookies are deleted when the browser is closed and are stored temporarily / in RAM. |
 | Persistent cookie | “Permanent cookie.” | <span lang="zh-CN">不完整</span> | Persistent cookies remain after the browser is closed and are deleted by the user or when they expire. |
-| DDoS | “Many requests attack server.” | <span lang="zh-CN">少了</span> botnet <span lang="zh-CN">过程</span> | Malware turns computers into bots; a botnet sends many requests at once, so the server cannot respond and crashes. |
+| DDoS | “Many requests attack server.” | <span lang="zh-CN">过程太泛，没有说明分布式来源与同时请求</span> | Many distributed devices or sources send requests at the same time, so the server cannot respond and may crash; one common method uses malware-controlled bots. |
 | Firewall | “Protects computer.” | <span lang="zh-CN">太泛</span> | It monitors incoming/outgoing traffic and blocks traffic that does not meet rules/criteria. |
 | Proxy server | “Same as firewall.” | <span lang="zh-CN">混淆概念</span> | A proxy sits between user and web server, examines requests, can cache responses, hide IP, and block/limit requests. |
 | Brute-force | “Hacker guesses password.” | <span lang="zh-CN">不够系统</span> | The attacker systematically tries many combinations until the password is found. |
@@ -589,7 +588,7 @@ A **proxy server** sits between the user/client and the web server.
 
 ---
 
-## Mark Scheme Style Templates
+## Exam-Style Templates
 ### Template A｜Webpage retrieval
 > When a user enters a URL, the browser sends the domain name to a DNS. The DNS searches for the matching IP address and returns it to the browser. The browser sends a request to the web server at that IP address. The web server sends the web page files back. The browser renders the HTML and displays the web page.
 >
@@ -599,7 +598,7 @@ A **proxy server** sits between the user/client and the web server.
 >
 
 ### Template C｜DDoS attack
-> The attacker sends malware to many computers. These computers become bots and form a botnet. The attacker instructs the botnet to send many requests to a web server at the same time. The server cannot respond to all the requests and may slow down, time out or crash.
+> One common method is for an attacker to control many devices as a botnet. The attacker instructs the devices to send many requests to a web server at the same time. The server cannot respond to all the requests and may slow down, time out or crash.
 >
 
 ### Template D｜Firewall
@@ -617,6 +616,22 @@ A **proxy server** sits between the user/client and the web server.
 ### Template G｜Two-step verification
 > The user enters a username and password. A code is sent to the user’s registered device or account. The user must enter this code into the system. This makes unauthorised access harder because the hacker also needs the registered device/account.
 >
+
+---
+
+## Targeted Syllabus Drill
+
+1. State the purpose of HTTP and HTTPS, then explain the extra protection provided by HTTPS. **[4]**
+2. Define a digital currency and describe one way it can be used. **[2]**
+3. Identify the threat in each case and state its aim: repeated password guesses; capturing data in transit; redirection to a fake site; encrypting files and demanding payment; manipulating a user into revealing a reset code. **[10]**
+4. Select and explain one suitable control for each risk: a child account seeing administrator files; newly discovered malware; a suspicious email link; users' public IP addresses being exposed to destination servers. **[8]**
+
+### Targeted Syllabus Drill Answers
+
+1. HTTP transfers web requests/resources between browser and server **[1]**; HTTPS performs that transfer over a secured connection **[1]**; SSL/TLS encrypts data in transit **[1]** and certificate-based authentication helps the browser verify the server **[1]**. **[4]**
+2. A digital currency exists and is transferred/stored electronically **[1]**; one valid use, such as paying for goods/services or transferring value between accounts **[1]**. **[2]**
+3. Brute force—obtain a password/unauthorised access; data interception—steal transmitted data; pharming—redirect a user to a false site to steal details; ransomware—deny access and demand payment; social engineering—deceive a person into revealing confidential data. One mark for each threat and one for its linked aim. **[10]**
+4. Access levels restrict the child account to permitted files **[2]**; automatic security/anti-malware updates add detection or patches for new threats **[2]**; checking the spelling/tone and actual URL helps detect a deceptive message/link before opening it **[2]**; a proxy server sends the request on the user's behalf and can hide the user's public IP address from the destination **[2]**. **[8]**
 
 ---
 
@@ -666,7 +681,9 @@ A user enters a URL into a web browser to visit a website.
 
 Describe how the web page is located, retrieved and displayed on the user’s device.
 
-#### Question 1 Mark Scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 Any five from:
 
 + Browser sends URL/domain name to DNS.
@@ -685,7 +702,9 @@ A shopping website uses both session cookies and persistent cookies.
 
 Explain how these two types of cookies may be used.
 
-#### Question 2 Mark Scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 Any four from:
 
 + Session cookies can store items in a shopping cart during one visit.
@@ -702,7 +721,9 @@ A school wants to protect student records from unauthorised access.
 
 Suggest three security solutions and explain how each one helps protect the records.
 
-#### Question 3 Mark Scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 One mark for solution + one mark for matching explanation, up to 6:
 
 + Strong password: uses letters/numbers/symbols, making it difficult to guess.
@@ -719,12 +740,13 @@ One mark for solution + one mark for matching explanation, up to 6:
 ### Question 4｜DDoS attack `[5]`
 Describe how a DDoS attack can cause a web server to fail.
 
-#### Question 4 Mark Scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 4 Indicative Marking Points
 Any five from:
 
-+ Attacker sends malware to many computers.
-+ Infected computers become bots.
-+ Bots form a botnet.
++ One common route is that the attacker compromises or controls many devices as bots.
++ The controlled devices form a botnet; other distributed traffic sources are also possible.
 + Attacker instructs botnet to send requests to the web server.
 + Requests are sent at the same time.
 + Web server cannot respond to all requests.

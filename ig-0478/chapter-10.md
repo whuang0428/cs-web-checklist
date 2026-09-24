@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 10: Boolean Logic
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -400,9 +400,11 @@ The worked calculations, process templates and scenario answers above model the 
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-1. Connect `A` and `B` to an `OR` gate; connect `C` to a `NOT` gate; connect both results to an `AND` gate **[2]**. In row order `000` to `111`, the output column is `0, 0, 1, 0, 1, 0, 1, 0`; award one mark for each correct half-column **[2]**. **[4]**
+### 20 Marks Practice Indicative Marking Points
+
+1. Connect `A` and `B` to an `OR` gate; connect `C` to a `NOT` gate; connect both results to an `AND` gate **[2]**. In row order `000` to `111`, the output column is `0, 0, 1, 0, 1, 0, 1, 0`; suggested allocation: one mark for each correct half-column **[2]**. **[4]**
 
 2. `Q = (A NAND B) OR C` **[1]**.
 
@@ -419,9 +421,9 @@ The worked calculations, process templates and scenario answers above model the 
 
    Correct `X` column **[1]**; correct first and second halves of `Q` **[2]**. **[4]**
 
-3. `Alarm = D AND (A OR T)` **[1]**. Connect `A` and `T` to an `OR` gate, then connect its result and `D` to an `AND` gate **[2]**. In row order `DAT = 000` to `111`, the output column is `0, 0, 0, 0, 0, 1, 1, 1`; award one mark for rows with `D = 0` and two marks for the four rows with `D = 1` **[3]**. **[6]**
+3. `Alarm = D AND (A OR T)` **[1]**. Connect `A` and `T` to an `OR` gate, then connect its result and `D` to an `AND` gate **[2]**. In row order `DAT = 000` to `111`, the output column is `0, 0, 0, 0, 0, 1, 1, 1`; suggested allocation: one mark for rows with `D = 0` and two marks for the four rows with `D = 1` **[3]**. **[6]**
 
-4. `Q = ((NOT A) AND B AND C) OR (A AND (NOT B) AND C)` **[3]**. Award one mark for each correct row-condition and one for joining them with `OR`. For the circuit: invert `A` and `B` **[1]**; build both three-part conditions using pairs of two-input `AND` gates **[1]**; join the two results with an `OR` gate **[1]**. **[6]**
+4. `Q = ((NOT A) AND B AND C) OR (A AND (NOT B) AND C)` **[3]**. Suggested allocation: one mark for each correct row-condition and one for joining them with `OR`. For the circuit: invert `A` and `B` **[1]**; build both three-part conditions using pairs of two-input `AND` gates **[1]**; join the two results with an `OR` gate **[1]**. **[6]**
 
 ---
 

@@ -63,7 +63,7 @@ Use this overview to trace the TCP/IP stack, compare switching, route packets an
 
 ## 14.1 Protocols
 ### What is a protocol?
-#### Mark scheme answer
+#### Exam-style answer
 > A protocol is a standard set of rules that enables successful communication / data transfer between devices.
 
 #### Required ideas / marking points
@@ -129,7 +129,7 @@ D --> E[Application Layer]
 #### Main purpose
 Application Layer <span lang="zh-CN">是用户和网络服务最接近的一层</span>。<span lang="zh-CN">它为应用程序提供通信服务</span>，<span lang="zh-CN">比如网页访问</span>、<span lang="zh-CN">文件传输</span>、<span lang="zh-CN">电子邮件</span>、peer-to-peer file sharing。
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 + **provides services / interface with the user**
 + **access to applications**
 + **file transfer / email / network file access**
@@ -152,7 +152,7 @@ Application Layer <span lang="zh-CN">是用户和网络服务最接近的一层<
 #### Main purpose
 Transport Layer <span lang="zh-CN">负责</span> source host <span lang="zh-CN">到</span> destination host <span lang="zh-CN">之间的数据传输管理</span>。<span lang="zh-CN">它不关心网页内容是什么</span>，<span lang="zh-CN">而是关心数据如何可靠地送到正确的</span> application process。
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 + **end-to-end delivery**
 + **logical communication between applications running on different hosts**
 + **breaks data into segments / packets**
@@ -171,7 +171,7 @@ Transport Layer <span lang="zh-CN">负责</span> source host <span lang="zh-CN">
 #### Main purpose
 Internet Layer <span lang="zh-CN">负责</span> IP addressing <span lang="zh-CN">和</span> routing。<span lang="zh-CN">它决定</span> packet <span lang="zh-CN">应该往哪里走</span>。
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 + **adds source and destination IP addresses**
 + **routes packets across networks**
 + **selects route / next hop**
@@ -186,7 +186,7 @@ Internet Layer <span lang="zh-CN">负责</span> IP addressing <span lang="zh-CN"
 #### Main purpose
 Link Layer <span lang="zh-CN">负责数据在本地网络中的传输</span>，<span lang="zh-CN">和实际</span> network hardware / physical medium <span lang="zh-CN">接口</span>。
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 + **interfaces directly with the network**
 + **sends / receives data over the physical medium**
 + **formats data into frames**
@@ -230,7 +230,7 @@ sequenceDiagram
 
 ## Application Layer Protocols
 ### Protocol table
-| Protocol | Full name | Purpose / mark scheme phrase |
+| Protocol | Full name | Purpose / Exam-style phrasing |
 | --- | --- | --- |
 | HTTP / HTTPS | Hypertext Transfer Protocol / Secure | transfers web pages / hypertext documents on the World Wide Web |
 | FTP | File Transfer Protocol | transfers files between a client and a server across a network |
@@ -267,7 +267,7 @@ IMAP is also for receiving email, but it keeps messages on the server and synchr
 ---
 
 ### BitTorrent
-#### Mark scheme answer
+#### Exam-style answer
 > BitTorrent provides peer-to-peer file sharing, allowing users to share files directly with each other over the internet without relying on one central web server.
 
 #### Important ideas
@@ -292,7 +292,7 @@ For exam revision, the main phrase is still: **peer-to-peer file sharing**.
 ### What is circuit switching?
 Circuit switching <span lang="zh-CN">是在通信开始前</span>，<span lang="zh-CN">先建立一条</span> dedicated path / dedicated channel。<span lang="zh-CN">传输期间</span>，<span lang="zh-CN">数据都沿着同一路径传输</span>，<span lang="zh-CN">直到通信结束</span>。
 
-#### Mark scheme answer
+#### Exam-style answer
 > Circuit switching establishes a dedicated communication path between sender and receiver before data transmission begins. The same path is used for the whole communication until the connection is ended.
 
 #### Process
@@ -308,7 +308,7 @@ E --> F[Dedicated path released]
 ---
 
 ### Benefits of circuit switching
-| Benefit | Mark scheme phrase |
+| Benefit | Exam-style phrasing |
 | --- | --- |
 | stable communication | suitable for long continuous transmission |
 | high / steady rate | whole bandwidth is available |
@@ -322,7 +322,7 @@ E --> F[Dedicated path released]
 ---
 
 ### Drawbacks of circuit switching
-| Drawback | Mark scheme phrase |
+| Drawback | Exam-style phrasing |
 | --- | --- |
 | setup delay | dedicated connection must be established before transmission starts |
 | inefficient bandwidth | bandwidth cannot be shared while the circuit is reserved |
@@ -349,7 +349,7 @@ E --> F[Dedicated path released]
 ### What is packet switching?
 Packet switching <span lang="zh-CN">是把</span> message <span lang="zh-CN">拆成很多</span> packets，<span lang="zh-CN">每个</span> packet <span lang="zh-CN">有</span> header。Packets <span lang="zh-CN">可以独立走不同路线</span>，<span lang="zh-CN">到达后再重新组合</span>。
 
-#### Mark scheme answer
+#### Exam-style answer
 > In packet switching, data are broken into packets. Each packet has a header containing information such as the sender and receiver IP addresses. Packets are sent independently and may take different routes. They are reassembled in the correct order at the destination, and missing or damaged packets can be resent.
 
 ---
@@ -378,7 +378,7 @@ G --> H[Missing/damaged packets resent]
 ---
 
 ### Benefits of packet switching
-| Benefit | Mark scheme phrase |
+| Benefit | Exam-style phrasing |
 | --- | --- |
 | efficient bandwidth use | bandwidth can be shared between transmissions |
 | flexible routing | packets can take different routes |
@@ -392,7 +392,7 @@ G --> H[Missing/damaged packets resent]
 ---
 
 ### Drawbacks of packet switching
-| Drawback | Mark scheme phrase |
+| Drawback | Exam-style phrasing |
 | --- | --- |
 | variable delay | packets may take different routes and arrive at different times |
 | reassembly needed | packets can arrive out of order and must be reconstructed |
@@ -409,7 +409,7 @@ G --> H[Missing/damaged packets resent]
 ### What does a router do?
 A router receives packets, examines the destination address in the packet header, chooses a suitable next hop / route, and forwards the packet.
 
-#### Mark scheme answer
+#### Exam-style answer
 > A router reads the destination IP address in the packet header, uses its routing table to choose the next hop / best available route, and forwards the packet towards the destination.
 
 #### Router decision factors
@@ -456,7 +456,7 @@ Better:
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 ### Protocols
 + **standard set of rules**
 + **successful data transfer**
@@ -567,7 +567,7 @@ For each situation, name the most suitable protocol from HTTP, FTP, SMTP, POP3, 
 
 ### Protocol Selection Drill Answers
 
-Award one mark for each protocol and one for its linked role.
+Suggested allocation: one mark for each protocol and one for its linked role.
 
 1. HTTP: client requests and server responses transfer web resources; HTTPS adds TLS protection.
 2. FTP: a client sends/retrieves files using a file-transfer service.
@@ -575,6 +575,21 @@ Award one mark for each protocol and one for its linked role.
 4. POP3: downloads mailbox messages to a client; server copies may be retained or removed according to settings.
 5. IMAP: manages messages/folders on the server and synchronises their state across clients.
 6. BitTorrent: peers download and upload file pieces within a swarm, distributing transfer load.
+
+## TCP/IP Message Transfer Drill
+
+A browser sends an HTTP request to a server on another network. Trace the request down the four TCP/IP layers at the sender and up the four layers at the receiver. State one relevant action at each layer. **[8]**
+
+### TCP/IP Message Transfer Drill Answers
+
+- Sender application layer: HTTP creates the request and passes application data down. **[1]**
+- Sender transport layer: TCP divides data into segments and adds port/control information for end-to-end delivery. **[1]**
+- Sender internet layer: IP adds logical source/destination addresses and selects delivery between networks. **[1]**
+- Sender link layer: the segment/datagram is placed in a frame for transfer over the current local link. **[1]**
+- Receiver link layer: receives the frame, checks/removes link information and passes the contained data up. **[1]**
+- Receiver internet layer: checks the destination IP information and passes the payload to the required transport protocol. **[1]**
+- Receiver transport layer: TCP checks, orders and reassembles segments and uses the port to select the application. **[1]**
+- Receiver application layer: the web server receives and processes the HTTP request. **[1]**
 
 ## Required Ideas and Exam Language
 
@@ -604,7 +619,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 ## Quick Check Answers
 1. A standard set of rules for communication / data transfer. [1]  
-2. Application, Transport, Internet, Link. Award [1] for two/three in correct relative order, [2] for all four.  
+2. Application, Transport, Internet, Link. Suggested allocation: [1] for two/three in correct relative order, [2] for all four.
 3. SMTP sends email messages / transfers email to or between mail servers. [1]  
 4. POP3 downloads/receives email; IMAP allows email to be accessed/synchronised across devices without removing it from server. [1]  
 5. Breaks data into segments / adds sequence numbers / provides end-to-end delivery / reassembles data / retransmits lost packets. [1]  
@@ -623,9 +638,11 @@ The worked calculations, process templates and scenario answers above model the 
 (c) Describe the purpose of the Transport Layer. [2]  
 (d) Name the protocol used to send email. [1]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 (a) Protocols establish a standard set of rules [1] so devices on different platforms / from different manufacturers can communicate successfully [1].  
-(b) Application → Transport → Internet → Link. [2] Award [1] for two or three layers in correct order.  
+(b) Application → Transport → Internet → Link. [2] Suggested allocation: [1] for two or three layers in correct order.
 (c) Provides end-to-end delivery / logical communication between hosts [1]; breaks data into segments / adds sequence numbers / reassembles data / retransmits lost packets [1].  
 (d) SMTP. [1]
 
@@ -638,7 +655,9 @@ A student sends a large file across the internet.
 (b) State two benefits of using packet switching. [2]  
 (c) State one drawback of packet switching. [1]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 (a) File/data is split into packets [1]. Each packet has a header containing information such as source/destination IP address or sequence number [1]. Packets are sent independently and may take different routes [1]. Packets are reassembled in the correct order at the destination / missing or damaged packets are resent [1].  
 (b) Any two: bandwidth can be shared; packets can be rerouted if a link fails; efficient for high-volume internet data; missing/damaged packets can be resent. [2]  
 (c) Packets may arrive out of order / variable delay / headers add overhead / packets may be lost or delayed. [1]
@@ -650,7 +669,9 @@ A student sends a large file across the internet.
 (b) Give one benefit and one drawback of circuit switching. [2]  
 (c) Describe the function of a router in packet switching. [1]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 (a) A dedicated path/channel is established before data transmission begins [1]. The same path is used for the whole communication [1]. The path is released when communication ends [1].  
 (b) Benefit: steady data rate / whole bandwidth available / data follows same path / suitable for continuous real-time communication. [1] Drawback: setup delay / bandwidth cannot be shared / inefficient if not fully used / no alternative route if line fails. [1]  
 (c) Router reads destination IP address and forwards packet to next hop / best available route using routing table. [1]

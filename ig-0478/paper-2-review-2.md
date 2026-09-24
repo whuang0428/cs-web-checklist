@@ -150,22 +150,30 @@ Use pseudocode, Python, Visual Basic or Java. **[15]**
 
 ---
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [8]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-8" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [8]
 
 1. Any two of bicycle code, hire duration, helmet choice **[2]**; calculated charge or confirmation details **[1]**. **[3]**
 2. Any two distinct modules plus linked purpose, for example `GetHireDetails`, `ValidateHire`, `CalculateCharge`, `DisplayConfirmation`. **[2]**
 3. Normal such as `4` **[1]**; lower extreme `1` **[1]**; abnormal boundary `0` or `9` **[1]**. **[3]**
 
-### Question 2 Mark Scheme [10]
+<span id="question-2-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [10]
 
 1. `[27, 35, 18, 41, 50]`; one mark for each correctly positioned value except the unchanged final value. **[4]**
 2. `[27, 18, 35, 41, 50]`; one mark for each of the first three positions. **[3]**
 3. `[18, 27, 35, 41, 50]`. **[2]**
 4. It records whether a swap occurred so the algorithm can stop early when a complete pass makes no swaps. **[1]**
 
-### Question 3 Mark Scheme [12]
+<span id="question-3-mark-scheme-12" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [12]
 
 1. Correct function and row parameter **[1]**; checks columns 1–5 without exceeding bounds **[1]**; tests both seats and returns the first match **[1]**; returns −1 if none **[1]**. **[4]**
 
@@ -200,7 +208,9 @@ ENDIF
 
 3. For example `[1, 0, 1, 1, 0, 0]` **[1]**; return 5 **[1]**. **[2]**
 
-### Question 4 Mark Scheme [10]
+<span id="question-4-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 4 Indicative Marking Points [10]
 
 1. `BookingID` **[1]** because it is unique for every record **[1]**. **[2]**
 2. Participants: INTEGER; Paid: BOOLEAN; Cost: REAL. **[3]**
@@ -224,7 +234,7 @@ WHERE Activity = 'Climbing';
 
 Correct aggregate **[1]** and condition **[1]**. **[2]**
 
-### Question 5 Mark Scheme [10]
+### Question 5 Indicative Marking Points [10]
 
 1. NAND, AND, OR and NOT; all four for two marks, two or three for one. **[2]**
 2.
@@ -239,7 +249,7 @@ Correct aggregate **[1]** and condition **[1]**. **[2]**
    One mark per row. **[4]**
 3. Connect A and B to NAND **[1]**; branch A to NOT **[1]**; connect C and `NOT A` to OR **[1]**; connect NAND output and OR output to final AND **[1]**. **[4]**
 
-### Question 6 Mark Scheme [10]
+### Question 6 Indicative Marking Points [10]
 
 1.
 
@@ -264,9 +274,11 @@ Initialise/open **[1]**; EOF loop/read **[1]**; length test **[1]**; first-chara
 2. `LENGTH` **[1]** and `SUBSTRING` **[1]**. **[2]**
 3. Any two: meaningful identifiers, indentation, comments, named function/procedure, constant for required length, avoiding repeated logic. **[2]**
 
-### Question 7 Mark Scheme [15]
+<span id="question-7-mark-scheme-15" class="legacy-anchor" aria-hidden="true"></span>
 
-Apply the [IGCSE scenario levels](../exam-technique.md#igcse-15-mark-scenario-assessment): AO2 /9 and AO3 /6. Judge the whole solution, using the following evidence of completeness: correct array storage and nested loops; non-empty names and permitted distances; fouls excluded; per-competitor maximum; first winner retained on ties; all-foul handling; total/count and guarded mean. Do not award these as separate automatic points.
+### Question 7 Indicative Marking Points [15]
+
+Apply the [IGCSE scenario levels](../exam-technique.md#igcse-15-mark-scenario-assessment): AO2 /9 and AO3 /6. Judge the whole solution, using the following evidence of completeness: correct array storage and nested loops; non-empty names and permitted distances; fouls excluded; per-competitor maximum; first winner retained on ties; all-foul handling; total/count and guarded mean. Treat these as evidence for the level judgement, not as separate automatic points.
 
 ```text
 DECLARE Names : ARRAY[1:6] OF STRING

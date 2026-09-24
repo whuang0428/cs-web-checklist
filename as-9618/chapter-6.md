@@ -124,7 +124,7 @@ Use this overview to distinguish key terms, match controls, verify input and pro
 | **Privacy** | controlling who can see personal/sensitive data | <span lang="zh-CN">个人信息不要被不该看的人看到</span> |
 | **Integrity** | data remains accurate, complete and unchanged unless authorised | <span lang="zh-CN">数据是准确</span>、<span lang="zh-CN">完整</span>、<span lang="zh-CN">没有被乱改的</span> |
 
-#### Mark scheme style phrases
+#### Exam-style phrasing
 
 > **Security** protects data and computer systems from unauthorised access / damage / misuse.
 
@@ -185,7 +185,7 @@ It can store:
 - actions can be logged / audited
 - accounts can be disabled if suspicious activity happens
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > User accounts identify individual users and allow the system to apply access rights, so users can only access the files or functions they are authorised to use.
 
@@ -261,7 +261,7 @@ Examples:
 - expensive hardware may be needed
 - if biometric data is stolen, it cannot be changed like a password
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > Biometric authentication compares a captured biological feature with a stored template to verify the identity of the user.
 
@@ -282,7 +282,7 @@ Digital signature <span lang="zh-CN">不等于手写签名图片</span>。<span 
 1. message really came from the claimed sender  
 2. message has not been changed after signing  
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > A digital signature verifies the identity of the sender and can show whether the data has been altered after signing.
 
@@ -308,7 +308,7 @@ A firewall controls traffic between a private network and external networks.
 - it cannot decrypt every encrypted threat
 - it cannot replace good authentication
 
-#### Mark scheme answer for bank/customer data scenario
+#### Exam-style answer for bank/customer data scenario
 
 > A firewall monitors traffic entering and leaving the network. It applies rules to allow or block packets based on source, destination, port or protocol. This helps prevent unauthorised access to the bank network and protects customer data from external attackers.
 
@@ -352,7 +352,7 @@ Encryption converts readable data into unreadable data.
 | Encryption key | value used to encrypt data |
 | Decryption key | value used to decrypt data |
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > Encryption encodes / scrambles data so that if it is intercepted it cannot be understood without the correct key.
 
@@ -386,7 +386,7 @@ Examples:
 - reduces damage if one account is compromised
 - supports privacy and confidentiality
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > Access rights restrict users to only the files, data or functions they are authorised to access.
 
@@ -489,7 +489,7 @@ Phishing uses fake messages to trick users into giving personal information.
 - spelling/grammar mistakes
 - unexpected attachment
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > Phishing is when a user is tricked by a fake email/message into giving confidential information such as usernames, passwords or bank details.
 
@@ -506,7 +506,7 @@ Pharming redirects users to a fake website, often even when the correct URL is t
 | Phishing | fake message/link tricks user |
 | Pharming | user is redirected to fake website |
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > Pharming redirects a user to a fake website so that personal data entered by the user can be captured.
 
@@ -523,7 +523,7 @@ Data integrity means data is:
 - consistent
 - unchanged unless authorised
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > Data integrity means data remains accurate, complete and consistent, and has not been changed accidentally or maliciously.
 
@@ -558,7 +558,7 @@ Example:
 Age must be between 16 and 100.
 ```
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > Checks that a value lies between an upper and lower limit.
 
@@ -652,7 +652,7 @@ Used for:
 - extra digit
 - transposition error in some systems
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > A check digit is calculated from the other digits and appended to the number. When the number is entered, the check digit is recalculated and compared with the entered check digit.
 
@@ -694,7 +694,7 @@ Enter email address twice.
 Enter password twice.
 ```
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > Data is entered twice and the two versions are compared. If they do not match, an error is flagged.
 
@@ -769,7 +769,7 @@ Block parity checks both rows and columns.
 5. Receiver recalculates parity and compares.
 6. For a single-bit error, the row and column can locate the incorrect bit.
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > In block parity, parity is calculated horizontally and vertically. A parity byte is sent with the data. The receiver recalculates the parity and can identify the position of a single incorrect bit.
 
@@ -796,13 +796,13 @@ sequenceDiagram
     end
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The sender calculates a checksum from the data and sends it with the data. The receiver performs the same calculation on the received data. The receiver compares the calculated checksum with the transmitted checksum. If they match, the data is verified; if they differ, an error is detected and the data may be retransmitted.
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Data security
 
@@ -884,6 +884,24 @@ sequenceDiagram
 
 ---
 
+---
+
+## Targeted Syllabus Drill
+
+1. For a networked organisation, explain the protective purpose of user accounts, passwords, digital signatures, biometrics, a firewall, anti-virus software, anti-spyware and encryption. **[8]**
+2. Explain the risk created by each threat and give a suitable restriction/control: virus, spyware, hacker, phishing and pharming. **[10]**
+3. Select and apply an appropriate validation check for each case: an integer from 1 to 12 inclusive; a code of exactly eight characters; a field that cannot be empty; an entered product code that must already be stored; an identifier with a calculated final digit; a value that must be at least 18; a date written as `DD/MM/YYYY`. Name all seven checks. **[7]**
+4. Distinguish a range check from a limit check, and distinguish validation from verification. Explain why passing validation does not prove that data is correct. **[5]**
+5. Explain visual checking and double entry during data entry. Then explain how a parity byte/block and a checksum can detect transfer errors. **[8]**
+
+### Targeted Syllabus Drill Answers
+
+1. User accounts identify users and support individual permissions/auditing **[1]**; passwords authenticate using a secret **[1]**; digital signatures authenticate origin and reveal alteration **[1]**; biometrics authenticate a measured physical/behavioural characteristic **[1]**; a firewall filters network traffic using rules **[1]**; anti-virus scans for/prevents/removes viruses and other detected malware **[1]**; anti-spyware detects/blocks software that secretly collects data **[1]**; encryption makes captured data unreadable without the key **[1]**. **[8]**
+2. Virus: malicious code infects/changes files, restricted by current anti-virus scanning and controlled software/media **[2]**. Spyware: secretly captures activity/data, restricted by anti-spyware, patching and least privilege **[2]**. Hacker: attempts unauthorised access, restricted by strong authentication, access rights and firewall rules **[2]**. Phishing: a deceptive message/site obtains credentials, restricted by user checking/training, filtering and multi-factor authentication **[2]**. Pharming: redirection sends a valid-looking request to a false site, restricted by secure DNS/configuration, certificate checking and patched network software **[2]**. **[10]**
+3. `1..12`: range check **[1]**; exactly eight characters: length check **[1]**; non-empty: presence check **[1]**; value already stored: existence check **[1]**; calculated final digit: check digit **[1]**; at least 18: limit check **[1]**; `DD/MM/YYYY`: format check **[1]**. **[7]**
+4. A range check tests both a lower and upper boundary; a limit check tests one boundary **[2]**. Validation tests whether data follows defined rules/is reasonable, while verification checks whether it was copied or transferred accurately **[2]**. An incorrect value can still satisfy every validation rule **[1]**. **[5]**
+5. A visual check compares the entered value with the source **[1]**; double entry records it independently twice and compares the results **[1]**. For block parity, each row/byte has a parity bit and vertical column checks form an additional parity byte **[2]**; the receiver recalculates parity and a mismatch reveals an error **[1]**. A checksum is calculated from a block before transfer and sent/stored with it **[2]**; the receiver recalculates and compares it, with a mismatch indicating corruption **[1]**. **[8]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -940,7 +958,9 @@ A bank allows customers to access accounts using a mobile application. Customer 
 (c) Explain how encryption protects customer data during transfer. [2]  
 (d) The bank verifies transferred data using a checksum. Describe how this works. [2]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 
 (a)  
 - Security protects data/system from unauthorised access / damage / misuse. [1]  
@@ -986,7 +1006,9 @@ A website lets users create accounts and play quizzes. A user must enter:
 (c) Describe two verification methods used during data entry. [2]  
 (d) Give one benefit of using access rights for this website database. [1]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 
 (a)  
 - age over 16: limit check / range check. [1]  

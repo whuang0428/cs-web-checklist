@@ -93,7 +93,7 @@ Use this overview to convert, calculate, compare and justify information represe
 | 1 exabyte / EB | 1000 PB |
 | 1 exbibyte / EiB | 1024 PiB |
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > A binary prefix uses powers of 2 / 1024, while a decimal prefix uses powers of 10 / 1000.
 
@@ -327,7 +327,7 @@ Ignore the 9th carry bit:
 00110011 = 51
 ```
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > Convert the number being subtracted into its two's complement, then add it to the first binary number. Ignore any carry beyond the fixed number of bits if the result is within range.
 
@@ -399,7 +399,7 @@ BCD = 0101 0111 0011
 | date/time in BIOS | straightforward conversion to displayed decimal digits |
 | barcode systems | decimal digits can be represented accurately |
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > BCD is used where exact decimal digits are needed, because normal binary may not represent decimal fractions exactly and this could cause rounding errors.
 
@@ -432,7 +432,7 @@ BCD = 0101 0111 0011
 + symbols / emojis can be represented
 + suitable for global systems
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > Unicode can represent a wider range of characters, including more languages and symbols such as emojis.
 
@@ -510,7 +510,7 @@ Examples:
 | image may not match original as well | less data stored |
 | detail may be lost | file size is reduced |
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > Decreasing bit depth means fewer bits are used to store each pixel, so fewer colours or shades can be represented and the file size is reduced.
 
@@ -558,7 +558,7 @@ An image has 4000 × 3000 pixels and 4 bits per pixel.
 = 6 MB
 ```
 
-> <span lang="zh-CN">注意</span>：<span lang="zh-CN">如果题目或</span> mark scheme <span lang="zh-CN">用</span> MB，<span lang="zh-CN">通常按</span> decimal 1 MB = 1 000 000 bytes。<span lang="zh-CN">题目写</span> MiB <span lang="zh-CN">才用</span> 1024。
+> <span lang="zh-CN">注意</span>：<span lang="zh-CN">如果题目把</span> MB <span lang="zh-CN">定义为十进制单位，则用</span> 1 MB = 1 000 000 bytes；<span lang="zh-CN">如果题目写</span> MiB，<span lang="zh-CN">则用</span> 1024-based units。
 
 ---
 
@@ -573,7 +573,7 @@ A bitmap file header may store:
 + compression type
 + location / offset of image data
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > The file header stores metadata about the image, such as file type, file size, resolution, bit depth and compression method.
 
@@ -637,7 +637,7 @@ A computer must convert it into digital data by sampling.
 
 ### Sampling
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > The amplitude of the sound wave is measured at regular time intervals. Each sample is converted into a binary value.
 
@@ -688,7 +688,7 @@ Benefits:
 + less buffering in streaming
 + lower data allowance used
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 
 > Compression reduces the file size so less bandwidth is needed and the file can be transmitted faster.
 
@@ -734,7 +734,7 @@ For real-time video conferences, lossy compression is usually more appropriate b
 + legal / medical / scientific data
 + images where exact detail must not be lost
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > The original file can be reconstructed exactly.
 
@@ -814,7 +814,7 @@ A vector diagram might repeat the same colour and line-style text for many shape
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Data representation
 
@@ -881,7 +881,7 @@ A vector diagram might repeat the same colour and line-style text for many shape
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Correct version |
+| Mistake | Why it is weak | Correct version |
 | --- | --- | --- |
 | using 1024 for MB when question says MB | MB is decimal unless question says MiB | MB = 1 000 000 bytes |
 | writing `110101` when 8-bit asked | not enough bits | write `00110101` |
@@ -978,6 +978,28 @@ D --> E[Digital sound file]
 
 ---
 
+---
+
+## Targeted Syllabus Drill
+
+Use these questions to test the small syllabus details that broad calculation questions can miss.
+
+1. Complete the unit table by giving the number of bits in a nibble and a byte, then distinguish the decimal prefixes `kilo`, `mega`, `giga`, `tera` from the binary prefixes `kibi`, `mebi`, `gibi`, `tebi`. **[10]**
+2. Represent denary `59` in BCD. State how an 8-bit negative integer is formed using one's complement and two's complement. Give one suitable application of BCD and one suitable use of hexadecimal. **[6]**
+3. Explain why a computer needs a character set. Distinguish ASCII, extended ASCII and Unicode, and state how a character is stored internally. **[5]**
+4. A bitmap image is displayed on a screen. Explain the roles of pixels and the file header, distinguish image resolution from screen resolution, and explain the effects of increasing image resolution and colour depth on quality and file size. **[8]**
+5. Explain how a vector drawing is represented using drawing objects, object properties and a drawing list. Choose bitmap or vector for (a) a detailed photograph and (b) a logo that must be enlarged, justifying both choices. **[7]**
+6. Describe how analogue sound is sampled and stored digitally. Explain how increasing sampling rate and sampling resolution affects the stored sound and file size. **[6]**
+
+### Targeted Syllabus Drill Answers
+
+1. A nibble is 4 bits and a byte is 8 bits **[2]**. Decimal prefixes use powers of 1000: kilo `10^3`, mega `10^6`, giga `10^9`, tera `10^12` **[4]**. Binary prefixes use powers of 1024: kibi `2^10`, mebi `2^20`, gibi `2^30`, tebi `2^40` **[4]**. **[10]**
+2. `59` in BCD is `0101 1001` **[2]**. One's complement inverts every bit of the positive pattern **[1]**; two's complement inverts the bits and adds 1 **[1]**. BCD suits separate decimal digits such as those on a calculator or digital display **[1]**; hexadecimal gives a compact representation of binary values such as machine code, memory addresses, colour values or MAC addresses **[1]**. **[6]**
+3. A character set defines the mapping between characters and numeric codes **[1]**. ASCII provides a basic character repertoire **[1]**; extended ASCII adds more codes but depends on the selected code page **[1]**; Unicode supplies a much larger common code space for many writing systems and symbols **[1]**. The chosen code is stored as a binary value **[1]**. **[5]**
+4. A bitmap is a grid of pixels, each storing a colour value **[1]**. Its header stores metadata needed to interpret the data, such as dimensions, colour depth or format **[1]**. Image resolution is the pixel dimensions of the stored image, whereas screen resolution is the pixel dimensions available on the display **[2]**. More image pixels can preserve finer spatial detail but increase the amount of data **[2]**. Greater colour depth allows more possible colours/smoother gradation but uses more bits per pixel **[2]**. **[8]**
+5. A vector file stores geometric drawing objects **[1]**, properties such as coordinates, dimensions, line or fill colour **[1]**, and an ordered drawing list that controls how the objects are rendered/overlap **[1]**. A detailed photograph should normally use a bitmap because it contains continuous, irregular pixel detail **[2]**. A logo should normally use a vector because its shapes can be resized without pixelation and remain easy to edit **[2]**. **[7]**
+6. An ADC measures the analogue signal at regular time intervals **[1]**; each sample's amplitude is quantised to one of the available levels and stored in binary **[2]**. A higher sampling rate records more measurements per second and can reproduce higher-frequency detail, while increasing file size **[1]**. Greater sampling resolution provides more amplitude levels and can reduce quantisation error, while also increasing file size **[2]**. **[6]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -1038,7 +1060,9 @@ The worked calculations, process templates and scenario answers above model the 
 (f) Explain why adding two binary integers can cause overflow. [1]
 (g) Explain one reason why BCD is used in financial calculations. [1]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 
 (a) Tebibyte uses binary prefix / powers of 2 / 1024, terabyte uses decimal prefix / powers of 10 / 1000. [1]  
 (b) `0010 0010 1110` [1]  
@@ -1059,7 +1083,9 @@ A digital camera creates an image with 2 000 000 pixels and a bit depth of 16 bi
 (b) Explain the effect of decreasing the bit depth on the image and on the image file. [4]  
 (c) Give the term for the number of times the amplitude of a sound wave is measured per second. [1]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 
 (a)
 
@@ -1069,7 +1095,7 @@ A digital camera creates an image with 2 000 000 pixels and a bit depth of 16 bi
 4 000 000 / 1 000 000 = 4 MB
 ```
 
-Award [1] for correct working, [1] for `4 MB`.
+Suggested allocation: [1] for correct working, [1] for `4 MB`.
 
 (b)
 
@@ -1089,7 +1115,9 @@ A school uses live video conferencing. The video is compressed before being tran
 (a) Explain why the video is compressed before transmission. [2]  
 (b) Identify whether lossy or lossless compression is more appropriate. Justify your answer. [3]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 
 (a)
 
@@ -1098,7 +1126,7 @@ A school uses live video conferencing. The video is compressed before being tran
 
 (b)
 
-+ lossy compression is more appropriate [choice itself may not be awarded separately, but answer must be consistent]
++ lossy compression is more appropriate [the choice alone is insufficient; the explanation must be consistent]
 + reduces file size more than lossless [1]
 + less bandwidth / data is needed, so buffering is reduced [1]
 + some data can be removed without noticeably affecting user experience / resolution or audio sample rate can be reduced [1]

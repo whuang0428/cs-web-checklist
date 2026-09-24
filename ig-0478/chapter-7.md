@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 7: Algorithm Design and Problem-Solving
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -13,6 +13,8 @@ Revise: program development; algorithm design; standard methods; validation, tes
 Use the topic sections below to connect definitions, processes, comparisons and calculations.
 
 > **Paper 2 focus:** turn a problem into a precise algorithm, test it systematically, trace it accurately, and correct errors.
+
+> **Examination language rule:** for Paper 2 coding solutions, use pseudocode unless the task is the final 15-mark scenario. Only that scenario permits Python, Visual Basic or Java as alternatives to pseudocode. Program-code examples elsewhere in this chapter are transfer practice, not permission to answer other Paper 2 questions in a programming language.
 
 ---
 
@@ -498,10 +500,10 @@ These short tasks separate syllabus actions that are easy to merge accidentally.
 1. Analysis identifies the problem and requirements, using decomposition and abstraction where needed **[1]**; design decomposes the solution and produces a structure diagram, flowchart or pseudocode **[1]**; coding translates the design into program code and tests it iteratively **[1]**; testing applies planned test data and compares actual with expected results **[1]**. **[4]**
 2. The system has been decomposed into subsystems and then further subsystems **[1]**. Suitable `IssueBook` answers include member/book identifiers as input, checking eligibility and updating loan status as processes, confirmation as output, and the loan record as storage **[4]**. A structure diagram shows the hierarchy **[1]**; a flowchart or pseudocode shows detailed control flow **[1]**. **[7]**
 3. Purpose: calculate and display the average of six temperatures **[1]**. Processes: input six values, accumulate a total, divide by six and output the result **[1]**. **[2]**
-4. Linear search **[1]**; bubble sort **[1]**; for example `Total <- Total + Value` and `IF condition THEN Count <- Count + 1` **[2]**. For the final part, award initialising `Maximum`, `Minimum` and `Total` from real data/zero as appropriate **[1]**, processing every remaining item **[1]**, updating both extrema correctly **[1]**, and calculating `Average <- Total / Count` **[1]**. **[8]**
+4. Linear search **[1]**; bubble sort **[1]**; for example `Total <- Total + Value` and `IF condition THEN Count <- Count + 1` **[2]**. For the final part, suggested allocation: initialising `Maximum`, `Minimum` and `Total` from real data/zero as appropriate **[1]**, processing every remaining item **[1]**, updating both extrema correctly **[1]**, and calculating `Average <- Total / Count` **[1]**. **[8]**
 5. Validation rejects data that does not satisfy the stated rules before it is processed **[1]**; range; length; type check; presence; format; check digit **[6]**. **[7]**
 6. Verification is needed to detect inaccurate copying or entry **[1]**; a visual check compares entered data with its source **[1]**; double entry inputs the same data twice and compares the two entries **[1]**. **[3]**
-7. Award for an input followed by a decision that loops on the labelled `No` branch **[1]**, and an output reached on the labelled `Yes` branch **[1]**. **[2]**
+7. Suggested allocation: an input followed by a decision that loops on the labelled `No` branch **[1]**, and an output reached on the labelled `Yes` branch **[1]**. **[2]**
 8. `if mark >= 0 and mark <= 100:` **[1]**, with the existing output kept in the selection **[1]**. **[2]**
 
 ---
@@ -540,7 +542,7 @@ The worked calculations, process templates and scenario answers above model the 
 
 ## Quick Check Answers
 
-1. Analysis, design, coding and testing. Award one mark for each. **[4]**
+1. Analysis, design, coding and testing. Suggested allocation: one mark for each. **[4]**
 2. Decomposition divides the problem into smaller subsystems **[1]**; abstraction removes irrelevant detail while keeping the features needed by the solution **[1]**. **[2]**
 3. Validation checks that data is sensible or follows rules; verification checks that data was entered/copied accurately. **[2]**
 4. Linear search finds a target by checking items in sequence; bubble sort repeatedly compares and swaps adjacent items to place data in order. **[2]**
@@ -575,7 +577,9 @@ A running club records eight lap times in seconds in the array `LapTime[1:8]`. E
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 1. Any suitable input such as a lap time; process such as calculate average/count values below 60; output such as the average or count **[3]**; one irrelevant detail that can be removed, such as the runner's favourite colour **[1]**. **[4]**
 2. Normal: any integer clearly within the range, such as 75; extremes: 30 and 180; abnormal: any value outside the range or wrong type, such as 181. **[4]**
@@ -604,7 +608,7 @@ A running club records eight lap times in seconds in the array `LapTime[1:8]`. E
    OUTPUT Under60
    ```
 
-   Award for: initialising total and counter **[1]**; correct eight-item loop **[1]**; valid range loop and storing each input **[1]**; correct total **[1]**; correct conditional count **[1]**; correct average and both outputs **[1]**. **[6]**
+   Suggested allocation: initialising total and counter **[1]**; correct eight-item loop **[1]**; valid range loop and storing each input **[1]**; correct total **[1]**; correct conditional count **[1]**; correct average and both outputs **[1]**. **[6]**
 
 ---
 

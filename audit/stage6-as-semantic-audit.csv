@@ -1,0 +1,179 @@
+objective_id,initial_status,final_status,official_source,official_pages,audit_finding,repair
+AS-1.1-01,partial,verified,9618-SYL-2027-2029-V2,14,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.1-02,partial,verified,9618-SYL-2027-2029-V2,14,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.1-03,verified,verified,9618-SYL-2027-2029-V2,14,Teaching and practice evidence already supported the complete current objective.,none
+AS-1.1-04,verified,verified,9618-SYL-2027-2029-V2,14,Teaching and practice evidence already supported the complete current objective.,none
+AS-1.1-05,verified,verified,9618-SYL-2027-2029-V2,14,Teaching and practice evidence already supported the complete current objective.,none
+AS-1.1-06,partial,verified,9618-SYL-2027-2029-V2,14,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.1-07,partial,verified,9618-SYL-2027-2029-V2,14,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.2-01,partial,verified,9618-SYL-2027-2029-V2,15,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.2-02,verified,verified,9618-SYL-2027-2029-V2,15,Teaching and practice evidence already supported the complete current objective.,none
+AS-1.2-03,partial,verified,9618-SYL-2027-2029-V2,15,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.2-04,partial,verified,9618-SYL-2027-2029-V2,15,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.2-05,partial,verified,9618-SYL-2027-2029-V2,15,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.2-06,partial,verified,9618-SYL-2027-2029-V2,15,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.2-07,partial,verified,9618-SYL-2027-2029-V2,15,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-1.3-01,verified,verified,9618-SYL-2027-2029-V2,15,Teaching and practice evidence already supported the complete current objective.,none
+AS-1.3-02,verified,verified,9618-SYL-2027-2029-V2,15,Teaching and practice evidence already supported the complete current objective.,none
+AS-1.3-03,verified,verified,9618-SYL-2027-2029-V2,15,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-01,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-02,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-03a,partial,verified,9618-SYL-2027-2029-V2,16-17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-2.1-03b,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-04,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-05a,incorrect_scope,verified,9618-SYL-2027-2029-V2,16-17,A Paper 1 review item tested A Level circuit switching instead of the current AS topology requirement.,Replaced it with mesh packet routing and resilience; added targeted drill TD2.
+AS-2.1-05b,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-06,partial,verified,9618-SYL-2027-2029-V2,16-17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-2.1-07,partial,verified,9618-SYL-2027-2029-V2,16-17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-2.1-08,partial,verified,9618-SYL-2027-2029-V2,16-17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-2.1-09,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-10,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-11,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-12,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-2.1-13,partial,verified,9618-SYL-2027-2029-V2,16-17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-2.1-14,partial,verified,9618-SYL-2027-2029-V2,16-17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-2.1-15,verified,verified,9618-SYL-2027-2029-V2,16-17,Teaching and practice evidence already supported the complete current objective.,none
+AS-3.1-01,partial,verified,9618-SYL-2027-2029-V2,17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.1-02,verified,verified,9618-SYL-2027-2029-V2,17,Teaching and practice evidence already supported the complete current objective.,none
+AS-3.1-03,partial,verified,9618-SYL-2027-2029-V2,17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.1-04,verified,verified,9618-SYL-2027-2029-V2,17,Teaching and practice evidence already supported the complete current objective.,none
+AS-3.1-05,partial,verified,9618-SYL-2027-2029-V2,17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.1-06,partial,verified,9618-SYL-2027-2029-V2,17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.1-07,verified,verified,9618-SYL-2027-2029-V2,17,Teaching and practice evidence already supported the complete current objective.,none
+AS-3.1-08,partial,verified,9618-SYL-2027-2029-V2,17,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.2-01,partial,verified,9618-SYL-2027-2029-V2,18,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.2-02,verified,verified,9618-SYL-2027-2029-V2,18,Teaching and practice evidence already supported the complete current objective.,none
+AS-3.2-03,partial,verified,9618-SYL-2027-2029-V2,18,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.2-04,partial,verified,9618-SYL-2027-2029-V2,18,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.2-05,partial,verified,9618-SYL-2027-2029-V2,18,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-3.2-06,partial,verified,9618-SYL-2027-2029-V2,18,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-4.1-01,verified,verified,9618-SYL-2027-2029-V2,19,Teaching and practice evidence already supported the complete current objective.,none
+AS-4.1-02,partial,verified,9618-SYL-2027-2029-V2,19,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-4.1-03,partial,verified,9618-SYL-2027-2029-V2,19,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-4.1-04,partial,verified,9618-SYL-2027-2029-V2,19,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-4.1-05,unsupported_marking_claim,verified,9618-SYL-2027-2029-V2,19,The review answer accepted performance factors outside the current listed AS factors.,"Restricted the table and answer to processor type, cores, bus width, clock speed and cache; added TD3."
+AS-4.1-06,partial,verified,9618-SYL-2027-2029-V2,19,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-4.1-07,partial,verified,9618-SYL-2027-2029-V2,19,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-4.1-08,verified,verified,9618-SYL-2027-2029-V2,19,Teaching and practice evidence already supported the complete current objective.,none
+AS-4.2-01,verified,verified,9618-SYL-2027-2029-V2,20-21,Teaching and practice evidence already supported the complete current objective.,none
+AS-4.2-02,verified,verified,9618-SYL-2027-2029-V2,20-21,Teaching and practice evidence already supported the complete current objective.,none
+AS-4.2-03,verified,verified,9618-SYL-2027-2029-V2,20-21,Teaching and practice evidence already supported the complete current objective.,none
+AS-4.2-04,partial,verified,9618-SYL-2027-2029-V2,20-21,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-4.2-05,verified,verified,9618-SYL-2027-2029-V2,20-21,Teaching and practice evidence already supported the complete current objective.,none
+AS-4.3-01,partial,verified,9618-SYL-2027-2029-V2,22,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-4.3-02,partial,verified,9618-SYL-2027-2029-V2,22,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-5.1-01,verified,verified,9618-SYL-2027-2029-V2,23,Teaching and practice evidence already supported the complete current objective.,none
+AS-5.1-02,partial,verified,9618-SYL-2027-2029-V2,23,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-5.1-03,partial,verified,9618-SYL-2027-2029-V2,23,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-5.1-04,verified,verified,9618-SYL-2027-2029-V2,23,Teaching and practice evidence already supported the complete current objective.,none
+AS-5.2-01,verified,verified,9618-SYL-2027-2029-V2,23,Teaching and practice evidence already supported the complete current objective.,none
+AS-5.2-02,verified,verified,9618-SYL-2027-2029-V2,23,Teaching and practice evidence already supported the complete current objective.,none
+AS-5.2-03,verified,verified,9618-SYL-2027-2029-V2,23,Teaching and practice evidence already supported the complete current objective.,none
+AS-5.2-04,incorrect_scope,verified,9618-SYL-2027-2029-V2,23,Line numbering was presented as a current listed IDE presentation feature.,Removed line numbering from the listed examples and added all current IDE categories in TD3.
+AS-6.1-01,verified,verified,9618-SYL-2027-2029-V2,24,Teaching and practice evidence already supported the complete current objective.,none
+AS-6.1-02,verified,verified,9618-SYL-2027-2029-V2,24,Teaching and practice evidence already supported the complete current objective.,none
+AS-6.1-03,partial,verified,9618-SYL-2027-2029-V2,24,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-6.1-04,partial,verified,9618-SYL-2027-2029-V2,24,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-6.1-05,partial,verified,9618-SYL-2027-2029-V2,24,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-6.1-06,verified,verified,9618-SYL-2027-2029-V2,24,Teaching and practice evidence already supported the complete current objective.,none
+AS-6.2-01,verified,verified,9618-SYL-2027-2029-V2,24,Teaching and practice evidence already supported the complete current objective.,none
+AS-6.2-02,partial,verified,9618-SYL-2027-2029-V2,24,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-6.2-03,out_of_scope_practice,verified,9618-SYL-2027-2029-V2,24,A review item tested a privacy principle instead of completing transfer-verification coverage.,Replaced it with parity-block verification and added complete entry/transfer verification in TD5.
+AS-7.1-01,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-7.1-02,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-7.1-03,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-7.1-04,incorrect_scope,verified,9618-SYL-2027-2029-V2,25,"The review/checklist used freeware instead of the current FSF, OSI, shareware and commercial licence set.","Replaced the comparison, aligned the checklist and added scenario selection in TD1."
+AS-7.1-05,partial,verified,9618-SYL-2027-2029-V2,25,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-8.1-01,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.1-02,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.1-03,partial,verified,9618-SYL-2027-2029-V2,25,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-8.1-04,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.1-05,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.1-06,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.1-07,verified,verified,9618-SYL-2027-2029-V2,25,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.2-01,partial,verified,9618-SYL-2027-2029-V2,26,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-8.2-02,imprecise_evidence,verified,9618-SYL-2027-2029-V2,26,Coverage and practice named generic query/report tools rather than the developer interface and query processor.,Corrected the objective and practice wording and added both required tools in TD2.
+AS-8.3-01,verified,verified,9618-SYL-2027-2029-V2,26-27,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.3-02,verified,verified,9618-SYL-2027-2029-V2,26-27,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.3-03,verified,verified,9618-SYL-2027-2029-V2,26-27,Teaching and practice evidence already supported the complete current objective.,none
+AS-8.3-04,partial,verified,9618-SYL-2027-2029-V2,26-27,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-8.3-05,partial,verified,9618-SYL-2027-2029-V2,26-27,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-9.1-01a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.1-01b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.1-01c,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.1-02,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-01,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-02,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-03,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-04,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-05a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-05b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-05c,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-06a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-06b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-07a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-07b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-08,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-9.2-09,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,27-28,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.1-01,partial,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,28,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-10.1-02,partial,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,28,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-10.2-01,partial,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,28,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-10.2-02,partial,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,28,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-10.2-03,partial,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,28,"Teaching was relevant, but practice did not isolate every compound sub-requirement.",Added a targeted syllabus drill with answers and updated the coverage evidence link.
+AS-10.2-04,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,28,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.3-01,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,28-29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.3-02,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,28-29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-01,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-02a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-02b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-03a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-03b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-03c,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-04a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-04b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-10.4-04c,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.1-01a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.1-01b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.1-02a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.1-02b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.1-02c,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.1-02d,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.1-02e,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.1-03,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.2-01a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.2-01b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.2-01c,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.2-01d,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.2-01e,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.2-02,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,29,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-01a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-01b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-02,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-03a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-03b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-04a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-04b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-05,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-06,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-11.3-07,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.1-01,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.1-02,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.1-03,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.1-04,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.2-01a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.2-01b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.2-01c,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.2-02,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,30,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-01a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-01b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-02,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-03,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-04a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-04b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-05a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-05b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-06,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-07a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-07b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-08a,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none
+AS-12.3-08b,verified,verified,9618-SYL-2027-2029-V2;9618-PSG-2027-2029-V1,31,Teaching and practice evidence already supported the complete current objective.,none

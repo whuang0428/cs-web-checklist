@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 9: Databases
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -353,6 +353,37 @@ The value `35.00` does not satisfy `Fee < 35`, but Web Basics is still included 
 
 ---
 
+## Targeted Syllabus Drill
+
+Use this table:
+
+| ItemCode | Category | Stock | Price | Active | AddedAt |
+|---|---|---:|---:|---|---|
+| A01 | Cable | 8 | 6.50 | TRUE | 09:00 |
+| B02 | Adapter | 0 | 12.00 | FALSE | 10:15 |
+| C03 | Cable | 3 | 9.00 | TRUE | 11:30 |
+
+1. Select a suitable type from text/alphanumeric, character, Boolean, integer, real and date/time for six appropriately named fields, using every listed type once. **[6]**
+2. Complete the missing clauses so the query displays active cables from highest to lowest price, then state its output rows.
+
+   ```sql
+   SELECT ItemCode, Price
+   ____ Items
+   WHERE Category = "Cable" ____ Active = TRUE
+   ORDER BY Price ____;
+   ```
+
+   **[6]**
+3. State the results of `COUNT(ItemCode)` for inactive items and `SUM(Stock)` for active items. **[2]**
+
+### Targeted Syllabus Drill Answers
+
+1. Example using every required type: `ItemCode` text/alphanumeric; a one-letter `Zone` character; `Active` Boolean; `Stock` integer; `Price` real; `AddedAt` date/time. One mark for each suitable field/type pair. **[6]**
+2. `FROM` **[1]**; `AND` **[1]**; `DESCENDING` **[1]**. Output: `C03, 9.00` followed by `A01, 6.50` **[2]**, with only those projected fields **[1]**. **[6]**
+3. Inactive count = `1` **[1]**; active stock sum = `11` **[1]**. **[2]**
+
+---
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -409,11 +440,13 @@ A bicycle-hire company needs one table. For every bicycle it stores a unique cod
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 Assume the table is named `Bicycles` and uses these fields: `BikeCode`, `ModelName`, `HourlyRate`, `HireCount`, `Available`.
 
-1. `BikeCode`: text; `ModelName`: text; `HourlyRate`: real; `HireCount`: integer; `Available`: Boolean. Award one mark for each suitable field/type pair. **[5]**
+1. `BikeCode`: text; `ModelName`: text; `HourlyRate`: real; `HireCount`: integer; `Available`: Boolean. Suggested allocation: one mark for each suitable field/type pair. **[5]**
 2. `BikeCode` **[1]** because it is stated to be unique for every bicycle **[1]**. **[2]**
 3. A type check requiring a real/numeric value or a range check such as `HourlyRate >= 0` **[1]**; it rejects non-numeric or negative rates before storage **[1]**. **[2]**
 

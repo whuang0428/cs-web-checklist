@@ -17,7 +17,7 @@ Use the command word, mark allocation and context to decide how much to write. T
 | Trace | Follow the algorithm exactly and record each required state change. |
 | Write pseudocode | Use consistent Cambridge-style logic, clear identifiers and correct control structures. |
 
-Equivalent technically correct wording is acceptable. A keyword does not earn a mark when the explanation is contradictory or incomplete.
+Equivalent technically correct wording is valid. A keyword alone is insufficient when the explanation is contradictory or incomplete.
 
 ## Build Stronger Explanations
 
@@ -49,7 +49,7 @@ Use this progression when a question asks you to explain, justify or evaluate:
 240 000 ÷ 1024 = 234.375 KiB
 ```
 
-Write every conversion. A correct number with no method can lose working marks; a correct method with a final unit slip may retain them. Practise this pattern in [IGCSE Chapter 1](ig-0478/chapter-1.md) and [AS Chapter 1](as-9618/chapter-1.md).
+Write every conversion. Without a method, the working cannot be assessed; showing the method preserves evidence even if the final unit is wrong. Practise this pattern in [IGCSE Chapter 1](ig-0478/chapter-1.md) and [AS Chapter 1](as-9618/chapter-1.md).
 
 ### 2. Trace: record only states that actually change
 
@@ -92,7 +92,7 @@ For IGCSE Paper 2, the final 15-mark scenario permits pseudocode or an approved 
 
 ### IGCSE 15-Mark Scenario Assessment
 
-Assess the complete response in two areas: **AO2 /9** and **AO3 /6**. Select a level in each area, then a mark within that level; award 0 where there is no creditable evidence. Do not turn a checklist of individual requirements into fifteen automatic points.
+Assess the complete response in two areas: **AO2 /9** and **AO3 /6**. Select a level in each area, then a mark within that level. A response with no creditable evidence corresponds to 0. Do not turn a checklist of individual requirements into fifteen automatic points.
 
 | Area | Lower level | Middle level | Upper level |
 |---|---|---|---|
@@ -129,13 +129,13 @@ Use Java console mode throughout this site's A2 practical route. Include normal,
 
 ## Losing Marks: Diagnosis and Repair
 
-| Weak response | Why it loses marks | Repair |
+| Weak response | Why it is weak | Repair |
 |---|---|---|
 | list of keywords | no relationship or mechanism | turn each keyword into subject + action + effect |
 | generic advantage | not applied to the scenario | name the data, device, user or constraint |
 | trace with final value only | no evidence of correct execution | show each comparison/state change |
 | pseudocode with mixed syntax | unclear or invalid constructs | use one consistent course convention |
-| “reasonable answer” without condition | cannot be awarded precisely | state the exact fact and causal link |
+| “reasonable answer” without condition | is too imprecise to assess | state the exact fact and causal link |
 | Java test says “works” | no reproducible evidence | show input, expected, actual and pass/fail |
 
 ## Assessment Objectives
@@ -165,9 +165,9 @@ Use Java console mode throughout this site's A2 practical route. Include normal,
 ## Timed Practice Routine
 
 1. Confirm the correct paper, time and syllabus range in the course hub.
-2. Complete the paper without opening the mark scheme.
+2. Complete the paper without opening the indicative marking points.
 3. Show working and record testing evidence where required.
-4. Open the folded mark scheme only after finishing.
+4. Open the folded indicative marking points only after finishing.
 5. Correct each response by adding the missing idea, link or context—not by copying keywords alone.
 
 ## High-Mark Practice Route

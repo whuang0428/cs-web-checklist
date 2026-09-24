@@ -581,7 +581,7 @@ The worked calculations, process templates and scenario answers above model the 
 2. Iterative is the general repeated improvement of versions; RAD specifically emphasises rapid/time-boxed prototyping, strong user involvement and reuse/tools. **[2]**
 3. A structure chart documents modular hierarchy and parameter flow **[1]**; a state-transition diagram documents states and event-triggered changes **[1]**. **[2]**
 4. White-box derives tests from internal paths/logic; black-box tests required input-output behaviour without relying on the internal implementation. **[2]**
-5. Corrective, adaptive and perfective. Award one mark for any two correct and two marks for all three correct. **[2]**
+5. Corrective, adaptive and perfective. Suggested allocation: one mark for any two correct and two marks for all three correct. **[2]**
 
 ---
 
@@ -604,7 +604,9 @@ A sports centre is developing an appointment app. Users are available weekly to 
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 1. RAD or iterative **[1]**; justification linked to any three of weekly users/feedback, modular interface, rapid prototype/short deadline **[3]**. RAD is the strongest answer when all details are used. **[4]**
 2. Structure chart: controlling module such as `ProcessBooking` with direct calls to `GetBooking`, `ValidateBooking` and `SaveBooking` **[1]**; `BookingData` returned/passed to the relevant modules **[1]**; `IsValid` returned by validation and the save call shown as conditional **[1]**. Equivalent pseudocode **[1]**, for example:

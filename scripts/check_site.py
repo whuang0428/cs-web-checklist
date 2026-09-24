@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import csv
 import re
 import shutil
 import subprocess
@@ -56,6 +57,72 @@ HUB_PAGES = {ROOT / course / "README.md" for course in COURSE_RANGES}
 COURSE_SIDEBARS = {ROOT / course / "_sidebar.md" for course in COURSE_RANGES}
 SHARED_PAGES = {ROOT / "exam-technique.md", ROOT / "syllabus-versions.md"}
 CONTENT_PAGES = EXPECTED_CHAPTERS | REVIEW_PAGES | HUB_PAGES | SHARED_PAGES
+SOURCE_MANIFEST = ROOT / "audit" / "source-manifest.csv"
+SOURCE_MANIFEST_COLUMNS = [
+    "source_id",
+    "syllabus_code",
+    "document_type",
+    "exam_cycle_or_series",
+    "paper",
+    "version",
+    "official_url",
+    "sha256",
+    "audited_at",
+    "authority_level",
+    "scope",
+    "limitations",
+]
+REQUIRED_SOURCE_IDS = {
+    "0478-SYL-2026-2028-V6",
+    "0478-UPD-2026-2028-V6",
+    "9618-SYL-2027-2029-V2",
+    "9618-PSG-2027-2029-V1",
+    "0478-MS-11-MJ24",
+    "0478-MS-21-MJ24",
+    "0478-ER-MJ24",
+    "0478-SMS-1B-2023",
+    "0478-SMS-2B-2023",
+    "9618-MS-11-MJ24",
+    "9618-MS-21-MJ24",
+    "9618-MS-31-MJ24",
+    "9618-MS-41-MJ24",
+    "9618-ER-MJ24",
+    "9618-SMS-1-2021",
+    "9618-SMS-2-2021",
+    "9618-SMS-3-2021",
+    "9618-SMS-4-2021",
+}
+CURRENT_AUTHORITY_SOURCE_IDS = {
+    "0478-SYL-2026-2028-V6",
+    "0478-UPD-2026-2028-V6",
+    "9618-SYL-2027-2029-V2",
+    "9618-PSG-2027-2029-V1",
+}
+SEMANTIC_AUDIT_FILES = {
+    "IG": (ROOT / "audit" / "stage5-igcse-semantic-audit.csv", 133),
+    "AS": (ROOT / "audit" / "stage6-as-semantic-audit.csv", 178),
+    "A2": (ROOT / "audit" / "stage7-a2-semantic-audit.csv", 83),
+}
+SEMANTIC_AUDIT_COLUMNS = [
+    "objective_id",
+    "initial_status",
+    "final_status",
+    "official_source",
+    "official_pages",
+    "audit_finding",
+    "repair",
+]
+ALLOWED_INITIAL_AUDIT_STATUSES = {
+    "verified",
+    "partial",
+    "missing",
+    "missing_teaching",
+    "incorrect",
+    "incorrect_scope",
+    "unsupported_marking_claim",
+    "imprecise_evidence",
+    "out_of_scope_practice",
+}
 
 # One base ID for every top-level "Candidates should be able to" action in the
 # locked syllabus versions. High-risk compound actions are replaced below by
@@ -845,7 +912,7 @@ def check_marked_chapter_contracts(
         "10-Mark Quick Check",
         "Quick Check Answers",
         "20-Mark Exam Practice",
-        "Practice Mark Scheme",
+        "Practice Indicative Marking Points",
         "Total: 10 marks",
         "Total: 20 marks",
     ]
@@ -939,6 +1006,15 @@ def check_editorial_contracts(errors: list[str]) -> None:
         "必须补回",
         "<font",
         "**Docsify:**",
+        "Mark scheme style",
+        "Mark scheme answer",
+        "Mark scheme phrase",
+        "Mark scheme wording",
+        "Mark scheme keywords",
+        "Mark scheme expansion",
+        "Cambridge accepts",
+        "Why it loses marks",
+        "No marks / very weak",
     ]
     dated_editorial_patterns = [
         (
@@ -957,7 +1033,7 @@ def check_editorial_contracts(errors: list[str]) -> None:
         ),
     ]
     identities = {
-        "ig-0478": ("# IGCSE 0478 Chapter", "0478 · 2026–2028 · Version 5"),
+        "ig-0478": ("# IGCSE 0478 Chapter", "0478 · 2026–2028 · Version 6"),
         "as-9618": ("# AS 9618 Chapter", "9618 · 2027–2029 · Version 2"),
         "a2-9618": ("# A2 9618 Chapter", "9618 · 2027–2029 · Version 2"),
     }
@@ -985,6 +1061,212 @@ def check_editorial_contracts(errors: list[str]) -> None:
                 add_error(errors, path, f"student heading must be English (line {number})")
             if re.search(r"[\u4e00-\u9fff]", line) and 'lang="zh-CN"' not in line:
                 add_error(errors, path, f"Chinese support lacks lang attribute (line {number})")
+
+
+def check_source_label_contracts(errors: list[str]) -> None:
+    manifest = SOURCE_MANIFEST
+    if not manifest.exists():
+        add_error(errors, manifest, "missing source manifest")
+        return
+
+    manifest_lines = manifest.read_text(encoding="utf-8").splitlines()
+    source_ids = {
+        line.split(",", 1)[0]
+        for line in manifest_lines[1:]
+        if line.strip()
+    }
+    if not source_ids:
+        add_error(errors, manifest, "source manifest has no source IDs")
+        return
+
+    taxonomy_page = ROOT / "syllabus-versions.md"
+    risky_phrases = (
+        "Cambridge accepts",
+        "will not be awarded",
+        "must mention",
+        "always mention",
+        "loses marks",
+        "No marks / very weak",
+        "Why it loses marks",
+        "Mark scheme style",
+        "Mark scheme answer",
+        "Mark scheme phrase",
+        "Mark scheme wording",
+        "Mark scheme keywords",
+        "Mark scheme expansion",
+    )
+    official_label = re.compile(
+        r"\b(?:Official(?: MS)? wording|MS-aligned (?:explanation|answer))\b",
+        flags=re.IGNORECASE,
+    )
+    examiner_imperative = re.compile(
+        r"^\s*(?:(?:\d+\.|\([a-z]\)|\*\*\([a-z]\)\*\*)\s*)?"
+        r"Award(?:\s+(?:up to|one|1|marks?|for))\b",
+        flags=re.IGNORECASE,
+    )
+
+    for path in sorted(CONTENT_PAGES):
+        text = path.read_text(encoding="utf-8")
+        for number, line in enumerate(text.splitlines(), 1):
+            if re.match(r"^#{1,6}\s+.*\bmark schemes?\b", line, flags=re.IGNORECASE):
+                add_error(errors, path, f"official-looking mark-scheme heading (line {number})")
+            if examiner_imperative.search(line):
+                add_error(errors, path, f"examiner-style Award instruction (line {number})")
+            if path != taxonomy_page:
+                for phrase in risky_phrases:
+                    if phrase.casefold() in line.casefold():
+                        add_error(
+                            errors,
+                            path,
+                            f"unsupported source/scoring phrase {phrase!r} (line {number})",
+                        )
+                if official_label.search(line) and not any(
+                    source_id in line for source_id in source_ids
+                ):
+                    add_error(
+                        errors,
+                        path,
+                        f"official/MS-aligned label lacks a registered source ID (line {number})",
+                    )
+
+
+def check_source_manifest(errors: list[str]) -> set[str]:
+    if not SOURCE_MANIFEST.exists():
+        add_error(errors, SOURCE_MANIFEST, "missing source manifest")
+        return set()
+
+    try:
+        with SOURCE_MANIFEST.open(encoding="utf-8", newline="") as handle:
+            reader = csv.DictReader(handle)
+            if reader.fieldnames != SOURCE_MANIFEST_COLUMNS:
+                add_error(errors, SOURCE_MANIFEST, "source manifest columns do not match the locked schema")
+                return set()
+            rows = list(reader)
+    except csv.Error as error:
+        add_error(errors, SOURCE_MANIFEST, f"invalid source manifest CSV: {error}")
+        return set()
+
+    source_ids: set[str] = set()
+    official_urls: set[str] = set()
+    hashes: set[str] = set()
+    for number, row in enumerate(rows, 2):
+        source_id = row["source_id"].strip()
+        if not re.fullmatch(r"(?:0478|9618)-[A-Z0-9-]+", source_id):
+            add_error(errors, SOURCE_MANIFEST, f"invalid source ID on row {number}: {source_id or 'blank'}")
+        if source_id in source_ids:
+            add_error(errors, SOURCE_MANIFEST, f"duplicate source ID: {source_id}")
+        source_ids.add(source_id)
+
+        if row["syllabus_code"] not in {"0478", "9618"}:
+            add_error(errors, SOURCE_MANIFEST, f"invalid syllabus code on row {number}")
+        if source_id and not source_id.startswith(f"{row['syllabus_code']}-"):
+            add_error(errors, SOURCE_MANIFEST, f"source ID/code mismatch on row {number}")
+        if row["document_type"] not in {
+            "syllabus",
+            "syllabus_update",
+            "pseudocode_guide",
+            "mark_scheme",
+            "examiner_report",
+            "specimen_mark_scheme",
+        } or not row["exam_cycle_or_series"].strip():
+            add_error(errors, SOURCE_MANIFEST, f"missing document type or exam cycle on row {number}")
+
+        official_url = row["official_url"].strip()
+        if not official_url.startswith("https://www.cambridgeinternational.org/Images/"):
+            add_error(errors, SOURCE_MANIFEST, f"non-official source URL on row {number}")
+        if official_url in official_urls:
+            add_error(errors, SOURCE_MANIFEST, f"duplicate official source URL on row {number}")
+        official_urls.add(official_url)
+
+        digest = row["sha256"].strip()
+        if not re.fullmatch(r"[0-9a-f]{64}", digest):
+            add_error(errors, SOURCE_MANIFEST, f"invalid SHA-256 on row {number}")
+        if digest in hashes:
+            add_error(errors, SOURCE_MANIFEST, f"duplicate source SHA-256 on row {number}")
+        hashes.add(digest)
+
+        if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", row["audited_at"].strip()):
+            add_error(errors, SOURCE_MANIFEST, f"invalid audit date on row {number}")
+        if row["authority_level"] not in {"current_authority", "supporting_public_sample"}:
+            add_error(errors, SOURCE_MANIFEST, f"invalid authority level on row {number}")
+        expected_authority = (
+            "current_authority"
+            if source_id in CURRENT_AUTHORITY_SOURCE_IDS
+            else "supporting_public_sample"
+        )
+        if row["authority_level"] != expected_authority:
+            add_error(errors, SOURCE_MANIFEST, f"source authority does not match its role on row {number}")
+        if not row["scope"].strip() or not row["limitations"].strip():
+            add_error(errors, SOURCE_MANIFEST, f"missing scope or limitations on row {number}")
+
+    for source_id in sorted(REQUIRED_SOURCE_IDS - source_ids):
+        add_error(errors, SOURCE_MANIFEST, f"missing registered source ID: {source_id}")
+
+    repository_pdfs = [
+        path for path in ROOT.rglob("*.pdf")
+        if ".git" not in path.parts
+    ]
+    for path in repository_pdfs:
+        add_error(errors, path, "official PDF must remain outside the repository; register its URL and hash instead")
+
+    return source_ids
+
+
+def check_semantic_audit_registers(errors: list[str], source_ids: set[str]) -> None:
+    coverage_ids = [
+        line.split("|")[1].strip()
+        for line in (ROOT / "coverage.md").read_text(encoding="utf-8").splitlines()
+        if re.match(r"^\| (?:IG|AS|A2)-", line)
+    ]
+
+    for course, (path, expected_count) in SEMANTIC_AUDIT_FILES.items():
+        if not path.exists():
+            add_error(errors, path, "missing semantic audit register")
+            continue
+        try:
+            with path.open(encoding="utf-8", newline="") as handle:
+                reader = csv.DictReader(handle)
+                if reader.fieldnames != SEMANTIC_AUDIT_COLUMNS:
+                    add_error(errors, path, "semantic audit columns do not match the locked schema")
+                    continue
+                rows = list(reader)
+        except csv.Error as error:
+            add_error(errors, path, f"invalid semantic audit CSV: {error}")
+            continue
+
+        expected_ids = [objective_id for objective_id in coverage_ids if objective_id.startswith(f"{course}-")]
+        actual_ids = [row["objective_id"].strip() for row in rows]
+        if len(rows) != expected_count:
+            add_error(errors, path, f"semantic audit has {len(rows)} rows, expected {expected_count}")
+        if actual_ids != expected_ids:
+            add_error(errors, path, "semantic audit objective sequence does not match coverage.md")
+
+        seen_ids: set[str] = set()
+        for number, row in enumerate(rows, 2):
+            objective_id = row["objective_id"].strip()
+            if objective_id in seen_ids:
+                add_error(errors, path, f"duplicate semantic audit objective ID: {objective_id}")
+            seen_ids.add(objective_id)
+            if row["initial_status"] not in ALLOWED_INITIAL_AUDIT_STATUSES:
+                add_error(errors, path, f"invalid initial status on row {number}")
+            if row["final_status"] != "verified":
+                add_error(errors, path, f"final status must be verified on row {number}")
+
+            row_sources = {
+                source.strip()
+                for source in row["official_source"].split(";")
+                if source.strip()
+            }
+            if not row_sources:
+                add_error(errors, path, f"missing official source on row {number}")
+            for source_id in sorted(row_sources - source_ids):
+                add_error(errors, path, f"unknown official source ID on row {number}: {source_id}")
+            if not row["official_pages"].strip() or not row["audit_finding"].strip():
+                add_error(errors, path, f"missing official pages or audit finding on row {number}")
+            if not row["repair"].strip():
+                add_error(errors, path, f"missing repair disposition on row {number}")
+            if row["initial_status"] != "verified" and row["repair"].strip().casefold() == "none":
+                add_error(errors, path, f"non-verified initial finding lacks a repair on row {number}")
 
 
 def check_ao_totals(
@@ -1261,8 +1543,16 @@ def check_syllabus_alignment_contracts(errors: list[str]) -> None:
             heading_slug(match.group(1))
             for match in re.finditer(r"^#{1,6}\s+(.+?)\s*$", target_text, re.MULTILINE)
         }
+        explicit_ids = {
+            match.group(1).casefold()
+            for match in re.finditer(
+                r'<span\b[^>]*\bid=["\']([^"\']+)["\']',
+                target_text,
+                flags=re.IGNORECASE,
+            )
+        }
         expected_fragment = heading_slug(fragment)
-        if not any(
+        if expected_fragment not in explicit_ids and not any(
             slug == expected_fragment or slug.endswith(f"-{expected_fragment}")
             for slug in heading_slugs
         ):
@@ -1392,8 +1682,8 @@ def check_mixed_review(
         )
     )
     question_headings = [match.group(0) for match in question_matches]
-    mark_scheme_numbers = re.findall(
-        r"^### Question (\d+) Mark Scheme\b",
+    answer_numbers = re.findall(
+        r"^### Question (\d+) Indicative Marking Points\b",
         review_text,
         flags=re.MULTILINE,
     )
@@ -1406,12 +1696,12 @@ def check_mixed_review(
             f"expected questions {', '.join(expected_numbers)}, "
             f"found {', '.join(actual_numbers) or 'none'}",
         )
-    if mark_scheme_numbers != expected_numbers:
+    if answer_numbers != expected_numbers:
         add_error(
             errors,
             review_page,
-            f"expected mark schemes {', '.join(expected_numbers)}, "
-            f"found {', '.join(mark_scheme_numbers) or 'none'}",
+            f"expected indicative marking points for questions {', '.join(expected_numbers)}, "
+            f"found {', '.join(answer_numbers) or 'none'}",
         )
 
     if len(question_matches) == expected_questions:
@@ -1423,16 +1713,16 @@ def check_mixed_review(
                 f"question heading marks total {heading_total}, expected 75",
             )
 
-        mark_scheme_start = review_text.find("\n## Mark Scheme")
-        if mark_scheme_start == -1:
-            add_error(errors, review_page, "missing Mark Scheme section")
+        answer_section_start = review_text.find("\n## Indicative Marking Points")
+        if answer_section_start == -1:
+            add_error(errors, review_page, "missing Indicative Marking Points section")
         for index, match in enumerate(question_matches):
-            if mark_scheme_start == -1:
+            if answer_section_start == -1:
                 break
             next_start = (
                 question_matches[index + 1].start()
                 if index + 1 < len(question_matches)
-                else mark_scheme_start
+                else answer_section_start
             )
             question_text = review_text[match.end():next_start]
             labelled_total = sum(
@@ -1454,8 +1744,12 @@ def check_mixed_review(
 
 def extract_review_questions(path: Path) -> list[str]:
     text = path.read_text(encoding="utf-8")
-    mark_scheme = re.search(r"^## Mark Scheme\s*$", text, flags=re.MULTILINE)
-    question_text = text[: mark_scheme.start()] if mark_scheme else text
+    answer_section = re.search(
+        r"^## Indicative Marking Points\s*$",
+        text,
+        flags=re.MULTILINE,
+    )
+    question_text = text[: answer_section.start()] if answer_section else text
     matches = list(re.finditer(r"^## Question \d+[^\n]*$", question_text, flags=re.MULTILINE))
 
     return [
@@ -1611,7 +1905,7 @@ def check_assessment_alignment(errors: list[str]) -> None:
         for match in re.finditer(r"^## Question (\d+) [^\n]*\n(.*?)(?=^## |\Z)", text, re.M | re.S):
             number = match.group(1)
             questions = numbered_parts(match.group(2))
-            answer = re.search(rf"^### Question {number} Mark Scheme[^\n]*\n(.*?)(?=^##[#]? |\Z)",
+            answer = re.search(rf"^### Question {number} Indicative Marking Points[^\n]*\n(.*?)(?=^##[#]? |\Z)",
                                text, re.M | re.S)
             if not answer:
                 continue
@@ -1754,7 +2048,7 @@ def check_marked_content(errors: list[str]) -> None:
         [
             "Original practice paper",
             "1 hour 45 minutes",
-            "0478, examinations 2026–2028, Version 5",
+            "0478, examinations 2026–2028, Version 6",
             "Question 6 — Automated and Emerging Technologies [12]",
             "**45** | **15** | **15**",
         ],
@@ -1930,6 +2224,18 @@ def check_syllabus_conventions(errors: list[str]) -> None:
             add_error(errors, path, "uses same-line IF ... THEN instead of the 0478 pseudocode format")
         if re.search(r"ORDER BY[^;\n]*\b(?:ASC|DESC)\s*;", text, re.IGNORECASE):
             add_error(errors, path, "uses ASC/DESC instead of the active 0478 ASCENDING/DESCENDING notation")
+        for call in re.finditer(r"\bROUND\s*\(([^()\n]*)\)", text, re.IGNORECASE):
+            arguments = [argument.strip() for argument in call.group(1).split(",")]
+            if len(arguments) != 2 or not all(arguments):
+                add_error(errors, path, "0478 ROUND must use ROUND(value, places)")
+        for block in re.findall(r"```(?:text|pseudocode)\s*\n(.*?)```", text, re.DOTALL | re.IGNORECASE):
+            if re.search(r"\bRAND\s*\(", block, re.IGNORECASE):
+                add_error(errors, path, "0478 pseudocode must use RANDOM(), not 9618 RAND(x)")
+
+    for course in ("as-9618", "a2-9618"):
+        for path in sorted((ROOT / course).glob("*.md")):
+            if re.search(r"\bRANDOM\s*\(\s*\)", path.read_text(encoding="utf-8"), re.IGNORECASE):
+                add_error(errors, path, "9618 content must use RAND(x), not 0478 RANDOM()")
 
     forbidden_regressions = {
         AS_PAPER1_REVIEW_PAGE_2: [
@@ -2070,12 +2376,15 @@ def check_mermaid_runtime(errors: list[str]) -> None:
 
 def main() -> int:
     errors: list[str] = []
+    source_ids = check_source_manifest(errors)
+    check_semantic_audit_registers(errors, source_ids)
     check_chapter_inventory(errors)
     check_headings_and_fences(errors)
     check_chapter_heading_numbering(errors)
     check_references(errors)
     check_navigation(errors)
     check_marked_content(errors)
+    check_source_label_contracts(errors)
     check_cdn_versions(errors)
     check_syllabus_conventions(errors)
     check_svg_xml(errors)
@@ -2098,21 +2407,28 @@ def main() -> int:
     print("- all 30 chapters satisfy the editorial, identity and 10/20-mark contracts")
     print("- all 21 registered chapter overviews satisfy the title, anchor, four-area and 20-28-unit contracts")
     print("- student pages contain no maintainer headings, raw font tags or legacy keyword labels")
+    print("- source labels distinguish official evidence from original exam-style guidance")
+    print(
+        f"- all {len(source_ids)} registered official sources have Cambridge URLs, "
+        "SHA-256 values and authority metadata; no PDFs are stored in the repository"
+    )
+    print("- all three semantic audit registers match coverage.md and finish with verified status")
     print("- both IGCSE Paper 1 sets have 6 questions, 75 marks and AO1/AO2/AO3 45/15/15")
     print("- IGCSE Paper 2 chapters satisfy worked-example and exact 10/20-mark contracts")
-    print("- both IGCSE Paper 2 reviews have 7 questions, 75 marks and 7 mark schemes")
+    print("- both IGCSE Paper 2 reviews have 7 questions, 75 marks and 7 indicative answer sets")
     print("- both AS Paper 1 sets have 8 questions, 75 marks and AO1/AO2 45/30")
     print("- AS Paper 2 chapters satisfy worked-example and exact 10/20-mark contracts")
-    print("- both AS Paper 2 reviews have 7 questions, 75 marks and 7 mark schemes")
+    print("- both AS Paper 2 reviews have 7 questions, 75 marks and 7 indicative answer sets")
     print("- both A2 Paper 3 reviews have 8 questions, 75 marks and AO1/AO2 45/30")
     print("- A2 Paper 4 chapters satisfy worked-example and exact 10/20-mark contracts")
-    print("- both A2 Paper 4 reviews have 3 questions, 75 marks and 3 mark schemes")
+    print("- both A2 Paper 4 reviews have 3 questions, 75 marks and 3 indicative answer sets")
     print("- every A/B review pair remains below the 65% near-duplicate threshold")
     print(
         f"- all {len(EXPECTED_SYLLABUS_OBJECTIVE_IDS)} objective/atomic-child rows "
         "have structurally valid teaching, question and answer links"
     )
     print("- known 0478 pseudocode/SQL and syllabus-scope regressions are rejected")
+    print("- 0478 ROUND/RANDOM and 9618 RAND conventions remain distinct")
     print("- all AS/A2 Java examples compile for Java 17 and every main runs; Python blocks compile and complete examples run")
     print("- numbered review answers match their questions and allocations; declared drill totals agree")
     print("- jsDelivr npm dependencies use exact versions")

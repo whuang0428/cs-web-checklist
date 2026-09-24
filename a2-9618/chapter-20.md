@@ -441,6 +441,20 @@ class Ch20FileDemo {
 
 Place the outer `IOException` handler around opening and reading the file. Place the inner `NumberFormatException` handler around one record conversion. A malformed row is then reported and skipped without discarding later valid rows. Catching every exception around the entire method would hide programming faults and stop useful recovery.
 
+## File Organisation Transfer Drill
+
+For each organisation, describe or write the required file processing. **[9]**
+
+1. Append a transaction to a serial file, then scan from the start to find every transaction for one account.
+2. Insert a new customer record into a sequential file ordered by customer ID without overwriting an unread source record.
+3. Update one fixed-length record in a random file when the record number is known.
+
+### File Organisation Transfer Drill Answers
+
+1. Open the serial file in append mode, write the new record and close it **[1]**; reopen for reading and process records from the beginning to EOF, selecting matching account IDs **[1]**; close the input file **[1]**. **[3]**
+2. Open the existing sequential file for reading and a new file for writing **[1]**; copy records in key order, writing the new record before the first greater key (or at EOF), so no unread source record is overwritten **[1]**; close both files and use the completed new file as the updated version **[1]**. **[3]**
+3. Open the random file for read/write **[1]**; calculate/seek to `recordNumber * recordLength` (plus any field offset) **[1]**; read or overwrite the fixed-length record at that position and close the file **[1]**. **[3]**
+
 ## Required Ideas and Exam Language
 
 - Identify the paradigm from its defining control model.
@@ -497,7 +511,9 @@ Write a Java class `SensorReading` and a loader.
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 1. Class and private fields **[2]**; constructor assigns ID and uses validation **[2]**; getters **[1]**; inclusive boundary test **[1]**; valid update **[1]**; throws `IllegalArgumentException` for invalid input **[1]**. **[8]**
 2. **(a)** Correct return collection and try-with-resources **[1]**; reads and splits every line **[1]**; converts and adds a valid object **[1]**; catches a per-record format/range error and continues **[1]**; handles `IOException` **[1]**. **[5]**

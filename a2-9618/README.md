@@ -7,6 +7,8 @@
 
 This is the second-year content for the staged A Level route, not a separate qualification. Pseudocode remains required for planning and algorithm reasoning; this project supports **Java console mode only** for executable examples and Paper 4 practice.
 
+> **Source labels:** “Exam-style answer” and “Indicative marking points” identify original revision guidance, not official Cambridge wording. Any official or MS-aligned wording must name a source ID under the rules on the [syllabus versions page](../syllabus-versions.md#source-labels-used-on-this-site).
+
 ## Paper 3 — Advanced Theory
 
 **1 hour 30 minutes · 75 marks · Sections 13–20**

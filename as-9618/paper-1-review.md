@@ -10,7 +10,7 @@
 - Do not use a calculator.
 - Answer all eight questions.
 - Show all working and use precise technical language.
-- Attempt the complete paper before opening the mark scheme.
+- Attempt the complete paper before opening the indicative marking points.
 
 ### Coverage and assessment objectives
 
@@ -101,57 +101,71 @@ Each booking is for one event. An event uses one venue. A customer can make many
 3. Produce a set of relations in Third Normal Form, showing each primary key and foreign key. **[4]**
 4. Explain how referential integrity should be enforced when a booking is added. **[2]**
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [10]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [10]
 
 1. `7 × 256 + 13 × 16 + 3 = 2003`. Method/place values **[1]**, answer **[1]**. **[2]**
 2. `37 = 00100101`; invert and add one to give `11011011`. **[2]**
 3. Higher sampling rate records more measurements per second and can represent higher frequencies/more detail **[1]** but stores more samples and increases file size **[1]**. Greater resolution uses more bits per sample, representing amplitude more precisely/reducing quantisation error **[1]** but increases file size **[1]**. **[4]**
 4. RLE is effective for long runs of identical values **[1]**; complex audio changes frequently, so runs are short and run metadata may increase size **[1]**. **[2]**
 
-### Question 2 Mark Scheme [9]
+<span id="question-2-mark-scheme-9" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [9]
 
 1. LAN covers a limited geographic area and is normally owned/managed by one organisation **[1]**; WAN covers a large area and uses third-party telecommunications infrastructure / connects LANs **[1]**. **[2]**
 2. Each device has a separate link to the central switch **[1]**; a transmitted frame/packet reaches the switch **[1]**; the switch forwards it through the connection leading to the intended destination rather than every link **[1]**. **[3]**
 3. A public IP address is routable/visible on the internet while a private IP address is used inside the local network **[1]**; private addressing reduces direct exposure but does not replace firewall, authentication or other security controls **[1]**. **[2]**
 4. Benefit: high bandwidth, low attenuation or immunity to electromagnetic interference **[1]**; limitation: higher installation/equipment cost or more difficult repair/termination **[1]**. **[2]**
 
-### Question 3 Mark Scheme [9]
+<span id="question-3-mark-scheme-9" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [9]
 
 1. One mark for each correct role with a suitable contextual example: input captures data, such as GPS/touch screen; output communicates information, such as screen/speaker; secondary storage retains programs/data without power, such as flash storage. **[3]**
 2. Laser/LED creates an electrostatic image on a charged drum **[1]**; toner is attracted to the image and transferred to paper **[1]**; heated pressure rollers fuse toner to the paper **[1]**. **[3]**
 3. Two contextual advantages, such as resistance to vehicle vibration, lower power, smaller mass or faster access **[2]**; one disadvantage, such as higher cost per GiB or finite write endurance **[1]**. **[3]**
 
-### Question 4 Mark Scheme [10]
+<span id="question-4-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 4 Indicative Marking Points [10]
 
 1. PC holds next instruction address **[1]**; address copies to MAR and memory is read **[1]**; instruction returns through MDR **[1]**; instruction copies to CIR and PC is incremented **[1]**. **[4]**
 2. Control unit decodes opcode/operand or addressing mode **[1]**; required data is fetched and ALU performs addition, placing result in accumulator **[1]**. **[2]**
-3. Any two: number of cores, cache size/level/speed, bus width, word length, instruction-set/architecture efficiency. **[2]**
+3. Any two: processor type, number of cores, bus width, cache size/level/speed. **[2]**
 4. Processor completes the current instruction and saves register/program state **[1]**; runs the interrupt service routine, restores state and resumes the interrupted program **[1]**. **[2]**
 
-### Question 5 Mark Scheme [9]
+<span id="question-5-mark-scheme-9" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 5 Indicative Marking Points [9]
 
 1. Any three: process scheduling, memory management, peripheral management, file management, security/user management, user interface, platform for applications. **[3]**
 2. Compiler translates a complete program and produces object/executable code **[1]**; interpreter translates and executes one statement at a time without producing a standalone executable **[1]**. **[2]**
 3. Reusing tested library code reduces development time and duplicated faults **[1]**; a shared DLL avoids embedding the same library in every program and can be maintained separately **[1]**. **[2]**
 4. Any two: breakpoints, single stepping, watch expressions, variable inspection, trace/output window. **[2]**
 
-### Question 6 Mark Scheme [9]
+### Question 6 Indicative Marking Points [9]
 
 1. Security protects data from unauthorised access/damage **[1]**; privacy controls lawful/appropriate collection and use of personal data **[1]**; integrity means data remains accurate, complete and unaltered except by authorised action **[1]**. **[3]**
 2. Encryption converts plaintext data into ciphertext using a key **[1]**; a person without the required key cannot read the stolen or intercepted data **[1]**; encryption alone does not stop an authorised account or attacker with valid access from changing/deleting data, so access controls and backups are still required **[1]**. **[3]**
 3. One explained access control, such as role-based least privilege or multi-factor authentication **[1]**; one backup measure, such as encrypted offline/versioned copies with restoration tests **[1]**. **[2]**
 4. Different corruptions can produce the same checksum / a checksum does not stop deliberate alteration / it detects but does not correct an error. **[1]**
 
-### Question 7 Mark Scheme [9]
+### Question 7 Indicative Marking Points [9]
 
 1. Any two: continuous location surveillance, use beyond original purpose, sharing/sale, re-identification, unfair route decisions, data breach risk. **[2]**
 2. Two explained measures, two marks each: data minimisation, informed granular consent, short retention, aggregation/anonymisation with limitations considered, access/deletion controls, transparent purpose, security controls. **[4]**
 3. Copyright gives the creator legal rights over copying/distribution/adaptation **[1]**; a licence states the permissions and conditions under which another person may use the software **[1]**. **[2]**
 4. The component's licence may require attribution or preservation of notices. **[1]**
 
-### Question 8 Mark Scheme [10]
+<span id="question-8-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 8 Indicative Marking Points [10]
 
 1. `BookingID`. **[1]**
 2. Any three valid dependencies: `BookingID → CustomerID, EventID, SeatNo`; `CustomerID → CustomerName`; `EventID → EventName, VenueID`; `VenueID → VenueName`. **[3]**

@@ -10,7 +10,7 @@
 - Do not use a calculator.
 - Answer all eight questions.
 - Use precise technical language and link every explanation to the stated context.
-- Attempt the complete paper before reading the mark scheme.
+- Attempt the complete paper before reading the indicative marking points.
 
 ### Coverage Map
 
@@ -106,21 +106,29 @@ Use the low-level instruction set and the declarative notation shown in the ques
 
 ---
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [10]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [10]
 
 1. `6.75 = 110.11₂ = 0.11011₂ × 2³`. Positive mantissa `01101100` **[1]**, exponent `00011` **[1]**. Negate the mantissa using two's complement: `10010100` **[1]**, with the same exponent `00011` **[1]**. The negative mantissa has value −108/128, giving −6.75 after scaling. **[4]**
 2. The first two bits differ: `01` for positive and `10` for negative **[1]**; redundant leading sign bits are removed so available positions carry as many significant bits as possible **[1]**. **[2]**
 3. 0.1 has a recurring binary expansion and a finite mantissa must approximate it **[1]**; overflow occurs when the result exceeds the representable magnitude/range **[1]**; underflow occurs when a non-zero magnitude is too small for the format's exponent range **[1]**; rounding at successive operations can compound rather than reproduce exact arithmetic **[1]**. **[4]**
 
-### Question 2 Mark Scheme [9]
+<span id="question-2-mark-scheme-9" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [9]
 
 1. Application: services/protocols used by applications **[1]**; transport: end-to-end delivery, segmentation and reliability/ports **[1]**; internet: logical addressing and routing packets **[1]**; link: local-network framing/media access and physical transfer **[1]**. **[4]**
 2. Circuit establishes a dedicated route while packets may take different routes **[1]**; circuit reserves bandwidth while packet switching shares links **[1]**; circuit has predictable order/delay after setup while packets may be delayed, lost or reordered **[1]**. **[3]**
 3. Peers download file pieces from other peers and can upload pieces they already hold **[1]**; distribution does not depend on one central file server, although availability depends on peers continuing to share **[1]**. **[2]**
 
-### Question 3 Mark Scheme [10]
+<span id="question-3-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [10]
 
 1. Independent work can execute simultaneously, reducing elapsed time/increasing throughput **[1]**; serial sections, synchronisation or communication overhead limit the improvement **[1]**. Any two distinct VM uses: isolate the simulation, run a different/legacy OS, restore a test snapshot, or share physical hardware between separate environments **[2]**. **[4]**
 2. One mark for each complete row. **[2]**
@@ -132,27 +140,33 @@ Use the low-level instruction set and the declarative notation shown in the ques
 
 3. Group row `A=0`, columns `01` and `11` **[1]**, giving `NOT A AND C` because B varies **[1]**. Group row `A=1`, columns `00` and `01` **[1]**, giving `A AND NOT B` because C varies **[1]**. Combine with OR: `(NOT A AND C) OR (A AND NOT B)`. No valid group of four exists. **[4]**
 
-### Question 4 Mark Scheme [9]
+<span id="question-4-mark-scheme-9" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 4 Indicative Marking Points [9]
 
 1. FCFS runs processes in arrival order and may make short jobs wait behind a long job **[1]**; round robin gives each ready process a time slice **[1]**; round robin improves responsiveness/fairness but causes context-switch overhead **[1]**. **[3]**
 2. Program is divided into fixed-size pages and RAM into frames **[1]**; only required pages are loaded while other pages remain on secondary storage **[1]**; page faults cause required pages to be loaded/replaced, allowing the logical address space to exceed RAM **[1]**. **[3]**
 3. Lexical analysis groups source characters into tokens **[1]**; syntax analysis checks the token sequence against the language grammar **[1]**; code generation produces target/object code from the analysed program **[1]**. **[3]**
 
-### Question 5 Mark Scheme [9]
+<span id="question-5-mark-scheme-9" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 5 Indicative Marking Points [9]
 
 1. Encrypt message with recipient's public key so only the recipient's private key decrypts it **[2]**; sign a digest with sender's private key and verify using sender's public key **[2]**. **[4]**
 2. Certificate binds an identity/domain to a public key **[1]**; it is signed by a trusted certificate authority **[1]**; the client verifies the signature/validity before using the key to establish the secure session **[1]**. **[3]**
 3. Benefit: eavesdropping can be detected because measurement disturbs the quantum state **[1]**; limitation: specialised equipment, distance/rate constraints or high cost **[1]**. **[2]**
 
-### Question 6 Mark Scheme [9]
+### Question 6 Indicative Marking Points [9]
 
 1. Both find least-cost paths through a weighted graph **[1]**; Dijkstra expands by known distance from the start **[1]**; A* also adds a heuristic estimate to the goal **[1]**; an admissible/useful heuristic can reduce explored nodes while retaining an optimal result **[1]**. **[4]**
 2. Output is compared with the target to calculate error **[1]**; error contribution is propagated backwards through layers **[1]**; weights/biases are adjusted to reduce future error, usually using a learning rate/gradient **[1]**. **[3]**
 3. Supervised learning trains on labelled input-output examples **[1]**; unsupervised learning finds patterns/clusters in unlabelled data **[1]**. **[2]**
 
-### Question 7 Mark Scheme [10]
+<span id="question-7-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
 
-1. Full check with false result **[1]**; initialises new key and both child links **[1]**; handles empty root **[1]**; traverses from root and selects left/right by comparison **[2]**; attaches to the correct parent link **[1]**; updates allocation index and success result **[1]**. Accept equivalent complete algorithms. **[7]**
+### Question 7 Indicative Marking Points [10]
+
+1. Full check with false result **[1]**; initialises new key and both child links **[1]**; handles empty root **[1]**; traverses from root and selects left/right by comparison **[2]**; attaches to the correct parent link **[1]**; updates allocation index and success result **[1]**. Equivalent complete algorithms are also valid. **[7]**
 
 ```text
 PROCEDURE InsertKey(BYVAL NewKey : INTEGER, BYREF Inserted : BOOLEAN)
@@ -201,7 +215,9 @@ ENDPROCEDURE
 
 For keys `42, 18, 60, 27`, the traversal is `18, 27, 42, 60`. A call with −1 outputs nothing. A full tree must leave all stored nodes, `Root` and `NextFree` unchanged.
 
-### Question 8 Mark Scheme [9]
+<span id="question-8-mark-scheme-9" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 8 Indicative Marking Points [9]
 
 1. `LDM #6` **[1]**; `ADD 25` **[1]**; `STO 40` **[1]**. **[3]**
 2. `LDI 30` is indirect: address `30` contains the second address used to obtain the value **[1]**. `LDX 30` is indexed: the effective address is `30 + IX` **[1]**. **[2]**

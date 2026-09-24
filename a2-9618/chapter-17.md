@@ -65,7 +65,7 @@ Use this overview to choose encryption, protect or verify messages, establish tr
 
 ### Core encryption vocabulary
 
-| Term | Chinese explanation | Mark scheme style phrase |
+| Term | Chinese explanation | Exam-style phrasing |
 | --- | --- | --- |
 | Plaintext | <span lang="zh-CN">原始可读信息</span> | original readable message/data |
 | Ciphertext | <span lang="zh-CN">加密后的不可读信息</span> | encrypted unreadable message/data |
@@ -74,7 +74,7 @@ Use this overview to choose encryption, protect or verify messages, establish tr
 | Key | <span lang="zh-CN">控制加密</span>/<span lang="zh-CN">解密过程的数据</span> | value used by the encryption/decryption algorithm |
 | Cryptography | <span lang="zh-CN">加密通信的方法</span> | method of protecting data using encryption techniques |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > Encryption is the process of converting plaintext into ciphertext using an encryption algorithm and a key, so that the data cannot be understood if intercepted.
 
@@ -166,7 +166,7 @@ sequenceDiagram
 
 ## Two Different Uses of Public and Private Keys
 
-This is the most important part of Chapter 17. Students lose marks because they mix up these two cases.
+This is the most important part of Chapter 17. Students often mix up these two cases.
 
 ---
 
@@ -188,7 +188,7 @@ sequenceDiagram
     S->>S: Decrypt ciphertext using Sheila's private key
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The sender encrypts the plaintext using the receiver's public key. The ciphertext is sent to the receiver. Only the receiver can decrypt it using the receiver's private key.
 
@@ -233,7 +233,7 @@ sequenceDiagram
     P->>P: Use sender's public key to verify signature
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The sender creates a digital signature using their private key. The receiver uses the sender's public key to check the signature. If the check is successful, the receiver can verify the sender's identity and that the message has not been altered.
 
@@ -276,9 +276,9 @@ sequenceDiagram
 
 SSL means **Secure Socket Layer**. TLS means **Transport Layer Security**.
 
-In modern wording, TLS is the newer and more secure protocol, but exam answers often accept SSL/TLS together.
+TLS is the newer protocol. If a question uses the combined term SSL/TLS, follow that terminology while keeping the protocols distinct in your explanation.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > SSL/TLS provides secure client-server communication over a network by encrypting data, authenticating the server, and helping maintain data integrity.
 
@@ -371,7 +371,7 @@ It normally contains:
 + validity period
 + digital signature of the CA
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A digital certificate is an electronic document issued by a Certificate Authority that links an entity's identity to its public key.
 
@@ -388,7 +388,7 @@ A **Certificate Authority** is a trusted organisation that issues digital certif
 3. digitally signs the certificate
 4. allows users/browsers to verify that the certificate is trusted
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A Certificate Authority verifies the identity of an organisation and issues a digital certificate containing the organisation's public key.
 
@@ -424,7 +424,7 @@ E -->|Yes| F[Secure connection continues]
 E -->|No| G[Warning / connection blocked]
 ```
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 
 + **authenticate the identity of a website**
 + **contains the public key**
@@ -467,7 +467,7 @@ E -->|Yes| F[Sender verified + message unchanged]
 E -->|No| G[Invalid signature / message altered]
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > The sender creates a hash of the message and encrypts the hash using their private key to create a digital signature. The receiver decrypts the signature using the sender's public key and compares the result with a newly calculated hash of the received message. If they match, the message has not been changed and the sender is verified.
 
@@ -487,13 +487,13 @@ E -->|No| G[Invalid signature / message altered]
 
 Quantum cryptography is used to create highly secure communication, especially for key exchange.
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > Quantum cryptography uses the principles of quantum mechanics / properties of photons to provide secure communication and detect eavesdropping.
 
 ### Benefits
 
-| Benefit | Mark scheme style explanation |
+| Benefit | Exam-style explanation |
 | --- | --- |
 | eavesdropping can be detected | observing quantum states changes them, so interception can be noticed |
 | very high security | security is based on physics rather than only mathematical difficulty |
@@ -516,7 +516,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Encryption
 
@@ -592,7 +592,7 @@ Quantum cryptography is used to create highly secure communication, especially f
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Correct answer |
+| Mistake | Why it is weak | Correct answer |
 | --- | --- | --- |
 | Public key is secret | Public key is designed to be shared | Private key is secret |
 | Private key is sent to receiver | Private key must never be shared | Send/use public key instead |
@@ -681,6 +681,18 @@ E --> F[Data transferred securely]
 
 ---
 
+## Certificate Acquisition and Signature Drill
+
+1. Describe how an organisation obtains a digital certificate from a Certificate Authority. **[4]**
+2. Explain how the certificate supports verification of a digital signature on a software update. **[4]**
+
+**Total: 8 marks**
+
+### Certificate Acquisition and Signature Drill Answers
+
+1. The organisation generates a public/private key pair **[1]** and sends a certificate request containing its identity and public key to a CA **[1]**. The CA verifies the identity/domain ownership **[1]**, then issues and digitally signs a certificate binding that identity to the public key **[1]**. **[4]**
+2. The manufacturer hashes the update and signs the digest with its private key **[1]**. The device validates the certificate's CA signature, identity and validity **[1]**, obtains the authenticated manufacturer public key from it **[1]**, and uses that key to verify the signed digest against a fresh hash of the received update **[1]**. **[4]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -730,7 +742,9 @@ A hospital wants patients to send confidential medical information through a web
 
 Explain how asymmetric cryptography can be used so that only the hospital can read the message.
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 
 One mark per point, max 5:
 
@@ -747,7 +761,9 @@ One mark per point, max 5:
 
 Compare symmetric key cryptography and asymmetric key cryptography.
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 
 One mark per comparison, max 4:
 
@@ -765,7 +781,9 @@ A user logs in to an online banking website using HTTPS.
 
 Explain how SSL/TLS helps protect the communication.
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 
 One mark per point, max 4:
 
@@ -783,7 +801,9 @@ One mark per point, max 4:
 
 Explain the difference between a digital certificate and a digital signature.
 
-#### Question 4 mark scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 4 Indicative Marking Points
 
 One mark per point, max 4:
 
@@ -800,7 +820,9 @@ One mark per point, max 4:
 
 State one benefit and two drawbacks of quantum cryptography.
 
-#### Question 5 mark scheme
+<span id="question-5-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 5 Indicative Marking Points
 
 Max 3:
 

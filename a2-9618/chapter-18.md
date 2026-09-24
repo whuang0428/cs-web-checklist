@@ -69,7 +69,7 @@ Use this overview to model routes, choose learning, train networks and evaluate 
 Artificial Intelligence means using computer systems to carry out tasks that normally need human intelligence.
 For example, recognising patterns, making decisions, finding routes, making predictions, or learning from data.
 
-#### Mark scheme style answer
+#### Exam-style answer
 > Artificial intelligence is the use of computer systems to perform tasks that normally require human intelligence, such as learning, reasoning, recognising patterns, making predictions, or making decisions.
 
 #### Required ideas / marking points
@@ -104,7 +104,7 @@ A[Artificial Intelligence<br/>broad field] --> B[Machine Learning<br/>learns fro
 B --> C[Deep Learning<br/>many hidden layers in neural networks]
 ```
 
-#### Mark scheme style phrase
+#### Exam-style phrasing
 > Machine learning is a subset of AI where the system improves by learning from data. Deep learning is a subset of machine learning that uses artificial neural networks with multiple hidden layers.
 
 ---
@@ -124,7 +124,7 @@ A graph is a data structure used to show relationships between items.
 | Cycle | a path that returns to the starting node | A → B → C → A |
 
 
-#### Mark scheme answer
+#### Exam-style answer
 > A graph uses vertices / nodes to represent entities and edges to represent connections or relationships between them. Edges can be weighted to represent cost, distance, time, or another value.
 
 #### Required ideas / marking points
@@ -151,7 +151,7 @@ Examples:
 | recommendation system | users / items | similarity | similarity score |
 
 
-#### Mark scheme style answer
+#### Exam-style answer
 > Graphs are used in AI to record relationships between entities using nodes and edges. For example, places on a map can be represented as nodes, with edges showing routes and weights showing distance or cost.
 
 ---
@@ -190,7 +190,7 @@ In this graph:
 + A to C to B costs 2 + 1 = 3
 + Therefore A → C → B is cheaper than A → B
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 > A weight on an edge can represent the cost of travelling between two nodes.
 
 ---
@@ -202,7 +202,7 @@ In this graph:
 A* and Dijkstra's algorithm are graph search algorithms.
 They are used to find the best route through a graph.
 
-#### Mark scheme answer
+#### Exam-style answer
 > A* and Dijkstra's algorithms search for a shortest / lowest-cost route between two nodes in a weighted graph. Dijkstra uses accumulated edge costs; A* also uses a heuristic estimate to guide the search.
 
 #### Required ideas / marking points
@@ -227,7 +227,7 @@ Dijkstra looks for the shortest path from a starting node by repeatedly choosing
 + It guarantees the shortest path when edge weights are non-negative.
 + In 9618, you normally need to **use / describe purpose**, not write full code.
 
-#### Mark scheme style answer
+#### Exam-style answer
 > Dijkstra's algorithm finds the shortest path from a start node to other nodes in a weighted graph by using the known cost / distance of edges.
 
 ---
@@ -249,7 +249,7 @@ This estimate is called a **heuristic**.
 + It is guaranteed to find an optimal route only when the heuristic does not overestimate the remaining cost.
 + It is common in game AI and route planning.
 
-#### Mark scheme style answer
+#### Exam-style answer
 > A* searches for a lowest-cost path between nodes in a graph. It uses the cost so far and a heuristic estimate of the remaining cost to guide the search. It is guaranteed to find an optimal path when the heuristic does not overestimate the remaining cost.
 
 ---
@@ -272,7 +272,7 @@ This estimate is called a **heuristic**.
 | saying A* is only for games | It can be used for any suitable graph pathfinding problem |
 | saying Dijkstra uses trial and error | It systematically selects smallest known cost |
 | saying A* is always optimal | Its optimality guarantee depends on a heuristic that does not overestimate remaining cost |
-| forgetting graph keywords | Always mention **nodes / edges / weights** |
+| forgetting graph keywords | name the relevant **nodes / edges / weights** |
 | writing full code | Not required by syllabus |
 
 ---
@@ -350,7 +350,7 @@ A* therefore reconstructs the same route `S → A → B → C → G`, with total
 #### Student-friendly explanation
 Machine learning means the computer learns from data. Instead of manually programming every rule, the system finds patterns and improves its predictions or decisions.
 
-#### Mark scheme answer
+#### Exam-style answer
 > Machine learning is a component of AI where a system learns from data and improves its performance or predictions without being explicitly programmed for every rule.
 
 #### Required ideas / marking points
@@ -395,7 +395,7 @@ A label is the correct answer already attached to an example.
 | symptoms | disease type |
 
 
-#### Mark scheme answer
+#### Exam-style answer
 > Supervised learning uses labelled data, where known outcomes are applied to specific inputs so that the AI can learn to predict outcomes for new data.
 
 #### Required ideas / marking points
@@ -436,7 +436,7 @@ The system has to find patterns by itself.
 | network traffic | unusual patterns |
 
 
-#### Mark scheme answer
+#### Exam-style answer
 > Unsupervised learning uses unlabelled data. The system searches for hidden patterns, structures, or clusters within the data without known outcomes.
 
 #### Required ideas / marking points
@@ -460,7 +460,7 @@ The system has to find patterns by itself.
 | Example | classify emails as spam/not spam | group customers by behaviour |
 
 
-#### Mark scheme style comparison
+#### Exam-style comparison
 > Supervised learning uses labelled data with known outcomes, while unsupervised learning uses unlabelled data where outcomes are not known. Unsupervised learning searches for hidden patterns or clusters in the data.
 
 ---
@@ -482,7 +482,7 @@ The AI interacts with an environment, takes actions, and receives rewards or pen
 | trading bot | buy / sell | profit / loss |
 
 
-#### Mark scheme answer
+#### Exam-style answer
 > Reinforcement learning enables learning in an interactive environment by trial and error using rewards and penalties from its own experiences.
 
 #### Required ideas / marking points
@@ -529,7 +529,7 @@ Use reinforcement learning when:
 An artificial neural network is a computer model inspired by the human brain.
 It uses many connected processing units called nodes / neurons.
 
-#### Mark scheme answer
+#### Exam-style answer
 > An artificial neural network is designed to work in a similar way to the human brain. It has many connected processing units / nodes arranged in layers that work together to process data and learn from data.
 
 #### Required ideas / marking points
@@ -562,7 +562,7 @@ H2 --> O
 | Output layer | gives prediction / classification |
 
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 > Artificial neural networks have input, hidden and output layers, with nodes connected by weighted links.
 
 ---
@@ -580,7 +580,7 @@ During training:
 + weights are adjusted
 + the model becomes more accurate
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 > Weights are adjusted through training to reduce error and give a more accurate result.
 
 ---
@@ -591,7 +591,7 @@ During training:
 
 Deep learning is a type of machine learning that uses artificial neural networks with many hidden layers.
 
-#### Mark scheme answer
+#### Exam-style answer
 > Deep learning uses artificial neural networks with multiple hidden layers to extract complex features from data and make predictions or decisions.
 
 #### Required ideas / marking points
@@ -623,7 +623,7 @@ Deep learning is useful when:
 | natural language processing | identifies meaning and relationships in text |
 
 
-#### Mark scheme style answer
+#### Exam-style answer
 > Deep learning is useful because multiple hidden layers allow the model to extract complex features from large amounts of data and make more accurate predictions.
 
 ---
@@ -668,7 +668,7 @@ F --> G[Adjust weights]
 G --> H[Prediction becomes more accurate]
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 > Back propagation is where the error between the predicted output and expected output is passed backwards through the network so that weights can be adjusted to reduce the error.
 
 #### Required ideas / marking points
@@ -708,7 +708,7 @@ Regression is used to predict a continuous numeric value.
 | previous sales | future sales |
 
 
-#### Mark scheme style answer
+#### Exam-style answer
 > Regression is a machine learning method used to model the relationship between variables and predict a continuous numerical value.
 
 #### Required ideas / marking points
@@ -736,7 +736,7 @@ Regression is used to predict a continuous numeric value.
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Graphs in AI
 + **nodes / vertices**
@@ -815,7 +815,7 @@ Regression is used to predict a continuous numeric value.
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Better answer |
+| Mistake | Why it is weak | Better answer |
 | --- | --- | --- |
 | AI = robot | Too narrow | AI performs tasks requiring human intelligence |
 | graph = chart | Wrong meaning in CS | graph = nodes and edges |
@@ -945,6 +945,22 @@ A → C → D = 2 + 8 = 10
 
 ---
 
+## Learning-Method Selection Drill
+
+For each task, choose the most suitable learning approach and justify the choice. **[8]**
+
+1. Predict a disease category from many images labelled by specialists.
+2. Find previously unknown customer groupings in records with no category labels.
+3. Train a robot to choose actions in a changing maze using scores for successful movement.
+4. Recognise complex objects in a very large image collection where several levels of features must be learned.
+
+### Learning-Method Selection Drill Answers
+
+1. Supervised learning **[1]** because labelled examples provide known target categories for training/error measurement **[1]**.
+2. Unsupervised learning **[1]** because no target labels are supplied and the method can discover clusters/patterns **[1]**.
+3. Reinforcement learning **[1]** because the agent learns a policy through rewards/penalties from actions and their outcomes **[1]**.
+4. Deep learning **[1]** because multiple hidden layers can learn hierarchical/complex features from a large data set **[1]**.
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -1002,7 +1018,9 @@ R -- 3 --> T
 
 (c) For A*, use `h(P)=5`, `h(Q)=4`, `h(R)=2`, `h(T)=0`. State the order in which nodes are selected, then give the route and total cost. [2]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 (a)
 + towns/locations are represented as nodes and possible routes as directed edges [1]
 + weights represent travel time / the cost of following each route [1]
@@ -1026,7 +1044,9 @@ A website wants to recommend products to users. It has a large amount of shoppin
 
 (c) Explain why supervised learning may not be suitable. [2]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 (a) Unsupervised learning [1]
 
 (b)
@@ -1050,7 +1070,9 @@ A hospital uses an AI system to analyse medical images.
 
 (d) A second model uses patient age, treatment data and test results to predict the number of recovery days. Explain why regression is suitable for this prediction. [2]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 (a)
 + has connected processing units / nodes / neurons [1]
 + arranged in layers: input, hidden and output [1]

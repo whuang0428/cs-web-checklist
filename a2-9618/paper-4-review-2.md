@@ -41,9 +41,13 @@ Class `RaceResult` stores unique integer `runnerId` and positive real `finishTim
 3. Write `loadCatalogue(Path path, CatalogueTree tree)`. Continue after malformed rows, handle an unreadable file and return the number loaded. **[5]**
 4. Produce four tests: empty search, root/left/right insertion, duplicate update and malformed row followed by a valid row. **[4]**
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [25]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-25" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [25]
 
 - Bubble sort: upper boundary **[1]**; swapped flag **[1]**; passes/termination **[1]**; correct inner bounds **[1]**; compares times **[1]**; swaps records **[1]**; shrinks boundary **[1]**. **[7]**
 - Linear search: iterates records **[1]**; compares ID **[1]**; returns match **[1]**; returns `null` after failure **[1]**. **[4]**
@@ -126,7 +130,9 @@ class Paper4BQuestion1 {
 }
 ```
 
-### Question 2 Mark Scheme [26]
+<span id="question-2-mark-scheme-26" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [26]
 
 - `Ticket`: class/constructor **[1]**; private fields **[1]**; initialisation **[1]**; setter used **[1]**; getters **[1]**; negative rejected **[1]**; fee **[1]**. **[7]**
 - `GroupTicket`: inheritance **[1]**; constructor **[1]**; super call **[1]**; private size **[1]**; inclusive validation **[1]**; overridden fee **[1]**. **[6]**
@@ -204,7 +210,9 @@ class Paper4BQuestion2 {
 }
 ```
 
-### Question 3 Mark Scheme [24]
+<span id="question-3-mark-scheme-24" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [24]
 
 - Tree: node fields **[2]**; empty root **[1]**; empty insertion **[1]**; iterative comparison **[2]**; attaches child **[1]**; duplicate update **[1]**; ordered find **[1]**; returns name/null **[1]**. **[10]**
 - In-order: parameters **[1]**; null base **[1]**; left **[1]**; current append **[1]**; right **[1]**. **[5]**

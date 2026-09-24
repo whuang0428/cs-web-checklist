@@ -318,10 +318,10 @@ Use the rule: input `Score`; output `"Pass"` when `Score >= 50`, otherwise outpu
 ### Representation Transfer Drill Answers
 
 1. Each representation must preserve one input, the `Score >= 50` decision and both outputs. Structured English earns one mark for the input/decision and one for both branches **[2]**. The flowchart earns one mark for correct input/decision shapes and one for labelled branches leading to the two outputs **[2]**. Pseudocode earns one mark for `INPUT Score` and the condition, and one for a complete `IF ... ELSE ... ENDIF` with both outputs **[2]**.
-2. Award one mark for a post-condition input loop ending with `UNTIL Quantity >= 1 AND Quantity <= 10`, and one for `OUTPUT Quantity * 4`. **[2]**
-3. `INPUT Age`, followed by a complete `IF Age >= 18 THEN ... ELSE ... ENDIF` with the two stated outputs. Award input/condition **[1]** and complete branches **[1]**. **[2]**
-4. Start → input `Temperature` → decision `Temperature < 0?`; labelled Yes leads to output `"Ice"`, labelled No leads to output `"Water"`; both paths reach Stop. Award correct symbols/condition **[1]** and labelled complete paths **[1]**. **[2]**
-5. Start → input `Value` → decision `Value < 0?`; Yes returns to input, while No leads to output `Value` and Stop. Award the correctly labelled loop **[1]** and the exit/output path **[1]**. **[2]**
+2. Suggested allocation: one mark for a post-condition input loop ending with `UNTIL Quantity >= 1 AND Quantity <= 10`, and one for `OUTPUT Quantity * 4`. **[2]**
+3. `INPUT Age`, followed by a complete `IF Age >= 18 THEN ... ELSE ... ENDIF` with the two stated outputs. Suggested allocation: input/condition **[1]** and complete branches **[1]**. **[2]**
+4. Start → input `Temperature` → decision `Temperature < 0?`; labelled Yes leads to output `"Ice"`, labelled No leads to output `"Water"`; both paths reach Stop. Suggested allocation: correct symbols/condition **[1]** and labelled complete paths **[1]**. **[2]**
+5. Start → input `Value` → decision `Value < 0?`; Yes returns to input, while No leads to output `Value` and Stop. Suggested allocation: the correctly labelled loop **[1]** and the exit/output path **[1]**. **[2]**
 
 ---
 
@@ -609,11 +609,13 @@ A cycling event system records a rider number, age category, distance completed 
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 1. Essential: any two of distance, completion time, award rules, and age category if used by the rules **[2]**. Irrelevant: shirt colour and preferred music **[2]**. **[4]**
 2. Any four clear modules, for example input rider data, validate values, calculate/select award, store result, display result. **[4]**
-3. Award one mark for each complete, suitable row. Example:
+3. Suggested allocation: one mark for each complete, suitable row. Example:
 
    | Identifier | Data type | Purpose |
    |---|---|---|

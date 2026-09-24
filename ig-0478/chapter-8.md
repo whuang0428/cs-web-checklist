@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 8: Programming
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 2</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -733,6 +733,26 @@ if __name__ == "__main__":
 
 3. Open the separate log with `with open(log_path, "a", encoding="utf-8") as log:` **[1]**; select the average or `No marks` according to the count **[1]**; write the result plus `"\n"` and close via `with` **[1]**. Append preserves previous summaries; write mode would replace them **[1]**. The log must differ from both the input and accepted-mark output paths.
 
+## Targeted Syllabus Drill
+
+1. Write one `IF` statement and one `CASE` statement that output a message for a menu choice from 1 to 3. **[4]**
+2. Use a count-controlled loop to output 1 to 3, then write both a pre-condition loop and a post-condition loop that repeatedly input `Choice` until it is from 1 to 3 inclusive. **[6]**
+3. For `Code <- "Ab407"`, write statements that obtain its length, extract three characters from position 2, convert it to upper case and convert it to lower case. **[4]**
+4. State the results of `DIV(17, 5)`, `MOD(17, 5)` and `ROUND(7 / 3, 2)`, then write an expression using `RANDOM()` that produces a real value in its defined range. **[4]**
+5. Distinguish a procedure from a function, explain the purpose of a parameter, and distinguish local from global scope. **[4]**
+6. Write one statement that adds `Value` to a total and one selection that increments `Count` only when `Value > 0`. **[2]**
+7. Declare `Scores` as a one-dimensional array of five integers, input every element using a variable index, and increase the third element by one. **[4]**
+
+### Targeted Syllabus Drill Answers
+
+1. One correctly formed `IF ... THEN ... ELSE ... ENDIF` selection **[2]** and one correctly formed `CASE OF ... OTHERWISE ... ENDCASE` selection **[2]**. **[4]**
+2. For example: `FOR Value <- 1 TO 3 ... NEXT Value` **[2]**; initialise/input `Choice`, then use `WHILE Choice < 1 OR Choice > 3 DO ... ENDWHILE` **[2]**; use `REPEAT INPUT Choice UNTIL Choice >= 1 AND Choice <= 3` **[2]**. **[6]**
+3. `LENGTH(Code)`; `SUBSTRING(Code, 2, 3)`; `UCASE(Code)`; `LCASE(Code)`. One mark for each correct operation and arguments. **[4]**
+4. `3`; `2`; `2.33`; `RANDOM()` (or assignment from it). **[4]**
+5. A procedure performs a task without directly returning a value **[1]**; a function returns one value **[1]**; a parameter passes a value into a subroutine **[1]**; local scope is restricted to its subroutine while global scope is accessible more widely **[1]**. **[4]**
+6. `Total <- Total + Value` **[1]**; `IF Value > 0 THEN Count <- Count + 1 ENDIF` **[1]**. **[2]**
+7. `DECLARE Scores : ARRAY[1:5] OF INTEGER` **[1]**; a loop from 1 to 5 **[1]** with `INPUT Scores[Index]` **[1]**; `Scores[3] <- Scores[3] + 1` **[1]**. **[4]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -787,7 +807,9 @@ A wildlife station stores the number of birds seen at four sites on seven days i
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 1.
 

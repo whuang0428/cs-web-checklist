@@ -86,7 +86,7 @@ A **file-based approach** stores data in separate files, usually created for one
 
 #### Limitations
 
-| Limitation | Brief Chinese Support | Mark scheme phrase |
+| Limitation | Brief Chinese Support | Exam-style phrasing |
 | --- | --- | --- |
 | Data duplication / redundancy | <span lang="zh-CN">同一数据在多个文件重复存储</span> | same data stored more than once |
 | Data inconsistency | <span lang="zh-CN">一个文件更新了</span>，<span lang="zh-CN">另一个没更新</span> | data may become inconsistent |
@@ -131,7 +131,7 @@ relational database <span lang="zh-CN">的核心就是</span> **<span lang="zh-C
 
 ### Primary key
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A primary key is an attribute or set of attributes that uniquely identifies each record in a table.
 
@@ -154,7 +154,7 @@ CUSTOMER(CustomerID, FirstName, LastName, ContactNumber)
 
 ### Candidate key
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A candidate key is an attribute or set of attributes that could be used as the primary key because it uniquely identifies each record.
 
@@ -178,7 +178,7 @@ Only one is chosen as the **primary key**, but all three could uniquely identify
 
 ### Secondary key
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A secondary key is an attribute used to find a group of records and does not have to contain unique values.
 
@@ -190,7 +190,7 @@ Do not define a secondary key as “the second candidate key”. Its purpose is 
 
 ### Foreign key
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A foreign key is an attribute in one table that refers to the primary key in another table.
 
@@ -224,7 +224,7 @@ Foreign keys in `SALE`:
 
 ### Referential integrity
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > Referential integrity ensures that a foreign key value in one table must match an existing primary key value in the referenced table.
 
@@ -305,7 +305,7 @@ This is implemented using a **linking table**:
 REPAIR_PART(PartID, RepairNumber, Quantity)
 ```
 
-#### Mark scheme style
+#### Exam-style wording
 
 > A many-to-many relationship is implemented by creating a linking table that contains the primary keys from both tables as foreign keys.
 
@@ -347,7 +347,7 @@ that usually means it is a **linking table** between `REPAIR` and `PART`.
 
 ### Why normalise?
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > Normalisation reduces data redundancy and helps avoid update, insert and delete anomalies.
 
@@ -356,7 +356,7 @@ normalisation <span lang="zh-CN">就是把</span>“<span lang="zh-CN">乱的大
 
 #### Benefits
 
-| Benefit | Brief Chinese Support | Mark scheme phrase |
+| Benefit | Brief Chinese Support | Exam-style phrasing |
 | --- | --- | --- |
 | Reduces redundancy | <span lang="zh-CN">减少重复数据</span> | reduces data duplication |
 | Improves consistency | <span lang="zh-CN">数据更一致</span> | improves data consistency |
@@ -469,7 +469,7 @@ TUTOR(TutorID, TutorName)
 
 ### DBMS definition
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > A DBMS is software used to define, create, maintain and control access to a database.
 
@@ -480,7 +480,7 @@ DBMS <span lang="zh-CN">就是管理数据库的软件层</span>。<span lang="z
 
 ### DBMS features
 
-| Feature | What it does | Mark scheme phrase |
+| Feature | What it does | Exam-style phrasing |
 | --- | --- | --- |
 | Data dictionary | stores metadata about database structure | stores data about data |
 | Data management | maintains data in tables | stores / updates / deletes data |
@@ -531,7 +531,7 @@ DBMS can improve integrity by:
 + using constraints such as `NOT NULL`
 + controlling concurrent updates
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > The DBMS can enforce validation rules and referential integrity to ensure data remains accurate, complete and consistent.
 
@@ -561,7 +561,7 @@ DBMS can improve security by:
 
 A developer interface lets developers create and modify database structures and write SQL queries.
 
-#### Mark scheme style
+#### Exam-style wording
 
 > The developer interface allows a developer to write SQL commands to define, query and maintain the database.
 
@@ -581,7 +581,7 @@ It may:
 + execute the query
 + return results
 
-#### Mark scheme style
+#### Exam-style wording
 
 > The query processor interprets and executes SQL queries and may optimise them before execution.
 
@@ -596,7 +596,7 @@ It may:
 | DDL | Data Definition Language | create / change database structure | `CREATE DATABASE`, `CREATE TABLE`, `ALTER TABLE` |
 | DML | Data Manipulation Language | query / insert / update / delete data | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
 
-#### Mark scheme answer
+#### Exam-style answer
 
 > DDL is used to define or modify the structure of a database. DML is used to query and maintain the data stored in the database.
 
@@ -748,7 +748,7 @@ AND Date >= '2023-01-01'
 AND Date <= '2023-12-31';
 ```
 
-Alternative accepted style may use:
+Another valid style may use:
 
 ```sql
 AND Date BETWEEN '2023-01-01' AND '2023-12-31'
@@ -794,7 +794,7 @@ INNER JOIN REPAIR
 ON CUSTOMER.CustomerID = REPAIR.CustomerID;
 ```
 
-#### Mark scheme style
+#### Exam-style wording
 
 You can also see comma-style join:
 
@@ -844,7 +844,7 @@ unless you want to delete every row.
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Database concept keywords
 
@@ -891,7 +891,7 @@ unless you want to delete every row.
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Correct version |
+| Mistake | Why it is weak | Correct version |
 | --- | --- | --- |
 | saying primary key is “important field” | too vague | uniquely identifies each record |
 | saying foreign key is “another primary key” | not precise | references primary key in another table |
@@ -1038,6 +1038,65 @@ J --> K[Check field names, types, conditions]
 
 ---
 
+---
+
+## Targeted Syllabus Drill
+
+1. Define entity, table, record/tuple, field/attribute, primary key, candidate key, secondary key and foreign key. Distinguish one-to-one, one-to-many and many-to-many relationships, then explain referential integrity and indexing. **[14]**
+2. Explain how these DBMS features address file-based problems: data management/data dictionary, data modelling, logical schema, data integrity, data security, backup, individual/group access rights, developer interface and query processor. **[10]**
+3. Write SQL DDL to create database `FITNESS`, create a `SESSION` table that demonstrates `CHARACTER`, `VARCHAR(n)`, `BOOLEAN`, `INTEGER`, `REAL`, `DATE` and `TIME`, declare a primary key and a foreign key to `COACH(CoachID)`, and alter the table to add `RoomName`. **[12]**
+4. Given `MEMBER(MemberID, Region)` and `BOOKING(BookingID, MemberID, Fee, Paid)`, write: (a) one query using `SELECT`, `FROM`, `WHERE`, `INNER JOIN`, `GROUP BY`, `COUNT`, `AVG` and `ORDER BY` to summarise paid bookings by region; (b) one `INSERT`; (c) one `UPDATE`; and (d) one `DELETE`. Use no more than the two named tables. **[12]**
+
+### Targeted Syllabus Drill Answers
+
+1. Entity: distinguishable thing represented **[1]**; table: rows and columns for one entity type/relationship **[1]**; record/tuple: one row **[1]**; field/attribute: one named property/column **[1]**; primary key: selected unique, non-null row identifier **[1]**; candidate key: any minimal field/set able to identify a row uniquely **[1]**; secondary key: non-primary field used to search/order records and not necessarily unique **[1]**; foreign key: field(s) referencing a key in another/related table **[1]**. One-to-one pairs each row with at most one row; one-to-many allows one parent to relate to several child rows; many-to-many allows several on both sides and is resolved with a linking table **[3]**. Referential integrity prevents an unmatched foreign-key value **[1]**. An index stores search keys/pointers to speed retrieval, at the cost of storage and update work **[2]**. **[14]**
+2. Data management/data dictionary centrally maintains data and metadata **[1]**; data modelling documents entities/relationships **[1]**; the logical schema defines the organised logical structure independently of user programs **[1]**; constraints/validation support data integrity **[1]**; authentication/authorisation support security **[1]**; backups support recovery **[1]**; individual/group access rights restrict operations by role **[1]**; the developer interface provides tools/API/SQL entry for creating and maintaining applications/database objects **[1]**; the query processor parses, checks, optimises and executes queries **[1]**. One linked comparison with duplicated/inconsistent/insecure file storage earns **[1]**. **[10]**
+3. One valid answer is **[12]**:
+
+   ```sql
+   CREATE DATABASE FITNESS;
+
+   CREATE TABLE SESSION (
+       SessionID CHARACTER(6),
+       CoachID CHARACTER(5),
+       SessionName VARCHAR(40),
+       Online BOOLEAN,
+       Capacity INTEGER,
+       Fee REAL,
+       SessionDate DATE,
+       StartTime TIME,
+       PRIMARY KEY (SessionID),
+       FOREIGN KEY (CoachID) REFERENCES COACH(CoachID)
+   );
+
+   ALTER TABLE SESSION
+   ADD RoomName VARCHAR(20);
+   ```
+
+4. One valid set is **[12]**:
+
+   ```sql
+   SELECT MEMBER.Region,
+          COUNT(BOOKING.BookingID),
+          AVG(BOOKING.Fee)
+   FROM MEMBER
+   INNER JOIN BOOKING
+       ON MEMBER.MemberID = BOOKING.MemberID
+   WHERE BOOKING.Paid = TRUE
+   GROUP BY MEMBER.Region
+   ORDER BY MEMBER.Region;
+
+   INSERT INTO BOOKING (BookingID, MemberID, Fee, Paid)
+   VALUES ('B301', 'M104', 18.50, FALSE);
+
+   UPDATE BOOKING
+   SET Paid = TRUE
+   WHERE BookingID = 'B301';
+
+   DELETE FROM BOOKING
+   WHERE BookingID = 'B301';
+   ```
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -1113,11 +1172,13 @@ BOOKING(MemberID, ClassID, BookingDate, Paid)
 
 #### (f) Explain two benefits of using a relational database instead of a file-based approach. `[4]`
 
-#### (g) State the purpose of a data dictionary and describe how a query or report tool helps a user obtain information. `[2]`
+#### (g) State the purpose of a data dictionary and explain how a developer interface or query processor is used in practice. `[2]`
 
 ---
 
-### Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### Indicative Marking Points
 
 #### (a) `[1]`
 
@@ -1140,7 +1201,7 @@ One mark for each correct foreign key + referenced table.
 
 #### (c) `[3]`
 
-Award one mark for each:
+Suggested allocation: one mark for each:
 
 + `MEMBER` shown in a one-to-many relationship with `BOOKING`
 + `CLASS` shown in a one-to-many relationship with `BOOKING`
@@ -1164,7 +1225,7 @@ CREATE TABLE BOOKING (
 );
 ```
 
-Award marks:
+Suggested allocation:
 
 | Mark | Requirement |
 | --- | --- |
@@ -1187,7 +1248,7 @@ WHERE ClassID = 'YOGA01'
 AND Paid = FALSE;
 ```
 
-Award marks:
+Suggested allocation:
 
 | Mark | Requirement |
 | --- | --- |
@@ -1199,7 +1260,7 @@ Award marks:
 
 #### (f) `[4]`
 
-Award up to 4 marks:
+Suggested allocation: up to 4 marks:
 
 + reduces data redundancy
 + because data is stored once in a table
@@ -1219,7 +1280,7 @@ Example answer:
 #### (g) `[2]`
 
 + A data dictionary stores metadata such as table/field names, data types, keys, relationships and validation rules. `[1]`
-+ A query tool lets the user select/filter/join stored data, or a report tool formats selected query results for readable output. `[1]`
++ A developer interface lets a developer enter SQL to define, query or maintain the database, or a query processor parses, checks, optimises and executes an SQL statement. `[1]`
 
 ---
 

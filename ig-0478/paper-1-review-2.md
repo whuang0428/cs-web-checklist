@@ -4,7 +4,7 @@
 
 ## Instructions
 
-- Syllabus: **0478, examinations 2026–2028, Version 5**
+- Syllabus: **0478, examinations 2026–2028, Version 6**
 - Recommended time: **1 hour 45 minutes**
 - Total: **75 marks**
 - Do not use a calculator.
@@ -81,9 +81,13 @@ A recycling centre uses a conveyor, cameras and robotic arms to separate materia
 3. Explain how a machine-learning system can use labelled camera images to improve its classification decisions. **[3]**
 4. Evaluate replacing all manual checking with the trained system. Give one benefit, one limitation and a justified conclusion. **[3]**
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [12]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-12" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [12]
 
 1. `128 + 64 + 16 + 4 + 2 = 214`; method/place values **[1]**, answer **[1]**. **[2]**
 2. `94 = 5 × 16 + 14`, so `5E`; method **[1]**, answer **[1]**. **[2]**
@@ -91,7 +95,9 @@ A recycling centre uses a conveyor, cameras and robotic arms to separate materia
 4. `320 × 200 × 16 = 1 024 000` bits **[1]**; `÷ 8 = 128 000` bytes **[1]**; `÷ 1024 = 125 KiB` **[1]**. **[3]**
 5. Lossless compression preserves every original character/bit **[1]**, so decompression reconstructs the exact membership records without corrupting data **[1]**. **[2]**
 
-### Question 2 Mark Scheme [12]
+<span id="question-2-mark-scheme-12" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [12]
 
 1. Simplex sends in one direction only **[1]**; full duplex permits simultaneous transmission in both directions **[1]**. **[2]**
 2. Messages are divided into packets that share links with other traffic **[1]**; links are not reserved while a scanner is idle **[1]**; packets may take available routes and be reassembled at the destination **[1]**. **[3]**
@@ -99,7 +105,9 @@ A recycling centre uses a conveyor, cameras and robotic arms to separate materia
 4. Receiver sends the received code back **[1]**; sender compares it with the original and detects a mismatch **[1]**. **[2]**
 5. Sender starts a timer after transmission **[1]**; no acknowledgement arrives before timeout when the packet or acknowledgement is lost **[1]**; sender retransmits the packet **[1]**. **[3]**
 
-### Question 3 Mark Scheme [14]
+<span id="question-3-mark-scheme-14" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [14]
 
 1. MAR stores the address being accessed **[1]**; MDR stores the data/instruction transferred to or from memory **[1]**. **[2]**
 2. PC address copies to MAR **[1]**; address is sent and memory read is signalled **[1]**; instruction returns to MDR on the data bus **[1]**; it copies to CIR and PC is incremented **[1]**. **[4]**
@@ -107,14 +115,16 @@ A recycling centre uses a conveyor, cameras and robotic arms to separate materia
 4. It detects changes in capacitance rather than requiring pressure **[1]** and can detect more than one touch position for gestures **[1]**. **[2]**
 5. Benefit such as access from multiple locations or provider-managed redundancy **[1]**; risk such as internet outage, account compromise or dependence on provider **[1]**; justified action such as keep tested independent backups and access controls rather than using cloud as the only copy **[1]**. **[3]**
 
-### Question 4 Mark Scheme [11]
+### Question 4 Indicative Marking Points [11]
 
 1. System software manages/controls the computer, for example an operating system **[2]**; application software performs a user task, for example the volunteer-management program **[2]**. **[4]**
 2. Printer raises a request/flag **[1]**; processor saves state, runs the relevant ISR and resumes the interrupted process **[1]**. **[2]**
 3. Any two paired differences: abstraction/readability, portability, hardware control, translation or typical instruction complexity. **[2]**
 4. It translates the whole source program and reports detected errors together **[1]**; corrected source is translated to object/executable code **[1]**; the executable can run without the compiler/source being present **[1]**. **[3]**
 
-### Question 5 Mark Scheme [14]
+<span id="question-5-mark-scheme-14" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 5 Indicative Marking Points [14]
 
 1. URL identifies the protocol/domain/resource location **[1]**; web server stores/delivers requested web resources **[1]**. **[2]**
 2. Browser sends the domain to a DNS resolver **[1]**; DNS returns the matching IP address **[1]**; browser connects to that server and requests the resource **[1]**. **[3]**
@@ -122,7 +132,7 @@ A recycling centre uses a conveyor, cameras and robotic arms to separate materia
 4. Social engineering **[1]**; attacker manipulates a person into disclosing the code **[1]**; valid disclosed credentials may appear legitimate to technical controls, so training and verification procedures are also needed **[1]**. **[3]**
 5. Transactions are stored in linked blocks/shared copies **[1]**; hashes link blocks so alteration changes later hash values **[1]**; network participants validate/agree updates, making unnoticed unilateral alteration difficult **[1]**. **[3]**
 
-### Question 6 Mark Scheme [12]
+### Question 6 Indicative Marking Points [12]
 
 1. Camera/sensor captures the item **[1]**; processor compares/classifies the input using stored rules/model **[1]**; control signal operates the appropriate arm/actuator **[1]**; repeated sensing confirms the result and supplies feedback **[1]**. **[4]**
 2. Any two: programmable, senses its environment, moves/manipulates objects, performs more than one task, can act automatically. **[2]**

@@ -71,7 +71,7 @@ RISC means **Reduced Instruction Set Computer**.
 RISC processor <span lang="zh-CN">的设计思想是</span>：
 <span lang="zh-CN">用较少</span>、<span lang="zh-CN">较简单</span>、<span lang="zh-CN">格式较固定的指令</span>，<span lang="zh-CN">让</span> CPU <span lang="zh-CN">更容易快速执行和流水线处理</span>。
 
-#### Mark scheme answer
+#### Exam-style answer
 > A RISC processor uses a relatively small number of simple instructions, often fixed length and fixed format. Instructions usually use a single cycle, make use of general-purpose registers, and pipelining is easier to apply.
 >
 
@@ -111,7 +111,7 @@ CISC means **Complex Instruction Set Computer**.
 CISC processor <span lang="zh-CN">的设计思想是</span>：
 <span lang="zh-CN">一条指令可以完成更复杂的操作</span>，<span lang="zh-CN">因此程序可能需要更少的指令</span>，<span lang="zh-CN">但</span> CPU <span lang="zh-CN">解码和执行会更复杂</span>。
 
-#### Mark scheme answer
+#### Exam-style answer
 > A CISC processor has a larger instruction set with more complex instructions. Instructions may be variable length and may take several clock cycles to execute. The design emphasis is more on hardware.
 >
 
@@ -149,7 +149,7 @@ Interrupt handling <span lang="zh-CN">的核心不是</span>“CPU stop”，<sp
 5. saved register values are restored
 6. original program continues
 
-#### Mark scheme answer
+#### Exam-style answer
 > When an interrupt is detected, the current program is temporarily stopped and the status of registers / program counter is stored on the stack. The Interrupt Service Routine is executed. After the interrupt has been serviced, the saved register values are restored and the original program continues.
 >
 
@@ -164,8 +164,8 @@ Pipelining <span lang="zh-CN">会让</span> interrupt handling <span lang="zh-CN
 | Mistake | Correction |
 | --- | --- |
 | saying "CPU deletes the current program" | current state is saved, not deleted |
-| forgetting ISR | must mention **Interrupt Service Routine** |
-| saying registers are saved in RAM only | mark scheme often accepts stack / saved state |
+| forgetting ISR | include **Interrupt Service Routine** |
+| saying registers are saved in RAM only | state that the processor saves its state, commonly on the stack |
 | ignoring pipeline issue | for RISC/pipelining questions, mention instructions already in pipeline |
 
 ---
@@ -195,7 +195,7 @@ RISC instructions are usually:
 
 This makes pipeline stages more regular.
 
-#### Mark scheme answer
+#### Exam-style answer
 > Pipelining allows several instructions to be processed at the same time, with each instruction at a different stage. RISC processors are suitable for pipelining because instructions are simple and fixed length.
 >
 
@@ -232,7 +232,7 @@ The key exam skill is:
 #### Full name
 **Single Instruction, Single Data**
 
-#### Mark scheme answer
+#### Exam-style answer
 > SISD has one processor executing one instruction stream on one data stream. Instructions are executed sequentially.
 >
 
@@ -252,7 +252,7 @@ A traditional single-core computer running one instruction at a time.
 #### Full name
 **Single Instruction, Multiple Data**
 
-#### Mark scheme answer
+#### Exam-style answer
 > SIMD performs the same instruction on multiple data items at the same time.
 >
 
@@ -278,7 +278,7 @@ Wrong. SIMD = one instruction, many data items.
 #### Full name
 **Multiple Instruction, Single Data**
 
-#### Mark scheme answer
+#### Exam-style answer
 > MISD performs different instructions on the same data stream.
 >
 
@@ -301,7 +301,7 @@ MISD is less common in real systems, but it is still syllabus content.
 #### Full name
 **Multiple Instruction, Multiple Data**
 
-#### Mark scheme answer
+#### Exam-style answer
 > MIMD has multiple processors that can execute different instructions on different data streams independently or asynchronously.
 >
 
@@ -332,7 +332,7 @@ A multi-core computer running different tasks on different cores.
 ### Definition
 A massively parallel computer uses a large number of processors or separate computers to perform coordinated computations at the same time.
 
-#### Mark scheme answer
+#### Exam-style answer
 > A massively parallel computer contains a large number of processors / computers connected together, simultaneously performing coordinated computations and communicating using messages.
 >
 
@@ -357,7 +357,7 @@ A massively parallel computer uses a large number of processors or separate comp
 > It is just a very fast computer.
 >
 
-Too vague. You must mention **many processors** and **parallel coordinated processing**.
+Too vague. A complete answer identifies **many processors** and **parallel coordinated processing**.
 
 ---
 
@@ -375,7 +375,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 | Hypervisor | software that creates and manages VMs |
 | Emulation / virtualisation | making software behave like hardware |
 
-#### Mark scheme answer
+#### Exam-style answer
 > A virtual machine is a software implementation / emulation of a computer system that runs on a host computer and allows a guest operating system or program to run as if it had its own hardware.
 >
 
@@ -410,7 +410,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 | Legacy support | old OS/software can still run |
 | Easy backup | VM image can be snapshotted or restored |
 
-#### Mark scheme answer
+#### Exam-style answer
 > Virtual machines allow several operating systems or servers to run on one physical machine. They provide isolation, make testing safer, reduce hardware costs, and allow VM images to be backed up or moved easily.
 >
 
@@ -427,7 +427,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 | Management complexity | many VMs can be hard to maintain |
 | Licensing cost | some OS/software licences may still be needed |
 
-#### Mark scheme answer
+#### Exam-style answer
 > Virtual machines can reduce performance because resources are shared and the hypervisor adds overhead. If the host machine fails, all virtual machines on that host may be affected.
 >
 
@@ -494,7 +494,7 @@ It means **OR**.
 | Double complement | `(A')' = A` | — |
 
 #### Showing Boolean-law working
-Mark schemes may reward not only the final answer but also correct application of laws such as:
+An exam answer can show valid working by applying laws such as:
 
 + **De Morgan's laws**
 + **Idempotent law**
@@ -582,8 +582,8 @@ Truth table:
 | 1 | 1 | 0 | 1 | 1 | 1 |
 | 1 | 1 | 1 | 1 | 0 | 0 |
 
-#### Mark scheme advice
-Marks may be awarded for:
+#### Answer-writing advice
+Useful working can include:
 
 + intermediate working columns
 + first half of output rows
@@ -724,7 +724,7 @@ Cout = A.B + A.Cin + B.Cin
 
 A flip-flop is a logic circuit that can store one bit of data.
 
-#### Mark scheme answer
+#### Exam-style answer
 > A flip-flop is a bistable circuit that can store one bit. Its output remains in the same state until the input causes it to change.
 >
 
@@ -803,7 +803,7 @@ The block symbol shows `J`, `K`, the active clock edge and complementary outputs
 
 A Karnaugh map is a visual method for simplifying Boolean expressions.
 
-#### Mark scheme answer
+#### Exam-style answer
 > A Karnaugh map represents a truth table in a grid so adjacent 1s can be grouped to produce a simplified Boolean expression.
 >
 
@@ -905,7 +905,7 @@ Z = C
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### RISC / CISC
 + **Reduced Instruction Set Computer**
@@ -987,12 +987,12 @@ Z = C
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Correct version |
+| Mistake | Why it is weak | Correct version |
 | --- | --- | --- |
 | RISC = fast, CISC = slow | too vague and too absolute | compare instruction set, length, cycles, pipelining |
-| forgetting fixed length for RISC | common mark scheme point missed | RISC often uses fixed-length instructions |
+| forgetting fixed length for RISC | important architectural detail omitted | RISC often uses fixed-length instructions |
 | saying SIMD has many instructions | wrong acronym | SIMD = one instruction, multiple data |
-| confusing MIMD and SIMD | loses definition marks | MIMD = multiple instructions and multiple data |
+| confusing MIMD and SIMD | does not distinguish the architectures | MIMD = multiple instructions and multiple data |
 | saying VM is another physical computer | concept wrong | VM is software emulation running on host |
 | only saying VM saves money | insufficient | explain reduced hardware / multiple guests on one host |
 | using binary order in K-map | wrong map placement | use Gray code: 00, 01, 11, 10 |
@@ -1114,6 +1114,18 @@ This table specifies every gate and wire for a master–slave implementation. Wh
 3. After set: 1 **[1]**; after hold: 1 **[1]**; after toggle and reset: 0, 0 **[1]**.
 4. Feedback preserves either of two stable states while input gates are disabled **[1]**. Complementary Q/Qbar allow only one of the master set/reset inputs to be active when J=K=1, so the next stored state is the complement **[1]**.
 
+## Processor and Logic Construction Drill
+
+1. Explain why a RISC processor's small set of simple, fixed-format instructions and large register set support pipelining. Include one effect of a branch or interrupt. **[5]**
+2. Complete truth tables for (a) a half adder and (b) a full adder. Then produce the complete truth table for `F = (A AND B) OR C`. **[6]**
+
+**Total: 11 marks**
+
+### Processor and Logic Construction Drill Answers
+
+1. Simple/fixed-format instructions have more predictable decode and execution stages **[1]**; different instructions can occupy fetch, decode and execute stages at the same time **[1]**; this increases instruction throughput after the pipeline fills **[1]**; many registers reduce slower memory accesses and hold operands/intermediate results **[1]**; a taken branch or interrupt may require in-flight instructions to be discarded/flushed and the pipeline restarted from the correct address **[1]**. **[5]**
+2. Half adder rows `A B | Sum Carry`: `00|00`, `01|10`, `10|10`, `11|01` **[2]**. Full adder rows `A B Cin | Sum Cout`: `000|00`, `001|10`, `010|10`, `011|01`, `100|10`, `101|01`, `110|01`, `111|11` **[2]**. For `F = (A AND B) OR C`, rows `ABC=000,001,010,011,100,101,110,111` give `F=0,1,0,1,0,1,1,1` **[2]**. **[6]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -1164,7 +1176,9 @@ The worked calculations, process templates and scenario answers above model the 
 (a) Compare RISC and CISC processors in three ways. `[3]`
 (b) State one step that both RISC and CISC processors must perform when handling an interrupt, then state one reason interrupt handling can be more complex when pipelining is used. `[2]`
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 (a) One mark for each paired comparison, max 3:
 
 + RISC uses fewer, simpler instructions, whereas CISC uses more, more complex instructions
@@ -1202,9 +1216,11 @@ One mark for a pipelining issue:
 
 Explain two features that make this a massively parallel system. `[2]`
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-(a) Award one mark for any two completely correct rows and two marks for all four completely correct rows. `[2]`
+#### Question 2 Indicative Marking Points
+
+(a) Suggested allocation: one mark for any two completely correct rows and two marks for all four completely correct rows. `[2]`
 
 | Architecture | Instruction streams | Data streams |
 | --- | --- | --- |
@@ -1227,7 +1243,9 @@ A school wants students to test different operating systems without changing the
 
 Explain one benefit and one limitation of using virtual machines. `[2]`
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 Benefit, max 1:
 
 + different operating systems can run on one host machine
@@ -1258,7 +1276,9 @@ Limitation, max 1:
 
 (e) Simplify `(A + B)'.B + A.B`. `[1]`
 
-#### Question 4 mark scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 4 Indicative Marking Points
 
 **(a) and (c) reference diagrams**
 
@@ -1299,7 +1319,9 @@ A B C
 
 (c) Use the group to write the simplified Boolean expression for `Z`. `[1]`
 
-#### Question 5 mark scheme
+<span id="question-5-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 5 Indicative Marking Points
 
 (a) All eight values must be correct. `[1]`
 

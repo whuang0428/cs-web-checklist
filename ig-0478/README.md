@@ -1,11 +1,13 @@
 # IGCSE Computer Science 0478
 
 <div class="syllabus-notice">
-  <strong>Examinations 2026–2028 · Version 5</strong>
+  <strong>Examinations 2026–2028 · Version 6</strong>
   <span>Check your examination year before using this revision set.</span>
 </div>
 
 Use this hub to choose the paper, chapter or timed practice you need. The official syllabus remains the final authority.
+
+> **Source labels:** “Exam-style answer” and “Indicative marking points” identify original revision guidance, not official Cambridge wording. Any official or MS-aligned wording must name a source ID under the rules on the [syllabus versions page](../syllabus-versions.md#source-labels-used-on-this-site).
 
 ## Paper 1 — Computer Systems
 

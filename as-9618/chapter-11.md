@@ -655,7 +655,7 @@ The worked calculations, process templates and scenario answers above model the 
 1. `CONSTANT MAX_ITEMS = 50` **[1]**; `DECLARE ItemCount : INTEGER` **[1]**. **[2]**
 2. `FOR Index <- 1 TO 10` ... `NEXT Index` **[1]**; `WHILE Found = FALSE` ... `ENDWHILE` **[1]**; `REPEAT` / `INPUT Choice` ... `UNTIL Choice = "X"` **[1]**. **[3]**
 3. Correct `CASE OF Choice` with cases `1` and `2` **[1]** and `OTHERWISE`, output statements and `ENDCASE` **[1]**. **[2]**
-4. `INPUT Age`; a correctly formed `IF Age >= 18 THEN ... ELSE ... ENDIF` with the two stated outputs. Award input/condition **[1]** and complete branches **[1]**. **[2]**
+4. `INPUT Age`; a correctly formed `IF Age >= 18 THEN ... ELSE ... ENDIF` with the two stated outputs. Suggested allocation: input/condition **[1]** and complete branches **[1]**. **[2]**
 5. `OUTPUT ROUND(Average, 2)`. **[1]**
 
 ---
@@ -680,7 +680,9 @@ A delivery program processes an unknown number of parcel masses. Entry stops whe
 
 **Total: 20 marks**
 
-### 20 Marks Practice Mark Scheme
+<span id="20-marks-practice-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+### 20 Marks Practice Indicative Marking Points
 
 1. The number of parcels is unknown **[1]**, and the stopping value must be tested during execution rather than repeating a fixed number of times **[1]**. **[2]**
 2.

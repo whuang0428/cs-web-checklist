@@ -1,6 +1,6 @@
 # IGCSE 0478 Chapter 2: Data Transmission
 
-<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 5</span></div>
+<div class="chapter-meta"><strong>IGCSE 0478 · Paper 1</strong><span>0478 · 2026–2028 · Version 6</span></div>
 
 ## Official Syllabus Checklist
 
@@ -69,7 +69,7 @@ Use this overview to trace transmission, select a method, detect errors and prot
 
 A packet contains three main parts:
 
-| Part | <span lang="zh-CN">中文理解</span> | Mark scheme keywords |
+| Part | <span lang="zh-CN">中文理解</span> | Key exam terms |
 | --- | --- | --- |
 | **Header** | <span lang="zh-CN">包头</span>，<span lang="zh-CN">告诉网络这个包从哪里来</span>、<span lang="zh-CN">到哪里去</span>、<span lang="zh-CN">顺序是多少</span> | **destination address, originator address, packet number** |
 | **Payload** | <span lang="zh-CN">真正要传输的数据</span> | **actual data being carried** |
@@ -160,7 +160,7 @@ accDescr: A message is split into packets that may take different routes before 
 | Cost | cheaper | more expensive |
 
 
-#### Serial transmission — mark scheme points
+#### Serial transmission — Indicative marking points
 + Data is sent **one bit at a time**.  
 + Data is sent down a **single wire/channel**.  
 + Bits arrive **in sequence / in order**.  
@@ -168,7 +168,7 @@ accDescr: A message is split into packets that may take different routes before 
 + There is **less crosstalk/interference**.  
 + It is more reliable over **long distances**.
 
-#### Parallel transmission — mark scheme points
+#### Parallel transmission — Indicative marking points
 + Multiple bits are sent **at the same time**.  
 + Multiple wires/channels are used.  
 + It can transmit data **faster**.  
@@ -195,7 +195,7 @@ Full-duplex is suitable because data needs to travel **in both directions at the
 **Step 4: Link to scenario**  
 This allows the device to send data and receive **error notifications/acknowledgements** at the same time.
 
-#### High-scoring template
+#### Exam-style template
 > Serial transmission is suitable because data is sent **one bit at a time down a single wire**, so bits are less likely to arrive **skewed** and there is less **crosstalk/interference**. It is also reliable over a **long distance**.  
 Full-duplex is suitable because data can be sent **in both directions at the same time**, allowing the device to send data while also receiving **error messages/acknowledgements**.
 >
@@ -319,7 +319,7 @@ A block of data is checked both:
 A **parity byte** is added at the end for the vertical check.
 
 #### Why it matters
-Parity block check can sometimes identify an error that a single parity byte check misses, because it checks both rows and columns.
+Parity block checking can identify some errors that a single row-parity check misses because it checks both rows and columns.
 
 ```mermaid
 flowchart TD
@@ -339,7 +339,7 @@ flowchart TD
 A checksum is a calculated value that is sent with the data.  
 The receiver recalculates the value and compares it with the received checksum.
 
-#### Full mark process
+#### Complete checksum process
 ```mermaid
 flowchart TD
     A[Sender has block of data] --> B[Checksum is calculated from the data]
@@ -443,7 +443,7 @@ flowchart TD
     H -->|No| J[Sender keeps waiting]
 ```
 
-#### Full mark ARQ template
+#### Complete ARQ process
 > The sender sends the data and starts a **timer**.  
 The receiver checks the data for errors.  
 If no error is detected, the receiver sends a **positive acknowledgement**.  
@@ -540,7 +540,7 @@ This makes the data secure because only the receiver has the private key.
 
 ---
 
-## High-score Answer Templates
+## Exam-Style Answer Templates
 ---
 
 ### Template 1 — Packet structure
@@ -601,7 +601,7 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 ---
 
 ## Topic-Specific Common Confusions
-| Mistake | Why it loses marks | Better answer |
+| Mistake | Why it is weak | Better answer |
 | --- | --- | --- |
 | “Packet has address.” | <span lang="zh-CN">太泛</span>，<span lang="zh-CN">没有结构</span> | packet has **header, payload and trailer** |
 | “Header has address.” | <span lang="zh-CN">不完整</span> | **destination address, originator address, packet number** |
@@ -633,6 +633,26 @@ Only the receiver’s private key can decrypt the cipher text back into plain te
 | Sensitive data transmitted online | encryption, cipher text, key, meaningless if intercepted |
 | Public/private key question | asymmetric encryption |
 
+
+---
+
+## Targeted Syllabus Drill
+
+1. Distinguish simplex, half-duplex and full-duplex transmission and give one suitable use for each. **[6]**
+2. Describe what happens when a USB device is connected, then state one benefit and one drawback of USB. **[4]**
+3. Explain why transmitted data is checked for errors, naming the three possible effects of interference specified by the syllabus. **[4]**
+4. Describe how an even-parity block uses row parity and a parity byte to detect an error. **[4]**
+5. Explain how acknowledgement, negative acknowledgement and timeout can cause ARQ to continue or retransmit data. **[4]**
+6. Explain the purpose of encryption during transmission, then distinguish symmetric from asymmetric encryption. **[5]**
+
+### Targeted Syllabus Drill Answers
+
+1. Simplex sends in one direction only, for example a sensor sending readings **[2]**; half-duplex sends in both directions but not simultaneously, for example a walkie-talkie **[2]**; full-duplex sends in both directions simultaneously, for example a phone call **[2]**. **[6]**
+2. The computer detects/recognises the device and loads or requests its driver so data can be transferred **[2]**; one benefit such as automatic detection, common standard, power supply or multiple transfer rates **[1]**; one drawback such as limited cable length, port count or transfer rate compared with a suitable alternative **[1]**. **[4]**
+3. Interference can change transmitted data, so the receiver may not receive the original **[1]**; it can cause data loss, data gain and data change **[3]**. **[4]**
+4. A parity bit is added to each row/byte so its number of `1` bits is even **[1]**; vertical parity is calculated for each bit position **[1]**; these vertical bits form a parity byte **[1]**; the receiver checks both directions and a parity mismatch detects an error **[1]**. **[4]**
+5. A correct packet produces a positive acknowledgement so transmission can continue **[1]**; an erroneous packet can produce a negative acknowledgement **[1]**; the sender starts a timer and retransmits if the acknowledgement is not received before timeout **[2]**. **[4]**
+6. Encryption makes intercepted data unreadable without the correct key **[2]**; symmetric encryption uses the same shared key to encrypt and decrypt **[1]**; asymmetric encryption uses a public/private key pair **[1]**, with the private key kept secret for decryption in the described process **[1]**. **[5]**
 
 ---
 
@@ -683,7 +703,9 @@ A student sends a large video file to a friend over the internet.
 (b) Describe the structure of one packet. `[2]`
 (c) Describe how packet switching delivers and reconstructs the file. `[2]`
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 **(a)** Smaller units can be routed/shared/retransmitted independently rather than reserving one complete path. `[1]`
 
 **(b)** Header, payload and trailer identified `[1]`; header example such as destination/originator address or packet number `[1]`.
@@ -699,7 +721,9 @@ A sensor sends temperature readings to a microprocessor in an automated greenhou
 
 (b) State one benefit of using a USB interface when transferring stored readings to a computer. `[1]`
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 **(a)** Any three: serial sends one bit at a time; uses one data channel; is sufficient for small readings; has less skew/crosstalk; simplex is appropriate because readings travel only from sensor to microprocessor. `[3]`
 
 **(b)** One valid benefit, such as automatic device recognition, a common standard connector, high transfer rate, or support for plug-and-play. `[1]`
@@ -709,7 +733,9 @@ A sensor sends temperature readings to a microprocessor in an automated greenhou
 ### Question 3 — Checksum `[5]`
 Describe how checksum is used to detect errors after data transmission.
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 + Checksum is calculated from the data.
 + An algorithm is used.
 + Checksum value is transmitted with the data.
@@ -727,7 +753,9 @@ A data transmission uses even parity.
 
 Describe how parity check works.
 
-#### Question 4 mark scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 4 Indicative Marking Points
 + A parity bit is added to each byte.
 + It makes the number of 1s even.
 + The receiver counts/checks the number of 1s in each byte.
@@ -738,7 +766,9 @@ Describe how parity check works.
 ### Question 5 — Encryption `[2]`
 Explain why asymmetric encryption is secure.
 
-#### Question 5 mark scheme
+<span id="question-5-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 5 Indicative Marking Points
 Any two:
 
 + It uses a public key and a private key.

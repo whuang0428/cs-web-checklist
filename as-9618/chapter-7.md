@@ -86,7 +86,7 @@ By the end of this chapter, students should be able to:
 
 **Ethics** means moral principles that guide people to decide what is right or wrong. In computer science, ethics is about using computing skills responsibly so that software and computer systems do not harm users, colleagues, organisations, or the public.
 
-#### Mark scheme style definition
+#### Exam-style definition
 
 > Ethics are moral principles / a code of conduct that guide professional behaviour and help computing professionals act responsibly.
 
@@ -115,7 +115,7 @@ Computing professionals often work with:
 
 <span lang="zh-CN">如果程序员不</span> ethical，<span lang="zh-CN">后果可能很严重</span>：data leak、unsafe software、biased AI、unfair treatment、financial loss，<span lang="zh-CN">甚至</span> physical harm。
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > Computing professionals need to act ethically because their work can affect users, colleagues, organisations and the public. Ethical behaviour helps protect privacy, safety, security and trust, and reduces the risk of harm caused by software or data misuse.
 
@@ -138,7 +138,7 @@ A programmer should:
 - not steal code from colleagues
 - not hide mistakes that affect team work
 
-#### Mark scheme style phrases
+#### Exam-style phrasing
 
 > The programmer should treat colleagues fairly and avoid discrimination.
 
@@ -163,7 +163,7 @@ A programmer should:
 - reduce bias in systems
 - report serious security risks responsibly
 
-#### Mark scheme style phrases
+#### Exam-style phrasing
 
 > The programmer should maintain the health, safety and welfare of the public.
 
@@ -222,7 +222,7 @@ Professional bodies help computing professionals by providing:
 - recognition of professional status
 - public trust
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > A professional body provides a code of conduct and ethical guidance. This helps computing professionals make responsible decisions, follow professional standards, and maintain public trust.
 
@@ -248,7 +248,7 @@ Better:
 
 **Copyright** is a legal protection for original work. In computer science, it can protect source code, software, documentation, images, music, videos and other digital content.
 
-#### Mark scheme style definition
+#### Exam-style definition
 
 > Copyright is legal protection for original work / intellectual property, giving the owner control over copying, distribution, modification and use.
 
@@ -276,7 +276,7 @@ Copyright legislation is needed to:
 - encourage creativity and software development
 - allow legal action if work is stolen
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > Copyright is needed to identify the programmer as the owner of the software and give legal protection if someone copies, steals or distributes it without permission.
 
@@ -351,7 +351,7 @@ It normally gives users the freedom to:
 - modify it
 - share copies
 
-#### Mark scheme style phrases
+#### Exam-style phrasing
 
 > Users can run, study, modify and redistribute the software.
 
@@ -384,7 +384,7 @@ Open source is suitable when:
 - a community can improve the software
 - the software needs to be adapted to local needs
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > An open source licence is suitable because the source code can be examined and modified, so the business can adapt the program to meet its needs.
 
@@ -415,7 +415,7 @@ It may be:
 - users may later pay for full version
 - acts as marketing / promotion
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > Shareware is beneficial because users can try the software before paying, and the developer can still earn income if users pay for continued use or extra features.
 
@@ -450,7 +450,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 - may have warranty / service agreement
 - clear legal right to use software
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > A commercial licence is beneficial because the developer can earn income and control distribution, while users may receive support, updates and a legal right to use the software.
 
@@ -477,7 +477,7 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 
 **Artificial Intelligence (AI)** means computer systems performing tasks that normally need human intelligence, such as recognising images, understanding speech, making decisions, learning from data, or solving problems.
 
-#### Mark scheme style definition
+#### Exam-style definition
 
 > AI is the ability of a computer system to perform tasks that normally require human intelligence, such as learning, recognising patterns, making decisions or solving problems.
 
@@ -523,7 +523,7 @@ In this common exam scenario, describing only a database search is not enough.
 5. It outputs the most likely registration number.  
 6. The result may be checked against stored records.
 
-#### Mark scheme style answer
+#### Exam-style answer
 
 > The camera captures an image of the number plate. Image recognition / OCR is used to locate the plate and identify the characters. The AI system compares the shapes and patterns in the image with a trained model / training data and outputs the most likely registration number.
 
@@ -572,7 +572,7 @@ F --> G[Optional check<br/>database / human review]
 | Loss of human contact | services may replace human interaction with automated systems |
 | Over-reliance | people may trust AI decisions without checking them |
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > A social impact of AI is that it can improve accessibility, but it may also reduce privacy if personal data or images are collected and analysed.
 
@@ -594,7 +594,7 @@ F --> G[Optional check<br/>database / human review]
 | High setup cost | AI systems need hardware, data, software and experts |
 | Market inequality | large companies may benefit more because they can afford AI |
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > An economic impact of AI is that it can reduce labour costs by automating tasks, but it may cause job losses and require workers to retrain.
 
@@ -615,13 +615,13 @@ F --> G[Optional check<br/>database / human review]
 | E-waste | more hardware may be replaced or discarded |
 | Carbon emissions | electricity use may increase emissions if energy source is not clean |
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 
 > An environmental impact of AI is that large AI systems may use a lot of electricity and require cooling, but AI can also optimise energy use and reduce waste in other systems.
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Ethics keywords
 
@@ -758,6 +758,18 @@ F --> G[Optional check<br/>database / human review]
 
 ---
 
+---
+
+## Targeted Syllabus Drill
+
+1. Distinguish licences associated with the Free Software Foundation and the Open Source Initiative from shareware and commercial software licences. For each of four scenarios—collaborative modification with protected user freedoms, an OSI-approved open-source project, trial distribution before payment, and proprietary paid use—select and justify the most suitable licence category. **[12]**
+2. Give three applications of artificial intelligence. For one stated AI application, explain one social impact, one economic impact and one environmental impact; each impact may be beneficial or harmful but must follow from the scenario. **[9]**
+
+### Targeted Syllabus Drill Answers
+
+1. An FSF-style licence is centred on freedoms to run, study, modify and share the program/source **[2]**. An OSI-approved licence meets open-source criteria for access, modification and redistribution **[2]**. Shareware permits initial/trial distribution but normally requires payment for continued or complete use **[2]**. A commercial licence grants defined proprietary use, commonly for payment, while restricting copying/modification/redistribution **[2]**. Suitable selections with linked reasons: FSF for protected software freedoms; OSI for the approved open-source project; shareware for try-before-payment distribution; commercial for proprietary paid use **[4]**. **[12]**
+2. Valid applications include expert systems/diagnosis, image or speech recognition, autonomous control, recommendation, fraud detection, language processing or forecasting **[3]**. Example for an AI medical-image system: social—faster screening may improve access, or unequal accuracy may disadvantage a group **[2]**; economic—automation can reduce routine review cost but requires investment and may change jobs **[2]**; environmental—training/operating hardware consumes energy and produces equipment impacts, though more efficient diagnosis may reduce some travel/resource use **[2]**. Equivalent developed impacts linked to another stated application are valid. **[9]**
+
 ## Required Ideas and Exam Language
 
 Use technical terms as part of a complete statement: identify the component or method, state what it does, then link its effect to the question context. A keyword without a correct relationship is not a complete marking point.
@@ -802,16 +814,18 @@ Explain why the programmer needs to act ethically towards:
 (a) colleagues working on the project [2]  
 (b) the public / patients who use the hospital service [3]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-(a) Award up to [2]:
+#### Question 1 Indicative Marking Points
+
+(a) Suggested allocation: up to [2]:
 
 - Treat colleagues fairly / avoid discrimination. [1]
 - Credit colleagues' contributions / respect their work. [1]
 - Accept or give constructive feedback so software can be improved. [1]
 - Share information / help train colleagues. [1]
 
-(b) Award up to [3]:
+(b) Suggested allocation: up to [3]:
 
 - Protect patients' personal/private data. [1]
 - Maintain health, safety and welfare of patients/public. [1]
@@ -827,9 +841,11 @@ A programmer creates an application and sells it online. Another person copies t
 
 Explain why copyright legislation is needed in this situation. [4]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-Award up to [4]:
+#### Question 2 Indicative Marking Points
+
+Suggested allocation: up to [4]:
 
 - Copyright identifies the programmer as the owner/author. [1]
 - Protects the programmer's intellectual property / original work. [1]
@@ -846,9 +862,11 @@ A small business pays a programmer to create a program for its internal use. The
 
 Identify a suitable type of licence and justify your choice. [5]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-Award marks as follows:
+#### Question 3 Indicative Marking Points
+
+Suggested allocation:
 
 - Open Source Initiative / Free Software Foundation style licence. [1]
 - Source code can be examined / accessed. [1]
@@ -856,7 +874,7 @@ Award marks as follows:
 - Suitable because the business may need to change the program later. [1]
 - Programmer can still earn money from maintenance/security updates. [1]
 
-Accept well-justified alternatives if linked clearly to the scenario.
+Well-justified alternatives linked clearly to the scenario are also valid.
 
 ---
 
@@ -867,16 +885,18 @@ A city uses AI cameras to identify vehicles entering a restricted traffic zone.
 (a) Describe how AI can identify a vehicle registration number from a camera image. [3]  
 (b) Explain one social impact and one economic impact of using this AI system. [3]
 
-#### Question 4 mark scheme
+<span id="question-4-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-(a) Award up to [3]:
+#### Question 4 Indicative Marking Points
+
+(a) Suggested allocation: up to [3]:
 
 - Camera captures an image/video of the vehicle/plate. [1]
 - Image recognition / OCR locates plate and recognises characters. [1]
 - AI compares features/patterns with training data/trained model. [1]
 - Outputs predicted registration number / confidence score. [1]
 
-(b) Award up to [3]:
+(b) Suggested allocation: up to [3]:
 
 Social impact:
 
@@ -890,14 +910,14 @@ Economic impact:
 - High setup/maintenance cost for cameras, servers and software. [1]
 - May generate revenue from fines / improve traffic efficiency. [1]
 
-Need at least one social and one economic point for full marks.
+A complete response includes at least one social and one economic point.
 
 ---
 
 ## Final Revision Checklist
 
 - [ ] I can apply professional ethical principles to a new scenario.
-- [ ] I can distinguish copyright, licences, free software and freeware.
+- [ ] I can distinguish FSF, OSI, shareware and commercial software licences.
 - [ ] I can identify bias, privacy and accountability risks in AI.
 - [ ] I can produce a balanced evaluation with a justified conclusion.
 - [ ] I can complete and self-mark both chapter practices.

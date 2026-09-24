@@ -65,7 +65,7 @@ Use this overview to schedule processes, manage memory, handle interrupts and tr
 
 ### What the OS does
 
-#### Mark scheme answer
+#### Exam-style answer
 > An operating system manages the computer system resources, provides a user interface, hides the complexity of the hardware, and provides a platform for programs to run.
 >
 
@@ -93,7 +93,7 @@ OS <span lang="zh-CN">可以理解为用户</span>、<span lang="zh-CN">应用�
 | printing a document | no need to control printer hardware directly |
 | using a GUI | no need to understand memory locations, buses or CPU instructions |
 
-#### Mark scheme answer
+#### Exam-style answer
 > The user interface hides the complexities of the hardware by allowing the user to perform tasks using commands, menus, icons or windows instead of directly controlling memory locations, buses, devices or processor instructions.
 >
 
@@ -133,7 +133,7 @@ A process is not just the program file. It includes:
 | Ready | able to run but waiting for CPU time | waiting in ready queue |
 | Blocked | cannot continue until an event happens | waiting for input / file read / printer / network response |
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 + **running process has access to the CPU**
 + **ready process is waiting to be allocated CPU time**
 + **blocked process is waiting for an event / I/O operation**
@@ -162,7 +162,7 @@ Blocked <span lang="zh-CN">通常不是</span>“<span lang="zh-CN">坏了</span
 
 ### Why scheduling is needed
 
-#### Mark scheme answer
+#### Exam-style answer
 > Scheduling is needed because several processes may be ready to use the CPU, but only one process can use the CPU at a time. The scheduler decides which process is allocated CPU time next.
 >
 
@@ -189,7 +189,7 @@ Scheduling maximises resource use by allocating the CPU to another ready process
 | fair by arrival order | poor response time if first process is long |
 | low overhead | not suitable for highly interactive systems |
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 > Processes are queued as they arrive and are executed in that order.
 >
 
@@ -245,7 +245,7 @@ Wrong. Only one process uses a single CPU at a time. Round robin just switches q
 > The process with the shortest remaining burst time is executed first. It is pre-emptive, so a running process can be replaced if a new process with a shorter remaining time arrives.
 >
 
-#### Mark scheme phrases
+#### Exam-style phrasing
 + **pre-emptive scheduling**
 + **shortest burst time / shortest remaining time**
 + **current process may be replaced**
@@ -285,7 +285,7 @@ F --> G[Registers / process status restored]
 G --> H[Process continues or scheduler chooses next process]
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 > When an interrupt is detected, the current process is temporarily stopped and the contents of registers / process status are stored. The kernel runs the interrupt service routine. After the interrupt is serviced, the saved register values / process status can be restored.
 >
 
@@ -322,7 +322,7 @@ The ISR handles the cause of the interrupt; the scheduler makes the separate all
 + a program is too large to fit fully into RAM
 + not all parts of a program are needed at the same time
 
-#### Mark scheme answer
+#### Exam-style answer
 > Virtual memory is used when RAM is running low. Pages that are not immediately needed can be moved from RAM to secondary storage, allowing other pages / processes to use main memory.
 >
 
@@ -362,7 +362,7 @@ I --> D
 #### Why replacement is needed
 If RAM is full and a required page is not in RAM, the OS must remove / replace a page to make room.
 
-#### Simple mark scheme answer
+#### Simple exam-style answer
 > A page that is not currently needed is moved from RAM to secondary storage. The required page is then loaded into the freed page frame.
 >
 
@@ -390,7 +390,7 @@ Examples of segments:
 + procedure / function segment
 + module segment
 
-#### Mark scheme answer
+#### Exam-style answer
 > In segmented memory, the logical / virtual address space is broken into varying-sized blocks called segments. Each segment represents a logical part of the program and can be stored in memory separately.
 >
 
@@ -429,7 +429,7 @@ E --> F[More time swapping than processing]
 F --> G[System performance becomes very slow]
 ```
 
-#### Mark scheme answer
+#### Exam-style answer
 > Disk thrashing occurs when frequent transfers between main memory and secondary storage take place. As main memory fills up, pages are repeatedly swapped in and out, so more time is spent swapping pages than processing data.
 >
 
@@ -450,7 +450,7 @@ F --> G[System performance becomes very slow]
 > An interpreter translates and executes a high-level language program one statement / line at a time without producing a stored executable file.
 >
 
-#### Exam-style mark scheme answer
+#### Exam-style answer
 > The interpreter translates the source code one line at a time. If the line is syntax error free, it is executed. The translated code is not stored in executable format. If an error is found, the program halts with an error message. Each line must be translated every time it is run.
 >
 
@@ -511,7 +511,7 @@ E --> F[Object code / executable]
 + identifies keywords, identifiers, operators, constants
 + may build / update symbol table
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 > Lexical analysis breaks the source code into tokens and removes unnecessary characters such as spaces and comments.
 >
 
@@ -525,7 +525,7 @@ E --> F[Object code / executable]
 + checks statement structure
 + may build a parse structure
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 > Syntax analysis checks that the sequence of tokens follows the grammar rules of the programming language.
 >
 
@@ -538,7 +538,7 @@ E --> F[Object code / executable]
 + converts analysed source into instructions for the processor
 + allocates registers / memory where needed
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 > Code generation produces object code / machine code from the analysed source program.
 >
 
@@ -552,7 +552,7 @@ E --> F[Object code / executable]
 + may reduce memory use
 + may remove redundant instructions
 
-#### Mark scheme phrase
+#### Exam-style phrasing
 > Optimisation improves the object code so that it runs faster and / or uses fewer resources.
 >
 
@@ -664,7 +664,7 @@ RPN is normally evaluated using a stack because the most recent operands are use
 5. Push the result back onto the stack.
 6. Repeat until one final value remains.
 
-#### Mark scheme answer
+#### Exam-style answer
 > The RPN expression is read from left to right. Values are pushed onto a stack until an operator is found. The last two values are popped, the operator is applied, and the result is pushed back onto the stack. This repeats until a single value remains.
 >
 
@@ -698,7 +698,7 @@ Answer:
 
 ---
 
-## Mark Scheme Keywords
+## Key exam terms
 
 ### Operating system
 + **manages resources**
@@ -766,7 +766,7 @@ Answer:
 
 ## Topic-Specific Common Confusions
 
-| Mistake | Why it loses marks | Better answer |
+| Mistake | Why it is weak | Better answer |
 | --- | --- | --- |
 | OS only means GUI | OS does much more than interface | OS manages resources and provides an interface |
 | blocked means crashed | blocked is a valid process state | blocked means waiting for I/O or an event |
@@ -816,6 +816,22 @@ Answer:
 > Reverse Polish Notation can be used. Operands are written before the operator and the expression is evaluated using a stack.
 
 ---
+
+## Targeted System Software Drill
+
+1. Explain how an operating system can maximise use of CPU time, main memory and input/output devices while several programs are active. **[4]**
+2. Compare FCFS, round robin, SJF and SRT scheduling for a ready queue containing both long and short jobs. Explain one role of an interrupt in low-level scheduling. **[6]**
+3. A referenced page is not present in RAM and every frame is occupied. Describe page replacement, including the page table and a possible cause of disk thrashing. **[5]**
+4. Explain the purpose of lexical analysis, syntax analysis, code generation and optimisation in a compiler. **[4]**
+
+**Total: 19 marks**
+
+### Targeted System Software Drill Answers
+
+1. The scheduler gives ready processes CPU time so the processor need not remain idle while another process waits for I/O **[1]**; memory management allocates/protects RAM and can move inactive pages to secondary storage **[1]**; buffering/queues allow a process and slower I/O device to work at different rates **[1]**; the OS releases and reallocates resources between competing processes **[1]**. **[4]**
+2. FCFS runs jobs in arrival order and a long first job can delay short jobs **[1]**. Round robin gives each ready process a time slice, improving fairness but causing context-switch overhead **[1]**. SJF selects the shortest complete job and can reduce average waiting time, but needs an estimate and can starve long jobs **[1]**. SRT is the pre-emptive form: a newly ready job with a shorter remaining time can replace the running job **[1]**. A hardware/timer/I/O interrupt transfers control to the kernel/ISR **[1]**, which may save state and invoke the scheduler before restoring or selecting a process **[1]**. **[6]**
+3. The page fault transfers control to the OS **[1]**; a replacement policy selects a victim frame **[1]**; a modified victim is written back if necessary and the required page is loaded **[1]**; page-table entries (and any cached translation) are updated before execution restarts **[1]**; too few frames for the active working sets can cause repeated faults and swapping, producing thrashing **[1]**. **[5]**
+4. Lexical analysis groups characters into tokens and removes/ignores irrelevant layout or comments **[1]**. Syntax analysis checks the token sequence against grammar and can build a parse/syntax tree **[1]**. Code generation translates the checked representation into target/intermediate code **[1]**. Optimisation improves time or space use without changing the program's meaning **[1]**. **[4]**
 
 ## Required Ideas and Exam Language
 
@@ -869,7 +885,9 @@ A computer is running several processes at the same time.
 (c) Describe how round robin scheduling works. [2]  
 (d) State one benefit and one drawback of shortest job first scheduling. [2]
 
-#### Question 1 mark scheme
+<span id="question-1-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 1 Indicative Marking Points
 
 (a) A process is a program currently being executed. [1]
 
@@ -895,7 +913,9 @@ A student opens many large programs at the same time. The computer becomes very 
 (b) State one difference between paging and segmentation. [2]  
 (c) Explain what is meant by disk thrashing. [2]
 
-#### Question 2 mark scheme
+<span id="question-2-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 2 Indicative Marking Points
 
 (a)  
 + Secondary storage is used as an extension of RAM. [1]  
@@ -923,7 +943,9 @@ A student opens many large programs at the same time. The computer becomes very 
 
 (e) Calculate the value of the RPN expression `5 2 - 4 *`. [1]
 
-#### Question 3 mark scheme
+<span id="question-3-mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
+
+#### Question 3 Indicative Marking Points
 
 (a)  
 + Translates source code one line / statement at a time. [1]  

@@ -8,7 +8,7 @@
 - Total: **75 marks**
 - Do not use a calculator.
 - Answer all seven questions in pseudocode where programming is required.
-- Show all trace states and attempt the paper before reading the mark scheme.
+- Show all trace states and attempt the paper before reading the indicative marking points.
 
 ### Coverage Map
 
@@ -110,17 +110,23 @@ Write a complete program that:
 
 ---
 
-## Mark Scheme
+<span id="mark-scheme" class="legacy-anchor" aria-hidden="true"></span>
 
-### Question 1 Mark Scheme [8]
+## Indicative Marking Points
+
+<span id="question-1-mark-scheme-8" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 1 Indicative Marking Points [8]
 
 1. Any three of pitch code, arrival date, nights, guests, electricity choice **[3]**; favourite sport and car colour **[2]**. **[5]**
 2. Three distinct modules with purposes, for example input/validate booking, calculate charge, save booking, display confirmation. **[3]**
 
-### Question 2 Mark Scheme [10]
+<span id="question-2-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 2 Indicative Marking Points [10]
 
 1. Input first temperature; initialise total/count; repeat until sentinel; validate and accumulate; calculate/output average or no-data result. One mark each in a valid order. **[5]**
-2. Award one mark each for: initialise total/count; input inside repetition; sentinel excluded; range check before accumulation; conditional average avoiding division by zero. **[5]**
+2. Suggested allocation: one mark each for: initialise total/count; input inside repetition; sentinel excluded; range check before accumulation; conditional average avoiding division by zero. **[5]**
 
 Indicative structured English:
 
@@ -142,7 +148,9 @@ ELSE
 ENDIF
 ```
 
-### Question 3 Mark Scheme [12]
+<span id="question-3-mark-scheme-12" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 3 Indicative Marking Points [12]
 
 1.
 
@@ -178,7 +186,9 @@ NEXT Index
 Correct bounds/comparison **[2]**; stock swap **[1]**; code swap **[2]**. **[5]**
 3. Each stock level must remain associated with its original product code **[1]**; otherwise records become corrupted/incorrectly matched **[1]**. **[2]**
 
-### Question 4 Mark Scheme [10]
+<span id="question-4-mark-scheme-10" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 4 Indicative Marking Points [10]
 
 1.
 
@@ -193,7 +203,9 @@ First dequeue value and state **[2]**; state after enqueueing `F` **[1]**; state
 
 2. Advancing `Rear` beyond index `5` wraps it to index `0`, so released positions at the start of the array can be reused **[1]**; `Front` wraps in the same way when it passes the upper bound **[1]**; `Count = 0` means empty **[1]**; `Count = 6` means full **[1]**. **[4]**
 
-### Question 5 Mark Scheme [12]
+<span id="question-5-mark-scheme-12" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 5 Indicative Marking Points [12]
 
 1. Typed header and Boolean result **[1]**; exact length check before indexing **[1]**; checks both letter positions **[1]**; checks all four digit positions **[1]**; rejects invalid characters and accepts only a complete match **[1]**. **[5]**
 
@@ -231,13 +243,17 @@ ENDPROCEDURE
 
 3. `Code="AB0123"` **[1]**, `Valid=TRUE` **[1]**. Both parameters refer to caller variables, so the procedure's assignments update them **[1]**. For example `"AB01X3"` has the correct length and uppercase prefix, but a non-digit in the suffix, so it is rejected **[1]**. **[4]**
 
-### Question 6 Mark Scheme [8]
+<span id="question-6-mark-scheme-8" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 6 Indicative Marking Points [8]
 
 1. Waterfall **[1]**; stable/formally approved requirements **[1]**; documentation, traceability or safety evidence **[1]**. **[3]**
 2. White-box; integration; acceptance. **[3]**
 3. Dosage fault: corrective **[1]**; new OS: adaptive **[1]**. **[2]**
 
-### Question 7 Mark Scheme [15]
+<span id="question-7-mark-scheme-15" class="legacy-anchor" aria-hidden="true"></span>
+
+### Question 7 Indicative Marking Points [15]
 
 - Initialises twelve sensor totals/counts and both diagnostic counters **[2]**.
 - Opens/reads/closes the input using an EOF loop **[2]**.
