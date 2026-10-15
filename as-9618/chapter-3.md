@@ -74,6 +74,8 @@ Use this overview to classify hardware, compare storage, trace control and solve
 
 ### Embedded systems
 
+Sources: [9618/11 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10); [9618/12 · October/November 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
+
 #### Definition
 
 > An embedded system is a computer system built into a larger device, designed to perform a specific / dedicated task.
@@ -153,41 +155,55 @@ A complete computer system needs devices for **input**, **output** and **storage
 
 ##### Laser printer
 
-1. A drum is given an electrostatic charge.
-2. A laser changes the charge to form an image on the drum.
-3. Oppositely charged toner is attracted to the image.
-4. The toner is transferred to paper.
-5. Heated pressure rollers fuse the toner permanently to the paper.
+Sources: [9608/13 · May/June 2020 · Q2(a) (published, not sat)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9608_s20_ms_13.pdf#page=3).
+
+Supplementary detail: [HP: toner transfer and fusing](https://www.hp.com/in-en/tech-takes/printers/explainer/how-laser-jet-printers-work-science-mechanics.html).
+
+1. A **laser beam** is directed by a **rotating mirror** across a photosensitive drum, changing its **electrostatic charge** to form the image.
+2. **Toner** adheres to the image and transfers to the paper.
+3. Heated rollers apply pressure to fuse the toner to the paper.
 
 ##### 3D printer
 
-1. A digital model is divided into thin layers.
-2. The printer deposits, melts or fuses material for one layer.
-3. The platform or print head moves and the process repeats until the physical object is complete.
+Sources: [9618/11 · October/November 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9); [9618/11 · October/November 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=15).
+
+1. Software uses a **CAD / 3D model** to define successive layers.
+2. The printer builds the object **additively, layer by layer**, starting at the base; the head/platform moves to position each layer.
+3. Describe the specified process: **FDM** extrudes heated material through a nozzle; **SLA** cures liquid resin with UV light; **SLS** uses a laser to fuse powder. Do not combine these into one printer mechanism.
 
 ##### Microphone
 
-1. Sound waves make a diaphragm vibrate.
-2. A transducer converts the vibration into a changing analogue electrical signal.
-3. An ADC samples the signal when digital sound data is required.
+Sources: [9618/12 · October/November 2021 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w21_ms_12.pdf#page=4).
+
+1. Incoming sound makes a **diaphragm** vibrate.
+2. In a dynamic microphone, this moves a coil relative to a magnet, inducing a changing electrical signal. A condenser microphone instead changes capacitance.
+3. The microphone output is analogue. An **ADC** is a separate conversion stage when digital recording is required.
 
 ##### Speaker
 
-1. A DAC converts digital sound data into an analogue electrical signal when necessary.
-2. The changing current in a coil creates a changing magnetic force.
-3. The attached cone moves the air and produces sound waves.
+Sources: [9608/12 · October/November 2019 · Q6(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9608_w19_ms_12.pdf#page=8).
+
+1. A changing electrical current in a coil produces a changing magnetic field.
+2. The coil interacts with a permanent magnet; attraction and repulsion move the attached diaphragm.
+3. The vibrating diaphragm moves the surrounding air, producing sound. A **DAC** is a separate stage when the source is digital.
 
 ##### Touchscreen
 
-1. The display presents visual output and a sensing layer detects a touch.
-2. The controller calculates the touch coordinates from a pressure, capacitance or interrupted-beam change.
-3. The coordinates are sent to the processor as input and matched to the displayed control.
+Sources: [9618/13 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=5); [9618/13 · May/June 2024 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=8).
+
+- **Resistive:** pressure brings two conducting layers into contact, completing a circuit.
+- **Capacitive:** a finger changes the capacitance / measured electrical signal of the sensing layer.
+- **Infrared:** the touch interrupts beams crossing the screen.
+
+The controller calculates the touch **coordinates**, sends them to the processor, and identifies the selected screen item. Use the mechanism named in the question.
 
 ##### Virtual reality headset
 
-1. Two slightly different images are displayed through lenses to create a stereoscopic view.
-2. Orientation and motion sensors detect movement of the user's head or controllers.
-3. The processor updates the displayed viewpoint with low delay so the virtual scene follows that movement.
+Sources: [9618/12 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=4).
+
+1. One or two displays and lenses present the images; speakers provide sound.
+2. A **gyroscope** detects orientation and an **accelerometer** detects movement / acceleration. Cameras may track the eyes.
+3. The computer uses this input to update the displayed viewpoint as the user moves.
 
 #### Principal-operation drill
 
@@ -206,6 +222,8 @@ A complete computer system needs devices for **input**, **output** and **storage
 ---
 
 ### Sensors
+
+Sources: [9618/11 · October/November 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9); [9618/12 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
 
 #### Common sensors and uses
 
@@ -227,36 +245,42 @@ A complete computer system needs devices for **input**, **output** and **storage
 
 ### Monitoring systems vs control systems
 
+Sources: [9618/11 · October/November 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10); [9618/11 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=3).
+
 #### Monitoring system
 
 > A monitoring system collects data from sensors and may store, display or transmit the data, but it does not automatically change the environment being measured.
 
 #### Control system
 
-> A control system collects data from sensors, processes it, and sends a signal to an actuator / output device to change the environment or system.
+> A control system processes sensor input and automatically drives an actuator to change the system. In a feedback system, that change affects later sensor readings, which are used to adjust the output.
 
 #### Key difference
 
 | Type | What happens |
 | --- | --- |
-| Monitoring | sensor data is observed / stored / transmitted |
-| Control | sensor data causes an action that changes something |
+| Monitoring | sensor data is observed, stored or reported; a warning alone need not change the measured condition |
+| Control | the processed input changes the system automatically; feedback affects subsequent input |
 
 #### Exam-style wording
 
-> This is a control system because the sensor data is processed and used to send a signal to an output device / actuator, such as turning on a light or sounding an alarm.
+> Identify what the output changes and whether it affects subsequent sensor input. An alarm or warning light can be part of **monitoring**: the output alone does not prove control. A controller that applies brakes and then measures the changed distance uses **feedback**.
+
+Some questions accept either classification when justified by the stated behaviour: the video-doorbell question in May/June 2024 is one example. Explain the mechanism instead of classifying solely by the device name.
 
 #### Common mistake
 
 | Student writes | Why weak |
 | --- | --- |
 | “It has sensors, so it is monitoring.” | Control systems also use sensors. |
-| “It has output, so it is control.” | Need to say the output changes the system/environment. |
+| “It has output, so it is control.” | A warning is still output. Explain the automatic action and, where relevant, feedback. |
 | “It analyses data.” | Both monitoring and control may process data. |
 
 ---
 
 ### Actuators
+
+Sources: [9618/12 · October/November 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
 
 #### Definition
 
@@ -269,18 +293,22 @@ A complete computer system needs devices for **input**, **output** and **storage
 | motor | opens door / turns fan |
 | heater | increases temperature |
 | valve | controls water/gas flow |
-| speaker / alarm | sounds warning |
-| light | turns on/off |
+
+A speaker or indicator can report a warning in a monitoring system. Its presence does not establish feedback control.
 
 ---
 
 ### Buffers
+
+Sources: [9618/12 · October/November 2023 · Q8(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=10); [9618/13 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7).
 
 #### Definition
 
 > A buffer is an area of memory used to temporarily store data while it is being transferred between devices or processes.
 
 #### Why buffers are used
+
+For a printer, the processor places data in the buffer and can continue other work while the slower printer uses it. When more data is needed, the printer can raise an **interrupt** so the buffer is refilled.
 
 Buffers are used when:
 
@@ -314,6 +342,8 @@ Wrong. A buffer is **temporary storage**.
 
 ### RAM and ROM
 
+Sources: [9618/11 · May/June 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/11 · May/June 2024 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=3).
+
 | Feature | RAM | ROM |
 | --- | --- | --- |
 | Full name | Random Access Memory | Read Only Memory |
@@ -342,6 +372,8 @@ Wrong. A buffer is **temporary storage**.
 
 ### Effect of RAM on performance
 
+Sources: [9618/12 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/11 · May/June 2025 · Q6(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10).
+
 #### Good answer
 
 > More RAM allows more currently running data and instructions to be stored in main memory. This reduces the need to use virtual memory or fetch data from slower secondary storage, so there is less delay / latency.
@@ -356,10 +388,13 @@ This is too vague. Say **why**.
 
 ### SRAM vs DRAM
 
+Sources: [9618/11 · May/June 2023 · Q4(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/11 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9).
+
 | Feature | SRAM | DRAM |
 | --- | --- | --- |
 | Full name | Static RAM | Dynamic RAM |
-| Refresh needed? | no refresh needed | needs refreshing |
+| Storage mechanism | flip-flop / transistor circuit | charge in a capacitor controlled by a transistor |
+| Refresh needed? | no refresh while powered | charge leaks, so periodic refresh is needed |
 | Speed | faster | slower |
 | Cost | more expensive | cheaper |
 | Density | lower density | higher density |
@@ -392,6 +427,8 @@ This is too vague. Say **why**.
 
 ### PROM, EPROM and EEPROM
 
+Sources: [9618/13 · October/November 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7); [9618/12 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=4).
+
 | Memory type | Meaning | Key point |
 | --- | --- | --- |
 | PROM | Programmable ROM | programmed once only |
@@ -413,16 +450,15 @@ This is too vague. Say **why**.
 
 ### Magnetic hard disk
 
+Sources: [9618/11 · May/June 2025 · Q6(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/11 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7).
+
 #### Principal operation
 
-A magnetic hard disk:
+- Magnetisable **platters** rotate on a **spindle**.
+- An arm positions the **read/write head** over the required surface area.
+- Binary data is represented by magnetic states; reading detects the changing **magnetic field** as an electrical signal.
 
-1. has one or more **platters**
-2. platters are mounted on a **spindle**
-3. platters rotate at high speed
-4. a **read/write head** moves across the surface
-5. data is stored using changes in **magnetic field / magnetised areas**
-6. when reading, changes in magnetic field produce a change in electric current
+The 2025 source question assesses **four missing terms for four marks**.
 
 #### Key exam terms
 
@@ -437,7 +473,7 @@ A magnetic hard disk:
 
 + large capacity
 + low cost per GB
-+ suitable for long-term storage of large files
++ low cost for large video files; repeated continuous recording can favour an HDD over flash storage
 
 #### Disadvantages
 
@@ -450,15 +486,14 @@ A magnetic hard disk:
 
 ### Optical storage
 
+Sources: [9618/11 · October/November 2024 · Q3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=6); [9618/11 · October/November 2024 · Q3(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=6).
+
 #### Principal operation
 
-An optical disc reader/writer:
-
-1. uses a **laser**
-2. the laser is directed onto the disc surface
-3. the disc has areas with different reflectivity / pits and lands
-4. reflected light is detected by a sensor
-5. differences in reflection are interpreted as binary data
+1. The disc spins while an optical head directs a **laser** along a spiral track.
+2. **Pits and lands / areas of different reflectivity** affect the returning light.
+3. A detector reads these differences and the drive interprets them as binary data.
+4. Writing uses a laser to alter a writable recording layer; describe the disc type given in the question.
 
 #### Key exam terms
 
@@ -475,6 +510,8 @@ An optical disc reader/writer:
 ---
 
 ### Solid-state storage / flash memory
+
+Sources: [9618/11 · May/June 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=4).
 
 #### Principal operation
 
@@ -515,6 +552,8 @@ USB, HDMI, VGA and processor-performance factors belong to syllabus section 4.1.
 ---
 
 ## 3.2 Logic Gates and Logic Circuits
+
+Sources: [9618/11 · May/June 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=8); [9618/12 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=8).
 
 ### Basic gates
 

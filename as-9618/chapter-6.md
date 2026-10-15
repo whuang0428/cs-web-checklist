@@ -118,6 +118,8 @@ Use this overview to distinguish key terms, match controls, verify input and pro
 
 ### Security vs Privacy vs Integrity
 
+Sources: [9618/12 · October/November 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=5); [9618/12 · October/November 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=6).
+
 | Term | Meaning | Simple student version |
 | --- | --- | --- |
 | **Security** | protecting data/system from unauthorised access, damage or misuse | <span lang="zh-CN">防止别人乱进</span>、<span lang="zh-CN">乱改</span>、<span lang="zh-CN">乱偷</span> |
@@ -167,6 +169,8 @@ When asked "why is data security needed?", write:
 
 ### User accounts
 
+Sources: [9618/12 · May/June 2024 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5); [9618/12 · May/June 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8).
+
 A **user account** identifies a user on a system.
 
 It can store:
@@ -193,13 +197,15 @@ It can store:
 
 ### Passwords
 
+Sources: [9618/13 · October/November 2023 · Q3(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4); [9618/12 · May/June 2024 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5).
+
 A password is a secret value used to prove a user’s identity.
 
 #### Strong password features
 
 | Feature | Example |
 | --- | --- |
-| long enough | 12+ characters is usually stronger |
+| sufficient length | a longer unpredictable password is harder to guess; use any requirement stated in the question |
 | mixture of upper/lowercase | `a` and `A` |
 | numbers | `7`, `38` |
 | symbols | `@`, `#`, `!` |
@@ -227,6 +233,10 @@ If the question gives a weak password like `John2008`, explain:
 
 ### Authentication
 
+Sources: [9618/12 · May/June 2021 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_12.pdf#page=9).
+
+Supplementary detail: [NIST: authentication factors and biometrics](https://pages.nist.gov/800-63-4/sp800-63b.html#aal2).
+
 Authentication checks that a user is who they claim to be.
 
 #### Common authentication methods
@@ -237,7 +247,7 @@ Authentication checks that a user is who they claim to be.
 | biometric | uses unique biological feature |
 | token / OTP | code generated or sent to user |
 | digital signature | verifies sender identity and message integrity |
-| two-factor authentication | uses two different methods |
+| two-factor authentication | combines different factor types, such as a password and a possession-based code |
 
 #### Biometric authentication
 
@@ -269,11 +279,22 @@ Examples:
 
 ### Digital signatures
 
+Sources: [9618/13 · May/June 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=8); [9618/11 · May/June 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=11).
+
 A digital signature can be used to:
 
 - verify the sender
 - show that data has not been altered
 - provide non-repudiation
+
+#### Creating and checking a signature
+
+1. The sender applies a **hash function** to the message to produce a **digest**.
+2. The sender signs the digest using their **private key** and sends the signature with the message.
+3. The receiver uses the sender’s **public key** to check the signature and obtain/check the signed digest.
+4. The receiver hashes the received message using the same hash function and **compares the digests**. A match supports sender authentication and message integrity.
+
+Signing the digest does not itself make the message confidential.
 
 #### Student-friendly explanation
 
@@ -289,6 +310,8 @@ Digital signature <span lang="zh-CN">不等于手写签名图片</span>。<span 
 ---
 
 ### Firewall
+
+Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q3(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4).
 
 A firewall controls traffic between a private network and external networks.
 
@@ -315,6 +338,8 @@ A firewall controls traffic between a private network and external networks.
 ---
 
 ### Anti-virus and anti-spyware
+
+Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9).
 
 #### Anti-virus software
 
@@ -343,6 +368,8 @@ Spyware may:
 
 ### Encryption
 
+Sources: [9618/13 · October/November 2023 · Q3(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4); [9618/12 · May/June 2024 · Q3(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5).
+
 Encryption converts readable data into unreadable data.
 
 | Term | Meaning |
@@ -367,6 +394,8 @@ Better wording:
 ---
 
 ### Access rights
+
+Sources: [9618/12 · May/June 2024 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5); [9618/12 · May/June 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8).
 
 Access rights control what a user can do.
 
@@ -393,6 +422,8 @@ Examples:
 ---
 
 ## Threats to Computer and Data Security
+
+Sources: [9618/12 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=6); [9618/13 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=8).
 
 ### Malware
 
@@ -531,6 +562,8 @@ Data integrity means data is:
 
 ### Validation vs Verification
 
+Sources: [9618/13 · May/June 2023 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/13 · October/November 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=5).
+
 | Method | Main purpose | Done by | Can prove data is correct? |
 | --- | --- | --- | --- |
 | **Validation** | checks data is reasonable / follows rules | computer/software | No |
@@ -547,6 +580,8 @@ If age `26` is typed as `62`, range check may accept it because `62` is still re
 ---
 
 ## Validation Methods
+
+Sources: [9618/12 · May/June 2023 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/13 · May/June 2023 · Q4(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7).
 
 ### Range check
 
@@ -660,6 +695,8 @@ Used for:
 
 ## Verification During Data Entry
 
+Sources: [9618/13 · May/June 2023 · Q4(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/13 · October/November 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=5).
+
 ### Visual check
 
 A person compares entered data with the original source.
@@ -701,6 +738,8 @@ Enter password twice.
 ---
 
 ## Verification During Data Transfer
+
+Sources: [9618/11 · May/June 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=6); [9618/13 · May/June 2024 · Q7(f)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=9).
 
 ### Parity check overview
 

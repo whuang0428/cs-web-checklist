@@ -40,6 +40,8 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Purpose of a Development Life Cycle
 
+Sources: [9618/22 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=6).
+
 A **program development life cycle** provides an organised process for moving from a problem to a working, maintainable solution.
 
 It helps a team:
@@ -57,60 +59,41 @@ Different projects need different life cycles because requirements, risk, deadli
 
 ## Development Life Cycles
 
+Sources: [9618/21 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=6); [9618/22 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=6).
+
 ### Waterfall
 
-Waterfall completes defined stages mainly in sequence.
+Stages are completed mainly in sequence, with one stage's results passed to the next. Earlier work may need revisiting if a later stage exposes a problem.
 
-| Benefits | Drawbacks |
-|---|---|
-| clear milestones and documentation | changes are expensive after a stage is completed |
-| easier to plan stable requirements | working software appears relatively late |
-| formal review before moving on | users may not recognise misunderstandings until late |
-
-Suitable when:
-
-- requirements are stable and well understood
-- formal approval/documentation is important
-- technology and scope are predictable
+- Requirements are agreed early, allowing the planned stages to be followed.
+- Working software appears relatively late.
+- Changing requirements can require completed work to be revised, delaying delivery.
 
 ### Iterative
 
-Iterative development builds a version, reviews it and improves it through repeated cycles.
+Development proceeds through repeated versions. Each version is reviewed and the feedback is used to improve the next.
 
-| Benefits | Drawbacks |
-|---|---|
-| feedback arrives earlier | scope can keep changing |
-| faults and misunderstandings appear sooner | repeated revisions complicate scheduling |
-| changing requirements can be incorporated | architecture may weaken without control |
-
-Suitable when requirements can evolve and users can provide regular feedback.
+- An early version helps users identify changes they need.
+- Earlier stages can be revisited as requirements change.
+- The plan must allow time and resources for further cycles.
 
 ### Rapid Application Development (RAD)
 
-RAD uses rapid prototyping, frequent user involvement, reusable components and time-boxed development to produce usable parts quickly.
+RAD emphasises producing a working prototype early, so the client can review it and clarify requirements before further development.
 
-| Benefits | Drawbacks |
-|---|---|
-| prototypes clarify requirements | requires frequent access to suitable users |
-| useful components appear quickly | less suitable for very large or safety-critical systems |
-| reuse and tools can reduce development time | speed may reduce documentation or architectural quality |
-
-Suitable for a modular, interface-heavy system with a short deadline and available users.
+- The prototype gives users something concrete to evaluate.
+- Feedback guides changes to later versions.
+- Suitability depends on the time available and the client's involvement.
 
 ### Selection rule
 
-Do not claim one life cycle is always best. Link the choice to the scenario:
-
-- stable vs changing requirements
-- formal control vs frequent feedback
-- safety/scale
-- deadline
-- modularity
-- user availability
+Justify the choice using the scenario's requirements: early prototypes, changing requirements, client involvement, problem complexity, team skills and size, and available time, budget and resources.
 
 ---
 
 ## Life-Cycle Stages
+
+Sources: [9618/21 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=9); [9618/22 · October/November 2024 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=10).
 
 | Stage | Main work | Typical output |
 |---|---|---|
@@ -125,6 +108,8 @@ These are stages of work, not necessarily one-directional steps. Iterative and R
 ---
 
 ## Structure Charts
+
+Sources: [9618/21 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=8); [9618/21 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=10).
 
 A structure chart shows:
 
@@ -170,6 +155,8 @@ ENDIF
 
 ## State-Transition Diagrams
 
+Sources: [9618/22 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=10); [9618/22 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=10).
+
 A state-transition diagram documents:
 
 - possible states
@@ -199,6 +186,8 @@ When constructing one:
 ---
 
 ## Program Faults
+
+Sources: [9618/21 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=7); [9618/21 · October/November 2024 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=7).
 
 | Error type | Meaning | Example |
 |---|---|---|
@@ -235,6 +224,8 @@ Avoiding faults:
 
 ## Testing Methods
 
+Sources: [9618/21 · October/November 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=6); [9618/21 · May/June 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=10).
+
 | Method | What it does |
 |---|---|
 | Dry run | manually follows an algorithm using test data and a trace table |
@@ -245,7 +236,7 @@ Avoiding faults:
 | Alpha testing | controlled testing by/with the developer before wider release |
 | Beta testing | selected external users test in realistic environments before final release |
 | Acceptance testing | customer/user checks whether agreed requirements are satisfied |
-| Stub | temporary replacement that simulates a module not yet available |
+| Stub | temporary module that returns a known value or displays a test message so calling code can be tested before the full module exists |
 
 Selection examples:
 
@@ -257,6 +248,8 @@ Selection examples:
 ---
 
 ## Test Strategy, Test Plan and Test Data
+
+Sources: [9618/21 · October/November 2024 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=9); [9618/21 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=10).
 
 ### Test strategy
 
@@ -298,6 +291,8 @@ An expected result must be specific enough to decide pass/fail.
 
 ## Maintenance
 
+Sources: [9618/23 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=5); [9618/23 · October/November 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=4).
+
 A program that currently works still needs maintenance because faults may be discovered, user requirements may change, and hardware, operating systems or data formats may change.
 
 | Type | Purpose | Example |
@@ -319,6 +314,8 @@ Maintenance needs:
 ---
 
 ## Enhancing Existing Programs
+
+Sources: [9618/21 · October/November 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=19); [9618/22 · October/November 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=15).
 
 When asked to amend a program:
 

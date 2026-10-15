@@ -65,16 +65,17 @@ Use this overview to define data types, choose file access, calculate floating p
 
 ### Why user-defined data types are necessary
 
+Sources: [9618/31 · May/June 2021 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_31.pdf#page=4). The older question directly assesses why a programmer defines a new type.
+
 #### Exam-style answer
-> User-defined data types allow the programmer to create data types that match the needs of a specific problem. They make the program easier to understand, less error-prone and allow related data items to be grouped together under one identifier.
+> A programmer defines a new type when the language does not provide the required type. Existing types can be combined or used to construct the new type, extending the language to represent the problem data.
 
 #### Required ideas / marking points
 + **user-defined**
-+ **specific problem**
-+ **group related data**
-+ **single identifier**
-+ **easier to understand**
-+ **less error-prone**
++ **new type not provided by the language**
++ **constructed by the programmer**
++ **existing types where appropriate**
++ **extends the language’s flexibility**
 
 #### Common weak answer
 > They are used because the programmer wants a new type.
@@ -84,6 +85,8 @@ Too vague. You need to explain **why** a built-in type is not enough.
 ---
 
 ### Composite vs non-composite data types
+
+Sources: [9618/32 · October/November 2023 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=3); [9618/31 · May/June 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=6); [9618/32 · May/June 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5).
 
 | Type | Meaning | Examples |
 | --- | --- | --- |
@@ -104,11 +107,13 @@ Too vague. You need to explain **why** a built-in type is not enough.
 
 ### Enumerated type
 
+Sources: [9618/31 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/33 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=6); [9618/33 · October/November 2025 · Q1(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=6). The ordered list and absence of duplicate values are distinct features.
+
 #### Definition
-> An enumerated data type is a user-defined non-composite data type with a fixed list of possible values.
+> An enumerated data type is a user-defined non-composite type whose definition lists all permitted values in order. The list has no duplicates; a variable of the type takes one value from that list.
 
 #### Important exam points
-+ Values are chosen from a **fixed list**.
++ Values are chosen from a **fixed, ordered list** with no duplicates.
 + It is useful when a field has a **limited range of possible values**.
 + The values should usually be written as identifiers, not strings.
 
@@ -140,6 +145,8 @@ DECLARE Gate : GateID
 
 ### Pointer type
 
+Sources: [9618/31 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/31 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4).
+
 #### Definition
 > A pointer data type is a user-defined non-composite data type that stores a memory address and indicates the type of data stored at that location.
 
@@ -164,6 +171,8 @@ DECLARE CurrentName : TNamePointer
 ---
 
 ### Record type
+
+Sources: [9618/32 · October/November 2024 · Q3(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5); [9618/31 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=6); [9618/33 · October/November 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=6).
 
 #### Definition
 > A record is a user-defined composite data type that contains a fixed number of fields, where the fields may be of different data types.
@@ -223,6 +232,8 @@ Flight1.Airline ← "Cambridge Airways"
 
 ### Set type
 
+Sources: [9618/32 · May/June 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5); [9618/31 · October/November 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=7); [9618/31 · October/November 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=8).
+
 #### Definition
 > A set is a user-defined composite data type that contains an unordered collection of distinct elements. Set theory operations such as union and intersection can be applied. All elements are of the same data type.
 
@@ -256,6 +267,8 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 ---
 
 ### Class and object types
+
+Sources: [9618/32 · October/November 2024 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=11); [9618/32 · October/November 2024 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=12); [9618/33 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=10).
 
 A class defines the properties and methods shared by its objects. Each object is one instance of the class and stores its own property values.
 
@@ -292,6 +305,8 @@ OUTPUT CurrentReading.GetValue()
 
 ### File organisation overview
 
+Sources: [9618/31 · October/November 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/32 · October/November 2024 · Q2(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5).
+
 | File organisation | How records are stored | Common access method | Good for |
 | --- | --- | --- | --- |
 | Serial | no key order; often chronological order / order of arrival | sequential access | transaction logs, backup, batch processing |
@@ -301,6 +316,8 @@ OUTPUT CurrentReading.GetValue()
 ---
 
 ### Serial file organisation
+
+Sources: [9618/32 · October/November 2024 · Q2(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5).
 
 #### Exam-style answer
 > In a serial file, records are stored in the order they are added, often chronological order. There is no ordering by key field, so records must be checked one after another until the required record is found or all records have been checked.
@@ -319,6 +336,8 @@ Wrong. Serial means records are stored **without key order**.
 ---
 
 ### Sequential file organisation
+
+Sources: [9618/32 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=4); [9618/31 · May/June 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=7).
 
 #### Exam-style answer
 > In a sequential file, records are stored in order of a key field. The key field is compared as the file is searched, and the search can stop when the required key is found or when the current key is greater than the target key.
@@ -341,6 +360,8 @@ Wrong. Serial means records are stored **without key order**.
 
 ### Random file organisation
 
+Sources: [9618/31 · October/November 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/32 · May/June 2024 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=9).
+
 #### Exam-style answer
 > In a random file, records are stored in no particular sequence. There is a relationship between the record key and its location in the file, often using a hashing algorithm, so records can be accessed directly.
 
@@ -353,6 +374,8 @@ Wrong. Serial means records are stored **without key order**.
 ---
 
 ### Sequential access
+
+Sources: [9618/31 · May/June 2024 · Q4(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=7); [9618/31 · October/November 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4).
 
 #### Exam-style answer
 > Sequential access searches records one after another from the physical start of the file until the record is found or the end of file is reached.
@@ -373,6 +396,10 @@ CLOSEFILE "Customer.dat"
 
 ### Direct access
 
+Sources: [9618/32 · May/June 2024 · Q7(a),7(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=8); [9618/32 · May/June 2024 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=9). The question distinguishes indexed sequential access from random-file hashing.
+
+**Distinguish the organisation:** in indexed sequential access, search the key index for the record address. In random access, calculate an address from the key and follow the collision-resolution rule if that location holds another record. Do not describe every direct-access file as an unindexed sequential scan.
+
 #### Exam-style answer
 > Direct access allows a record to be accessed without reading every previous record. A calculation or index can be used to identify the likely record location.
 
@@ -387,6 +414,8 @@ GETRECORD "AccountRecords.dat", Customer
 ---
 
 ### Hashing algorithm
+
+Sources: [9618/31 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/31 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=7).
 
 #### Definition
 > A hashing algorithm takes a record key as input and calculates the storage location / address for that record in the file.
@@ -406,6 +435,8 @@ Location ← AccountNumber MOD 1000
 ---
 
 ### Collision and collision resolution
+
+Sources: [9618/31 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/32 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=3); [9618/32 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=4); [9618/31 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=7). Storage seeks a free slot; retrieval seeks the matching key. These are different stopping conditions.
 
 #### Definition
 > A collision occurs when two different record keys are processed by the hashing algorithm and produce the same hash value / storage location.
@@ -430,6 +461,8 @@ Location ← AccountNumber MOD 1000
 
 ### Format of floating-point representation
 
+Sources: [9618/31 · May/June 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4); [9618/33 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=7).
+
 A binary floating-point number is stored using:
 
 1. **Mantissa**: stores the significant digits / value.  
@@ -453,6 +486,8 @@ Example mantissa:
 
 ### Normalisation
 
+Sources: [9618/31 · May/June 2025 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=7); [9618/31 · October/November 2021 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w21_ms_31.pdf#page=3). The older part explains the purpose; recent parts assess the conversion.
+
 #### Rule
 A normalised mantissa uses the available bits efficiently.
 
@@ -474,6 +509,8 @@ A normalised mantissa uses the available bits efficiently.
 ---
 
 ### Positive denary to floating-point
+
+Sources: [9618/32 · May/June 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/32 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=7).
 
 #### Example: +54.8125 using 12-bit mantissa and 4-bit exponent
 
@@ -504,6 +541,8 @@ If the question gives 10 mantissa bits, write 10 bits. If it gives 12 mantissa b
 ---
 
 ### Negative denary to floating-point
+
+Sources: [9618/31 · May/June 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4); [9618/31 · May/June 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=7).
 
 #### Method
 1. Convert the positive version to binary.  
@@ -549,6 +588,8 @@ Exponent: 000101
 
 ### Floating-point to denary
 
+Sources: [9618/31 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4); [9618/32 · May/June 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=5).
+
 #### Method
 1. Read the exponent. If MSB is 1, convert from two's complement.  
 2. Move the binary point by the exponent value.  
@@ -588,6 +629,8 @@ Convert as two's complement:
 
 ### Precision, range, rounding, overflow and underflow
 
+Sources: [9618/31 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/33 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=7); [9618/32 · October/November 2022 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_32.pdf#page=4). The precision/range trade-off assumes a fixed total word length; the older question supplies underflow evidence.
+
 | Concept | Meaning | Exam phrase |
 | --- | --- | --- |
 | Precision | Accuracy / detail of the stored number | more mantissa bits gives greater precision |
@@ -597,7 +640,7 @@ Convert as two's complement:
 | Underflow | Number too close to zero to be represented | very small value cannot be stored |
 
 #### Exam-style wording
-> If the number of bits in the mantissa is increased, precision increases. If the number of bits in the exponent is increased, the range of possible numbers increases.
+> More mantissa bits increase precision; more exponent bits increase range. With a fixed total word length, allocating more bits to one field leaves fewer for the other. If the mantissa cannot hold every significant bit, truncation or rounding loses precision; overflow means an arithmetic result is outside the format’s representable range.
 
 #### Common mistake
 | Student writes | Why weak |

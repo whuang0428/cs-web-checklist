@@ -36,6 +36,8 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Data Types
 
+Sources: [9618/22 · October/November 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=5); [9618/21 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=4).
+
 Choose a data type from what the value represents and how it will be processed.
 
 | Type | Example | Suitable use |
@@ -59,6 +61,8 @@ Examples:
 ---
 
 ## Records
+
+Sources: [9618/21 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=5); [9618/22 · May/June 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=7).
 
 A **record** stores related fields of different data types under one identifier.
 
@@ -94,11 +98,13 @@ Catalogue[1].BookCode <- "BK101"
 Catalogue[1].Available <- TRUE
 ```
 
-Use a record when one entity has several related properties. An array of records keeps many entities in one coherent structure.
+Use a record for one entity’s related fields, which can have different types. An array of records permits indexed access and iteration through entities, reducing duplicated code and simplifying testing and maintenance.
 
 ---
 
 ## Arrays
+
+Sources: [9618/23 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=3); [9618/22 · May/June 2025 · Q1(d)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=7).
 
 An array stores elements of the same data type.
 
@@ -140,13 +146,17 @@ Select:
 - 2D for rows and columns
 - an array of records for repeated entities with mixed field types
 
-Always use the declared bounds. Do not assume the first index is 0 or 1.
+Always use the declared bounds. A dimension with bounds `L:U` has `U - L + 1` elements. Do not assume the first index is 0 or 1; a not-found/null sentinel must not be a valid index.
 
 ---
 
 ## Processing Array Data
 
 ### Linear search
+
+Sources: [9618/21 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=12); [9618/22 · May/June 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=16).
+
+Compare the search value with each successive element. For a first-match search, stop when it is found or the array ends; return a matching index or a distinct not-found value. Continuing after the first match wastes comparisons.
 
 ```text
 Found <- FALSE
@@ -168,6 +178,10 @@ After the loop:
 
 ### Bubble sort
 
+Sources: [9618/21 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=11).
+
+Compare adjacent items and swap those in the wrong order. Repeat passes, reducing the unsorted range as the largest remaining item reaches the end. An optimised version resets a swap flag before each pass and stops after a complete pass with no swaps.
+
 ```text
 FOR Pass <- 1 TO 29
     FOR Index <- 1 TO 30 - Pass
@@ -188,7 +202,9 @@ If parallel arrays or records are used, swap the entire associated item, not jus
 
 ## Text Files
 
-A file preserves data after program execution ends and can hold an unknown number of lines.
+Sources: [9618/21 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=12); [9618/23 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=4).
+
+A text file preserves data after a program ends and can store more items than a fixed-size array, subject to storage capacity. `READ` reads existing data; `WRITE` creates/replaces output; `APPEND` adds to the end without replacing existing contents. Convert non-string values when the specified text-file interface requires strings.
 
 ### Read every line
 
@@ -235,6 +251,8 @@ File checklist:
 
 ## Abstract Data Types
 
+Supplementary source — no direct MS located: [NIST: abstract data type](https://www.nist.gov/dads/HTML/abstractDataType.html).
+
 An **abstract data type (ADT)** is:
 
 - a collection of data
@@ -260,6 +278,8 @@ You are not required to write full pseudocode implementations for these ADTs.
 ---
 
 ## Stacks
+
+Sources: [9618/21 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=5); [9618/22 · October/November 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=6).
 
 A stack is **LIFO**: last in, first out.
 
@@ -297,6 +317,8 @@ Errors:
 
 ## Queues
 
+Sources: [9618/22 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=4); [9618/23 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=8).
+
 A queue is **FIFO**: first in, first out.
 
 | Operation | Effect |
@@ -329,6 +351,8 @@ In an array implementation, editing a located queued record changes its data but
 ---
 
 ## Linked Lists
+
+Sources: [9618/23 · October/November 2024 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=7); [9618/22 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=15).
 
 A linked list contains nodes. Each node stores:
 
@@ -378,6 +402,8 @@ Costs:
 ---
 
 ## Array Implementations of ADTs
+
+Sources: [9618/21 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=5); [9618/23 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=6).
 
 ### Stack
 

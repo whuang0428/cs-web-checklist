@@ -73,6 +73,8 @@ Use this map to choose, trace, explain and justify.
 
 ### Purpose and benefits of networking devices
 
+Sources: [9618/12 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3).
+
 #### Core idea
 
 A network connects computers and devices so that they can communicate and share resources.
@@ -105,6 +107,8 @@ A network connects computers and devices so that they can communicate and share 
 ---
 
 ## LAN and WAN
+
+Sources: [9618/12 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/13 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=3).
 
 ### LAN — Local Area Network
 
@@ -163,6 +167,8 @@ A network connects computers and devices so that they can communicate and share 
 
 ### Client-server model
 
+Sources: [9618/11 · May/June 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=6); [9618/13 · May/June 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=7).
+
 #### Meaning
 
 A **server** provides services or resources. A **client** requests and uses those services.
@@ -201,6 +207,8 @@ A **server** provides services or resources. A **client** requests and uses thos
 
 ### Peer-to-peer model
 
+Sources: [9618/11 · May/June 2021 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_11.pdf#page=6); [9618/11 · May/June 2021 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_11.pdf#page=6).
+
 #### Meaning
 
 In a **peer-to-peer network**, each computer can act as both client and server. There is no central server controlling the network.
@@ -232,6 +240,8 @@ In a **peer-to-peer network**, each computer can act as both client and server. 
 ---
 
 ### Thin client and thick client
+
+Sources: [9618/12 · May/June 2023 · Q1(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/13 · May/June 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4).
 
 #### Thin client
 
@@ -271,6 +281,8 @@ A **thick client** can process and store more data locally.
 ---
 
 ## Network Topologies
+
+Sources: [9618/12 · May/June 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/13 · May/June 2023 · Q2(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=3).
 
 ### Bus topology
 
@@ -412,6 +424,8 @@ Large real networks often use hybrid layouts because one topology may not fit al
 
 ## Packets and Transmission between Hosts
 
+Sources: [9618/12 · October/November 2023 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=8); [9618/13 · May/June 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=6).
+
 ### Packet basics
 
 Data is split into **packets** before being transmitted across a network.
@@ -446,6 +460,8 @@ Each packet commonly contains:
 ---
 
 ## Cloud Computing
+
+Sources: [9618/11 · October/November 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=4); [9618/13 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4).
 
 ### Meaning
 
@@ -483,6 +499,8 @@ Cloud computing means using remote servers over a network/internet to store, pro
 ---
 
 ## Wired and Wireless Networks
+
+Sources: [9618/13 · May/June 2023 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4); [9618/13 · October/November 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8).
 
 ### Wired networks
 
@@ -546,6 +564,8 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ## Cell Phone Network
 
+Sources: [9618/12 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=10).
+
 ### Exam focus
 
 You should be able to explain how a smartphone accesses a company WAN using the cell phone network.
@@ -574,6 +594,8 @@ You should be able to explain how a smartphone accesses a company WAN using the 
 ---
 
 ## LAN Hardware
+
+Sources: [9618/11 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=4); [9618/11 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=4).
 
 ### Switch
 
@@ -668,9 +690,11 @@ A dedicated line is a private/direct connection between sites.
 
 ## Ethernet and CSMA/CD
 
+Sources: [9618/12 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/12 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=8).
+
 ### Ethernet
 
-Ethernet is a set of standards/protocols used for wired LAN communication.
+Ethernet is a set of protocols for wired LAN communication. Data is carried in **frames** with source and destination addresses and error-checking information. On a shared Ethernet medium, CSMA/CD controls access.
 
 ### Collision
 
@@ -685,21 +709,23 @@ A collision happens when two devices transmit on the same shared medium at the s
 1. Device listens to check if the transmission medium is free.
 2. If free, it transmits data.
 3. If another device transmits at the same time, a collision is detected.
-4. Devices stop transmitting.
-5. Each waits a random time.
-6. Devices try again.
+4. Devices send a **jam signal** and abort the transmission.
+5. Each waits a **random backoff time** before checking the medium again.
+6. If it is free, retransmit; repeated collisions increase the possible waiting interval.
 
 #### Exam-style answer
 
-> A device checks whether the medium is free before transmitting. If a collision is detected, devices stop transmitting, wait for a random time and retransmit.
+> Listen before sending. On detecting a collision, send a jam signal, stop, wait a random time, then check again and retransmit when the medium is free.
 
 #### Scope warning
 
-Do not spend too long on Ethernet frame fields unless your course specifically requires it. For AS Paper 1, the high-value answer is usually about **checking medium, detecting collision, random wait, retransmission**.
+CSMA/CD applies to a **shared, half-duplex Ethernet medium**. Match the question: an Ethernet description may require frames and addressing; a CSMA/CD question requires the access and collision sequence.
 
 ---
 
 ## Bit Streaming
+
+Sources: [9618/11 · May/June 2024 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=4); [9618/13 · October/November 2024 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8).
 
 ### Meaning
 
@@ -767,7 +793,7 @@ Video-conferencing questions may combine compression with real-time streaming.
 
 #### Lossy vs lossless for real-time streaming
 
-For real-time video streaming, **lossy** is usually more appropriate.
+Choose from the stated constraints. **Lossy** can reduce the data rate enough for live transmission when some quality loss is acceptable. **Lossless** preserves all original data where quality must be retained and the available bandwidth is sufficient.
 
 #### Justification
 
@@ -783,6 +809,8 @@ For real-time video streaming, **lossy** is usually more appropriate.
 ## WWW, Internet, URL and DNS
 
 ### Internet vs World Wide Web
+
+Sources: [9618/11 · May/June 2021 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_11.pdf#page=7); [9618/13 · May/June 2021 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_13.pdf#page=7).
 
 | Term | Meaning |
 | --- | --- |
@@ -804,6 +832,8 @@ For real-time video streaming, **lossy** is usually more appropriate.
 
 ### Hardware supporting the internet
 
+Sources: [9618/12 · May/June 2024 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=6); [9618/11 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=5).
+
 | Hardware / infrastructure | Use |
 | --- | --- |
 | Modem | converts signals for transmission over lines |
@@ -817,6 +847,8 @@ For real-time video streaming, **lossy** is usually more appropriate.
 ---
 
 ### IP addresses
+
+Sources: [9618/11 · May/June 2023 · Q4(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/12 · October/November 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=7).
 
 An IP address identifies a device/interface on a network so packets can be routed.
 
@@ -883,7 +915,9 @@ An IP address identifies a device/interface on a network so packets can be route
 
 ### Subnetting
 
-Subnetting divides a network into smaller subnetworks.
+Sources: [9618/11 · May/June 2023 · Q4(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=8); [9618/13 · May/June 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4).
+
+Subnetting divides a network into smaller subnetworks. An IP address has a **network ID** and a **host ID**: hosts in the same subnet share the network ID and have different host IDs. The subnet mask identifies the split.
 
 #### Benefits
 
@@ -916,6 +950,8 @@ https://www.example.com/revision/chapter2.html
 | `/revision/chapter2.html` | path/resource |
 
 ### DNS
+
+Sources: [9618/11 · October/November 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=11).
 
 DNS = **Domain Name Service / Domain Name System**
 

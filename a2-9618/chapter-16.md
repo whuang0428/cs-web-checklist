@@ -65,6 +65,8 @@ Use this overview to schedule processes, manage memory, handle interrupts and tr
 
 ### What the OS does
 
+Sources: [9618/33 · October/November 2025 · Q5(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=8).
+
 #### Exam-style answer
 > An operating system manages the computer system resources, provides a user interface, hides the complexity of the hardware, and provides a platform for programs to run.
 >
@@ -85,6 +87,8 @@ OS <span lang="zh-CN">可以理解为用户</span>、<span lang="zh-CN">应用�
 ---
 
 ### How the user interface hides hardware complexity
+
+Sources: [9618/31 · October/November 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=6); [9618/31 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=9).
 
 | User action | Hidden complexity |
 | --- | --- |
@@ -109,6 +113,8 @@ This is true but too vague. Say **what is hidden** and **how the user interacts 
 
 ### Process
 
+Sources: [9618/32 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10).
+
 #### Definition
 > A process is a program that is currently being executed.
 >
@@ -126,6 +132,8 @@ A process is not just the program file. It includes:
 ---
 
 ### Process states
+
+Sources: [9618/31 · October/November 2023 · Q7(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=6); [9618/32 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6); [9618/32 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10).
 
 | State | Meaning | Example |
 | --- | --- | --- |
@@ -162,6 +170,8 @@ Blocked <span lang="zh-CN">通常不是</span>“<span lang="zh-CN">坏了</span
 
 ### Why scheduling is needed
 
+Sources: [9618/33 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=10); [9618/33 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=8).
+
 #### Exam-style answer
 > Scheduling is needed because several processes may be ready to use the CPU, but only one process can use the CPU at a time. The scheduler decides which process is allocated CPU time next.
 >
@@ -178,6 +188,8 @@ Scheduling maximises resource use by allocating the CPU to another ready process
 ---
 
 ### First Come First Served / FCFS
+
+Sources: [9618/32 · October/November 2022 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_32.pdf#page=13). Older question used for the operation and benefit; 2025 questions only name this routine.
 
 #### How it works
 > Processes are executed in the order they arrive in the ready queue.
@@ -196,6 +208,8 @@ Scheduling maximises resource use by allocating the CPU to another ready process
 ---
 
 ### Round Robin
+
+Sources: [9618/33 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11).
 
 #### How it works
 > Each process is given a fixed time slice. When the time slice expires, the process is pre-empted and moved to the back of the ready queue if it has not finished.
@@ -227,8 +241,10 @@ Wrong. Only one process uses a single CPU at a time. Round robin just switches q
 
 ### Shortest Job First / SJF
 
+Sources: [9618/32 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6). Non-pre-emptive; do not merge this with shortest remaining time.
+
 #### How it works
-> The process with the shortest estimated total burst time is executed first.
+> The ready process with the shortest estimated CPU burst is selected. Shortest Job First is non-pre-emptive: once started, it continues until it completes or waits for I/O. New shorter jobs do not by themselves pre-empt it; repeated selection of short jobs can starve long jobs.
 >
 
 | Benefit | Drawback |
@@ -240,6 +256,8 @@ Wrong. Only one process uses a single CPU at a time. Round robin just switches q
 ---
 
 ### Shortest Remaining Time / SRT
+
+Sources: [9618/31 · May/June 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=12).
 
 #### How it works
 > The process with the shortest remaining burst time is executed first. It is pre-emptive, so a running process can be replaced if a new process with a shorter remaining time arrives.
@@ -255,6 +273,8 @@ Wrong. Only one process uses a single CPU at a time. Round robin just switches q
 ---
 
 ## Interrupt Handling
+
+Sources: [9618/31 · May/June 2024 · Q11(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=14); [9618/32 · October/November 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=11); [9618/32 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10).
 
 ### What is an interrupt?
 
@@ -292,7 +312,7 @@ G --> H[Process continues or scheduler chooses next process]
 #### Interrupts as part of low-level scheduling
 
 1. A timer or I/O device raises an interrupt while a process is running.
-2. The processor enters kernel mode, saves the current process context and runs the kernel's ISR.
+2. The kernel checks interrupt priority, uses the interrupt vector/dispatch table to locate the ISR, saves the current process context and runs the appropriate routine.
 3. The ISR records the event: for example, a completed I/O operation can move a process from **Blocked** to **Ready**, while a timer expiry can move the running process to **Ready**.
 4. The kernel invokes the low-level scheduler to select one process from the ready queue.
 5. The dispatcher restores that process's context and changes it to **Running**.
@@ -312,6 +332,8 @@ The ISR handles the cause of the interrupt; the scheduler makes the separate all
 
 ### Virtual memory
 
+Sources: [9618/32 · October/November 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=4).
+
 #### Definition
 > Virtual memory uses secondary storage as an extension of main memory so that programs can run even when there is not enough RAM to hold all required pages at once.
 >
@@ -329,6 +351,8 @@ The ISR handles the cause of the interrupt; the scheduler makes the separate all
 ---
 
 ### Paging
+
+Sources: [9618/31 · October/November 2022 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_31.pdf#page=10). Older question supplies the fixed-size versus variable-size distinction. Page-table mechanics below are supplementary explanation.
 
 #### Key idea
 > Paging divides a process into fixed-size pages and divides memory into fixed-size page frames. Pages can be loaded into any available frame.
@@ -359,6 +383,8 @@ I --> D
 
 ### Page replacement
 
+**Supplementary explanation:** No direct question assessing this explanation was found in the reviewed 2023–2025 papers or the targeted 2021–2022 fallback. Retained for [syllabus 16.1](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf); it is not an extra scoring rule. Explanation source: [OSTEP: page-replacement policies](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys-policy.pdf).
+
 #### Why replacement is needed
 If RAM is full and a required page is not in RAM, the OS must remove / replace a page to make room.
 
@@ -378,6 +404,8 @@ Do not over-learn advanced algorithms unless your course specifically requires t
 
 ### Segmentation
 
+Sources: [9618/31 · October/November 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=10).
+
 #### Key idea
 > Segmentation divides a program into variable-sized logical sections called segments.
 >
@@ -391,12 +419,14 @@ Examples of segments:
 + module segment
 
 #### Exam-style answer
-> In segmented memory, the logical / virtual address space is broken into varying-sized blocks called segments. Each segment represents a logical part of the program and can be stored in memory separately.
+> Segmentation divides the logical address space into variable-sized segments. An address identifies a segment and an offset within it; the segment table maps the segment to physical memory. Segments can be loaded separately when required.
 >
 
 ---
 
 ### Paging vs segmentation
+
+Sources: [9618/31 · October/November 2022 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_31.pdf#page=10).
 
 | Feature | Paging | Segmentation |
 | --- | --- | --- |
@@ -413,6 +443,8 @@ Examples of segments:
 ---
 
 ### Disk thrashing
+
+Sources: [9618/32 · October/November 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=4); [9618/31 · October/November 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=11).
 
 #### Definition
 > Disk thrashing occurs when the system spends more time swapping pages between RAM and secondary storage than executing useful instructions.
@@ -446,6 +478,8 @@ F --> G[System performance becomes very slow]
 
 ### Interpreter
 
+Sources: [9618/31 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=11).
+
 #### What an interpreter does
 > An interpreter translates and executes a high-level language program one statement / line at a time without producing a stored executable file.
 >
@@ -472,6 +506,8 @@ F --> G[System performance becomes very slow]
 
 ### Compiler
 
+Sources: [9618/13 · May/June 2023 · Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/12 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=11); [9618/13 · October/November 2025 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12). These AS questions assess the compiler benefits and development drawbacks used here.
+
 #### What a compiler does
 > A compiler translates the whole source code into object code / executable code before the program is run.
 >
@@ -479,7 +515,7 @@ F --> G[System performance becomes very slow]
 #### Benefits
 | Benefit | Explanation |
 | --- | --- |
-| faster execution | translated once before running |
+| repeated execution/testing | executable can be run repeatedly without translating again |
 | source code hidden | executable can be distributed without source |
 | errors can be reported together | compiler analyses whole program |
 
@@ -487,12 +523,14 @@ F --> G[System performance becomes very slow]
 | Drawback | Explanation |
 | --- | --- |
 | slower development cycle | must compile before running |
-| executable is platform dependent | different machine / OS may need different compilation |
-| error messages may be less immediate | not line-by-line during execution |
+| incomplete code is difficult to test | compiler may require errors to be corrected before the program can run |
+| dependent error messages | one fault can produce several later reported errors |
 
 ---
 
 ### Compiler stages
+
+Sources: [9618/32 · October/November 2022 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_32.pdf#page=4); [9618/32 · May/June 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9); [9618/33 · May/June 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11).
 
 ```mermaid
 flowchart LR
@@ -505,33 +543,42 @@ E --> F[Object code / executable]
 
 ### Lexical analysis
 
+Sources: [9618/32 · May/June 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9); [9618/31 · October/November 2025 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12).
+
 #### What happens
 + removes unnecessary spaces / comments
 + groups characters into tokens
 + identifies keywords, identifiers, operators, constants
-+ may build / update symbol table
++ records identifiers in a symbol table
++ reports invalid tokens
++ passes the token stream to the syntax analyser
 
 #### Exam-style phrasing
-> Lexical analysis breaks the source code into tokens and removes unnecessary characters such as spaces and comments.
+> The lexical analyser removes comments and unnecessary whitespace, converts the source into categorised tokens, records identifiers in the symbol table and reports invalid tokens. It passes the token stream to syntax analysis.
 >
 
 ---
 
 ### Syntax analysis
 
+Sources: [9618/33 · May/June 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11).
+
 #### What happens
 + checks tokens against grammar rules
 + detects syntax errors
 + checks statement structure
-+ may build a parse structure
++ produces a parse tree
++ reports syntax errors
 
 #### Exam-style phrasing
-> Syntax analysis checks that the sequence of tokens follows the grammar rules of the programming language.
+> Syntax analysis receives the lexical analyser’s token stream, parses it against the language grammar, produces a parse tree and reports syntax errors.
 >
 
 ---
 
 ### Code generation
+
+**Supplementary explanation:** No direct question assessing this explanation was found in the reviewed 2023–2025 papers or the targeted 2021–2022 fallback. Retained for [syllabus 16.2](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf); it is not an extra scoring rule. Explanation source: [LLVM: instruction selection and register allocation](https://llvm.org/docs/CodeGenerator.html).
 
 #### What happens
 + produces machine code / object code
@@ -546,6 +593,8 @@ E --> F[Object code / executable]
 
 ### Optimisation
 
+Sources: [9618/32 · October/November 2025 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=13); [9618/33 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=10).
+
 #### What happens
 + improves efficiency of object code
 + may reduce execution time
@@ -559,6 +608,8 @@ E --> F[Object code / executable]
 ---
 
 ## BNF and Syntax Diagrams
+
+Sources: [9618/31 · May/June 2023 · Q6(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=5); [9618/31 · May/June 2023 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=6); [9618/31 · October/November 2024 · Q10(a),10(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=13); [9618/31 · October/November 2024 · Q10(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=14); [9618/31 · May/June 2025 · Q7(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=12).
 
 ### What BNF is
 
@@ -594,6 +645,8 @@ E --> F[Object code / executable]
 ---
 
 ### Syntax diagram rules
+
+Sources: [9618/32 · May/June 2023 · Q3(c)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=5); [9618/32 · May/June 2025 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9).
 
 A syntax diagram is a visual way to show the same grammar.
 
@@ -637,6 +690,8 @@ To convert the diagram into BNF, identify the compulsory first item and the repe
 ---
 
 ## Reverse Polish Notation / RPN
+
+Sources: [9618/31 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=7); [9618/32 · October/November 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=5); [9618/32 · May/June 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5); [9618/32 · May/June 2024 · Q5(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=6).
 
 ### What RPN is
 

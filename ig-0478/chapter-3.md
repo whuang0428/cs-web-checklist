@@ -62,6 +62,9 @@ Use this overview to trace the CPU, select devices, explain storage and connect 
 
 ## 3.1 Computer Architecture
 ### 3.1.1 CPU and Microprocessor
+
+Sources: [0478/13 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=10); [0478/12 · February/March 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=7).
+
 **CPU**
 Processes instructions and data that are input into the computer so that results can be output.
 
@@ -77,6 +80,9 @@ A type of integrated circuit on a single chip.
 ---
 
 ### 3.1.2 CPU Components｜CU, ALU, Registers and Buses
+
+Sources: [0478/12 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=11); [0478/12 · October/November 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=9).
+
 #### CPU Units
 | Component | Full name | Exam function |
 | --- | --- | --- |
@@ -108,7 +114,12 @@ A type of integrated circuit on a single chip.
 
 ---
 
-### 3.1.3 Fetch–Decode–Execute Cycle｜6-mark Core Template
+<span id="313-fetchdecodeexecute-cycle6-mark-core-template" class="legacy-anchor" aria-hidden="true"></span>
+
+### 3.1.3 Fetch–Decode–Execute Cycle｜Core Process
+
+Sources: [0478/11 · May/June 2024 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=7); [0478/11 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=13).
+
 ```mermaid
 flowchart TD
 A[PC stores address of next instruction] --> B[Address copied from PC to MAR]
@@ -153,6 +164,9 @@ J --> K[Result may be stored in ACC / memory]
 ---
 
 ### 3.1.4 Decode + Execute Diagram Focus｜CIR / CU / ALU / ACC
+
+Sources: [0478/12 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=8); [0478/13 · October/November 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=6).
+
 ```mermaid
 flowchart LR
 CIR[CIR stores instruction] --> CU[CU decodes instruction]
@@ -177,6 +191,9 @@ ALU --> ACC2[ACC stores result]
 ---
 
 ### 3.1.5 Core, Cache and Clock｜CPU Performance
+
+Sources: [0478/12 · October/November 2025 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=9); [0478/12 · February/March 2024 · Q2(b)(i)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=5).
+
 | Factor | Definition | How it affects performance |
 | --- | --- | --- |
 | **Core** | independent processing unit in the CPU that can perform FDE cycle | more cores can process more instructions simultaneously |
@@ -200,6 +217,9 @@ Use paired points:
 ---
 
 ### 3.1.6 Instruction Set, Opcode and Operand
+
+Sources: [0478/12 · May/June 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=8).
+
 | Term | Meaning |
 | --- | --- |
 | **Instruction set** | a list of all the machine code commands that can be processed by a CPU |
@@ -215,6 +235,9 @@ Use paired points:
 ---
 
 ### 3.1.7 Embedded Systems
+
+Sources: [0478/12 · February/March 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12).
+
 An **embedded system** is a computer system built into a larger device to perform a **dedicated / limited / single function**.
 
 #### Characteristics of Embedded Systems
@@ -253,6 +276,9 @@ An **embedded system** is a computer system built into a larger device to perfor
 
 ## 3.2 Input and Output Devices
 ### 3.2.1 Input and Output Devices
+
+Sources: [0478/13 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=7); [0478/11 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9).
+
 | Type | Meaning | Examples |
 | --- | --- | --- |
 | **Input device** | hardware used to enter data into a computer system | keyboard, microphone, camera, sensor, scanner, touchscreen |
@@ -260,6 +286,9 @@ An **embedded system** is a computer system built into a larger device to perfor
 
 
 #### High-frequency device notes
+
+Sources: [0478/12 · February/March 2022 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m22_ms_12.pdf#page=7); [0478/12 · October/November 2021 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w21_ms_12.pdf#page=9).
+
 | Device | Typical use / exam point |
 | --- | --- |
 | **Keyboard** | enter text / data |
@@ -275,16 +304,22 @@ An **embedded system** is a computer system built into a larger device to perfor
 
 #### Touchscreen types
 
+Sources: [0478/12 · October/November 2022 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w22_ms_12.pdf#page=4); [0478/12 · May/June 2015 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s15_ms_12.pdf#page=3).
+
+
 | Type | How the touch is detected | Suitable feature / context |
 | --- | --- | --- |
-| **Resistive** | pressure brings two conductive layers into contact | works with a finger, glove or stylus; useful where physical pressure is acceptable |
-| **Capacitive** | a conductive finger changes the screen's electric field / capacitance | supports a clear, responsive multi-touch interface |
-| **Infra-red** | the touch interrupts a grid of infra-red beams across the screen | detects touch without pressing flexible screen layers |
+| **Resistive** | pressure brings conductive layers together; the change in current identifies the touch position | works with a finger, glove or stylus |
+| **Capacitive** | touching the screen changes its electrical current; the touch position is calculated | supports multi-touch; ordinary gloves may prevent input |
+| **Infra-red** | sensors locate a break in the grid of infra-red beams across the screen | works with a finger, glove or stylus; dirt may obstruct beams |
 
 
 ---
 
 ### 3.2.2 Sensors｜How to Choose the Correct Sensor
+
+Sources: [0478/13 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=7); [0478/13 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=13).
+
 A **sensor** is an input device that measures physical properties from the environment.
 
 | Sensor | Measures / detects | Common exam scenarios |
@@ -311,23 +346,29 @@ A **sensor** is an input device that measures physical properties from the envir
 ---
 
 ### 3.2.3 Analogue Data, Digital Data, ADC and DAC
+
+Sources: [0478/11 · May/June 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=6); [0478/13 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=5).
+
 | Term | Meaning / use |
 | --- | --- |
 | **Analogue data** | continuously changing physical data, e.g. temperature or light level |
 | **Digital data** | discrete binary data that a computer can process |
 | **ADC** | analogue-to-digital converter; converts sensor readings into digital data for the microprocessor |
-| **DAC** | digital-to-analogue converter; converts computer output into analogue signals for an actuator |
+| **DAC** | digital-to-analogue converter; produces an analogue output from digital data |
 
 
 #### Core Exam Sentences
 + Most sensor readings are **analogue** because physical properties vary continuously.
 + The microprocessor can only process **digital data**.
 + An **ADC** converts analogue sensor readings into digital data.
-+ A **DAC** may be used when the microprocessor controls an actuator.
++ **Supplementary explanation:** a DAC produces an analogue voltage or current from a digital value; this is relevant where an output device needs an analogue signal. [Technical definition](https://www.analog.com/en/resources/glossary/d_a_converter.html).
 
 ---
 
 ### 3.2.4 Monitoring Systems vs Control Systems
+
+Sources: [0478/13 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=13); [0478/13 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=5).
+
 | System type | Meaning | Key difference |
 | --- | --- | --- |
 | **Monitoring system** | measures / records data and may output warning | does **not** change the physical condition directly |
@@ -409,6 +450,9 @@ Use this for **greenhouse**, **street light**, **air conditioning**, **water bow
 ---
 
 ### 3.2.6 Output Devices｜Printers, Screens and Actuators
+
+Sources: [0478/11 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=6); [0478/12 · May/June 2025 · Q3(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=9).
+
 #### Actuator
 An **actuator** is an output device that receives a signal and causes a physical action.
 
@@ -422,23 +466,29 @@ Examples:
 + pump
 
 #### Inkjet vs Laser Printer
+
+Sources: [0478/11 · October/November 2015 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w15_ms_11.pdf#page=6).
+
+Choose by the required volume and type of output; price comparisons depend on the stated devices.
+
 | Feature | Inkjet printer | Laser printer |
 | --- | --- | --- |
 | Best use | small number of high-quality colour prints / photos | high-volume document printing |
 | Ink/toner | liquid ink | dry toner / powder |
 | Speed | slower than laser for large jobs | faster, especially for many pages |
-| Running cost | often higher per page | often lower per page |
-| Initial cost | usually cheaper | usually more expensive |
-| Drawback | ink can run out / smudge | toner cartridge expensive; larger footprint; warm-up time |
+| Printing process | a moving print head ejects ink droplets using thermal bubbles or piezoelectric elements | a laser forms an image on a charged drum; toner transfers to paper and is fused by heat; a discharge lamp removes the drum's remaining charge |
 
 #### Other required output devices
+
+Sources: [0478/12 · February/March 2021 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m21_ms_12.pdf#page=5); [0478/13 · October/November 2018 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w18_ms_13.pdf#page=4).
+
 
 | Device | Output / operation | Suitable use |
 | --- | --- | --- |
 | **DLP projector** | reflects light using many microscopic mirrors to project an image | large bright presentation image |
 | **LCD projector** | passes light through liquid-crystal panels to project an image | classroom or meeting-room display |
-| **LCD screen** | controls light through liquid-crystal pixels | low-power monitor or portable display |
-| **LED screen** | uses light-emitting diodes, often as an LCD backlight or direct display pixels | bright, efficient visual display |
+| **LCD screen** | displays images and text | monitor or portable display |
+| **LED screen** | displays images and text | visual display; follow the device specified in the question |
 | **Speaker** | converts an electrical signal into sound waves | music, speech, alarms |
 | **3D printer** | produces a physical object by adding material layer by layer | prototype, model or customised component |
 
@@ -464,6 +514,9 @@ Examples:
 
 ## 3.3 Data Storage
 ### 3.3.1 Primary Storage vs Secondary Storage
+
+Sources: [0478/11 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=11); [0478/13 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7).
+
 | Storage type | Meaning | Examples |
 | --- | --- | --- |
 | **Primary storage** | directly accessible by the CPU | RAM, ROM, cache, registers |
@@ -502,15 +555,21 @@ Examples:
 
 Required examples are **HDD** for magnetic storage; **CD, DVD and Blu-ray** for optical storage; and **SSD, SD card and USB flash drive** for solid-state storage. An SD card and a USB flash drive use the same flash-memory principles described below; their removable form makes them suitable for transferring or carrying data.
 #### Magnetic Storage｜HDD
+
+Sources: [0478/13 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7); [0478/11 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=9).
+
 How it works:
 
-+ The device has spinning **platters**.
-+ Platters are divided into **tracks and sectors**.
-+ A read/write head moves across the platter.
-+ Data is read/written using **magnetic fields**.
-+ Magnetic orientation represents binary values.
++ **Platters rotate** while a read/write head on an arm accesses their surfaces.
++ Each platter is organised into **tracks and sectors**.
++ The head uses an **electromagnet** when writing, changing the magnetisation of tiny areas.
++ These **magnetised areas** represent binary data; the head reads their magnetic states.
++ The data remains stored without power (**non-volatile**).
 
 #### Optical Storage｜CD / DVD / Blu-ray
+
+Sources: [0478/12 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6); [0478/13 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=6).
+
 How data is read/written:
 
 + The disk is spun.
@@ -518,9 +577,12 @@ How data is read/written:
 + Data is represented by **pits and lands**.
 + Pits and lands reflect light differently.
 + The optical drive detects the reflected light and determines binary values.
-+ When writing data, pits are burnt into a spiral track.
++ For the optical-writing model used in the cited question, the laser burns pits along a **spiral track**; pits and lands represent binary data.
 
 #### Solid-state Storage｜SSD / flash memory
+
+Sources: [0478/11 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=11); [0478/13 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=6).
+
 How it works:
 
 + Solid-state storage has **no moving parts**.
@@ -533,6 +595,9 @@ How it works:
 ---
 
 ### 3.3.3 HDD vs SSD｜Choosing Suitable Storage
+
+Sources: [0478/11 · October/November 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=6); [0478/12 · February/March 2022 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m22_ms_12.pdf#page=8).
+
 | HDD | SSD |
 | --- | --- |
 | magnetic storage | flash / solid-state storage |
@@ -542,7 +607,7 @@ How it works:
 | higher power consumption | lower power consumption |
 | cheaper per unit of storage | more expensive per unit of storage |
 | can have very high capacity | high capacity, but often more costly |
-| can have more read/write cycles | may have limited write cycles |
+| the cited storage-selection answers accept repeated use as a benefit | flash cells have a finite write endurance |
 
 
 #### Choose SSD when...
@@ -555,7 +620,7 @@ How it works:
 #### Choose HDD when...
 + very large capacity is needed at lower cost
 + the device is not portable, e.g. server / desktop storage
-+ many read/write cycles are expected
++ repeated use is a stated requirement; justify it alongside capacity and cost
 + cost per unit of storage matters more than speed
 
 > **Common trap**：Do not always say SSD is best. In a server needing huge cheap storage and many read/write cycles, HDD can still be justified.
@@ -564,6 +629,9 @@ How it works:
 ---
 
 ### 3.3.4 Virtual Memory
+
+Sources: [0478/11 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=11); [0478/13 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=10).
+
 Virtual memory is an area of **secondary storage** used as an extension of RAM when RAM is full.
 
 ```mermaid
@@ -587,7 +655,7 @@ D --> E[When needed again, pages are moved back to RAM]
 #### Why virtual memory is needed
 + To extend the capacity of RAM.
 + To allow large programs to run.
-+ To stop software from freezing / crashing when physical RAM is full.
++ To reduce problems caused by insufficient RAM, by moving inactive pages to secondary storage.
 + To allow the computer to process large amounts of data.
 
 > **Common trap**：Virtual memory is not extra physical RAM. It is part of secondary storage used as if it were RAM.
@@ -596,6 +664,9 @@ D --> E[When needed again, pages are moved back to RAM]
 ---
 
 ### 3.3.5 Cloud Storage
+
+Sources: [0478/12 · October/November 2024 · Q4(d)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=6); [0478/12 · October/November 2025 · Q7(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=13).
+
 Cloud storage is storage where data is stored on **remote servers** and accessed using a network, often the internet.
 
 #### Benefits
@@ -620,6 +691,9 @@ Cloud storage is storage where data is stored on **remote servers** and accessed
 
 ## 3.4 Network Hardware
 ### 3.4.1 Network Interface Card｜NIC / WNIC
+
+Sources: [0478/12 · February/March 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/11 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=6).
+
 A **network interface card / controller (NIC)** allows a device to connect to a network.
 
 #### Core Exam Sentences
@@ -632,6 +706,9 @@ A **network interface card / controller (NIC)** allows a device to connect to a 
 ---
 
 ### 3.4.2 MAC Address
+
+Sources: [0478/12 · February/March 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/13 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7).
+
 A **MAC address** is a unique hardware address assigned to a network interface card at manufacture.
 
 #### Characteristics
@@ -651,6 +728,9 @@ A **MAC address** is a unique hardware address assigned to a network interface c
 ---
 
 ### 3.4.3 IP Address
+
+Sources: [0478/12 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=8); [0478/11 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=7).
+
 An **IP address** identifies where a device is connected on a network / internet.
 
 #### IPv4 vs IPv6
@@ -687,6 +767,9 @@ An **IP address** identifies where a device is connected on a network / internet
 ---
 
 ### 3.4.4 Router
+
+Sources: [0478/13 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=7); [0478/12 · February/March 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
+
 A **router** sends data packets between different networks and directs packets to their destination using IP addresses.
 
 #### Core Exam Sentences

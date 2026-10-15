@@ -63,6 +63,8 @@ Use this overview to trace instructions, move data, handle interrupts and read a
 
 ## 4.1 Central Processing Unit Architecture
 
+Sources: [9618/13 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=10); [9618/11 · October/November 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=7).
+
 ### Von Neumann model
 
 #### Core idea
@@ -138,6 +140,8 @@ That is not computer science meaning.
 ---
 
 ## Registers
+
+Sources: [9618/11 · October/November 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=7); [9618/13 · October/November 2023 · Q9(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9).
 
 ### Register summary table
 
@@ -308,6 +312,8 @@ Too vague to demonstrate the required distinction.
 
 ## Buses
 
+Sources: [9618/12 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/13 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=10).
+
 ### Bus overview
 
 A bus is a set of parallel wires / communication pathways used to transfer data, addresses or control signals.
@@ -370,6 +376,8 @@ Example:
 ---
 
 ## Fetch-Decode-Execute Cycle
+
+Sources: [9618/13 · May/June 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=11); [9618/13 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=10).
 
 ### Basic sequence
 
@@ -463,6 +471,8 @@ Examples:
 
 ## Interrupts
 
+Sources: [9618/11 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=9); [9618/13 · October/November 2023 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=10).
+
 ### What is an interrupt?
 
 An interrupt is a signal that tells the processor that an event needs attention.
@@ -498,7 +508,7 @@ J --> K[Return to previous process]
 
 ### Exam-style answer
 
-> An interrupt flag is raised. At the end of the current fetch-execute cycle, the processor checks whether the interrupt has higher priority. If it does, the current contents of registers are saved on the stack. The appropriate ISR is called. After the interrupt is processed, the register contents are restored and control returns to the previous process.
+> An interrupt sets a flag. At the end of the current fetch–execute cycle, the processor checks priority. For an accepted interrupt it saves the register state on the stack and runs the appropriate **ISR**. After servicing, it checks for further higher-priority requests; when none requires service, it restores the saved registers and resumes the interrupted process.
 
 #### Required ideas / marking points
 
@@ -514,6 +524,8 @@ J --> K[Return to previous process]
 ---
 
 ## Processor Performance
+
+Sources: [9618/12 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/11 · October/November 2023 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=7).
 
 ### Factors affecting performance
 
@@ -567,6 +579,8 @@ Strong answer:
 
 ## Peripheral Ports
 
+Sources: [9618/12 · May/June 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/13 · October/November 2023 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=8).
+
 A port provides a physical connection and an agreed interface for a peripheral. Select the port from the data and display requirements, not from the connector's appearance alone.
 
 | Port | Principal operation | Suitable use | Selection point |
@@ -584,6 +598,8 @@ A presentation computer must send picture and sound to a modern projector throug
 ---
 
 ## Assembly Language
+
+Sources: [9618/12 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6); [9618/11 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10).
 
 ### Assembly language vs machine code
 
@@ -667,6 +683,8 @@ Binary and hexadecimal immediate operands may be shown in the form defined by th
 ---
 
 ## Addressing Modes
+
+Sources: [9618/12 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6); [9618/11 · October/November 2023 · Q8(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10).
 
 ### Immediate addressing
 
@@ -772,7 +790,7 @@ The contents of memory address 23 are loaded into ACC.
 
 #### Meaning
 
-The operand gives an offset from the current PC value.
+The operand gives an **offset from a base address**. If the base is the program counter, the effective address is PC + offset; use the base stated in the question.
 
 Example:
 
@@ -870,6 +888,8 @@ IX = 2
 
 ## Two-Pass Assembler
 
+Sources: [9618/12 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6); [9618/11 · October/November 2023 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10).
+
 ### Why two passes?
 
 Assembly language uses labels and symbolic addresses.  
@@ -916,6 +936,8 @@ Pass 2 usually:
 ---
 
 ## Bit Manipulation
+
+Sources: [9618/11 · May/June 2023 · Q3(d)(vi)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · May/June 2023 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7).
 
 ### Why bit manipulation is used
 
@@ -1171,7 +1193,7 @@ The mask preserves unrelated bits. A monitor-only program may test and report bi
 + **control bus carries control signals**
 + **read/write signal**
 + **bi-directional data bus**
-+ **bus width affects amount transferred**
++ **data-bus width affects bits transferred per transfer; address-bus width affects addressable memory**
 
 ### Interrupts
 

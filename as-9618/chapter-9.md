@@ -36,6 +36,8 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Abstraction
 
+Sources: [9618/22 · May/June 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=9); [9618/23 · May/June 2023 · Q7(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=6).
+
 **Abstraction** removes irrelevant detail and retains only the information needed to solve the current problem.
 
 Its purpose is to produce a usable model of the problem at the required level of detail. Abstraction is needed when the real system contains more information than the current solution requires.
@@ -60,11 +62,13 @@ Usually irrelevant:
 - exposes the data and rules that affect the output
 - prevents implementation effort being wasted on irrelevant details
 
-An abstract model is not merely “a simpler description”. It must preserve every detail that changes the result.
+State which data is essential and which can be omitted **for the requested task**. A detail irrelevant to one model may be needed in another.
 
 ---
 
 ## Decomposition
+
+Sources: [9618/21 · May/June 2025 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6); [9618/22 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=10).
 
 **Decomposition** divides a problem into smaller sub-problems that can become program modules.
 
@@ -101,6 +105,8 @@ Do not confuse decomposition with writing every instruction. It identifies the p
 
 ## Algorithms
 
+Supplementary source — no direct MS located: [NIST: algorithm](https://www.nist.gov/dads/HTML/algorithm.html).
+
 An **algorithm** is a solution expressed as a finite sequence of defined, unambiguous steps.
 
 A usable algorithm must:
@@ -128,6 +134,8 @@ OUTPUT Total
 ---
 
 ## Identifiers and Identifier Tables
+
+Sources: [9618/22 · May/June 2024 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4); [9618/21 · May/June 2024 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=4).
 
 An **identifier** is the name used for a variable, constant, array, record or subroutine.
 
@@ -162,6 +170,8 @@ If an array is needed, include its element type and bounds:
 
 ## Input, Process and Output
 
+Sources: [9618/23 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=3); [9618/22 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4).
+
 Use an IPO table before writing the detailed algorithm.
 
 | Input | Process | Output |
@@ -182,6 +192,8 @@ Questions to ask:
 ---
 
 ## The Three Basic Constructs
+
+Sources: [9618/22 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4); [9618/21 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6).
 
 ### Sequence
 
@@ -229,6 +241,8 @@ Every loop needs:
 ---
 
 ## Algorithm Representations
+
+Sources: [9618/21 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=5); [9618/21 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=4).
 
 ### Structured English
 
@@ -326,6 +340,8 @@ Use the rule: input `Score`; output `"Pass"` when `Score >= 50`, otherwise outpu
 ---
 
 ## Stepwise Refinement
+
+Sources: [9618/22 · May/June 2025 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=8).
 
 **Stepwise refinement** repeatedly replaces a high-level task with more detailed steps until every step can be programmed.
 

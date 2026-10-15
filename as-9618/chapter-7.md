@@ -80,6 +80,8 @@ By the end of this chapter, students should be able to:
 
 ## Ethics in Computing
 
+Sources: [9618/12 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=6); [9618/11 · October/November 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=13).
+
 ### What is ethics?
 
 #### Student explanation
@@ -197,6 +199,8 @@ A programmer should:
 
 ## Professional Ethical Bodies
 
+Sources: [9618/13 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7); [9618/13 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=6).
+
 ### BCS and IEEE
 
 The syllabus specifically names:
@@ -241,6 +245,8 @@ Better:
 ---
 
 ## Copyright
+
+Sources: [9618/12 · October/November 2024 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=6); [9618/12 · October/November 2025 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=4).
 
 ### What is copyright?
 
@@ -306,6 +312,8 @@ Copyright legislation is needed to:
 ---
 
 ## Software Licences
+
+Sources: [9618/13 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=8); [9618/13 · October/November 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6).
 
 ### What is a software licence?
 
@@ -433,7 +441,7 @@ The question may ask for **benefits**. You must explain why that is useful.
 
 #### Key idea
 
-Commercial software is sold for profit. Users usually pay for a licence, and there are restrictions on copying, modifying and redistributing the software.
+In these exam scenarios, a commercial licence allows the developer to charge for use and restrict unauthorised copying or modification. State the actual licence conditions: payment alone does not determine whether source code is available.
 
 #### Benefits to developer / company
 
@@ -470,6 +478,8 @@ Commercial software is sold for profit. Users usually pay for a licence, and the
 ---
 
 ## Artificial Intelligence \(AI\)
+
+Sources: [9618/11 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/12 · May/June 2023 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=10).
 
 ### What is AI?
 
@@ -557,6 +567,8 @@ F --> G[Optional check<br/>database / human review]
 
 ### Social impacts
 
+Sources: [9618/12 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=6); [9618/11 · October/November 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=13).
+
 | Positive social impact | Explanation |
 | --- | --- |
 | Better accessibility | speech recognition, text-to-speech and translation help users with disabilities |
@@ -580,44 +592,21 @@ F --> G[Optional check<br/>database / human review]
 
 ### Economic impacts
 
-| Positive economic impact | Explanation |
-| --- | --- |
-| Higher productivity | AI can automate repetitive tasks |
-| Lower long-term costs | fewer human hours may be needed for routine work |
-| New jobs | creates roles in AI development, data analysis and system maintenance |
-| Better decision making | businesses can analyse large amounts of data |
+Sources: [9618/13 · October/November 2022 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_13.pdf#page=9).
 
-| Negative economic impact | Explanation |
-| --- | --- |
-| Job loss | workers doing routine tasks may be replaced |
-| Retraining cost | employees need new skills |
-| High setup cost | AI systems need hardware, data, software and experts |
-| Market inequality | large companies may benefit more because they can afford AI |
+- **Reduced costs:** an AI diagnostic system can find faults more quickly, reducing the time needed per job.
+- **Increased productivity / profit:** staff can complete more repairs in the time saved.
+- **Cost of change:** the organisation may need equipment, software and staff training; routine work may change or be replaced.
 
-#### Exam-style phrasing
-
-> An economic impact of AI is that it can reduce labour costs by automating tasks, but it may cause job losses and require workers to retrain.
-
----
+Link the impact to the named organisation and task. A claim such as “AI saves money” needs a reason.
 
 ### Environmental impacts
 
-| Positive environmental impact | Explanation |
-| --- | --- |
-| Energy optimisation | AI can reduce energy use in buildings or data centres |
-| Better transport routing | AI can reduce fuel use and congestion |
-| Resource monitoring | AI can detect pollution, crop disease or waste |
+Supplementary source — no direct MS located: [IEA: Energy and AI (2025)](https://www.iea.org/reports/energy-and-ai/executive-summary).
 
-| Negative environmental impact | Explanation |
-| --- | --- |
-| High energy use | training/running AI models can use large amounts of electricity |
-| Cooling requirements | data centres need cooling systems |
-| E-waste | more hardware may be replaced or discarded |
-| Carbon emissions | electricity use may increase emissions if energy source is not clean |
-
-#### Exam-style phrasing
-
-> An environmental impact of AI is that large AI systems may use a lot of electricity and require cooling, but AI can also optimise energy use and reduce waste in other systems.
+- **Possible energy savings:** AI can optimise heating, cooling and transport routes, reducing unnecessary energy use.
+- **Electricity demand:** training and running models requires computing resources; emissions depend partly on how that electricity is generated.
+- **Net effect is conditional:** savings in one application do not guarantee an overall reduction. Increased use can offset some efficiency gains.
 
 ---
 

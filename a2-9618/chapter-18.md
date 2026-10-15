@@ -65,14 +65,16 @@ Use this overview to model routes, choose learning, train networks and evaluate 
 
 ### What is Artificial Intelligence?
 
+**Supplementary explanation:** No direct question assessing this explanation was found in the reviewed 2023–2025 papers or the targeted 2021–2022 fallback. Retained for [syllabus 18.1](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf); it is not an extra scoring rule. Explanation source: [Stanford HAI: AI definition](https://hai.stanford.edu/ai-definitions/what-is-artificial-intelligence-ai).
+
 #### Student-friendly explanation
 Artificial Intelligence means using computer systems to carry out tasks that normally need human intelligence.
 For example, recognising patterns, making decisions, finding routes, making predictions, or learning from data.
 
-#### Exam-style answer
+#### Revision summary
 > Artificial intelligence is the use of computer systems to perform tasks that normally require human intelligence, such as learning, reasoning, recognising patterns, making predictions, or making decisions.
 
-#### Required ideas / marking points
+#### Concepts for revision
 + **learning**
 + **reasoning**
 + **decision-making**
@@ -88,6 +90,8 @@ This is too vague. You need to explain **what the computer does**.
 ---
 
 ### AI vs Machine Learning vs Deep Learning
+
+Sources: [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12).
 
 | Term | Meaning | Exam focus |
 | --- | --- | --- |
@@ -112,6 +116,8 @@ B --> C[Deep Learning<br/>many hidden layers in neural networks]
 ## Graphs in Artificial Intelligence
 
 ### What is a graph?
+
+Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7).
 
 A graph is a data structure used to show relationships between items.
 
@@ -138,6 +144,8 @@ A graph is a data structure used to show relationships between items.
 
 ### Why graphs are useful in AI
 
+Sources: [9618/31 · May/June 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
+
 Graphs help AI represent a problem as connected possibilities.
 
 Examples:
@@ -158,6 +166,8 @@ Examples:
 
 ### Directed and undirected graphs
 
+Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7). Direction is supplementary graph terminology; the cited point concerns vertices, connections and labels.
+
 | Type | Meaning | Example |
 | --- | --- | --- |
 | Undirected graph | edge works both ways | two-way road |
@@ -170,6 +180,8 @@ Examples:
 ---
 
 ### Weighted graph
+
+Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/32 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6).
 
 A weighted graph has values on edges.
 
@@ -199,6 +211,8 @@ In this graph:
 
 ### What these algorithms are used for
 
+Sources: [9618/31 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/33 · May/June 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13).
+
 A* and Dijkstra's algorithm are graph search algorithms.
 They are used to find the best route through a graph.
 
@@ -217,6 +231,8 @@ They are used to find the best route through a graph.
 
 ### Dijkstra's algorithm
 
+Sources: [9618/32 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6); [9618/33 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12).
+
 #### Student-friendly explanation
 Dijkstra looks for the shortest path from a starting node by repeatedly choosing the unvisited node with the smallest known cost so far.
 
@@ -225,14 +241,16 @@ Dijkstra looks for the shortest path from a starting node by repeatedly choosing
 + It uses known edge weights.
 + It does not use a heuristic.
 + It guarantees the shortest path when edge weights are non-negative.
-+ In 9618, you normally need to **use / describe purpose**, not write full code.
++ For a trace, initialise the start cost to **0**, other costs to **infinity**, record improved distances and mark visited nodes; the syllabus does not require implementation code.
 
 #### Exam-style answer
-> Dijkstra's algorithm finds the shortest path from a start node to other nodes in a weighted graph by using the known cost / distance of edges.
+> Set the start distance to 0 and all others to infinity. Select the unvisited node with the least tentative distance, update neighbours when the route through it is shorter, mark it visited and repeat. Record both updated distances and visited nodes when tracing.
 
 ---
 
 ### A* algorithm
+
+Sources: [9618/32 · May/June 2023 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=11); [9618/33 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13).
 
 #### Student-friendly explanation
 A* also finds a route, but it uses both:
@@ -250,11 +268,13 @@ This estimate is called a **heuristic**.
 + It is common in game AI and route planning.
 
 #### Exam-style answer
-> A* searches for a lowest-cost path between nodes in a graph. It uses the cost so far and a heuristic estimate of the remaining cost to guide the search. It is guaranteed to find an optimal path when the heuristic does not overestimate the remaining cost.
+> A* prioritises candidates using **f = g + h**: g is the accumulated cost from the start and h is the heuristic estimate to the destination. Update g when a cheaper route is found and use f to choose the next candidate. Optimality conditions are supplementary algorithm theory, not an additional marking point in the cited trace.
 
 ---
 
 ### Dijkstra vs A*
+
+Sources: [9618/33 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13). Retains the heuristic distinction; does not generalise the scheme’s negative-weight statement into a guarantee for arbitrary graphs.
 
 | Feature | Dijkstra | A* |
 | --- | --- | --- |
@@ -347,6 +367,8 @@ A* therefore reconstructs the same route `S → A → B → C → G`, with total
 
 ### What is machine learning?
 
+Sources: [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12).
+
 #### Student-friendly explanation
 Machine learning means the computer learns from data. Instead of manually programming every rule, the system finds patterns and improves its predictions or decisions.
 
@@ -365,6 +387,8 @@ Machine learning means the computer learns from data. Instead of manually progra
 
 ### Why use machine learning?
 
+Sources: [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9).
+
 Machine learning is useful when:
 
 + rules are too complex to write manually
@@ -379,6 +403,8 @@ Machine learning is useful when:
 ---
 
 ## Supervised Learning
+
+Sources: [9618/31 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7).
 
 ### Definition
 
@@ -421,6 +447,8 @@ Use supervised learning when:
 ---
 
 ## Unsupervised Learning
+
+Sources: [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/33 · May/June 2025 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13).
 
 ### Definition
 
@@ -466,6 +494,8 @@ The system has to find patterns by itself.
 ---
 
 ## Reinforcement Learning
+
+Sources: [9618/31 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=14).
 
 ### Definition
 
@@ -524,6 +554,8 @@ Use reinforcement learning when:
 
 ## Artificial Neural Networks (ANNs)
 
+Sources: [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9); [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
+
 ### What is an artificial neural network?
 
 An artificial neural network is a computer model inspired by the human brain.
@@ -569,6 +601,8 @@ H2 --> O
 
 ### Weights and biases
 
+Sources: [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/32 · October/November 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=15).
+
 Each connection can have a **weight**.
 The weight controls how strongly one node affects another node.
 
@@ -586,6 +620,8 @@ During training:
 ---
 
 ## Deep Learning
+
+Sources: [9618/31 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=11); [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12). 2024 lists unlabelled data as one option; 2025 explicitly allows different supervision. Do not treat unlabelled data as the definition.
 
 ### Definition
 
@@ -624,7 +660,7 @@ Deep learning is useful when:
 
 
 #### Exam-style answer
-> Deep learning is useful because multiple hidden layers allow the model to extract complex features from large amounts of data and make more accurate predictions.
+> Multiple hidden layers learn increasingly complex features from large datasets. Training adjusts weights and biases; back propagation uses output errors to refine those parameters. Deep learning can use different forms of supervision, so it is not limited to unlabelled data.
 
 ---
 
@@ -642,6 +678,8 @@ Deep learning is useful when:
 ---
 
 ## Back Propagation of Errors
+
+Sources: [9618/32 · October/November 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=15).
 
 ### What is back propagation?
 
@@ -669,7 +707,7 @@ G --> H[Prediction becomes more accurate]
 ```
 
 #### Exam-style answer
-> Back propagation is where the error between the predicted output and expected output is passed backwards through the network so that weights can be adjusted to reduce the error.
+> Compare the predicted and expected outputs to obtain an error. Feed error information backwards through the network and adjust the connection weights to reduce the difference. Repeat the training process to improve accuracy; the cited question also permits identifying an error gradient calculated using calculus.
 
 #### Required ideas / marking points
 + **predicted output**
@@ -688,12 +726,14 @@ G --> H[Prediction becomes more accurate]
 | --- | --- |
 | saying "it sends data backwards" | It sends **error information** backwards |
 | saying "it fixes the answer" | It adjusts weights to reduce future error |
-| giving calculus explanation | Not needed for 9618 |
+| saying calculus is never relevant | the cited 2025 MS includes an error-gradient point; no derivation is needed for the four-mark description |
 | missing weights | Weight adjustment is central |
 
 ---
 
 ## Regression Methods in Machine Learning
+
+**Supplementary explanation:** No direct question assessing this explanation was found in the reviewed 2023–2025 papers or the targeted 2021–2022 fallback. Retained for [syllabus 18.1](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf); it is not an extra scoring rule. Explanation source: [Google: regression and numerical prediction](https://developers.google.com/machine-learning/problem-framing/ml-framing#regression).
 
 ### What is regression?
 
@@ -708,10 +748,10 @@ Regression is used to predict a continuous numeric value.
 | previous sales | future sales |
 
 
-#### Exam-style answer
+#### Revision summary
 > Regression is a machine learning method used to model the relationship between variables and predict a continuous numerical value.
 
-#### Required ideas / marking points
+#### Concepts for revision
 + **relationship between variables**
 + **predict**
 + **continuous value**

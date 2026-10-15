@@ -68,6 +68,8 @@ Revise: algorithm tracing and comparison; linear and binary search; bubble and i
 
 ## Search and Sort Patterns
 
+Sources: [9618/32 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=11); [9618/41 · May/June 2024 · Q1(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_41.pdf#page=8); [9618/41 · May/June 2024 · Q1(e)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_41.pdf#page=10); [9618/33 · May/June 2025 · Q12(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=15).
+
 Linear search compares each item in order. It has worst-case time `O(n)` and works without sorting. Binary search compares the middle item, discards half of a **sorted** range and repeats; its worst-case time is `O(log n)`.
 
 These pseudocode examples use an array with capacity 100. `High` is the final occupied index (−1 for an empty array, otherwise 0–99). A function receives an array parameter; a sorting procedure uses `BYREF` so that its changes affect the caller's array. The local `High` parameter is passed by value.
@@ -210,7 +212,9 @@ The sorted prefix is `[3, 6, 10, 14]` and the next item is `8`: save `8`; shift 
 
 ## Abstract Data Types
 
-An ADT defines permitted operations independently of its representation.
+Sources: [9618/31 · October/November 2023 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=8); [9618/32 · May/June 2023 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=12); [9618/41 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_41.pdf#page=7). Pointer initial values are implementation-specific, not universal definitions.
+
+An ADT defines permitted operations independently of its representation. A stack removes the most recently inserted item; a queue removes the earliest remaining item. Before updating an array implementation, check the full/empty condition and follow the question’s pointer convention: some top/tail pointers identify the last occupied slot, while others identify the next free slot. A circular queue also wraps at the array boundary.
 
 | ADT | Rule | Core operations | Typical representation |
 |---|---|---|---|
@@ -221,6 +225,8 @@ An ADT defines permitted operations independently of its representation.
 | Graph | vertices and edges | describe connections; justify use | graph ADT |
 
 ### Required operations in pseudocode
+
+Sources: [9618/31 · May/June 2023 · Q11(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=9); [9618/32 · October/November 2023 · Q9(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=7); [9618/31 · October/November 2025 · Q9(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=13); [9618/32 · October/November 2025 · Q12(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=17).
 
 These templates expose the boundary checks and pointer/index changes that an ADT trace must show. Here the payload is an integer, `MaxIndex=9`, `Capacity=10`, and the arrays use indexes 0–9. Initially `Top=-1`, `Front=0`, `Rear=9` and `Count=0`. The complete construction tasks below require the declarations and success contracts as well.
 
@@ -341,6 +347,8 @@ ENDFUNCTION
 
 ### Dictionary ADT
 
+**Supplementary explanation:** No direct question assessing this explanation was found in the reviewed 2023–2025 papers or the targeted 2021–2022 fallback. Retained for [syllabus 19.1](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf); it is not an extra scoring rule. Explanation source: [Java 17 Map: key–value semantics](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html).
+
 A dictionary stores **key–value pairs** and supports `insert(key, value)`, `find(key)` and `delete(key)`. Keys are unique even when values repeat. It may be represented by parallel key/value arrays, a binary search tree, or a hash table. With open-address hashing, insertion and search must use the same probe sequence; deletion uses a tombstone rather than an empty slot so later colliding keys remain reachable.
 
 ```text
@@ -362,6 +370,8 @@ ENDFUNCTION
 ```
 
 ### ArrayLinkedList
+
+Sources: [9618/32 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=7); [9618/41 · October/November 2024 · Q3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_41.pdf#page=33).
 
 `StartPointer` identifies the first live node. `FreeListPointer` identifies the first unused node. Deleting a node must return it to the free list.
 
@@ -427,6 +437,8 @@ class Ch19ArrayLinkedListDemo {
 
 ### TwoStackQueue
 
+Sources: [9618/31 · May/June 2023 · Q11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=9). The cited answer transfers on insertion; the code below transfers on removal. Both must preserve FIFO; do not combine their pointer steps.
+
 The input stack receives new items. When the output stack is empty, all input items move to it; this reversal makes the oldest item appear on top.
 
 ```java
@@ -458,7 +470,9 @@ If `StartPointer = 2` and the live chain is `2 → 5 → 1 → -1`, deleting nod
 
 ## Trees and Graphs
 
-A **BinarySearchTree** follows an ordering rule. In-order traversal visits the left subtree, then the node, then the right subtree and produces ascending keys.
+Sources: [9618/31 · October/November 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=15); [9618/32 · October/November 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=13); [9618/31 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=9); [9618/32 · May/June 2025 · Q11(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=10).
+
+A **BinarySearchTree** stores smaller keys to the left and larger keys to the right. Begin a search at the root, compare the target with the node data and follow the corresponding pointer until found or null. In-order traversal visits the left subtree, node and right subtree to produce ascending keys. Use the question’s null-pointer value and draw pointers from the correct left/right field.
 
 A **graph** is an ADT that represents items or places as **vertices** and their relationships as **edges**. An edge may be directed or undirected and may store a weight such as distance, time or cost. A graph is suitable when a problem involves many-to-many connections, such as a route network, social network or dependency map. Candidates need to describe these key features and justify graph use for a situation; they are not required to write code for a graph structure in Section 19.
 
@@ -501,6 +515,8 @@ class Ch19TreeDemo {
 
 ## Complexity
 
+Sources: [9618/31 · May/June 2024 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=13); [9618/32 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=11); [9618/33 · May/June 2025 · Q12(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=15).
+
 | Pattern | Time | Reason |
 |---|---|---|
 | array access by index | `O(1)` | one direct access |
@@ -508,9 +524,11 @@ class Ch19TreeDemo {
 | linear search/traversal | `O(n)` | up to every item visited |
 | two nested full loops | `O(n²)` | about `n × n` operations |
 
-Space complexity counts additional storage. Recursion may use `O(n)` call-stack space even without an explicit array.
+Space complexity describes how memory use grows with input size. **Auxiliary space** counts extra working storage; state explicitly when the input is excluded. Recursion may require `O(n)` auxiliary call-stack space even without a separate array. The cited search questions assess growth rates; these space distinctions are supplementary clarification.
 
 ## Recursion
+
+Sources: [9618/31 · May/June 2023 · Q12(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=9); [9618/32 · October/November 2023 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=7); [9618/32 · May/June 2025 · Q11(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=11); [9618/31 · October/November 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=14); [9618/32 · October/November 2025 · Q12(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=17).
 
 Recursion is suitable when a problem is naturally defined in smaller versions of itself, such as tree traversal, divide-and-conquer search, directory traversal or processing a recursively defined grammar. Prefer iteration when a simple loop expresses the task clearly and deep recursion could exhaust stack memory.
 

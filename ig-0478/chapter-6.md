@@ -15,6 +15,9 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## 6.1 Automated Systems
 ### 6.1.1 Core Definition
+
+Sources: [0478/13 · October/November 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7); [0478/11 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9).
+
 An **automated system** is a system that can perform actions **without human intervention**, usually by using:
 
 **1. Sensor**
@@ -29,16 +32,19 @@ Carries out the action or gives an alert.
 ---
 
 ### 6.1.2 The Golden Answer Template
+
+Sources: [0478/13 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=5); [0478/12 · February/March 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9).
+
 > **Describe how sensors, microprocessors and actuators are used in an automated system.**
 >
 
-Use this structure almost every time:
+Select the steps required by the question, and name its sensor, measured value, comparison and output:
 
 1. The **sensor** detects / measures data from the environment.
 2. The sensor data is sent to the **microprocessor**.
-3. The microprocessor compares the data with a **stored value / preset value / acceptable range**.
+3. The microprocessor compares the data with the relevant **stored value / preset value / acceptable range** (or stored records where the scenario requires a lookup).
 4. If the condition is met, the microprocessor sends a **signal**.
-5. The signal triggers an **actuator** or output device.
+5. The signal triggers the stated **actuator** or output. Describe the opposite condition too when it changes the action, such as stopping or switching off.
 6. The process repeats continuously.
 
 ```mermaid
@@ -76,6 +82,9 @@ Exam-style answer:
 ---
 
 ### 6.1.4 Advantages and Disadvantages of Automated Systems
+
+Sources: [0478/13 · May/June 2025 · Q6(d)–(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=14); [0478/13 · October/November 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7).
+
 #### General Advantages
 | Advantage | Exam-style explanation |
 | --- | --- |
@@ -116,11 +125,17 @@ Exam-style answer:
 
 ## 6.2 Robotics
 ### 6.2.1 Definition
+
+Sources: [0478/12 · February/March 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9); [0478/11 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9).
+
 **Robotics** is a branch of computer science that includes the **design, construction and operation of robots**.
 
 ---
 
 ### 6.2.2 What Makes Something a Robot?
+
+Sources: [0478/11 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=11); [0478/12 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12).
+
 A robot should usually have several of these features:
 
 | Robot characteristic | How to write it in exam |
@@ -140,6 +155,9 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 ---
 
 ### 6.2.3 Common Robot Roles
+
+Sources: [0478/12 · May/June 2025 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=13); [0478/11 · May/June 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=12).
+
 | Area | Example | What the robot does |
 | --- | --- | --- |
 | Industry | factory robot arm | lifts, welds, assembles or moves parts |
@@ -153,6 +171,9 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 ---
 
 ### 6.2.4 Robot Advantages by Scenario
+
+Sources: [0478/12 · May/June 2025 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=13); [0478/11 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=12).
+
 #### Industry / Factory
 | Benefit | Expansion |
 | --- | --- |
@@ -183,6 +204,9 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 ---
 
 ### 6.2.5 Robot Disadvantages by Scenario
+
+Sources: [0478/12 · May/June 2025 · Q5(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=13); [0478/11 · October/November 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=12).
+
 | Drawback | Expansion |
 | --- | --- |
 | Expensive to buy and maintain | The cost may be too high for smaller organisations. |
@@ -222,6 +246,9 @@ Good answer:
 
 ## 6.3 Artificial Intelligence
 ### 6.3.1 Definition
+
+Sources: [0478/13 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10); [0478/12 · February/March 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
+
 **Artificial intelligence (AI)** is the simulation of intelligent behaviour by computers.
 
 In IGCSE 0478, AI is mainly limited to:
@@ -235,6 +262,9 @@ Allows a program to automatically adapt its own processes and/or data.
 ---
 
 ### 6.3.2 Main Characteristics of AI
+
+Sources: [0478/12 · February/March 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/13 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10).
+
 A strong answer should include any of these:
 
 | Characteristic | Exam wording |
@@ -247,7 +277,7 @@ A strong answer should include any of these:
 | Analyse patterns | AI can identify patterns and make predictions. |
 
 
-#### 3-mark AI definition template
+#### AI definition summary
 > AI is the simulation of intelligent behaviour by computers.
 It uses a collection of data and rules for using that data.
 It can reason or make decisions, and may learn/adapt from previous results.
@@ -256,6 +286,9 @@ It can reason or make decisions, and may learn/adapt from previous results.
 ---
 
 ### 6.3.3 Expert Systems
+
+Sources: [0478/12 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=12); [0478/12 · May/June 2024 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=11).
+
 #### Core idea
 An **expert system** is a form of AI that mimics the knowledge and decision-making of a human expert in a specific area.
 
@@ -278,9 +311,7 @@ Common scenarios:
 | **Inference engine** | Applies the rule base to the knowledge base and user input to reach a conclusion. |
 
 
-> **Do not overfocus on “explanation system”**
-It may appear in textbooks, but the core IGCSE syllabus components are:
-**interface, knowledge base, rule base, inference engine**.
+> **Core components:** interface, knowledge base, rule base and inference engine. The May/June 2024 Q10 mark scheme also accepts an explanation of the diagnosis. Include that only where it helps answer the question; do not replace the core reasoning steps with it.
 >
 
 ---
@@ -308,6 +339,9 @@ The diagnosis is output through the **interface**.
 ---
 
 ### 6.3.4 Machine Learning
+
+Sources: [0478/12 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12); [0478/13 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10).
+
 #### Definition
 **Machine learning** is when a program can automatically adapt its own processes and/or data.
 
@@ -318,7 +352,10 @@ A simple exam-friendly explanation:
 
 ---
 
-#### Machine Learning Universal Flow
+#### Machine Learning Process
+
+This is one feedback-based pattern from the questions, not a compulsory sequence for every machine-learning system. Use the data, patterns and adaptation described in the scenario.
+
 ```mermaid
 flowchart LR
 A[Collect data] --> B[Store data]
@@ -376,6 +413,9 @@ Use these points:
 ---
 
 ### 6.3.5 Expert System vs Machine Learning
+
+Sources: [0478/13 · October/November 2023 · Q10(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=8); [0478/11 · October/November 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=13).
+
 | Feature | Expert system | Machine learning |
 | --- | --- | --- |
 | Main basis | Human expert knowledge | Data, previous examples and feedback |

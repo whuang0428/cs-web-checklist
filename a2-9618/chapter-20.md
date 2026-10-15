@@ -69,6 +69,8 @@ Revise: programming paradigms; low-level programming and five addressing modes; 
 
 ## Programming Paradigms
 
+Sources: [9618/31 · May/June 2021 · Q9(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_31.pdf#page=9). Older definition question used for imperative/declarative distinctions; recent papers assess applications.
+
 | Paradigm | Main idea | Typical evidence |
 |---|---|---|
 | imperative/procedural | statements update state in a defined order | assignment, selection, iteration, procedures |
@@ -79,6 +81,8 @@ Revise: programming paradigms; low-level programming and five addressing modes; 
 ## Low-Level Programming for Paper 3
 
 ### Five addressing modes
+
+Sources: [9618/31 · October/November 2025 · Q11(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=15); [9618/32 · October/November 2025 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=16). Recent questions assess immediate, direct and indirect instructions. Indexed and relative modes remain syllabus-based explanation.
 
 | Mode | Operand means | Example | Effect |
 |---|---|---|---|
@@ -148,6 +152,10 @@ The same numeric operand can lead to four different values because its interpret
 
 ## Declarative Programming for Paper 3
 
+Sources: [9618/31 · October/November 2023 · Q11(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=8); [9618/31 · October/November 2023 · Q11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9); [9618/32 · October/November 2023 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=8); [9618/31 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=11); [9618/32 · May/June 2024 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=13). The labelled example notation is supplementary; it is not a universal required exam syntax.
+
+The past papers express facts as clauses, combine conditions in rules and evaluate goals by matching facts/rules. Preserve the given predicate names, argument order and logical operators. The example below uses labelled teaching notation; `FACT`, `RULE` and `GOAL` are labels for explanation, not mandatory tokens to add to a paper’s supplied notation.
+
 This chapter uses the following self-contained notation:
 
 - `FACT relation(item)` states a known relationship.
@@ -184,6 +192,8 @@ The goal succeeds by applying the rule to the matching fact. The variable makes 
 ## Java OOP for Paper 4
 
 ### Encapsulation, containment and polymorphism
+
+Sources: [9618/32 · May/June 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6); [9618/32 · October/November 2024 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=11); [9618/32 · October/November 2024 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=12); [9618/31 · May/June 2025 · Q11(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=14); [9618/32 · May/June 2025 · Q12(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=11); [9618/41 · October/November 2025 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_41.pdf#page=18). Containment is demonstrated by Station holding Train objects; the definition is a synthesis of that structure.
 
 | Term | Precise meaning in this chapter |
 |---|---|
@@ -261,6 +271,8 @@ class Ch20OopDemo {
 The total loop contains no type test. Dynamic dispatch selects the correct `fee()` implementation.
 
 ## File Organisation and Processing
+
+Sources: [9618/31 · October/November 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/31 · October/November 2023 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=6); [9618/31 · May/June 2025 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=15); [9618/32 · May/June 2025 · Q13](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=12); [9618/33 · May/June 2025 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=14).
 
 | Organisation | Arrangement | Access | Suitable use |
 |---|---|---|---|
@@ -402,7 +414,9 @@ class Ch20HashTableDemo {
 
 ## Exception Handling
 
-Catch exceptions you can handle. Examples include `FileNotFoundException`, `IOException` and `NumberFormatException`. A `finally` block is useful for cleanup, although try-with-resources closes files automatically.
+Sources: [9618/31 · October/November 2023 · Q8(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=6); [9618/32 · October/November 2023 · Q12(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=9); [9618/31 · October/November 2025 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=14); [9618/32 · October/November 2025 · Q10(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=15); [9618/41 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_41.pdf#page=18). Theory answers define the event and response; practical criteria additionally require opening/reading/closing and appropriate catch/output.
+
+An **exception** is an unexpected event during execution that disrupts the normal instruction flow and may terminate the program. **Exception handling** responds to the event so that the program can report or recover from it instead of halting unexpectedly. Causes include invalid input, missing files, coding errors and hardware/device failures. In Java, put the operation in `try` and handle the appropriate exception in `catch`, with a meaningful error message. Examples include `FileNotFoundException`, `IOException` and `NumberFormatException`. A `finally` block or try-with-resources can ensure files are closed.
 
 Use exception handling when an operation can fail outside the normal return-value path and the program can recover, report or clean up meaningfully: a missing/unreadable file, malformed numeric input, an invalid object value or an unavailable record. Catch the **most specific** suitable exception at the smallest useful boundary. Do not use exceptions as a substitute for ordinary range tests or loop decisions, and do not catch `Exception` merely to hide a programming fault.
 

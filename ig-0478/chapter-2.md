@@ -64,6 +64,9 @@ Use this overview to trace transmission, select a method, detect errors and prot
 ---
 
 ### 2.1.1 Packet Structure
+
+Sources: [0478/13 · October/November 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=7); [0478/11 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=5).
+
 #### What Is a Packet?
 <span lang="zh-CN">当数据通过网络传输时</span>，<span lang="zh-CN">整段数据通常不会一次性发送</span>，<span lang="zh-CN">而是被分成很多小的数据包</span>，<span lang="zh-CN">叫</span> **packets**。
 
@@ -86,6 +89,9 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 ---
 
 ### 2.1.2 Packet Switching
+
+Sources: [0478/11 · May/June 2023 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=5); [0478/12 · February/March 2025 · Q2(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=6).
+
 #### Core Process
 ```mermaid
 flowchart LR
@@ -135,6 +141,9 @@ accDescr: A message is split into packets that may take different routes before 
 ---
 
 ### 2.1.3 Data Transmission Directions
+
+Sources: [0478/13 · October/November 2025 · Q3(b)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=7); [0478/12 · October/November 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=6).
+
 | Type | <span lang="zh-CN">中文理解</span> | English definition | Example |
 | --- | --- | --- | --- |
 | **Simplex** | <span lang="zh-CN">单向传输</span> | Data is transmitted in one direction only | keyboard to computer, sensor to microprocessor |
@@ -150,12 +159,15 @@ accDescr: A message is split into packets that may take different routes before 
 ---
 
 ### 2.1.4 Serial vs Parallel Transmission
+
+Sources: [0478/11 · May/June 2025 · Q4(a)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=7); [0478/11 · October/November 2024 · Q4(b)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=8).
+
 | Feature | Serial transmission | Parallel transmission |
 | --- | --- | --- |
 | How data is sent | **one bit at a time** | **multiple bits at the same time** |
 | Channel/wire | **single wire/channel** | **multiple wires/channels** |
 | Distance | better for **long distance** | better for **short distance** |
-| Speed | usually slower | usually faster |
+| Speed in the syllabus comparison | one bit per transfer | several bits per transfer; useful when a short connection needs a high transfer rate |
 | Reliability | less skew / less crosstalk | more likely to suffer skew/crosstalk over longer distance |
 | Cost | cheaper | more expensive |
 
@@ -178,6 +190,9 @@ accDescr: A message is split into packets that may take different routes before 
 ---
 
 ### 2.1.5 How to answer “suitability” questions
+
+Sources: [0478/12 · May/June 2025 · Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=10); [0478/12 · October/November 2024 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=8).
+
 #### Question type
 > Explain why serial full-duplex transmission is suitable in this scenario.
 >
@@ -203,16 +218,17 @@ Full-duplex is suitable because data can be sent **in both directions at the sam
 ---
 
 ### 2.1.6 USB Interface
+
+Sources: [0478/12 · October/November 2025 · Q5(c)(ii)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10).
+
 #### What happens when a USB device is plugged in?
+
+This diagram summarises the automatic-configuration points.
+
 ```mermaid
 flowchart TD
-    A[USB device is plugged into USB port] --> B[Computer detects a voltage change]
-    B --> C[Device is automatically detected]
-    C --> D[Device is recognised]
-    D --> E[Device driver is loaded]
-    E --> F[Computer and device can communicate]
-    D --> G{New device?}
-    G -->|Driver not available| H[User may be prompted to download/install driver]
+    A[USB device connected] --> B[Device automatically detected]
+    B --> C[Driver automatically installed]
 ```
 
 #### Benefits of USB
@@ -223,15 +239,14 @@ flowchart TD
 | <span lang="zh-CN">向后兼容</span> | backward compatible |
 | <span lang="zh-CN">支持多种速度</span> | supports several transmission rates |
 | <span lang="zh-CN">可供电</span> | cable can supply power |
-| <span lang="zh-CN">可扩展</span> | USB hubs can add more ports |
+| <span lang="zh-CN">连接通用</span> | standard connection used by many peripheral devices |
 
 
 #### Drawbacks of USB
 | Drawback | Exam wording |
 | --- | --- |
-| <span lang="zh-CN">线长有限</span> | standard USB has limited cable length |
-| <span lang="zh-CN">速度可能不如其他连接</span> | transfer rate may be slower than some network connections |
-| <span lang="zh-CN">端口数量有限</span> | limited number of ports unless a hub is used |
+| <span lang="zh-CN">连接线的限制</span> | a wired mouse is restricted by its cable, which can get in the way |
+| <span lang="zh-CN">结合题目比较速度</span> | the cited question accepts slower transmission than a parallel connection |
 
 
 ---
@@ -240,6 +255,9 @@ flowchart TD
 ---
 
 ### 2.2.1 Why errors can occur
+
+Sources: [0478/11 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=10); [0478/13 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=15).
+
 Data transmission errors may happen because of:
 
 | Cause | Meaning |
@@ -263,6 +281,9 @@ In parallel transmission, bits may become **skewed**, meaning they arrive out of
 ---
 
 ### 2.2.2 Parity Check
+
+Sources: [0478/12 · May/June 2025 · Q3(c)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=11); [0478/11 · May/June 2024 · Q9(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=11).
+
 #### Basic idea
 Parity check uses an extra bit called a **parity bit**.  
 The parity bit is added to each byte before transmission.
@@ -310,6 +331,9 @@ Parity check may fail if:
 ---
 
 ### 2.2.3 Parity Block / Parity Byte
+
+Sources: [0478/12 · February/March 2024 · Q6(e)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=11); [0478/12 · February/March 2023 · Q5(c)(i)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=8).
+
 #### What is parity block?
 A block of data is checked both:
 
@@ -335,6 +359,9 @@ flowchart TD
 ---
 
 ### 2.2.4 Checksum
+
+Sources: [0478/11 · May/June 2025 · Q4(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=8); [0478/13 · October/November 2024 · Q2(f)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+
 #### What is checksum?
 A checksum is a calculated value that is sent with the data.  
 The receiver recalculates the value and compares it with the received checksum.
@@ -353,7 +380,7 @@ flowchart TD
     I --> J[Request data to be resent]
 ```
 
-#### 5-mark answer template
+#### Checksum answer structure
 > The checksum is **calculated from the data** using an **algorithm**.  
 The checksum value is **transmitted with the data**.  
 After transmission, the receiver **recalculates** the checksum from the received data using the same algorithm.  
@@ -364,6 +391,9 @@ If the values do not match, an **error is detected** and the data is **resent**.
 ---
 
 ### 2.2.5 Echo Check
+
+Sources: [0478/12 · February/March 2024 · Q6(e)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=11); [0478/11 · October/November 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=8).
+
 #### Basic idea
 Echo check sends data to the receiver, then the receiver sends a copy back to the sender.
 
@@ -390,6 +420,9 @@ If the data is different, an error has occurred.
 ---
 
 ### 2.2.6 Check Digit
+
+Sources: [0478/12 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=7); [0478/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=7).
+
 #### Important distinction
 **Check digit is for data entry errors, not data transmission errors.**
 
@@ -422,6 +455,9 @@ If they match, the number is accepted; if not, an error is detected.
 ---
 
 ### 2.2.7 Automatic Repeat Query / Request (ARQ)
+
+Sources: [0478/11 · May/June 2024 · Q9(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=11); [0478/13 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=6).
+
 #### What ARQ uses
 ARQ uses:
 
@@ -457,6 +493,9 @@ If no acknowledgement is received before **timeout**, the sender automatically *
 ## 2.3 Encryption
 
 ### 2.3.1 Why encryption is needed
+
+Sources: [0478/12 · May/June 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/13 · October/November 2024 · Q2(g)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+
 Encryption is used to protect data during transmission.
 
 #### Key points
@@ -472,6 +511,9 @@ It helps keep transmitted data **secure/confidential** because only someone with
 ---
 
 ### 2.3.2 Key terms
+
+Sources: [0478/11 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=10); [0478/11 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8).
+
 | Term | Meaning |
 | --- | --- |
 | **Plain text** | original readable data before encryption |
@@ -492,12 +534,15 @@ flowchart LR
 ---
 
 ### 2.3.3 Symmetric Encryption
+
+Sources: [0478/12 · May/June 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/12 · February/March 2024 · Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=12).
+
 #### Meaning
 Symmetric encryption uses the **same key** to encrypt and decrypt data.
 
-#### Advantages
-+ Faster than asymmetric encryption.
-+ Simpler process.
+#### Key handling
++ Sender and receiver use one shared key.
++ The key must be exchanged securely before the receiver can decrypt the message.
 
 #### Drawback
 + The key must be shared between sender and receiver.
@@ -511,6 +556,9 @@ The main issue is that the key must be shared, so if the key is intercepted, the
 ---
 
 ### 2.3.4 Asymmetric Encryption
+
+Sources: [0478/11 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=10); [0478/11 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8).
+
 #### Meaning
 Asymmetric encryption uses two keys:
 

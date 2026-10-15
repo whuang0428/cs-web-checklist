@@ -31,6 +31,9 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Database Structure
 
+Sources: [0478/23 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11); [0478/23 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=11).
+
+
 A **database** is an organised collection of data. In Topic 9, questions use a **single table**.
 
 | Term | Meaning |
@@ -56,6 +59,9 @@ Each row is one record. `Cost` is one field. `EquipmentID` is a suitable primary
 
 ## From Requirements to a Table Design
 
+Sources: [0478/21 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=9); [0478/23 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=12).
+
+
 Use this method:
 
 1. identify the entity represented by one record
@@ -65,6 +71,9 @@ Use this method:
 5. select a field that is unique and always present as the primary key
 
 ### Data types
+
+Sources: [0478/23 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=12); [0478/21 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=16).
+
 
 | Data type | Suitable example | Important distinction |
 |---|---|---|
@@ -77,11 +86,11 @@ Use this method:
 
 Choose the type according to use:
 
-- an identification code is usually text even when it contains only digits
-- a quantity is integer because arithmetic is performed
-- a price is real
-- an availability state is Boolean
-- a date should use a date/time type, not ordinary text
+- a code containing letters or significant leading zeroes needs text; some questions accept either text or integer for a numeric ID
+- use integer for a whole-number quantity, real when fractional values are required
+- a price given to two decimal places needs real; a whole-number rate may use integer
+- a true/false availability state suits Boolean
+- date/time is appropriate for dates; use the representation specified in the question, since some mark schemes also accept text
 
 ### Example design
 
@@ -101,11 +110,12 @@ A sports centre stores each court's code, sport, hourly charge, indoor status an
 
 ## Primary Keys
 
-A primary key must:
+Sources: [0478/21 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=16); [0478/21 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=14).
 
-- be unique for every record
-- be present for every record
-- remain stable enough to identify the record
+
+The core marking point is that a primary key **uniquely identifies each record**: no two records share its value.
+
+For table design, also choose a value that is present for every record and unlikely to change. These are design considerations; do not substitute them for uniqueness when explaining a primary key.
 
 Good primary keys:
 
@@ -129,6 +139,9 @@ SQL queries retrieve or calculate information from a table.
 
 ### SELECT and FROM
 
+Sources: [0478/21 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=9); [0478/21 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=7).
+
+
 ```sql
 SELECT ItemName, Cost
 FROM Equipment;
@@ -145,6 +158,9 @@ FROM Equipment;
 
 ### WHERE
 
+Sources: [0478/23 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=13); [0478/21 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=16).
+
+
 ```sql
 SELECT ItemName
 FROM Equipment
@@ -154,6 +170,11 @@ WHERE Available = TRUE;
 `WHERE` filters records before the selected fields are displayed.
 
 ### AND and OR
+
+Sources: [0478/23 · October/November 2023 · Q9(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11); [0478/22 · May/June 2024 · Q10(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=11).
+
+OR example: [0478 syllabus §9.4](https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf#page=30).
+
 
 ```sql
 SELECT ItemName, Cost
@@ -175,6 +196,9 @@ Text values use quotation marks. Numeric and Boolean values normally do not.
 
 ### ORDER BY
 
+Sources: [0478/23 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/22 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=16).
+
+
 ```sql
 SELECT ItemName, Cost
 FROM Equipment
@@ -192,6 +216,9 @@ ORDER BY Cost DESCENDING;
 ```
 
 ### SUM and COUNT
+
+Sources: [0478/22 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=10); [0478/21 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=7).
+
 
 ```sql
 SELECT SUM(Cost)
@@ -211,6 +238,9 @@ This produces the number of available equipment records.
 ---
 
 ## Constructing a Query
+
+Sources: [0478/23 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=13); [0478/22 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=16).
+
 
 Translate the request in a fixed order.
 
@@ -239,6 +269,9 @@ Check that:
 ---
 
 ## Predicting Query Output
+
+Sources: [0478/23 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/23 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11).
+
 
 Use this sequence:
 

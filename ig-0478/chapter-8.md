@@ -37,6 +37,9 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ### Variables and constants
 
+Sources: [0478/22 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=5); [0478/22 · February/March 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=6).
+
+
 - A **variable** is a named storage location whose value can change.
 - A **constant** is a named value that remains unchanged while the program runs.
 
@@ -48,6 +51,9 @@ StudentCount <- 0
 Use constants for fixed values such as tax rates, array limits and conversion factors. This avoids unexplained “magic numbers”.
 
 ### Primitive data types
+
+Sources: [0478/22 · February/March 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_22.pdf#page=6); [0478/21 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=4).
+
 
 | Type | Example | Suitable use |
 |---|---|---|
@@ -61,6 +67,9 @@ Do not store a phone number as an integer if it may begin with zero or contain f
 
 ### Input, output and assignment
 
+Sources: [0478/23 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=4); [0478/23 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_23.pdf#page=7).
+
+
 ```text
 INPUT Width
 Area <- Width * Width
@@ -72,6 +81,9 @@ Assignment replaces the previous value of a variable. It is not the same as math
 ---
 
 ## Sequence, Selection and Iteration
+
+Sources: [0478/22 · February/March 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_22.pdf#page=8); [0478/21 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=8).
+
 
 ### Sequence
 
@@ -162,6 +174,9 @@ UNTIL Choice >= 1 AND Choice <= 3
 
 ### Arithmetic operators
 
+Sources: [0478/23 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=8); [0478/21 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=10).
+
+
 | Operator | Meaning | Example result |
 |---|---|---|
 | `+` | addition | `7 + 2 = 9` |
@@ -173,6 +188,9 @@ UNTIL Choice >= 1 AND Choice <= 3
 | `MOD(Value1, Value2)` | remainder | `MOD(7, 2) = 1` |
 
 ### Relational and logical operators
+
+Sources: [0478/22 · May/June 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=6); [0478/21 · October/November 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_21.pdf#page=4).
+
 
 - relational: `=`, `<`, `<=`, `>`, `>=`, `<>`
 - logical: `AND`, `OR`, `NOT`
@@ -187,6 +205,9 @@ ENDIF
 `AND` requires both conditions to be true. `OR` requires at least one. `NOT` reverses a Boolean value.
 
 ### ROUND and RANDOM
+
+Sources: [0478/21 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=10); [0478/22 · February/March 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=11).
+
 
 - `ROUND(Number, Places)` rounds a value to a stated number of decimal places.
 - `RANDOM()` returns a pseudo-random real number between `0` and `1` inclusive.
@@ -224,6 +245,9 @@ The second example divides the `0` to `1` range into six equal intervals, so `Di
 
 ## String Handling
 
+Sources: [0478/23 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=11); [0478/22 · October/November 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=7).
+
+
 Common string operations include:
 
 | Operation | Example purpose |
@@ -257,6 +281,9 @@ gives `"AB"`.
 
 ### Procedure
 
+Sources: [0478/21 · October/November 2025 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=17); [0478/22 · October/November 2025 · Q2(b)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=8).
+
+
 A procedure performs a task and does not return a value directly.
 
 ```text
@@ -272,6 +299,9 @@ CALL DisplayResult("Mina", 72)
 ```
 
 ### Function
+
+Sources: [0478/21 · May/June 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=13); [0478/22 · February/March 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=11).
+
 
 A function returns one value.
 
@@ -289,18 +319,27 @@ Valid <- IsValidMark(InputMark)
 
 ### Parameters
 
+Sources: [0478/23 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=9); [0478/22 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=7).
+
+
 Parameters carry values into a procedure or function. Use their order and data types consistently. Paper 2 tasks may use up to three parameters.
 
 ### Local and global variables
 
-- a **local variable** exists only inside its subroutine
-- a **global variable** can be accessed by multiple parts of the program
+Sources: [0478/23 · May/June 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=10); [0478/23 · October/November 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=9).
+
+
+- a **local variable** is declared in a subroutine and can be accessed only within that subroutine
+- a **global variable** can be accessed throughout the program, including its subroutines
 
 Prefer local variables unless several subroutines genuinely need shared state. Local scope reduces accidental changes and makes testing easier.
 
 ---
 
 ## Arrays
+
+Sources: [0478/23 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=6); [0478/22 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=7).
+
 
 An array stores multiple values of the same type under one identifier.
 
@@ -353,6 +392,9 @@ Here, `Index` is a variable index. `HighestIndex` preserves the position of the 
 
 ## File Handling
 
+Sources: [0478/21 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=17); [0478/23 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=11).
+
+
 Files preserve data after a program stops.
 
 Opening and closing control access to the file. Reading and writing may handle either a single data item or a complete line of text. Keep the intended record layout clear: a single numeric item can be read into a numeric variable, while a complete text line may include spaces and is read into a string.
@@ -383,6 +425,9 @@ CLOSEFILE "results.txt"
 Each `WRITEFILE` statement writes the supplied item as one line in this layout. A program can instead write a complete prepared string, such as `SummaryLine`, as one line of text.
 
 ### Read lines until end of file
+
+**Supplementary programming technique:** the current 0478 pseudocode reference specifies opening, reading, writing and closing files; it does not list `EOF()` as a required routine. Use the file operations stated in the question. [Syllabus pseudocode reference](https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf#page=48).
+
 
 ```text
 OPENFILE "results.txt" FOR READ
@@ -417,6 +462,9 @@ Opening an existing file for writing may replace its contents. Use the mode stat
 ---
 
 ## Maintainable Programs
+
+Sources: [0478/23 · May/June 2024 · Q5(c)–(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=9); [0478/21 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=8).
+
 
 A maintainable program is easier to understand, test and change.
 

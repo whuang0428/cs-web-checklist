@@ -62,6 +62,9 @@ Use this overview to retrieve web resources, explain digital transactions and de
 
 ## 5.1 The Internet and the World Wide Web
 ### 5.1.1 Internet vs World Wide Web
+
+Sources: [0478/12 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12); [0478/12 · February/March 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
+
 **Internet**
 A worldwide collection of interconnected networks.
 
@@ -85,6 +88,9 @@ A collection of websites and web pages accessed using the internet.
 ---
 
 ### 5.1.2 URL｜Uniform Resource Locator
+
+Sources: [0478/12 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10); [0478/12 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12).
+
 A **URL** is a **text-based address for a web page**. It can contain:
 
 | Part | Meaning | Example |
@@ -113,6 +119,9 @@ https://www.example.com/shop/index.html
 ---
 
 ### 5.1.3 HTTP vs HTTPS
+
+Sources: [0478/12 · May/June 2025 · Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=15); [0478/12 · February/March 2025 · Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
+
 | Feature | HTTP | HTTPS |
 | --- | --- | --- |
 | Full name | Hypertext Transfer Protocol | Hypertext Transfer Protocol Secure |
@@ -128,12 +137,13 @@ https://www.example.com/shop/index.html
 
 Use this structure:
 
-1. HTTPS uses **SSL/TLS**.
-2. Data is **encrypted** before it is transmitted.
-3. If the data is intercepted, it cannot be understood without the key.
-4. A **digital certificate** can be used to authenticate the web server.
-5. During the secure connection setup, the browser and server establish temporary **traffic keys**.
-6. Those traffic keys protect the web data sent in both directions.
+1. The browser requests a secure connection and asks the web server to identify itself.
+2. The server sends its **digital certificate**, which the browser authenticates.
+3. If the certificate is invalid, the secure connection is rejected; if valid, encrypted communication can begin.
+4. In the **SSL model used by these questions**, asymmetric encryption uses a **public key** to encrypt and the corresponding **private key** to decrypt.
+5. Encryption makes intercepted data unreadable without the appropriate key.
+
+**Protocol detail:** the diagram below illustrates establishing traffic keys for the connection. The certificate, authentication and encryption steps above are the points requested by the cited IGCSE questions. [TLS 1.3 protocol overview](https://www.rfc-editor.org/rfc/rfc8446#section-2).
 
 ```mermaid
 sequenceDiagram
@@ -152,6 +162,9 @@ sequenceDiagram
 ---
 
 ### 5.1.4 Web Browser
+
+Sources: [0478/13 · May/June 2025 · Q5(d)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=12); [0478/12 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12).
+
 A **web browser** is software used to **retrieve, render and display web pages**.
 
 #### Main Purpose
@@ -181,6 +194,9 @@ A browser displays web pages. A search engine finds web pages based on keywords.
 ---
 
 ### 5.1.5 How a Web Page Is Located, Retrieved and Displayed
+
+Sources: [0478/12 · February/March 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=8); [0478/12 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=14).
+
 #### Golden Process Template
 1. User enters a **URL** into the web browser.
 2. The browser sends the URL / domain name to a **DNS**.
@@ -209,6 +225,9 @@ G --> H[Web page displayed]
 ---
 
 ### 5.1.6 Cookies
+
+Sources: [0478/13 · October/November 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=8); [0478/13 · October/November 2025 · Q4(c)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8).
+
 A **cookie** is a small text file / piece of data that is sent by a web server and stored / managed by the web browser.
 
 #### What Cookies Are Used For
@@ -243,6 +262,9 @@ A **cookie** is a small text file / piece of data that is sent by a web server a
 
 ## 5.2 Digital Currency and Blockchain
 ### 5.2.1 Digital Currency
+
+Sources: [0478/12 · February/March 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9); [0478/11 · May/June 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13).
+
 A **digital currency** is a currency that **only exists electronically**.
 
 #### Core Exam Sentences
@@ -265,6 +287,9 @@ A **digital currency** is a currency that **only exists electronically**.
 ---
 
 ### 5.2.2 Blockchain
+
+Sources: [0478/11 · October/November 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=12); [0478/12 · February/March 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9).
+
 A **blockchain** is a digital ledger: a time-stamped series of records that cannot easily be altered.
 
 #### Blockchain Transaction Process
@@ -292,6 +317,9 @@ F --> G[Copies of the ledger are distributed]
 <span id="_531-threat-overview-mind-map" class="legacy-anchor" aria-hidden="true"></span>
 
 ### 5.3.1 Threats at a Glance
+
+Sources: [0478/12 · February/March 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=4); [0478/11 · May/June 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=7).
+
 
 Use this overview to identify an attack, recognise evidence, choose protection and separate similar threats.
 
@@ -338,6 +366,9 @@ Use this overview to identify an attack, recognise evidence, choose protection a
 ---
 
 ### 5.3.2 Threats：Process + Aim + Effects
+
+Sources: [0478/12 · February/March 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=4); [0478/12 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=7).
+
 | Threat | Process / How it works | Aim / Effect | High-value keywords |
 | --- | --- | --- | --- |
 | **Brute-force attack** | Tries many password combinations systematically | Finds password / gains access | repeated guesses, combinations, password, lockout |
@@ -358,6 +389,9 @@ Use this overview to identify an attack, recognise evidence, choose protection a
 ---
 
 ### 5.3.3 DDoS / Botnet Example
+
+Sources: [0478/12 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=9); [0478/13 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=11).
+
 > **Describe one common botnet-based way of carrying out a DDoS attack.**
 >
 
@@ -381,6 +415,9 @@ G --> H[Server slows down / crashes / website unavailable]
 ---
 
 ### 5.3.4 Phishing vs Pharming
+
+Sources: [0478/11 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9); [0478/11 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=9).
+
 | Feature | Phishing | Pharming |
 | --- | --- | --- |
 | Main method | Fake email / message | Malicious code / DNS redirection |
@@ -398,6 +435,9 @@ G --> H[Server slows down / crashes / website unavailable]
 ---
 
 ### 5.3.5 Social Engineering
+
+Sources: [0478/13 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=8).
+
 #### Definition
 > Social engineering involves **manipulating or deceiving people** with the aim of obtaining **confidential / personal / valuable data**.
 >
@@ -418,6 +458,9 @@ G --> H[Server slows down / crashes / website unavailable]
 ---
 
 ### 5.3.6 Keeping Data Safe｜Security Solutions
+
+Sources: [0478/13 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/11 · May/June 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13).
+
 #### Solution Overview
 | Solution | What it does | Good exam expansion |
 | --- | --- | --- |
@@ -440,6 +483,9 @@ G --> H[Server slows down / crashes / website unavailable]
 ---
 
 ### 5.3.7 Authentication
+
+Sources: [0478/13 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/11 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9).
+
 Authentication means proving that a user is who they claim to be.
 
 | Type | Example | Strength |
@@ -474,28 +520,30 @@ A strong password should:
 ---
 
 ### 5.3.8 Anti-malware
+
+Sources: [0478/12 · February/March 2018 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m18_ms_12.pdf#page=4); [0478/13 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8).
+
 #### Anti-virus
 | Function | Exam-style wording |
 | --- | --- |
-| Scans files/system | scans the computer system for viruses |
-| Known virus database | compares files with known virus signatures |
-| Quarantine/remove | removes or quarantines infected files |
-| Checks downloads | checks data before it is downloaded |
-| Needs updates | must be kept up to date to detect new threats |
-
+| Detection | checks files to identify viruses |
+| Background or scheduled scans | can monitor continuously or scan at a set time |
+| Isolation/removal | quarantines or deletes detected viruses |
+| Updates | refreshes its virus definitions automatically |
+| Warnings | alerts the user to a possible infection |
 
 #### Anti-spyware
 | Function | Exam-style wording |
 | --- | --- |
-| Detects spyware | scans the system for spyware |
-| Removes/quarantines | removes or quarantines spyware found |
-| Prevents downloads | can prevent spyware being downloaded |
-| Protects passwords | stops keyloggers collecting key presses/passwords |
-
+| Detection/removal | finds and removes spyware on the computer |
+| Password protection | prevents detected spyware from supplying passwords to an attacker |
 
 ---
 
 ### 5.3.9 Firewall vs Proxy Server
+
+Sources: [0478/12 · February/March 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=5); [0478/12 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10).
+
 #### Firewall
 A **firewall** is hardware and/or software that monitors traffic entering and leaving a system or network.
 
@@ -534,6 +582,9 @@ A **proxy server** sits between the user/client and the web server.
 ---
 
 ### 5.3.10 Checking Emails and URLs
+
+Sources: [0478/11 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=10); [0478/13 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=7).
+
 #### Before clicking a link / opening an attachment, check:
 | Check | Why it matters |
 | --- | --- |
@@ -594,7 +645,7 @@ A **proxy server** sits between the user/client and the web server.
 >
 
 ### Template B｜HTTPS / SSL/TLS
-> HTTPS uses SSL/TLS to encrypt data in transit, so intercepted web data cannot be understood without the traffic key. A digital certificate helps the browser authenticate the web server. The secure setup establishes temporary traffic keys that protect the application data sent in both directions.
+> The browser requests the server’s digital certificate and checks its authenticity. An invalid certificate prevents the secure connection; a valid certificate allows encrypted communication. In the SSL model used by the cited questions, a public key encrypts and the matching private key decrypts. Intercepted data cannot be understood without the appropriate key.
 >
 
 ### Template C｜DDoS attack

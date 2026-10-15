@@ -65,6 +65,8 @@ Use this overview to choose encryption, protect or verify messages, establish tr
 
 ### Core encryption vocabulary
 
+Sources: [9618/31 · May/June 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7); [9618/32 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5).
+
 | Term | Chinese explanation | Exam-style phrasing |
 | --- | --- | --- |
 | Plaintext | <span lang="zh-CN">原始可读信息</span> | original readable message/data |
@@ -96,6 +98,8 @@ This is too vague. You must say **how**: plaintext becomes ciphertext using a ke
 ---
 
 ### Symmetric key cryptography
+
+Sources: [9618/32 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6).
 
 #### Definition
 
@@ -141,9 +145,11 @@ sequenceDiagram
 
 ### Asymmetric key cryptography
 
+Sources: [9618/32 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5); [9618/32 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=13).
+
 #### Definition
 
-> Asymmetric cryptography uses a matching pair of keys: a public key and a private key. Data encrypted with one key can only be decrypted with the matching key.
+> Asymmetric cryptography uses a linked public/private key pair. For a confidential message, the sender obtains the recipient’s public key and encrypts with it; the recipient decrypts with their own private key. For signatures, identify the sender’s signing key and verification key separately.
 
 | Key | Who can access it? | Role |
 | --- | --- | --- |
@@ -171,6 +177,8 @@ This is the most important part of Chapter 17. Students often mix up these two c
 ---
 
 ### Case 1: Sending a private message to an individual / organisation
+
+Sources: [9618/32 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5); [9618/32 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=13).
 
 #### Scenario
 
@@ -210,6 +218,8 @@ sequenceDiagram
 ---
 
 ### Case 2: Sending a verified message to the public
+
+Sources: [9618/31 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=10). The signature authenticates the signer and integrity; it does not make the public message confidential.
 
 #### Scenario
 
@@ -255,6 +265,8 @@ sequenceDiagram
 
 ## Symmetric vs Asymmetric Cryptography
 
+Sources: [9618/32 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6).
+
 | Feature | Symmetric cryptography | Asymmetric cryptography |
 | --- | --- | --- |
 | Keys used | one shared secret key | public key + private key pair |
@@ -273,6 +285,8 @@ sequenceDiagram
 ## SSL / TLS
 
 ### Purpose of SSL/TLS
+
+Sources: [9618/31 · May/June 2025 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
 
 SSL means **Secure Socket Layer**. TLS means **Transport Layer Security**.
 
@@ -297,6 +311,8 @@ TLS is the newer protocol. If a question uses the combined term SSL/TLS, follow 
 
 ### Where SSL/TLS is appropriate
 
+Sources: [9618/31 · May/June 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
+
 | Situation | Why SSL/TLS is suitable |
 | --- | --- |
 | online banking | protects account and transaction details |
@@ -313,6 +329,10 @@ TLS is the newer protocol. If a question uses the combined term SSL/TLS, follow 
 ---
 
 ### Simplified TLS handshake process
+
+Sources: [9618/32 · May/June 2025 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=10); [9618/33 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11). Handshake and Record are distinct protocols; modern key agreement details are supplementary.
+
+TLS has two main parts: the **Handshake Protocol** authenticates parties and agrees the encryption/session parameters; the **Record Protocol** protects and transfers application data, including encryption and integrity checking.
 
 You do not need full industry-level TLS detail, but you should know the logic.
 
@@ -361,6 +381,8 @@ sequenceDiagram
 
 ### What is a digital certificate?
 
+Sources: [9618/31 · May/June 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10); [9618/31 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=9).
+
 A digital certificate is an electronic document used to prove the identity of a website, person or organisation.
 
 It normally contains:
@@ -379,6 +401,8 @@ It normally contains:
 
 ### Certificate Authority (CA)
 
+Sources: [9618/33 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12).
+
 A **Certificate Authority** is a trusted organisation that issues digital certificates.
 
 #### What the CA does
@@ -396,6 +420,8 @@ A **Certificate Authority** is a trusted organisation that issues digital certif
 
 ### How a digital certificate is acquired
 
+Sources: [9618/33 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12). The signed/encrypted request is the model in this question, not a claim about every certificate-enrolment system.
+
 ```mermaid
 flowchart TD
 A[Organisation generates key pair] --> B[Organisation creates certificate request]
@@ -408,11 +434,13 @@ F --> G[CA digitally signs certificate]
 
 #### Exam answer
 
-> The organisation generates a public/private key pair and sends a certificate request to a Certificate Authority. The CA checks the organisation's identity or domain ownership. If valid, the CA issues a digital certificate containing the organisation's public key and identity details, signed by the CA.
+> The organisation generates its key pair and requests a certificate from a Certificate Authority. It supplies authentication details, including its public key; the CA checks those details and issues the signed certificate. In the cited question’s protected-request process, the organisation signs its submitted information with its private key and encrypts it using the CA’s public key.
 
 ---
 
 ### How a digital certificate is used in TLS
+
+Sources: [9618/33 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11).
 
 ```mermaid
 flowchart LR
@@ -435,6 +463,8 @@ E -->|No| G[Warning / connection blocked]
 ---
 
 ## Digital Signatures
+
+Sources: [9618/31 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10); [9618/31 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=10); [9618/32 · May/June 2022 · Q7(b)](https://bestexamhelp.com/exam/cambridge-international-a-level/computer-science-9618/2022/9618_s22_ms_32.pdf#page=8); [9618/31 · October/November 2022 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_31.pdf#page=8). The recent questions assess identity/integrity; the older questions assess the message-digest procedure.
 
 ### Purpose
 
@@ -482,6 +512,8 @@ E -->|No| G[Invalid signature / message altered]
 ---
 
 ## Quantum Cryptography
+
+Sources: [9618/31 · May/June 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7); [9618/32 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6). Benefits concern quantum key distribution and detection of interference; do not turn them into an absolute claim that endpoints cannot be attacked.
 
 ### Purpose
 

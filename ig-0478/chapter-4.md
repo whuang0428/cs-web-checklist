@@ -15,6 +15,9 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## 4.1 Types of Software and Interrupts
 ### 4.1.1 Software Types｜System Software vs Application Software
+
+Sources: [0478/12 · May/June 2024 · Q4(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=6); [0478/11 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=6).
+
 **System Software**
 Software that provides the services that the computer requires.
 
@@ -39,6 +42,9 @@ Software that provides the services that the user requires.
 ---
 
 ### 4.1.2 Utility Software｜Utility Programs
+
+Sources: [0478/12 · October/November 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=4); [0478/12 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=10).
+
 **Utility software** is software designed to **manage, maintain or protect** a computer system.
 
 | Utility software | What it does |
@@ -46,10 +52,7 @@ Software that provides the services that the user requires.
 | **Anti-virus / anti-malware** | scans, detects, quarantines or removes malware |
 | **Backup software** | creates copies of files for recovery |
 | **File compression software** | reduces file size |
-| **Disk repair / analysis** | checks and repairs storage problems |
 | **File management software** | helps organise, copy, move and delete files |
-| **Defragmentation software** | reorganises fragmented files on magnetic storage |
-| **Security software** | helps protect the system from unauthorised access |
 
 
 #### Core Exam Sentences
@@ -57,12 +60,14 @@ Software that provides the services that the user requires.
 + Utility software is a type of **system software**.
 + Anti-virus software is utility software because it helps protect the computer system.
 
-> **<span lang="zh-CN">注意</span>**：defragmentation <span lang="zh-CN">主要适用于</span> **magnetic storage / HDD**，<span lang="zh-CN">不要把它当作</span> SSD <span lang="zh-CN">的主功能来写</span>。
->
+The recent utility-software identification question uses **anti-virus**. Backup, compression and file management are further examples of system-maintenance tasks, not a fixed list to reproduce for every question.
 
 ---
 
 ### 4.1.3 Operating System｜Role and Basic Functions
+
+Sources: [0478/11 · May/June 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13); [0478/13 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=11).
+
 An **operating system (OS)** is system software that manages the main functions of a computer.
 
 #### OS Function Table
@@ -106,6 +111,9 @@ Virtual memory itself belongs to Topic 3.3. Revise its purpose and operation in 
 ---
 
 ### 4.1.4 Hardware, Firmware and OS｜How Applications Run
+
+Sources: [0478/11 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8); [0478/11 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=6).
+
 #### Golden Chain
 ```mermaid
 flowchart TD
@@ -138,6 +146,9 @@ D --> E[User Task]
 ---
 
 ### 4.1.5 Interrupts｜Definition and Purpose
+
+Sources: [0478/13 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=9); [0478/12 · February/March 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=6).
+
 An **interrupt** is a signal sent from hardware or software to the processor to request attention.
 
 #### Why Interrupts Are Needed
@@ -162,6 +173,9 @@ Software interrupt = **division by zero** / two processes trying to access same 
 ---
 
 ### 4.1.6 How Interrupts Are Handled｜High Mark Template
+
+Sources: [0478/12 · February/March 2024 · Q3(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=9).
+
 > **Describe how the OS / CPU handles an interrupt.**
 >
 
@@ -197,6 +211,9 @@ J --> K[Continue original process]
 
 ## 4.2 Programming Languages, Translators and IDEs
 ### 4.2.1 High-Level Language vs Low-Level Language
+
+Sources: [0478/11 · October/November 2025 · Q4(d)(i)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=10); [0478/12 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=8).
+
 | Feature | High-Level Language | Low-Level Language |
 | --- | --- | --- |
 | Human readability | easier to read / write / understand | harder to read / write / understand |
@@ -229,6 +246,9 @@ J --> K[Continue original process]
 ---
 
 ### 4.2.2 Assembly Language and Assembler
+
+Sources: [0478/12 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7); [0478/12 · February/March 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=9).
+
 **Assembly language** is a low-level language that uses **mnemonics**.
 
 #### Core Exam Sentences
@@ -249,6 +269,9 @@ Assembly language  --assembler-->  Machine code
 ---
 
 ### 4.2.3 Translators｜Compiler, Interpreter and Assembler
+
+Sources: [0478/12 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=8); [0478/13 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10).
+
 | Translator | Source language | How it works | Output | Common use |
 | --- | --- | --- | --- | --- |
 | **Compiler** | high-level language | translates the whole code at once before execution | executable file / machine code file | final program / distribution |
@@ -259,11 +282,17 @@ Assembly language  --assembler-->  Machine code
 ---
 
 ### 4.2.4 Compiler vs Interpreter｜High Frequency
+
+Sources: [0478/12 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=8); [0478/12 · February/March 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=9).
+
 #### Compiler
+
+The mark schemes contrast a whole-program error report with stopping at an error during interpretation. This does not mean a compiler finds every logic error.
+
 + Translates the **whole code** at once.
 + Translation happens **before execution**.
 + Produces an **executable file**.
-+ Reports **all errors** in an error report if errors are found.
++ Reports the **detected errors** together in an error report.
 + Once compiled, the compiler is not needed to run the program.
 + Useful for distributing the final program without source code.
 
@@ -281,7 +310,7 @@ Assembly language  --assembler-->  Machine code
 | --- | --- |
 | During development | **Interpreter**, because it stops when an error is found and helps debug line by line |
 | Final program distribution | **Compiler**, because it creates an executable file and source code is not needed |
-| Error reporting | Compiler reports all errors; interpreter stops at the first error |
+| Error reporting | Compiler reports detected errors together; interpreter stops at the first detected error |
 | Running after translation | Compiled program can run without compiler; interpreted program needs interpreter |
 
 
@@ -292,6 +321,9 @@ Assembly language  --assembler-->  Machine code
 ---
 
 ### 4.2.5 IDE｜Integrated Development Environment
+
+Sources: [0478/12 · May/June 2025 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=9); [0478/13 · October/November 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=8).
+
 An **IDE** is a suite of programs used to write, run, test and debug program code.
 
 #### IDE Functions and Roles
@@ -396,7 +428,7 @@ Use this overview to classify software, trace interrupts, translate code and sel
 ---
 
 ### Template E｜Compiler vs interpreter
-> A compiler translates the whole program before execution and produces an executable file. It reports all errors in the code. An interpreter translates and executes the code line by line and stops when an error is found. This makes an interpreter useful during development, while a compiler is useful for the final program.
+> A compiler translates the whole program before execution and produces an executable file. It produces an error report for the errors detected during translation. An interpreter translates and executes the code line by line and stops when an error is found. This makes an interpreter useful during development, while a compiler is useful for the final program.
 >
 
 ---

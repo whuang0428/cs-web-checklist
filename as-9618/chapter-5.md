@@ -63,6 +63,8 @@ Use this overview to explain management, choose support software, trace translat
 
 ## 5.1 Operating Systems
 
+Sources: [9618/11 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/11 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5).
+
 ### Why a computer system requires an OS
 
 #### Student-friendly explanation
@@ -109,6 +111,8 @@ C --> D[Apply to device / user / program]
 
 ### Memory management
 
+Sources: [9618/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=9).
+
 #### Meaning
 
 Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</span> main memory / RAM <span lang="zh-CN">的过程</span>。<span lang="zh-CN">它决定哪些</span> programs <span lang="zh-CN">和</span> data <span lang="zh-CN">放进</span> RAM，<span lang="zh-CN">分配多少</span> memory，<span lang="zh-CN">并防止程序互相破坏数据</span>。
@@ -117,8 +121,8 @@ Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</sp
 
 > The OS allocates memory to programs and data.  
 > It keeps track of which memory locations are in use.  
-> It prevents one process from accessing memory allocated to another process.  
-> It protects memory allocated to one process from unauthorised access by another process.
+> It protects one process's memory from unauthorised access or overwriting by another.
+> It releases allocated memory when it is no longer needed.
 
 #### What to remember
 
@@ -127,7 +131,6 @@ Memory management <span lang="zh-CN">是</span> OS <span lang="zh-CN">管理</sp
 | Allocate memory | <span lang="zh-CN">给正在运行的程序分配</span> RAM |
 | Deallocate memory | <span lang="zh-CN">程序结束后释放</span> RAM |
 | Track memory | <span lang="zh-CN">记录哪些</span> memory locations <span lang="zh-CN">正在被用</span> |
-| Memory protection | <span lang="zh-CN">防止一个</span> program <span lang="zh-CN">改到另一个</span> program <span lang="zh-CN">的</span> memory |
 | Memory protection | <span lang="zh-CN">防止一个</span> process <span lang="zh-CN">读取或改写分配给另一个</span> process <span lang="zh-CN">的内存</span> |
 
 #### Common mistake
@@ -143,6 +146,8 @@ Virtual memory and paging are A2 Section 16.1 topics. They are taught in [A2 Cha
 ---
 
 ### File management
+
+Sources: [9618/11 · October/November 2024 · Q4(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7).
 
 #### Meaning
 
@@ -183,6 +188,8 @@ Backup is usually **utility software**, not the core meaning of file management.
 
 ### Security management
 
+Sources: [9618/11 · October/November 2025 · Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8).
+
 #### Meaning
 
 Security management <span lang="zh-CN">是</span> OS <span lang="zh-CN">防止</span> unauthorised access，<span lang="zh-CN">保护</span> data <span lang="zh-CN">和</span> resources。
@@ -214,6 +221,8 @@ Security management <span lang="zh-CN">是</span> OS <span lang="zh-CN">防止</
 
 ### Hardware / peripheral management
 
+Sources: [9618/11 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/11 · October/November 2025 · Q5(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8).
+
 #### Meaning
 
 The OS manages input/output devices and peripherals. It allows communication between hardware and software.
@@ -241,6 +250,8 @@ A printer is much slower than the CPU.
 ---
 
 ### Process management
+
+Sources: [9618/12 · May/June 2023 · Q5(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=8); [9618/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=9).
 
 #### Meaning
 
@@ -271,6 +282,8 @@ No. It means managing **running programs**.
 
 ## Utility Software
 
+Sources: [9618/12 · May/June 2023 · Q5(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=8); [9618/12 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=9).
+
 ### What is utility software?
 
 Utility software <span lang="zh-CN">是</span> system software <span lang="zh-CN">的一种</span>，<span lang="zh-CN">用来维护</span>、<span lang="zh-CN">保护</span>、<span lang="zh-CN">优化或管理</span> computer system。
@@ -291,6 +304,8 @@ Utility software <span lang="zh-CN">是</span> system software <span lang="zh-CN
 ---
 
 ### Back-up software
+
+Sources: [9618/11 · October/November 2024 · Q4(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7); [9618/12 · October/November 2025 · Q8(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=10).
 
 #### Meaning
 
@@ -317,6 +332,8 @@ Back-up software creates copies of files/data so they can be restored if the ori
 
 ### File compression utility
 
+Sources: [9618/13 · October/November 2023 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6); [9618/11 · October/November 2024 · Q4(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7).
+
 #### Meaning
 
 File compression software reduces file size.
@@ -342,6 +359,8 @@ Do not say “compression makes the file better quality”. It usually reduces s
 
 ### Virus checker / anti-virus utility
 
+Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9).
+
 #### Meaning
 
 A virus checker scans files/programs for malware.
@@ -363,6 +382,8 @@ No. It reduces risk but cannot guarantee perfect protection.
 
 ### Defragmentation software
 
+Sources: [9618/11 · May/June 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6).
+
 #### Meaning
 
 Defragmentation reorganises file fragments on a magnetic hard disk so parts of a file are stored contiguously.
@@ -380,6 +401,8 @@ Defragmentation is mainly relevant to **magnetic hard disks**, not SSDs.
 
 ### Disk formatter
 
+Sources: [9618/13 · October/November 2023 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6).
+
 #### Meaning
 
 Disk formatter prepares a storage device for use.
@@ -387,7 +410,7 @@ Disk formatter prepares a storage device for use.
 #### Exam-style phrasing
 
 > It prepares the disk for storing files.  
-> It creates a file system / directory structure.  
+> It creates the file-system structures, such as a file allocation table and directories.
 > It may erase existing data.
 
 ---
@@ -407,6 +430,8 @@ Disk analysis checks storage usage and errors. Disk repair attempts to fix file 
 ---
 
 ## Program Libraries and DLL Files
+
+Sources: [9618/12 · May/June 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=9); [9618/12 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=11).
 
 ### What is a program library?
 
@@ -433,6 +458,10 @@ A program library is a collection of pre-written routines/modules that programme
 
 ---
 
+### Library limitations
+
+Check that a routine is compatible with the program and performs the required task. Testing and reliability are benefits of a well-tested library, not guarantees for every library. Changed or unavailable library versions can require maintenance.
+
 ### Dynamic Link Library (DLL)
 
 #### Meaning
@@ -444,7 +473,7 @@ A DLL is a library file that is linked/loaded when the program runs, not permane
 > A DLL can be shared by several programs.  
 > It is loaded at run time when required.  
 > It reduces memory/storage use because the same library code is not copied into every program.  
-> Updating the DLL can update the shared routine for programs that use it.
+> A compatible DLL can be updated independently without recompiling the main program.
 
 #### Common mistake
 
@@ -457,6 +486,8 @@ A DLL is a library file that is linked/loaded when the program runs, not permane
 ---
 
 ## 5.2 Language Translators
+
+Sources: [9618/12 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6); [9618/12 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=9).
 
 ### Why translators are needed
 
@@ -560,7 +591,7 @@ Interpreter translates and executes high-level language instructions one stateme
 
 #### Exam-style answer
 
-> A compiler is suitable for a finished program because it produces executable code that runs faster and can be distributed without source code. An interpreter is suitable during development because it executes code statement by statement and stops at the line where an error occurs, making debugging easier.
+> A compiler produces code that can be run repeatedly without retranslating and distributed without the source. An interpreter supports incremental testing and reports an error at the statement being executed. **Either may be justified during development**: choose the benefit that matches the scenario, rather than treating development as an automatic interpreter choice.
 
 ---
 
@@ -599,6 +630,8 @@ For AS 9618, remember: **partially compiled and partially interpreted**.
 ---
 
 ## Integrated Development Environment (IDE)
+
+Sources: [9618/12 · May/June 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=10); [9618/11 · October/November 2023 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=8).
 
 ### What is an IDE?
 

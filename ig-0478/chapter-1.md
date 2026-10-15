@@ -63,8 +63,11 @@ Use this overview to convert, calculate, represent and justify.
 
 ## 1.1 Number Systems
 ### Why computers use binary
+
+Sources: [0478/12 · May/June 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=5); [0478/12 · February/March 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4).
+
 #### Exam-style answer
-> Computers use binary because computer circuits / transistors can only represent two states, such as on/off, high/low or 1/0. All data must be converted into binary so it can be processed and stored by the computer.
+> Computers use logic gates and switches with two logical states, represented by **1 and 0**. Data is converted into binary so these circuits can process it and storage can hold it as bit patterns.
 >
 
 Inside the processor, **logic gates process these binary values** and **registers store the current data, instructions or intermediate results as bit patterns**. This is why the same two-state representation is used for both processing and temporary storage.
@@ -86,6 +89,9 @@ This is too vague. It does not explain **why**.
 ---
 
 ### Number system definitions
+
+Sources: [0478/12 · February/March 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/12 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6).
+
 | Number system | Base | Digits used | Key point |
 | --- | ---: | --- | --- |
 | Denary | 10 | 0–9 | normal human number system |
@@ -104,6 +110,9 @@ For syllabus conversion questions, positive binary values may be up to **16 bits
 ---
 
 ### Binary ↔ denary
+
+Sources: [0478/12 · February/March 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9); [0478/11 · May/June 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=4).
+
 #### Binary to denary
 Example:
 
@@ -140,6 +149,9 @@ Answer = 00110101
 ---
 
 ### Hexadecimal ↔ binary
+
+Sources: [0478/13 · May/June 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=4); [0478/12 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6).
+
 #### Conversion table
 | Binary | Hex | Denary | Binary | Hex | Denary |
 | --- | --- | ---: | --- | --- | ---: |
@@ -193,6 +205,9 @@ Answer = 01111011
 ---
 
 ### Hexadecimal uses
+
+Sources: [0478/13 · May/June 2024 · Q3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=5); [0478/11 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=6).
+
 | Use | Why hexadecimal is suitable |
 | --- | --- |
 | HTML colour codes | 6 hex digits represent RGB values, e.g. `#FF0000` |
@@ -211,6 +226,9 @@ Answer = 01111011
 
 ## Binary Operations
 ### Binary addition
+
+Sources: [0478/12 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7); [0478/12 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=6).
+
 #### Rules
 | Addition | Result |
 | --- | --- |
@@ -238,6 +256,9 @@ A complete solution should show:
 ---
 
 ### Overflow
+
+Sources: [0478/12 · February/March 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/12 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=6).
+
 #### Definition
 > Overflow occurs when the result is too large to be stored in the number of bits available.
 >
@@ -260,11 +281,14 @@ Not always enough. A carry inside the calculation is normal. You need to say **t
 ---
 
 ### Logical binary shift
+
+Sources: [0478/12 · October/November 2023 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=4); [0478/12 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7).
+
 #### Rules
 | Shift | Effect on positive binary integer |
 | --- | --- |
-| left shift 1 place | ×2 |
-| left shift 2 places | ×4 |
+| left shift 1 place | ×2, if no significant bit is lost |
+| left shift 2 places | ×4, if no significant bit is lost |
 | right shift 1 place | ÷2 |
 | right shift 2 places | ÷4 |
 
@@ -293,6 +317,9 @@ Denary:
 ---
 
 ### Two's complement
+
+Sources: [0478/11 · May/June 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=4); [0478/12 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=6).
+
 ### 8-bit two's complement range
 | Bits | Range |
 | --- | --- |
@@ -366,6 +393,9 @@ Use column values:
 
 ## 1.2 Text, Sound and Images
 ### Text representation
+
+Sources: [0478/12 · February/March 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4); [0478/11 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9).
+
 #### Character set
 > A character set is a set of characters and the codes used to represent them.
 >
@@ -385,6 +415,9 @@ D code stored third
 ---
 
 ### ASCII vs Unicode
+
+Sources: [0478/13 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/11 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=7).
+
 | Feature | ASCII | Unicode |
 | --- | --- | --- |
 | Character range | smaller | much larger |
@@ -407,6 +440,9 @@ Wrong. Unicode has a much larger character set.
 ---
 
 ### Sound representation
+
+Sources: [0478/13 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=6); [0478/12 · February/March 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4).
+
 #### Key terms
 | Term | Meaning |
 | --- | --- |
@@ -440,6 +476,9 @@ Exam-style wording:
 ---
 
 ### Image representation
+
+Sources: [0478/11 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=7); [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5).
+
 #### Key terms
 | Term | Meaning |
 | --- | --- |
@@ -463,6 +502,9 @@ Exam-style wording:
 
 ## 1.3 Data Storage and File Size
 ### Units
+
+Sources: [0478/12 · May/June 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/13 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=9).
+
 #### Binary units
 | Unit | Size |
 | --- | ---: |
@@ -483,6 +525,12 @@ For IGCSE 0478, use **1024** when converting between successive storage units, a
 ---
 
 ### Image file size
+
+Sources: [0478/12 · May/June 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/12 · February/March 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=7).
+
+
+Calculate the **uncompressed pixel data** using this formula. Metadata is additional data; include it only when the question supplies its size.
+
 #### Formula
 ```latex
 Image file size in bits = width × height × colour depth
@@ -523,6 +571,12 @@ KiB = 960 000 ÷ 1024
 ---
 
 ### Sound file size
+
+Sources: [0478/12 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=4).
+
+
+Calculate the **uncompressed sample data**. Use the channel count given in the question; the formula does not include a file header or other metadata.
+
 #### Formula
 ```latex
 Sound file size in bits =
@@ -560,6 +614,9 @@ KiB = 220 160 ÷ 1024
 
 ## Compression
 ### Why compression is needed
+
+Sources: [0478/11 · October/November 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=5); [0478/13 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+
 #### Exam-style answer
 > Compression reduces file size, so less storage space is needed, less bandwidth is required, and the file can be transmitted / uploaded / downloaded faster.
 >
@@ -574,6 +631,9 @@ KiB = 220 160 ÷ 1024
 ---
 
 ### Lossy vs lossless compression
+
+Sources: [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/13 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+
 | Feature | Lossless | Lossy |
 | --- | --- | --- |
 | Data removed? | No permanent data loss | Data permanently removed |
@@ -597,6 +657,9 @@ KiB = 220 160 ÷ 1024
 ---
 
 ### Run-length encoding (RLE)
+
+Sources: [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/12 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=7).
+
 #### What it does
 > RLE identifies repeated adjacent data and stores the value with the number of times it is repeated.
 >
@@ -623,6 +686,9 @@ For images, this could mean:
 ---
 
 ### Choosing compression method
+
+Sources: [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/13 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+
 | Scenario | Best choice | Why |
 | --- | --- | --- |
 | program code | lossless | code must be exactly restored or it may not run |
@@ -662,7 +728,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate]
 ---
 
 ### Explain logical shift
-> In a logical shift, bits are moved left or right. Bits shifted out of the register are lost and zeros are shifted in. A left shift multiplies a positive binary integer by 2 for each shift, while a right shift divides it by 2 for each shift.
+> In a logical shift, bits are moved left or right. Bits shifted out of the register are lost and zeros are shifted in. A left shift multiplies a positive binary integer by 2 per place only if the result fits in the available bits. A right shift divides by 2 per place, discarding any remainder.
 >
 
 ---
@@ -697,7 +763,7 @@ E --> G[Examples: reducing colour depth, resolution, sample rate]
 | Why binary? | "Computers understand binary" | "Transistors / logic circuits have two states, on/off or 1/0" |
 | Hex benefit | "Hex is shorter" | "Shorter than binary, easier to read, one hex digit = four bits" |
 | Overflow | "There is a carry" | "Result is greater than 255 / cannot be stored in 8 bits" |
-| Logical shift | "Move bits" | "Bits shifted out are lost, zeros shifted in, left ×2, right ÷2" |
+| Logical shift | "Move bits" | "Bits shifted out are lost, zeros shifted in, left ×2 if it fits; right integer ÷2" |
 | Two's complement | "First bit is negative sign" | "MSB has value -128 in 8-bit two's complement" |
 | Unicode | "Unicode is 16-bit" | "Unicode supports more characters/languages/emojis and uses more bits than ASCII" |
 | Sample rate | "number of bits per sample" | "number of samples taken per second" |

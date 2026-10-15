@@ -65,6 +65,8 @@ Use this overview to compare processors, explain virtual execution, simplify Boo
 
 ### RISC processors
 
+Sources: [9618/31 · May/June 2024 · Q11(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=14); [9618/31 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=5).
+
 #### Core idea
 RISC means **Reduced Instruction Set Computer**.
 
@@ -106,6 +108,8 @@ This is too vague. You need features such as **fixed length instructions**, **fe
 
 ### CISC processors
 
+Sources: [9618/32 · October/November 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=10).
+
 CISC means **Complex Instruction Set Computer**.
 
 CISC processor <span lang="zh-CN">的设计思想是</span>：
@@ -137,7 +141,9 @@ CISC processor <span lang="zh-CN">的设计思想是</span>：
 
 ### Interrupt handling on RISC and CISC processors
 
-The save–service–restore sequence below applies to both RISC and CISC processors. The processor must finish or stop at a defined instruction boundary, preserve the state needed to resume, execute the ISR and then restore the saved state. The architecture changes the detail: a RISC pipeline commonly contains several simple instructions at different stages, while a CISC processor may be part-way through a longer, more complex instruction. In either case the processor must preserve a precise restart point and must not execute an instruction twice or skip it after the ISR.
+Sources: [9618/31 · May/June 2024 · Q11(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=14).
+
+For both RISC and CISC, detect the interrupt at an instruction-cycle boundary, save register state on the stack, execute the ISR and restore that state. The pipelined case adds several instructions already in progress. In the pipeline model used by the cited question, unfinished instructions are discarded except the final/write-back instruction; execution resumes at the next instruction after servicing. Keep this question-specific pipeline model separate from the shared save–service–restore sequence.
 
 #### Basic interrupt sequence
 Interrupt handling <span lang="zh-CN">的核心不是</span>“CPU stop”，<span lang="zh-CN">而是</span>：
@@ -157,7 +163,7 @@ Interrupt handling <span lang="zh-CN">的核心不是</span>“CPU stop”，<sp
 Pipelining <span lang="zh-CN">会让</span> interrupt handling <span lang="zh-CN">更复杂</span>，<span lang="zh-CN">因为</span> pipeline <span lang="zh-CN">里可能已经有多条</span> instruction <span lang="zh-CN">正在不同</span> stage <span lang="zh-CN">中执行</span>。
 
 #### Exam phrase
-> There may be a number of instructions still in the pipeline when the interrupt is received, so some instructions may need to be discarded or the processor must restart from the correct next instruction after the ISR.
+> Several instructions may be active when the interrupt arrives. Flush the unfinished pipeline work as specified by the processor model, preserve the correct restart position and, after the ISR, restart with the next instruction in sequence.
 >
 
 #### Common mistake
@@ -171,6 +177,8 @@ Pipelining <span lang="zh-CN">会让</span> interrupt handling <span lang="zh-CN
 ---
 
 ### Pipelining in RISC processors
+
+Sources: [9618/32 · May/June 2023 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8).
 
 #### Core idea
 Pipelining means different instructions can be at different stages of execution at the same time.
@@ -215,6 +223,8 @@ This makes pipeline stages more regular.
 
 ### Flynn's four architectures
 
+Sources: [9618/31 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/32 · October/November 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=8).
+
 The four basic computer architectures are:
 
 + **SISD**
@@ -228,6 +238,8 @@ The key exam skill is:
 ---
 
 ### SISD
+
+Sources: [9618/31 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4).
 
 #### Full name
 **Single Instruction, Single Data**
@@ -248,6 +260,8 @@ A traditional single-core computer running one instruction at a time.
 ---
 
 ### SIMD
+
+Sources: [9618/32 · October/November 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=8).
 
 #### Full name
 **Single Instruction, Multiple Data**
@@ -275,6 +289,8 @@ Wrong. SIMD = one instruction, many data items.
 
 ### MISD
 
+Sources: [9618/32 · October/November 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=8).
+
 #### Full name
 **Multiple Instruction, Single Data**
 
@@ -297,6 +313,8 @@ MISD is less common in real systems, but it is still syllabus content.
 ---
 
 ### MIMD
+
+Sources: [9618/31 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4).
 
 #### Full name
 **Multiple Instruction, Multiple Data**
@@ -328,6 +346,8 @@ A multi-core computer running different tasks on different cores.
 ---
 
 ## Massively Parallel Computers
+
+Sources: [9618/31 · May/June 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7).
 
 ### Definition
 A massively parallel computer uses a large number of processors or separate computers to perform coordinated computations at the same time.
@@ -365,6 +385,8 @@ Too vague. A complete answer identifies **many processors** and **parallel coord
 
 ### Concept of a virtual machine
 
+Sources: [9618/32 · May/June 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=12).
+
 A **virtual machine (VM)** is a software-based emulation of a computer system. It runs on a physical computer but behaves like a separate computer.
 
 #### Key terms
@@ -372,6 +394,8 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 | --- | --- |
 | Host machine | physical computer that provides resources |
 | Guest machine | virtual machine running on the host |
+| Host OS | controls physical resources and runs the VM software in the hosted model |
+| Guest OS | runs inside the VM and controls its virtual resources through the VM/host |
 | Hypervisor | software that creates and manages VMs |
 | Emulation / virtualisation | making software behave like hardware |
 
@@ -382,6 +406,8 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 ---
 
 ### Roles / examples of virtual machines
+
+Sources: [9618/32 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=12).
 
 | Role | Example |
 | --- | --- |
@@ -399,6 +425,8 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 ---
 
 ### Benefits of virtual machines
+
+Sources: [9618/32 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=12).
 
 | Benefit | Explanation |
 | --- | --- |
@@ -418,9 +446,12 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ### Limitations of virtual machines
 
+Sources: [9618/32 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=12).
+
 | Limitation | Explanation |
 | --- | --- |
-| Performance overhead | VM uses extra processing because hypervisor is needed |
+| Performance overhead | extra code and shared CPU/RAM can make the guest slower than equivalent native execution |
+| Hardware support | some hardware cannot be emulated or directly accessed from the guest |
 | Resource competition | multiple VMs share CPU/RAM/storage |
 | Single point of failure | if host fails, all VMs on it may fail |
 | Security risk | misconfigured VM can still be attacked |
@@ -456,6 +487,8 @@ When drawing the circuit, show `A`, `B` and `C` entering one three-input AND sym
 
 ### Boolean algebra notation
 
+Sources: [9618/31 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=5); [9618/32 · May/June 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9).
+
 | Symbol | Meaning | Logic gate |
 | --- | --- | --- |
 | `.` | AND | AND |
@@ -482,6 +515,8 @@ It means **OR**.
 
 ### Core Boolean laws
 
+Sources: [9618/32 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6); [9618/32 · May/June 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9).
+
 | Law | AND form | OR form |
 | --- | --- | --- |
 | Identity | `A.1 = A` | `A + 0 = A` |
@@ -506,6 +541,8 @@ So when showing working, write the law name if possible.
 ---
 
 ### De Morgan's laws
+
+Sources: [9618/32 · May/June 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9); [9618/33 · October/November 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=10).
 
 #### Law 1
 ```text
@@ -559,6 +596,8 @@ Step:
 
 ## Truth Tables
 
+Sources: [9618/31 · May/June 2024 · Q6(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=9); [9618/32 · May/June 2025 · Q7(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=8).
+
 ### Truth table method
 
 For Paper 3, when a circuit or expression is given, do not jump straight to the answer. Make working columns.
@@ -595,6 +634,8 @@ So always show working columns.
 ---
 
 ### Sum-of-products
+
+Sources: [9618/31 · October/November 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=8); [9618/31 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=10).
 
 A **sum-of-products** expression is made by OR-ing together product terms.
 
@@ -646,6 +687,8 @@ Z = C
 ---
 
 ## Half Adders and Full Adders
+
+Sources: [9618/31 · May/June 2021 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_31.pdf#page=8); [9618/32 · May/June 2022 · Q6](https://bestexamhelp.com/exam/cambridge-international-a-level/computer-science-9618/2022/9618_s22_ms_32.pdf#page=7). The older questions assess the full- and half-adder outputs.
 
 ### Half adder
 
@@ -720,6 +763,8 @@ Cout = A.B + A.Cin + B.Cin
 
 ## Flip-Flops
 
+Sources: [9618/32 · October/November 2022 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_32.pdf#page=10); [9618/32 · October/November 2022 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_32.pdf#page=11). The SR circuit and one-bit storage purpose are assessed here; the JK operation below is supplementary syllabus explanation.
+
 ### What is a flip-flop?
 
 A flip-flop is a logic circuit that can store one bit of data.
@@ -779,6 +824,8 @@ SR flip-flop can store a bit because when `S = 0` and `R = 0`, the output stays 
 
 ### JK flip-flop
 
+Supplementary source: [TI JK flip-flop function table](https://www.ti.com/lit/ds/symlink/sn74f112.pdf#page=1). The clocked operation assumes the asynchronous preset/clear inputs are inactive.
+
 JK flip-flop solves the invalid state problem of SR.
 
 The block symbol shows `J`, `K`, the active clock edge and complementary outputs `Q` and `Q'`. The stored value changes only at the active clock edge. Internal feedback uses the current outputs so that `J=1, K=1` toggles the state instead of producing the invalid SR input combination.
@@ -798,6 +845,8 @@ The block symbol shows `J`, `K`, the active clock edge and complementary outputs
 ---
 
 ## Karnaugh Maps
+
+Sources: [9618/31 · May/June 2024 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10); [9618/31 · May/June 2025 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=10); [9618/31 · May/June 2025 · Q5(b)(ii)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=11); [9618/33 · October/November 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=9).
 
 ### What is a K-map?
 

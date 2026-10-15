@@ -39,6 +39,9 @@ Use this chapter to check every Topic 7 objective.
 
 ## Program Development Life Cycle
 
+Sources: [0478/21 · May/June 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=4); [0478/23 · October/November 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_23.pdf#page=5).
+
+
 A reliable program is developed in four broad stages.
 
 | Stage | Main questions | Typical evidence |
@@ -49,6 +52,9 @@ A reliable program is developed in four broad stages.
 | Testing | Does every part work for valid and invalid cases? | Test plan, expected results, actual results, corrections |
 
 ### Decomposition
+
+Sources: [0478/21 · May/June 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=4); [0478/21 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=5).
+
 
 **Decomposition** breaks a complex problem into smaller subsystems. Each subsystem should have one clear purpose and defined inputs and outputs.
 
@@ -63,6 +69,9 @@ For a school event booking system, possible subsystems are:
 This makes the design easier to understand, code and test.
 
 ### Abstraction
+
+Sources: [0478/21 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=5); [0478/22 · May/June 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=5).
+
 
 **Abstraction** keeps the details needed to solve the problem and removes details that do not affect the solution.
 
@@ -81,6 +90,9 @@ Abstraction and decomposition solve different design problems:
 
 ## Describing an Algorithm
 
+Sources: [0478/22 · May/June 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=4); [0478/21 · October/November 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_21.pdf#page=5).
+
+
 An **algorithm** is a finite sequence of unambiguous steps that solves a problem.
 
 Before writing pseudocode, identify:
@@ -93,6 +105,9 @@ Before writing pseudocode, identify:
 | Storage | What data must be kept for later use? |
 
 ### Structure diagrams
+
+Sources: [0478/21 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=11); [0478/22 · February/March 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=6).
+
 
 A structure diagram shows how a problem is decomposed.
 
@@ -108,6 +123,9 @@ Event booking
 It shows the parts of a solution, not the detailed order of every instruction.
 
 ### Flowchart symbols
+
+Sources: [0478/22 · October/November 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_22.pdf#page=3); [0478/22 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=10).
+
 
 | Symbol shape | Purpose |
 |---|---|
@@ -128,6 +146,9 @@ flowchart TD
 ```
 
 ### Pseudocode essentials
+
+Sources: [0478/21 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=8); [0478/21 · October/November 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_21.pdf#page=5).
+
 
 ```text
 INPUT Age
@@ -170,6 +191,9 @@ Do not answer a purpose question by copying one instruction. Do not answer a pro
 
 ### Linear search
 
+Sources: [0478/23 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_23.pdf#page=11); [0478/21 · May/June 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=9).
+
+
 Check each element in order until the target is found or the array ends.
 
 ```text
@@ -187,6 +211,9 @@ ENDWHILE
 ```
 
 ### Bubble sort
+
+Sources: [0478/22 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=10); [0478/22 · May/June 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=9).
+
 
 Compare adjacent elements and swap them when they are in the wrong order. Repeat passes until the array is sorted.
 
@@ -207,6 +234,9 @@ The largest unsorted value moves to the right after each ascending pass.
 
 ### Totalling, counting and average
 
+Sources: [0478/23 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=7); [0478/22 · February/March 2023 · Q2(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=4).
+
+
 ```text
 Total <- 0
 Count <- 0
@@ -224,7 +254,10 @@ Average <- Total / 8
 
 ### Maximum and minimum
 
-Initialise from the first real data item, not from an assumed value such as zero.
+Sources: [0478/22 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=4); [0478/22 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=7).
+
+
+Initialise from the first data item, or use a starting bound that is valid for the entire permitted range. Do not assume zero is suitable when negative data is possible.
 
 ```text
 Maximum <- Values[1]
@@ -247,6 +280,9 @@ This still works when all values are negative.
 ---
 
 ## Validation and Verification
+
+Sources: [0478/21 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=7); [0478/21 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=12).
+
 
 **Validation** checks whether input is sensible and follows rules. It does not prove that the value is factually correct.
 
@@ -278,23 +314,29 @@ The condition after `UNTIL` describes valid data because the loop stops when tha
 
 ## Test Data
 
+Sources: [0478/22 · February/March 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_22.pdf#page=4); [0478/22 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=5).
+
+
 | Test type | Meaning | Example for valid range 1–120 |
 |---|---|---|
-| Normal | Valid, ordinary value away from limits | 45 |
+| Normal | Any valid value within the permitted range | 45 |
 | Abnormal | Invalid value that should be rejected | 0, 121 or "ten" |
 | Extreme | Valid value at the lowest or highest permitted limit | 1 or 120 |
-| Boundary | Values on and immediately around a limit | 0, 1, 2 and 119, 120, 121 |
+| Boundary | Accepted endpoints and the immediately adjacent rejected values | 0 and 1; 120 and 121 |
 
 The key distinction is:
 
 - extreme values are valid endpoints
-- boundary testing includes endpoints and nearby values on both sides
+- boundary testing checks each accepted endpoint together with the nearest value outside the permitted range
 
 A useful test plan states the input, test type, expected outcome, actual outcome and pass/fail result.
 
 ---
 
 ## Trace Tables
+
+Sources: [0478/23 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=14); [0478/21 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=13).
+
 
 A trace table records how variables and outputs change after each relevant instruction.
 
@@ -329,6 +371,9 @@ Write a new row only when a relevant value changes or output occurs. A prompt is
 ---
 
 ## Finding and Correcting Errors
+
+Sources: [0478/23 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_23.pdf#page=10); [0478/21 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=10).
+
 
 Three useful error categories are:
 

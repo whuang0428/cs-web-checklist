@@ -31,6 +31,9 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Standard Logic Gates
 
+Sources: [0478/22 · May/June 2023 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=4); [0478/22 · May/June 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=4).
+
+
 ![Standard symbols for NOT, AND, OR, NAND, NOR and XOR gates](../assets/logic-gates.svg)
 
 Important symbol details:
@@ -46,6 +49,9 @@ In an exam, draw the standard shape rather than a rectangle containing the gate 
 ---
 
 ## Gate Functions and Truth Tables
+
+Sources: [0478/23 · October/November 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=7); [0478/23 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=15).
+
 
 ### NOT
 
@@ -79,6 +85,9 @@ Meanings:
 
 ## Building Truth Tables
 
+Sources: [0478/23 · May/June 2025 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=17); [0478/22 · May/June 2025 · Q8(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=12).
+
+
 For `n` inputs, a complete truth table contains `2^n` input combinations.
 
 | Inputs | Rows |
@@ -100,13 +109,16 @@ For three inputs, use a systematic order:
 | 1 | 1 | 0 |
 | 1 | 1 | 1 |
 
-Add an intermediate column for every gate or sub-expression. This reduces mental errors and can earn method marks.
+Use intermediate columns for gates or sub-expressions to check your working. Complete every requested final output: the cited mark schemes award truth-table marks according to correct outputs, so extra working does not guarantee marks.
 
 ---
 
 ## Moving Between Representations
 
 ### Expression to circuit
+
+Sources: [0478/21 · May/June 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=11); [0478/22 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=8).
+
 
 For:
 
@@ -135,6 +147,9 @@ The Mermaid diagram shows connectivity. In an exam response, replace the labelle
 
 ### Circuit to expression
 
+Sources: [0478/21 · October/November 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=6); [0478/21 · October/November 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_21.pdf#page=6).
+
+
 Label intermediate outputs:
 
 ```text
@@ -150,6 +165,9 @@ Q = (A NAND B) OR (NOT C)
 ```
 
 ### Problem statement to expression
+
+Sources: [0478/23 · May/June 2025 · Q7(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=16); [0478/21 · October/November 2025 · Q4(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=9).
+
 
 Translate one condition at a time.
 
@@ -170,6 +188,9 @@ Q = (D OR W) AND (NOT M)
 Brackets preserve the grouping in the problem.
 
 ### Truth table to circuit
+
+**Syllabus-based method:** constructing a circuit from a truth table is required, but the steps below are a revision method rather than a quoted marking sequence. [Syllabus §10](https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf#page=31).
+
 
 First identify a familiar pattern:
 

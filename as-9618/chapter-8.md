@@ -77,6 +77,8 @@ Use this overview to model data, normalise relations, explain the DBMS and write
 
 ### File-based approach
 
+Sources: [9618/13 · May/June 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6); [9618/11 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=5).
+
 #### Meaning
 
 A **file-based approach** stores data in separate files, usually created for one specific application.
@@ -103,6 +105,8 @@ A **file-based approach** stores data in separate files, usually created for one
 ---
 
 ### Relational database
+
+Sources: [9618/13 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6); [9618/12 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
 
 #### Definition
 
@@ -131,6 +135,8 @@ relational database <span lang="zh-CN">的核心就是</span> **<span lang="zh-C
 
 ### Primary key
 
+Sources: [9618/11 · May/June 2023 · Q2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/12 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
+
 #### Exam-style answer
 
 > A primary key is an attribute or set of attributes that uniquely identifies each record in a table.
@@ -154,9 +160,11 @@ CUSTOMER(CustomerID, FirstName, LastName, ContactNumber)
 
 ### Candidate key
 
+Sources: [9618/11 · October/November 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=5); [9618/11 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=8).
+
 #### Exam-style answer
 
-> A candidate key is an attribute or set of attributes that could be used as the primary key because it uniquely identifies each record.
+> A candidate key is a **minimal** attribute or set of attributes that uniquely identifies a record and could be selected as the primary key. Removing an attribute from a composite candidate key would lose uniqueness.
 
 #### Example
 
@@ -178,17 +186,21 @@ Only one is chosen as the **primary key**, but all three could uniquely identify
 
 ### Secondary key
 
+Sources: [9618/13 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6).
+
 #### Exam-style answer
 
 > A secondary key is an attribute used to find a group of records and does not have to contain unique values.
 
 For example, `ClassCode` can retrieve every student in one class. Several students may have the same `ClassCode`, so it is not suitable as the primary key.
 
-Do not define a secondary key as “the second candidate key”. Its purpose is retrieval, and duplicate values are allowed.
+The 2023 mark scheme also accepts a candidate key not selected as the primary key. Do not infer that a secondary key must be unique: an additional retrieval key can select several records.
 
 ---
 
 ### Foreign key
+
+Sources: [9618/11 · May/June 2023 · Q2(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/13 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6).
 
 #### Exam-style answer
 
@@ -224,9 +236,11 @@ Foreign keys in `SALE`:
 
 ### Referential integrity
 
+Sources: [9618/11 · May/June 2023 · Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/12 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4).
+
 #### Exam-style answer
 
-> Referential integrity ensures that a foreign key value in one table must match an existing primary key value in the referenced table.
+> Referential integrity requires a non-null foreign key to match an existing key in the referenced table. Updates/deletions must preserve that relationship, for example by rejecting a change or applying a configured cascade. Null is allowed only if the field permits it.
 
 #### Brief Chinese Support
 
@@ -244,11 +258,13 @@ Foreign keys in `SALE`:
 
 ### Indexing
 
-An **index** stores selected key values in an ordered structure together with pointers to the corresponding records.
+Supplementary source — no direct MS located: [PostgreSQL: indexes](https://www.postgresql.org/docs/current/indexes-intro.html).
+
+An **index** is an additional structure associating search-key values with the locations of matching records.
 
 #### Benefits
 
-+ a query can search the smaller ordered index instead of scanning every record
++ a suitable index can locate matching records without scanning the whole table
 + records matching a secondary key, such as one postcode or class, can be located more quickly
 
 #### Costs
@@ -261,6 +277,8 @@ Example: an index on `CustomerID` can point directly to one customer, while an i
 ---
 
 ### Relationships
+
+Sources: [9618/11 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=5); [9618/13 · October/November 2023 · Q3(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4).
 
 #### One-to-one
 
@@ -344,6 +362,8 @@ that usually means it is a **linking table** between `REPAIR` and `PART`.
 ---
 
 ## Normalisation
+
+Sources: [9618/11 · May/June 2023 · Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/13 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6).
 
 ### Why normalise?
 
@@ -480,21 +500,25 @@ DBMS <span lang="zh-CN">就是管理数据库的软件层</span>。<span lang="z
 
 ### DBMS features
 
+Sources: [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/11 · May/June 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=7).
+
 | Feature | What it does | Exam-style phrasing |
 | --- | --- | --- |
 | Data dictionary | stores metadata about database structure | stores data about data |
 | Data management | maintains data in tables | stores / updates / deletes data |
 | Data modelling | helps design database structure | produces E-R model / logical schema |
-| Logical schema | overall logical structure of database | independent of physical storage |
+| Logical schema | model of the database structure and relationships | independent of a particular DBMS / physical implementation |
 | Data integrity | keeps data accurate and consistent | validation / referential integrity |
 | Data security | protects data from unauthorised access | access rights / passwords / encryption |
 | Backup and recovery | makes copies and restores data | recover after data loss |
-| Developer interface | allows developers to write commands / SQL | interface for database development |
+| Developer interface | builds tables, relationships, forms, menus and reports | tools for creating database applications |
 | Query processor | processes SQL queries | interprets / optimises / executes queries |
 
 ---
 
 ### Data dictionary
+
+Sources: [9618/11 · May/June 2023 · Q2(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4).
 
 #### Definition
 
@@ -522,6 +546,8 @@ Too vague. It stores **data about data**, not normal user records.
 
 ### Data integrity in DBMS
 
+Sources: [9618/11 · May/June 2023 · Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/12 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4).
+
 DBMS can improve integrity by:
 
 + enforcing data types
@@ -538,6 +564,8 @@ DBMS can improve integrity by:
 ---
 
 ### Data security in DBMS
+
+Sources: [9618/12 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/12 · May/June 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8).
 
 DBMS can improve security by:
 
@@ -557,17 +585,21 @@ DBMS can improve security by:
 
 ### Developer interface
 
+Sources: [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/13 · May/June 2025 · Q6(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=11).
+
 #### Meaning
 
-A developer interface lets developers create and modify database structures and write SQL queries.
+A developer interface provides tools to create tables and relationships and to design **forms, menus and reports** for a database application.
 
 #### Exam-style wording
 
-> The developer interface allows a developer to write SQL commands to define, query and maintain the database.
+> A developer uses the interface to build the database structures and the forms/reports used to enter and display data. The query processor interprets and executes queries.
 
 ---
 
 ### Query processor
+
+Sources: [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4).
 
 #### Meaning
 
@@ -588,6 +620,8 @@ It may:
 ---
 
 ## 8.3 DDL and DML
+
+Sources: [9618/11 · May/June 2023 · Q2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/12 · May/June 2023 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=5).
 
 ### DDL vs DML
 

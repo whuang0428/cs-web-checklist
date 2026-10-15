@@ -67,6 +67,8 @@ Use this overview to convert, calculate, compare and justify information represe
 
 ### Binary prefixes vs decimal prefixes
 
+Sources: [9618/11 · May/June 2023 · Q3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4).
+
 #### Core idea
 
 <span lang="zh-CN">计算机中有两套常见单位</span>：
@@ -108,6 +110,8 @@ Use this overview to convert, calculate, compare and justify information represe
 ---
 
 ### Number systems
+
+Sources: [9618/11 · May/June 2023 · Q3(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7).
 
 | Number system | Base | Digits used | Key exam point |
 | --- | ---: | --- | --- |
@@ -215,6 +219,8 @@ Convert `2140` to denary.
 
 ### One's complement and two's complement
 
+Sources: [9618/11 · May/June 2023 · Q3(d)(iv)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6).
+
 #### One's complement
 
 One's complement reverses every bit.
@@ -225,7 +231,7 @@ becomes
 10100101
 ```
 
-For AS 9618, understand it, but **two's complement is more exam-heavy**.
+To form the two's complement of a fixed-width positive integer, invert every bit and add 1. Keep the stated number of bits.
 
 ---
 
@@ -335,6 +341,8 @@ Ignore the 9th carry bit:
 
 ### Overflow
 
+Sources: [9618/13 · May/June 2024 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=3); [9618/11 · October/November 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=3).
+
 #### Definition
 
 > Overflow occurs when the result of a calculation is too large or too small to be represented using the available number of bits.
@@ -358,6 +366,8 @@ Overflow can occur when:
 ---
 
 ### Binary Coded Decimal (BCD)
+
+Sources: [9618/12 · October/November 2023 · Q3(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/12 · October/November 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=5).
 
 #### What BCD does
 
@@ -407,6 +417,8 @@ BCD = 0101 0111 0011
 
 ### Character sets
 
+Sources: [9618/13 · May/June 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=3); [9618/13 · October/November 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=6).
+
 #### Character set definition
 
 > A character set is a set/list of characters and the binary codes used to represent them.
@@ -423,7 +435,7 @@ BCD = 0101 0111 0011
 | --- | ---: | --- |
 | ASCII | 7 bits | 128 characters |
 | Extended ASCII | 8 bits | 256 characters |
-| Unicode | often 16 or 32 bits in syllabus examples | much wider range of languages and symbols |
+| Unicode | encoding-dependent; papers use 8, 16 or 32-bit examples | much wider range of languages and symbols |
 
 #### Unicode advantages over ASCII
 
@@ -469,6 +481,8 @@ Convert:
 ---
 
 ## 1.2 Multimedia — Bitmap Images
+
+Sources: [9618/11 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/11 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3).
 
 ### Bitmap image keywords
 
@@ -517,6 +531,8 @@ Examples:
 ---
 
 ### Image file size calculation
+
+Calculate the **uncompressed pixel data** from pixel count and bits per pixel. Divide by 8 for bytes; add header size only when required. A stored file can be larger because its header also contains data.
 
 #### Formula
 
@@ -581,6 +597,8 @@ A bitmap file header may store:
 
 ## Vector Graphics
 
+Sources: [9618/11 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/11 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=3).
+
 ### Vector graphic idea
 
 Vector graphics do not store every pixel. They store objects / shapes mathematically.
@@ -629,6 +647,8 @@ RECTANGLE top-left(20,20), width 40, height 30
 
 ## Sound Representation
 
+Sources: [9618/13 · May/June 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=5); [9618/12 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=7).
+
 ### Analogue sound
 
 Sound is naturally analogue. This means it changes continuously.
@@ -675,6 +695,8 @@ A 30-second stereo sound has sample rate 44 100 Hz and sampling resolution 16 bi
 ---
 
 ## 1.3 Compression
+
+Sources: [9618/11 · May/June 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/11 · October/November 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=3).
 
 ### Why compression is needed
 
