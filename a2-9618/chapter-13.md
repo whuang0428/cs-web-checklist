@@ -86,7 +86,7 @@ Too vague. You need to explain **why** a built-in type is not enough.
 
 ### Composite vs non-composite data types
 
-Sources: [9618/32 · October/November 2023 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=3); [9618/31 · May/June 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=6); [9618/32 · May/June 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5).
+Sources: [9618/31 · May/June 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=6); [9618/32 · October/November 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5); [9618/32 · October/November 2023 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=3); [9618/32 · May/June 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5).
 
 | Type | Meaning | Examples |
 | --- | --- | --- |
@@ -107,7 +107,7 @@ Sources: [9618/32 · October/November 2023 · Q2](https://pastpapers.papacambrid
 
 ### Enumerated type
 
-Sources: [9618/31 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/33 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=6); [9618/33 · October/November 2025 · Q1(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=6). The ordered list and absence of duplicate values are distinct features.
+Sources: [9618/33 · October/November 2025 · Q1(a)(i), 1(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=6); [9618/32 · May/June 2025 · Q1(b)(i), 1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=4); [9618/31 · May/June 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/31 · October/November 2025 · Q1(b)(i), 1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=6); [9618/31 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=6). The ordered list and absence of duplicate values are distinct features.
 
 #### Definition
 > An enumerated data type is a user-defined non-composite type whose definition lists all permitted values in order. The list has no duplicates; a variable of the type takes one value from that list.
@@ -145,7 +145,7 @@ DECLARE Gate : GateID
 
 ### Pointer type
 
-Sources: [9618/31 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/31 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4).
+Sources: [9618/31 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/31 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4).
 
 #### Definition
 > A pointer data type is a user-defined non-composite data type that stores a memory address and indicates the type of data stored at that location.
@@ -172,7 +172,7 @@ DECLARE CurrentName : TNamePointer
 
 ### Record type
 
-Sources: [9618/32 · October/November 2024 · Q3(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5); [9618/31 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=6); [9618/33 · October/November 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=6).
+Sources: [9618/41 · October/November 2023 · Q2(c)(i), 2(c)(ii), 2(c)(iii), 2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_41.pdf#page=16); [9618/42 · May/June 2025 · Q2(a), 2(b)(i), 2(b)(ii), 2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_42.pdf#page=19); [9618/41 · October/November 2025 · Q3(a), 3(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_41.pdf#page=26); [9618/32 · October/November 2024 · Q3(a), 3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5); [9618/42 · October/November 2024 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_42.pdf#page=18).
 
 #### Definition
 > A record is a user-defined composite data type that contains a fixed number of fields, where the fields may be of different data types.
@@ -232,7 +232,7 @@ Flight1.Airline ← "Cambridge Airways"
 
 ### Set type
 
-Sources: [9618/32 · May/June 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5); [9618/31 · October/November 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=7); [9618/31 · October/November 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=8).
+Sources: [9618/31 · October/November 2024 · Q6(a), 6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=7); [9618/32 · May/June 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5).
 
 #### Definition
 > A set is a user-defined composite data type that contains an unordered collection of distinct elements. Set theory operations such as union and intersection can be applied. All elements are of the same data type.
@@ -268,7 +268,7 @@ DEFINE Operators ('+', '–', '*', '/', '^') : SymbolSet
 
 ### Class and object types
 
-Sources: [9618/32 · October/November 2024 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=11); [9618/32 · October/November 2024 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=12); [9618/33 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=10).
+Sources: [9618/42 · May/June 2025 · Q3(a)(i), 3(b)(i), 3(b)(ii), 3(c)(i), 3(c)(ii), 3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_42.pdf#page=33); [9618/41 · October/November 2024 · Q2(a)(i), 2(a)(ii), 2(b)(i), 2(c)(i), 2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_41.pdf#page=12); [9618/41 · May/June 2023 · Q2(a)(i), 2(a)(ii), 2(a)(iii), 2(b)(i), 2(b)(ii), 2(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_41.pdf#page=12); [9618/41 · October/November 2025 · Q2(a)(i), 2(a)(ii), 2(b), 2(c)(i), 2(c)(ii), 2(c)(iii), 2(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_41.pdf#page=15); [9618/43 · October/November 2025 · Q1(a)(i), 1(a)(ii), 1(a)(iii), 1(b)(i), 1(b)(ii), 1(b)(iii), 1(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_43.pdf#page=7); [9618/32 · October/November 2024 · Q10(a), 10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=11).
 
 A class defines the properties and methods shared by its objects. Each object is one instance of the class and stores its own property values.
 
@@ -305,7 +305,7 @@ OUTPUT CurrentReading.GetValue()
 
 ### File organisation overview
 
-Sources: [9618/31 · October/November 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/32 · October/November 2024 · Q2(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5).
+Sources: [9618/32 · May/June 2024 · Q7(a), 7(b)(i), 7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=8); [9618/31 · May/June 2024 · Q4(a), 4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=7); [9618/31 · October/November 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4); [9618/32 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=4); [9618/32 · October/November 2024 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5).
 
 | File organisation | How records are stored | Common access method | Good for |
 | --- | --- | --- | --- |
@@ -317,7 +317,7 @@ Sources: [9618/31 · October/November 2023 · Q4(a)](https://pastpapers.papacamb
 
 ### Serial file organisation
 
-Sources: [9618/32 · October/November 2024 · Q2(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5).
+Sources: [9618/32 · October/November 2024 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=5); [9618/31 · May/June 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=7).
 
 #### Exam-style answer
 > In a serial file, records are stored in the order they are added, often chronological order. There is no ordering by key field, so records must be checked one after another until the required record is found or all records have been checked.
@@ -337,7 +337,7 @@ Wrong. Serial means records are stored **without key order**.
 
 ### Sequential file organisation
 
-Sources: [9618/32 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=4); [9618/31 · May/June 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=7).
+Sources: [9618/32 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=4); [9618/31 · May/June 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=7); [9618/32 · May/June 2024 · Q7(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=8); [9618/31 · October/November 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4).
 
 #### Exam-style answer
 > In a sequential file, records are stored in order of a key field. The key field is compared as the file is searched, and the search can stop when the required key is found or when the current key is greater than the target key.
@@ -375,7 +375,7 @@ Sources: [9618/31 · October/November 2023 · Q4(a)](https://pastpapers.papacamb
 
 ### Sequential access
 
-Sources: [9618/31 · May/June 2024 · Q4(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=7); [9618/31 · October/November 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4).
+Sources: [9618/31 · May/June 2024 · Q4(a), 4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=7); [9618/32 · October/November 2023 · Q12(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=9); [9618/32 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=4); [9618/31 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=8); [9618/31 · October/November 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=4).
 
 #### Exam-style answer
 > Sequential access searches records one after another from the physical start of the file until the record is found or the end of file is reached.
@@ -396,7 +396,7 @@ CLOSEFILE "Customer.dat"
 
 ### Direct access
 
-Sources: [9618/32 · May/June 2024 · Q7(a),7(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=8); [9618/32 · May/June 2024 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=9). The question distinguishes indexed sequential access from random-file hashing.
+Sources: [9618/32 · May/June 2024 · Q7(a), 7(b)(i), 7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=8); [9618/33 · May/June 2025 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=14); [9618/31 · May/June 2025 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=15); [9618/32 · May/June 2025 · Q13](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=12); [9618/32 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=7). The question distinguishes indexed sequential access from random-file hashing.
 
 **Distinguish the organisation:** in indexed sequential access, search the key index for the record address. In random access, calculate an address from the key and follow the collision-resolution rule if that location holds another record. Do not describe every direct-access file as an unindexed sequential scan.
 
@@ -415,7 +415,7 @@ GETRECORD "AccountRecords.dat", Customer
 
 ### Hashing algorithm
 
-Sources: [9618/31 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/31 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=7).
+Sources: [9618/41 · October/November 2025 · Q3(c), 3(d), 3(f)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_41.pdf#page=28); [9618/32 · May/June 2024 · Q7(a), 7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=8); [9618/42 · May/June 2025 · Q2(c), 2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_42.pdf#page=24); [9618/31 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=7); [9618/31 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4).
 
 #### Definition
 > A hashing algorithm takes a record key as input and calculates the storage location / address for that record in the file.
@@ -436,7 +436,7 @@ Location ← AccountNumber MOD 1000
 
 ### Collision and collision resolution
 
-Sources: [9618/31 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/32 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=3); [9618/32 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=4); [9618/31 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=7). Storage seeks a free slot; retrieval seeks the matching key. These are different stopping conditions.
+Sources: [9618/32 · October/November 2023 · Q3(a), 3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=3); [9618/31 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/41 · October/November 2025 · Q3(d), 3(f)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_41.pdf#page=29); [9618/42 · May/June 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_42.pdf#page=25); [9618/32 · May/June 2024 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=9). Storage seeks a free slot; retrieval seeks the matching key. These are different stopping conditions.
 
 #### Definition
 > A collision occurs when two different record keys are processed by the hashing algorithm and produce the same hash value / storage location.
@@ -461,7 +461,7 @@ Sources: [9618/31 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.co
 
 ### Format of floating-point representation
 
-Sources: [9618/31 · May/June 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4); [9618/33 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=7).
+Sources: [9618/32 · May/June 2025 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=4); [9618/32 · October/November 2024 · Q4(a), 4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=6); [9618/31 · May/June 2024 · Q1(a), 1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4); [9618/32 · October/November 2025 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=7); [9618/31 · October/November 2024 · Q1(a), 1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=4).
 
 A binary floating-point number is stored using:
 
@@ -486,7 +486,7 @@ Example mantissa:
 
 ### Normalisation
 
-Sources: [9618/31 · May/June 2025 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=7); [9618/31 · October/November 2021 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w21_ms_31.pdf#page=3). The older part explains the purpose; recent parts assess the conversion.
+Sources: [9618/33 · May/June 2025 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=7); [9618/31 · October/November 2025 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=6); [9618/31 · May/June 2025 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=7); [9618/31 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · October/November 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=6); [9618/31 · October/November 2021 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w21_ms_31.pdf#page=3). Recent questions apply normalisation; the older question supplies the maximum-precision explanation.
 
 #### Rule
 A normalised mantissa uses the available bits efficiently.
@@ -510,7 +510,7 @@ A normalised mantissa uses the available bits efficiently.
 
 ### Positive denary to floating-point
 
-Sources: [9618/32 · May/June 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/32 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=7).
+Sources: [9618/31 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/32 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=7); [9618/31 · October/November 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=4); [9618/31 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=3).
 
 #### Example: +54.8125 using 12-bit mantissa and 4-bit exponent
 
@@ -542,7 +542,7 @@ If the question gives 10 mantissa bits, write 10 bits. If it gives 12 mantissa b
 
 ### Negative denary to floating-point
 
-Sources: [9618/31 · May/June 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4); [9618/31 · May/June 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=7).
+Sources: [9618/31 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=7); [9618/33 · May/June 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=7); [9618/32 · October/November 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=6); [9618/31 · May/June 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=7); [9618/31 · May/June 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4).
 
 #### Method
 1. Convert the positive version to binary.  
@@ -588,7 +588,7 @@ Exponent: 000101
 
 ### Floating-point to denary
 
-Sources: [9618/31 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4); [9618/32 · May/June 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=5).
+Sources: [9618/32 · May/June 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=5); [9618/31 · October/November 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=4); [9618/31 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=4); [9618/32 · October/November 2025 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=7); [9618/32 · October/November 2024 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=6).
 
 #### Method
 1. Read the exponent. If MSB is 1, convert from two's complement.  
@@ -629,7 +629,7 @@ Convert as two's complement:
 
 ### Precision, range, rounding, overflow and underflow
 
-Sources: [9618/31 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/33 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=7); [9618/32 · October/November 2022 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_32.pdf#page=4). The precision/range trade-off assumes a fixed total word length; the older question supplies underflow evidence.
+Sources: [9618/32 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/32 · October/November 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=3); [9618/33 · October/November 2025 · Q2(a), 2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=7); [9618/31 · October/November 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=4); [9618/32 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=4); [9618/32 · October/November 2022 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_32.pdf#page=4). The precision/range trade-off assumes a fixed total word length; the older question supplies underflow evidence.
 
 | Concept | Meaning | Exam phrase |
 | --- | --- | --- |

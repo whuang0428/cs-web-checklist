@@ -65,7 +65,7 @@ Use this overview to choose encryption, protect or verify messages, establish tr
 
 ### Core encryption vocabulary
 
-Sources: [9618/31 · May/June 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7); [9618/32 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5).
+Sources: [9618/32 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6); [9618/32 · October/November 2025 · Q7(a), 7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=13); [9618/32 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5); [9618/31 · May/June 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7).
 
 | Term | Chinese explanation | Exam-style phrasing |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ This is too vague. You must say **how**: plaintext becomes ciphertext using a ke
 
 ### Symmetric key cryptography
 
-Sources: [9618/32 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6).
+Sources: [9618/32 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6); [9618/32 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=13).
 
 #### Definition
 
@@ -145,7 +145,7 @@ sequenceDiagram
 
 ### Asymmetric key cryptography
 
-Sources: [9618/32 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5); [9618/32 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=13).
+Sources: [9618/32 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6); [9618/32 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=5); [9618/32 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=13); [9618/31 · May/June 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7).
 
 #### Definition
 
@@ -219,7 +219,7 @@ sequenceDiagram
 
 ### Case 2: Sending a verified message to the public
 
-Sources: [9618/31 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=10). The signature authenticates the signer and integrity; it does not make the public message confidential.
+Sources: [9618/31 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=10); [9618/31 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10). The signature authenticates the signer and integrity; it does not make the public message confidential.
 
 #### Scenario
 
@@ -286,7 +286,7 @@ Sources: [9618/32 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.co
 
 ### Purpose of SSL/TLS
 
-Sources: [9618/31 · May/June 2025 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
+Sources: [9618/32 · May/June 2025 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=10); [9618/33 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11); [9618/31 · May/June 2025 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
 
 SSL means **Secure Socket Layer**. TLS means **Transport Layer Security**.
 
@@ -330,7 +330,7 @@ Sources: [9618/31 · May/June 2025 · Q9(b)](https://pastpapers.papacambridge.co
 
 ### Simplified TLS handshake process
 
-Sources: [9618/32 · May/June 2025 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=10); [9618/33 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11). Handshake and Record are distinct protocols; modern key agreement details are supplementary.
+Sources: [9618/33 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11); [9618/32 · May/June 2025 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=10). Handshake and Record are distinct protocols; modern key agreement details are supplementary.
 
 TLS has two main parts: the **Handshake Protocol** authenticates parties and agrees the encryption/session parameters; the **Record Protocol** protects and transfers application data, including encryption and integrity checking.
 
@@ -381,7 +381,7 @@ sequenceDiagram
 
 ### What is a digital certificate?
 
-Sources: [9618/31 · May/June 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10); [9618/31 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=9).
+Sources: [9618/33 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12); [9618/33 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=11); [9618/31 · May/June 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10); [9618/31 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=9).
 
 A digital certificate is an electronic document used to prove the identity of a website, person or organisation.
 
@@ -401,7 +401,7 @@ It normally contains:
 
 ### Certificate Authority (CA)
 
-Sources: [9618/33 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12).
+Sources: [9618/33 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12); [9618/31 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=9); [9618/31 · May/June 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10).
 
 A **Certificate Authority** is a trusted organisation that issues digital certificates.
 
@@ -464,7 +464,7 @@ E -->|No| G[Warning / connection blocked]
 
 ## Digital Signatures
 
-Sources: [9618/31 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10); [9618/31 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=10); [9618/32 · May/June 2022 · Q7(b)](https://bestexamhelp.com/exam/cambridge-international-a-level/computer-science-9618/2022/9618_s22_ms_32.pdf#page=8); [9618/31 · October/November 2022 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_31.pdf#page=8). The recent questions assess identity/integrity; the older questions assess the message-digest procedure.
+Sources: [9618/31 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=10); [9618/31 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10); [9618/32 · May/June 2022 · Q7(b)](https://bestexamhelp.com/exam/cambridge-international-a-level/computer-science-9618/2022/9618_s22_ms_32.pdf#page=8); [9618/31 · October/November 2022 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w22_ms_31.pdf#page=8). The recent questions assess identity/integrity; the older questions assess the message-digest procedure.
 
 ### Purpose
 
@@ -513,7 +513,7 @@ E -->|No| G[Invalid signature / message altered]
 
 ## Quantum Cryptography
 
-Sources: [9618/31 · May/June 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7); [9618/32 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6). Benefits concern quantum key distribution and detection of interference; do not turn them into an absolute claim that endpoints cannot be attacked.
+Sources: [9618/31 · May/June 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7); [9618/32 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=6); [9618/32 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=13). Benefits concern quantum key distribution and detection of interference; do not turn them into an absolute claim that endpoints cannot be attacked.
 
 ### Purpose
 

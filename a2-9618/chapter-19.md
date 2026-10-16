@@ -68,7 +68,7 @@ Revise: algorithm tracing and comparison; linear and binary search; bubble and i
 
 ## Search and Sort Patterns
 
-Sources: [9618/32 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=11); [9618/41 · May/June 2024 · Q1(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_41.pdf#page=8); [9618/41 · May/June 2024 · Q1(e)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_41.pdf#page=10); [9618/33 · May/June 2025 · Q12(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=15).
+Sources: [9618/32 · May/June 2024 · Q8(a), 8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=10); [9618/41 · October/November 2023 · Q2(c)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_41.pdf#page=18); [9618/31 · May/June 2024 · Q10(a), 10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=12); [9618/43 · May/June 2025 · Q2(b), 2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_43.pdf#page=20); [9618/42 · May/June 2024 · Q3(b)(i), 3(c)(i), 3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_42.pdf#page=38).
 
 Linear search compares each item in order. It has worst-case time `O(n)` and works without sorting. Binary search compares the middle item, discards half of a **sorted** range and repeats; its worst-case time is `O(log n)`.
 
@@ -212,7 +212,7 @@ The sorted prefix is `[3, 6, 10, 14]` and the next item is `8`: save `8`; shift 
 
 ## Abstract Data Types
 
-Sources: [9618/31 · October/November 2023 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=8); [9618/32 · May/June 2023 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=12); [9618/41 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_41.pdf#page=7). Pointer initial values are implementation-specific, not universal definitions.
+Sources: [9618/32 · May/June 2023 · Q11(a)(i), 11(a)(ii), 11(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=12); [9618/41 · October/November 2024 · Q3(a), 3(b), 3(c)(i), 3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_41.pdf#page=26); [9618/31 · October/November 2023 · Q10(a), 10(b), 10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=8); [9618/31 · May/June 2023 · Q11(a), 11(b), 11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=8); [9618/42 · October/November 2024 · Q2(a), 2(b), 2(c), 2(d), 2(f)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_42.pdf#page=18). Pointer initial values are implementation-specific, not universal definitions.
 
 An ADT defines permitted operations independently of its representation. A stack removes the most recently inserted item; a queue removes the earliest remaining item. Before updating an array implementation, check the full/empty condition and follow the question’s pointer convention: some top/tail pointers identify the last occupied slot, while others identify the next free slot. A circular queue also wraps at the array boundary.
 
@@ -226,7 +226,7 @@ An ADT defines permitted operations independently of its representation. A stack
 
 ### Required operations in pseudocode
 
-Sources: [9618/31 · May/June 2023 · Q11(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=9); [9618/32 · October/November 2023 · Q9(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=7); [9618/31 · October/November 2025 · Q9(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=13); [9618/32 · October/November 2025 · Q12(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=17).
+Sources: [9618/41 · October/November 2024 · Q3(a), 3(b), 3(c)(i), 3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_41.pdf#page=26); [9618/42 · October/November 2024 · Q2(a), 2(b), 2(c), 2(d), 2(f)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_42.pdf#page=18); [9618/43 · May/June 2025 · Q3(b)(i), 3(b)(ii), 3(b)(iii), 3(b)(iv)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_43.pdf#page=36); [9618/41 · May/June 2025 · Q1(a), 1(b), 1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_41.pdf#page=7); [9618/41 · May/June 2025 · Q3(c)(i), 3(c)(iii), 3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_41.pdf#page=35); [9618/31 · October/November 2024 · Q11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=17).
 
 These templates expose the boundary checks and pointer/index changes that an ADT trace must show. Here the payload is an integer, `MaxIndex=9`, `Capacity=10`, and the arrays use indexes 0–9. Initially `Top=-1`, `Front=0`, `Rear=9` and `Count=0`. The complete construction tasks below require the declarations and success contracts as well.
 
@@ -347,7 +347,7 @@ ENDFUNCTION
 
 ### Dictionary ADT
 
-**Supplementary explanation:** No direct question assessing this explanation was found in the reviewed 2023–2025 papers or the targeted 2021–2022 fallback. Retained for [syllabus 19.1](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf); it is not an extra scoring rule. Explanation source: [Java 17 Map: key–value semantics](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html).
+Sources: [9618/41 · October/November 2025 · Q3(c), 3(d), 3(f) MS](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_41.pdf#page=28) ([QP](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_qp_41.pdf#page=10)); [9618/31 · May/June 2023 · Q3(b) MS](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4) ([QP](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_qp_31.pdf#page=4)). Related questions assess keyed storage and retrieval, hashing and collision handling in a hash table or random file. Dictionary ADT terminology, deletion and tombstones are not assessed in these parts.
 
 A dictionary stores **key–value pairs** and supports `insert(key, value)`, `find(key)` and `delete(key)`. Keys are unique even when values repeat. It may be represented by parallel key/value arrays, a binary search tree, or a hash table. With open-address hashing, insertion and search must use the same probe sequence; deletion uses a tombstone rather than an empty slot so later colliding keys remain reachable.
 
@@ -371,7 +371,7 @@ ENDFUNCTION
 
 ### ArrayLinkedList
 
-Sources: [9618/32 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=7); [9618/41 · October/November 2024 · Q3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_41.pdf#page=33).
+Sources: [9618/41 · October/November 2024 · Q3(a), 3(b), 3(c)(i), 3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_41.pdf#page=26); [9618/32 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=7).
 
 `StartPointer` identifies the first live node. `FreeListPointer` identifies the first unused node. Deleting a node must return it to the free list.
 
@@ -470,7 +470,7 @@ If `StartPointer = 2` and the live chain is `2 → 5 → 1 → -1`, deleting nod
 
 ## Trees and Graphs
 
-Sources: [9618/31 · October/November 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=15); [9618/32 · October/November 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=13); [9618/31 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=9); [9618/32 · May/June 2025 · Q11(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=10).
+Sources: [9618/32 · October/November 2024 · Q11(a), 11(b), 11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=13); [9618/31 · October/November 2024 · Q11(a), 11(b), 11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=15); [9618/41 · May/June 2025 · Q3(a)(i), 3(c)(i), 3(c)(iii), 3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_41.pdf#page=30); [9618/42 · May/June 2024 · Q2(a)(i), 2(b)(i), 2(b)(ii), 2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_42.pdf#page=21); [9618/42 · October/November 2025 · Q3(a), 3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_42.pdf#page=27); [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7).
 
 A **BinarySearchTree** stores smaller keys to the left and larger keys to the right. Begin a search at the root, compare the target with the node data and follow the corresponding pointer until found or null. In-order traversal visits the left subtree, node and right subtree to produce ascending keys. Use the question’s null-pointer value and draw pointers from the correct left/right field.
 
@@ -515,7 +515,7 @@ class Ch19TreeDemo {
 
 ## Complexity
 
-Sources: [9618/31 · May/June 2024 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=13); [9618/32 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=11); [9618/33 · May/June 2025 · Q12(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=15).
+Sources: [9618/32 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=11); [9618/31 · May/June 2024 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=13); [9618/33 · May/June 2025 · Q12(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=15).
 
 | Pattern | Time | Reason |
 |---|---|---|
@@ -528,7 +528,7 @@ Space complexity describes how memory use grows with input size. **Auxiliary spa
 
 ## Recursion
 
-Sources: [9618/31 · May/June 2023 · Q12(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=9); [9618/32 · October/November 2023 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=7); [9618/32 · May/June 2025 · Q11(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=11); [9618/31 · October/November 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=14); [9618/32 · October/November 2025 · Q12(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=17).
+Sources: [9618/31 · May/June 2023 · Q12(a), 12(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=9); [9618/42 · May/June 2024 · Q3(b)(i), 3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_42.pdf#page=38); [9618/43 · May/June 2025 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_43.pdf#page=26); [9618/43 · October/November 2025 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_43.pdf#page=32); [9618/33 · May/June 2025 · Q13](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=16); [9618/32 · October/November 2025 · Q12(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=17); [9618/33 · October/November 2025 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=13).
 
 Recursion is suitable when a problem is naturally defined in smaller versions of itself, such as tree traversal, divide-and-conquer search, directory traversal or processing a recursively defined grammar. Prefer iteration when a simple loop expresses the task clearly and deep recursion could exhaust stack memory.
 

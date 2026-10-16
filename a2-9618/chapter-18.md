@@ -65,7 +65,7 @@ Use this overview to model routes, choose learning, train networks and evaluate 
 
 ### What is Artificial Intelligence?
 
-**Supplementary explanation:** No direct question assessing this explanation was found in the reviewed 2023–2025 papers or the targeted 2021–2022 fallback. Retained for [syllabus 18.1](https://www.cambridgeinternational.org/Images/721397-2027-2029-syllabus.pdf); it is not an extra scoring rule. Explanation source: [Stanford HAI: AI definition](https://hai.stanford.edu/ai-definitions/what-is-artificial-intelligence-ai).
+Sources: [9618/31 · May/June 2025 · Q10(a), 10(b) MS](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13) ([QP](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_qp_31.pdf#page=11)); [9618/31 · October/November 2023 · Q12 MS](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9) ([QP](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_qp_31.pdf#page=14)). Related questions assess graph-based AI applications and neural networks that learn from data and make predictions. They support these examples of AI; the general definition below is supplementary.
 
 #### Student-friendly explanation
 Artificial Intelligence means using computer systems to carry out tasks that normally need human intelligence.
@@ -91,7 +91,7 @@ This is too vague. You need to explain **what the computer does**.
 
 ### AI vs Machine Learning vs Deep Learning
 
-Sources: [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12).
+Sources: [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12); [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9); [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/31 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=11).
 
 | Term | Meaning | Exam focus |
 | --- | --- | --- |
@@ -117,7 +117,7 @@ B --> C[Deep Learning<br/>many hidden layers in neural networks]
 
 ### What is a graph?
 
-Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7).
+Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/31 · May/June 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
 
 A graph is a data structure used to show relationships between items.
 
@@ -144,7 +144,7 @@ A graph is a data structure used to show relationships between items.
 
 ### Why graphs are useful in AI
 
-Sources: [9618/31 · May/June 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
+Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/31 · May/June 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
 
 Graphs help AI represent a problem as connected possibilities.
 
@@ -166,7 +166,7 @@ Examples:
 
 ### Directed and undirected graphs
 
-Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7). Direction is supplementary graph terminology; the cited point concerns vertices, connections and labels.
+Sources: [9618/33 · October/November 2025 · Q8 MS](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12) ([QP](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_qp_33.pdf#page=7)). The question paper shows an undirected weighted graph, and the mark scheme assesses Dijkstra distances. This supplies an undirected-graph example; the directed/undirected distinction below is supplementary.
 
 | Type | Meaning | Example |
 | --- | --- | --- |
@@ -181,7 +181,7 @@ Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.co
 
 ### Weighted graph
 
-Sources: [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/32 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6).
+Sources: [9618/32 · May/June 2023 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=11); [9618/32 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6); [9618/33 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12); [9618/31 · May/June 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/32 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7).
 
 A weighted graph has values on edges.
 
@@ -211,7 +211,7 @@ In this graph:
 
 ### What these algorithms are used for
 
-Sources: [9618/31 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/33 · May/June 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13).
+Sources: [9618/31 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=4); [9618/33 · May/June 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13); [9618/31 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=11).
 
 A* and Dijkstra's algorithm are graph search algorithms.
 They are used to find the best route through a graph.
@@ -231,7 +231,7 @@ They are used to find the best route through a graph.
 
 ### Dijkstra's algorithm
 
-Sources: [9618/32 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6); [9618/33 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12).
+Sources: [9618/33 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13); [9618/32 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6); [9618/33 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=12); [9618/31 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=11).
 
 #### Student-friendly explanation
 Dijkstra looks for the shortest path from a starting node by repeatedly choosing the unvisited node with the smallest known cost so far.
@@ -250,7 +250,7 @@ Dijkstra looks for the shortest path from a starting node by repeatedly choosing
 
 ### A* algorithm
 
-Sources: [9618/32 · May/June 2023 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=11); [9618/33 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13).
+Sources: [9618/32 · May/June 2023 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=11); [9618/33 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13); [9618/31 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=11).
 
 #### Student-friendly explanation
 A* also finds a route, but it uses both:
@@ -367,7 +367,7 @@ A* therefore reconstructs the same route `S → A → B → C → G`, with total
 
 ### What is machine learning?
 
-Sources: [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12).
+Sources: [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12); [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9).
 
 #### Student-friendly explanation
 Machine learning means the computer learns from data. Instead of manually programming every rule, the system finds patterns and improves its predictions or decisions.
@@ -387,7 +387,7 @@ Machine learning means the computer learns from data. Instead of manually progra
 
 ### Why use machine learning?
 
-Sources: [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9).
+Sources: [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/33 · May/June 2025 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13); [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12); [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9).
 
 Machine learning is useful when:
 
@@ -404,7 +404,7 @@ Machine learning is useful when:
 
 ## Supervised Learning
 
-Sources: [9618/31 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7).
+Sources: [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/31 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=10).
 
 ### Definition
 
@@ -448,7 +448,7 @@ Use supervised learning when:
 
 ## Unsupervised Learning
 
-Sources: [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/33 · May/June 2025 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13).
+Sources: [9618/32 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=7); [9618/33 · May/June 2025 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=13); [9618/31 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=10).
 
 ### Definition
 
@@ -495,7 +495,7 @@ The system has to find patterns by itself.
 
 ## Reinforcement Learning
 
-Sources: [9618/31 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=14).
+Sources: [9618/32 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=14); [9618/31 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3); [9618/32 · May/June 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=10).
 
 ### Definition
 
@@ -554,7 +554,7 @@ Use reinforcement learning when:
 
 ## Artificial Neural Networks (ANNs)
 
-Sources: [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9); [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13).
+Sources: [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12); [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9); [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/31 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=11).
 
 ### What is an artificial neural network?
 
@@ -601,7 +601,7 @@ H2 --> O
 
 ### Weights and biases
 
-Sources: [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/32 · October/November 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=15).
+Sources: [9618/32 · October/November 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=15); [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12); [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/31 · October/November 2023 · Q12](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=9).
 
 Each connection can have a **weight**.
 The weight controls how strongly one node affects another node.
@@ -621,7 +621,7 @@ During training:
 
 ## Deep Learning
 
-Sources: [9618/31 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=11); [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12). 2024 lists unlabelled data as one option; 2025 explicitly allows different supervision. Do not treat unlabelled data as the definition.
+Sources: [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12); [9618/31 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=13); [9618/31 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=11); [9618/32 · October/November 2025 · Q9(a)(i), 9(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=14); [9618/31 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=3). 2024 lists unlabelled data as one option; 2025 explicitly allows different supervision. Do not treat unlabelled data as the definition.
 
 ### Definition
 
@@ -679,7 +679,7 @@ Deep learning is useful when:
 
 ## Back Propagation of Errors
 
-Sources: [9618/32 · October/November 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=15).
+Sources: [9618/32 · October/November 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=15); [9618/31 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=12).
 
 ### What is back propagation?
 

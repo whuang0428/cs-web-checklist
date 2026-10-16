@@ -80,7 +80,7 @@ By the end of this chapter, students should be able to:
 
 ## Ethics in Computing
 
-Sources: [9618/12 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=6); [9618/11 · October/November 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=13).
+Sources: [9618/13 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=11); [9618/12 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=6); [9618/11 · October/November 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=13); [9618/12 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=5).
 
 ### What is ethics?
 
@@ -199,7 +199,7 @@ A programmer should:
 
 ## Professional Ethical Bodies
 
-Sources: [9618/13 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7); [9618/13 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=6).
+Sources: [9618/13 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=6); [9618/13 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7); [9618/13 · May/June 2025 · Q3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=7).
 
 ### BCS and IEEE
 
@@ -246,7 +246,7 @@ Better:
 
 ## Copyright
 
-Sources: [9618/12 · October/November 2024 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=6); [9618/12 · October/November 2025 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=4).
+Sources: [9618/13 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=8); [9618/12 · October/November 2024 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=6); [9618/13 · October/November 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6); [9618/12 · May/June 2025 · Q3(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=6); [9618/12 · October/November 2025 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=4).
 
 ### What is copyright?
 
@@ -313,7 +313,7 @@ Copyright legislation is needed to:
 
 ## Software Licences
 
-Sources: [9618/13 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=8); [9618/13 · October/November 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6).
+Sources: [9618/13 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=8); [9618/12 · May/June 2025 · Q3(c)(i), Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=6); [9618/13 · October/November 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6); [9618/11 · October/November 2024 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=9); [9618/13 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=5).
 
 ### What is a software licence?
 
@@ -479,7 +479,7 @@ In these exam scenarios, a commercial licence allows the developer to charge for
 
 ## Artificial Intelligence \(AI\)
 
-Sources: [9618/11 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/12 · May/June 2023 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=10).
+Sources: [9618/12 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=6); [9618/13 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=8); [9618/11 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=7); [9618/11 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/13 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=5).
 
 ### What is AI?
 
@@ -567,7 +567,7 @@ F --> G[Optional check<br/>database / human review]
 
 ### Social impacts
 
-Sources: [9618/12 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=6); [9618/11 · October/November 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=13).
+Sources: [9618/11 · October/November 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=13); [9618/13 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=11); [9618/12 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=6).
 
 | Positive social impact | Explanation |
 | --- | --- |
@@ -602,7 +602,7 @@ Link the impact to the named organisation and task. A claim such as “AI saves 
 
 ### Environmental impacts
 
-Supplementary source — no direct MS located: [IEA: Energy and AI (2025)](https://www.iea.org/reports/energy-and-ai/executive-summary).
+Sources: [9618/12 · October/November 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=3); [9618/13 · May/June 2024 · Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=7). Related questions cover electronic waste from embedded devices and high power consumption in networking. They do not directly assess the environmental effects of AI described below.
 
 - **Possible energy savings:** AI can optimise heating, cooling and transport routes, reducing unnecessary energy use.
 - **Electricity demand:** training and running models requires computing resources; emissions depend partly on how that electricity is generated.

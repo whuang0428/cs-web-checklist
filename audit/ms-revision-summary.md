@@ -2,6 +2,8 @@
 
 Checked: 2026-10-15. Maintainer record; excluded from student navigation and search.
 
+Follow-up: [2026-10-16 topic-source selection](source-selection-summary.md) supersedes this audit's one-or-two-source display policy and records expanded references, question-level selection and the AS VR frequency check. Counts and verification below describe the 2026-10-15 baseline.
+
 ## Scope and evidence
 
 Reviewed the revision definitions, processes, features, comparisons and summaries in all 30 chapters: IGCSE 0478 Chapters 1–10, AS 9618 Chapters 1–12 and A2 9618 Chapters 13–20. Worked examples, drills, assessment questions/answers and the independent review papers were outside this task.

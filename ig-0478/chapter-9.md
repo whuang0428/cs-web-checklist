@@ -31,7 +31,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Database Structure
 
-Sources: [0478/23 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11); [0478/23 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=11).
+Sources: [0478/23 · October/November 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_23.pdf#page=5); [0478/22 · February/March 2025 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_22.pdf#page=13); [0478/23 · May/June 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_23.pdf#page=12); [0478/23 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=11); [0478/23 · October/November 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11).
 
 
 A **database** is an organised collection of data. In Topic 9, questions use a **single table**.
@@ -59,7 +59,7 @@ Each row is one record. `Cost` is one field. `EquipmentID` is a suitable primary
 
 ## From Requirements to a Table Design
 
-Sources: [0478/21 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=9); [0478/23 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=12).
+Sources: [0478/23 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=12); [0478/21 · October/November 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=9).
 
 
 Use this method:
@@ -72,7 +72,7 @@ Use this method:
 
 ### Data types
 
-Sources: [0478/23 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=12); [0478/21 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=16).
+Sources: [0478/23 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=12); [0478/22 · February/March 2023 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=10); [0478/22 · May/June 2025 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=12); [0478/22 · October/November 2024 · Q11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_22.pdf#page=10); [0478/21 · October/November 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=16).
 
 
 | Data type | Suitable example | Important distinction |
@@ -110,7 +110,7 @@ A sports centre stores each court's code, sport, hourly charge, indoor status an
 
 ## Primary Keys
 
-Sources: [0478/21 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=16); [0478/21 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=14).
+Sources: [0478/23 · October/November 2023 · Q9(b)(i), Q9(b)(ii), Q9(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11); [0478/21 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=14); [0478/22 · February/March 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_22.pdf#page=13); [0478/21 · May/June 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=12); [0478/22 · October/November 2023 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=9).
 
 
 The core marking point is that a primary key **uniquely identifies each record**: no two records share its value.
@@ -139,7 +139,7 @@ SQL queries retrieve or calculate information from a table.
 
 ### SELECT and FROM
 
-Sources: [0478/21 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=9); [0478/21 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=7).
+Sources: [0478/22 · February/March 2023 · Q9(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=10); [0478/23 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/22 · February/March 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_22.pdf#page=14); [0478/23 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=13); [0478/22 · May/June 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=12).
 
 
 ```sql
@@ -158,7 +158,7 @@ FROM Equipment;
 
 ### WHERE
 
-Sources: [0478/23 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=13); [0478/21 · October/November 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=16).
+Sources: [0478/23 · October/November 2024 · Q11(b)(i), Q11(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_23.pdf#page=10); [0478/21 · October/November 2024 · Q10(d)(i), Q10(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_21.pdf#page=11); [0478/22 · February/March 2023 · Q9(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=10); [0478/23 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/22 · May/June 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=12).
 
 
 ```sql
@@ -171,7 +171,7 @@ WHERE Available = TRUE;
 
 ### AND and OR
 
-Sources: [0478/23 · October/November 2023 · Q9(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11); [0478/22 · May/June 2024 · Q10(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=11).
+Sources: [0478/22 · May/June 2024 · Q10(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=11); [0478/23 · October/November 2023 · Q9(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11).
 
 OR example: [0478 syllabus §9.4](https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf#page=30).
 
@@ -196,7 +196,7 @@ Text values use quotation marks. Numeric and Boolean values normally do not.
 
 ### ORDER BY
 
-Sources: [0478/23 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/22 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=16).
+Sources: [0478/23 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/22 · October/November 2025 · Q7(c), Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=16); [0478/22 · February/March 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_22.pdf#page=14); [0478/23 · October/November 2024 · Q11(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_23.pdf#page=9); [0478/21 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=7).
 
 
 ```sql
@@ -217,7 +217,7 @@ ORDER BY Cost DESCENDING;
 
 ### SUM and COUNT
 
-Sources: [0478/22 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=10); [0478/21 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=7).
+Sources: [0478/22 · May/June 2023 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=10); [0478/22 · May/June 2024 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=11); [0478/21 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=7); [0478/21 · May/June 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=14).
 
 
 ```sql
@@ -239,7 +239,7 @@ This produces the number of available equipment records.
 
 ## Constructing a Query
 
-Sources: [0478/23 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=13); [0478/22 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=16).
+Sources: [0478/23 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/23 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=13); [0478/22 · May/June 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=12); [0478/22 · February/March 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_22.pdf#page=14); [0478/23 · October/November 2024 · Q11(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_23.pdf#page=10).
 
 
 Translate the request in a fixed order.
@@ -270,7 +270,7 @@ Check that:
 
 ## Predicting Query Output
 
-Sources: [0478/23 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/23 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=11).
+Sources: [0478/22 · October/November 2024 · Q11(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_22.pdf#page=10); [0478/23 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=12); [0478/22 · February/March 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_22.pdf#page=14); [0478/22 · October/November 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=16); [0478/23 · May/June 2023 · Q10(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_23.pdf#page=13).
 
 
 Use this sequence:

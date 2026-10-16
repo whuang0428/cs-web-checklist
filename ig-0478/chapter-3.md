@@ -63,7 +63,7 @@ Use this overview to trace the CPU, select devices, explain storage and connect 
 ## 3.1 Computer Architecture
 ### 3.1.1 CPU and Microprocessor
 
-Sources: [0478/13 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=10); [0478/12 · February/March 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=7).
+Sources: [0478/13 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=10); [0478/13 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=4); [0478/12 · February/March 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q1(e)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6).
 
 **CPU**
 Processes instructions and data that are input into the computer so that results can be output.
@@ -81,7 +81,7 @@ A type of integrated circuit on a single chip.
 
 ### 3.1.2 CPU Components｜CU, ALU, Registers and Buses
 
-Sources: [0478/12 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=11); [0478/12 · October/November 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=9).
+Sources: [0478/12 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=11); [0478/13 · May/June 2024 · Q8(b)(i), Q8(b)(ii), Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=10); [0478/11 · October/November 2024 · Q5(a), Q5(b), Q5(c), Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=9); [0478/13 · May/June 2025 · Q3(a), Q3(b), Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7); [0478/13 · May/June 2023 · Q2(c)(i), Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=4).
 
 #### CPU Units
 | Component | Full name | Exam function |
@@ -118,7 +118,7 @@ Sources: [0478/12 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/d
 
 ### 3.1.3 Fetch–Decode–Execute Cycle｜Core Process
 
-Sources: [0478/11 · May/June 2024 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=7); [0478/11 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=13).
+Sources: [0478/11 · May/June 2024 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=7); [0478/11 · October/November 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=13); [0478/12 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=8); [0478/13 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=6); [0478/11 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=9).
 
 ```mermaid
 flowchart TD
@@ -165,7 +165,7 @@ J --> K[Result may be stored in ACC / memory]
 
 ### 3.1.4 Decode + Execute Diagram Focus｜CIR / CU / ALU / ACC
 
-Sources: [0478/12 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=8); [0478/13 · October/November 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=6).
+Sources: [0478/12 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=8); [0478/11 · October/November 2024 · Q5(b), Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=9); [0478/13 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=6); [0478/13 · October/November 2025 · Q2(b)(i), Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=5).
 
 ```mermaid
 flowchart LR
@@ -192,7 +192,7 @@ ALU --> ACC2[ACC stores result]
 
 ### 3.1.5 Core, Cache and Clock｜CPU Performance
 
-Sources: [0478/12 · October/November 2025 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=9); [0478/12 · February/March 2024 · Q2(b)(i)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=5).
+Sources: [0478/11 · May/June 2025 · Q5(a), Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=9); [0478/12 · October/November 2025 · Q4(b), Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=8); [0478/12 · February/March 2024 · Q2(b)(i), Q2(b)(ii), Q2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=5); [0478/12 · February/March 2025 · Q3(c)(i), Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=7); [0478/13 · May/June 2024 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=10).
 
 | Factor | Definition | How it affects performance |
 | --- | --- | --- |
@@ -218,7 +218,7 @@ Use paired points:
 
 ### 3.1.6 Instruction Set, Opcode and Operand
 
-Sources: [0478/12 · May/June 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=8).
+Sources: [0478/11 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=9); [0478/13 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=6); [0478/11 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=9); [0478/12 · February/March 2025 · Q3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=8).
 
 | Term | Meaning |
 | --- | --- |
@@ -236,7 +236,7 @@ Sources: [0478/12 · May/June 2024 · Q5](https://pastpapers.papacambridge.com/d
 
 ### 3.1.7 Embedded Systems
 
-Sources: [0478/12 · February/March 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12).
+Sources: [0478/12 · May/June 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=12); [0478/12 · October/November 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=5); [0478/12 · October/November 2024 · Q4(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=7); [0478/12 · February/March 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=7); [0478/11 · October/November 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=9).
 
 An **embedded system** is a computer system built into a larger device to perform a **dedicated / limited / single function**.
 
@@ -277,7 +277,7 @@ An **embedded system** is a computer system built into a larger device to perfor
 ## 3.2 Input and Output Devices
 ### 3.2.1 Input and Output Devices
 
-Sources: [0478/13 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=7); [0478/11 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9).
+Sources: [0478/13 · May/June 2023 · Q2(d), Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=5); [0478/13 · October/November 2023 · Q1(a), Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=4); [0478/11 · October/November 2024 · Q2(a), Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=5); [0478/11 · May/June 2024 · Q1(a), Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=4); [0478/12 · October/November 2024 · Q4(a), Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=5).
 
 | Type | Meaning | Examples |
 | --- | --- | --- |
@@ -287,7 +287,7 @@ Sources: [0478/13 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/d
 
 #### High-frequency device notes
 
-Sources: [0478/12 · February/March 2022 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m22_ms_12.pdf#page=7); [0478/12 · October/November 2021 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w21_ms_12.pdf#page=9).
+Sources: [0478/12 · February/March 2022 · Q4(a)(i), Q4(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m22_ms_12.pdf#page=7); [0478/12 · October/November 2021 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w21_ms_12.pdf#page=9); [0478/13 · May/June 2023 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=5); [0478/13 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=4); [0478/11 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=4); [0478/11 · October/November 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=5); [0478/12 · October/November 2024 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=5).
 
 | Device | Typical use / exam point |
 | --- | --- |
@@ -304,7 +304,7 @@ Sources: [0478/12 · February/March 2022 · Q4](https://pastpapers.papacambridge
 
 #### Touchscreen types
 
-Sources: [0478/12 · October/November 2022 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w22_ms_12.pdf#page=4); [0478/12 · May/June 2015 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s15_ms_12.pdf#page=3).
+Sources: [0478/12 · May/June 2015 · Q2(i), Q2(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s15_ms_12.pdf#page=3); [0478/12 · October/November 2022 · Q1(c)(i), Q1(c)(ii), Q1(c)(iii), Q1(c)(iv)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w22_ms_12.pdf#page=4).
 
 
 | Type | How the touch is detected | Suitable feature / context |
@@ -318,7 +318,7 @@ Sources: [0478/12 · October/November 2022 · Q1](https://pastpapers.papacambrid
 
 ### 3.2.2 Sensors｜How to Choose the Correct Sensor
 
-Sources: [0478/13 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=7); [0478/13 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=13).
+Sources: [0478/13 · May/June 2024 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=7); [0478/12 · February/March 2024 · Q6(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=10); [0478/12 · October/November 2023 · Q11(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=9); [0478/12 · February/March 2023 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=10); [0478/11 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9).
 
 A **sensor** is an input device that measures physical properties from the environment.
 
@@ -347,7 +347,7 @@ A **sensor** is an input device that measures physical properties from the envir
 
 ### 3.2.3 Analogue Data, Digital Data, ADC and DAC
 
-Sources: [0478/11 · May/June 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=6); [0478/13 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=5).
+Sources: [0478/11 · October/November 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=7); [0478/13 · May/June 2025 · Q1(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=6). Sound-sampling evidence supports analogue/digital representation; DAC remains supplementary.
 
 | Term | Meaning / use |
 | --- | --- |
@@ -367,7 +367,7 @@ Sources: [0478/11 · May/June 2023 · Q5](https://pastpapers.papacambridge.com/d
 
 ### 3.2.4 Monitoring Systems vs Control Systems
 
-Sources: [0478/13 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=13); [0478/13 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=5).
+Sources: [0478/12 · October/November 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=6); [0478/12 · February/March 2024 · Q6(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9); [0478/12 · February/March 2023 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=10); [0478/11 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9); [0478/11 · October/November 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=5).
 
 | System type | Meaning | Key difference |
 | --- | --- | --- |
@@ -451,7 +451,7 @@ Use this for **greenhouse**, **street light**, **air conditioning**, **water bow
 
 ### 3.2.6 Output Devices｜Printers, Screens and Actuators
 
-Sources: [0478/11 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=6); [0478/12 · May/June 2025 · Q3(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=9).
+Sources: [0478/13 · October/November 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=4); [0478/12 · May/June 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=4); [0478/13 · May/June 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=5); [0478/11 · October/November 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=5); [0478/12 · October/November 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=5).
 
 #### Actuator
 An **actuator** is an output device that receives a signal and causes a physical action.
@@ -467,7 +467,7 @@ Examples:
 
 #### Inkjet vs Laser Printer
 
-Sources: [0478/11 · October/November 2015 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w15_ms_11.pdf#page=6).
+Sources: [0478/11 · October/November 2015 · Q5(a)(i), Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w15_ms_11.pdf#page=6).
 
 Choose by the required volume and type of output; price comparisons depend on the stated devices.
 
@@ -480,7 +480,7 @@ Choose by the required volume and type of output; price comparisons depend on th
 
 #### Other required output devices
 
-Sources: [0478/12 · February/March 2021 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m21_ms_12.pdf#page=5); [0478/13 · October/November 2018 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w18_ms_13.pdf#page=4).
+Sources: [0478/13 · October/November 2018 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w18_ms_13.pdf#page=4); [0478/12 · February/March 2021 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m21_ms_12.pdf#page=5); [0478/13 · October/November 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=4); [0478/12 · May/June 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=4); [0478/13 · May/June 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=5); [0478/11 · October/November 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=5); [0478/12 · October/November 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=5).
 
 
 | Device | Output / operation | Suitable use |
@@ -515,7 +515,7 @@ Sources: [0478/12 · February/March 2021 · Q3](https://pastpapers.papacambridge
 ## 3.3 Data Storage
 ### 3.3.1 Primary Storage vs Secondary Storage
 
-Sources: [0478/11 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=11); [0478/13 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7).
+Sources: [0478/13 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=8); [0478/13 · October/November 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=4); [0478/11 · May/June 2024 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8); [0478/12 · February/March 2023 · Q3(b), Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=7); [0478/11 · October/November 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9).
 
 | Storage type | Meaning | Examples |
 | --- | --- | --- |
@@ -556,7 +556,7 @@ Sources: [0478/11 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/d
 Required examples are **HDD** for magnetic storage; **CD, DVD and Blu-ray** for optical storage; and **SSD, SD card and USB flash drive** for solid-state storage. An SD card and a USB flash drive use the same flash-memory principles described below; their removable form makes them suitable for transferring or carrying data.
 #### Magnetic Storage｜HDD
 
-Sources: [0478/13 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7); [0478/11 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=9).
+Sources: [0478/11 · October/November 2023 · Q8(a), Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=9); [0478/13 · May/June 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7); [0478/13 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=6); [0478/13 · October/November 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=8); [0478/13 · October/November 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=6).
 
 How it works:
 
@@ -568,7 +568,7 @@ How it works:
 
 #### Optical Storage｜CD / DVD / Blu-ray
 
-Sources: [0478/12 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6); [0478/13 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=6).
+Sources: [0478/12 · May/June 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=10); [0478/12 · October/November 2025 · Q1(e)(iv)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6); [0478/13 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=6); [0478/13 · October/November 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=8); [0478/11 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=5).
 
 How data is read/written:
 
@@ -581,7 +581,7 @@ How data is read/written:
 
 #### Solid-state Storage｜SSD / flash memory
 
-Sources: [0478/11 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=11); [0478/13 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=6).
+Sources: [0478/11 · October/November 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=6); [0478/12 · May/June 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=10); [0478/12 · February/March 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=7); [0478/11 · May/June 2025 · Q7(d)(i), Q7(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=11); [0478/11 · October/November 2023 · Q8(b), Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=9).
 
 How it works:
 
@@ -596,7 +596,7 @@ How it works:
 
 ### 3.3.3 HDD vs SSD｜Choosing Suitable Storage
 
-Sources: [0478/11 · October/November 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=6); [0478/12 · February/March 2022 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m22_ms_12.pdf#page=8).
+Sources: [0478/12 · February/March 2022 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m22_ms_12.pdf#page=8); [0478/11 · October/November 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=6).
 
 | HDD | SSD |
 | --- | --- |
@@ -630,7 +630,7 @@ Sources: [0478/11 · October/November 2024 · Q2(c)(ii)](https://pastpapers.papa
 
 ### 3.3.4 Virtual Memory
 
-Sources: [0478/11 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=11); [0478/13 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=10).
+Sources: [0478/13 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=10); [0478/13 · October/November 2025 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=6); [0478/11 · May/June 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=11); [0478/11 · October/November 2024 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=6); [0478/12 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=10).
 
 Virtual memory is an area of **secondary storage** used as an extension of RAM when RAM is full.
 
@@ -665,7 +665,7 @@ D --> E[When needed again, pages are moved back to RAM]
 
 ### 3.3.5 Cloud Storage
 
-Sources: [0478/12 · October/November 2024 · Q4(d)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=6); [0478/12 · October/November 2025 · Q7(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=13).
+Sources: [0478/12 · October/November 2024 · Q4(d)(i), Q4(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=6); [0478/13 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=6); [0478/12 · October/November 2025 · Q7(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=13); [0478/12 · May/June 2023 · Q4(b)(ii), Q4(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=6).
 
 Cloud storage is storage where data is stored on **remote servers** and accessed using a network, often the internet.
 
@@ -692,7 +692,7 @@ Cloud storage is storage where data is stored on **remote servers** and accessed
 ## 3.4 Network Hardware
 ### 3.4.1 Network Interface Card｜NIC / WNIC
 
-Sources: [0478/12 · February/March 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/11 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=6).
+Sources: [0478/12 · February/March 2025 · Q5(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/13 · May/June 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=6); [0478/11 · May/June 2023 · Q6(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=6).
 
 A **network interface card / controller (NIC)** allows a device to connect to a network.
 
@@ -707,7 +707,7 @@ A **network interface card / controller (NIC)** allows a device to connect to a 
 
 ### 3.4.2 MAC Address
 
-Sources: [0478/12 · February/March 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/13 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7).
+Sources: [0478/12 · February/March 2025 · Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/13 · May/June 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=6); [0478/13 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=7); [0478/11 · May/June 2023 · Q6(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=6).
 
 A **MAC address** is a unique hardware address assigned to a network interface card at manufacture.
 
@@ -729,7 +729,7 @@ A **MAC address** is a unique hardware address assigned to a network interface c
 
 ### 3.4.3 IP Address
 
-Sources: [0478/12 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=8); [0478/11 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=7).
+Sources: [0478/13 · May/June 2023 · Q9(a), Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=9); [0478/12 · May/June 2024 · Q7(a), Q7(b)(i), Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=8); [0478/12 · May/June 2023 · Q8(a), Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=9); [0478/11 · October/November 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=7); [0478/11 · May/June 2023 · Q6(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=6).
 
 An **IP address** identifies where a device is connected on a network / internet.
 
@@ -768,7 +768,7 @@ An **IP address** identifies where a device is connected on a network / internet
 
 ### 3.4.4 Router
 
-Sources: [0478/13 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=7); [0478/12 · February/March 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
+Sources: [0478/13 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=7); [0478/11 · May/June 2023 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=5); [0478/12 · February/March 2025 · Q2(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=6); [0478/13 · May/June 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=6); [0478/11 · May/June 2023 · Q6(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=6).
 
 A **router** sends data packets between different networks and directs packets to their destination using IP addresses.
 

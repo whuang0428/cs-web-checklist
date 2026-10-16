@@ -67,7 +67,7 @@ Use this overview to convert, calculate, compare and justify information represe
 
 ### Binary prefixes vs decimal prefixes
 
-Sources: [9618/11 · May/June 2023 · Q3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4).
+Sources: [9618/13 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=3); [9618/12 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/11 · October/November 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=3); [9618/11 · May/June 2023 · Q3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · May/June 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=10).
 
 #### Core idea
 
@@ -111,7 +111,7 @@ Sources: [9618/11 · May/June 2023 · Q3(d)(i)](https://pastpapers.papacambridge
 
 ### Number systems
 
-Sources: [9618/11 · May/June 2023 · Q3(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7).
+Sources: [9618/12 · May/June 2024 · Q7(b), Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=10); [9618/13 · May/June 2025 · Q7(a)(i), Q7(a)(ii), Q7(b), Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=12); [9618/11 · October/November 2025 · Q1(a)(i), Q1(a)(ii), Q1(a)(iii), Q1(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=4); [9618/13 · May/June 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=10); [9618/11 · October/November 2024 · Q1(b)(i), Q1(b)(ii), Q1(b)(iii), Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=3).
 
 | Number system | Base | Digits used | Key exam point |
 | --- | ---: | --- | --- |
@@ -219,7 +219,7 @@ Convert `2140` to denary.
 
 ### One's complement and two's complement
 
-Sources: [9618/11 · May/June 2023 · Q3(d)(iv)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6).
+Sources: [9618/12 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=10); [9618/13 · May/June 2025 · Q7(a)(ii), Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=12); [9618/13 · May/June 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=10); [9618/11 · October/November 2025 · Q1(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=4); [9618/13 · October/November 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8).
 
 #### One's complement
 
@@ -341,7 +341,7 @@ Ignore the 9th carry bit:
 
 ### Overflow
 
-Sources: [9618/13 · May/June 2024 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=3); [9618/11 · October/November 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=3).
+Sources: [9618/11 · October/November 2025 · Q1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=4); [9618/11 · October/November 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=3); [9618/13 · May/June 2024 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=3).
 
 #### Definition
 
@@ -367,7 +367,7 @@ Overflow can occur when:
 
 ### Binary Coded Decimal (BCD)
 
-Sources: [9618/12 · October/November 2023 · Q3(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/12 · October/November 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=5).
+Sources: [9618/12 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=5); [9618/12 · October/November 2023 · Q3(b)(iii), Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/12 · October/November 2025 · Q7(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=9).
 
 #### What BCD does
 
@@ -417,7 +417,7 @@ BCD = 0101 0111 0011
 
 ### Character sets
 
-Sources: [9618/13 · May/June 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=3); [9618/13 · October/November 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=6).
+Sources: [9618/13 · October/November 2025 · Q1(b), Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=4); [9618/13 · May/June 2025 · Q1(c)(i), Q1(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=4); [9618/13 · October/November 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=6); [9618/11 · May/June 2025 · Q3(b)(i), Q3(b)(ii), Q3(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=6); [9618/13 · May/June 2024 · Q1(d)(i), Q1(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=3).
 
 #### Character set definition
 
@@ -482,7 +482,7 @@ Convert:
 
 ## 1.2 Multimedia — Bitmap Images
 
-Sources: [9618/11 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/11 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3).
+Sources: [9618/12 · October/November 2024 · Q7(a)(i), Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=8); [9618/11 · May/June 2023 · Q1(a), Q1(b)(i), Q1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/11 · October/November 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=3); [9618/11 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=6); [9618/13 · May/June 2025 · Q1(a)(i), Q1(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=4).
 
 ### Bitmap image keywords
 
@@ -597,7 +597,7 @@ A bitmap file header may store:
 
 ## Vector Graphics
 
-Sources: [9618/11 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/11 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=3).
+Sources: [9618/12 · October/November 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=8); [9618/12 · May/June 2024 · Q2(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=4); [9618/11 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/11 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=3).
 
 ### Vector graphic idea
 
@@ -647,7 +647,7 @@ RECTANGLE top-left(20,20), width 40, height 30
 
 ## Sound Representation
 
-Sources: [9618/13 · May/June 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=5); [9618/12 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=7).
+Sources: [9618/12 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=7); [9618/13 · May/June 2023 · Q3(c)(i), Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=5); [9618/13 · October/November 2024 · Q6(c)(i), Q6(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=6); [9618/13 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=4); [9618/13 · October/November 2023 · Q1(a), Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=3).
 
 ### Analogue sound
 
@@ -696,7 +696,7 @@ A 30-second stereo sound has sample rate 44 100 Hz and sampling resolution 16 bi
 
 ## 1.3 Compression
 
-Sources: [9618/11 · May/June 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/11 · October/November 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=3).
+Sources: [9618/11 · May/June 2023 · Q1(c)(i), Q1(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=3); [9618/13 · May/June 2024 · Q2(b)(i), Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=3); [9618/13 · October/November 2024 · Q6(b)(iii), Q6(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=6); [9618/12 · October/November 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=6); [9618/11 · May/June 2025 · Q2(b)(i), Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=5).
 
 ### Why compression is needed
 

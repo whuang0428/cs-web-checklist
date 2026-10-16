@@ -63,7 +63,7 @@ Use this overview to retrieve web resources, explain digital transactions and de
 ## 5.1 The Internet and the World Wide Web
 ### 5.1.1 Internet vs World Wide Web
 
-Sources: [0478/12 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12); [0478/12 · February/March 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
+Sources: [0478/12 · May/June 2024 · Q11(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12); [0478/12 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=8); [0478/12 · February/March 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/13 · October/November 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7).
 
 **Internet**
 A worldwide collection of interconnected networks.
@@ -89,7 +89,7 @@ A collection of websites and web pages accessed using the internet.
 
 ### 5.1.2 URL｜Uniform Resource Locator
 
-Sources: [0478/12 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10); [0478/12 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12).
+Sources: [0478/12 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=8); [0478/12 · October/November 2024 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=9); [0478/12 · October/November 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10); [0478/12 · May/June 2024 · Q11(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12); [0478/12 · February/March 2025 · Q5(c)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
 
 A **URL** is a **text-based address for a web page**. It can contain:
 
@@ -120,7 +120,7 @@ https://www.example.com/shop/index.html
 
 ### 5.1.3 HTTP vs HTTPS
 
-Sources: [0478/12 · May/June 2025 · Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=15); [0478/12 · February/March 2025 · Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
+Sources: [0478/12 · May/June 2025 · Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=15); [0478/12 · February/March 2025 · Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/12 · October/November 2023 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=8); [0478/12 · October/November 2024 · Q7(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=11); [0478/13 · October/November 2023 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=5).
 
 | Feature | HTTP | HTTPS |
 | --- | --- | --- |
@@ -163,7 +163,7 @@ sequenceDiagram
 
 ### 5.1.4 Web Browser
 
-Sources: [0478/13 · May/June 2025 · Q5(d)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=12); [0478/12 · May/June 2024 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12).
+Sources: [0478/12 · February/March 2023 · Q5(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9); [0478/11 · May/June 2023 · Q10(c), Q10(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=10); [0478/12 · May/June 2024 · Q11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=12); [0478/13 · May/June 2025 · Q5(d)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=12); [0478/13 · October/November 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7).
 
 A **web browser** is software used to **retrieve, render and display web pages**.
 
@@ -195,7 +195,7 @@ A browser displays web pages. A search engine finds web pages based on keywords.
 
 ### 5.1.5 How a Web Page Is Located, Retrieved and Displayed
 
-Sources: [0478/12 · February/March 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=8); [0478/12 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=14).
+Sources: [0478/12 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=14); [0478/12 · February/March 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=8); [0478/12 · October/November 2024 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=10); [0478/13 · May/June 2024 · Q7(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=9); [0478/12 · October/November 2025 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=11).
 
 #### Golden Process Template
 1. User enters a **URL** into the web browser.
@@ -226,7 +226,7 @@ G --> H[Web page displayed]
 
 ### 5.1.6 Cookies
 
-Sources: [0478/13 · October/November 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=8); [0478/13 · October/November 2025 · Q4(c)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8).
+Sources: [0478/12 · February/March 2023 · Q5(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9); [0478/13 · October/November 2025 · Q4(c)(i), Q4(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/11 · May/June 2023 · Q10(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=10); [0478/12 · October/November 2025 · Q6(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=11); [0478/13 · October/November 2024 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=8).
 
 A **cookie** is a small text file / piece of data that is sent by a web server and stored / managed by the web browser.
 
@@ -263,7 +263,7 @@ A **cookie** is a small text file / piece of data that is sent by a web server a
 ## 5.2 Digital Currency and Blockchain
 ### 5.2.1 Digital Currency
 
-Sources: [0478/12 · February/March 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9); [0478/11 · May/June 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13).
+Sources: [0478/12 · October/November 2023 · Q12(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=9); [0478/12 · February/March 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9); [0478/11 · May/June 2025 · Q9(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13).
 
 A **digital currency** is a currency that **only exists electronically**.
 
@@ -288,7 +288,7 @@ A **digital currency** is a currency that **only exists electronically**.
 
 ### 5.2.2 Blockchain
 
-Sources: [0478/11 · October/November 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=12); [0478/12 · February/March 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9).
+Sources: [0478/11 · October/November 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=12); [0478/12 · February/March 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9); [0478/11 · May/June 2025 · Q9(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13); [0478/12 · October/November 2023 · Q12(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=9).
 
 A **blockchain** is a digital ledger: a time-stamped series of records that cannot easily be altered.
 
@@ -318,7 +318,7 @@ F --> G[Copies of the ledger are distributed]
 
 ### 5.3.1 Threats at a Glance
 
-Sources: [0478/12 · February/March 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=4); [0478/11 · May/June 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=7).
+Sources: [0478/12 · February/March 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=4); [0478/11 · October/November 2025 · Q4(c), Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9); [0478/12 · October/November 2023 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=7); [0478/11 · May/June 2023 · Q8(a), Q8(b)(i), Q8(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=7); [0478/12 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=9).
 
 
 Use this overview to identify an attack, recognise evidence, choose protection and separate similar threats.
@@ -367,7 +367,7 @@ Use this overview to identify an attack, recognise evidence, choose protection a
 
 ### 5.3.2 Threats：Process + Aim + Effects
 
-Sources: [0478/12 · February/March 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=4); [0478/12 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=7).
+Sources: [0478/12 · February/March 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=4); [0478/12 · October/November 2023 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=7); [0478/11 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9); [0478/12 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=9); [0478/11 · May/June 2023 · Q8(a), Q8(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=7).
 
 | Threat | Process / How it works | Aim / Effect | High-value keywords |
 | --- | --- | --- | --- |
@@ -390,7 +390,7 @@ Sources: [0478/12 · February/March 2023 · Q1](https://pastpapers.papacambridge
 
 ### 5.3.3 DDoS / Botnet Example
 
-Sources: [0478/12 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=9); [0478/13 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=11).
+Sources: [0478/12 · May/June 2023 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=8); [0478/13 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=11); [0478/12 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=9); [0478/13 · May/June 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=8).
 
 > **Describe one common botnet-based way of carrying out a DDoS attack.**
 >
@@ -416,7 +416,7 @@ G --> H[Server slows down / crashes / website unavailable]
 
 ### 5.3.4 Phishing vs Pharming
 
-Sources: [0478/11 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9); [0478/11 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=9).
+Sources: [0478/11 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9); [0478/11 · May/June 2023 · Q10(a), Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=9); [0478/13 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8).
 
 | Feature | Phishing | Pharming |
 | --- | --- | --- |
@@ -436,7 +436,7 @@ Sources: [0478/11 · October/November 2025 · Q4](https://pastpapers.papacambrid
 
 ### 5.3.5 Social Engineering
 
-Sources: [0478/13 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=8).
+Sources: [0478/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=8); [0478/13 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8).
 
 #### Definition
 > Social engineering involves **manipulating or deceiving people** with the aim of obtaining **confidential / personal / valuable data**.
@@ -459,7 +459,7 @@ Sources: [0478/13 · October/November 2025 · Q4](https://pastpapers.papacambrid
 
 ### 5.3.6 Keeping Data Safe｜Security Solutions
 
-Sources: [0478/13 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/11 · May/June 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13).
+Sources: [0478/12 · February/March 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=5); [0478/13 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/13 · May/June 2024 · Q7(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=9); [0478/12 · October/November 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10); [0478/11 · October/November 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=8).
 
 #### Solution Overview
 | Solution | What it does | Good exam expansion |
@@ -484,7 +484,7 @@ Sources: [0478/13 · October/November 2025 · Q4](https://pastpapers.papacambrid
 
 ### 5.3.7 Authentication
 
-Sources: [0478/13 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/11 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9).
+Sources: [0478/13 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/11 · May/June 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=8); [0478/11 · May/June 2025 · Q9(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13); [0478/11 · October/November 2025 · Q3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9).
 
 Authentication means proving that a user is who they claim to be.
 
@@ -521,7 +521,7 @@ A strong password should:
 
 ### 5.3.8 Anti-malware
 
-Sources: [0478/12 · February/March 2018 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m18_ms_12.pdf#page=4); [0478/13 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8).
+Sources: [0478/12 · February/March 2018 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m18_ms_12.pdf#page=4); [0478/13 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=8); [0478/12 · May/June 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=9); [0478/13 · May/June 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=7); [0478/12 · May/June 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=10); [0478/12 · October/November 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=4).
 
 #### Anti-virus
 | Function | Exam-style wording |
@@ -542,7 +542,7 @@ Sources: [0478/12 · February/March 2018 · Q2(a)](https://pastpapers.papacambri
 
 ### 5.3.9 Firewall vs Proxy Server
 
-Sources: [0478/12 · February/March 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=5); [0478/12 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10).
+Sources: [0478/12 · February/March 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=5); [0478/13 · May/June 2024 · Q7(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=9); [0478/12 · October/November 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10); [0478/11 · October/November 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=8); [0478/13 · May/June 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=6).
 
 #### Firewall
 A **firewall** is hardware and/or software that monitors traffic entering and leaving a system or network.
@@ -583,7 +583,7 @@ A **proxy server** sits between the user/client and the web server.
 
 ### 5.3.10 Checking Emails and URLs
 
-Sources: [0478/11 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=10); [0478/13 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=7).
+Sources: [0478/11 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=10); [0478/13 · May/June 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=7).
 
 #### Before clicking a link / opening an attachment, check:
 | Check | Why it matters |

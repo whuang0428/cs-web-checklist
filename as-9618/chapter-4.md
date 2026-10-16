@@ -63,7 +63,7 @@ Use this overview to trace instructions, move data, handle interrupts and read a
 
 ## 4.1 Central Processing Unit Architecture
 
-Sources: [9618/13 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=10); [9618/11 · October/November 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=7).
+Sources: [9618/13 · October/November 2023 · Q9(a)(i), Q9(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9); [9618/12 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=4); [9618/11 · October/November 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=5); [9618/13 · May/June 2025 · Q2(a)(i), Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=5); [9618/13 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=10).
 
 ### Von Neumann model
 
@@ -141,7 +141,7 @@ That is not computer science meaning.
 
 ## Registers
 
-Sources: [9618/11 · October/November 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=7); [9618/13 · October/November 2023 · Q9(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9).
+Sources: [9618/12 · May/June 2025 · Q1(a), Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=4); [9618/12 · October/November 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=4); [9618/11 · October/November 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=7); [9618/11 · October/November 2024 · Q8(a), Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=9); [9618/13 · October/November 2023 · Q9(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9).
 
 ### Register summary table
 
@@ -312,7 +312,7 @@ Too vague to demonstrate the required distinction.
 
 ## Buses
 
-Sources: [9618/12 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/13 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=10).
+Sources: [9618/11 · May/June 2025 · Q6(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/13 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=10); [9618/12 · October/November 2023 · Q8(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=10); [9618/12 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=4); [9618/12 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7).
 
 ### Bus overview
 
@@ -377,7 +377,7 @@ Example:
 
 ## Fetch-Decode-Execute Cycle
 
-Sources: [9618/13 · May/June 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=11); [9618/13 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=10).
+Sources: [9618/11 · October/November 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=5); [9618/13 · October/November 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=10); [9618/13 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=10); [9618/13 · May/June 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=11); [9618/13 · May/June 2025 · Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=5).
 
 ### Basic sequence
 
@@ -471,7 +471,7 @@ Examples:
 
 ## Interrupts
 
-Sources: [9618/11 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=9); [9618/13 · October/November 2023 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=10).
+Sources: [9618/11 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=9); [9618/12 · May/June 2025 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=4); [9618/13 · October/November 2023 · Q9(c), Q9(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=10).
 
 ### What is an interrupt?
 
@@ -525,7 +525,7 @@ J --> K[Return to previous process]
 
 ## Processor Performance
 
-Sources: [9618/12 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/11 · October/November 2023 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=7).
+Sources: [9618/11 · October/November 2023 · Q5(c)(i), Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=7); [9618/11 · May/June 2025 · Q6(a)(ii), Q6(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/12 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/11 · October/November 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=10); [9618/12 · October/November 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=5).
 
 ### Factors affecting performance
 
@@ -579,7 +579,7 @@ Strong answer:
 
 ## Peripheral Ports
 
-Sources: [9618/12 · May/June 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/13 · October/November 2023 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=8).
+Sources: [9618/12 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=4); [9618/11 · October/November 2024 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=6); [9618/13 · October/November 2023 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=8); [9618/13 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=5); [9618/12 · May/June 2023 · Q5(c)(i), Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7).
 
 A port provides a physical connection and an agreed interface for a peripheral. Select the port from the data and display requirements, not from the connector's appearance alone.
 
@@ -599,7 +599,7 @@ A presentation computer must send picture and sound to a modern projector throug
 
 ## Assembly Language
 
-Sources: [9618/12 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6); [9618/11 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10).
+Sources: [9618/12 · May/June 2025 · Q7(a)(i), Q7(a)(ii), Q7(a)(iii), Q7(b)(i), Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=12); [9618/13 · May/June 2025 · Q5(a)(i), Q5(a)(ii), Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=9); [9618/11 · October/November 2023 · Q8(b)(i), Q8(b)(ii), Q8(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10); [9618/12 · October/November 2023 · Q9(a), Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=10); [9618/13 · May/June 2024 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=4).
 
 ### Assembly language vs machine code
 
@@ -684,7 +684,7 @@ Binary and hexadecimal immediate operands may be shown in the form defined by th
 
 ## Addressing Modes
 
-Sources: [9618/12 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6); [9618/11 · October/November 2023 · Q8(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10).
+Sources: [9618/12 · May/June 2025 · Q7(a)(ii), Q7(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=12); [9618/13 · May/June 2025 · Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=9); [9618/11 · October/November 2023 · Q8(b)(ii), Q8(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10); [9618/12 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6); [9618/12 · October/November 2025 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=5).
 
 ### Immediate addressing
 
@@ -937,7 +937,7 @@ Pass 2 usually:
 
 ## Bit Manipulation
 
-Sources: [9618/11 · May/June 2023 · Q3(d)(vi)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · May/June 2023 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7).
+Sources: [9618/12 · October/November 2024 · Q8(b)(i), Q8(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=9); [9618/13 · October/November 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=10); [9618/13 · October/November 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8); [9618/11 · October/November 2025 · Q4(a), Q4(b), Q4(c), Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=7); [9618/11 · May/June 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=5).
 
 ### Why bit manipulation is used
 

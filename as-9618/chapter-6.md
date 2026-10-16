@@ -118,7 +118,7 @@ Use this overview to distinguish key terms, match controls, verify input and pro
 
 ### Security vs Privacy vs Integrity
 
-Sources: [9618/12 · October/November 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=5); [9618/12 · October/November 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=6).
+Sources: [9618/12 · October/November 2023 · Q5(a), Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=5); [9618/13 · October/November 2023 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=8).
 
 | Term | Meaning | Simple student version |
 | --- | --- | --- |
@@ -169,7 +169,7 @@ When asked "why is data security needed?", write:
 
 ### User accounts
 
-Sources: [9618/12 · May/June 2024 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5); [9618/12 · May/June 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8).
+Sources: [9618/13 · October/November 2025 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=9); [9618/12 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8); [9618/12 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/11 · October/November 2025 · Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8).
 
 A **user account** identifies a user on a system.
 
@@ -197,7 +197,7 @@ It can store:
 
 ### Passwords
 
-Sources: [9618/13 · October/November 2023 · Q3(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4); [9618/12 · May/June 2024 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5).
+Sources: [9618/12 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8); [9618/13 · October/November 2025 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q3(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4); [9618/11 · October/November 2024 · Q4(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7).
 
 A password is a secret value used to prove a user’s identity.
 
@@ -233,7 +233,7 @@ If the question gives a weak password like `John2008`, explain:
 
 ### Authentication
 
-Sources: [9618/12 · May/June 2021 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_12.pdf#page=9).
+Sources: [9618/13 · October/November 2025 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=9); [9618/11 · October/November 2025 · Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8); [9618/12 · October/November 2025 · Q5(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=8).
 
 Supplementary detail: [NIST: authentication factors and biometrics](https://pages.nist.gov/800-63-4/sp800-63b.html#aal2).
 
@@ -279,7 +279,7 @@ Examples:
 
 ### Digital signatures
 
-Sources: [9618/13 · May/June 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=8); [9618/11 · May/June 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=11).
+Sources: [9618/11 · May/June 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=11); [9618/13 · May/June 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=8); [9618/12 · October/November 2025 · Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=11).
 
 A digital signature can be used to:
 
@@ -311,7 +311,7 @@ Digital signature <span lang="zh-CN">不等于手写签名图片</span>。<span 
 
 ### Firewall
 
-Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q3(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4).
+Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/12 · October/November 2025 · Q5(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=8); [9618/11 · May/June 2024 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=6); [9618/12 · May/June 2024 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5); [9618/13 · October/November 2023 · Q3(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4).
 
 A firewall controls traffic between a private network and external networks.
 
@@ -339,7 +339,7 @@ A firewall controls traffic between a private network and external networks.
 
 ### Anti-virus and anti-spyware
 
-Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9).
+Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9); [9618/12 · October/November 2025 · Q5(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=8); [9618/13 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=6).
 
 #### Anti-virus software
 
@@ -368,7 +368,7 @@ Spyware may:
 
 ### Encryption
 
-Sources: [9618/13 · October/November 2023 · Q3(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4); [9618/12 · May/June 2024 · Q3(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5).
+Sources: [9618/11 · May/June 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=11); [9618/12 · October/November 2024 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=5); [9618/12 · May/June 2024 · Q3(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5); [9618/13 · May/June 2024 · Q7(f)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=9); [9618/13 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=6).
 
 Encryption converts readable data into unreadable data.
 
@@ -395,7 +395,7 @@ Better wording:
 
 ### Access rights
 
-Sources: [9618/12 · May/June 2024 · Q3(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=5); [9618/12 · May/June 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8).
+Sources: [9618/12 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/13 · October/November 2025 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=9); [9618/12 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8); [9618/13 · October/November 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9); [9618/11 · October/November 2024 · Q4(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7).
 
 Access rights control what a user can do.
 
@@ -423,7 +423,7 @@ Examples:
 
 ## Threats to Computer and Data Security
 
-Sources: [9618/12 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=6); [9618/13 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=8).
+Sources: [9618/13 · October/November 2023 · Q8(b), Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=8); [9618/12 · October/November 2025 · Q5(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=8); [9618/12 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=6); [9618/11 · October/November 2025 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=13).
 
 ### Malware
 
@@ -562,7 +562,7 @@ Data integrity means data is:
 
 ### Validation vs Verification
 
-Sources: [9618/13 · May/June 2023 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/13 · October/November 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=5).
+Sources: [9618/13 · May/June 2023 · Q4(d)(i), Q4(d)(ii), Q4(d)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/13 · October/November 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=5); [9618/13 · October/November 2023 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=8); [9618/12 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=4).
 
 | Method | Main purpose | Done by | Can prove data is correct? |
 | --- | --- | --- | --- |
@@ -581,7 +581,7 @@ If age `26` is typed as `62`, range check may accept it because `62` is still re
 
 ## Validation Methods
 
-Sources: [9618/12 · May/June 2023 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/13 · May/June 2023 · Q4(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7).
+Sources: [9618/23 · October/November 2025 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=11); [9618/21 · October/November 2025 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=12); [9618/12 · May/June 2023 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/23 · May/June 2023 · Q2(b)(i), Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=3); [9618/13 · May/June 2023 · Q4(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/13 · October/November 2025 · Q7(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12).
 
 ### Range check
 
@@ -695,7 +695,7 @@ Used for:
 
 ## Verification During Data Entry
 
-Sources: [9618/13 · May/June 2023 · Q4(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/13 · October/November 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=5).
+Sources: [9618/13 · October/November 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=5); [9618/13 · May/June 2023 · Q4(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/12 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=4).
 
 ### Visual check
 
@@ -739,7 +739,7 @@ Enter password twice.
 
 ## Verification During Data Transfer
 
-Sources: [9618/11 · May/June 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=6); [9618/13 · May/June 2024 · Q7(f)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=9).
+Sources: [9618/13 · May/June 2024 · Q7(f)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=9); [9618/11 · May/June 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=6); [9618/13 · October/November 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=11); [9618/12 · October/November 2025 · Q6(c)(i), Q6(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=9); [9618/11 · May/June 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=11).
 
 ### Parity check overview
 

@@ -65,7 +65,7 @@ Use this overview to trace transmission, select a method, detect errors and prot
 
 ### 2.1.1 Packet Structure
 
-Sources: [0478/13 · October/November 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=7); [0478/11 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=5).
+Sources: [0478/11 · October/November 2024 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=7); [0478/12 · February/March 2025 · Q2(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=6); [0478/13 · October/November 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=7); [0478/11 · May/June 2024 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=5); [0478/12 · February/March 2023 · Q5(a)(i), Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=8).
 
 #### What Is a Packet?
 <span lang="zh-CN">当数据通过网络传输时</span>，<span lang="zh-CN">整段数据通常不会一次性发送</span>，<span lang="zh-CN">而是被分成很多小的数据包</span>，<span lang="zh-CN">叫</span> **packets**。
@@ -90,7 +90,7 @@ The trailer identifies the **end of the packet** and may contain an **error chec
 
 ### 2.1.2 Packet Switching
 
-Sources: [0478/11 · May/June 2023 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=5); [0478/12 · February/March 2025 · Q2(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=6).
+Sources: [0478/11 · May/June 2023 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=5); [0478/12 · February/March 2025 · Q2(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=6); [0478/11 · May/June 2025 · Q4(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=8); [0478/13 · May/June 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=7); [0478/11 · October/November 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=8).
 
 #### Core Process
 ```mermaid
@@ -142,7 +142,7 @@ accDescr: A message is split into packets that may take different routes before 
 
 ### 2.1.3 Data Transmission Directions
 
-Sources: [0478/13 · October/November 2025 · Q3(b)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=7); [0478/12 · October/November 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=6).
+Sources: [0478/11 · October/November 2024 · Q4(b)(i), Q4(b)(ii), Q4(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=8); [0478/12 · October/November 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=6); [0478/11 · May/June 2025 · Q4(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=7); [0478/11 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=14); [0478/12 · May/June 2025 · Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=10).
 
 | Type | <span lang="zh-CN">中文理解</span> | English definition | Example |
 | --- | --- | --- | --- |
@@ -160,7 +160,7 @@ Sources: [0478/13 · October/November 2025 · Q3(b)(i)–(ii)](https://pastpaper
 
 ### 2.1.4 Serial vs Parallel Transmission
 
-Sources: [0478/11 · May/June 2025 · Q4(a)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=7); [0478/11 · October/November 2024 · Q4(b)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=8).
+Sources: [0478/12 · October/November 2024 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=7); [0478/13 · May/June 2024 · Q7(a), Q7(b), Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=8); [0478/11 · May/June 2025 · Q4(a)(i), Q4(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=7); [0478/12 · October/November 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=6); [0478/11 · October/November 2024 · Q4(b)(i), Q4(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=8).
 
 | Feature | Serial transmission | Parallel transmission |
 | --- | --- | --- |
@@ -191,7 +191,7 @@ Sources: [0478/11 · May/June 2025 · Q4(a)(i)–(ii)](https://pastpapers.papaca
 
 ### 2.1.5 How to answer “suitability” questions
 
-Sources: [0478/12 · May/June 2025 · Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=10); [0478/12 · October/November 2024 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=8).
+Sources: [0478/12 · May/June 2025 · Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=10); [0478/12 · October/November 2024 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=8); [0478/11 · October/November 2024 · Q4(b)(i), Q4(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=8); [0478/11 · May/June 2025 · Q4(a)(i), Q4(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=7); [0478/12 · February/March 2023 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=8).
 
 #### Question type
 > Explain why serial full-duplex transmission is suitable in this scenario.
@@ -219,7 +219,7 @@ Full-duplex is suitable because data can be sent **in both directions at the sam
 
 ### 2.1.6 USB Interface
 
-Sources: [0478/12 · October/November 2025 · Q5(c)(ii)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10).
+Sources: [0478/12 · October/November 2025 · Q5(c)(ii), Q5(c)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=10).
 
 #### What happens when a USB device is plugged in?
 
@@ -256,7 +256,7 @@ flowchart TD
 
 ### 2.2.1 Why errors can occur
 
-Sources: [0478/11 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=10); [0478/13 · May/June 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=15).
+Sources: [0478/11 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=10); [0478/11 · October/November 2024 · Q4(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=8); [0478/11 · May/June 2025 · Q4(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=8); [0478/12 · October/November 2025 · Q7(f)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=13); [0478/13 · May/June 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=15).
 
 Data transmission errors may happen because of:
 
@@ -282,7 +282,7 @@ In parallel transmission, bits may become **skewed**, meaning they arrive out of
 
 ### 2.2.2 Parity Check
 
-Sources: [0478/12 · May/June 2025 · Q3(c)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=11); [0478/11 · May/June 2024 · Q9(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=11).
+Sources: [0478/11 · May/June 2024 · Q9(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=11); [0478/12 · February/March 2024 · Q6(e)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=11); [0478/12 · February/March 2023 · Q5(c)(i), Q5(c)(ii), Q5(c)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=8); [0478/12 · May/June 2025 · Q3(c)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=11); [0478/11 · October/November 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=6).
 
 #### Basic idea
 Parity check uses an extra bit called a **parity bit**.  
@@ -332,7 +332,7 @@ Parity check may fail if:
 
 ### 2.2.3 Parity Block / Parity Byte
 
-Sources: [0478/12 · February/March 2024 · Q6(e)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=11); [0478/12 · February/March 2023 · Q5(c)(i)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=8).
+Sources: [0478/12 · February/March 2024 · Q6(e)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=11); [0478/12 · February/March 2023 · Q5(c)(i), Q5(c)(ii), Q5(c)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=8); [0478/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=7); [0478/11 · May/June 2025 · Q4(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=8); [0478/12 · October/November 2024 · Q5(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=8).
 
 #### What is parity block?
 A block of data is checked both:
@@ -360,7 +360,7 @@ flowchart TD
 
 ### 2.2.4 Checksum
 
-Sources: [0478/11 · May/June 2025 · Q4(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=8); [0478/13 · October/November 2024 · Q2(f)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+Sources: [0478/11 · May/June 2025 · Q4(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=8); [0478/13 · October/November 2024 · Q2(f)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=7); [0478/11 · May/June 2024 · Q9(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=11); [0478/12 · October/November 2024 · Q5(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=8).
 
 #### What is checksum?
 A checksum is a calculated value that is sent with the data.  
@@ -392,7 +392,7 @@ If the values do not match, an **error is detected** and the data is **resent**.
 
 ### 2.2.5 Echo Check
 
-Sources: [0478/12 · February/March 2024 · Q6(e)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=11); [0478/11 · October/November 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=8).
+Sources: [0478/12 · February/March 2024 · Q6(e)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=11); [0478/11 · October/November 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=8); [0478/13 · October/November 2024 · Q2(f)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/13 · May/June 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=15); [0478/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=7).
 
 #### Basic idea
 Echo check sends data to the receiver, then the receiver sends a copy back to the sender.
@@ -456,7 +456,7 @@ If they match, the number is accepted; if not, an error is detected.
 
 ### 2.2.7 Automatic Repeat Query / Request (ARQ)
 
-Sources: [0478/11 · May/June 2024 · Q9(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=11); [0478/13 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=6).
+Sources: [0478/11 · May/June 2024 · Q9(b)(i), Q9(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=11); [0478/13 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=6); [0478/13 · May/June 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=15); [0478/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=7); [0478/12 · October/November 2024 · Q5(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=8).
 
 #### What ARQ uses
 ARQ uses:
@@ -494,7 +494,7 @@ If no acknowledgement is received before **timeout**, the sender automatically *
 
 ### 2.3.1 Why encryption is needed
 
-Sources: [0478/12 · May/June 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/13 · October/November 2024 · Q2(g)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+Sources: [0478/11 · May/June 2025 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=10); [0478/13 · October/November 2024 · Q2(g)(i), Q2(g)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/12 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=7); [0478/12 · May/June 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4).
 
 Encryption is used to protect data during transmission.
 
@@ -512,7 +512,7 @@ It helps keep transmitted data **secure/confidential** because only someone with
 
 ### 2.3.2 Key terms
 
-Sources: [0478/11 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=10); [0478/11 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8).
+Sources: [0478/12 · May/June 2024 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/11 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=10); [0478/13 · October/November 2024 · Q2(g)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=6); [0478/11 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8).
 
 | Term | Meaning |
 | --- | --- |
@@ -535,7 +535,7 @@ flowchart LR
 
 ### 2.3.3 Symmetric Encryption
 
-Sources: [0478/12 · May/June 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/12 · February/March 2024 · Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=12).
+Sources: [0478/13 · October/November 2024 · Q2(g)(ii), Q2(g)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=6); [0478/12 · February/March 2024 · Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=12); [0478/12 · May/June 2024 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/11 · October/November 2025 · Q2(e)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=8).
 
 #### Meaning
 Symmetric encryption uses the **same key** to encrypt and decrypt data.
@@ -557,7 +557,7 @@ The main issue is that the key must be shared, so if the key is intercepted, the
 
 ### 2.3.4 Asymmetric Encryption
 
-Sources: [0478/11 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=10); [0478/11 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8).
+Sources: [0478/13 · October/November 2024 · Q2(g)(ii), Q2(g)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=6); [0478/11 · May/June 2025 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=10); [0478/12 · February/March 2024 · Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=12); [0478/11 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8); [0478/11 · October/November 2025 · Q2(e)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=8).
 
 #### Meaning
 Asymmetric encryption uses two keys:

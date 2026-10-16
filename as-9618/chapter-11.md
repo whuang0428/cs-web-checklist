@@ -41,7 +41,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ### Constants
 
-Sources: [9618/22 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=3); [9618/21 · October/November 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=4).
+Sources: [9618/21 · October/November 2024 · Q1(b)(i), Q1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=4); [9618/22 · May/June 2023 · Q1(a)(i), Q1(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=3); [9618/21 · May/June 2025 · Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=7); [9618/21 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=5).
 
 ```text
 CONSTANT MAX_ITEMS = 50
@@ -52,7 +52,7 @@ A constant is named and assigned once; it cannot be changed during execution. Re
 
 ### Variables
 
-Sources: [9618/21 · October/November 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=4); [9618/22 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=4).
+Sources: [9618/21 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6); [9618/22 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=4); [9618/21 · October/November 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=4).
 
 ```text
 DECLARE ItemCount : INTEGER
@@ -63,7 +63,7 @@ DECLARE IsValid : BOOLEAN
 
 ### Local and global variables
 
-Sources: [9618/21 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=8); [9618/23 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=6).
+Sources: [9618/23 · May/June 2025 · Q1(a)(ii), Q1(a)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=6); [9618/21 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=8).
 
 A **local variable** belongs to its subroutine and is available only there; each call has its own local state. A **global variable** is declared outside the subroutines and can be accessed across the program. Local variables reduce name clashes and unintended changes by other routines.
 
@@ -81,7 +81,7 @@ The assignment arrow stores a new value. The equals sign is used for comparison 
 
 ### Input and output
 
-Sources: [9618/23 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=3); [9618/23 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=7).
+Sources: [9618/23 · October/November 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=5); [9618/21 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=4); [9618/22 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4); [9618/23 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=3).
 
 ```text
 OUTPUT "Enter quantity"
@@ -120,7 +120,7 @@ For structured English, apply the same rule: preserve the stated input, processi
 
 ## Expressions and Operators
 
-Sources: [9618/21 · May/June 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=3); [9618/23 · May/June 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=4).
+Sources: [9618/21 · May/June 2023 · Q1(c)(i), Q1(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=3); [9618/23 · October/November 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=4); [9618/22 · October/November 2025 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=5); [9618/21 · May/June 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=4); [9618/21 · October/November 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=6).
 
 ### Arithmetic
 
@@ -157,7 +157,7 @@ Do not assume ambiguous precedence when brackets can state the intention.
 
 ## Built-In and Library Routines
 
-Sources: [9618/23 · October/November 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=6); [9618/21 · May/June 2025 · Q2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=7).
+Sources: [9618/23 · May/June 2025 · Q7(a)(i), Q7(a)(ii), Q7(b)(i), Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=12); [9618/23 · October/November 2025 · Q1(a), Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=6); [9618/22 · May/June 2023 · Q2(a), Q2(b), Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=3); [9618/23 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=6); [9618/22 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=11).
 
 The question or pseudocode guide defines the routines available. Use their stated:
 
@@ -189,7 +189,7 @@ String manipulation routines needed for a question will be supplied.
 
 ## Selection
 
-Sources: [9618/22 · October/November 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=5); [9618/23 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=11).
+Sources: [9618/22 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=11); [9618/23 · May/June 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=9); [9618/21 · October/November 2023 · Q1(a), Q1(b), Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=4); [9618/23 · May/June 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=5); [9618/22 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=6).
 
 ### IF / ELSE
 
@@ -232,7 +232,7 @@ Use `CASE` when one expression is matched against distinct choices. Use `IF` for
 
 ## Iteration and Loop Choice
 
-Sources: [9618/23 · May/June 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=8); [9618/21 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=9).
+Sources: [9618/21 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=10); [9618/21 · May/June 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=6); [9618/22 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=6); [9618/21 · October/November 2025 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=12); [9618/22 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=5); [9618/23 · May/June 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=8).
 
 ### Count-controlled loop
 
@@ -285,7 +285,7 @@ Strong:
 
 ## Procedures
 
-Sources: [9618/23 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=4); [9618/23 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=6).
+Sources: [9618/23 · May/June 2024 · Q1(a)(i), Q1(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=4); [9618/21 · October/November 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=7); [9618/23 · May/June 2025 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=11); [9618/23 · May/June 2025 · Q1(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=6); [9618/23 · October/November 2025 · Q1(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=6).
 
 A **procedure** performs a task and does not return a value through a function result.
 
@@ -308,7 +308,7 @@ Use a procedure when:
 
 ## Parameters: By Value and By Reference
 
-Sources: [9618/22 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=5); [9618/23 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=11).
+Sources: [9618/23 · May/June 2024 · Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=11); [9618/22 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=5); [9618/23 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=11); [9618/23 · May/June 2025 · Q7(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=12); [9618/23 · October/November 2023 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=9).
 
 A procedure or function may have no parameters, one parameter or more than one parameter. Use only the parameters the subroutine needs; a parameter list is not compulsory when the routine needs no caller data.
 
@@ -358,7 +358,7 @@ Use reference parameters only when the subroutine is intended to update the call
 
 ## Functions
 
-Sources: [9618/23 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=11); [9618/22 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=9).
+Sources: [9618/23 · October/November 2025 · Q1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=6); [9618/23 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=11); [9618/22 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=11); [9618/23 · May/June 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=5); [9618/21 · May/June 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=6).
 
 A **function** returns one value and its call is used in an expression.
 
@@ -392,7 +392,7 @@ The returned values replace the function calls in the expression.
 
 ## Subroutine Terminology
 
-Sources: [9618/23 · October/November 2025 · Q1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=6); [9618/23 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=11).
+Sources: [9618/23 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=11); [9618/23 · October/November 2025 · Q1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=6); [9618/22 · October/November 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=12); [9618/21 · May/June 2024 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=10).
 
 | Term | Meaning |
 |---|---|
@@ -429,7 +429,7 @@ FUNCTION Larger(First : INTEGER, Second : INTEGER) RETURNS INTEGER
 
 ## Efficient Pseudocode
 
-Sources: [9618/23 · May/June 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=8); [9618/21 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=11).
+Sources: [9618/23 · May/June 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=8); [9618/21 · October/November 2025 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=12); [9618/21 · May/June 2023 · Q8(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=11); [9618/21 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=11).
 
 Efficiency includes using fewer unnecessary operations and writing a solution that is clear enough to maintain.
 

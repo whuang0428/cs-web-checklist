@@ -77,7 +77,7 @@ Use this overview to model data, normalise relations, explain the DBMS and write
 
 ### File-based approach
 
-Sources: [9618/13 · May/June 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6); [9618/11 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=5).
+Sources: [9618/12 · October/November 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=7); [9618/13 · May/June 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6); [9618/11 · October/November 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=4); [9618/11 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=5).
 
 #### Meaning
 
@@ -106,7 +106,7 @@ A **file-based approach** stores data in separate files, usually created for one
 
 ### Relational database
 
-Sources: [9618/13 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6); [9618/12 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
+Sources: [9618/13 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6); [9618/11 · October/November 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=5); [9618/13 · October/November 2024 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=5); [9618/12 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
 
 #### Definition
 
@@ -135,7 +135,7 @@ relational database <span lang="zh-CN">的核心就是</span> **<span lang="zh-C
 
 ### Primary key
 
-Sources: [9618/11 · May/June 2023 · Q2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/12 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
+Sources: [9618/13 · May/June 2024 · Q4(b), Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=5); [9618/12 · May/June 2024 · Q4(b), Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=7); [9618/11 · May/June 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=7); [9618/13 · October/November 2024 · Q4(c)(i), Q4(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=4); [9618/13 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6); [9618/12 · October/November 2023 · Q2(a), Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
 
 #### Exam-style answer
 
@@ -200,7 +200,7 @@ The 2023 mark scheme also accepts a candidate key not selected as the primary ke
 
 ### Foreign key
 
-Sources: [9618/11 · May/June 2023 · Q2(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/13 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6).
+Sources: [9618/12 · May/June 2024 · Q4(c), Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=7); [9618/12 · October/November 2024 · Q6(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=7); [9618/11 · May/June 2024 · Q6(a), Q6(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=7); [9618/13 · May/June 2024 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=6); [9618/13 · October/November 2024 · Q4(a), Q4(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=4).
 
 #### Exam-style answer
 
@@ -236,7 +236,7 @@ Foreign keys in `SALE`:
 
 ### Referential integrity
 
-Sources: [9618/11 · May/June 2023 · Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/12 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4).
+Sources: [9618/11 · October/November 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=6); [9618/12 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3); [9618/12 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/13 · October/November 2024 · Q4(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=5); [9618/11 · May/June 2023 · Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4).
 
 #### Exam-style answer
 
@@ -258,7 +258,7 @@ Sources: [9618/11 · May/June 2023 · Q2(a)(ii)](https://pastpapers.papacambridg
 
 ### Indexing
 
-Supplementary source — no direct MS located: [PostgreSQL: indexes](https://www.postgresql.org/docs/current/indexes-intro.html).
+Sources: [9618/13 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6). Related question: the secondary-key row assesses locating data using an alternative key. Index structures, lookup efficiency and maintenance costs are explanations extending beyond this question.
 
 An **index** is an additional structure associating search-key values with the locations of matching records.
 
@@ -278,7 +278,7 @@ Example: an index on `CustomerID` can point directly to one customer, while an i
 
 ### Relationships
 
-Sources: [9618/11 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=5); [9618/13 · October/November 2023 · Q3(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4).
+Sources: [9618/13 · May/June 2024 · Q4(a), Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=5); [9618/12 · May/June 2024 · Q4(a), Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=7); [9618/11 · May/June 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=7); [9618/12 · October/November 2024 · Q6(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=7); [9618/13 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6).
 
 #### One-to-one
 
@@ -363,7 +363,7 @@ that usually means it is a **linking table** between `REPAIR` and `PART`.
 
 ## Normalisation
 
-Sources: [9618/11 · May/June 2023 · Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/13 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6).
+Sources: [9618/13 · May/June 2024 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=6); [9618/12 · May/June 2024 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=7); [9618/13 · May/June 2023 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=6); [9618/13 · October/November 2024 · Q4(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=5); [9618/11 · May/June 2023 · Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4).
 
 ### Why normalise?
 
@@ -500,7 +500,7 @@ DBMS <span lang="zh-CN">就是管理数据库的软件层</span>。<span lang="z
 
 ### DBMS features
 
-Sources: [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/11 · May/June 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=7).
+Sources: [9618/12 · October/November 2025 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=6); [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/11 · May/June 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=7); [9618/13 · May/June 2025 · Q6(d)(i), Q6(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=11).
 
 | Feature | What it does | Exam-style phrasing |
 | --- | --- | --- |
@@ -518,7 +518,7 @@ Sources: [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.co
 
 ### Data dictionary
 
-Sources: [9618/11 · May/June 2023 · Q2(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4).
+Sources: [9618/11 · May/June 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=7); [9618/11 · May/June 2023 · Q2(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/13 · May/June 2025 · Q6(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=11).
 
 #### Definition
 
@@ -546,7 +546,7 @@ Too vague. It stores **data about data**, not normal user records.
 
 ### Data integrity in DBMS
 
-Sources: [9618/11 · May/June 2023 · Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/12 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4).
+Sources: [9618/11 · October/November 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=6); [9618/12 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/13 · October/November 2024 · Q4(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=5); [9618/11 · May/June 2023 · Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=4); [9618/11 · October/November 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=5).
 
 DBMS can improve integrity by:
 
@@ -565,7 +565,7 @@ DBMS can improve integrity by:
 
 ### Data security in DBMS
 
-Sources: [9618/12 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/12 · May/June 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8).
+Sources: [9618/12 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=4); [9618/13 · October/November 2025 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=9); [9618/12 · May/June 2025 · Q5(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=8).
 
 DBMS can improve security by:
 
@@ -585,7 +585,7 @@ DBMS can improve security by:
 
 ### Developer interface
 
-Sources: [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4); [9618/13 · May/June 2025 · Q6(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=11).
+Sources: [9618/12 · October/November 2025 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=6); [9618/13 · May/June 2025 · Q6(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=11); [9618/12 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=4).
 
 #### Meaning
 
@@ -621,7 +621,7 @@ It may:
 
 ## 8.3 DDL and DML
 
-Sources: [9618/11 · May/June 2023 · Q2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/12 · May/June 2023 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=5).
+Sources: [9618/13 · October/November 2025 · Q5(b), Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=8); [9618/13 · May/June 2024 · Q4(b), Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=5); [9618/13 · October/November 2024 · Q4(b), Q4(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=4); [9618/11 · May/June 2025 · Q5(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=9); [9618/11 · October/November 2024 · Q2(b)(ii), Q2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=4); [9618/11 · October/November 2025 · Q2(c)(i), Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=5); [9618/11 · May/June 2024 · Q6(c)(i), Q6(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=7).
 
 ### DDL vs DML
 

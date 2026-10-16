@@ -16,7 +16,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 ## 6.1 Automated Systems
 ### 6.1.1 Core Definition
 
-Sources: [0478/13 · October/November 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7); [0478/11 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9).
+Sources: [0478/13 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7); [0478/11 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9).
 
 An **automated system** is a system that can perform actions **without human intervention**, usually by using:
 
@@ -33,7 +33,7 @@ Carries out the action or gives an alert.
 
 ### 6.1.2 The Golden Answer Template
 
-Sources: [0478/13 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=5); [0478/12 · February/March 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9).
+Sources: [0478/12 · October/November 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=6); [0478/12 · February/March 2024 · Q6(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9); [0478/12 · February/March 2023 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=10); [0478/11 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9); [0478/11 · October/November 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=5).
 
 > **Describe how sensors, microprocessors and actuators are used in an automated system.**
 >
@@ -83,7 +83,7 @@ Exam-style answer:
 
 ### 6.1.4 Advantages and Disadvantages of Automated Systems
 
-Sources: [0478/13 · May/June 2025 · Q6(d)–(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=14); [0478/13 · October/November 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7).
+Sources: [0478/11 · May/June 2024 · Q8(d), Q8(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9); [0478/12 · October/November 2023 · Q11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=9); [0478/13 · October/November 2024 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7); [0478/13 · May/June 2025 · Q6(d), Q6(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=14); [0478/13 · May/June 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=7).
 
 #### General Advantages
 | Advantage | Exam-style explanation |
@@ -126,7 +126,7 @@ Sources: [0478/13 · May/June 2025 · Q6(d)–(e)](https://pastpapers.papacambri
 ## 6.2 Robotics
 ### 6.2.1 Definition
 
-Sources: [0478/12 · February/March 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9); [0478/11 · May/June 2024 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9).
+Sources: [0478/12 · February/March 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9).
 
 **Robotics** is a branch of computer science that includes the **design, construction and operation of robots**.
 
@@ -134,7 +134,7 @@ Sources: [0478/12 · February/March 2023 · Q6](https://pastpapers.papacambridge
 
 ### 6.2.2 What Makes Something a Robot?
 
-Sources: [0478/11 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=11); [0478/12 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12).
+Sources: [0478/12 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12); [0478/11 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=11); [0478/11 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9); [0478/11 · May/June 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=8); [0478/11 · May/June 2025 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=12).
 
 A robot should usually have several of these features:
 
@@ -156,7 +156,7 @@ Example: a smart speaker can use AI, but it is normally not a robot.
 
 ### 6.2.3 Common Robot Roles
 
-Sources: [0478/12 · May/June 2025 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=13); [0478/11 · May/June 2025 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=12).
+Sources: [0478/11 · May/June 2024 · Q8(c), Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9); [0478/11 · May/June 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=12); [0478/12 · February/March 2023 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=10); [0478/11 · October/November 2025 · Q5(b), Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=12); [0478/12 · February/March 2024 · Q6(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=9).
 
 | Area | Example | What the robot does |
 | --- | --- | --- |
@@ -172,7 +172,7 @@ Sources: [0478/12 · May/June 2025 · Q5(b)(ii)](https://pastpapers.papacambridg
 
 ### 6.2.4 Robot Advantages by Scenario
 
-Sources: [0478/12 · May/June 2025 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=13); [0478/11 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=12).
+Sources: [0478/12 · May/June 2025 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=13); [0478/11 · May/June 2024 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=9); [0478/11 · May/June 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=12); [0478/13 · October/November 2024 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7); [0478/11 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=12).
 
 #### Industry / Factory
 | Benefit | Expansion |
@@ -205,7 +205,7 @@ Sources: [0478/12 · May/June 2025 · Q5(b)(ii)](https://pastpapers.papacambridg
 
 ### 6.2.5 Robot Disadvantages by Scenario
 
-Sources: [0478/12 · May/June 2025 · Q5(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=13); [0478/11 · October/November 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=12).
+Sources: [0478/11 · May/June 2024 · Q8(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=10); [0478/12 · May/June 2025 · Q5(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=13); [0478/12 · February/March 2024 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=10); [0478/11 · October/November 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=12); [0478/11 · May/June 2023 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=9).
 
 | Drawback | Expansion |
 | --- | --- |
@@ -247,7 +247,7 @@ Good answer:
 ## 6.3 Artificial Intelligence
 ### 6.3.1 Definition
 
-Sources: [0478/13 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10); [0478/12 · February/March 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
+Sources: [0478/12 · February/March 2023 · Q6(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=10); [0478/13 · October/November 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10); [0478/12 · October/November 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=8); [0478/12 · May/June 2024 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=11); [0478/12 · February/March 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
 
 **Artificial intelligence (AI)** is the simulation of intelligent behaviour by computers.
 
@@ -263,7 +263,7 @@ Allows a program to automatically adapt its own processes and/or data.
 
 ### 6.3.2 Main Characteristics of AI
 
-Sources: [0478/12 · February/March 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8); [0478/13 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10).
+Sources: [0478/12 · February/March 2023 · Q6(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=10); [0478/13 · October/November 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10); [0478/12 · October/November 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=8); [0478/12 · May/June 2024 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=11); [0478/12 · February/March 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=8).
 
 A strong answer should include any of these:
 
@@ -287,7 +287,7 @@ It can reason or make decisions, and may learn/adapt from previous results.
 
 ### 6.3.3 Expert Systems
 
-Sources: [0478/12 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=12); [0478/12 · May/June 2024 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=11).
+Sources: [0478/12 · May/June 2024 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=11); [0478/12 · October/November 2023 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=8); [0478/12 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=12); [0478/13 · May/June 2023 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=8); [0478/12 · May/June 2023 · Q9(a), Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=10).
 
 #### Core idea
 An **expert system** is a form of AI that mimics the knowledge and decision-making of a human expert in a specific area.
@@ -340,7 +340,7 @@ The diagnosis is output through the **interface**.
 
 ### 6.3.4 Machine Learning
 
-Sources: [0478/12 · October/November 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12); [0478/13 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10).
+Sources: [0478/12 · October/November 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12); [0478/13 · October/November 2023 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=9); [0478/13 · May/June 2025 · Q6(f)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=14); [0478/13 · October/November 2024 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=7); [0478/13 · October/November 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10).
 
 #### Definition
 **Machine learning** is when a program can automatically adapt its own processes and/or data.
@@ -414,7 +414,7 @@ Use these points:
 
 ### 6.3.5 Expert System vs Machine Learning
 
-Sources: [0478/13 · October/November 2023 · Q10(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=8); [0478/11 · October/November 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=13).
+Sources: [0478/13 · October/November 2023 · Q10(a), Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=8); [0478/12 · October/November 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=12); [0478/12 · May/June 2024 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=11); [0478/11 · October/November 2024 · Q9(a), Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=13).
 
 | Feature | Expert system | Machine learning |
 | --- | --- | --- |

@@ -108,7 +108,7 @@ A network connects computers and devices so that they can communicate and share 
 
 ## LAN and WAN
 
-Sources: [9618/12 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/13 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=3).
+Sources: [9618/13 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=3); [9618/12 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=10); [9618/12 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=7); [9618/12 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/13 · October/November 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8).
 
 ### LAN — Local Area Network
 
@@ -167,7 +167,7 @@ Sources: [9618/12 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.co
 
 ### Client-server model
 
-Sources: [9618/11 · May/June 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=6); [9618/13 · May/June 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=7).
+Sources: [9618/13 · May/June 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=7); [9618/11 · May/June 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=6).
 
 #### Meaning
 
@@ -207,7 +207,7 @@ A **server** provides services or resources. A **client** requests and uses thos
 
 ### Peer-to-peer model
 
-Sources: [9618/11 · May/June 2021 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_11.pdf#page=6); [9618/11 · May/June 2021 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_11.pdf#page=6).
+Sources: [9618/11 · May/June 2021 · Q4(a), Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_11.pdf#page=6).
 
 #### Meaning
 
@@ -241,7 +241,7 @@ In a **peer-to-peer network**, each computer can act as both client and server. 
 
 ### Thin client and thick client
 
-Sources: [9618/12 · May/June 2023 · Q1(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/13 · May/June 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4).
+Sources: [9618/12 · May/June 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=6); [9618/12 · May/June 2023 · Q1(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/13 · May/June 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4).
 
 #### Thin client
 
@@ -282,7 +282,7 @@ A **thick client** can process and store more data locally.
 
 ## Network Topologies
 
-Sources: [9618/12 · May/June 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/13 · May/June 2023 · Q2(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=3).
+Sources: [9618/11 · October/November 2023 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=5); [9618/11 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=8); [9618/12 · October/November 2025 · Q5(b), Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=7); [9618/12 · May/June 2025 · Q6(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=11); [9618/13 · May/June 2023 · Q2(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=3).
 
 ### Bus topology
 
@@ -424,7 +424,7 @@ Large real networks often use hybrid layouts because one topology may not fit al
 
 ## Packets and Transmission between Hosts
 
-Sources: [9618/12 · October/November 2023 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=8); [9618/13 · May/June 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=6).
+Sources: [9618/12 · October/November 2023 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=8); [9618/12 · October/November 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=7); [9618/13 · May/June 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=6).
 
 ### Packet basics
 
@@ -461,7 +461,7 @@ Each packet commonly contains:
 
 ## Cloud Computing
 
-Sources: [9618/11 · October/November 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=4); [9618/13 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4).
+Sources: [9618/12 · October/November 2025 · Q8(a)(i), Q8(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=10); [9618/13 · October/November 2023 · Q3(a)(i), Q3(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=4); [9618/11 · October/November 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=4); [9618/13 · May/June 2024 · Q5(a)(i), Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=6).
 
 ### Meaning
 
@@ -500,7 +500,7 @@ Cloud computing means using remote servers over a network/internet to store, pro
 
 ## Wired and Wireless Networks
 
-Sources: [9618/13 · May/June 2023 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4); [9618/13 · October/November 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8).
+Sources: [9618/13 · May/June 2023 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4); [9618/13 · October/November 2025 · Q4(a), Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=6); [9618/13 · October/November 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8).
 
 ### Wired networks
 
@@ -595,7 +595,7 @@ You should be able to explain how a smartphone accesses a company WAN using the 
 
 ## LAN Hardware
 
-Sources: [9618/11 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=4); [9618/11 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=4).
+Sources: [9618/11 · October/November 2023 · Q2(a), Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=4); [9618/12 · May/June 2024 · Q3(c)(i), Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=6); [9618/12 · May/June 2025 · Q6(d), Q6(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=11); [9618/12 · October/November 2025 · Q5(b), Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=7); [9618/12 · October/November 2023 · Q7(b)(i), Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=7).
 
 ### Switch
 
@@ -690,7 +690,7 @@ A dedicated line is a private/direct connection between sites.
 
 ## Ethernet and CSMA/CD
 
-Sources: [9618/12 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3); [9618/12 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=8).
+Sources: [9618/13 · May/June 2024 · Q5(c)(i), Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=6); [9618/12 · October/November 2025 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=7); [9618/12 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=8); [9618/12 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=3).
 
 ### Ethernet
 
@@ -725,7 +725,7 @@ CSMA/CD applies to a **shared, half-duplex Ethernet medium**. Match the question
 
 ## Bit Streaming
 
-Sources: [9618/11 · May/June 2024 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=4); [9618/13 · October/November 2024 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8).
+Sources: [9618/11 · May/June 2025 · Q2(a), Q2(b)(i), Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=5); [9618/12 · October/November 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=6); [9618/13 · October/November 2024 · Q9(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=8); [9618/11 · May/June 2024 · Q2(e)(i), Q2(e)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=4).
 
 ### Meaning
 
@@ -810,7 +810,7 @@ Choose from the stated constraints. **Lossy** can reduce the data rate enough fo
 
 ### Internet vs World Wide Web
 
-Sources: [9618/11 · May/June 2021 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_11.pdf#page=7); [9618/13 · May/June 2021 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_13.pdf#page=7).
+Sources: [9618/11 · May/June 2021 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s21_ms_11.pdf#page=7).
 
 | Term | Meaning |
 | --- | --- |
@@ -832,7 +832,7 @@ Sources: [9618/11 · May/June 2021 · Q4(d)](https://pastpapers.papacambridge.co
 
 ### Hardware supporting the internet
 
-Sources: [9618/12 · May/June 2024 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=6); [9618/11 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=5).
+Sources: [9618/12 · May/June 2024 · Q3(c)(i), Q3(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=6); [9618/11 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=5).
 
 | Hardware / infrastructure | Use |
 | --- | --- |
@@ -848,7 +848,7 @@ Sources: [9618/12 · May/June 2024 · Q3(c)](https://pastpapers.papacambridge.co
 
 ### IP addresses
 
-Sources: [9618/11 · May/June 2023 · Q4(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/12 · October/November 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=7).
+Sources: [9618/12 · October/November 2023 · Q7(a), Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=7); [9618/11 · October/November 2025 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=11); [9618/12 · May/June 2025 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_12.pdf#page=10); [9618/11 · May/June 2024 · Q8(b)(i), Q8(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=8); [9618/11 · May/June 2023 · Q4(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7).
 
 An IP address identifies a device/interface on a network so packets can be routed.
 
@@ -915,7 +915,7 @@ An IP address identifies a device/interface on a network so packets can be route
 
 ### Subnetting
 
-Sources: [9618/11 · May/June 2023 · Q4(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=8); [9618/13 · May/June 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4).
+Sources: [9618/12 · October/November 2023 · Q7(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=8); [9618/11 · May/June 2023 · Q4(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=8); [9618/13 · May/June 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=4); [9618/13 · October/November 2024 · Q9(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=9).
 
 Subnetting divides a network into smaller subnetworks. An IP address has a **network ID** and a **host ID**: hosts in the same subnet share the network ID and have different host IDs. The subnet mask identifies the split.
 

@@ -16,7 +16,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 ## 4.1 Types of Software and Interrupts
 ### 4.1.1 Software Types｜System Software vs Application Software
 
-Sources: [0478/12 · May/June 2024 · Q4(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=6); [0478/11 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=6).
+Sources: [0478/12 · May/June 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=10); [0478/11 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=6); [0478/12 · May/June 2024 · Q4(a), Q4(b), Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=5); [0478/12 · October/November 2024 · Q1(a), Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=4); [0478/11 · May/June 2024 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8).
 
 **System Software**
 Software that provides the services that the computer requires.
@@ -43,7 +43,7 @@ Software that provides the services that the user requires.
 
 ### 4.1.2 Utility Software｜Utility Programs
 
-Sources: [0478/12 · October/November 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=4); [0478/12 · May/June 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=10).
+Sources: [0478/12 · May/June 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=10); [0478/11 · May/June 2024 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8); [0478/12 · May/June 2024 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=5).
 
 **Utility software** is software designed to **manage, maintain or protect** a computer system.
 
@@ -66,7 +66,7 @@ The recent utility-software identification question uses **anti-virus**. Backup,
 
 ### 4.1.3 Operating System｜Role and Basic Functions
 
-Sources: [0478/11 · May/June 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13); [0478/13 · May/June 2024 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=11).
+Sources: [0478/11 · October/November 2024 · Q7(a)(i), Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=11); [0478/13 · May/June 2023 · Q11(a), Q11(b), Q11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=10); [0478/11 · May/June 2025 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=13); [0478/12 · February/March 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=6); [0478/13 · October/November 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=4).
 
 An **operating system (OS)** is system software that manages the main functions of a computer.
 
@@ -112,7 +112,7 @@ Virtual memory itself belongs to Topic 3.3. Revise its purpose and operation in 
 
 ### 4.1.4 Hardware, Firmware and OS｜How Applications Run
 
-Sources: [0478/11 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8); [0478/11 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=6).
+Sources: [0478/12 · October/November 2024 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=6); [0478/11 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=6); [0478/11 · May/June 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=12); [0478/11 · May/June 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_11.pdf#page=8); [0478/12 · February/March 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=5).
 
 #### Golden Chain
 ```mermaid
@@ -147,7 +147,7 @@ D --> E[User Task]
 
 ### 4.1.5 Interrupts｜Definition and Purpose
 
-Sources: [0478/13 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=9); [0478/12 · February/March 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=6).
+Sources: [0478/12 · October/November 2025 · Q5(a), Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=9); [0478/11 · October/November 2023 · Q9(a), Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=10); [0478/12 · February/March 2024 · Q3(b)(i), Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=6); [0478/11 · May/June 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=12); [0478/13 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=9).
 
 An **interrupt** is a signal sent from hardware or software to the processor to request attention.
 
@@ -174,7 +174,7 @@ Software interrupt = **division by zero** / two processes trying to access same 
 
 ### 4.1.6 How Interrupts Are Handled｜High Mark Template
 
-Sources: [0478/12 · February/March 2024 · Q3(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=9).
+Sources: [0478/12 · February/March 2024 · Q3(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=7); [0478/12 · October/November 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=9); [0478/11 · October/November 2023 · Q9(a), Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=10); [0478/13 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=9); [0478/13 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=11).
 
 > **Describe how the OS / CPU handles an interrupt.**
 >
@@ -212,7 +212,7 @@ J --> K[Continue original process]
 ## 4.2 Programming Languages, Translators and IDEs
 ### 4.2.1 High-Level Language vs Low-Level Language
 
-Sources: [0478/11 · October/November 2025 · Q4(d)(i)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=10); [0478/12 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=8).
+Sources: [0478/12 · February/March 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=6); [0478/13 · October/November 2025 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10); [0478/11 · October/November 2025 · Q4(d)(ii), Q4(d)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=10); [0478/11 · May/June 2023 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=7); [0478/11 · October/November 2024 · Q6(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=10).
 
 | Feature | High-Level Language | Low-Level Language |
 | --- | --- | --- |
@@ -247,7 +247,7 @@ Sources: [0478/11 · October/November 2025 · Q4(d)(i)–(iii)](https://pastpape
 
 ### 4.2.2 Assembly Language and Assembler
 
-Sources: [0478/12 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7); [0478/12 · February/March 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=9).
+Sources: [0478/11 · May/June 2023 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=7); [0478/11 · October/November 2024 · Q6(b), Q6(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=10); [0478/12 · October/November 2025 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7); [0478/12 · February/March 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=9).
 
 **Assembly language** is a low-level language that uses **mnemonics**.
 
@@ -270,7 +270,7 @@ Assembly language  --assembler-->  Machine code
 
 ### 4.2.3 Translators｜Compiler, Interpreter and Assembler
 
-Sources: [0478/12 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=8); [0478/13 · October/November 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=10).
+Sources: [0478/12 · February/March 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=6); [0478/12 · February/March 2025 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=9); [0478/11 · October/November 2025 · Q4(d)(iv)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=11); [0478/12 · May/June 2025 · Q3(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=8); [0478/12 · May/June 2023 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=6).
 
 | Translator | Source language | How it works | Output | Common use |
 | --- | --- | --- | --- | --- |
@@ -283,7 +283,7 @@ Sources: [0478/12 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/d
 
 ### 4.2.4 Compiler vs Interpreter｜High Frequency
 
-Sources: [0478/12 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=8); [0478/12 · February/March 2025 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=9).
+Sources: [0478/12 · February/March 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=6); [0478/11 · October/November 2025 · Q4(d)(iv)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=11); [0478/12 · February/March 2025 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=9); [0478/12 · May/June 2025 · Q3(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=8); [0478/12 · May/June 2023 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=6).
 
 #### Compiler
 
@@ -322,7 +322,7 @@ The mark schemes contrast a whole-program error report with stopping at an error
 
 ### 4.2.5 IDE｜Integrated Development Environment
 
-Sources: [0478/12 · May/June 2025 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=9); [0478/13 · October/November 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=8).
+Sources: [0478/12 · May/June 2025 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=9); [0478/11 · October/November 2024 · Q6(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=10); [0478/13 · October/November 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=8); [0478/12 · February/March 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=9); [0478/12 · May/June 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=7).
 
 An **IDE** is a suite of programs used to write, run, test and debug program code.
 

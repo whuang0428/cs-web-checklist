@@ -74,7 +74,7 @@ Use this overview to classify hardware, compare storage, trace control and solve
 
 ### Embedded systems
 
-Sources: [9618/11 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10); [9618/12 · October/November 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
+Sources: [9618/12 · October/November 2023 · Q1(c)(i), Q1(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3); [9618/11 · October/November 2023 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10); [9618/12 · October/November 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=3); [9618/11 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=3).
 
 #### Definition
 
@@ -165,7 +165,7 @@ Supplementary detail: [HP: toner transfer and fusing](https://www.hp.com/in-en/t
 
 ##### 3D printer
 
-Sources: [9618/11 · October/November 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9); [9618/11 · October/November 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=15).
+Sources: [9618/11 · October/November 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=15); [9618/11 · October/November 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9).
 
 1. Software uses a **CAD / 3D model** to define successive layers.
 2. The printer builds the object **additively, layer by layer**, starting at the base; the head/platform moves to position each layer.
@@ -189,7 +189,7 @@ Sources: [9608/12 · October/November 2019 · Q6(a)(ii)](https://pastpapers.papa
 
 ##### Touchscreen
 
-Sources: [9618/13 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=5); [9618/13 · May/June 2024 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=8).
+Sources: [9618/12 · October/November 2025 · Q8(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=10); [9618/13 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=5); [9618/13 · May/June 2024 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=8).
 
 - **Resistive:** pressure brings two conducting layers into contact, completing a circuit.
 - **Capacitive:** a finger changes the capacitance / measured electrical signal of the sensing layer.
@@ -200,6 +200,8 @@ The controller calculates the touch **coordinates**, sends them to the processor
 ##### Virtual reality headset
 
 Sources: [9618/12 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=4).
+
+Related application sources: [9618/13 · October/November 2023 · Q7(b), Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7). These questions use a VR headset as the context for EEPROM and connection ports; they do not assess how the headset works. In the reviewed 2023–2025 AS papers, Q2(a) above is the only direct headset-operation question located.
 
 1. One or two displays and lenses present the images; speakers provide sound.
 2. A **gyroscope** detects orientation and an **accelerometer** detects movement / acceleration. Cameras may track the eyes.
@@ -223,7 +225,7 @@ Sources: [9618/12 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.co
 
 ### Sensors
 
-Sources: [9618/11 · October/November 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9); [9618/12 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
+Sources: [9618/13 · May/June 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=8); [9618/11 · May/June 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=7); [9618/11 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=8); [9618/11 · October/November 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9); [9618/12 · October/November 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=10).
 
 #### Common sensors and uses
 
@@ -245,7 +247,7 @@ Sources: [9618/11 · October/November 2023 · Q7(b)](https://pastpapers.papacamb
 
 ### Monitoring systems vs control systems
 
-Sources: [9618/11 · October/November 2023 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=10); [9618/11 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=3).
+Sources: [9618/11 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=3); [9618/11 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=14); [9618/12 · October/November 2025 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=11); [9618/11 · October/November 2024 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=8); [9618/12 · October/November 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=10).
 
 #### Monitoring system
 
@@ -280,7 +282,7 @@ Some questions accept either classification when justified by the stated behavio
 
 ### Actuators
 
-Sources: [9618/12 · October/November 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3).
+Sources: [9618/12 · October/November 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=3); [9618/11 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=14); [9618/12 · October/November 2025 · Q11](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=11).
 
 #### Definition
 
@@ -300,7 +302,7 @@ A speaker or indicator can report a warning in a monitoring system. Its presence
 
 ### Buffers
 
-Sources: [9618/12 · October/November 2023 · Q8(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=10); [9618/13 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7).
+Sources: [9618/11 · October/November 2024 · Q3(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=6); [9618/12 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=4); [9618/13 · October/November 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=3); [9618/11 · May/June 2025 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=5); [9618/13 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7).
 
 #### Definition
 
@@ -342,7 +344,7 @@ Wrong. A buffer is **temporary storage**.
 
 ### RAM and ROM
 
-Sources: [9618/11 · May/June 2023 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/11 · May/June 2024 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=3).
+Sources: [9618/11 · October/November 2025 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=10); [9618/11 · May/June 2023 · Q4(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/13 · October/November 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=3); [9618/11 · May/June 2024 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=3).
 
 | Feature | RAM | ROM |
 | --- | --- | --- |
@@ -372,7 +374,7 @@ Sources: [9618/11 · May/June 2023 · Q4(a)](https://pastpapers.papacambridge.co
 
 ### Effect of RAM on performance
 
-Sources: [9618/12 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/11 · May/June 2025 · Q6(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10).
+Sources: [9618/11 · May/June 2025 · Q6(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/12 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=7); [9618/11 · October/November 2023 · Q5(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=8).
 
 #### Good answer
 
@@ -388,7 +390,7 @@ This is too vague. Say **why**.
 
 ### SRAM vs DRAM
 
-Sources: [9618/11 · May/June 2023 · Q4(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7); [9618/11 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9).
+Sources: [9618/11 · October/November 2025 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=10); [9618/13 · October/November 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=3); [9618/13 · October/November 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7); [9618/12 · October/November 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=4); [9618/11 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=9).
 
 | Feature | SRAM | DRAM |
 | --- | --- | --- |
@@ -427,7 +429,7 @@ Sources: [9618/11 · May/June 2023 · Q4(a)(ii)](https://pastpapers.papacambridg
 
 ### PROM, EPROM and EEPROM
 
-Sources: [9618/13 · October/November 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7); [9618/12 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=4).
+Sources: [9618/12 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=4); [9618/13 · October/November 2025 · Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=7); [9618/12 · October/November 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=4); [9618/13 · October/November 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=7).
 
 | Memory type | Meaning | Key point |
 | --- | --- | --- |
@@ -450,7 +452,7 @@ Sources: [9618/13 · October/November 2023 · Q7(b)](https://pastpapers.papacamb
 
 ### Magnetic hard disk
 
-Sources: [9618/11 · May/June 2025 · Q6(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/11 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7).
+Sources: [9618/11 · May/June 2025 · Q6(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/13 · October/November 2025 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12); [9618/11 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7).
 
 #### Principal operation
 
@@ -486,7 +488,7 @@ The 2025 source question assesses **four missing terms for four marks**.
 
 ### Optical storage
 
-Sources: [9618/11 · October/November 2024 · Q3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=6); [9618/11 · October/November 2024 · Q3(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=6).
+Sources: [9618/11 · October/November 2024 · Q3(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=6).
 
 #### Principal operation
 
@@ -511,7 +513,7 @@ Sources: [9618/11 · October/November 2024 · Q3(d)(i)](https://pastpapers.papac
 
 ### Solid-state storage / flash memory
 
-Sources: [9618/11 · May/June 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=4).
+Sources: [9618/11 · May/June 2024 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_11.pdf#page=4); [9618/13 · October/November 2025 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12); [9618/11 · May/June 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=7).
 
 #### Principal operation
 
@@ -553,7 +555,7 @@ USB, HDMI, VGA and processor-performance factors belong to syllabus section 4.1.
 
 ## 3.2 Logic Gates and Logic Circuits
 
-Sources: [9618/11 · May/June 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=8); [9618/12 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=8).
+Sources: [9618/12 · May/June 2024 · Q1(a), Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=3); [9618/13 · October/November 2024 · Q1(a), Q1(b), Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_13.pdf#page=3); [9618/12 · October/November 2023 · Q4(a), Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=5); [9618/11 · October/November 2025 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=7); [9618/11 · May/June 2025 · Q1(a), Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=4).
 
 ### Basic gates
 

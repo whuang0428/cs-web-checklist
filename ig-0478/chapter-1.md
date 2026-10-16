@@ -64,7 +64,7 @@ Use this overview to convert, calculate, represent and justify.
 ## 1.1 Number Systems
 ### Why computers use binary
 
-Sources: [0478/12 · May/June 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=5); [0478/12 · February/March 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4).
+Sources: [0478/12 · May/June 2024 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=5); [0478/11 · October/November 2023 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=5); [0478/12 · February/March 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4).
 
 #### Exam-style answer
 > Computers use logic gates and switches with two logical states, represented by **1 and 0**. Data is converted into binary so these circuits can process it and storage can hold it as bit patterns.
@@ -90,7 +90,7 @@ This is too vague. It does not explain **why**.
 
 ### Number system definitions
 
-Sources: [0478/12 · February/March 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/12 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6).
+Sources: [0478/12 · October/November 2024 · Q3(a)(i), Q3(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=4); [0478/13 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=4); [0478/12 · February/March 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/12 · May/June 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=5); [0478/11 · October/November 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=6).
 
 | Number system | Base | Digits used | Key point |
 | --- | ---: | --- | --- |
@@ -111,7 +111,7 @@ For syllabus conversion questions, positive binary values may be up to **16 bits
 
 ### Binary ↔ denary
 
-Sources: [0478/12 · February/March 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9); [0478/11 · May/June 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=4).
+Sources: [0478/12 · February/March 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9); [0478/12 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7); [0478/11 · October/November 2023 · Q2(a), Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=4); [0478/13 · October/November 2024 · Q1(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=4); [0478/13 · October/November 2025 · Q1(b)(i), Q1(b)(ii), Q1(b)(iii), Q1(b)(iv)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=5).
 
 #### Binary to denary
 Example:
@@ -150,7 +150,7 @@ Answer = 00110101
 
 ### Hexadecimal ↔ binary
 
-Sources: [0478/13 · May/June 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=4); [0478/12 · October/November 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6).
+Sources: [0478/12 · February/March 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=9); [0478/13 · May/June 2024 · Q3(a)(i), Q3(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=4); [0478/11 · October/November 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=5); [0478/12 · October/November 2025 · Q1(c), Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=6); [0478/13 · October/November 2024 · Q1(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=4).
 
 #### Conversion table
 | Binary | Hex | Denary | Binary | Hex | Denary |
@@ -206,7 +206,7 @@ Answer = 01111011
 
 ### Hexadecimal uses
 
-Sources: [0478/13 · May/June 2024 · Q3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=5); [0478/11 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=6).
+Sources: [0478/13 · May/June 2024 · Q3(c), Q3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=4); [0478/12 · February/March 2024 · Q8(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=12); [0478/12 · May/June 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=4); [0478/11 · May/June 2025 · Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=6); [0478/11 · October/November 2024 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=10).
 
 | Use | Why hexadecimal is suitable |
 | --- | --- |
@@ -227,7 +227,7 @@ Sources: [0478/13 · May/June 2024 · Q3(d)](https://pastpapers.papacambridge.co
 ## Binary Operations
 ### Binary addition
 
-Sources: [0478/12 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7); [0478/12 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=6).
+Sources: [0478/11 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=4); [0478/12 · October/November 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=4); [0478/12 · May/June 2024 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=5); [0478/13 · October/November 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=5); [0478/13 · October/November 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=4).
 
 #### Rules
 | Addition | Result |
@@ -257,7 +257,7 @@ A complete solution should show:
 
 ### Overflow
 
-Sources: [0478/12 · February/March 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/12 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=6).
+Sources: [0478/11 · May/June 2023 · Q1(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=4); [0478/12 · May/June 2025 · Q1(f)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=6); [0478/13 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_13.pdf#page=4); [0478/12 · October/November 2023 · Q2(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=4); [0478/13 · October/November 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=4).
 
 #### Definition
 > Overflow occurs when the result is too large to be stored in the number of bits available.
@@ -282,7 +282,7 @@ Not always enough. A carry inside the calculation is normal. You need to say **t
 
 ### Logical binary shift
 
-Sources: [0478/12 · October/November 2023 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=4); [0478/12 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7).
+Sources: [0478/12 · October/November 2024 · Q3(d)(i), Q3(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=5); [0478/12 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_12.pdf#page=7); [0478/12 · May/June 2023 · Q2(b)(i), Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=4); [0478/12 · October/November 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=4); [0478/12 · February/March 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=13).
 
 #### Rules
 | Shift | Effect on positive binary integer |
@@ -318,7 +318,7 @@ Denary:
 
 ### Two's complement
 
-Sources: [0478/11 · May/June 2023 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=4); [0478/12 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=6).
+Sources: [0478/12 · February/March 2024 · Q8(b)(i), Q8(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=13); [0478/11 · May/June 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=4); [0478/12 · May/June 2024 · Q3(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=5); [0478/13 · May/June 2025 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=6); [0478/12 · October/November 2023 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=4).
 
 ### 8-bit two's complement range
 | Bits | Range |
@@ -394,7 +394,7 @@ Use column values:
 ## 1.2 Text, Sound and Images
 ### Text representation
 
-Sources: [0478/12 · February/March 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4); [0478/11 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9).
+Sources: [0478/12 · February/March 2024 · Q1(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4); [0478/11 · October/November 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9); [0478/12 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=5); [0478/13 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=9); [0478/13 · October/November 2024 · Q2(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
 
 #### Character set
 > A character set is a set of characters and the codes used to represent them.
@@ -416,7 +416,7 @@ D code stored third
 
 ### ASCII vs Unicode
 
-Sources: [0478/13 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/11 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=7).
+Sources: [0478/11 · October/November 2023 · Q5(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=7); [0478/13 · October/November 2024 · Q2(d)(ii), Q2(d)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/11 · October/November 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=7).
 
 | Feature | ASCII | Unicode |
 | --- | --- | --- |
@@ -441,7 +441,7 @@ Wrong. Unicode has a much larger character set.
 
 ### Sound representation
 
-Sources: [0478/13 · May/June 2025 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=6); [0478/12 · February/March 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4).
+Sources: [0478/11 · October/November 2023 · Q5(a), Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=7); [0478/12 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_12.pdf#page=5); [0478/13 · May/June 2025 · Q1(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_13.pdf#page=6); [0478/11 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=5); [0478/12 · February/March 2024 · Q1(c)(i), Q1(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_12.pdf#page=4).
 
 #### Key terms
 | Term | Meaning |
@@ -477,7 +477,7 @@ Exam-style wording:
 
 ### Image representation
 
-Sources: [0478/11 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=7); [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5).
+Sources: [0478/11 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=7); [0478/13 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=9); [0478/13 · October/November 2023 · Q7(a), Q7(b), Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=7); [0478/12 · May/June 2025 · Q2(c)(i), Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=7); [0478/12 · February/March 2025 · Q2(a), Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5).
 
 #### Key terms
 | Term | Meaning |
@@ -503,7 +503,7 @@ Sources: [0478/11 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/d
 ## 1.3 Data Storage and File Size
 ### Units
 
-Sources: [0478/12 · May/June 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/13 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=9).
+Sources: [0478/12 · February/March 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=7); [0478/11 · October/November 2025 · Q3(b)(i), Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_11.pdf#page=9); [0478/12 · May/June 2024 · Q1(a), Q1(b), Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/13 · October/November 2025 · Q5(b), Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_13.pdf#page=9); [0478/13 · May/June 2024 · Q1(a), Q1(b), Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_13.pdf#page=4).
 
 #### Binary units
 | Unit | Size |
@@ -526,7 +526,7 @@ For IGCSE 0478, use **1024** when converting between successive storage units, a
 
 ### Image file size
 
-Sources: [0478/12 · May/June 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/12 · February/March 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=7).
+Sources: [0478/12 · May/June 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_12.pdf#page=4); [0478/12 · February/March 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=7).
 
 
 Calculate the **uncompressed pixel data** using this formula. Metadata is additional data; include it only when the question supplies its size.
@@ -572,7 +572,7 @@ KiB = 960 000 ÷ 1024
 
 ### Sound file size
 
-Sources: [0478/12 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=4).
+Sources: [0478/12 · October/November 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_12.pdf#page=4).
 
 
 Calculate the **uncompressed sample data**. Use the channel count given in the question; the formula does not include a file header or other metadata.
@@ -615,7 +615,7 @@ KiB = 220 160 ÷ 1024
 ## Compression
 ### Why compression is needed
 
-Sources: [0478/11 · October/November 2024 · Q1](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=5); [0478/13 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+Sources: [0478/13 · October/November 2024 · Q2(a), Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/11 · October/November 2024 · Q1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_11.pdf#page=5); [0478/11 · May/June 2025 · Q1(c)(i), Q1(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_11.pdf#page=6); [0478/13 · October/November 2023 · Q7(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_13.pdf#page=7); [0478/12 · February/March 2023 · Q4(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_12.pdf#page=7).
 
 #### Exam-style answer
 > Compression reduces file size, so less storage space is needed, less bandwidth is required, and the file can be transmitted / uploaded / downloaded faster.
@@ -632,7 +632,7 @@ Sources: [0478/11 · October/November 2024 · Q1](https://pastpapers.papacambrid
 
 ### Lossy vs lossless compression
 
-Sources: [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/13 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+Sources: [0478/12 · February/March 2025 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/11 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=7); [0478/13 · October/November 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/12 · May/June 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=7); [0478/12 · May/June 2023 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=5).
 
 | Feature | Lossless | Lossy |
 | --- | --- | --- |
@@ -658,7 +658,7 @@ Sources: [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge
 
 ### Run-length encoding (RLE)
 
-Sources: [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/12 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=7).
+Sources: [0478/12 · May/June 2025 · Q2(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_12.pdf#page=7); [0478/12 · February/March 2025 · Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/12 · May/June 2023 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=5).
 
 #### What it does
 > RLE identifies repeated adjacent data and stores the value with the number of times it is repeated.
@@ -687,7 +687,7 @@ For images, this could mean:
 
 ### Choosing compression method
 
-Sources: [0478/12 · February/March 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/13 · October/November 2024 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5).
+Sources: [0478/12 · February/March 2025 · Q2(c)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_12.pdf#page=5); [0478/11 · October/November 2023 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_11.pdf#page=7); [0478/13 · October/November 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_13.pdf#page=5); [0478/12 · May/June 2023 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_12.pdf#page=5); [0478/11 · May/June 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_11.pdf#page=5).
 
 | Scenario | Best choice | Why |
 | --- | --- | --- |

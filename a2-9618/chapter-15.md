@@ -141,7 +141,7 @@ CISC processor <span lang="zh-CN">的设计思想是</span>：
 
 ### Interrupt handling on RISC and CISC processors
 
-Sources: [9618/31 · May/June 2024 · Q11(b)–(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=14).
+Sources: [9618/31 · May/June 2024 · Q11(b), 11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=14).
 
 For both RISC and CISC, detect the interrupt at an instruction-cycle boundary, save register state on the stack, execute the ISR and restore that state. The pipelined case adds several instructions already in progress. In the pipeline model used by the cited question, unfinished instructions are discarded except the final/write-back instruction; execution resumes at the next instruction after servicing. Keep this question-specific pipeline model separate from the shared save–service–restore sequence.
 
@@ -178,7 +178,7 @@ Pipelining <span lang="zh-CN">会让</span> interrupt handling <span lang="zh-CN
 
 ### Pipelining in RISC processors
 
-Sources: [9618/32 · May/June 2023 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8).
+Sources: [9618/32 · May/June 2023 · Q8(a), 8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8); [9618/31 · May/June 2024 · Q11(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=14).
 
 #### Core idea
 Pipelining means different instructions can be at different stages of execution at the same time.
@@ -407,7 +407,7 @@ A **virtual machine (VM)** is a software-based emulation of a computer system. I
 
 ### Roles / examples of virtual machines
 
-Sources: [9618/32 · May/June 2024 · Q9(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=12).
+Sources: [9618/32 · May/June 2024 · Q9(a), 9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=12).
 
 | Role | Example |
 | --- | --- |
@@ -487,7 +487,7 @@ When drawing the circuit, show `A`, `B` and `C` entering one three-input AND sym
 
 ### Boolean algebra notation
 
-Sources: [9618/31 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=5); [9618/32 · May/June 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9).
+Sources: [9618/32 · May/June 2025 · Q7(b), 7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=8); [9618/33 · October/November 2025 · Q6(a)(ii), 6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=9); [9618/32 · October/November 2024 · Q6(a), 6(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=8); [9618/31 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=5); [9618/31 · October/November 2024 · Q7(a), 7(d)(i), 7(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=8).
 
 | Symbol | Meaning | Logic gate |
 | --- | --- | --- |
@@ -515,7 +515,7 @@ It means **OR**.
 
 ### Core Boolean laws
 
-Sources: [9618/32 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6); [9618/32 · May/June 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9).
+Sources: [9618/32 · May/June 2025 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=9); [9618/31 · October/November 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=5); [9618/32 · October/November 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=6); [9618/33 · October/November 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=10); [9618/31 · May/June 2023 · Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=7).
 
 | Law | AND form | OR form |
 | --- | --- | --- |
@@ -596,7 +596,7 @@ Step:
 
 ## Truth Tables
 
-Sources: [9618/31 · May/June 2024 · Q6(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=9); [9618/32 · May/June 2025 · Q7(a)–(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=8).
+Sources: [9618/32 · May/June 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=8); [9618/32 · October/November 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=11); [9618/31 · October/November 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=5); [9618/32 · May/June 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=7); [9618/31 · May/June 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=9).
 
 ### Truth table method
 
@@ -635,7 +635,7 @@ So always show working columns.
 
 ### Sum-of-products
 
-Sources: [9618/31 · October/November 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=8); [9618/31 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=10).
+Sources: [9618/32 · October/November 2024 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=8); [9618/31 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=10); [9618/33 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=7); [9618/31 · October/November 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=8); [9618/32 · May/June 2024 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=7).
 
 A **sum-of-products** expression is made by OR-ing together product terms.
 
@@ -846,7 +846,7 @@ The block symbol shows `J`, `K`, the active clock edge and complementary outputs
 
 ## Karnaugh Maps
 
-Sources: [9618/31 · May/June 2024 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=10); [9618/31 · May/June 2025 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=10); [9618/31 · May/June 2025 · Q5(b)(ii)–(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=11); [9618/33 · October/November 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=9).
+Sources: [9618/33 · May/June 2025 · Q3(b)(i), 3(b)(ii), 3(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=8); [9618/31 · May/June 2025 · Q5(b)(i), 5(b)(ii), 5(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=10); [9618/32 · October/November 2024 · Q6(b), 6(c), 6(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=8); [9618/31 · October/November 2024 · Q7(b), 7(c), 7(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=9); [9618/32 · October/November 2025 · Q6(b)(i), 6(b)(ii), 6(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=11); [9618/33 · October/November 2025 · Q6(a)(i), 6(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=9).
 
 ### What is a K-map?
 

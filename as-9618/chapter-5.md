@@ -63,7 +63,7 @@ Use this overview to explain management, choose support software, trace translat
 
 ## 5.1 Operating Systems
 
-Sources: [9618/11 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/11 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5).
+Sources: [9618/11 · October/November 2024 · Q4(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7); [9618/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=9); [9618/11 · May/June 2023 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/11 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/11 · October/November 2025 · Q5(a)(i), Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8).
 
 ### Why a computer system requires an OS
 
@@ -111,7 +111,7 @@ C --> D[Apply to device / user / program]
 
 ### Memory management
 
-Sources: [9618/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=9).
+Sources: [9618/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=9); [9618/11 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10).
 
 #### Meaning
 
@@ -147,7 +147,7 @@ Virtual memory and paging are A2 Section 16.1 topics. They are taught in [A2 Cha
 
 ### File management
 
-Sources: [9618/11 · October/November 2024 · Q4(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7).
+Sources: [9618/11 · October/November 2024 · Q4(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7); [9618/11 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/13 · October/November 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12).
 
 #### Meaning
 
@@ -188,7 +188,7 @@ Backup is usually **utility software**, not the core meaning of file management.
 
 ### Security management
 
-Sources: [9618/11 · October/November 2025 · Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8).
+Sources: [9618/11 · October/November 2025 · Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8); [9618/11 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/13 · October/November 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12).
 
 #### Meaning
 
@@ -221,7 +221,7 @@ Security management <span lang="zh-CN">是</span> OS <span lang="zh-CN">防止</
 
 ### Hardware / peripheral management
 
-Sources: [9618/11 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/11 · October/November 2025 · Q5(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8).
+Sources: [9618/11 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=5); [9618/11 · October/November 2024 · Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=6); [9618/11 · October/November 2025 · Q5(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8); [9618/11 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/13 · October/November 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12).
 
 #### Meaning
 
@@ -251,7 +251,7 @@ A printer is much slower than the CPU.
 
 ### Process management
 
-Sources: [9618/12 · May/June 2023 · Q5(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=8); [9618/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=9).
+Sources: [9618/12 · May/June 2023 · Q5(d)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=8); [9618/12 · October/November 2024 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=5); [9618/12 · May/June 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=9); [9618/11 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_11.pdf#page=10); [9618/13 · October/November 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12).
 
 #### Meaning
 
@@ -282,7 +282,7 @@ No. It means managing **running programs**.
 
 ## Utility Software
 
-Sources: [9618/12 · May/June 2023 · Q5(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=8); [9618/12 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=9).
+Sources: [9618/12 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=9); [9618/11 · October/November 2024 · Q4(a)(ii), Q4(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7); [9618/13 · October/November 2023 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6); [9618/11 · May/June 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · May/June 2023 · Q5(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=8).
 
 ### What is utility software?
 
@@ -332,7 +332,7 @@ Back-up software creates copies of files/data so they can be restored if the ori
 
 ### File compression utility
 
-Sources: [9618/13 · October/November 2023 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6); [9618/11 · October/November 2024 · Q4(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7).
+Sources: [9618/11 · October/November 2024 · Q4(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=7); [9618/13 · October/November 2023 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6); [9618/12 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=9).
 
 #### Meaning
 
@@ -359,7 +359,7 @@ Do not say “compression makes the file better quality”. It usually reduces s
 
 ### Virus checker / anti-virus utility
 
-Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9).
+Sources: [9618/13 · May/June 2023 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=9); [9618/13 · October/November 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=9); [9618/13 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=6); [9618/12 · October/November 2025 · Q5(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=8).
 
 #### Meaning
 
@@ -382,7 +382,7 @@ No. It reduces risk but cannot guarantee perfect protection.
 
 ### Defragmentation software
 
-Sources: [9618/11 · May/June 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6).
+Sources: [9618/11 · May/June 2023 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_11.pdf#page=6); [9618/12 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=9).
 
 #### Meaning
 
@@ -401,7 +401,7 @@ Defragmentation is mainly relevant to **magnetic hard disks**, not SSDs.
 
 ### Disk formatter
 
-Sources: [9618/13 · October/November 2023 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6).
+Sources: [9618/13 · October/November 2023 · Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_13.pdf#page=6); [9618/12 · October/November 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_12.pdf#page=9).
 
 #### Meaning
 
@@ -431,7 +431,7 @@ Disk analysis checks storage usage and errors. Disk repair attempts to fix file 
 
 ## Program Libraries and DLL Files
 
-Sources: [9618/12 · May/June 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=9); [9618/12 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=11).
+Sources: [9618/11 · October/November 2025 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_11.pdf#page=8); [9618/12 · May/June 2023 · Q7(a)(i), Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=9); [9618/13 · May/June 2024 · Q7(e)(i), Q7(e)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_13.pdf#page=8); [9618/12 · May/June 2024 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=11); [9618/13 · October/November 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_13.pdf#page=12).
 
 ### What is a program library?
 
@@ -487,7 +487,7 @@ A DLL is a library file that is linked/loaded when the program runs, not permane
 
 ## 5.2 Language Translators
 
-Sources: [9618/12 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=6); [9618/12 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=9).
+Sources: [9618/11 · October/November 2023 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=8); [9618/13 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_13.pdf#page=6); [9618/13 · May/June 2023 · Q5(a)(i), Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_13.pdf#page=7); [9618/12 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=9); [9618/12 · October/November 2025 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_12.pdf#page=11).
 
 ### Why translators are needed
 
@@ -631,7 +631,7 @@ For AS 9618, remember: **partially compiled and partially interpreted**.
 
 ## Integrated Development Environment (IDE)
 
-Sources: [9618/12 · May/June 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=10); [9618/11 · October/November 2023 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_11.pdf#page=8).
+Sources: [9618/12 · May/June 2024 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_12.pdf#page=11); [9618/11 · October/November 2024 · Q4(d)(i), Q4(d)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_11.pdf#page=8); [9618/12 · October/November 2024 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_12.pdf#page=5); [9618/12 · May/June 2023 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_12.pdf#page=10); [9618/21 · October/November 2025 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=6).
 
 ### What is an IDE?
 

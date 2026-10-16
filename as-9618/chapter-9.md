@@ -36,7 +36,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Abstraction
 
-Sources: [9618/22 · May/June 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=9); [9618/23 · May/June 2023 · Q7(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=6).
+Sources: [9618/22 · May/June 2023 · Q7(a)(i), Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=9); [9618/21 · May/June 2024 · Q7(a)(i), Q7(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=9); [9618/23 · May/June 2023 · Q7(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=6); [9618/22 · October/November 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=10).
 
 **Abstraction** removes irrelevant detail and retains only the information needed to solve the current problem.
 
@@ -68,7 +68,7 @@ State which data is essential and which can be omitted **for the requested task*
 
 ## Decomposition
 
-Sources: [9618/21 · May/June 2025 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6); [9618/22 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=10).
+Sources: [9618/23 · October/November 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=12); [9618/21 · May/June 2023 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=8); [9618/21 · May/June 2025 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6); [9618/22 · May/June 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=10); [9618/22 · May/June 2024 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=10).
 
 **Decomposition** divides a problem into smaller sub-problems that can become program modules.
 
@@ -105,7 +105,7 @@ Do not confuse decomposition with writing every instruction. It identifies the p
 
 ## Algorithms
 
-Supplementary source — no direct MS located: [NIST: algorithm](https://www.nist.gov/dads/HTML/algorithm.html).
+Sources: [9618/21 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=5); [9618/21 · October/November 2025 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=12). Related application questions assess a step-by-step solution with input, calculations and output, and when a search should terminate. They do not ask for the standalone definition of an algorithm.
 
 An **algorithm** is a solution expressed as a finite sequence of defined, unambiguous steps.
 
@@ -135,7 +135,7 @@ OUTPUT Total
 
 ## Identifiers and Identifier Tables
 
-Sources: [9618/22 · May/June 2024 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4); [9618/21 · May/June 2024 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=4).
+Sources: [9618/21 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6); [9618/22 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=4); [9618/21 · May/June 2024 · Q1(c)(i), Q1(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=4); [9618/22 · May/June 2024 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4); [9618/22 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=3).
 
 An **identifier** is the name used for a variable, constant, array, record or subroutine.
 
@@ -170,7 +170,7 @@ If an array is needed, include its element type and bounds:
 
 ## Input, Process and Output
 
-Sources: [9618/23 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=3); [9618/22 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4).
+Sources: [9618/22 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4); [9618/23 · May/June 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=3).
 
 Use an IPO table before writing the detailed algorithm.
 
@@ -193,7 +193,7 @@ Questions to ask:
 
 ## The Three Basic Constructs
 
-Sources: [9618/22 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4); [9618/21 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6).
+Sources: [9618/23 · October/November 2025 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=7); [9618/23 · October/November 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=4); [9618/22 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=4); [9618/22 · October/November 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=5); [9618/21 · May/June 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6).
 
 ### Sequence
 
@@ -242,7 +242,7 @@ Every loop needs:
 
 ## Algorithm Representations
 
-Sources: [9618/21 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=5); [9618/21 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=4).
+Sources: [9618/23 · October/November 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=5); [9618/21 · May/June 2025 · Q2(a)(i), Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=7); [9618/22 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=5); [9618/21 · May/June 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=4); [9618/21 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=5).
 
 ### Structured English
 

@@ -40,7 +40,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Purpose of a Development Life Cycle
 
-Sources: [9618/22 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=6).
+Sources: [9618/22 · May/June 2025 · Q1(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=6).
 
 A **program development life cycle** provides an organised process for moving from a problem to a working, maintainable solution.
 
@@ -59,7 +59,7 @@ Different projects need different life cycles because requirements, risk, deadli
 
 ## Development Life Cycles
 
-Sources: [9618/21 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=6); [9618/22 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=6).
+Sources: [9618/22 · May/June 2025 · Q1(a)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=6); [9618/21 · May/June 2023 · Q5(a)(i), Q5(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=6); [9618/23 · May/June 2022 · Q8(b), Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s22_ms_23.pdf#page=9); [9618/22 · October/November 2021 · Q2(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w21_ms_22.pdf#page=5).
 
 ### Waterfall
 
@@ -93,7 +93,7 @@ Justify the choice using the scenario's requirements: early prototypes, changing
 
 ## Life-Cycle Stages
 
-Sources: [9618/21 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=9); [9618/22 · October/November 2024 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=10).
+Sources: [9618/22 · October/November 2024 · Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=10); [9618/21 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=9); [9618/22 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=10); [9618/23 · October/November 2024 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=11).
 
 | Stage | Main work | Typical output |
 |---|---|---|
@@ -109,7 +109,7 @@ These are stages of work, not necessarily one-directional steps. Iterative and R
 
 ## Structure Charts
 
-Sources: [9618/21 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=8); [9618/21 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=10).
+Sources: [9618/23 · May/June 2024 · Q7(a)(i), Q7(a)(ii), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=11); [9618/23 · May/June 2025 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=11); [9618/22 · October/November 2023 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=10); [9618/21 · October/November 2024 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=11); [9618/22 · October/November 2025 · Q7(a), Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=12).
 
 A structure chart shows:
 
@@ -155,7 +155,7 @@ ENDIF
 
 ## State-Transition Diagrams
 
-Sources: [9618/22 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=10); [9618/22 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=10).
+Sources: [9618/23 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=14); [9618/22 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=11); [9618/21 · October/November 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=15); [9618/21 · October/November 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=8); [9618/22 · May/June 2024 · Q7(b)(i), Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=10).
 
 A state-transition diagram documents:
 
@@ -187,7 +187,7 @@ When constructing one:
 
 ## Program Faults
 
-Sources: [9618/21 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=7); [9618/21 · October/November 2024 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=7).
+Sources: [9618/23 · May/June 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=10); [9618/22 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=8); [9618/21 · May/June 2023 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=3); [9618/22 · May/June 2024 · Q5(a)(i), Q5(a)(ii), Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=8); [9618/22 · May/June 2025 · Q2(b)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=8).
 
 | Error type | Meaning | Example |
 |---|---|---|
@@ -224,7 +224,7 @@ Avoiding faults:
 
 ## Testing Methods
 
-Sources: [9618/21 · October/November 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=6); [9618/21 · May/June 2023 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=10).
+Sources: [9618/23 · May/June 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=10); [9618/21 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=7); [9618/21 · October/November 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=6); [9618/23 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=5); [9618/21 · May/June 2023 · Q8(c)(i), Q8(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=10).
 
 | Method | What it does |
 |---|---|
@@ -249,7 +249,7 @@ Selection examples:
 
 ## Test Strategy, Test Plan and Test Data
 
-Sources: [9618/21 · October/November 2024 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=9); [9618/21 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=10).
+Sources: [9618/22 · October/November 2023 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=7); [9618/21 · October/November 2023 · Q5(b)(i), Q5(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=7); [9618/22 · May/June 2025 · Q2(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=8); [9618/21 · May/June 2025 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=10); [9618/21 · October/November 2024 · Q5(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=9).
 
 ### Test strategy
 
@@ -291,7 +291,7 @@ An expected result must be specific enough to decide pass/fail.
 
 ## Maintenance
 
-Sources: [9618/23 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=5); [9618/23 · October/November 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=4).
+Sources: [9618/22 · May/June 2025 · Q1(b)(i), Q1(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=6); [9618/22 · October/November 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=10); [9618/23 · October/November 2023 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=4); [9618/21 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=9); [9618/22 · October/November 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=4).
 
 A program that currently works still needs maintenance because faults may be discovered, user requirements may change, and hardware, operating systems or data formats may change.
 
@@ -315,7 +315,7 @@ Maintenance needs:
 
 ## Enhancing Existing Programs
 
-Sources: [9618/21 · October/November 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=19); [9618/22 · October/November 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=15).
+Sources: [9618/23 · October/November 2023 · Q8(b), Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=10); [9618/21 · October/November 2025 · Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=19); [9618/21 · May/June 2025 · Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=14); [9618/22 · October/November 2025 · Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=15); [9618/22 · October/November 2024 · Q8(c), Q8(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=12).
 
 When asked to amend a program:
 

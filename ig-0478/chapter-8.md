@@ -37,7 +37,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ### Variables and constants
 
-Sources: [0478/22 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=5); [0478/22 · February/March 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=6).
+Sources: [0478/22 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=5); [0478/22 · February/March 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=6); [0478/21 · October/November 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=5).
 
 
 - A **variable** is a named storage location whose value can change.
@@ -52,7 +52,7 @@ Use constants for fixed values such as tax rates, array limits and conversion fa
 
 ### Primitive data types
 
-Sources: [0478/22 · February/March 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_22.pdf#page=6); [0478/21 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=4).
+Sources: [0478/21 · May/June 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=5); [0478/23 · May/June 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=5); [0478/21 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_21.pdf#page=4); [0478/22 · May/June 2023 · Q11(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=10); [0478/22 · February/March 2023 · Q10(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=11).
 
 
 | Type | Example | Suitable use |
@@ -67,7 +67,7 @@ Do not store a phone number as an integer if it may begin with zero or contain f
 
 ### Input, output and assignment
 
-Sources: [0478/23 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=4); [0478/23 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_23.pdf#page=7).
+Sources: [0478/21 · May/June 2023 · Q5(a), Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=7); [0478/23 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=7); [0478/23 · October/November 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=4); [0478/22 · February/March 2023 · Q6(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=7); [0478/23 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_23.pdf#page=7).
 
 
 ```text
@@ -82,7 +82,7 @@ Assignment replaces the previous value of a variable. It is not the same as math
 
 ## Sequence, Selection and Iteration
 
-Sources: [0478/22 · February/March 2024 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_22.pdf#page=8); [0478/21 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=8).
+Sources: [0478/22 · May/June 2023 · Q7(a), Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=6); [0478/21 · May/June 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=8); [0478/21 · May/June 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=14); [0478/21 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=8); [0478/23 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=7).
 
 
 ### Sequence
@@ -174,7 +174,7 @@ UNTIL Choice >= 1 AND Choice <= 3
 
 ### Arithmetic operators
 
-Sources: [0478/23 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=8); [0478/21 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=10).
+Sources: [0478/21 · October/November 2025 · Q7(b), Q7(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=14); [0478/21 · October/November 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=17); [0478/21 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=10); [0478/21 · May/June 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=6); [0478/23 · May/June 2023 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_23.pdf#page=4).
 
 
 | Operator | Meaning | Example result |
@@ -189,7 +189,7 @@ Sources: [0478/23 · May/June 2025 · Q2](https://pastpapers.papacambridge.com/d
 
 ### Relational and logical operators
 
-Sources: [0478/22 · May/June 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=6); [0478/21 · October/November 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_21.pdf#page=4).
+Sources: [0478/22 · May/June 2023 · Q7(a), Q7(b), Q7(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=6); [0478/22 · February/March 2023 · Q6(a), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=7); [0478/22 · May/June 2024 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=6); [0478/21 · October/November 2024 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_21.pdf#page=10); [0478/22 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_22.pdf#page=8).
 
 
 - relational: `=`, `<`, `<=`, `>`, `>=`, `<>`
@@ -206,7 +206,7 @@ ENDIF
 
 ### ROUND and RANDOM
 
-Sources: [0478/21 · May/June 2025 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=10); [0478/22 · February/March 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=11).
+Sources: [0478/21 · May/June 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=6); [0478/23 · May/June 2023 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_23.pdf#page=4); [0478/21 · May/June 2024 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=7); [0478/22 · May/June 2025 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=7); [0478/22 · February/March 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m25_ms_22.pdf#page=11).
 
 
 - `ROUND(Number, Places)` rounds a value to a stated number of decimal places.
@@ -245,7 +245,7 @@ The second example divides the `0` to `1` range into six equal intervals, so `Di
 
 ## String Handling
 
-Sources: [0478/23 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=11); [0478/22 · October/November 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=7).
+Sources: [0478/22 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=10); [0478/22 · May/June 2025 · Q6(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=9); [0478/22 · October/November 2024 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_22.pdf#page=9); [0478/21 · May/June 2025 · Q4(a), Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=9); [0478/23 · May/June 2025 · Q4(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=11).
 
 
 Common string operations include:
@@ -281,7 +281,7 @@ gives `"AB"`.
 
 ### Procedure
 
-Sources: [0478/21 · October/November 2025 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=17); [0478/22 · October/November 2025 · Q2(b)(i)–(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=8).
+Sources: [0478/23 · May/June 2025 · Q3(b)(i), Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=9); [0478/21 · May/June 2024 · Q2(a), Q2(b), Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=4); [0478/22 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=7); [0478/22 · October/November 2025 · Q2(b)(i), Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=8); [0478/21 · October/November 2025 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=17).
 
 
 A procedure performs a task and does not return a value directly.
@@ -300,7 +300,7 @@ CALL DisplayResult("Mina", 72)
 
 ### Function
 
-Sources: [0478/21 · May/June 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=13); [0478/22 · February/March 2023 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=11).
+Sources: [0478/22 · February/March 2023 · Q10(b), Q10(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=11); [0478/21 · May/June 2024 · Q2(a), Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=4); [0478/21 · May/June 2025 · Q9(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_21.pdf#page=13); [0478/23 · May/June 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_23.pdf#page=4).
 
 
 A function returns one value.
@@ -319,14 +319,14 @@ Valid <- IsValidMark(InputMark)
 
 ### Parameters
 
-Sources: [0478/23 · May/June 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=9); [0478/22 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=7).
+Sources: [0478/23 · May/June 2025 · Q3(b)(i), Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=9); [0478/22 · October/November 2023 · Q8](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=7); [0478/21 · May/June 2024 · Q2(a), Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=4); [0478/22 · February/March 2023 · Q10(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m23_ms_22.pdf#page=11); [0478/23 · May/June 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_23.pdf#page=4).
 
 
 Parameters carry values into a procedure or function. Use their order and data types consistently. Paper 2 tasks may use up to three parameters.
 
 ### Local and global variables
 
-Sources: [0478/23 · May/June 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=10); [0478/23 · October/November 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=9).
+Sources: [0478/23 · May/June 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_23.pdf#page=10); [0478/23 · October/November 2023 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=9); [0478/21 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=4).
 
 
 - a **local variable** is declared in a subroutine and can be accessed only within that subroutine
@@ -338,7 +338,7 @@ Prefer local variables unless several subroutines genuinely need shared state. L
 
 ## Arrays
 
-Sources: [0478/23 · May/June 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=6); [0478/22 · October/November 2025 · Q2](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=7).
+Sources: [0478/23 · May/June 2024 · Q4(a), Q4(b), Q4(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=6); [0478/22 · October/November 2025 · Q2(a), Q2(b)(i), Q2(c)(i), Q2(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=7); [0478/22 · October/November 2023 · Q4(a), Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=4); [0478/22 · October/November 2025 · Q5(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_22.pdf#page=13); [0478/22 · May/June 2025 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s25_ms_22.pdf#page=7).
 
 
 An array stores multiple values of the same type under one identifier.
@@ -392,7 +392,7 @@ Here, `Index` is a variable index. `HighestIndex` preserves the position of the 
 
 ## File Handling
 
-Sources: [0478/21 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=17); [0478/23 · May/June 2024 · Q7](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=11).
+Sources: [0478/22 · October/November 2024 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_22.pdf#page=9); [0478/21 · October/November 2024 · Q8(b), Q8(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w24_ms_21.pdf#page=8); [0478/23 · October/November 2023 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_23.pdf#page=4); [0478/21 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=11); [0478/23 · October/November 2025 · Q9(a), Q9(b)(i)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_23.pdf#page=15).
 
 
 Files preserve data after a program stops.
@@ -426,7 +426,9 @@ Each `WRITEFILE` statement writes the supplied item as one line in this layout. 
 
 ### Read lines until end of file
 
-**Supplementary programming technique:** the current 0478 pseudocode reference specifies opening, reading, writing and closing files; it does not list `EOF()` as a required routine. Use the file operations stated in the question. [Syllabus pseudocode reference](https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf#page=48).
+Sources: [0478/21 · May/June 2024 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=11); [0478/21 · October/November 2025 · Q9](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w25_ms_21.pdf#page=17).
+
+**Supplementary programming technique:** the current 0478 pseudocode reference specifies opening, reading, writing and closing files; it does not list `EOF()` as a required routine. Use the file operations stated in the question. These related questions support file reading; neither assesses the EOF-controlled loop below.
 
 
 ```text
@@ -463,7 +465,7 @@ Opening an existing file for writing may replace its contents. Use the mode stat
 
 ## Maintainable Programs
 
-Sources: [0478/23 · May/June 2024 · Q5(c)–(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_23.pdf#page=9); [0478/21 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=8).
+Sources: [0478/21 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_21.pdf#page=8); [0478/21 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s24_ms_21.pdf#page=5); [0478/22 · October/November 2023 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_w23_ms_22.pdf#page=5); [0478/22 · February/March 2024 · Q10](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_m24_ms_22.pdf#page=12); [0478/22 · May/June 2023 · Q6](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/0478_s23_ms_22.pdf#page=6).
 
 
 A maintainable program is easier to understand, test and change.

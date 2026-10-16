@@ -36,7 +36,7 @@ Use the topic sections below to connect definitions, processes, comparisons and 
 
 ## Data Types
 
-Sources: [9618/22 · October/November 2025 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=5); [9618/21 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=4).
+Sources: [9618/21 · May/June 2025 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=6); [9618/22 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=4); [9618/22 · October/November 2024 · Q1(d)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=4); [9618/21 · May/June 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=4); [9618/23 · October/November 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=4).
 
 Choose a data type from what the value represents and how it will be processed.
 
@@ -62,7 +62,7 @@ Examples:
 
 ## Records
 
-Sources: [9618/21 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=5); [9618/22 · May/June 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=7).
+Sources: [9618/22 · May/June 2024 · Q3(a)(i), Q3(a)(ii), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=6); [9618/21 · October/November 2025 · Q3(a)(i), Q3(a)(ii), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=9); [9618/23 · May/June 2024 · Q3(a)(i), Q3(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=5); [9618/22 · May/June 2025 · Q7(c)(i), Q7(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=20); [9618/22 · October/November 2023 · Q1(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=4).
 
 A **record** stores related fields of different data types under one identifier.
 
@@ -104,7 +104,7 @@ Use a record for one entity’s related fields, which can have different types. 
 
 ## Arrays
 
-Sources: [9618/23 · May/June 2023 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=3); [9618/22 · May/June 2025 · Q1(d)(iii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=7).
+Sources: [9618/22 · May/June 2024 · Q3(a)(ii), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_22.pdf#page=7); [9618/22 · May/June 2025 · Q7(c)(i), Q7(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=20); [9618/23 · May/June 2024 · Q4(b)(i), Q4(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_23.pdf#page=7); [9618/22 · May/June 2023 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=4); [9618/22 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=9).
 
 An array stores elements of the same data type.
 
@@ -154,7 +154,7 @@ Always use the declared bounds. A dimension with bounds `L:U` has `U - L + 1` el
 
 ### Linear search
 
-Sources: [9618/21 · October/November 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=12); [9618/22 · May/June 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=16).
+Sources: [9618/22 · May/June 2025 · Q7(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=16); [9618/21 · October/November 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=18); [9618/21 · May/June 2023 · Q8(b), Q8(e)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_21.pdf#page=10); [9618/22 · October/November 2025 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_22.pdf#page=14); [9618/23 · October/November 2025 · Q8(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=16).
 
 Compare the search value with each successive element. For a first-match search, stop when it is found or the array ends; return a matching index or a distinct not-found value. Continuing after the first match wastes comparisons.
 
@@ -202,7 +202,7 @@ If parallel arrays or records are used, swap the entire associated item, not jus
 
 ## Text Files
 
-Sources: [9618/21 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_21.pdf#page=12); [9618/23 · May/June 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=4).
+Sources: [9618/23 · May/June 2023 · Q8(a), Q8(b), Q8(c)(i), Q8(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=8); [9618/22 · May/June 2023 · Q8(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=12); [9618/21 · October/November 2024 · Q3(a), Q3(b), Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_21.pdf#page=5); [9618/21 · May/June 2025 · Q7(b)(i), Q7(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=13); [9618/21 · October/November 2023 · Q8(a), Q8(b), Q8(c)(i), Q8(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=9).
 
 A text file preserves data after a program ends and can store more items than a fixed-size array, subject to storage capacity. `READ` reads existing data; `WRITE` creates/replaces output; `APPEND` adds to the end without replacing existing contents. Convert non-string values when the specified text-file interface requires strings.
 
@@ -251,7 +251,7 @@ File checklist:
 
 ## Abstract Data Types
 
-Supplementary source — no direct MS located: [NIST: abstract data type](https://www.nist.gov/dads/HTML/abstractDataType.html).
+Sources: [9618/21 · May/June 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=6); [9618/22 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=15). Related application questions assess a linked list implemented with arrays and pointers, and identify an operation that inserts a node. They support the examples and operations below, rather than the standalone ADT definition.
 
 An **abstract data type (ADT)** is:
 
@@ -279,7 +279,7 @@ You are not required to write full pseudocode implementations for these ADTs.
 
 ## Stacks
 
-Sources: [9618/21 · October/November 2023 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=5); [9618/22 · October/November 2024 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=6).
+Sources: [9618/23 · May/June 2023 · Q3(a)(i), Q3(a)(ii), Q3(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_23.pdf#page=4); [9618/22 · October/November 2024 · Q3(a)(i), Q3(a)(ii), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=6); [9618/23 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=7); [9618/21 · October/November 2023 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=5); [9618/23 · May/June 2025 · Q2(a)(i), Q2(a)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=7).
 
 A stack is **LIFO**: last in, first out.
 
@@ -317,7 +317,7 @@ Errors:
 
 ## Queues
 
-Sources: [9618/22 · May/June 2023 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=4); [9618/23 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=8).
+Sources: [9618/22 · May/June 2023 · Q3(a)(i), Q3(a)(ii), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_22.pdf#page=4); [9618/23 · October/November 2023 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=6); [9618/21 · May/June 2025 · Q5](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_21.pdf#page=10); [9618/23 · May/June 2025 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=8); [9618/22 · October/November 2023 · Q8(c)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=14).
 
 A queue is **FIFO**: first in, first out.
 
@@ -352,7 +352,7 @@ In an array implementation, editing a located queued record changes its data but
 
 ## Linked Lists
 
-Sources: [9618/23 · October/November 2024 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=7); [9618/22 · May/June 2025 · Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=15).
+Sources: [9618/22 · May/June 2025 · Q6(a)(i), Q6(a)(ii), Q6(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_22.pdf#page=14); [9618/23 · October/November 2024 · Q3(a)(i), Q3(a)(ii), Q3(b), Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=5); [9618/21 · May/June 2024 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=6); [9618/22 · October/November 2023 · Q3(a), Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_22.pdf#page=6); [9618/23 · May/June 2025 · Q2(b)(i), Q2(b)(ii)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_23.pdf#page=8).
 
 A linked list contains nodes. Each node stores:
 
@@ -403,7 +403,7 @@ Costs:
 
 ## Array Implementations of ADTs
 
-Sources: [9618/21 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_21.pdf#page=5); [9618/23 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=6).
+Sources: [9618/21 · May/June 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_21.pdf#page=6); [9618/23 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_23.pdf#page=7); [9618/23 · October/November 2024 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_23.pdf#page=7); [9618/23 · October/November 2023 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_23.pdf#page=6); [9618/22 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_22.pdf#page=6).
 
 ### Stack
 

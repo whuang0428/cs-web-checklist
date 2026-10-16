@@ -64,7 +64,7 @@ Use this overview to trace the TCP/IP stack, compare switching, route packets an
 ## 14.1 Protocols
 ### What is a protocol?
 
-Sources: [9618/32 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/31 · October/November 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=7).
+Sources: [9618/31 · October/November 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=7); [9618/32 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4).
 
 #### Exam-style answer
 > A protocol is a standard set of rules that enables successful communication / data transfer between devices.
@@ -92,7 +92,7 @@ This is too vague. You need to say **rules** and **successful data transfer / co
 
 ### Protocol suite
 
-Sources: [9618/32 · October/November 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=4); [9618/31 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=5).
+Sources: [9618/32 · May/June 2025 · Q3(a), 3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=5); [9618/31 · October/November 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6); [9618/32 · October/November 2023 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_32.pdf#page=4); [9618/31 · May/June 2024 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=5).
 
 #### Definition
 > A protocol suite is a collection of related protocols used together to enable communication across a network.
@@ -133,7 +133,7 @@ D --> E[Application Layer]
 ## TCP/IP Four Layers
 ### Application Layer
 
-Sources: [9618/32 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=7); [9618/31 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=8).
+Sources: [9618/32 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=7); [9618/31 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=8); [9618/31 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=9); [9618/31 · October/November 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6); [9618/32 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=5).
 
 #### Main purpose
 Application Layer <span lang="zh-CN">是用户和网络服务最接近的一层</span>。<span lang="zh-CN">它为应用程序提供通信服务</span>，<span lang="zh-CN">比如网页访问</span>、<span lang="zh-CN">文件传输</span>、<span lang="zh-CN">电子邮件</span>、peer-to-peer file sharing。
@@ -159,7 +159,7 @@ Application Layer <span lang="zh-CN">是用户和网络服务最接近的一层<
 
 ### Transport Layer
 
-Sources: [9618/31 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=5); [9618/31 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=8).
+Sources: [9618/31 · May/June 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=8); [9618/31 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=5).
 
 #### Main purpose
 Transport Layer <span lang="zh-CN">负责</span> source host <span lang="zh-CN">到</span> destination host <span lang="zh-CN">之间的数据传输管理</span>。<span lang="zh-CN">它不关心网页内容是什么</span>，<span lang="zh-CN">而是关心数据如何可靠地送到正确的</span> application process。
@@ -199,7 +199,7 @@ Internet Layer <span lang="zh-CN">负责</span> IP addressing <span lang="zh-CN"
 
 ### Link Layer
 
-Sources: [9618/31 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=3); [9618/33 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=9).
+Sources: [9618/33 · May/June 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_33.pdf#page=9); [9618/31 · October/November 2023 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=3); [9618/31 · October/November 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6); [9618/32 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=5).
 
 #### Main purpose
 Link Layer <span lang="zh-CN">负责数据在本地网络中的传输</span>，<span lang="zh-CN">和实际</span> network hardware / physical medium <span lang="zh-CN">接口</span>。
@@ -218,7 +218,7 @@ Link Layer <span lang="zh-CN">负责数据在本地网络中的传输</span>，<
 
 ### How the layers interact
 
-Sources: [9618/31 · October/November 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6); [9618/32 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=5).
+Sources: [9618/32 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=5); [9618/31 · October/November 2024 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6); [9618/32 · October/November 2024 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=7); [9618/31 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=5).
 
 #### Exam-style answer
 > The TCP/IP suite can be viewed as layers within a stack. Each layer accepts input from the layer above or below it. When a message is sent, it passes from the Application Layer down to the Link Layer. When received, it passes from the Link Layer up to the Application Layer.
@@ -252,7 +252,7 @@ sequenceDiagram
 ## Application Layer Protocols
 ### Protocol table
 
-Sources: [9618/31 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=5); [9618/32 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=7); [9618/33 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=8).
+Sources: [9618/33 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=8); [9618/32 · May/June 2024 · Q2(b), 2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/31 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_31.pdf#page=5); [9618/32 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=7); [9618/31 · October/November 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=8).
 
 | Protocol | Full name | Purpose / Exam-style phrasing |
 | --- | --- | --- |
@@ -267,7 +267,7 @@ Sources: [9618/31 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.co
 
 ### SMTP vs POP3 vs IMAP
 
-Sources: [9618/32 · May/June 2024 · Q2(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/31 · October/November 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=8); [9618/32 · October/November 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=8).
+Sources: [9618/33 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=8); [9618/31 · October/November 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=8); [9618/32 · October/November 2025 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=8); [9618/31 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=3); [9618/32 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=7).
 
 #### SMTP
 SMTP is for **sending** email.
@@ -295,7 +295,7 @@ IMAP is also for receiving email, but it keeps messages on the server and synchr
 
 ### BitTorrent
 
-Sources: [9618/32 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/32 · October/November 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=8).
+Sources: [9618/32 · October/November 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=8); [9618/32 · May/June 2024 · Q2(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s24_ms_32.pdf#page=4); [9618/33 · October/November 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=8); [9618/32 · October/November 2024 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=7); [9618/31 · October/November 2023 · Q2(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w23_ms_31.pdf#page=3).
 
 #### Exam-style answer
 > BitTorrent shares a file across peers. A torrent descriptor supplies metadata; in the tracker-based model, peers contact a tracker to locate members of the swarm. Initially, at least one peer holds the entire file, divided into equal-sized pieces. A peer downloads pieces from other peers and can upload pieces already received; a peer sharing the complete file is a seed.
@@ -321,7 +321,7 @@ For a process question, explain the descriptor, tracker, pieces and sharing as w
 ## 14.2 Circuit Switching
 ### What is circuit switching?
 
-Sources: [9618/31 · October/November 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=5).
+Sources: [9618/32 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8); [9618/32 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10); [9618/31 · October/November 2024 · Q3(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=5); [9618/31 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=5); [9618/32 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6).
 
 Circuit switching <span lang="zh-CN">是在通信开始前</span>，<span lang="zh-CN">先建立一条</span> dedicated path / dedicated channel。<span lang="zh-CN">传输期间</span>，<span lang="zh-CN">数据都沿着同一路径传输</span>，<span lang="zh-CN">直到通信结束</span>。
 
@@ -342,7 +342,7 @@ E --> F[Dedicated path released]
 
 ### Benefits of circuit switching
 
-Sources: [9618/31 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=5); [9618/32 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6); [9618/32 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=9).
+Sources: [9618/32 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=9); [9618/32 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8); [9618/31 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=5); [9618/32 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6); [9618/31 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6).
 
 | Benefit | Exam-style phrasing |
 | --- | --- |
@@ -359,7 +359,7 @@ Sources: [9618/31 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.co
 
 ### Drawbacks of circuit switching
 
-Sources: [9618/31 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=5); [9618/31 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6); [9618/32 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6).
+Sources: [9618/32 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6); [9618/31 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6); [9618/32 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10); [9618/31 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=5); [9618/32 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8).
 
 | Drawback | Exam-style phrasing |
 | --- | --- |
@@ -376,7 +376,7 @@ Sources: [9618/31 · May/June 2023 · Q5(b)](https://pastpapers.papacambridge.co
 
 ### Suitable uses
 
-Sources: [9618/31 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=5).
+Sources: [9618/31 · May/June 2023 · Q5(a), 5(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_31.pdf#page=5); [9618/32 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=9); [9618/32 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6); [9618/31 · October/November 2024 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=6).
 
 | Scenario | Why circuit switching may be suitable |
 | --- | --- |
@@ -390,7 +390,7 @@ Sources: [9618/31 · May/June 2023 · Q5(a)](https://pastpapers.papacambridge.co
 ## Packet Switching
 ### What is packet switching?
 
-Sources: [9618/32 · October/November 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=4); [9618/31 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=8); [9618/33 · October/November 2025 · Q3](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_33.pdf#page=7).
+Sources: [9618/32 · May/June 2023 · Q7(a), 7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=7); [9618/32 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10); [9618/32 · October/November 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=4); [9618/31 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=8); [9618/31 · October/November 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=8).
 
 Packet switching <span lang="zh-CN">是把</span> message <span lang="zh-CN">拆成很多</span> packets，<span lang="zh-CN">每个</span> packet <span lang="zh-CN">有</span> header。Packets <span lang="zh-CN">可以独立走不同路线</span>，<span lang="zh-CN">到达后再重新组合</span>。
 
@@ -401,7 +401,7 @@ Packet switching <span lang="zh-CN">是把</span> message <span lang="zh-CN">拆
 
 ### Packet switching process
 
-Sources: [9618/31 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=8); [9618/31 · October/November 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=8).
+Sources: [9618/32 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8); [9618/32 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10); [9618/32 · October/November 2024 · Q1(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=4); [9618/31 · May/June 2025 · Q3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_31.pdf#page=8); [9618/31 · October/November 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=8).
 
 ```mermaid
 flowchart TD
@@ -427,7 +427,7 @@ G --> H[Missing/damaged packets resent]
 
 ### Benefits of packet switching
 
-Sources: [9618/32 · October/November 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=4); [9618/32 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=9).
+Sources: [9618/32 · May/June 2023 · Q7(a), 7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=7); [9618/32 · October/November 2025 · Q4(a)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=9); [9618/32 · October/November 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=4); [9618/31 · October/November 2025 · Q3(c)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_31.pdf#page=8).
 
 | Benefit | Exam-style phrasing |
 | --- | --- |
@@ -444,7 +444,7 @@ Sources: [9618/32 · October/November 2024 · Q1(b)](https://pastpapers.papacamb
 
 ### Drawbacks of packet switching
 
-Sources: [9618/32 · October/November 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=4).
+Sources: [9618/32 · October/November 2024 · Q1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=4); [9618/32 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8); [9618/32 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10).
 
 | Drawback | Exam-style phrasing |
 | --- | --- |
@@ -498,7 +498,7 @@ Better:
 
 ## Circuit Switching vs Packet Switching
 
-Sources: [9618/32 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8); [9618/32 · October/November 2025 · Q4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=10).
+Sources: [9618/32 · October/November 2025 · Q4(a), 4(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w25_ms_32.pdf#page=9); [9618/32 · October/November 2024 · Q1(a), 1(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_32.pdf#page=4); [9618/32 · May/June 2023 · Q7(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s23_ms_32.pdf#page=8); [9618/31 · October/November 2024 · Q3(a), 3(b)](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_w24_ms_31.pdf#page=5); [9618/32 · May/June 2025 · Q4](https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/9618_s25_ms_32.pdf#page=6).
 
 | Feature | Circuit switching | Packet switching |
 | --- | --- | --- |
